@@ -79,14 +79,14 @@ try {
     if ($LASTEXITCODE -ne 0) {
         throw "git rev-parse failed."
     }
-    if ($branch -ne "main") {
-        throw "execute.ps1 must run on the main branch. Current branch: $branch"
+    if ($branch -ne "master") {
+        throw "execute.ps1 must run on the master branch. Current branch: $branch"
     }
 
     Assert-CleanWorkTree
 
-    Write-Log "git pull --rebase origin main 開始"
-    Invoke-Native "git" @("pull", "--rebase", "origin", "main")
+    Write-Log "git pull --rebase origin master 開始"
+    Invoke-Native "git" @("pull", "--rebase", "origin", "master")
 
     Write-Log "ニュース取得開始"
     Invoke-Native "python" @("scripts\fetch_all.py")
@@ -140,7 +140,7 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
     Write-Log "commit/push 開始"
     Invoke-Native "git" @("add", "feed.md")
     Invoke-Native "git" @("commit", "-m", "feed: $today の技術ニュース要約")
-    Invoke-Native "git" @("push", "origin", "HEAD:main")
+    Invoke-Native "git" @("push", "origin", "HEAD:master")
 
     Write-Log "メール送信開始"
     Invoke-Native "python" @("local\send_mail.py")
