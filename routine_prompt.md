@@ -14,15 +14,18 @@
 
 2. **要約フィード生成** — `raw/*.json` をすべて読み、`feed.md` を新規生成(全体を上書き)する。
 
-3. **コミット & プッシュ**
+3. **コミット & main へプッシュ**
 
    ```
    git add feed.md
    git commit -m "feed: <YYYY-MM-DD> の技術ニュース要約"
-   git push
+   git push origin HEAD:main
    ```
 
-   `feed.md` に差分が無い場合はコミットしない。
+   - `feed.md` に差分が無い場合はコミットしない。
+   - **必ず `main` ブランチへ push する**(`git push origin HEAD:main`)。
+     Claude Code on the web はセッションごとに作業ブランチを切るが、ローカル側は
+     `main` を pull して受け取るため、作業ブランチへの push では運用が成立しない。
 
 ## feed.md の形式
 

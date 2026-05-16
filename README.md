@@ -53,11 +53,27 @@ GMAIL_APP_PASSWORD=xxxxxxxxxxxxxxxx
 Claude Code の `/schedule` で routine を作成する。
 
 - 対象リポジトリ: この GitHub リポジトリ
-- トリガー: schedule、毎朝 4:30 JST(UTC 指定の環境では前日 19:30 UTC)
-- プロンプト: `routine_prompt.md` の内容
-- ネットワーク許可: routine サンドボックスは外部接続が制限される。取得が失敗する場合は
-  以下ドメインを許可リストに追加する:
-  `mshibanami.github.io` / `hn.algolia.com` / `www.reddit.com` / `zenn.dev` / `qiita.com`
+- トリガー: schedule、毎朝 4:30 JST = cron `30 19 * * *`(UTC)
+- プロンプト: 「リポジトリの routine_prompt.md を読み手順に従え」
+- モデル: `claude-opus-4-7`
+
+**ネットワーク許可(必須)**: routine 環境はデフォルト(Trusted)だと GitHub 系しか
+通らず、ニュース API が 403 になる。環境設定の Network access を **Custom** にして
+Allowed domains に以下を追加し、「Also include default list of common package managers」
+を必ずチェックする(外すと GitHub も切れて clone に失敗する):
+
+```
+hn.algolia.com
+www.reddit.com
+zenn.dev
+qiita.com
+```
+
+GitHub Trending は `mshibanami.github.io`(GitHub 系)のため Trusted で既に通る。
+Network access を **Full** にすれば個別指定は不要。
+
+**push 先**: Claude Code on the web はセッションごとに作業ブランチを切るため、
+`routine_prompt.md` では `git push origin HEAD:main` で main へ直接 push する。
 
 ### 3. ローカル タスクスケジューラ登録
 

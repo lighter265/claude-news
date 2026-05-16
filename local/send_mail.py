@@ -48,7 +48,11 @@ def main():
     msg["To"] = mail_to
     msg.set_content(body)
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as smtp:
+    # 465(implicit SSL)はブロックされる環境があるため 587(STARTTLS)を使う。
+    # local_hostname を明示しないと getfqdn() がスペース入りの値を返し
+    # EHLO がプロトコル違反になる環境があるため固定する。
+    with smtplib.SMTP("smtp.gmail.com", 587, local_hostname="localhost", timeout=30) as smtp:
+        smtp.starttls()
         smtp.login(mail_from, password)
         smtp.send_message(msg)
     print(f"sent to {mail_to}")
