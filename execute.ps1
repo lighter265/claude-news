@@ -106,7 +106,7 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
 "@
 
     Write-Log "Claude 要約生成開始"
-    Invoke-Native "claude" @("-p", $prompt)
+    Invoke-Native "claude" @("--model", "opus", "-p", $prompt)
 
     $feed = Join-Path $repo "feed.md"
     Assert-FileExists $feed
