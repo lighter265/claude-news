@@ -1,6 +1,10 @@
 # Windows Task Scheduler entry point for the local news routine.
 # It fetches raw data, asks Claude CLI to generate feed.md, commits/pushes it, then sends mail.
+# Pass -Scheduled when invoked from Task Scheduler to trigger shutdown on completion.
 #requires -Version 5.1
+param(
+    [switch]$Scheduled
+)
 
 $ErrorActionPreference = "Stop"
 
@@ -146,6 +150,10 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
     Invoke-Native "python" @("local\send_mail.py")
 
     Write-Log "完了"
+    if ($Scheduled) {
+        Write-Log "スケジューラ実行 → シャットダウン"
+        Stop-Computer -Force
+    }
 } catch {
     Write-Log "エラー: $_"
     exit 1
