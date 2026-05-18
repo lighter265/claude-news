@@ -50,3 +50,36 @@
 4. 一次ソース URL は raw の URL を優先する。
 5. 客観的・中立に書く。誇張、煽り、断定しすぎる表現を避ける。
 6. raw の `extra` にタグ、コメント数、説明文などがある場合は、要約の判断材料として使ってよい。
+
+## サブエージェント分担
+
+`feed.md` の生成はソース単位でサブエージェントに分担できる。各サブエージェントは
+1 つの `raw/<source>.json` だけを読み、対応するセクションを単独で生成する。
+メインエージェントは各サブエージェントの出力を集約して `feed.md` を組み立てる。
+
+### source とセクション・出力ファイルの対応
+
+| source 値 | セクション見出し | 出力ファイル |
+|---|---|---|
+| `github_trending` | `## GitHub Trending` | `raw/section_github_trending.md` |
+| `hackernews` | `## Hacker News` | `raw/section_hackernews.md` |
+| `reddit` | `## Reddit` | `raw/section_reddit.md` |
+| `zenn` | `## Zenn` | `raw/section_zenn.md` |
+| `qiita` | `## Qiita` | `raw/section_qiita.md` |
+
+### per-source セクション生成ルール（サブエージェント）
+
+- 入力は単一の `raw/<source>.json`。出力は `raw/section_<source>.md`（全体上書き）。
+- 出力内容は `## <セクション見出し>` から始め、その下に各記事を
+  「日本語見出し（`### ...`）」「要約」「一次ソース URL（単独行）」の順で並べる。
+- 上記の「セクションルール」「要約ルール」を 1 ソース分に適用する
+  （注目度の高いものを中心に 5〜8 件、URL は各項目末尾に単独行など）。
+- 有用な項目が 1 件もない場合は、`## <セクション見出し>` の行だけを書くか空ファイルにし、
+  メイン側で省略できるようにする。
+
+### メインエージェントの組み立てルール
+
+- 先頭に `# 技術ニュース要約 — YYYY-MM-DD`（当日の日付）を置く。
+- セクション順は GitHub Trending → Hacker News → Reddit → Zenn → Qiita。
+- 各 `raw/section_<source>.md` の内容をこの順に連結して `feed.md` を全体上書きする。
+- 存在しない、空、または記事が 1 件もない `section_<source>.md` は省略する。

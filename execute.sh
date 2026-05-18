@@ -69,10 +69,26 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json は既に生成済みです。
-fetch、commit、push、メール送信は行わないでください。
-raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し、上書きしてください。
-要約ルールも feed-format.md に従ってください。"
+    local prompt
+    prompt=$(cat <<'EOF'
+raw/ 配下の技術ニュース JSON（github_trending / hackernews / reddit / zenn / qiita の
+各 raw/<source>.json。section_*.md などは対象外）から feed.md を生成してください。
+
+手順:
+1. まず feed-format.md を読み、「サブエージェント分担」「per-source セクション生成ルール」
+   「メインエージェントの組み立てルール」を把握する。
+2. raw/ に存在する各 raw/<source>.json に対し、1 ソースにつき 1 つサブエージェントを
+   並列に dispatch する（全ソース分を同時に起動する）。各サブエージェントには次を指示する:
+   「raw/<source>.json と feed-format.md を読み、per-source セクション生成ルールに従って
+   当該ソースのセクションを生成し、raw/section_<source>.md に全体上書きで書き出す。
+   feed.md 本体やほかのファイルは編集しない。」
+3. 全サブエージェントの完了後、今回 dispatch したサブエージェントが書き出した
+   raw/section_<source>.md のみを読み込み、feed-format.md の組み立てルールに従って
+   feed.md を全体上書きで生成する。前回実行の古い section ファイルが残っていても、
+   今回処理したソースの分だけを使うこと。
+4. fetch、commit、push、メール送信は行わない。
+EOF
+)
 
     log "Claude 要約生成開始"
     #run claude -p "$prompt"
