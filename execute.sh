@@ -94,8 +94,8 @@ EOF
 )
 
     log "Claude 要約生成開始"
-    #run claude -p "$prompt"
-    run claude --model opus -p "$prompt"
+    run claude -p "$prompt"
+    #run claude --model opus -p "$prompt"
 
     assert_file "feed.md"
 
