@@ -1,8 +1,9 @@
 """Qiita を公式 API v2 から取得。ストック数 3 超でフィルタ。"""
+import json
+import subprocess
 from datetime import datetime
 
-from common import http_get_json, article, save_raw
-
+from common import USER_AGENT, article, save_raw
 
 def _ts(s):
     if not s:
@@ -15,7 +16,11 @@ def _ts(s):
 
 def fetch(limit=30):
     url = f"https://qiita.com/api/v2/items?query=stocks:>3&per_page={limit}"
-    data = http_get_json(url)
+    result = subprocess.run(
+        ["curl", "-s", "-H", f"User-Agent: {USER_AGENT}", url],
+        capture_output=True, text=True, timeout=30,
+    )
+    data = json.loads(result.stdout)
     items = []
     for it in data:
         tags = ", ".join(t.get("name", "") for t in it.get("tags", [])[:5])
