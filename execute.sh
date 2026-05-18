@@ -61,6 +61,9 @@ main() {
     log "ニュース取得開始"
     run python3 scripts/fetch_all.py
 
+    log "既出URLフィルタ開始"
+    run python3 scripts/filter_seen.py
+
     local raw_count
     raw_count=$(find "$REPO/raw" -name "*.json" -size +2c 2>/dev/null | wc -l || echo 0)
     if [[ "$raw_count" -eq 0 ]]; then
@@ -118,6 +121,9 @@ EOF
         log "feed.md に URL がありません。"
         exit 1
     fi
+
+    log "掲載URLをDBへ登録"
+    run python3 scripts/register_seen.py
 
     if git diff --quiet -- feed.md; then
         log "feed.md に差分なし。commit/push/mail をスキップします。"

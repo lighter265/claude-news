@@ -1,6 +1,8 @@
 raw/
 local/.env
 local/execute.lock
+local/seen_urls.db
 *.log
 __pycache__/
 *.pyc
+.codegraph/
