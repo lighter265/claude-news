@@ -72,7 +72,8 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
 要約ルールも feed-format.md に従ってください。"
 
     log "Claude 要約生成開始"
-    run claude --model opus -p "$prompt"
+    run claude -p "$prompt"
+    #run claude --model opus -p "$prompt"
 
     assert_file "feed.md"
 
