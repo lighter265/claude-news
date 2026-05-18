@@ -2,6 +2,9 @@
 # Linux entry point: fetch news, generate feed.md via Claude CLI, commit/push, send mail.
 set -euo pipefail
 
+# cronはPATHが最小限のためclaudeが見つからない場合がある
+export PATH="/home/lighter/.local/bin:$PATH"
+
 REPO="$(cd "$(dirname "$0")" && pwd)"
 LOG="$REPO/local/execute.log"
 LOCKFILE="$REPO/local/execute.lock"
