@@ -1,5 +1,6 @@
 raw/
 local/.env
+local/execute.lock
 *.log
 __pycache__/
 *.pyc
