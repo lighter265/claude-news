@@ -65,6 +65,15 @@ def main():
     # CIFS filesystem では fcntl locking 非対応のため nolock=1 を使用
     conn = sqlite3.connect(f"file://{DB_PATH}?nolock=1", uri=True)
     init_db(conn)
+
+    # 登録後4日経過した既出URLを削除
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM seen_urls WHERE first_seen <= date('now', '-4 days')")
+    deleted_count = cursor.rowcount
+    if deleted_count > 0:
+        conn.commit()
+        print(f"[filter] Deleted {deleted_count} expired seen URL(s) (older than 4 days)")
+
     seen = load_seen(conn)
     conn.close()
 
