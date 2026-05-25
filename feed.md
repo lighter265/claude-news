@@ -1,119 +1,155 @@
-# 技術ニュース要約 — 2026-05-25
+# 技術ニュース要約 — 2026-05-26
 
 ## GitHub Trending
 
-### AIエージェント向けサイバーセキュリティスキルライブラリ — 754件・5フレームワーク対応
-MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF の5つの標準フレームワークにマッピングされた754件のサイバーセキュリティスキルをまとめたオープンソースリポジトリ。26のセキュリティドメインをカバーし、Claude Code・GitHub Copilot・Cursor・Gemini CLI など20以上のAIプラットフォームで利用できる。Apache 2.0ライセンスで公開されており、agentskills.io 標準に準拠している。AIエージェントにセキュリティ知識を体系的に組み込むための基盤として活用できる。
-https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+### Anthropic公式のClaude Codeプラグインディレクトリが公開
+AnthropicがClaude Code向けの高品質プラグインを集めた公式ディレクトリを公開した。MCPサーバーやファイル、その他のソフトウェアをAnthropicが直接管理・検証しているわけではないため、インストール前にプラグインの信頼性を自己判断する必要があると注記されている。コミュニティが提出したプラグインを `/plugins` ディレクトリで管理する構造になっており、エコシステムの健全な発展を促す狙いがある。
+https://github.com/anthropics/claude-plugins-official
 
-### Gamma・Beautiful AIに代わるオープンソースのAIプレゼン生成ツール「Presenton」
-SaaS型プレゼン生成サービス（Gamma、Beautiful AI、Decktopus）のオープンソース代替として開発されたAIプレゼンテーションジェネレーター。Docker経由でのセルフホストとデスクトップアプリ（Mac・Windows・Linux）の両方に対応している。OpenAI、Gemini、Vertex AI、Azure OpenAI、Amazon Bedrockなど主要なLLMプロバイダーを選択でき、データをローカルに留めたままAIプレゼン生成が可能。ベンダーロックインを嫌うチームや、データ管理を自社で完結させたい企業向けの選択肢となっている。
-https://github.com/presenton/presenton
+### ナレッジワーカー向けClaude Coworkプラグイン集
+AnthropicがClaude Cowork（ビジネス向けAIワークスペース）向けのオープンソースプラグイン集を公開した。役割・チーム・企業ごとにClaudeを専門家として機能させることを目的としており、Claude Codeとも互換性がある。どのツールやデータを参照させるか、重要なワークフローの処理方法、スラッシュコマンドなどを細かく設定できる。
+https://github.com/anthropics/knowledge-work-plugins
 
-### NVIDIA発・NVFP4量子化と並列処理で長尺動画生成を45.7 FPSに高速化「LongLive 2.0」
-NVIDIAが開発した長尺動画生成向けの並列インフラ「LongLive 2.0」。NVFP4量子化と並列処理を組み合わせ、トレーニングから推論まで一貫した高速化を実現している。AR学習・DMDディスティレーション・推論の各工程に対応し、推論時は45.7 FPSを達成。また TriAttention を用いたKVキャッシュ圧縮も搭載しており、KVメモリを50%削減しながら品質を維持する。長尺動画の研究・生成コストを大幅に下げることが期待される。
-https://github.com/NVlabs/LongLive
+### AIコーディングエージェントのトークン消費を大幅削減するコードグラフツール
+`colbymchenry/codegraph` は、Claude Code・Cursor・Codex・OpenCode・Hermes Agentなど主要なAIコーディングエージェントに対応したローカルコード知識グラフ。事前にコードをインデックス化することで、ツール呼び出しを約70%削減、コストを約35%削減できると主張している。完全ローカル動作でNode.js不要の設計になっており、1コマンドでインストールできる。
+https://github.com/colbymchenry/codegraph
 
-### プロセスの実行トレースを高解像度で可視化するデバッグツール「magic-trace」
-Jane Street が開発した、実行中プロセスの高解像度トレースを収集・表示するOSSツール。本番環境で一部リクエストだけ遅延するような問題や、「コードが実際に何をしているか」を事後確認するユースケースに活用できる。クラッシュ前の動作履歴を後から追える点が特徴で、Perfettoベースのビューアで視覚的に確認可能。gdbのような割り込みなしに稼働中プロセスをインスペクトできるため、本番デバッグの選択肢として注目されている。
-https://github.com/janestreet/magic-trace
+### Claude Codeを無料で使うためのAnthropicAPI互換プロキシ
+`Alishahryar1/free-claude-code` は、Claude Code CLI・VS Code・JetBrainsなどのクライアントからのAnthropicメッセージAPIリクエストを任意のプロバイダーへルーティングするプロキシツール。クライアント側のプロトコルをそのままに、無料モデルやローカルモデルへ切り替えることが可能。音声対応のDiscordボットとしても使えるOpenClaw統合も含まれる。
+https://github.com/Alishahryar1/free-claude-code
+
+### 金融チャートローソク足を学習したオープンソースの基盤モデルKronos
+`shiyu-coder/Kronos` は世界45以上の取引所のチャートデータで学習された、金融K線（ローソク足）に特化した初のオープンソース基盤モデル。AAAI 2026に採択され、ファインチューニング用スクリプトも公開済み。チャートパターンという「金融市場の言語」を直接モデル化するアプローチで、既存の価格予測手法とは異なる方向性を示している。
+https://github.com/shiyu-coder/Kronos
+
+### AIコーディングエージェント向けの通知機能付きmacOSターミナルcmux
+`manaflow-ai/cmux` は、Ghosttyをベースに構築されたmacOS向けターミナルで、AIコーディングエージェントの操作に最適化されている。タブが縦並びになる垂直タブ機能と、エージェントが入力待ちになった際に通知リングで知らせる機能が特徴。複数のAIエージェントを同時に走らせる際の状況把握を容易にする設計になっている。
+https://github.com/manaflow-ai/cmux
+
+### ゼロから技術を作り直して学ぶ実装ガイド集「Build Your Own X」
+`codecrafters-io/build-your-own-x` は、3Dレンダラー・データベース・Docker・ブロックチェーン・エミュレータなど多岐にわたる技術をゼロから実装するための丁寧なステップバイステップガイドをまとめたリポジトリ。「自分で作れないものは理解していない」というファインマンの言葉を指針に、深い理解を得るための学習教材として継続的に更新されている。
+https://github.com/codecrafters-io/build-your-own-x
+
+### ローカルIPカメラ向けAIリアルタイム物体検出NVR「Frigate」
+`blakeblackshear/frigate` は、Home Assistantと密接に統合された完全ローカル動作のNVR（ネットワークビデオレコーダー）。OpenCVとTensorFlowでリアルタイムの物体検出を行い、GPUやAIアクセラレータを利用することで高速処理が可能。クラウドに依存しないプライバシー重視の設計で、ホームオートメーション用途で注目を集めている。
+https://github.com/blakeblackshear/frigate
+
+---
 
 ## Hacker News
 
-### オーストラリア週4日勤務の実証実験、生産性向上のデータが明らかに
-オーストラリアで実施された週4日勤務の試験導入に関する研究報告。データによれば、労働時間短縮にもかかわらず生産性は維持または向上したと報告されている。従業員のウェルビーイング改善や離職率低下も確認されており、「労働時間と生産性は比例する」という従来の前提に疑問を呈する結果となった。国際的に広がる週4日勤務の議論に実証的な根拠を加える内容として注目を集め、30件のコメントが寄せられている。
-https://scienceaim.com/australia-just-proved-the-four-day-work-week-works-here-is-what-the-data-actually-says/
+### 年齢確認サービスYotiが顔写真と端末情報を第三者に提供
+英国などで普及しつつあるオンライン年齢確認サービス「Yoti」が、顔写真や端末のフィンガープリントを第三者と共有していることが報告された。プライバシー保護の観点から、こうした年齢確認の仕組みが逆に個人情報の集積リスクを高めているとする批判的な論点が展開されている。スコア50・コメント9件と比較的注目が集まっており、プライバシーと年齢制限の両立が難しい問題として議論されている。
+https://techxplore.com/news/2026-05-online-age-pointless-privacy.html
 
-### 米CBP、国境における電子機器の強制検索に関する指令3340-049Bを公開
-米国税関・国境警備局（CBP）が公開した、国境での電子機器検索に関する公式指令文書。令状なしに端末のデータを調べる権限の範囲や手続きを規定しており、プライバシー権との緊張関係が議論されている。入国者・帰国市民問わず対象となる可能性があり、特に機密情報を扱うビジネスパーソンや渡航者にとって実務的な影響がある。スコア48と高い注目度を集め、国境でのデジタルプライバシーに関心を持つ層を中心に共有されている。
-https://www.cbp.gov/document/directives/cbp-directive-no-3340-049b-border-search-electronic-devices
+### フェラーリ初の電気自動車「Luce」がジョニー・アイブとのコラボで登場
+フェラーリが同社初の完全電気自動車「Luce」を発表した。デザインはAppleのデザイン責任者として知られるジョニー・アイブが手がけており、自動車デザインの観点でも大きな注目を集めている。スコア33・コメント68件と活発な議論が続いており、EVへの移行における伝統的スポーツカーブランドの方向性として話題になっている。
+https://www.ferrari.com/en-EN/auto/ferrari-luce
 
-### 米国の健康アウトカムが政治的二極化と相関、Nature誌に掲載
-自然科学誌Natureに掲載された研究で、米国における健康アウトカム（平均寿命・疾病率など）が政治的傾向と有意な相関を持つことが報告された。共和党・民主党支持地域の間で健康指標に差が広がっており、単純な経済格差だけでは説明できない構造的な要因が示唆されている。医療アクセス・政策・生活習慣など複合的な要因が絡み合うとされ、公衆衛生と政治の関係についての議論を呼んでいる。
-https://www.nature.com/articles/s41562-026-02474-9
+### AnthropicがMythosクラスのAIモデルを一般公開へ
+Anthropicが「Mythosクラス」と呼ばれる新たなAIモデル群を一般向けに公開する計画を発表した。詳細なスペックや機能についてはThe Registerが報じており、現行のClaudeシリーズに続く新世代のモデル展開として、AI業界の競争激化を象徴するニュースとして受け止められている。
+https://www.theregister.com/security/2026/05/25/anthropic-to-release-mythos-class-models-to-the-public/5245596
 
-### Gitの厳格な運用疲れを「Jujutsu」で解消する方法
-GitのコミットやブランチモデルによるCLI操作の煩雑さに疲弊した開発者向けに、代替バージョン管理ツール「Jujutsu（jj）」を活用した改善例を紹介する記事。Jujutsuは変更セット（Change）を第一級概念として扱い、コミットの書き換えやrebaseを安全かつ直感的に行える設計になっている。Gitと互換性を持ちながら操作モデルが異なるため、既存のリモートリポジトリをそのまま使い続けられる点が特徴。Gitの運用ルールに縛られたチームの代替案として検討価値がある。
-https://ikesau.co/blog/defeating-git-rigour-fatigue-with-jujutsu/
+### Microsoft Copilot CoworkにファイルをExfiltrateできる脆弱性
+セキュリティ研究者がMicrosoft Copilot Coworkに、AIを悪用してファイルを外部に流出させるエクスフィルトレーション攻撃が可能な脆弱性を発見・報告した。Prompt Armorが公開した詳細レポートでは攻撃の手法が説明されており、AIアシスタントを組み込んだ業務ツールのセキュリティリスクとして注目される。
+https://www.promptarmor.com/resources/microsoft-copilot-cowork-exfiltrates-files
 
-### ホワイトハウス、情報機関のAI整備に90億ドルを承認
-米ホワイトハウスが、CIA・NSAなどの諜報機関がAIの活用で民間に後れを取らないよう、AIチップや関連インフラの整備に90億ドルを承認したと報じられた。GPU不足が情報機関のAI導入を妨げていた背景があり、安全保障分野でのAI競争力強化が目的とされている。民間テック企業との人材・計算資源の獲得競争が激化する中、国家レベルでのAI投資が政策として明確化された形となる。
-https://www.nytimes.com/2026/05/22/us/politics/spy-agencies-ai-chips-shortage.html
+### RustのパッケージマネージャCargoに深刻な脆弱性（CVE-2026-5222）
+Rust公式ブログがCargo（Rustのパッケージマネージャ）に関するセキュリティアドバイザリ（CVE-2026-5222）を公開した。Rustユーザーは速やかなアップデートが推奨される。オープンソースのサプライチェーンセキュリティの重要性を再確認させるインシデントとして位置づけられる。
+https://blog.rust-lang.org/2026/05/25/cve-2026-5222/
 
-### WebAuthnのcredentialProtectionPolicyを丁寧に解説
-WebAuthnに用意されているが理解されにくい拡張機能「credentialProtectionPolicy」の仕組みを解説した記事。デバイス上のパスキーが「PIN/生体認証なしでも使えてしまう」問題を防ぐためのポリシー設定で、セキュリティレベルを3段階で制御できる。実装側の考慮事項と、ユーザー体験とのトレードオフについても論じており、パスキー実装者にとって実用的な内容となっている。
-https://pilcrowonpaper.com/blog/16
+### SpaceXのIPO申請書が明かすTwitter「経営の天才」神話の虚構
+SpaceXがIPO申請書を提出したことで、イーロン・マスクのTwitter（現X）買収・経営に関するビジネス実績が厳しく検証された。SpaceXの財務データとXの実績を比較することで、Twitter買収が「ビジネスの天才」の証拠ではなかったとする論点が展開されている。
+https://www.techdirt.com/2026/05/22/spacexs-ipo-filing-shows-elons-twitter-business-genius-was-a-fantasy/
+
+---
 
 ## Reddit
 
-### Chrome、宣言的な部分更新APIを新たに提案 — HTMLの差分更新を標準化へ
-Googleが、JavaScriptを使わずにHTMLの一部をサーバー側から差分更新できる「Declarative Partial Updates」APIをChrome向けに提案した。現在はJavaScriptやHTMXなどのライブラリで実現されているHTMLの部分更新を、ブラウザネイティブの仕組みで標準化しようとする試み。サーバーサイドレンダリングとの親和性が高く、フルページリロードなしの画面更新を軽量に実現できる可能性がある。r/programmingで331スコアを獲得し、77件のコメントが寄せられるなど大きな注目を集めた。
-https://developer.chrome.com/blog/declarative-partial-updates
+### METRのAIタイムホリズングラフに多数の重大な誤りが指摘される
+AI安全性研究で広く引用されている「METRのAIタイムホリズングラフ」に、多数の重大な誤りが含まれていることが指摘され、r/MachineLearningで活発な議論（コメント31件）が起きている。このグラフはAIの能力向上の速度を示す根拠として研究や政策論議で頻繁に用いられてきただけに、データの信頼性への疑問は広範な影響を持つ可能性がある。
+https://www.reddit.com/r/MachineLearning/comments/1tnhnh5/the_famous_metr_ai_time_horizons_graph_contains/
 
-### C++標準ライブラリは15年かけて自己否定を繰り返してきた — 公開記録を読む
-C++標準ライブラリの歴史を振り返り、追加された機能が後の改訂で非推奨・削除・変更された事例を公開されている委員会文書から整理した記事。`std::auto_ptr`・`std::random_shuffle`・例外仕様など、設計判断が覆されてきた積み重ねを「後退の記録」として可視化している。言語設計の難しさや、標準化プロセスの長期的な影響を考える上で示唆が多い内容で、r/programmingで278スコア・202コメントを集めた。
-https://hftuniversity.com/post/the-c-standard-library-has-been-walking-itself-back-for-fifteen-years-and-the-receipts-are-public
+### マイクロコントローラー上でDCGAN推論を動かす：512KB RAMで26秒生成
+12.6Mパラメータを持つDCGAN（深層畳み込みGAN）を、わずか512KBのSRAMしか持たないマイクロコントローラー上で純粋なCで動作させた実験の報告。生成に26秒かかるものの、エッジデバイスでの生成AIモデル実行の限界を探る取り組みとして注目される。リソース制約環境でのモデル実行の可能性を示す事例として評価されている。
+https://www.reddit.com/r/MachineLearning/comments/1tnhfxp/dcgan_inference_on_a_microcontroller_126m/
 
-### PapersWithCode、週次アップデートで新機能を複数追加
-機械学習の論文・実装・ベンチマークを一覧できるプラットフォーム「PapersWithCode」が、Week 1 の新機能をまとめて公開した。検索・フィルタリング・ランキング表示の改善が含まれており、最新研究の追跡が従来より効率的になるとされている。r/MachineLearningで86スコアを獲得し、ML研究者・実務者から注目されている。定期的な機能更新を継続する姿勢が評価されているようだ。
-https://www.reddit.com/r/MachineLearning/comments/1tmawv5/paperswithcode_new_features_week_1_p/
+### NVIDIA Isaac SimとIsaac Labの強化学習利用状況の実態調査
+NVIDIA Isaac Simを強化学習に使用している研究者・開発者の間でIsaac Labとの組み合わせ方についての意見交換スレッド。ロボティクス分野の強化学習環境として注目されるIsaac Simの実際の使われ方を把握するためのアンケート的な投稿で、コミュニティの現状を知る手がかりになる。
+https://www.reddit.com/r/MachineLearning/comments/1tn1rtk/if_you_use_nvidia_isaac_sim_for_reinforcement/
 
-### SQLとNoSQLだけでは足りない — エキゾチックなDBエンジンを分類・比較
-グラフDB・時系列DB・ベクトルDB・列指向DBなど、一般的なRDB/NoSQLの枠に収まらない「データベース動物園」を俯瞰する記事。ユースケース別にどのストレージエンジンが向いているかを整理しており、新規システム設計やデータ基盤選定の際の地図として機能する。近年のAI・分析ワークロードの多様化を背景に、DB選択が複雑化していることへの実践的な対応策として参考になる内容。
-https://blog.gaborkoos.com/posts/2025-09-19-The-Database-Zoo-Exotic-Data-Storage-Engines/
+### エージェントの意思決定と実行を切り離すアーキテクチャの提案
+AIエージェントの手法を再構築し、意思決定（プランニング）と実行（アクション）を明確に分離するオープンソースアーキテクチャの提案。エージェント設計における責務の分離を重視したアプローチで、複雑なタスクでの信頼性向上を狙っている。
+https://www.reddit.com/r/MachineLearning/comments/1tnfxsc/reconstructing_the_agent_methodology_decoupling/
+
+### COLM 2026「効率的な推論」ワークショップの論文募集
+COLM 2026カンファレンス内で開催される「Efficient Reasoning（効率的な推論）」ワークショップへの論文投稿の呼びかけ。LLMの推論効率化は現在の主要な研究テーマのひとつであり、関連研究を進める研究者にとって発表の場として参考になる情報。
+https://www.reddit.com/r/MachineLearning/comments/1tncfx9/call_for_papers_workshop_on_efficient_reasoning/
+
+---
 
 ## Zenn
 
-### 複数集約をまたぐDB処理でトランザクションを使う前に考えるべきこと
-DDD（ドメイン駆動設計）において複数の集約にまたがる処理を単一DBトランザクションで括ることの問題点を論じた記事。集約の境界と整合性の単位が一致しない場合に発生する設計上のリスクや、代替手段（イベント、サーガパターン等）の検討材料が示されている。トランザクション設計の前提を丁寧に整理した内容で、スコア121と高い支持を集めている。
-https://zenn.dev/j5ik2o/articles/59de072b6728ff
-
-### 日々の開発に組み込まれたClaude Code Skillsの実例集
-実際の開発現場でClaude Code Skillsをどのように運用しているかを紹介するアイデア記事。定型作業の自動化・コードレビュー補助・ドキュメント生成など具体的な活用例が共有されており、Claude Codeを業務フローに組み込む際の参考になる。スコア106を記録しており、Claude Code活用に関心を持つ開発者の間で広く読まれている。
-https://zenn.dev/remitaid/articles/4f9dc787b6c191
-
-### 「URLを誰にも教えていない」は秘匿性にならない — CT ログを30分監視した実験記録
-Certificate Transparency（CT）ログを30分間監視するだけで、公開されていないはずのURLが観測できることを示した実験記事。HTTPSを発行した時点でドメイン・サブドメインがCTログに記録されるため、URLを秘密にしていても第三者がドメインを発見できる仕組みになっている。「隠しURL」による情報保護の限界を実証的に示しており、セキュリティ意識の向上につながる内容。スコア99を獲得している。
-https://zenn.dev/tkydev/articles/2026-05-21_ct_log
-
-### Claude Code Skillで社内プロジェクトを仕組み化し、1時間で開発を完了させる
-SonicGardenが、Claude Code の Skill 機能を活用して社内プロジェクトの開発プロセスを標準化・自動化した取り組みを紹介。スキルとして手順を定義することで、属人的な判断を減らし再現性のある開発フローを実現している。新メンバーのオンボーディングコスト削減や品質の均一化にも効果があるとされ、スコア78で実践事例として注目されている。
-https://zenn.dev/sonicgarden/articles/e5fd7f54433d3d
-
-### TSKaigi 2026 の発表資料まとめ
-TypeScriptカンファレンス「TSKaigi 2026」の発表スライドや資料をまとめたインデックス記事。セッション内容を一覧できるため、参加できなかった人や後から振り返りたい人に有用。スコア35を記録しており、TypeScriptコミュニティ内での情報共有の場として機能している。
-https://zenn.dev/yasse/articles/a7240304af804c
-
-### Rustで自作した可逆圧縮フォーマット「IVR」がVSCodeスクショでPNG比46%を達成
-Rustでゼロからロスレスのカスタムビットマップ圧縮フォーマット「IVR」を実装したという技術記事。特定のVSCodeスクリーンショットにおいて、PNGの46%というファイルサイズを達成したと報告されている。圧縮アルゴリズムの設計から実装詳細まで踏み込んだ内容で、低レベルの画像処理やRustの実装に関心を持つ読者から支持されている（スコア22）。
-https://zenn.dev/mugideru/articles/35b209e934ba3e
-
-### Claude Codeのスキルを毎日自動改善し続ける仕組みの構築
-SonicGardenが、Claude Code のスキルが自己改善ループで日々自動的に更新される仕組みを作った経緯を紹介。実行ログや失敗例を材料にスキルを継続的に洗練させる設計で、人の手を介さずにプロンプトの質が向上していく。スコア18を獲得し、AIエージェントの自律的改善というテーマで注目されている。
+### Claude Codeのスキルを毎日自動改善し続ける仕組みの実装
+Claude Codeのスキル（SKILL.md）を自動的に評価・改善するセルフインプルーブメントループを構築した事例。Claude自身がスキルの品質を評価し、改善案を生成・適用するサイクルを自律的に回す仕組みで、手作業なしにスキルが日々向上していく設計になっている。Claude Codeのエージェント機能を活かしたメタ的な自動化として注目度が高い（スコア87）。
 https://zenn.dev/sonicgarden/articles/claude-code-self-improving-loop
+
+### AnthropicがXMLタグをプロンプトに推奨する構造的な理由
+AnthropicがプロンプトエンジニアリングにMarkdownではなくXMLタグを推奨する理由を、テキスト構造の解析の仕組みから丁寧に解説した記事（スコア44）。LLMのトークン処理においてMarkdownの記号は文脈依存で曖昧になりやすいのに対し、XMLタグは入れ子構造と明確な境界を提供するため、プロンプトの意図がモデルに正確に伝わりやすいという論点が展開されている。
+https://zenn.dev/yun_bow/articles/a339e1d31a4c43
+
+### オブザーバビリティとは何か──DevOpsを「閉じる」思想の整理
+「DevOpsを閉じる」という独自のフレームでオブザーバビリティの本質を論じた記事（スコア42）。メトリクス・ログ・トレースといった個別要素の説明にとどまらず、システムの未知の状態を外側から問い合わせて把握できる性質として定義することで、なぜオブザーバビリティが現代のソフトウェア運用に不可欠かを概念的に整理している。
+https://zenn.dev/ntk221/articles/ff6f235208cfcd
+
+### GitHub Actionsのcheckoutで`persist-credentials: false`を設定すべき理由
+`actions/checkout` アクションはデフォルトでGitHubトークンをリポジトリのgit設定に書き込むが、これが意図せず後続ステップへ認証情報を引き継がせるリスクになる。`persist-credentials: false` を明示的に指定することで最小権限の原則を守り、サプライチェーン攻撃への耐性を高められると解説している（スコア35）。
+https://zenn.dev/kou_pg_0131/articles/gha-checkout-persist-credentials
+
+### AI時代の競争優位は「統合」にこそある
+AIが個別の作業を代替できるようになった今、エンジニアや組織の競争優位は「どのツールを使うか」ではなく「どう統合するか」にあるという論考（スコア21）。AIを組み込んだシステム設計・運用・意思決定の仕組みに投資することが、長期的な差別化につながるという視点が示されている。
+https://zenn.dev/peoplex_blog/articles/f2cfcd8b625202
+
+### AIエージェントが毎回データ取得に行く設計の限界と「メモリファースト」への転換
+AIエージェントがタスクのたびに外部からデータを取得する「ステートレス設計」の問題点を指摘した記事（スコア21）。コンテキストの蓄積・再利用ができないため効率が悪く、エラー耐性も低い。解決策として、ナレッジグラフや構造化されたエージェントメモリを先に構築する「メモリファースト設計」への移行を提案している。
+https://zenn.dev/knowledge_graph/articles/kg-agent-memory-first-design
+
+### エンタープライズ向けフロントエンドで大量の類似Featureを扱うアーキテクチャ設計
+多数の類似Featureモジュールをもつエンタープライズアプリケーションのフロントエンドで、どのように設計するかを論じた記事（スコア21）。コード重複とカスタマイズ性のトレードオフを整理しながら、Feature単位の凝集度を高める実践的な設計パターンが紹介されている。
+https://zenn.dev/yuitonn/articles/f88ddcf21ce172
+
+### AIで加速するプロダクト変化を開発チームの外に届ける通知システムの構築
+AIを活用したプロダクト開発によりUIや機能が頻繁に変化する環境で、開発チーム以外のステークホルダーへ変更内容を自動的に伝える仕組みを構築した事例（スコア19）。スクリーンショット差分の自動検出と通知を組み合わせた実装が紹介されており、AIドリブンな開発速度に組織のコミュニケーションを追いつかせる工夫として参考になる。
+https://zenn.dev/nstock/articles/ui-change-notifier
+
+---
 
 ## Qiita
 
-### 育休中エンジニアがClaude Coworkで「あかちゃんカレンダー」アプリを開発
-育児休業中のエンジニアが、Claude の Cowork 機能を活用して赤ちゃんの成長記録カレンダーアプリを個人開発した体験記。育休という限られた時間の中でAIを活用して実装を進めたプロセスが語られており、AIコーディング支援の実用的な活用例として読まれている。スコア38を獲得し、育休×開発というユニークな切り口が共感を集めている。
-https://qiita.com/yuzinet/items/323bc76cf2d31d9f4d42
+### 100万台のAIサービスをスキャンして判明した深刻なセキュリティ実態
+100万以上のAIサービスエンドポイントをスキャンした調査により、ollamaなどのAIサービスが認証なしでインターネットに公開されているケースが大量に存在することが明らかになった記事（スコア60）。AIエージェントや自社でホストするLLMにおける設定ミスが「史上最悪」レベルのセキュリティリスクを生み出していると警告しており、AIサービス運用者が確認すべき具体的なポイントも整理されている。
+https://qiita.com/emi_ndk/items/0aac69d8a962d2413d9d
 
-### AIが生成するテストケースが「しょっぱい」理由を真剣に考えた
-LLMを使ってテストケースを生成させると、表面的で網羅性の低い「しょっぱい」テストになりがちな問題の原因を分析した記事。コンテキストエンジニアリングの観点から、AIに何を・どのように伝えるかによって生成されるテストの質が大きく変わることを示している。QAエンジニアやAI活用に取り組む開発者にとって実践的な示唆を含む内容で、スコア35を記録。
+### AIが生成するテストケースが「しょっぱい」理由と改善のアプローチ
+優秀なはずのAIが作るテストケースが表面的なものになりがちな根本原因を分析した記事（スコア54）。テスト対象の仕様・コンテキスト・境界条件といった情報をAIに十分に与えていないことが主因であり、「コンテキストエンジニアリング」の観点からプロンプトを設計することで品質を大幅に改善できると論じている。
 https://qiita.com/yurizono/items/43a93d8ff3f7046b31e3
 
-### Mac から UTM 上の Ubuntu に SSH 接続すると「Connection closed by port 22」が出る問題の対処法
-MacからUTM（仮想化ソフト）上に構築したUbuntu環境へSSH接続しようとした際に発生する「Connection closed by port 22」エラーの原因と解決方法を記録した記事。UTM特有のネットワーク設定やSSHd設定の確認ポイントが整理されており、同様の環境を使っている開発者にとって実用性の高いトラブルシューティング情報。スコア13を獲得している。
-https://qiita.com/inorin__62/items/6a15efcf60f954a89373
+### 2025 Japan AWS Jr. Championsとしての1年間の活動を振り返る
+AWSが若手エンジニア向けに設けた「Jr. Champions」プログラムに参加した著者が、1年間の活動内容・学び・コミュニティへの貢献を振り返った記事（スコア48）。AWSの認定プログラムへの参加を検討している若手エンジニアにとって、具体的な活動イメージを把握するための参考事例として有益。
+https://qiita.com/har1101/items/ccbdbe70817ece37cfdb
 
-### フロントエンドパフォーマンス改善の完全ロードマップ総まとめ（第20回）
-フロントエンドパフォーマンス改善シリーズの最終回として、JavaScript・TypeScript・Reactにおけるパフォーマンス最適化手法を網羅的にまとめた記事。LCP・INP・TTFBなどのCore Web Vitalsの改善手法からバンドル最適化・コード分割まで体系的に整理されており、フロントエンドエンジニアの実務リファレンスとして活用できる。スコア9を獲得している。
-https://qiita.com/tuanphan/items/1feeae0fc6ae30aa709d
+### 差分が見えるMarkdownビューアー「Markview Pulse」の開発記
+MarkdownファイルのGit差分を視覚的に確認できるデスクトップアプリ「Markview Pulse」をElectron＋TypeScriptで開発した経緯と実装内容を紹介した記事（スコア14）。ドキュメント管理やレビュー作業で変更箇所を直感的に把握したいというニーズに応えるツールで、Markdownを多用するエンジニアや技術ライターに有用な選択肢となりそう。
+https://qiita.com/syuji501/items/508f016f15ff8ed3ea3e
 
-### ドキュメントが失われたAWS環境を1日で再現、再構築手順書まで自動生成
-Claude Opus 4.7の「infra delegate to」機能を活用し、ドキュメントが残っていないAWS環境を1日でリバースエンジニアリングした事例記事。CloudFormationテンプレートの自動生成から再構築手順書の作成まで、AIエージェントに委任する形で完結させた過程が紹介されている。レガシー環境の棚卸しやインフラのコード化に課題を抱えるチームへの実践的なヒントとなっている（スコア9）。
+### ドキュメントが失われたAWS環境をClaude Opus 4.7で1日で再現・文書化
+インフラのドキュメントが存在しないAWS環境に対し、Claude Opus 4.7の「infra delegate to」機能を活用して既存構成を解析し、CloudFormationテンプレートと再構築手順書を1日で生成した事例（スコア12）。AIによるインフラ逆引きドキュメント生成の有効性を示す実践レポートとして、IaC管理に課題を抱えるチームの参考になる。
 https://qiita.com/ntaka329/items/b1d961ce5fab8541101f
 
-### Claude CodeだけでKaggleコンペに挑んで惨敗した正直な記録
-Claude Codeだけを使ってKaggleコンペに挑戦し、結果的に惨敗した経験を正直にまとめた記事。AIが生成するコードやアプローチの限界、特に特徴量エンジニアリングや仮説設定といった「勝負どころ」でのAIの弱点が浮き彫りになっている。AI活用の過信を戒める内容として、機械学習実務者に参考になる視点を提供している。
-https://qiita.com/ktdatascience/items/cad6d18c080aa6ca812c
+### 人材育成に投資する企業ほど損をする構造をゲーム理論で考える
+囚人のジレンマの枠組みを用いて、人材育成に投資した企業の社員が他社に引き抜かれることで投資が回収できないという日本経済の構造問題を分析した記事（スコア11）。Pythonを使ったマクロ経済学入門シリーズの一本で、ゲーム理論の視点から企業行動と経済全体の関係を考察している。
+https://qiita.com/maskot1977/items/f3ea6b4dd29e327c0d43
+
+### Claude CodeによるIaCコード生成の標準化と案件横断での再利用設計
+CloudFormationなどのIaCコードをClaude Codeで生成する際、プロジェクトをまたいで一貫した品質を保つための標準化の仕組みを構築した記録（スコア8）。プロンプト設計やテンプレート管理の工夫により、生成されるIaCコードのばらつきを抑える実践的なアプローチが紹介されている。
+https://qiita.com/ike_s_muramatsu/items/af5d5264d9d3045568a4
