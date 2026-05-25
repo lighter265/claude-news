@@ -18,7 +18,7 @@ log() {
 
 run() {
     log "> $*"
-    "$@" 2>&1 | while IFS= read -r line; do log "$line"; done
+    "$@" 9>&- 2>&1 | while IFS= read -r line; do log "$line"; done
 }
 
 assert_command() {
@@ -78,8 +78,8 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
 要約ルールも feed-format.md に従ってください。"
 
     log "Claude 要約生成開始"
-    run claude -p "$prompt"
-    #run claude --model opus -p "$prompt"
+    run timeout 1800 claude -p "$prompt"
+    #run timeout 1800 claude --model opus -p "$prompt"
 
     assert_file "feed.md"
 
@@ -126,6 +126,6 @@ raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し
 }
 
 (
-    flock -n 9 || { log "別の execute.sh が実行中です。スキップします。"; exit 0; }
+    flock -n 9 || { log "別の execute.sh が実行中です。スキップします。 (保持PID: $(fuser "$LOCKFILE" 2>/dev/null || echo '不明'))"; exit 0; }
     main
 ) 9>"$LOCKFILE"
