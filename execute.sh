@@ -2,6 +2,9 @@
 # Linux entry point: fetch news, generate feed.md via Claude CLI, commit/push, send mail.
 set -euo pipefail
 
+TRY_MODE=false
+[[ "${1:-}" == "--try" ]] && TRY_MODE=true
+
 # cronはPATHが最小限のためclaudeが見つからない場合がある
 export PATH="/home/lighter/.local/bin:/home/lighter/.opencode/bin:$PATH"
 
@@ -31,7 +34,11 @@ assert_file() {
 
 main() {
     cd "$REPO"
-    log "開始"
+    if [[ "$TRY_MODE" == true ]]; then
+        log "開始 [TRY MODE: git commit/push/mail はスキップ]"
+    else
+        log "開始"
+    fi
 
     assert_command git
     assert_command python3
@@ -41,22 +48,24 @@ main() {
     assert_file "feed-format.md"
     assert_file "local/send_mail.py"
 
-    local branch
-    branch=$(git rev-parse --abbrev-ref HEAD)
-    if [[ "$branch" != "master" ]]; then
-        log "master ブランチで実行してください。現在: $branch"
-        exit 1
-    fi
+    if [[ "$TRY_MODE" == false ]]; then
+        local branch
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        if [[ "$branch" != "master" ]]; then
+            log "master ブランチで実行してください。現在: $branch"
+            exit 1
+        fi
 
-    local changes
-    changes=$(git status --porcelain)
-    if [[ -n "$changes" ]]; then
-        log "作業ツリーが clean ではありません。先にコミットまたはリセットしてください。"
-        exit 1
-    fi
+        local changes
+        changes=$(git status --porcelain)
+        if [[ -n "$changes" ]]; then
+            log "作業ツリーが clean ではありません。先にコミットまたはリセットしてください。"
+            exit 1
+        fi
 
-    log "git pull --rebase origin master 開始"
-    run git pull --rebase origin master
+        log "git pull --rebase origin master 開始"
+        run git pull --rebase origin master
+    fi
 
     log "ニュース取得開始"
     run python3 scripts/fetch_all.py
@@ -113,18 +122,22 @@ main() {
     log "掲載URLをDBへ登録"
     run python3 scripts/register_seen.py
 
-    if git diff --quiet -- feed.md; then
-        log "feed.md に差分なし。commit/push/mail をスキップします。"
-        exit 0
+    if [[ "$TRY_MODE" == false ]]; then
+        if git diff --quiet -- feed.md; then
+            log "feed.md に差分なし。commit/push/mail をスキップします。"
+            exit 0
+        fi
+
+        log "commit/push 開始"
+        run git add feed.md
+        run git commit -m "feed: ${today} の技術ニュース要約"
+        run git push origin HEAD:master
+
+        log "メール送信開始"
+        run python3 local/send_mail.py
+    else
+        log "[TRY MODE] commit/push/mail をスキップ"
     fi
-
-    log "commit/push 開始"
-    run git add feed.md
-    run git commit -m "feed: ${today} の技術ニュース要約"
-    run git push origin HEAD:master
-
-    log "メール送信開始"
-    run python3 local/send_mail.py
 
     log "完了"
 }
