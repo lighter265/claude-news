@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # cronはPATHが最小限のためclaudeが見つからない場合がある
-export PATH="/home/lighter/.local/bin:$PATH"
+export PATH="/home/lighter/.local/bin:/home/lighter/.opencode/bin:$PATH"
 
 REPO="$(cd "$(dirname "$0")" && pwd)"
 LOG="$REPO/local/execute.log"
@@ -35,7 +35,7 @@ main() {
 
     assert_command git
     assert_command python3
-    assert_command claude
+    assert_command opencode #claude
 
     assert_file "scripts/fetch_all.py"
     assert_file "feed-format.md"
@@ -72,15 +72,19 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json は既に生成済みです。
-fetch、commit、push、メール送信は行わないでください。
-raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し、上書きしてください。
-要約ルールも feed-format.md に従ってください。"
+#    local prompt="raw/*.json は既に生成済みです。
+#fetch、commit、push、メール送信は行わないでください。
+#raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し、上書きしてください。
+#要約ルールも feed-format.md に従ってください。"
 
-    log "Claude 要約生成開始"
-    run timeout 1800 claude -p "$prompt"
+#    log "Claude 要約生成開始"
+#    run timeout 1800 claude -p "$prompt"
     #run timeout 1800 claude --model opus -p "$prompt"
 
+    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。"
+    log "opencode 要約生成開始"
+    run timeout 1800 opencode run "$prompt"
+    
     assert_file "feed.md"
 
     local feed_body
