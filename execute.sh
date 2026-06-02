@@ -3,7 +3,24 @@
 set -euo pipefail
 
 TRY_MODE=false
-[[ "${1:-}" == "--try" ]] && TRY_MODE=true
+NO_FILTER_MODE=false
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --try)
+            TRY_MODE=true
+            shift
+            ;;
+        --no-filter)
+            NO_FILTER_MODE=true
+            shift
+            ;;
+        *)
+            echo "Unknown option: $1" >&2
+            exit 1
+            ;;
+    esac
+done
 
 # cronはPATHが最小限のためclaudeが見つからない場合がある
 export PATH="/home/lighter/.local/bin:/home/lighter/.opencode/bin:$PATH"
@@ -34,11 +51,14 @@ assert_file() {
 
 main() {
     cd "$REPO"
+    local init_msg="開始"
     if [[ "$TRY_MODE" == true ]]; then
-        log "開始 [TRY MODE: git commit/push/mail はスキップ]"
-    else
-        log "開始"
+        init_msg="$init_msg [TRY-MODE: git commit/push/mail スキップ]"
     fi
+    if [[ "$NO_FILTER_MODE" == true ]]; then
+        init_msg="$init_msg [NO-FILTER-MODE: 既出URLフィルタースキップ]"
+    fi
+    log "$init_msg"
 
     assert_command git
     assert_command python3
@@ -70,8 +90,12 @@ main() {
     log "ニュース取得開始"
     run python3 scripts/fetch_all.py
 
-    log "既出URLフィルタ開始"
-    run python3 scripts/filter_seen.py
+    if [[ "$NO_FILTER_MODE" == true ]]; then
+        log "既出URLフィルタスキップ (--no-filter)"
+    else
+        log "既出URLフィルタ開始"
+        run python3 scripts/filter_seen.py
+    fi
 
     local raw_count
     raw_count=$(find "$REPO/raw" -name "*.json" -size +2c 2>/dev/null | wc -l || echo 0)
