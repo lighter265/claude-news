@@ -1,6 +1,9 @@
 # 技術ニュース要約 — 2026-06-03
 
 ## GitHub Trending
+### AIでワンクリック短編動画生成「MoneyPrinterTurbo」
+AI大規模言語モデルを活用し、テーマやキーワードを指定するだけで動画文案・素材・字幕・BGMを自動生成し、高画質の短編動画として出力するオープンソースツール。MVCアーキテクチャを採用し、APIとWebインターフェースの両方を提供する。縦型9:16（1080×1920）や横型16:9（1920×1080）など複数の解像度に対応し、バッチ生成によって複数案から最適なものを選べる。OpenAI、Claude、Gemini、DeepSeekなど多様なLLMプロバイダに対応している。
+https://github.com/harry0703/MoneyPrinterTurbo
 
 ### Microsoft公式のMarkdown変換ツール「MarkItDown」が注目を集める
 
@@ -51,6 +54,9 @@ https://github.com/TauricResearch/TradingAgents
 https://github.com/revfactory/harness
 
 ## Hacker News
+### 「Gmailにバカにされている」と感じた開発者が語る、メールサービス移行の理由
+moddedbear.comに投稿されたブログ記事で、筆者がGmailのUI変更やAIによる自動補完・分類機能に対して感じた不快感と、他のメールサービスへの移行を決断した経緯を綴っている。AIによる文章提案がユーザーの意図を上書きしてしまう体験や、広告主導の設計思想への批判が主な内容。Hacker Newsでは280ポイント、135コメントと大きな反響を呼び、多くのユーザーが同様の不満を共有している。
+https://moddedbear.com/gmail-thinks-im-stupid-so-i-left
 
 ### Webブラウザに忍び寄る「広告カルテル」の実態
 
@@ -101,6 +107,9 @@ AIエージェントが情報収集の手段としてRSSフィードを再び活
 https://julienreszka.com/blog/rss-is-back-ai-agents-are-reading-it/
 
 ## Zenn
+### 好きな言語でSQLiteライクなDBを自作する「自作データベース入門の入門」
+プログラミング言語を問わず、SQLiteのような軽量データベースをゼロから実装する方法を解説した初心者向けの技術記事。B-TreeインデックスやSQLパーサ、トランザクション管理など、RDBMSの基本コンポーネントを段階的に構築していく構成になっている。単に動くだけでなく、設計思想やトレードオフの考え方にも踏み込んでおり、システムプログラミングの学習教材として高い評価を得ている。
+https://zenn.dev/kaseken/articles/49c12113238ec4
 
 ### 好きな言語でSQLite風DBを自作する「自作データベース入門の入門」
 
@@ -151,6 +160,9 @@ https://zenn.dev/nishiken_zenn/articles/why-stopping-coding-for-ai-ja
 https://zenn.dev/jam0824/articles/c84a2ef393ee70
 
 ## Qiita
+### 「コードを書く人」から「課題を解決するエンジニア」になるためには
+技術力だけでなく、ビジネス課題の理解と解決提案力を備えたエンジニアへの成長に必要な視点を整理した記事。コードが書けることとエンジニアリングは同義ではなく、課題発見・要件定義・ステークホルダーとの対話といった非技術スキルの重要性を説く。具体的な行動指針として、ユーザーストーリーの作成、ビジネス指標への関心、技術選定の背景説明などが挙げられている。
+https://qiita.com/masa20057/items/eaa2afeffa262687b892
 
 ### Claude Code 完全攻略ガイド——AI駆動開発の決定版リファレンス
 
