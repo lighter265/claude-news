@@ -6,3 +6,4 @@ local/seen_urls.db
 __pycache__/
 *.pyc
 .codegraph/
+.omc/
