@@ -1,144 +1,121 @@
-# 技術ニュース要約 — 2026-06-10
+# 技術ニュース要約 — 2026-06-13
 
 ## GitHub Trending
 
-### Claude Code / AI エージェント向けスキルを検索・管理する統合基盤の台頭
-google/skills、mvanhorn/last30days-skill、phuryn/pm-skills、santifer/career-ops など、AI エージェントにスキルを付与するためのリポジトリが相次いでトレンド入り。Google 公式スキルレジストリでは Gemini API や Agent Platform 向けのスキルを `npx skills add` でインストールできる。last30days-skill は Reddit・X・YouTube・HN・Polymarket を横断検索して要約を生成するエージェントスキルで、人気度スコアに基づいて情報を整理する。pm-skills は100以上のプロダクトマネジメント向けスキルを Claude Code 向けに提供し、career-ops は求人検索から CV 生成までを自動化する AI 求職システムとして注目を集めている。
-https://github.com/google/skills
-https://github.com/mvanhorn/last30days-skill
-https://github.com/phuryn/pm-skills
-https://github.com/santifer/career-ops
+### Mac 上で Linux コンテナを軽量 VM として動かす Apple 製ツール「container」
+Apple が公開した、Mac 上で Linux コンテナを軽量な仮想マシンとして作成・実行するためのツール。Swift で書かれており、Apple シリコンに最適化されている。OCI 互換のコンテナイメージを生成・利用できるため、標準的なコンテナレジストリからイメージを pull して実行したり、自分でビルドしたイメージを push したりできる。Docker などの既存エコシステムと互換性を保ちつつ、macOS ネイティブの仮想化基盤を活かす点が特徴。
+https://github.com/apple/container
 
-### Rust 製ベクトルインデックス turbovec、FAISS を上回るメモリ効率と検索速度を実現
-Google Research の TurboQuant アルゴリズムをベースにした Rust 製ベクトル検索ライブラリ。1000万ドキュメントのコーパスを float32 で31GB必要とするところを4GBに収め、FAISS より高速な検索を実現する。コードブック学習やトレーニングフェーズが不要で、ベクトルを追加すると即座にインデックスされるオンラインインジェストに対応。Python バインディングも提供されており、RAG や類似検索基盤として利用可能。
-https://github.com/RyanCodrai/turbovec
+### AI エージェントの「スキル」を導入前に検査するセキュリティスキャナ「SkillSpector」
+NVIDIA が公開した、AI エージェント向けスキルの脆弱性や悪意あるパターン、セキュリティリスクを検出するスキャナ。Claude Code や Codex CLI、Gemini CLI などで使われるスキルは暗黙の信頼のもとで最小限の審査しか経ずに実行される点を問題視している。プロジェクトの説明によると、スキルの 26.1% に脆弱性が含まれ、5.2% が悪意ある意図を示すという調査結果を引用している。スキルをインストールする前に安全性を確認する用途を想定している。
+https://github.com/NVIDIA/SkillSpector
 
-### AI エージェントにブラウザ不要で Web アクセスを付与する Agent Reach
-Twitter・Reddit・YouTube・GitHub・Bilibili・小紅書などのプラットフォームを、API キーなし・ログインなしで読み取り・検索できる CLI ツール。AI エージェントが Web 上の情報を参照する際の障壁（API 有料化、IP ブロック、ログイン必須）を解決し、複数言語（英語・日本語・韓国語・中国語）でドキュメントが提供されている。
-https://github.com/Panniantong/Agent-Reach
+### コーディングエージェント向けの方法論とスキル群を束ねた「Superpowers」
+コーディングエージェント向けに、合成可能なスキル群とそれを確実に使わせる初期指示をまとめたソフトウェア開発方法論フレームワーク。Claude Code、Codex CLI/App、Factory Droid、Gemini CLI、OpenCode、Cursor、GitHub Copilot CLI など幅広いエージェントに導入できる。エージェントを起動した瞬間から方法論が働き始める設計を謳っている。エージェントの作業手順を体系化したい開発者向けのプロジェクト。
+https://github.com/obra/superpowers
 
-### ローカルLLMの選定を自動化する whichllm、ハードウェアに最適なモデルをランキング
-GPU・CPU・RAM を自動検出し、HuggingFace 上のモデルを実行性能のベンチマーク結果に基づいてランキング表示する CLI ツール。パラメータ数ではなく実測ベンチマークで評価する点が特徴で、GPU 購入前のシミュレーションモードも備える。`uvx whichllm@latest` でプロジェクトセットアップなしに即座に実行できる。
-https://github.com/Andyyyy64/whichllm
+### ユーザー名だけで人物のアカウント情報を横断収集する OSINT ツール「Maigret」
+ユーザー名のみを手がかりに、3000 以上のサイトでアカウントの有無を確認し、公開されている情報を Web ページから収集して人物のドシエ（調書）を作成するツール。API キーは不要で、AI によるプロファイリングのデモ機能も備える。調査やセキュリティ、OSINT（公開情報収集）の文脈で利用される。多数のサイトを一括でチェックできる点が特徴。
+https://github.com/soxoj/maigret
 
-### デスクトップ向け Markdown ナレッジベース管理アプリ Tolaria
-macOS・Windows・Linux で動作する Markdown ナレッジベース管理アプリ。1万ノート超の大規模ワークスペースでの運用実績があり、セカンドブレインや個人知識管理、AI へのコンテキスト提供、エージェントのメモリ・手順書管理など多様なユースケースに対応する。
-https://github.com/refactoringhq/tolaria
+### 高速・安全・効率的なバックアッププログラム「restic」
+高速かつ効率的で安全性を重視したバックアッププログラム。Linux、macOS、Windows の主要 3 OS に加え、FreeBSD や OpenBSD などにも対応する。リポジトリを作成してパスワードで保護し、スナップショット単位でバックアップを取る仕組みを採用している。シンプルな CLI で導入でき、詳細なドキュメントやコミュニティフォーラムも整備されている。
+https://github.com/restic/restic
 
-### ローカルファーストの AI メモリシステム MemPalace、LongMemEval で96.6%の Recall を達成
-API 呼び出しなしで動作するローカルファースト AI メモリシステム。LongMemEval ベンチマークで96.6% R@5 を記録し、逐語的ストレージとプラガブルバックエンドを特徴とする。PyPI パッケージとして公開されており、公式サイト以外のドメインはインポスター（マルウェア配布の恐れあり）と警告している。
-https://github.com/MemPalace/mempalace
+### Intercom や Zendesk の代替を狙うオープンソース顧客サポート基盤「Chatwoot」
+ライブチャット、メールサポート、オムニチャネルのヘルプデスクを備えたオープンソースの顧客サポートプラットフォーム。Intercom、Zendesk、Salesforce Service Cloud などの代替を標榜し、セルフホストで顧客データを完全に自社管理できる点を強みとする。スケールと柔軟性を意識して設計されており、ビジネスが優れたサポート体験を提供することを目的としている。
+https://github.com/chatwoot/chatwoot
 
-### OpenAI、Codex プラグインの公式コレクションを公開
-Figma・Notion などの連携プラグイン例を含む Codex プラグインのリポジトリを公開。各プラグインは `.codex-plugin/plugin.json` マニフェストを持ち、skills・MCP・hooks・コマンドなどの拡張ポイントを備える。エージェント機能の標準化に向けた OpenAI の取り組みが加速している。
-https://github.com/openai/plugins
-
-### CopilotKit、エージェントネイティブ UI 向けのフルスタック SDK を提供
-React・Angular・Vue・React Native で動作するエージェントアプリケーション構築用 SDK。Generative UI、共有ステート、Human-in-the-loop ワークフローをフレームワーク横断で実現し、AG-UI プロトコル策定にも参画している。エージェントが UI を動的に生成する「Generative UI」パターンの普及が進んでいる。
-https://github.com/CopilotKit/CopilotKit
+### AI システムをベンチマーク課題で自律改善する「SIA」
+言語モデルのエージェントが、ハーネス（実行環境）とタスク特化エージェントの重みの両方を更新する自己改善ループを実装したフレームワーク。論文「SIA: Self Improving AI with Harness & Weight Updates」（Hebbar ら, 2026）の公式実装とされる。論文では LawBench で 56.6% の向上、GPU カーネルで 91.9% の実行時間削減、単一細胞 RNA 解析で 502% の改善を報告している。AI システム（モデルやエージェント）の性能をベンチマーク課題上で自律的に高めることを狙う。
+https://github.com/hexo-ai/sia
 
 ## Hacker News
 
-### Google の「20%ルール」は AI 時代に「120%の注意」に変質した
-Google の従業員がかつて20%の時間で自由なプロジェクトに取り組めた制度が、AI 開発のプレッシャーにより実質的に「120%の注意と時間」を要求される状態に変化しているとする記事。AI 開発競争が企業文化に与える影響について、Google 内部の実態を伝える内容。HN では35ポイント・16コメントで議論を呼んだ。
-https://joe.dev/posts/new-20pct-time/
+### スイスの調査報道誌に対する Palantir の訴訟が退けられる
+データ分析企業 Palantir が、スイスの調査報道誌を相手取って起こした法的な異議申し立てに敗訴したと報じられている。報道機関への訴訟を通じた圧力が司法によって認められなかった事例として注目されている。Financial Times が伝えた記事で、コメント欄でも議論が交わされている。報道の自由とテック企業の関係をめぐる話題として取り上げられた。
+https://www.ft.com/content/7ffcace7-9dc0-4e7e-9912-895ac073f979
 
-### Alpine Linux 3.24.0 リース、軽量コンテナベースラインの最新版
-軽量 Linux ディストリビューションの定番 Alpine Linux が3.24.0をリリース。Docker コンテナのベースイメージとして広く利用されており、セキュリティアップデートと新機能が含まれる。HN で31ポイントを獲得し、コンテナ運用者の関心を集めている。
-https://alpinelinux.org/posts/Alpine-3.24.0-released.html
+### 検索エンジン Kagi が新機能「Magic」を発表
+有料検索エンジン Kagi が「Magic」と称する新機能を公開した。Hacker News では比較的高いスコアを集め、20 件ほどのコメントで議論されている。Kagi は広告に依存しないサブスクリプション型の検索サービスとして知られており、AI を絡めた検索体験の拡張が話題になっている。詳細は公式ページで案内されている。
+https://kagi.com/magic
 
-### 開発者は AI 生成コードに欠陥があると知りながら、それでも ship している
-The Register の調査記事。開発者は AI が生成したコードにバグやセキュリティホールが含まれることを認識しているが、開発速度のプレッシャーからそのままデプロイしている実態を報告。品質と速度のトレードオフが顕在化しており、HN では18ポイント・14コメントで「どうすべきか」の議論が展開された。
-https://www.theregister.com/devops/2026/06/09/devs-know-ai-code-is-riddled-with-holes-but-ship-it-anyway/5252824
+### Apple が TrueType ヒンティングのインタプリタを Swift へ移植
+Apple のエンジニアによる技術ブログで、フォントレンダリングに用いる TrueType ヒンティングのインタプリタを Swift へ移植した取り組みが紹介されている。ヒンティングは小さなサイズでも文字を鮮明に表示するための処理で、従来の実装を Swift に置き換えた経緯や技術的な工夫が語られている。低レベルかつ性能が問われる領域に Swift を適用した実例として関心を集めている。
+https://www.swift.org/blog/migrating-truetype-hinting-to-swift/
 
-### 車両ナンバープレート認識装置にスマホ・AirPod・スマートウォッチの追跡機能を追加する計画
-404 Media の報道。自動車のナンバープレート認識カメラ（ALPR）に加え、Bluetooth 信号から周辺のスマホやウェアラブルデバイスを追跡する機能を企業が追加しようとしている。プライバシー上の懸念からHNで13ポイントを獲得し、監視社会への批判的な議論が続いている。
-https://www.404media.co/this-company-will-add-phone-airpod-and-smartwatch-trackers-to-license-plate-readers/
+### Fable 5 で「vibe coding」されたブラウザ MMORPG「World of ClaudeCraft」
+AI モデル Fable 5 を使って、いわゆる「vibe coding（雰囲気でコードを書かせる開発）」で作られたブラウザ上の MMORPG が公開された。AI を活用したゲーム開発のデモンストレーションとして Hacker News で取り上げられている。名称は World of Warcraft をもじったもので、AI でどこまで動くゲームが作れるかを示す事例になっている。コメント欄でも実装への興味が寄せられている。
+https://worldofclaudecraft.com/
 
-### NPM v12 で予定される破壊的変更の概要
-GitHub 公式ブログで NPM v12 の破壊的変更が予告された。Node.js エコシステムに広範な影響を与える可能性があり、HN で10ポイントを記録。依存関係管理ツールの移行やパッケージ互換性の確認が必要になるケースがある。
-https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/
+### 「AI ルネサンスがなかなか到来しない理由」を論じるブログ
+AI への期待が高まり続ける一方で、期待されたような大きな変革（ルネサンス）が実際にはなかなか訪れない理由を考察したブログ記事。誇大な見通しと現実の進展のギャップを論じる内容で、Hacker News で議論を呼んでいる。技術の成熟度や実用化の壁といった観点から、AI を取り巻く言説に冷静な視点を提供しようとしている。
+https://jamesfbaker.substack.com/p/why-the-ai-renaissance-keeps-not
 
-### Donut Lab の全固体電池主張が Ziroth により検証・否定される
-バッテリースタートアップ Donut Lab が主張していた全固体電池の性能について、独立系検証機関 Ziroth が再現実験を行い、主張を裏付ける結果が得られなかったと報告。The Verge が報じ、HN で9ポイントを獲得。電池技術の誇大広告問題が再び注目されている。
-https://www.theverge.com/science/946608/donut-labs-debunk-solid-state-battery
+### 「あなたの KV キャッシュを買えますか？」LLM 推論キャッシュの取引を論じる論文
+大規模言語モデルの推論で生成される KV キャッシュ（Key-Value キャッシュ）を売買の対象として捉える、arXiv 掲載の研究論文。KV キャッシュは長いコンテキストの再計算を省く重要な要素で、これを共有・取引する仕組みやその経済性を検討している。LLM 推論のコスト削減やインフラ最適化の文脈で注目されるテーマを扱う。Hacker News でも技術的な議論が行われている。
+https://arxiv.org/abs/2606.13361
 
-### スマートグラスに録画ランプの装着を義務付ける法案が提出される
-Gizmodo の報道。スマートグラスが録画していることを周囲に示すランプ（インジケーター）の装着を法的に義務付ける法案が米国で提出された。プライバシー保護と技術利用のバランスをめぐる議論がHNで展開されている。
-https://gizmodo.com/smart-glasses-would-legally-require-a-recording-light-under-proposed-law-2000768694
-
-### AI の不手順で3万4000以上の Instagram アカウントが脆弱に
-NYT の報道。AI システムのバグにより3万4000以上の Instagram アカウントがセキュリティ上の脆弱な状態に置かれた事例。AI 運用におけるリスク管理の重要性を示す事例として、HN で7ポイント・2コメントの議論となった。
-https://www.nytimes.com/2026/06/09/technology/34000-instagram-accounts-ai.html
+### 「98% 問題」AI エージェント向けハーネスエンジニアリングのサーベイ
+AI エージェントを実用レベルで動かすための「ハーネス（実行基盤・足回り）」の設計手法を体系的にまとめたサーベイ記事。モデル自体の性能だけでなく、エージェントを確実に動作させる周辺の作り込みが成否を左右するという問題意識から「98% 問題」と名付けている。エージェント開発における工学的な課題を俯瞰する内容で、関連研究や実践知を整理している。
+https://labs.beconfident.app/papers/harness-engineering-survey
 
 ## Zenn
 
-### 開発者が攻撃対象になった時代の開発環境と CI/CD セキュリティ
-開発者自身が標的型攻撃の対象となった現代において、開発環境や CI/CD パイプラインをどう守るべきかを論じた記事。サプライチェーン攻撃や開発者アカウントの乗っ取りリスクへの対策として、環境分離、シークレット管理、CI/CD の堅牢化について実践的な知見を共有。Zenn で230ポイントと大きな反響を集めている。
-https://zenn.dev/catatsuy/articles/e2fc71d810613a
+### 新規事業を牽引するフルスタック TypeScript の技術選定事例
+新規事業の立ち上げにあたり、フロントからバックエンドまで TypeScript で統一して開発した実践事例を紹介する記事。技術選定の判断基準や、フルスタック TypeScript を採用したことによるメリットと課題を具体的に語っている。スピードが求められる新規事業開発でどのように技術スタックを決めたかが参考になる内容。Zenn の tech 記事として高い支持を集めている。
+https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7
 
-### バイブコーディング時代に Semgrep + gitleaks でセキュリティスキャンを全PJに導入
-AI コード生成（バイブコーディング）が普及する中、生成コードに含まれうるセキュリティリスクを検出するため、Semgrep と gitleaks を全プロジェクトに自動導入した実践報告。SAST ツールのセットアップ手順と運用ポイントを具体的に解説し、96ポイントを獲得した。
-https://zenn.dev/zittiandbuoni/articles/632ff0709247f6
+### Code with Claude Tokyo 参加で考えた「AI 時代に強い組織」
+Anthropic のイベント「Code with Claude Tokyo」に現地参加した筆者が、AI 時代に強い組織とは何かを考察したレポート。イベントで得た学びをもとに、AI を活用する組織のあり方やチームの働き方について論じている。技術そのものよりも、AI を前提とした組織論・働き方の視点が中心。Zenn で多くの共感を集めた記事。
+https://zenn.dev/paraponera/articles/2026-06-11-code-with-claude-tokyo
 
-### 現代の GPU アーキテクチャとシェーダー最適化の考え方
-GPU のハードウェア構造（ストリーミングマルチプロセッサ、ワープ実行、メモリ階層）を解説した上で、シェーダーコードの最適化手法を体系的に説明。レンダリングパイプラインのボトルネックを特定し、実測ベースで改善を行うアプローチが紹介されている。53ポイント。
-https://zenn.dev/ruccho/articles/shader-optimization
+### 「Fable 5 は自分以上に信頼している」Claude Code 開発者インタビュー
+「Code w/ Claude Tokyo」への現地参加レポートで、Claude Code の開発者へのインタビュー内容を紹介している。開発者が AI モデル Fable 5 を「自分以上に信頼している」と語った発言を軸に、AI コーディングへの向き合い方や開発現場での活用観が伝えられている。最先端のモデルをどう信頼し使いこなすかという視点が示されている。イベントの臨場感を伝える記事として注目された。
+https://zenn.dev/sompojapan_dx/articles/811ac0999e297b
 
-### Claude Code と Codex を使い比べて見えた設計思想の違い
-Anthropic の Claude Code と OpenAI の Codex を実務で使い比べ、両者の設計思想の違いを比較分析。エージェントの振る舞い、コンテキスト管理、コード生成のスタイル等方面的な差異を具体的に述べており、48ポイントの評価を得た。
-https://zenn.dev/tark_ann/articles/e8b09c6db73bfb
+### QA エンジニアが「自分でテストをやりきる」のをやめようとしている話
+QA エンジニアの筆者が、これまでのように自分一人でテストを完遂するスタイルを見直そうとしている経緯をつづった記事。AI やチーム体制の変化を踏まえ、QA の役割そのものをどう再定義するかを考察している。テストを抱え込むのではなく、品質保証の進め方を組織的に変えていく問題意識が語られている。QA・テストの今後を考えるうえで示唆に富む内容。
+https://zenn.dev/yasuhiro_test/articles/65eba13298c9c2
 
-### Claude Code で仕様書を Markdown と HTML で記述・比較した実験
-Claude Code を用いて仕様書を Markdown 形式と HTML 形式でそれぞれ記述し、生成品質やレビューしやすさ、社内共有のしやすさを比較。HTML 形式の方が構造化されたドキュメントとして有効な場面があることを示唆し、47ポイントを獲得した。
-https://zenn.dev/kawauchi_lab/articles/4b300879a41ab5
+### 組み込み Linux のブート画面を黒フレームなしで Qt アプリへ繋ぐ
+組み込み Linux 機器で、起動時のブート画面から Qt アプリの表示へ、画面が黒く途切れる「黒フレーム」を発生させずに滑らかに遷移させる手法を解説した記事。ブートからアプリ起動までの画面表示の連続性を保つための具体的な工夫を扱っている。組み込み機器の UX を高める低レベルな実装テクニックとして参考になる。Zenn の tech 記事として評価されている。
+https://zenn.dev/tasuku/articles/7bdcb880495a91
 
-### Docker Build を106秒→44秒、32秒→3秒に高速化した3つの改善
-Docker イメージのビルド時間を劇的に短縮した3つの具体的な改善手法を紹介。レイヤーキャッシュの活用、マルチステージビルドの最適化、不要ファイルの除外などを組み合わせることで、CI/CD パイプライン全体の高速化を実現。39ポイント。
-https://zenn.dev/engharu/articles/b3aa073c3694de
+### 自分専用の AI ニュースキュレーターを Codex で作り約 1 か月運用した記録
+自分専用の AI ニュースキュレーターを Codex で構築し、約 1 か月間運用してみた実践レポート。自動で情報を収集・要約・配信する仕組みの作り方や、運用してみて分かった課題・改善点が語られている。個人で AI を使った情報収集の自動化に取り組む際の具体的な参考事例になっている。Zenn の tech 記事として支持を集めた。
+https://zenn.dev/mkj/articles/966c62588bd8fc
 
-### 生成 AI 時代のエンジニアの生存戦略
-AI コード生成ツールが普及する中でエンジニアがどうキャリアを構築すべきかを考察。AI に代替されにくいスキル（設計判断、ドメイン知識、チームコミュニケーション）への投資の重要性を説き、39ポイントの反響を得た。
-https://zenn.dev/counterworks/articles/62667be5a186b8
-
-### 設計資料を HTML で回すワークフロー — 生成・レビュー・社内共有
-Claude Code を活用して設計資料を HTML 形式で生成し、レビューから社内共有までを一貫して行うワークフローを紹介。Markdown では難しいインタラクティブな図表や構造化レイアウトを HTML で実現するアプローチが提示されている。41ポイント。
-https://zenn.dev/rehabforjapan/articles/html-design-doc-workflow-claude-code-202605
-
-### AI に8割書かせたコードを半年後の自分が保守できるようにするためにやっていること
-AI コード生成に大きく依存する開発スタイルにおいて、将来の保守性を確保するための実践方法を共有。命名規約、コメント戦略、テスト設計、アーキテクチャの意思決定記録など、長期的なコード品質を維持するための具体的なノウハウがまとめられている。41ポイント。
-https://zenn.dev/rapls/articles/7456767a19af06
+### ゲーム事業部を設立し、そして終了したお話
+社内にゲーム事業部を立ち上げてから終了に至るまでの一部始終を率直につづった記事。事業を始めた経緯や運営中の出来事、そして撤退に至った判断の背景が語られている。成功談ではなく失敗・撤退の振り返りである点に価値があり、事業の意思決定について考えさせられる内容。Zenn の idea 記事として注目を集めた。
+https://zenn.dev/91works/articles/b535a86336cf42
 
 ## Qiita
 
-### エンジニアの「雑な Mermaid」をビジネス側に刺さる図解に変換する手法
-エンジニアが作成しがちな簡素な Mermaid 図を、ビジネスステークホルダーに伝わりやすい形に変換するプロンプトエンジニアリング手法を解説。Gemini を活用して技術的な図解をビジネス文脈に適した形に変換するワークフローが紹介されており、230ポイントと大きな反響を集めている。
-https://qiita.com/ktdatascience/items/4b35eb4e157becfac073
+### 信頼されるエンジニアが実践する「聴く技術」4選
+信頼を得ているエンジニアが実践している「聴く力」を 4 つの観点から整理した記事。技術力だけでなく、相手の話をきちんと聴くコミュニケーション能力が信頼構築に重要であることを説いている。新人エンジニアや未経験者にも実践しやすい具体的なポイントが紹介されている。Qiita で非常に高い支持を集めたソフトスキル系の記事。
+https://qiita.com/prum_hitomi/items/77e2a48e4189bd5ddc3b
 
-### 9割のエンジニア未経験者がつまずく「最初の壁」 — アプリを作りたい人向け（第2回）
-エンジニア未経験者がアプリ開発の過程で直面する典型的な壁とその乗り越え方を解説。理論学習から実装への移行時の困難や、エラーへの対処法を初心者目線でまとめている。76ポイントを獲得し、新人エンジニアの間で関心を集めている。
-https://qiita.com/hitomin_poke/items/ffcc67d985d4ab47631e
+### VPN なしで社外から社内へ：Cloudflare Zero Trust 無料枠での ZTNA 構築手順
+VPN を使わずに社外から社内リソースへ安全にアクセスするため、Cloudflare Zero Trust の無料枠を用いて ZTNA（ゼロトラストネットワークアクセス）を構築する手順を解説した記事。Entra ID との連携を含め、実際の設定手順が具体的に示されている。従来の VPN に代わるアクセス制御の選択肢として実践的な内容になっている。セキュリティ・インフラ担当者に役立つ手順書。
+https://qiita.com/BrainDirection/items/5215ea3cd1ec635a1636
 
-### 未経験からエンジニアになるために必要な3つの知識
-エンジニア未経験者が転職・キャリア構築のために身につけるべき3つの知識領域を整理。プログラミングスキルだけでなく、IT 基盤知識と問題解決能力の重要性を説き、学習ロードマップを提示。50ポイント。
-https://qiita.com/masa20057/items/39ad448983e2ba8406da
+### Oracle AI Database@AWS で Autonomous AI Database Serverless を作成してみた
+AWS 上で提供される Oracle AI Database を用いて、Autonomous AI Database Serverless を実際に作成・検証してみた記事。サーバーレス構成でのデータベース作成手順や、使ってみた所感がまとめられている。クラウドをまたいで Oracle のマネージドデータベースを利用する具体的な手順が参考になる。Oracle Cloud / OCI 関連の実践記事。
+https://qiita.com/shirok/items/06f3bca71ae6378a844e
 
-### ping・traceroute で SSH できない時の切り分け方
-SSH 接続ができない際のトラブルシューティング手順を、ping と traceroute コマンドを使った段階的な切り分け方として解説。ネットワーク層の問題かサーバー側の問題かを効率的に特定する方法がまとめられている。44ポイント。
-https://qiita.com/M_waowaowao/items/803300d3453daaaf48ce
+### CSS の Flex と Grid の Gap に Border を付けられるようになった
+CSS の Flexbox と Grid レイアウトで、要素間の隙間（gap）に境界線（border）を表示できるようになった新機能を紹介する記事。これまで実現しづらかった「アイテム間の区切り線」を、追加のマークアップなしに表現できるようになる。具体的な書き方とともに、フロントエンドのレイアウト表現の幅が広がる点が解説されている。実務で使える CSS の新しいテクニックとして注目された。
+https://qiita.com/degudegu2510/items/0c067a232719212c4bfe
 
-### 新卒2年目・独学で CISSP に合格した体験記（2026年6月）
-情報セキュリティの国際資格 CISSP を新卒2年目・独学で取得した体験記。学習期間、使用教材、試験当日の流れ、実務への活かし方などが具体的に記述されており、セキュリティキャリアを志す人への参考になる内容。20ポイント。
-https://qiita.com/Bibirina_hiyoko/items/c45179bcc35feda0041f
+### Bedrock の Claude Fable 5 で data retention エラーが出たら CloudShell だけで解決する
+AWS Bedrock 上で Claude Fable 5 を利用する際に発生する「data retention」エラーを、CloudShell だけで解決する方法を解説した記事。GUI を使わずコマンドライン環境のみで設定を行う手順が具体的に示されている。Bedrock で最新の Claude モデルを使い始める際につまずきやすいポイントへの対処として実用的。AWS・生成 AI 利用者向けのトラブルシュート記事。
+https://qiita.com/shohei_yamamoto/items/eb12e595e193b100a94f
 
-### 「その prompt ちょうだい」と言われても同じ設計書は出てこない — engineer to delegate to の実践
-AI エージェントに設計を委任する際のプロンプト設計の重要性を論じた記事。「engineer to delegate to」という考え方で AI に適切に仕事を委任するために本当に効いていたポイントを共有。18ポイント。
-https://qiita.com/ntaka329/items/c153d50810f2945897d8
+### Autonomous AI Database から SharePoint 上のファイルにアクセスしてみた
+Oracle の Autonomous AI Database から、SharePoint 上に保存されたファイルへアクセスする方法を検証した記事。クラウドデータベースと外部ストレージ（SharePoint）を連携させる具体的な手順や設定が紹介されている。後続記事では、これを土台に RAG を使った自然言語検索へ発展させる内容にもつながっている。エンタープライズのデータ連携・活用に関心がある人向けの実践記事。
+https://qiita.com/500InternalServerError/items/3f7507355ad151225f5a
 
-### 「個人で使う Claude Code」を「チームで育てる Claude Code」にする2つの仕組み
-個人利用からチーム利用へと Claude Code を展開するための具体的な仕組みを2つ紹介。チーム共有のルール設定と運用フローの構築について、実践的なアプローチが提示されている。15ポイント。
-https://qiita.com/k_yamaki/items/dc10f90a5aad61aad0e8
-
-### AI エージェントのトークン代を節約する CLAUDE.md と copilot-instructions.md 実践ガイド
-AI コーディングエージェントのトークン消費を削減するための設定ファイル（CLAUDE.md、copilot-instructions.md）の書き方を実測データとともに解説。毎ターンのコンテキストロードを最適化し、コストを抑える具体的な手法がまとめられている。14ポイント。
-https://qiita.com/shinkai_/items/8f88307b7cb13b748e57
+### 【保存版】Linux 作業を爆速化する便利コマンド5選
+日々の Linux 作業を効率化するための便利なコマンドを 5 つ厳選して紹介する記事。それぞれのコマンドの使いどころと具体的な使用例が示されており、作業のスピードアップに直結する内容になっている。初心者にも分かりやすくまとめられている。Linux を日常的に扱うエンジニアに向けた実用的な逆引きとして支持を集めた。
+https://qiita.com/K_TAKETO/items/66d70ce4ed54139998a9

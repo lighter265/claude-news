@@ -62,30 +62,11 @@ main() {
 
     assert_command git
     assert_command python3
-    assert_command opencode #claude
+    assert_command claude #opencode #claude
 
     assert_file "scripts/fetch_all.py"
     assert_file "feed-format.md"
     assert_file "local/send_mail.py"
-
-    if [[ "$TRY_MODE" == false ]]; then
-        local branch
-        branch=$(git rev-parse --abbrev-ref HEAD)
-        if [[ "$branch" != "master" ]]; then
-            log "master ブランチで実行してください。現在: $branch"
-            exit 1
-        fi
-
-        local changes
-        changes=$(git status --porcelain)
-        if [[ -n "$changes" ]]; then
-            log "作業ツリーが clean ではありません。先にコミットまたはリセットしてください。"
-            exit 1
-        fi
-
-        log "git pull --rebase origin master 開始"
-        run git pull --rebase origin master
-    fi
 
     log "ニュース取得開始"
     run python3 scripts/fetch_all.py
@@ -105,18 +86,12 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-#    local prompt="raw/*.json は既に生成済みです。
-#fetch、commit、push、メール送信は行わないでください。
-#raw/*.json を読み、feed.md を feed-format.md の記法に従って生成し、上書きしてください。
-#要約ルールも feed-format.md に従ってください。"
-
-#    log "Claude 要約生成開始"
-#    run timeout 1800 claude -p "$prompt"
-    #run timeout 1800 claude --model opus -p "$prompt"
-
     local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。"
-    log "opencode 要約生成開始"
-    run timeout 1800 opencode run "$prompt"
+    log "要約生成開始"
+
+    #run timeout 1800 claude -p "$prompt"
+    run timeout 1800 claude --model sonnet --dangerously-skip-permissions -p "$prompt"
+    #run timeout 1800 opencode run "$prompt"
     
     assert_file "feed.md"
 
@@ -146,21 +121,31 @@ main() {
     log "掲載URLをDBへ登録"
     run python3 scripts/register_seen.py
 
-    if [[ "$TRY_MODE" == false ]]; then
-        if git diff --quiet -- feed.md; then
-            log "feed.md に差分なし。commit/push/mail をスキップします。"
-            exit 0
-        fi
+    log "HTML生成"
+    run python3 scripts/generate_html.py
+    run python3 scripts/generate_index.py
 
-        log "commit/push 開始"
-        run git add feed.md
-        run git commit -m "feed: ${today} の技術ニュース要約"
-        run git push origin HEAD:master
+    if [[ "$TRY_MODE" == false ]]; then
+        log "Git commit & push"
+        git add feed.md docs/
+        if git diff --cached --quiet; then
+            log "差分なし、pushスキップ"
+        else
+            git commit -m "feed: $today の技術ニュース要約"
+            git push origin HEAD:main
+        fi
 
         log "メール送信開始"
         run python3 local/send_mail.py
+
+        log "Slack通知"
+        if [[ -n "${SLACK_WEBHOOK_URL:-}" ]]; then
+            run python3 scripts/slack_notify.py
+        else
+            log "SLACK_WEBHOOK_URL未設定、Slack通知スキップ"
+        fi
     else
-        log "[TRY MODE] commit/push/mail をスキップ"
+        log "[TRY MODE] commit/push/mail/slack をスキップ"
     fi
 
     log "完了"

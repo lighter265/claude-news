@@ -8,6 +8,7 @@ import smtplib
 import sys
 from datetime import datetime
 from email.message import EmailMessage
+from smtplib import SMTPAuthenticationError
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FEED = os.path.join(BASE, "feed.md")
@@ -32,8 +33,10 @@ def main():
     if not password:
         sys.exit("GMAIL_APP_PASSWORD が未設定。local/.env か環境変数で設定してください。")
 
-    mail_from = os.environ.get("NEWS_MAIL_FROM", "info@blueskyjp.com")
-    mail_to = os.environ.get("NEWS_MAIL_TO", "info@blueskyjp.com")
+    mail_from = os.environ.get("NEWS_MAIL_FROM", "").strip()
+    if not mail_from:
+        sys.exit("NEWS_MAIL_FROM が未設定。Gmail アカウントを設定してください。")
+    mail_to = os.environ.get("NEWS_MAIL_TO", mail_from).strip() or mail_from
 
     if not os.path.exists(FEED):
         sys.exit(f"feed.md が見つかりません: {FEED}")
@@ -51,10 +54,16 @@ def main():
     # 465(implicit SSL)はブロックされる環境があるため 587(STARTTLS)を使う。
     # local_hostname を明示しないと getfqdn() がスペース入りの値を返し
     # EHLO がプロトコル違反になる環境があるため固定する。
-    with smtplib.SMTP("smtp.gmail.com", 587, local_hostname="localhost", timeout=30) as smtp:
-        smtp.starttls()
-        smtp.login(mail_from, password)
-        smtp.send_message(msg)
+    try:
+        with smtplib.SMTP("smtp.gmail.com", 587, local_hostname="localhost", timeout=30) as smtp:
+            smtp.starttls()
+            smtp.login(mail_from, password)
+            smtp.send_message(msg)
+    except SMTPAuthenticationError:
+        sys.exit(
+            "SMTP 認証に失敗しました。NEWS_MAIL_FROM が App Password 発行元の Gmail と一致しているか、"
+            "GMAIL_APP_PASSWORD が正しいか確認してください。"
+        )
     print(f"sent to {mail_to}")
 
 

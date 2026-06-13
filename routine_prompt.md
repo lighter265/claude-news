@@ -29,4 +29,4 @@
 
 ## feed.md の形式と要約ルール
 
-`feed-format.md` に従う。
+`feed-format.md` に従う。テーブル形式で出力すること。

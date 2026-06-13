@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-13</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead th { background: #1a1a2e; color: #e0e0e0; font-size: .82rem; font-weight: 600; padding: 10px 14px; border-bottom: 2px solid #16213e; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-13</h1>
+<h2 class="section-title">GitHub Trending</h2>
+<table>
+<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Mac 上で Linux コンテナを軽量 VM として動かす Apple 製ツール「container」</td><td class="link-col"><a href="https://github.com/apple/container" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Apple が公開した、Mac 上で Linux コンテナを軽量な仮想マシンとして作成・実行するためのツール。Swift で書かれており、Apple シリコンに最適化されている。OCI 互換のコンテナイメージを生成・利用できるため、標準的なコンテナレジストリからイメージを pull して実行したり、自分でビルドしたイメージを push したりできる。Docker などの既存エコシステムと互換性を保ちつつ、macOS ネイティブの仮想化基盤を活かす点が特徴。</td></tr>
+<tr><td class="num">2</td><td class="title">AI エージェントの「スキル」を導入前に検査するセキュリティスキャナ「SkillSpector」</td><td class="link-col"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NVIDIA が公開した、AI エージェント向けスキルの脆弱性や悪意あるパターン、セキュリティリスクを検出するスキャナ。Claude Code や Codex CLI、Gemini CLI などで使われるスキルは暗黙の信頼のもとで最小限の審査しか経ずに実行される点を問題視している。プロジェクトの説明によると、スキルの 26.1% に脆弱性が含まれ、5.2% が悪意ある意図を示すという調査結果を引用している。スキルをインストールする前に安全性を確認する用途を想定している。</td></tr>
+<tr><td class="num">3</td><td class="title">コーディングエージェント向けの方法論とスキル群を束ねた「Superpowers」</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コーディングエージェント向けに、合成可能なスキル群とそれを確実に使わせる初期指示をまとめたソフトウェア開発方法論フレームワーク。Claude Code、Codex CLI/App、Factory Droid、Gemini CLI、OpenCode、Cursor、GitHub Copilot CLI など幅広いエージェントに導入できる。エージェントを起動した瞬間から方法論が働き始める設計を謳っている。エージェントの作業手順を体系化したい開発者向けのプロジェクト。</td></tr>
+<tr><td class="num">4</td><td class="title">ユーザー名だけで人物のアカウント情報を横断収集する OSINT ツール「Maigret」</td><td class="link-col"><a href="https://github.com/soxoj/maigret" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ユーザー名のみを手がかりに、3000 以上のサイトでアカウントの有無を確認し、公開されている情報を Web ページから収集して人物のドシエ（調書）を作成するツール。API キーは不要で、AI によるプロファイリングのデモ機能も備える。調査やセキュリティ、OSINT（公開情報収集）の文脈で利用される。多数のサイトを一括でチェックできる点が特徴。</td></tr>
+<tr><td class="num">5</td><td class="title">高速・安全・効率的なバックアッププログラム「restic」</td><td class="link-col"><a href="https://github.com/restic/restic" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">高速かつ効率的で安全性を重視したバックアッププログラム。Linux、macOS、Windows の主要 3 OS に加え、FreeBSD や OpenBSD などにも対応する。リポジトリを作成してパスワードで保護し、スナップショット単位でバックアップを取る仕組みを採用している。シンプルな CLI で導入でき、詳細なドキュメントやコミュニティフォーラムも整備されている。</td></tr>
+<tr><td class="num">6</td><td class="title">Intercom や Zendesk の代替を狙うオープンソース顧客サポート基盤「Chatwoot」</td><td class="link-col"><a href="https://github.com/chatwoot/chatwoot" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ライブチャット、メールサポート、オムニチャネルのヘルプデスクを備えたオープンソースの顧客サポートプラットフォーム。Intercom、Zendesk、Salesforce Service Cloud などの代替を標榜し、セルフホストで顧客データを完全に自社管理できる点を強みとする。スケールと柔軟性を意識して設計されており、ビジネスが優れたサポート体験を提供することを目的としている。</td></tr>
+<tr><td class="num">7</td><td class="title">AI システムをベンチマーク課題で自律改善する「SIA」</td><td class="link-col"><a href="https://github.com/hexo-ai/sia" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">言語モデルのエージェントが、ハーネス（実行環境）とタスク特化エージェントの重みの両方を更新する自己改善ループを実装したフレームワーク。論文「SIA: Self Improving AI with Harness &amp; Weight Updates」（Hebbar ら, 2026）の公式実装とされる。論文では LawBench で 56.6% の向上、GPU カーネルで 91.9% の実行時間削減、単一細胞 RNA 解析で 502% の改善を報告している。AI システム（モデルやエージェント）の性能をベンチマーク課題上で自律的に高めることを狙う。</td></tr>
+</tbody>
+</table>
+<h2 class="section-title">Hacker News</h2>
+<table>
+<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">スイスの調査報道誌に対する Palantir の訴訟が退けられる</td><td class="link-col"><a href="https://www.ft.com/content/7ffcace7-9dc0-4e7e-9912-895ac073f979" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">データ分析企業 Palantir が、スイスの調査報道誌を相手取って起こした法的な異議申し立てに敗訴したと報じられている。報道機関への訴訟を通じた圧力が司法によって認められなかった事例として注目されている。Financial Times が伝えた記事で、コメント欄でも議論が交わされている。報道の自由とテック企業の関係をめぐる話題として取り上げられた。</td></tr>
+<tr><td class="num">2</td><td class="title">検索エンジン Kagi が新機能「Magic」を発表</td><td class="link-col"><a href="https://kagi.com/magic" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">有料検索エンジン Kagi が「Magic」と称する新機能を公開した。Hacker News では比較的高いスコアを集め、20 件ほどのコメントで議論されている。Kagi は広告に依存しないサブスクリプション型の検索サービスとして知られており、AI を絡めた検索体験の拡張が話題になっている。詳細は公式ページで案内されている。</td></tr>
+<tr><td class="num">3</td><td class="title">Apple が TrueType ヒンティングのインタプリタを Swift へ移植</td><td class="link-col"><a href="https://www.swift.org/blog/migrating-truetype-hinting-to-swift/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Apple のエンジニアによる技術ブログで、フォントレンダリングに用いる TrueType ヒンティングのインタプリタを Swift へ移植した取り組みが紹介されている。ヒンティングは小さなサイズでも文字を鮮明に表示するための処理で、従来の実装を Swift に置き換えた経緯や技術的な工夫が語られている。低レベルかつ性能が問われる領域に Swift を適用した実例として関心を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">Fable 5 で「vibe coding」されたブラウザ MMORPG「World of ClaudeCraft」</td><td class="link-col"><a href="https://worldofclaudecraft.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI モデル Fable 5 を使って、いわゆる「vibe coding（雰囲気でコードを書かせる開発）」で作られたブラウザ上の MMORPG が公開された。AI を活用したゲーム開発のデモンストレーションとして Hacker News で取り上げられている。名称は World of Warcraft をもじったもので、AI でどこまで動くゲームが作れるかを示す事例になっている。コメント欄でも実装への興味が寄せられている。</td></tr>
+<tr><td class="num">5</td><td class="title">「AI ルネサンスがなかなか到来しない理由」を論じるブログ</td><td class="link-col"><a href="https://jamesfbaker.substack.com/p/why-the-ai-renaissance-keeps-not" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI への期待が高まり続ける一方で、期待されたような大きな変革（ルネサンス）が実際にはなかなか訪れない理由を考察したブログ記事。誇大な見通しと現実の進展のギャップを論じる内容で、Hacker News で議論を呼んでいる。技術の成熟度や実用化の壁といった観点から、AI を取り巻く言説に冷静な視点を提供しようとしている。</td></tr>
+<tr><td class="num">6</td><td class="title">「あなたの KV キャッシュを買えますか？」LLM 推論キャッシュの取引を論じる論文</td><td class="link-col"><a href="https://arxiv.org/abs/2606.13361" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大規模言語モデルの推論で生成される KV キャッシュ（Key-Value キャッシュ）を売買の対象として捉える、arXiv 掲載の研究論文。KV キャッシュは長いコンテキストの再計算を省く重要な要素で、これを共有・取引する仕組みやその経済性を検討している。LLM 推論のコスト削減やインフラ最適化の文脈で注目されるテーマを扱う。Hacker News でも技術的な議論が行われている。</td></tr>
+<tr><td class="num">7</td><td class="title">「98% 問題」AI エージェント向けハーネスエンジニアリングのサーベイ</td><td class="link-col"><a href="https://labs.beconfident.app/papers/harness-engineering-survey" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントを実用レベルで動かすための「ハーネス（実行基盤・足回り）」の設計手法を体系的にまとめたサーベイ記事。モデル自体の性能だけでなく、エージェントを確実に動作させる周辺の作り込みが成否を左右するという問題意識から「98% 問題」と名付けている。エージェント開発における工学的な課題を俯瞰する内容で、関連研究や実践知を整理している。</td></tr>
+</tbody>
+</table>
+<h2 class="section-title">Zenn</h2>
+<table>
+<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">新規事業を牽引するフルスタック TypeScript の技術選定事例</td><td class="link-col"><a href="https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">新規事業の立ち上げにあたり、フロントからバックエンドまで TypeScript で統一して開発した実践事例を紹介する記事。技術選定の判断基準や、フルスタック TypeScript を採用したことによるメリットと課題を具体的に語っている。スピードが求められる新規事業開発でどのように技術スタックを決めたかが参考になる内容。Zenn の tech 記事として高い支持を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">Code with Claude Tokyo 参加で考えた「AI 時代に強い組織」</td><td class="link-col"><a href="https://zenn.dev/paraponera/articles/2026-06-11-code-with-claude-tokyo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropic のイベント「Code with Claude Tokyo」に現地参加した筆者が、AI 時代に強い組織とは何かを考察したレポート。イベントで得た学びをもとに、AI を活用する組織のあり方やチームの働き方について論じている。技術そのものよりも、AI を前提とした組織論・働き方の視点が中心。Zenn で多くの共感を集めた記事。</td></tr>
+<tr><td class="num">3</td><td class="title">「Fable 5 は自分以上に信頼している」Claude Code 開発者インタビュー</td><td class="link-col"><a href="https://zenn.dev/sompojapan_dx/articles/811ac0999e297b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「Code w/ Claude Tokyo」への現地参加レポートで、Claude Code の開発者へのインタビュー内容を紹介している。開発者が AI モデル Fable 5 を「自分以上に信頼している」と語った発言を軸に、AI コーディングへの向き合い方や開発現場での活用観が伝えられている。最先端のモデルをどう信頼し使いこなすかという視点が示されている。イベントの臨場感を伝える記事として注目された。</td></tr>
+<tr><td class="num">4</td><td class="title">QA エンジニアが「自分でテストをやりきる」のをやめようとしている話</td><td class="link-col"><a href="https://zenn.dev/yasuhiro_test/articles/65eba13298c9c2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">QA エンジニアの筆者が、これまでのように自分一人でテストを完遂するスタイルを見直そうとしている経緯をつづった記事。AI やチーム体制の変化を踏まえ、QA の役割そのものをどう再定義するかを考察している。テストを抱え込むのではなく、品質保証の進め方を組織的に変えていく問題意識が語られている。QA・テストの今後を考えるうえで示唆に富む内容。</td></tr>
+<tr><td class="num">5</td><td class="title">組み込み Linux のブート画面を黒フレームなしで Qt アプリへ繋ぐ</td><td class="link-col"><a href="https://zenn.dev/tasuku/articles/7bdcb880495a91" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">組み込み Linux 機器で、起動時のブート画面から Qt アプリの表示へ、画面が黒く途切れる「黒フレーム」を発生させずに滑らかに遷移させる手法を解説した記事。ブートからアプリ起動までの画面表示の連続性を保つための具体的な工夫を扱っている。組み込み機器の UX を高める低レベルな実装テクニックとして参考になる。Zenn の tech 記事として評価されている。</td></tr>
+<tr><td class="num">6</td><td class="title">自分専用の AI ニュースキュレーターを Codex で作り約 1 か月運用した記録</td><td class="link-col"><a href="https://zenn.dev/mkj/articles/966c62588bd8fc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自分専用の AI ニュースキュレーターを Codex で構築し、約 1 か月間運用してみた実践レポート。自動で情報を収集・要約・配信する仕組みの作り方や、運用してみて分かった課題・改善点が語られている。個人で AI を使った情報収集の自動化に取り組む際の具体的な参考事例になっている。Zenn の tech 記事として支持を集めた。</td></tr>
+<tr><td class="num">7</td><td class="title">ゲーム事業部を設立し、そして終了したお話</td><td class="link-col"><a href="https://zenn.dev/91works/articles/b535a86336cf42" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">社内にゲーム事業部を立ち上げてから終了に至るまでの一部始終を率直につづった記事。事業を始めた経緯や運営中の出来事、そして撤退に至った判断の背景が語られている。成功談ではなく失敗・撤退の振り返りである点に価値があり、事業の意思決定について考えさせられる内容。Zenn の idea 記事として注目を集めた。</td></tr>
+</tbody>
+</table>
+<h2 class="section-title">Qiita</h2>
+<table>
+<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">信頼されるエンジニアが実践する「聴く技術」4選</td><td class="link-col"><a href="https://qiita.com/prum_hitomi/items/77e2a48e4189bd5ddc3b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">信頼を得ているエンジニアが実践している「聴く力」を 4 つの観点から整理した記事。技術力だけでなく、相手の話をきちんと聴くコミュニケーション能力が信頼構築に重要であることを説いている。新人エンジニアや未経験者にも実践しやすい具体的なポイントが紹介されている。Qiita で非常に高い支持を集めたソフトスキル系の記事。</td></tr>
+<tr><td class="num">2</td><td class="title">VPN なしで社外から社内へ：Cloudflare Zero Trust 無料枠での ZTNA 構築手順</td><td class="link-col"><a href="https://qiita.com/BrainDirection/items/5215ea3cd1ec635a1636" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">VPN を使わずに社外から社内リソースへ安全にアクセスするため、Cloudflare Zero Trust の無料枠を用いて ZTNA（ゼロトラストネットワークアクセス）を構築する手順を解説した記事。Entra ID との連携を含め、実際の設定手順が具体的に示されている。従来の VPN に代わるアクセス制御の選択肢として実践的な内容になっている。セキュリティ・インフラ担当者に役立つ手順書。</td></tr>
+<tr><td class="num">3</td><td class="title">Oracle AI Database@AWS で Autonomous AI Database Serverless を作成してみた</td><td class="link-col"><a href="https://qiita.com/shirok/items/06f3bca71ae6378a844e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS 上で提供される Oracle AI Database を用いて、Autonomous AI Database Serverless を実際に作成・検証してみた記事。サーバーレス構成でのデータベース作成手順や、使ってみた所感がまとめられている。クラウドをまたいで Oracle のマネージドデータベースを利用する具体的な手順が参考になる。Oracle Cloud / OCI 関連の実践記事。</td></tr>
+<tr><td class="num">4</td><td class="title">CSS の Flex と Grid の Gap に Border を付けられるようになった</td><td class="link-col"><a href="https://qiita.com/degudegu2510/items/0c067a232719212c4bfe" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CSS の Flexbox と Grid レイアウトで、要素間の隙間（gap）に境界線（border）を表示できるようになった新機能を紹介する記事。これまで実現しづらかった「アイテム間の区切り線」を、追加のマークアップなしに表現できるようになる。具体的な書き方とともに、フロントエンドのレイアウト表現の幅が広がる点が解説されている。実務で使える CSS の新しいテクニックとして注目された。</td></tr>
+<tr><td class="num">5</td><td class="title">Bedrock の Claude Fable 5 で data retention エラーが出たら CloudShell だけで解決する</td><td class="link-col"><a href="https://qiita.com/shohei_yamamoto/items/eb12e595e193b100a94f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS Bedrock 上で Claude Fable 5 を利用する際に発生する「data retention」エラーを、CloudShell だけで解決する方法を解説した記事。GUI を使わずコマンドライン環境のみで設定を行う手順が具体的に示されている。Bedrock で最新の Claude モデルを使い始める際につまずきやすいポイントへの対処として実用的。AWS・生成 AI 利用者向けのトラブルシュート記事。</td></tr>
+<tr><td class="num">6</td><td class="title">Autonomous AI Database から SharePoint 上のファイルにアクセスしてみた</td><td class="link-col"><a href="https://qiita.com/500InternalServerError/items/3f7507355ad151225f5a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Oracle の Autonomous AI Database から、SharePoint 上に保存されたファイルへアクセスする方法を検証した記事。クラウドデータベースと外部ストレージ（SharePoint）を連携させる具体的な手順や設定が紹介されている。後続記事では、これを土台に RAG を使った自然言語検索へ発展させる内容にもつながっている。エンタープライズのデータ連携・活用に関心がある人向けの実践記事。</td></tr>
+<tr><td class="num">7</td><td class="title">【保存版】Linux 作業を爆速化する便利コマンド5選</td><td class="link-col"><a href="https://qiita.com/K_TAKETO/items/66d70ce4ed54139998a9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">日々の Linux 作業を効率化するための便利なコマンドを 5 つ厳選して紹介する記事。それぞれのコマンドの使いどころと具体的な使用例が示されており、作業のスピードアップに直結する内容になっている。初心者にも分かりやすくまとめられている。Linux を日常的に扱うエンジニアに向けた実用的な逆引きとして支持を集めた。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-13 23:34 JST
+</footer>
+</div>
+</body>
+</html>
