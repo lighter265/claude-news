@@ -51,6 +51,12 @@ assert_file() {
 
 main() {
     cd "$REPO"
+    # .env 読み込み
+    if [[ -f "$REPO/local/.env" ]]; then
+        set -a
+        source "$REPO/local/.env"
+        set +a
+    fi
     local init_msg="開始"
     if [[ "$TRY_MODE" == true ]]; then
         init_msg="$init_msg [TRY-MODE: git commit/push/mail スキップ]"
