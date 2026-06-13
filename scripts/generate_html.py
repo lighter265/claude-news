@@ -94,11 +94,11 @@ def build_html(sections: dict, date_str: str) -> str:
     for sec_name, items in sections.items():
         if not items:
             continue
-        tables += f'<h2 class="section-title">{escape_html(sec_name)}</h2>\n'
         tables += '<table>\n'
         tables += (
             f'<thead>'
-            f'<tr><th class="num">#</th>'
+            f'<tr class="section-header"><th colspan="3">{escape_html(sec_name)}</th></tr>'
+            f'<tr class="sub-header"><th class="num">#</th>'
             f'<th>タイトル</th>'
             f'<th class="link-col">🔗</th></tr>'
             f'</thead>\n'
@@ -143,7 +143,8 @@ def build_html(sections: dict, date_str: str) -> str:
   h1 {{ font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }}
   .section-title {{ font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }}
   table {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }}
-  thead th {{ background: #1a1a2e; color: #e0e0e0; font-size: .82rem; font-weight: 600; padding: 10px 14px; border-bottom: 2px solid #16213e; }}
+  thead .section-header th {{ background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }}
+  thead .sub-header th {{ background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }}
   tbody td {{ padding: 10px 14px; vertical-align: top; }}
   .num {{ width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }}
   .title {{ font-weight: 600; font-size: .93rem; color: #222; }}

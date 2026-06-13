@@ -14,7 +14,8 @@
   h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
   .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
   table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
-  thead th { background: #1a1a2e; color: #e0e0e0; font-size: .82rem; font-weight: 600; padding: 10px 14px; border-bottom: 2px solid #16213e; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
   tbody td { padding: 10px 14px; vertical-align: top; }
   .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
   .title { font-weight: 600; font-size: .93rem; color: #222; }
@@ -32,9 +33,8 @@
 <body>
 <div class="container">
 <h1>📰 技術ニュース要約 — 2026-06-13</h1>
-<h2 class="section-title">GitHub Trending</h2>
 <table>
-<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">Mac 上で Linux コンテナを軽量 VM として動かす Apple 製ツール「container」</td><td class="link-col"><a href="https://github.com/apple/container" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">Apple が公開した、Mac 上で Linux コンテナを軽量な仮想マシンとして作成・実行するためのツール。Swift で書かれており、Apple シリコンに最適化されている。OCI 互換のコンテナイメージを生成・利用できるため、標準的なコンテナレジストリからイメージを pull して実行したり、自分でビルドしたイメージを push したりできる。Docker などの既存エコシステムと互換性を保ちつつ、macOS ネイティブの仮想化基盤を活かす点が特徴。</td></tr>
@@ -52,9 +52,8 @@
 <tr class="summary-row"><td></td><td colspan="2" class="summary">言語モデルのエージェントが、ハーネス（実行環境）とタスク特化エージェントの重みの両方を更新する自己改善ループを実装したフレームワーク。論文「SIA: Self Improving AI with Harness &amp; Weight Updates」（Hebbar ら, 2026）の公式実装とされる。論文では LawBench で 56.6% の向上、GPU カーネルで 91.9% の実行時間削減、単一細胞 RNA 解析で 502% の改善を報告している。AI システム（モデルやエージェント）の性能をベンチマーク課題上で自律的に高めることを狙う。</td></tr>
 </tbody>
 </table>
-<h2 class="section-title">Hacker News</h2>
 <table>
-<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">スイスの調査報道誌に対する Palantir の訴訟が退けられる</td><td class="link-col"><a href="https://www.ft.com/content/7ffcace7-9dc0-4e7e-9912-895ac073f979" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">データ分析企業 Palantir が、スイスの調査報道誌を相手取って起こした法的な異議申し立てに敗訴したと報じられている。報道機関への訴訟を通じた圧力が司法によって認められなかった事例として注目されている。Financial Times が伝えた記事で、コメント欄でも議論が交わされている。報道の自由とテック企業の関係をめぐる話題として取り上げられた。</td></tr>
@@ -72,9 +71,8 @@
 <tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントを実用レベルで動かすための「ハーネス（実行基盤・足回り）」の設計手法を体系的にまとめたサーベイ記事。モデル自体の性能だけでなく、エージェントを確実に動作させる周辺の作り込みが成否を左右するという問題意識から「98% 問題」と名付けている。エージェント開発における工学的な課題を俯瞰する内容で、関連研究や実践知を整理している。</td></tr>
 </tbody>
 </table>
-<h2 class="section-title">Zenn</h2>
 <table>
-<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">新規事業を牽引するフルスタック TypeScript の技術選定事例</td><td class="link-col"><a href="https://zenn.dev/katsumanarisawa/articles/c3dd3e8371d4d7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">新規事業の立ち上げにあたり、フロントからバックエンドまで TypeScript で統一して開発した実践事例を紹介する記事。技術選定の判断基準や、フルスタック TypeScript を採用したことによるメリットと課題を具体的に語っている。スピードが求められる新規事業開発でどのように技術スタックを決めたかが参考になる内容。Zenn の tech 記事として高い支持を集めている。</td></tr>
@@ -92,9 +90,8 @@
 <tr class="summary-row"><td></td><td colspan="2" class="summary">社内にゲーム事業部を立ち上げてから終了に至るまでの一部始終を率直につづった記事。事業を始めた経緯や運営中の出来事、そして撤退に至った判断の背景が語られている。成功談ではなく失敗・撤退の振り返りである点に価値があり、事業の意思決定について考えさせられる内容。Zenn の idea 記事として注目を集めた。</td></tr>
 </tbody>
 </table>
-<h2 class="section-title">Qiita</h2>
 <table>
-<thead><tr><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">信頼されるエンジニアが実践する「聴く技術」4選</td><td class="link-col"><a href="https://qiita.com/prum_hitomi/items/77e2a48e4189bd5ddc3b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">信頼を得ているエンジニアが実践している「聴く力」を 4 つの観点から整理した記事。技術力だけでなく、相手の話をきちんと聴くコミュニケーション能力が信頼構築に重要であることを説いている。新人エンジニアや未経験者にも実践しやすい具体的なポイントが紹介されている。Qiita で非常に高い支持を集めたソフトスキル系の記事。</td></tr>
@@ -115,7 +112,7 @@
 
 <footer>
   Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
-  · 2026-06-13 23:34 JST
+  · 2026-06-13 23:41 JST
 </footer>
 </div>
 </body>
