@@ -132,7 +132,7 @@ main() {
             log "差分なし、pushスキップ"
         else
             git commit -m "feed: $today の技術ニュース要約"
-            git push origin HEAD:main
+            git push origin HEAD:master
         fi
 
         log "メール送信開始"

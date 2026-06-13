@@ -19,11 +19,11 @@
    ```
    git add feed.md
    git commit -m "feed: <YYYY-MM-DD> の技術ニュース要約"
-   git push origin HEAD:main
+   git push origin HEAD:master
    ```
 
    - `feed.md` に差分が無い場合はコミットしない。
-   - **必ず `main` ブランチへ push する**(`git push origin HEAD:main`)。
+   - **必ず `main` ブランチへ push する**(`git push origin HEAD:master`)。
      Claude Code on the web はセッションごとに作業ブランチを切るが、ローカル側は
      `main` を pull して受け取るため、作業ブランチへの push では運用が成立しない。
 
