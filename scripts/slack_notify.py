@@ -29,7 +29,8 @@ def parse_sections(md_text: str) -> list[dict]:
         end = len(md_text)
         if i + 1 < len(sections):
             end = md_text.find(f"## {sections[i+1]['name']}")
-        sec["count"] = len(re.findall(r"^### ", md_text[start:end], re.MULTILINE))
+        # テーブル行 (| 1 | ...) をカウント
+        sec["count"] = len(re.findall(r"^\| \d+ \|", md_text[start:end], re.MULTILINE))
 
     return sections
 

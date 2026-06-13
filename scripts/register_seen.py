@@ -58,9 +58,9 @@ def extract_urls(feed_path):
     urls = []
     with open(feed_path, encoding="utf-8") as f:
         for line in f:
-            line = line.strip()
-            if re.match(r"^https?://\S+$", line):
-                urls.append(line)
+            # 行全体がURLのケース（旧形式）とテーブル行内のURL（新形式）の両対応
+            for m in re.finditer(r"https?://[^\s|)]+", line):
+                urls.append(m.group(0))
     return urls
 
 
