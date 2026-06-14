@@ -100,6 +100,11 @@ def main():
             "type": "context",
             "elements": [
                 {
+                    "type": "image",
+                    "image_url": f"{PAGES_URL.rstrip('/')}/bee-image.jpeg",
+                    "alt_text": "べー",
+                },
+                {
                     "type": "mrkdwn",
                     "text": f"🤖 claude-news · {date_str} · 自動投稿",
                 }
