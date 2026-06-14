@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-15</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-15</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェントスキルの脆弱性を検出するセキュリティスキャナー — NVIDIA/SkillSpector</td><td class="link-col"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NVIDIAがリリースした、AIエージェント向けスキルに潜む脆弱性・悪意あるパターン・セキュリティリスクを自動検出するツール。Claude Code・Codex CLI・Gemini CLIなど各エージェントが利用するスキルはほぼ審査なしにインストールされる現状を問題視しており、調査では26.1%のスキルに脆弱性、5.2%に悪意ある意図の可能性があることが示されている。インストール前の事前確認手段として活用できる実用的なセキュリティツール。</td></tr>
+<tr><td class="num">2</td><td class="title">AIコーディングエージェントのセッション・コスト横断管理ツール — kenn-io/agentsview</td><td class="link-col"><a href="https://github.com/kenn-io/agentsview" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code・Codexなど20以上のコーディングエージェントのセッションをローカルで一元管理できるツール。アカウント不要のシングルバイナリとして動作し、セッション検索・コスト確認・利用状況の追跡が可能。ccusageと比べて最大100倍高速な処理を売りにしており、macOS/Windows/Linux向けのデスクトップアプリも提供されている。</td></tr>
+<tr><td class="num">3</td><td class="title">AIコーディングエージェント向けプロダクション品質スキル集 — addyosmani/agent-skills</td><td class="link-col"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">シニアエンジニアが実践するワークフロー・品質ゲート・ベストプラクティスを「スキル」としてパッケージ化し、AIコーディングエージェントに一貫して適用できるようにしたリポジトリ。DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIPの全開発フェーズをカバーしており、Claude Code・Codex CLIなど主要エージェントへの対応を想定している。プロジェクト横断で統一した品質基準を維持することを目的としている。</td></tr>
+<tr><td class="num">4</td><td class="title">コーディングエージェント向け統合ソフトウェア開発方法論 — obra/superpowers</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェントに「超能力」を付与するコンセプトで設計された、コンポーザブルなスキルと初期指示セット。Claude Code・Codex CLI・Gemini CLI・Cursor・GitHub Copilot CLIなど主要エージェントに対応しており、エージェント起動直後から体系的なソフトウェア開発フローが適用される仕組みになっている。</td></tr>
+<tr><td class="num">5</td><td class="title">各社AIツールのシステムプロンプト・モデル情報をまとめたリポジトリ — x1xhlol/system-prompts-and-models-of-ai-tools</td><td class="link-col"><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Augment Code・Claude Code・Cursor・Devin AI・Windsurf・Lovable・Replitなど多数の主要AIコーディングツールのシステムプロンプトと内部AIモデル情報を収集したリポジトリ。Kiro・Manus・Perplexity・v0なども含む幅広いカバレッジで、各サービスがどのような指示でAIを動かしているかを俯瞰できる。AIツール比較やプロンプト設計の研究素材として活用されている。</td></tr>
+<tr><td class="num">6</td><td class="title">Apple製Mac向けLinuxコンテナツール（Swift実装）— apple/container</td><td class="link-col"><a href="https://github.com/apple/container" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Appleが公式に公開したSwift製CLIで、MacでLinuxコンテナを軽量VMとして作成・実行できる。OCI互換のコンテナイメージを扱えるため一般的なコンテナレジストリとの相互運用が可能。Apple Siliconに最適化されており、Docker Desktopの代替として注目されている。</td></tr>
+<tr><td class="num">7</td><td class="title">Rust製の高速TypeScript/JavaScriptコンパイラ — swc-project/swc</td><td class="link-col"><a href="https://github.com/swc-project/swc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">RustでつくられたSpeedy Web Compiler（SWC）は、TypeScript・JavaScriptを超高速でトランスパイルするプラットフォーム。Rustライブラリとしてもnpmパッケージとしても利用可能で、Next.js・Deno・Parcelなどの主要ビルドツールに組み込まれている。従来のBabelと比較して数十倍の処理速度が報告されており、大規模フロントエンド開発での採用が広がっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">RustでモダンなX11サーバーを再実装する「yserver」</td><td class="link-col"><a href="https://github.com/joske/yserver" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rust製の新しいX11サーバー実装プロジェクト。既存のX.Orgサーバーをより安全で保守しやすいRustで置き換えることを目指しており、Rustのメモリ安全性をディスプレイサーバーの根幹部分に活かす試みとして注目されている。スコア50・コメント18件と今回のHNで最も関心を集めた技術トピック。</td></tr>
+<tr><td class="num">2</td><td class="title">インターネット以前のネットワーク技術「Chaosnet」（1981年のドキュメント）</td><td class="link-col"><a href="https://tumbleweed.nu/r/lm-3/uv/amber.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">MITが1970〜80年代に開発した独自ネットワークプロトコルChaosnetの技術資料。ARPAnetとは異なるアーキテクチャを採用しており、現在のインターネットとは別の進化の可能性を示していた歴史的な設計として紹介されている。ネットワーク設計の歴史や「選ばれなかった技術」に関心を持つ層を中心にスコア37を獲得。</td></tr>
+<tr><td class="num">3</td><td class="title">「バイブコーダー」対「ソフトウェアエンジニア」— AI時代の役割再定義</td><td class="link-col"><a href="https://yusufaytas.com/vibe-coder-vs-software-engineer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIを感覚的に使いこなすコード生成（バイブコーディング）に長けた開発者と、システム設計を深く理解するソフトウェアエンジニアの違いを論じた考察記事。AIツールの普及により、コードを書く技術よりも問題を構造化して解決策を設計する能力の価値がより高まっているという主張が展開されており、スコア21と関心が高かった。</td></tr>
+<tr><td class="num">4</td><td class="title">Rustで書かれたモジュラー64ビットUnixライクカーネル「Zinnia」</td><td class="link-col"><a href="https://zinnia-os.org/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ゼロから設計されたRust製の64ビットUnixカーネルで、モジュール性と安全性を重視した構成が特徴。Rustのメモリ安全性をOSカーネル本体に活かす試みとして、セキュアなカーネル開発に関心を持つコミュニティから注目を集めている。</td></tr>
+<tr><td class="num">5</td><td class="title">KPMGのAIレポートにAIのハルシネーションが多数含まれていたと判明</td><td class="link-col"><a href="https://www.cityam.com/kpmg-report-on-ai-found-riddled-with-ai-hallucinations/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大手コンサルKPMGがAIについて作成したレポート自体に、AIが生成した事実誤認（ハルシネーション）が多数含まれていたと報告された。AIツールでAIについてのレポートを作成するという皮肉な構図で、生成AI成果物に対する検証プロセスの重要性を改めて問う事例として注目された。</td></tr>
+<tr><td class="num">6</td><td class="title">EUのiPhoneユーザーへのSiri AI機能提供を求めるキャンペーン「Siri4EU」</td><td class="link-col"><a href="https://siri4eu.com" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">EU市場のiPhoneユーザーへのApple Intelligence・Siri AI機能の提供を求めるキャンペーンサイト。EUのデジタル市場法（DMA）を巡る規制上の課題から欧州での提供が遅れているとされており、ユーザー側から早期展開を求める動きとして注目されている。コメント20件と反応が活発だった。</td></tr>
+<tr><td class="num">7</td><td class="title">Linuxはなぜいまだに「不安定」と感じられるのか</td><td class="link-col"><a href="https://www.whileforloop.com/blog/2026/06/14/why-linux-still-feels-unstable/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">技術的には高い安定性を持つLinuxが、エンドユーザー視点では依然として「不安定」と感じられる原因を分析した記事。ドライバの問題・ディストリビューションの分断・デスクトップ環境の差異など複合的な要因を指摘しており、Linuxがメインストリームユーザーに届きにくい構造的課題を考察している。コメント5件と議論を呼んだ。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">QAエンジニアが「自分でテストをやりきる」モデルから脱却しようとしている話</td><td class="link-col"><a href="https://zenn.dev/yasuhiro_test/articles/65eba13298c9c2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">QAエンジニアが一人ですべてのテストを担う従来のモデルを見直し、開発チーム全体で品質を担保する体制へ移行しようとした経緯をまとめた記事。AIツールや開発者との役割分担を取り入れることで、QAエンジニアがより戦略的な活動に集中できるようになるという考え方が示されている。スコア70と高い共感を集めており、QA職のあり方の変化を議論するきっかけとなっている。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Fable 5が作った日本語プログラミング入門教材「言語の庭」が凄い</td><td class="link-col"><a href="https://zenn.dev/nextbeat/articles/2026-06-cs-edu-site-fable5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Fable 5に依頼して制作された日本語プログラミング入門学習サイト「言語の庭」を紹介した記事。初学者向けに丁寧な説明と実践的な演習がバランスよく設計されており、AIが教材の内容設計まで高品質に担えるレベルに達していることへの驚きとともに具体的な内容が紹介されている。スコア63を獲得し、教育分野でのAI活用として注目されている。</td></tr>
+<tr><td class="num">3</td><td class="title">明確なGoalとEvalでAIエージェントを動かす — Code with Claude Extended Tokyo で学んだこと</td><td class="link-col"><a href="https://zenn.dev/gaogaoasia/articles/65db07864e31b8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Code with Claude Extended Tokyoイベントで得た知見として、AIエージェントを効果的に動かすために「明確なゴール設定」と「評価基準（Eval）の定義」が不可欠であることを論じた記事。ゴールとEvalを正確に定義することでエージェントが意図した方向に動くようになるという実践知が、具体例とともに共有されている。スコア30。</td></tr>
+<tr><td class="num">4</td><td class="title">Bedrock AgentCore + Strands Agents SDKで作る「使うほど賢くなる」社内RAGボット</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/agentcore-strands-self-improving-rag" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS Bedrock AgentCoreとStrands Agents SDKを組み合わせ、利用実績から継続的に改善される社内向けRAGボットを構築した事例紹介。ユーザーフィードバックをもとに検索精度・回答品質が向上するセルフインプルービングなエージェントアーキテクチャの実装が詳述されており、実用的なAIエージェント設計の参考になる内容。スコア29。</td></tr>
+<tr><td class="num">5</td><td class="title">アプリ層とDB層の二重防御でマルチテナントのテナント分離を担保する</td><td class="link-col"><a href="https://zenn.dev/counterworks/articles/1887cb36a1b701" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">マルチテナントSaaSにおけるテナント間データ混入リスクに対し、アプリケーション層とデータベース層の双方でテナント分離ロジックを実装する「二重防御」アプローチを解説した記事（連載第3回）。どちらか一方の防御が抜けた場合でも安全を保てる設計の意図と、具体的な実装パターンが示されている。スコア27。</td></tr>
+<tr><td class="num">6</td><td class="title">MarkdownをWord・PDF・HTMLに一発変換する — Pandocで文書作成をシンプルにする</td><td class="link-col"><a href="https://zenn.dev/masa0902dev/articles/markdown-to-word-pdf-html-with-pandoc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Pandocを使ってMarkdownで書いた文書をWord・PDF・HTMLへ一括変換する方法を解説した記事。Wordでの文書作成から脱却してMarkdownに移行することで、バージョン管理・可読性・出力形式の柔軟性が向上するという提案とともに、具体的な変換コマンドと設定方法が紹介されている。スコア26。</td></tr>
+<tr><td class="num">7</td><td class="title">Next.jsアプリを10本作って見えた設計の判断基準 — Next.js 15実践ガイドライン</td><td class="link-col"><a href="https://zenn.dev/yun_bow/articles/87d781437d1ddf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">半年間でNext.jsアプリを10本制作した経験から導き出した、App Router・Server Componentsの使いどころ、状態管理・認証・デプロイ設計の判断基準をまとめた記事。Next.js 15の各機能をいつ使いいつ避けるべきかという実践的な知見が体系的に整理されており、設計指針として参照しやすい内容。スコア23。</td></tr>
+<tr><td class="num">8</td><td class="title">メイン開発環境をUbuntuにして2年経った正直な感想</td><td class="link-col"><a href="https://zenn.dev/paradoia/articles/312ff4e71b7f35" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発環境のメインOSをUbuntuに移行して2年間使い続けた率直な感想をまとめた記事。WindowsやmacOSと比較した際の利点・不満点・対処が必要だった問題点などが具体的に語られており、Linux移行を検討しているエンジニアにとって実態を知る参考になる内容。スコア26。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">チームでAWS AI-DLCを実際にやってみてわかったこと</td><td class="link-col"><a href="https://qiita.com/yakumo_09/items/76e416a5ae28f18ad976" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSが提供するAIデジタルラーニングコース（AI-DLC）をチームで受講した体験まとめ。コース内容の難易度・学習量・チームでの進め方のコツや注意点など、実際に取り組んだ立場からの率直なフィードバックが共有されている。AWSのAI関連学習を検討している組織の参考になる内容で、スコア24。</td></tr>
+<tr><td class="num">2</td><td class="title">3年間のAI要件定義への取り組みをまとめた全記録</td><td class="link-col"><a href="https://qiita.com/kumai_yu/items/831717856fd24981799d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIを要件定義プロセスに導入し3年間実践してきた試行錯誤の全記録。AIに要件を整理させながら開発チームとの合意形成プロセスへ組み込む方法論が具体的に共有されており、AI駆動開発の上流フェーズへの適用事例として注目されている。スコア21。</td></tr>
+<tr><td class="num">3</td><td class="title">人にもAIにも読みやすい「AI Ready」な設計書管理を目指して</td><td class="link-col"><a href="https://qiita.com/grhg/items/eee10528b403baf89631" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Markdown・MkDocs・GitHub Pages・Mermaid・GitHub Actionsを組み合わせて、人間とAIの双方が活用しやすい設計書管理の仕組みを構築する方法を解説した記事。構造化されたテキスト形式で設計書を管理することで、AIへの質問や生成AIを使ったコーディングとの連携が容易になるという考え方が紹介されている。スコア18。</td></tr>
+<tr><td class="num">4</td><td class="title">IT用語の名前の由来をA〜Zのアルファベット順に集めた命名インスピレーション集</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/a754fff1885f6cf0a146" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AからZまでのアルファベット順に、IT分野で使われる用語の名前の由来をまとめた知識集。「良い命名」のセンスを磨くためのインスピレーション源として、歴史的・文化的な背景も交えながら用語の由来が紹介されている。スコア16で幅広い読者の関心を集めた。</td></tr>
+<tr><td class="num">5</td><td class="title">実際の数値でRAGの仕組みをベクトル化から根本的に理解する</td><td class="link-col"><a href="https://qiita.com/miruky/items/c3d6277ff99afb214b19" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">RAG（Retrieval-Augmented Generation）の仕組みをベクトル化・類似度計算・検索フローなど各ステップで実際の数値を使いながら丁寧に解説した記事。抽象的になりがちなRAGの概念を具体的な数値の動きで示すことで、仕組みの直感的な理解を助ける内容になっている。スコア14。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Code × OpenSCAD × 3Dプリンターで「3Dプリンター住宅」を施工してみた</td><td class="link-col"><a href="https://qiita.com/issey_dotlog/items/19b84d3a38c1c9aa9567" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude CodeにOpenSCADのコードを生成させ、3Dプリンターで出力することで住宅の縮小モデルを制作するという実験的な取り組みを紹介した記事。AIによるコード生成を物理的な造形物に結びつけるワークフローの可能性と課題が具体的に示されており、AIと物理製造の組み合わせとして新鮮な視点を提供している。スコア11。</td></tr>
+<tr><td class="num">7</td><td class="title">テストアーキテクチャの全体戦略 — 品質定義からリスク分析・継続的改善まで</td><td class="link-col"><a href="https://qiita.com/Kudo_panda/items/509bdc7e9ab639abf0b4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスト計画の全体像を品質定義・リスク分析・テスト設計・実行・継続的改善の各フェーズから体系的に整理した解説記事。テストの「何のため」「何を」「どう」という問いに答える枠組みを示しており、テスト戦略を設計するQAエンジニアや開発リードの参考になる内容。スコア10。</td></tr>
+<tr><td class="num">8</td><td class="title">IT未経験から3年間でレビューコメント200件を受けた振り返り</td><td class="link-col"><a href="https://qiita.com/ko-sato-primebrains/items/c17f113cb8c4971b5296" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">IT未経験で入社して3年間、200件ものコードレビューコメントを受けながら成長した経験をまとめた振り返り記事。最初はつらかったレビューが徐々に成長の糧になっていくプロセスや、具体的なフィードバックを通じた学びが語られており、新人エンジニアへの示唆に富む内容。スコア9。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-15 06:35 JST
+</footer>
+</div>
+</body>
+</html>
