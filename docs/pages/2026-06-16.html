@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-16</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-16</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェントスキルの脆弱性を事前検出するNVIDIA製セキュリティスキャナー</td><td class="link-col"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NVIDIAが公開したオープンソースツール「SkillSpector」は、Claude Code・Codex CLI・Gemini CLI などのAIエージェントが利用するスキル（プラグイン）のセキュリティリスクをインストール前に検出するスキャナー。NVIDIAの調査では、スキルの26.1%に脆弱性が存在し、5.2%は悪意のある動作を示す可能性があるとされる。スキルはユーザーの明示的な許可なしに暗黙の信頼で実行されるため、AIツールを業務で使う開発者にとって導入を検討する価値がある。</td></tr>
+<tr><td class="num">2</td><td class="title">Rust製TypeScript/JavaScript超高速コンパイラ「SWC」</td><td class="link-col"><a href="https://github.com/swc-project/swc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SWC（Speedy Web Compiler）はRustで実装されたTypeScript・JavaScriptコンパイラで、BabelやTypeScriptコンパイラの大幅に高速な代替として設計されている。RustライブラリとしてもJavaScriptライブラリとしても利用でき、Next.jsなど主要フレームワークのビルド基盤として広く採用されている。MSRVは現在1.73で、最新のクレートを組み合わせることでRustユーザーとの互換性も維持されている。</td></tr>
+<tr><td class="num">3</td><td class="title">Intercom・Zendesk代替のOSSカスタマーサポートプラットフォーム「Chatwoot」</td><td class="link-col"><a href="https://github.com/chatwoot/chatwoot" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ライブチャット・メールサポート・オムニチャネル対応デスクを統合したオープンソースのカスタマーサポートツール。IntercomやZendesk、Salesforce Service Cloudの代替として設計されており、自己ホスティングにより顧客データを完全にコントロールできる点が特徴。スケーラビリティと拡張性を重視した設計で、SaaSに依存せずに本格的なサポート体制を構築したい企業向け。</td></tr>
+<tr><td class="num">4</td><td class="title">KubernetesインフラをGUIで管理するCNCFプロジェクト「Meshery」</td><td class="link-col"><a href="https://github.com/meshery/meshery" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloud Native Computing Foundation（CNCF）に採択されたオープンソースのKubernetes管理プラットフォーム。マルチクラウド環境のKubernetesインフラをビジュアルかつ協調的に設計・管理できるセルフサービス基盤で、YAMLの手書きから開放するビジュアルGitOpsを提供する。拡張可能なプラグイン機構を備えており、様々なKubernetesエコシステムのツールと統合できる。</td></tr>
+<tr><td class="num">5</td><td class="title">複数の生成AIプロバイダーを統一APIで扱えるAndrew Ng製ライブラリ「aisuite」</td><td class="link-col"><a href="https://github.com/andrewyng/aisuite" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Andrew Ng（アンドリュー・ン）が公開する、複数の生成AIサービスへ統一インターフェースでアクセスできるPythonライブラリ。リポジトリには「OpenCoworker」というデスクトップAIエージェントも同梱されており、チャット・調査・タスク実行のほか、ファイル読み込みやSlack・メールとの連携、定期自動化タスクにも対応する。フロントエンドをほとんど意識せずに複数プロバイダーを切り替えながら検証できるため、マルチモデル開発の足場として活用できる。</td></tr>
+<tr><td class="num">6</td><td class="title">45以上の取引所データで学習した金融ローソク足の基盤モデル「Kronos」</td><td class="link-col"><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">45以上のグローバル取引所から集めたローソク足データ（K-line）で学習された、金融市場特化の初のオープンソース基盤モデル。AAAI 2026に採択されており、時系列金融データを自然言語のように扱い、相場予測やトレンド分析などのタスクへ応用できる。ファインチューニング用スクリプトも公開されており、独自データへの適応が可能。</td></tr>
+<tr><td class="num">7</td><td class="title">Chrome・FirefoxをコードでヘッドレスGUIスクレイピングできるPuppeteer</td><td class="link-col"><a href="https://github.com/puppeteer/puppeteer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">DevTools ProtocolまたはWebDriver BiDiを介してChrome・Firefoxをプログラム制御できるJavaScriptライブラリ。スクレイピング・E2Eテスト・スクリーンショット生成など幅広いブラウザ自動化用途に使われており、`npm i puppeteer` でインストールすると互換性のあるChromiumが自動でダウンロードされ、すぐに動作確認できる。`puppeteer-core` を使えばブラウザなしのライブラリ単体利用も可能。</td></tr>
+<tr><td class="num">8</td><td class="title">ストリーミングサービスと自宅スピーカーを統合するOSSミュージックマネージャー「Music Assistant」</td><td class="link-col"><a href="https://github.com/music-assistant/server" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Spotifyなどのストリーミングサービスとスマートスピーカーを一元管理できる無料のオープンソースメディアライブラリマネージャー。Raspberry Pi・NAS・Intel NUCなど常時起動デバイス上で動くサーバーコンポーネントとして設計されており、様々な音楽サービスとスピーカーのブリッジ機能を提供する。自宅の音楽環境を自前で管理したいユーザー向けの実用的なセルフホストソリューション。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">LinkedInの求人オファーに仕込まれたバックドア攻撃の実体験レポート</td><td class="link-col"><a href="https://roman.pt/posts/linkedin-backdoor/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">セキュリティ研究者がLinkedIn経由で届いた採用オファーを詳細に調査し、コード実行を介してバックドアを設置しようとする手口を発見・解説したレポート。ソーシャルエンジニアリングと技術的な攻撃を組み合わせた手法で、求人応募者を標的にしたサプライチェーン的な攻撃の一例として注目を集め、241点のスコアを獲得している。採用プロセスにおけるセキュリティリスクへの実践的な注意喚起となっており、コメント欄でも具体的な対策について活発な議論が行われている。</td></tr>
+<tr><td class="num">2</td><td class="title">B-52爆撃機がカリフォルニア州エドワーズ空軍基地から離陸直後に墜落</td><td class="link-col"><a href="https://www.reuters.com/business/aerospace-defense/us-air-force-b-52-bomber-crashes-after-takeoff-edwards-air-force-base-says-2026-06-15/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エドワーズ空軍基地を離陸したB-52戦略爆撃機が墜落したと、米空軍が2026年6月15日に発表した。冷戦時代から運用されているB-52の老朽化問題や安全性が改めて注目される事故で、詳細な原因はまだ調査中とされている。HN上では複数の報道機関の記事が取り上げられ、関連スレッドが複数立った。</td></tr>
+<tr><td class="num">3</td><td class="title">米国の電池製造生産高が過去最高を継続更新中</td><td class="link-col"><a href="https://fred.stlouisfed.org/series/IPG33591S" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">FRB（セントルイス連銀）のFREDデータによると、米国の電池製造生産指数が記録的なペースで伸び続けている。電気自動車（EV）や再生可能エネルギー貯蔵の需要増大を背景に、インフレ抑制法（IRA）による国内製造支援の効果が数字に表れてきたとみられる。エネルギー転換の進捗を定量的に示すデータとして注目されている。</td></tr>
+<tr><td class="num">4</td><td class="title">コンピューターを愛するということ — 技術への純粋な熱意を再確認するエッセイ</td><td class="link-col"><a href="https://michaelenger.com/blog/i-love-the-computer/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">技術に深く携わるからこそ生まれる、コンピューターに対する純粋な愛着や喜びについて書かれた個人エッセイ。効率や生産性の道具としての側面だけでなく、コンピューターが持つ独特の魅力と可能性への感情的なつながりを振り返る内容で、テクノロジーを仕事にしている人々の共感を呼んでいる。日常的に使い続けているからこそ見えなくなる、計算機への情熱を再確認させてくれる文章として評価されている。</td></tr>
+<tr><td class="num">5</td><td class="title">AnthropicがClaude Codeのクレジット変更を一時停止</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=48546618" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AnthropicがClaude Codeの利用クレジットに関する変更計画を一時停止したとHacker News上で報告された。ユーザーやコミュニティからのフィードバックを受けて方針を見直しているとみられる。Claude Codeの料金体系や利用制限の今後の動向に関心が集まっている。</td></tr>
+<tr><td class="num">6</td><td class="title">ドイツ裁判所がGoogleのAI生成の誤回答に法的責任を認定</td><td class="link-col"><a href="https://www.dw.com/en/german-court-holds-google-liable-for-fake-ai-answers/a-77527661" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ドイツの裁判所が、GoogleのAIが生成した不正確な情報（ハルシネーション）についてGoogleの法的責任を認める判決を下した。生成AIの回答精度と情報の正確性に関する法的議論が欧州で進展しており、今後の生成AIサービス提供企業の責任範囲に影響を与える先例となる可能性がある。</td></tr>
+<tr><td class="num">7</td><td class="title">AIエージェントにとってファイルシステムが新たな基本要素になりつつある</td><td class="link-col"><a href="https://twitter.com/crtr0/status/2066558169741173177" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントがタスクを実行する際に、ファイルシステムを状態管理・通信・記憶の基本単位として利用するアーキテクチャパターンへの注目が高まっているという考察。データベースやAPIではなくファイルとして状態を持たせることで、エージェント間の協調や永続化が自然に実現できるという視点が共有されており、マルチエージェントシステム設計の議論に一石を投じている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェント時代のインフラ選択でCloudflareに賭けるべき理由</td><td class="link-col"><a href="https://zenn.dev/yusukebe/articles/ccb1f953e48ee1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CloudflareのWorkers・KV・Durable Objectsなどのエッジインフラが、AIエージェントの実行環境として特に優れているという考察記事（スコア204）。グローバルなエッジネットワーク上でステートフルなエージェントを低レイテンシで動かせる点、コールドスタートが実質ゼロである点などが具体的に述べられている。AIエージェントが普及する時代においてインフラ選定の基準が変わりつつあることを、エンジニアの視点から丁寧に論じた内容。</td></tr>
+<tr><td class="num">2</td><td class="title">QAエンジニアが「自分でテストをやりきる」をやめようとしている理由</td><td class="link-col"><a href="https://zenn.dev/yasuhiro_test/articles/65eba13298c9c2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">品質保証を専門とするエンジニアが、一人でテストを完結させる従来のアプローチを見直し、開発チーム全体でテスト品質を担うモデルへ移行しようとしている経緯を語った記事（スコア94）。QAエンジニアが「テスト実行者」から「品質文化の推進役」へとロールシフトする動きを、現場経験をもとに説明している。テスト自動化やAI活用が進む現在、QAの在り方そのものを問い直す内容として多くの共感を集めている。</td></tr>
+<tr><td class="num">3</td><td class="title">Next.js 15で10本のアプリを作って見えた設計の判断基準</td><td class="link-col"><a href="https://zenn.dev/yun_bow/articles/87d781437d1ddf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">半年間でNext.js 15アプリを10本実装した経験から、App RouterとPages Routerの使い分けやコンポーネント設計の判断軸をまとめたガイドライン（スコア47）。実践を通じて明確になったアーキテクチャ上のトレードオフが具体的な事例とともに示されており、Next.js初学者〜中級者が設計の根拠を得るのに役立つ内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">PandocでMarkdownをWord・PDF・HTMLに一発変換するワークフロー</td><td class="link-col"><a href="https://zenn.dev/masa0902dev/articles/markdown-to-word-pdf-html-with-pandoc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">文章作成をWordからMarkdownに切り替え、Pandocを使ってWord・PDF・HTMLへ変換するワークフローを解説した記事（スコア40）。バージョン管理しやすいプレーンテキストで執筆しながら、必要な形式で配布できる利便性を紹介している。技術文書や報告書の作成フローを効率化したいエンジニア・研究者に参考になる実践的な内容。</td></tr>
+<tr><td class="num">5</td><td class="title">JavaScriptがClassから離れていった歴史的経緯</td><td class="link-col"><a href="https://zenn.dev/sjbworks/articles/41a5c76dce4b36" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JavaScriptでクラスベース設計が積極的に使われた時代と、React Hooks・関数型プログラミングの普及によってClassが敬遠されるようになった流れを歴史的に振り返った記事（スコア37）。フレームワークの設計思想の変化や具体的なエコシステムの変遷とともに、「なぜClassが嫌われるのか」という疑問に文脈を持って答えてくれる内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">AIで「作る壁」が消えた時代に個人開発が誰にも使われない本当の理由</td><td class="link-col"><a href="https://zenn.dev/yun_bow/articles/6e6bcbf127072a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールの普及でアプリ開発のハードルが下がった今も、個人開発プロダクトがユーザーを獲得できない根本的な原因を考察した記事（スコア27）。技術力よりも「誰のどんな問題を解くか」という問いの重要性を説き、開発後のマーケティングや継続的な改善の視点も含めて整理している。個人開発者が陥りがちなパターンへの気づきを与えてくれる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">Fable 5停止を機にUbuntuでGemma 4 E2BをOllamaで動かした記録</td><td class="link-col"><a href="https://zenn.dev/yamadatt/articles/20260614-ubuntu-gemma4-ollama" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Fable 5の利用が停止されたことをきっかけに、UbuntuにOllamaをインストールしてGoogleのGemma 4（E2Bモデル）をローカルで動かした手順と所感をまとめた記事（スコア22）。セットアップ手順とローカルLLMの使い勝手・限界が率直に書かれており、クラウドAIに依存しない環境構築を検討しているエンジニアの参考になる内容。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">3年間のAI要件定義の全記録 — 実践知見の総まとめ</td><td class="link-col"><a href="https://qiita.com/kumai_yu/items/831717856fd24981799d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIを活用した要件定義に3年間取り組んできた著者が、その知見・失敗・改善を包括的にまとめた記事（スコア81）。プロンプト設計、ステークホルダーとの合意形成、AIへの指示の渡し方など、実務で直面した課題と対策が詳述されており、「AI駆動開発」を実践する上での生きた教科書として高い評価を得ている。理論だけでなく、3年分の実践から得た具体的なノウハウが詰まっている点が特徴。</td></tr>
+<tr><td class="num">2</td><td class="title">エンジニア未経験者の9割がつまずく最初の壁を乗り越えるためのヒント</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/621a19d6a1a6500eaca6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エンジニア未経験者がほぼ確実につまずくとされる最初の壁（環境構築・エラー対処・思考法の切り替えなど）を先回りして解説したシリーズ第3弾（スコア44）。挫折しやすいポイントを具体的に示しながら、読者が「なぜうまくいかないのか」を理解して前進できるよう丁寧に構成されている。未経験からエンジニアを目指す人の最初のつまずきを減らすことを狙った実用的な内容。</td></tr>
+<tr><td class="num">3</td><td class="title">RAGのベクトル化の仕組みを実際の数値で根本から理解する</td><td class="link-col"><a href="https://qiita.com/miruky/items/c3d6277ff99afb214b19" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">RAG（検索拡張生成）における埋め込みとベクトル化の動作原理を、抽象的な説明ではなく実際の数値を使って丁寧に解説した記事（スコア32）。テキストがどのように数値ベクトルへ変換され、類似度検索が機能するかをステップごとに示しており、RAGの仕組みを「なんとなく」ではなく本質から理解したい初中級エンジニアに向いた内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Code × OpenSCAD × 3Dプリンターで住宅モデルを施工してみた</td><td class="link-col"><a href="https://qiita.com/issey_dotlog/items/19b84d3a38c1c9aa9567" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude CodeとOpenSCAD（スクリプトベースの3Dモデリングツール）を組み合わせ、3Dプリンターで住宅ミニチュアモデルを作成した実験プロジェクトの記録（スコア17）。AIがOpenSCADのコードを自動生成し、3Dプリンターで出力するまでのワークフローが紹介されており、AIと製造技術を組み合わせた個人開発の可能性を示す興味深い取り組みとなっている。</td></tr>
+<tr><td class="num">5</td><td class="title">文系エンジニアがClaude Codeで学習アプリを自作し3ヶ月でCISSP合格</td><td class="link-col"><a href="https://qiita.com/hiyoshiz/items/b63c2e7ff52b5554a8a5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">文系出身のエンジニアがClaude Codeを使って独自の学習アプリを開発し、セキュリティの最高峰資格「CISSP」を3ヶ月で取得したという体験談（スコア13）。AIコーディングツールを活用してプログラミング工数を大幅に削減しながら質の高い学習環境を構築できた過程が紹介されており、技術的難易度の高いCISSPをAI支援で攻略するための具体的なノウハウも含まれている。</td></tr>
+<tr><td class="num">6</td><td class="title">Amazon Bedrock AgentCoreでRAG付きAIエージェントを爆速構築する</td><td class="link-col"><a href="https://qiita.com/kamo-shika/items/edad802613b45b3d18f1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Amazon BedrockのAgentCore Harnessを用いて、RAG（検索拡張生成）機能を備えたAIエージェントを短時間で構築する方法を解説した記事（スコア14）。SmithyベースのAPIスキーマと組み合わせることで、検索・生成・実行を統合したエージェントを効率的に実装できる手順が示されており、AWS上でのAIエージェント開発に取り組むエンジニア向けの実践的な内容となっている。</td></tr>
+<tr><td class="num">7</td><td class="title">AWS AI-DLCをチームで実施してわかったことのまとめ</td><td class="link-col"><a href="https://qiita.com/yakumo_09/items/76e416a5ae28f18ad976" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSのAI Deep Learning Challenge（AI-DLC）をチームで取り組んだ実体験をまとめた記事（スコア27）。学習内容の習得度、チームでの進め方、実際に役立ったリソースなど、外部からはわかりにくいリアルな取り組みの詳細が共有されている。AWS認定やAI学習を検討しているエンジニアにとって参考になる実践的なレポート。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-16 06:34 JST
+</footer>
+</div>
+</body>
+</html>
