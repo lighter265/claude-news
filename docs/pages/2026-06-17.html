@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-17</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-17</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェントにインターネット検索力を与えるCLIツール「Agent Reach」</td><td class="link-col"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Twitter・Reddit・YouTube・GitHub・Bilibiliなど複数プラットフォームをAPIコスト不要・単一CLIで横断検索できるオープンソースツール。AIエージェントが「YouTubeを見せて」「Twitterで調べて」といった指示に応えられるようにすることを目的としており、中国語・英語・日本語・韓国語に対応。国内向けにはAtomGitへのミラーも用意されている。</td></tr>
+<tr><td class="num">2</td><td class="title">AIエージェントスキルの脆弱性を検出するセキュリティスキャナ「SkillSpector」（NVIDIA）</td><td class="link-col"><a href="https://github.com/NVIDIA/SkillSpector" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code・Codex CLI・Gemini CLIなどで使われるAIエージェントスキルを対象にしたセキュリティスキャナ。研究によると26.1%のスキルに脆弱性、5.2%に悪意のあるパターンが含まれるとされており、スキルをインストールする前に危険な実装を検出することを目的としている。暗黙の信頼で実行されるスキルのリスクに注目した実用的なツール。</td></tr>
+<tr><td class="num">3</td><td class="title">動画アニメーションと一键実行で学ぶ「Hello 算法」</td><td class="link-col"><a href="https://github.com/krahets/hello-algo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">動画アニメーションとコードのワンクリック実行で学べるデータ構造・アルゴリズムの入門教材。日本語を含む4言語に対応し、Python・Java・C++・Go・Rustなど15言語以上の実装コードを収録している。清華大学教授が「初学者に強く薦める」と推薦しており、無料でオープンソースとして公開されている。</td></tr>
+<tr><td class="num">4</td><td class="title">金融チャートのための基盤モデル「Kronos」</td><td class="link-col"><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">世界45以上の取引所のローソク足（K線）データで学習した初のオープンソース基盤モデル。AAAI 2026に採択されており、ファインチューニング用スクリプトも公開されている。金融市場の時系列パターンを学習する基盤モデルという新しいアプローチで、独自タスクへの適応も可能。</td></tr>
+<tr><td class="num">5</td><td class="title">コンピュータ操作AIエージェント向けオープンソースインフラ「cua」</td><td class="link-col"><a href="https://github.com/trycua/cua" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">macOS・Linux・Windowsのデスクトップ全体を操作できるAIエージェントを構築・評価・デプロイするためのオープンソースインフラ。サンドボックス・SDK・ベンチマークを統合提供しており、コーディングエージェントに仮想マシンを与えるユースケースやモデルのトレーニング・評価用途を想定している。</td></tr>
+<tr><td class="num">6</td><td class="title">世界中の公開IPTVチャンネルを集めたプレイリスト「iptv-org/iptv」</td><td class="link-col"><a href="https://github.com/iptv-org/iptv" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">世界各国の公開IPTVチャンネルを収集・整備した大規模コレクション。M3Uプレイリスト形式でVLCなどのプレーヤーから即利用可能で、EPGや専用APIも提供している。無料で何千ものライブTVチャンネルへアクセスできる点で継続的に高い注目を集めているリポジトリ。</td></tr>
+<tr><td class="num">7</td><td class="title">セルフホスト型Teslaデータロガー「TeslaMate」</td><td class="link-col"><a href="https://github.com/teslamate-org/teslamate" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Elixir製のTesla向け自己ホスト型データロガー。走行データをPostgreSQLに蓄積してGrafanaで可視化し、ローカルMQTTブローカーへのリアルタイム配信にも対応する。悪意あるフォークや情報窃取を防ぐため公式リポジトリからのみ取得するよう注意喚起がなされている。</td></tr>
+<tr><td class="num">8</td><td class="title">Intercom・Zendesk代替のオープンソース顧客サポートプラットフォーム「Chatwoot」</td><td class="link-col"><a href="https://github.com/chatwoot/chatwoot" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ライブチャット・メールサポート・オムニチャネル対応の顧客サポートプラットフォームをセルフホストできるオープンソースプロジェクト。顧客データを完全に自社管理しながらスケールできる設計が特徴で、有名SaaSの代替として幅広く採用されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">シェアボタンを誰もクリックしない</td><td class="link-col"><a href="https://ankursethi.com/links/nobody-clicks-your-share-buttons/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ウェブサイトのシェアボタンへのクリック率が事実上ゼロに近いことを主張する記事で、63件のコメントを集め議論を呼んだ（スコア131）。モバイルのネイティブ共有UIやURLコピーの普及によりボタン型UIの効果が薄れているという観点から、多くのサイトがいまも設置し続けているシェアボタンの実用性を問い直す内容。</td></tr>
+<tr><td class="num">2</td><td class="title">AIはダニング＝クルーガー効果を増幅するかもしれない</td><td class="link-col"><a href="https://twitter.com/i/status/2066825204207091926" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールの利用によって、実際には浅い理解しか持たないユーザーが「わかっている」と錯覚するリスクを指摘した考察（スコア32）。スキルを習得する機会を減らしながら自己評価を高める効果があるという点が議論の中心で、AI活用と学習の深さをどう両立するかを問いかけている。</td></tr>
+<tr><td class="num">3</td><td class="title">Claudeの5%のコストでDeepSeek V4 Proに迫れるか</td><td class="link-col"><a href="https://howardchen.substack.com/p/deepseek-v4-pro-at-5-the-cost-of" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">DeepSeek V4 ProとClaudeのパフォーマンス差を埋めるために何が必要かを分析した記事（スコア15）。コストは大幅に低いが、どのようなタスクで差が残るかを掘り下げており、低コストモデルへの移行を検討している開発者向けの参考資料となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">GrapheneOSがAndroid 17にポーティング、公式リリース間近</td><td class="link-col"><a href="https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プライバシー重視のAndroidフォーク「GrapheneOS」がAndroid 17に対応し、まもなく公式リリースが行われる見通しが公表された（スコア11）。Android 17のリリース当日に合わせた発表で、セキュリティ意識の高いユーザーへの移行パスが早期に確保されることになる。</td></tr>
+<tr><td class="num">5</td><td class="title">Android 17が正式リリース</td><td class="link-col"><a href="https://android-developers.googleblog.com/2026/06/Android-17.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GoogleがAndroid 17を2026年6月に正式リリース（スコア5）。主要な新機能や開発者向けの変更点がGoogle公式ブログで公開されており、今後のデバイス展開に向けたプラットフォームアップデートの詳細が確認できる。</td></tr>
+<tr><td class="num">6</td><td class="title">エージェント型コーディングと専門知識の持続的な価値</td><td class="link-col"><a href="https://www.anthropic.com/research/claude-code-expertise" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AnthropicによるClaude Codeに関する研究で、コーディングエージェントを使いこなすほど専門知識の価値が持続的に高まることを論じた内容（スコア4）。AIツールが専門家と非専門家の生産性格差をどのように変化させるかを分析しており、エンジニアのスキル開発への新たな視点を提供している。</td></tr>
+<tr><td class="num">7</td><td class="title">Linux 7.1リリース、Intel 486時代のサポートを終了</td><td class="link-col"><a href="https://www.zdnet.com/article/say-goodbye-to-486-processors-linux-7-1-lands/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linux 7.1では数十年にわたって維持されてきたIntel 486プロセッサ向けのレガシーコードが大規模に削除された（スコア4）。古いアーキテクチャのサポートを打ち切ることでカーネルコードがすっきりし、長年蓄積されたレガシー負債の解消が進む節目のリリースとなった。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェント基盤にはCloudflareを選ぶべき理由</td><td class="link-col"><a href="https://zenn.dev/yusukebe/articles/ccb1f953e48ee1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CloudflareのWorkers・R2・D1・Queuesなどを活用してAIエージェント基盤を構築する利点を論じた記事（スコア318）。エッジ実行によるグローバル低遅延、低コスト構成、シンプルなデプロイという観点からCloudflareがエージェントワークロードに適していると主張しており、具体的なアーキテクチャパターンも紹介されている。</td></tr>
+<tr><td class="num">2</td><td class="title">エンジニアの基礎力問題：四則演算の計算機も書けない？</td><td class="link-col"><a href="https://zenn.dev/aldagram_tech/articles/124d14d59bc595" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「ほとんどのエンジニアが簡単なプログラムを書けない」という俗説を出発点に、プログラミングの基礎力と実践力の乖離を考察した記事（スコア126）。ツールやフレームワーク依存が進むなかで基礎的なアルゴリズム実装力をどう捉えるかを問い直す内容が、多くの読者の共感を呼んだ。</td></tr>
+<tr><td class="num">3</td><td class="title">JavaScriptのClass離れの歴史をたどる</td><td class="link-col"><a href="https://zenn.dev/sjbworks/articles/41a5c76dce4b36" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JavaScriptコミュニティでクラス構文への依存が減ってきた歴史的経緯を振り返る記事（スコア54）。関数型プログラミングの台頭、Reactのコンポーネントモデルとの相性、フレームワーク設計の変化との関係が時系列で整理されており、JavaScriptの進化を俯瞰できる内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">カーネギーメロン大学「Intro to Database Systems」は全エンジニアに見てほしい</td><td class="link-col"><a href="https://zenn.dev/kaseken/articles/3913ba30af4d46" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CMUの著名なデータベース講義を紹介する記事（スコア51）。SQLの基礎からストレージエンジン、トランザクション管理、分散処理まで体系的に学べるカリキュラムが無料で公開されており、データベースを深く理解したいすべての開発者への推薦となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">AIの大量アウトプットによる認知負荷を下げるSkillを自作した</td><td class="link-col"><a href="https://zenn.dev/hataluck/articles/0752919b305a9f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが生成する大量のコードや提案を整理・評価する認知負荷を下げるために独自のSkillを作成した体験記（スコア45）。どのような設計でSkillを構成し、日常の開発フローに組み込んでいるかが具体的に述べられており、Claude Codeユーザーにとって実践的な参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">個人開発が使われない理由：AIで「作る壁」が消えた今こそ大事なこと</td><td class="link-col"><a href="https://zenn.dev/yun_bow/articles/6e6bcbf127072a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIによって開発コストが劇的に下がった現在、アプリが作れても使われない問題の本質を論じた記事（スコア39）。技術的な実装力よりも課題設定・ユーザー理解・マーケティングの重要性が相対的に高まっているという主張を展開しており、個人開発者の視点転換を促している。</td></tr>
+<tr><td class="num">7</td><td class="title">`cp`コマンドはディスク上でデータをコピーしないことがある</td><td class="link-col"><a href="https://zenn.dev/satoru_takeuchi/articles/4bab372c6dae86" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linuxの`cp`コマンドがCopy-on-Write（CoW）機能を利用して実際にはデータを複製しない場合があることを解説した記事（スコア36）。BtrfsなどCoW対応ファイルシステムでの挙動と、それが引き起こしうる予期せぬ動作を具体例で説明しており、ファイルシステムの内部動作を理解する上で興味深い内容。</td></tr>
+<tr><td class="num">8</td><td class="title">Fable 5停止を機にUbuntuでGemma 4 E2Bをローカル動作させた記録</td><td class="link-col"><a href="https://zenn.dev/yamadatt/articles/20260614-ubuntu-gemma4-ollama" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Fable 5のサービス停止を契機として、ollamaを使いローカル環境でGemma 4 E2Bモデルを動かした実践記録（スコア30）。Ubuntu上での環境構築手順と動作確認結果が詳しくまとめられており、クラウドモデルからローカルLLMへの移行を検討しているユーザーの参考になる内容。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">エンジニア未経験者の9割がつまずく「最初の壁」とその乗り越え方</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/621a19d6a1a6500eaca6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プログラミング学習を始めたばかりの未経験者が直面するつまずきポイントを整理し、対処法を紹介したシリーズ第3回（スコア56）。環境構築・エラー対処・学習継続の壁という実体験に基づいた課題が具体的に解説されており、独学中の初学者にとって共感しやすい内容となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">未経験からエンジニアへ：職種の広がり方と成長を続けるコツ</td><td class="link-col"><a href="https://qiita.com/masa20057/items/78b5387e7dacf4aba403" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">フロントエンド・バックエンド・インフラ・AIなどエンジニア職種の多様性を概観し、未経験者が成長を続けるための考え方を紹介した記事（スコア46）。自分に合った方向性の選び方や、継続的な学習習慣の作り方についての実践的なアドバイスが含まれている。</td></tr>
+<tr><td class="num">3</td><td class="title">文系エンジニアがClaude Codeで学習アプリを自作し3か月でCISSP合格</td><td class="link-col"><a href="https://qiita.com/hiyoshiz/items/b63c2e7ff52b5554a8a5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">文系出身エンジニアがClaude Codeを使って独自の学習アプリを開発し、セキュリティ資格「CISSP」に3か月で合格した体験談（スコア30）。AIコーディングアシスタントを学習ツール開発に活用するプロセスが詳しく述べられており、AI駆動開発の実用性と学習効率への影響を示す具体的な事例となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">正規表現が0.002ミリ秒遅いからビット演算で全角/半角判定を実装した話</td><td class="link-col"><a href="https://qiita.com/Shiro_Shihi/items/d18bf49f0c7a168baa19" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">全角・半角の文字判定を正規表現ではなくビット演算のみで実装したパフォーマンス最適化の記事（スコア28）。Unicodeの文字コード構造を活かした実装によりマイクロ秒単位での高速化を達成しており、極限のパフォーマンスチューニングに取り組む際のアプローチとして参考になる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">CVSS 9.8はどれくらい危険？脆弱性スコアを読むためのガイド</td><td class="link-col"><a href="https://qiita.com/mo__mo/items/49f9601481aec596f545" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CVSSスコアの読み方を解説した入門記事（スコア25）。9.8という高スコアが示す深刻度と、攻撃に必要な条件（ネットワーク到達性・認証不要・高い影響度）の組み合わせをわかりやすく整理しており、脆弱性情報を適切に評価・優先付けする際の基礎知識として役立つ。</td></tr>
+<tr><td class="num">6</td><td class="title">VRAM 12GBでQwen 35Bを動かす：エキスパートをGPUに載せないほど速くなった話</td><td class="link-col"><a href="https://qiita.com/kenimo49/items/dff3c8a2a0ee563ca16f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Qwen 35B（Mixture of Experts）モデルをVRAM 12GBの環境でllamacpp+ollamaを使って動かした実験報告（スコア23）。使用するエキスパートをあえてGPUに乗せずCPU/RAMとのオフロードを設定することで、予想外に推論速度が向上したという結果が示されており、MoEモデルのリソース最適化の参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">コーディングエージェント時代にあえて自分でコードを書く意義</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/81433a4eaae7d2030751" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェントが普及した現代に、手でコードを書くことの価値を考察した記事（スコア20）。理解の深さ・デバッグ能力・自律的な問題解決力といった観点から、エージェントへの過度な依存が引き起こしうるリスクと、自分でコードを書く習慣を維持することの重要性を論じている。</td></tr>
+<tr><td class="num">8</td><td class="title">AIエージェントスキルをSkillOpsで評価・モニタリングする</td><td class="link-col"><a href="https://qiita.com/licux/items/9c640601a1dde7c18d9f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに組み込んだAgent SkillsをAWS上のSkillOpsで評価・品質管理する方法を解説した記事（スコア16）。LLMOpsの観点からエージェントスキルの継続的評価フレームワークを紹介しており、本番環境でのエージェント運用品質を高めるアプローチとして参考になる内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-17 06:36 JST
+</footer>
+</div>
+</body>
+</html>
