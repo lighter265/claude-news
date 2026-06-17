@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-18</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-18</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">アリババ発・軽量インプロセスベクトルDB「Zvec」</td><td class="link-col"><a href="https://github.com/alibaba/zvec" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Alibaba Groupがオープンソース化したアプリケーション組み込み型の軽量ベクトルデータベース。外部サービスなしに低遅延の類似検索を実現し、Alibaba社内での本番運用実績を持つ。2026年6月のv0.5.0でネイティブの全文検索（FTS）機能が追加された。Python・Rustなど複数言語のSDKを提供しており、RAGパイプラインやセマンティック検索を自前で構築する際の有力な選択肢として注目されている。</td></tr>
+<tr><td class="num">2</td><td class="title">トークナイザー不要のTTSシステム「VoxCPM2」</td><td class="link-col"><a href="https://github.com/OpenBMB/VoxCPM" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">拡散自己回帰アーキテクチャにより連続音声表現をエンドツーエンドで直接生成するテキスト音声合成システム。従来のディスクリートトークン方式を使わず、多言語音声生成・クリエイティブな音声デザイン・リアルな音声クローニングを特徴としている。OpenBMBが開発・公開しており、DiscordやFeishuのコミュニティでサポートが提供されている。音声合成技術の新たなアーキテクチャとして研究・実用の両面で関心を集めている。</td></tr>
+<tr><td class="num">3</td><td class="title">IPアドレスの代わりに公開鍵で接続するRust製ネットワークスタック「iroh」</td><td class="link-col"><a href="https://github.com/n0-computer/iroh" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「IPアドレスは壊れる。公開鍵でダイヤルせよ」をコンセプトとするモジュラーネットワークスタック。ホールパンチングやリレーサーバーへのフォールバックを組み合わせ、IPアドレスが変わる環境でも特定デバイスへの安定した接続を自動確立する。P2Pアプリケーションや分散システムの基盤として利用でき、Rust実装のためパフォーマンスと安全性を両立している。</td></tr>
+<tr><td class="num">4</td><td class="title">Rust製・超高速TypeScript/JavaScriptコンパイラ「SWC」</td><td class="link-col"><a href="https://github.com/swc-project/swc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Speedy Web Compilerの略称で、Babelの後継として多くのビルドチェーンに採用されているRust製コンパイラ。Next.jsをはじめとする主要フレームワークが標準で利用しており、従来のJavaScript製ツールと比較して大幅なビルド速度改善をもたらす。RustとJavaScript双方向けのライブラリとして設計されており、パーサーやトランスフォーマーをモジュール単位で組み合わせる柔軟な構成が特徴。</td></tr>
+<tr><td class="num">5</td><td class="title">ルートなしでAndroidのシステムアプリを削除する「Universal Android Debloater」</td><td class="link-col"><a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rustで開発されたクロスプラットフォームGUIツールで、ADB経由でルート権限なしにAndroidのプリインストールアプリを削除できる。プライバシー保護・セキュリティ向上・バッテリー持続時間の改善を目的としており、元のUADプロジェクトからフォークして機能強化が続けられている。誤操作による端末の文鎮化リスクもあるため、実行前の十分な確認が推奨されている。</td></tr>
+<tr><td class="num">6</td><td class="title">セルフホスト型オープンソースWhatsApp APIゲートウェイ「OpenWA」</td><td class="link-col"><a href="https://github.com/rmyndharis/OpenWA" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ベンダーロックインなしで自社インフラに展開できるWhatsApp APIゲートウェイ。プラグイン可能なアーキテクチャでデータベース（SQLite/PostgreSQL）・ストレージ（ローカル/S3）・キャッシュ（メモリ/Redis）を自由に選択できる設計となっている。有料APIへの依存を排除し、メッセージングインフラを完全管理したい開発者・企業向けに作られたオープンソースプロジェクト。</td></tr>
+<tr><td class="num">7</td><td class="title">ストリーミングサービスとスピーカーをつなぐオープンソースメディアマネージャー「Music Assistant」</td><td class="link-col"><a href="https://github.com/music-assistant/server" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Raspberry PiやNASなどの常時稼働デバイス上で動作するサーバーを中核に、各種ストリーミングサービスと対応スピーカーを接続するメディアライブラリマネージャー。ライブラリ管理・プレイリスト・マルチルーム再生などの機能を持ち、Home Assistantとの連携も想定されている。無料・オープンソースで提供されており、自前のホームオーディオ基盤を構築したいユーザーに向いている。</td></tr>
+<tr><td class="num">8</td><td class="title">CNCF認定・Kubernetes向けクラウドネイティブ管理基盤「Meshery」</td><td class="link-col"><a href="https://github.com/meshery/meshery" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloud Native Computing Foundation（CNCF）プロジェクトとして認定された、Kubernetesベースのインフラとアプリケーションを視覚的に設計・管理できるセルフサービス型プラットフォーム。YAMLの手書き作業から解放されるビジュアルGitOpsと、マルチクラウド対応のコラボレーション機能が特徴。Kubernetes環境の設計・運用を拡張可能なプラットフォームとして一元管理したい組織に向いている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ウォール街を通じてSpaceX株を強制的に購入させられている問題</td><td class="link-col"><a href="https://paulkrugman.substack.com/p/elon-musk-human-ponzi-scheme" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ポール・クルーグマンが、金融商品を経由することで一般投資家がSpaceXへの資金提供を実質的に強いられる構造を批判したSubstack記事（スコア77、コメント55件）。特定の投資信託や退職金制度を通じてSpaceXへの間接的な資本流入を避けることが難しくなっているという問題提起で、マスク氏関連企業の金融市場への影響力を論じている。エロン・マスクの企業構造と資本市場の関係を問い直す観点から広く注目を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">2026年1〜5月、カリフォルニアで太陽光発電が天然ガスを超えた</td><td class="link-col"><a href="https://www.eia.gov/todayinenergy/detail.php?id=67784#" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">米エネルギー情報局（EIA）のデータによると、2026年1月から5月の累計発電量でカリフォルニア州の太陽光発電が天然ガスを上回ったことが確認された（スコア52）。州が長年取り組んできた再生可能エネルギー移行政策の成果として注目されており、エネルギーミックスの転換点を象徴するマイルストーンとなっている。コメント数は少ないが、データの信頼性が高いEIA公式ページが一次ソースとなっている点で注目を集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">走ってくるロボットにClaudeとGrokのどちらを載せたいか</td><td class="link-col"><a href="https://openrouter.ai/blog/insights/royale-last-agent-standing/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenRouterが「最後のエージェントが生き残るバトル」と題した実験で、複数のAIモデルがロボット制御タスクでどう振る舞うかを比較した記事（スコア12）。ClaudeやGrokを含む各モデルの意思決定パターンと強弱が具体的なシナリオで評価されており、物理世界での自律エージェント活用における課題と選択基準を示す内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">誤ったキーボードレイアウトで入力した文字を自動修正するmacOSアプリ「Flickey」</td><td class="link-col"><a href="https://flickey.site" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">日本語・英語など複数の入力ソースを切り替えて使う環境で、誤ったレイアウトで入力してしまった文字列をキーボードショートカット一つで自動再変換できる無料のmacOSメニューバーアプリ（スコア12）。インストール不要で常駐し、気づいた時点ですぐに修正できる実用的な設計が評価されており、6件のコメントが寄せられた。</td></tr>
+<tr><td class="num">5</td><td class="title">メモリチップ不足を受けてAppleが値上げへ</td><td class="link-col"><a href="https://www.wsj.com/tech/apple-price-increases-memory-supply-199845b1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">メモリチップの供給不足を背景に、AppleがiPhoneを含む一部製品の価格を引き上げる方針であることがウォール・ストリート・ジャーナルの報道で明らかになった（スコア9）。半導体サプライチェーンの逼迫が消費者向け製品の価格へ直接波及するという動向として、市場関係者や購入予定者の注目を集めている。</td></tr>
+<tr><td class="num">6</td><td class="title">TescoがBroadcomの強硬なVMwareポリシーを機に4万台のワークロードを移行</td><td class="link-col"><a href="https://arstechnica.com/information-technology/2026/06/tesco-moving-40000-server-workloads-off-vmware-amid-broadcoms-abusive-conduct/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">英大手小売チェーンTescoが、BroadcomによるVMware買収後の価格・ライセンス政策の変更を受け、4万台のサーバーワークロードをVMwareから移行することを決断したとArs Technicaが報じた（スコア6）。Broadcomの「虐待的な行為」と表現された契約変更が引き金となっており、大企業レベルでのVMware離れが加速していることを示す事例として注目されている。</td></tr>
+<tr><td class="num">7</td><td class="title">Home Assistant向けローカルAIモデル「Selora」</td><td class="link-col"><a href="https://github.com/SeloraHomes/ha-selora-ai" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クラウドサービスに依存せずHome Assistantと連携して動作するローカルAIモデル「Selora」のShow HN投稿（スコア6）。プライバシーを保ちながらスマートホーム制御にAI機能を追加したいユーザー向けに設計されており、GitHubでオープンソースとして公開されている。ローカルLLMとホームオートメーションの組み合わせに関心のある開発者から反応が寄せられた。</td></tr>
+<tr><td class="num">8</td><td class="title">FortiBleed：75,000台のFortinetファイアウォールで管理者パスワードが解読</td><td class="link-col"><a href="https://doublepulsar.com/fortibleed-75k-fortinet-firewalls-have-admin-passwords-cracked-60299faa65f8?postPublishedType=initial" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">セキュリティ研究者の調査で、Fortinet製ファイアウォール約75,000台の管理者パスワードが解読されたとされるインシデント「FortiBleed」が報告された（スコア5）。影響を受けたデバイスがどのように特定・悪用されうるかの詳細が解説されており、該当機器を管理する組織には速やかなパスワード変更・パッチ適用・侵害確認が求められる内容となっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェント基盤にはCloudflareを選ぶべき理由</td><td class="link-col"><a href="https://zenn.dev/yusukebe/articles/ccb1f953e48ee1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">HonoフレームワークのメンテナーであるYusuke Wada氏が、AIエージェントのインフラとしてCloudflareを強く推薦した記事（スコア363）。Workers・R2・D1・Queuesなどのサービスを組み合わせることで、グローバルエッジで動くAIエージェント基盤を低コストかつシンプルに構築できると論じている。エージェントの状態管理・非同期処理・Cloudflare Workers AIとの統合パターンなど、具体的なアーキテクチャも示されており、クラウドネイティブなエージェント設計の参考として広く注目を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">AIの大量出力による認知負荷を下げる独自Skillを作った</td><td class="link-col"><a href="https://zenn.dev/hataluck/articles/0752919b305a9f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが大量に生成するコードや提案を人間が処理しきれないという問題意識から、Claude Code上で動作する独自「Skill」を作成し認知負荷を軽減した取り組みを紹介する記事（スコア147）。どのような出力形式・構造が扱いやすいかを工夫し、日常の開発フローに組み込むまでの設計と実装の過程が詳述されている。AIの出力量が増える一方で人間の認知帯域は変わらないという課題への実践的なアプローチとして共感を呼んだ。</td></tr>
+<tr><td class="num">3</td><td class="title">Honoでバックエンド APIを作る個人的ベストプラクティス</td><td class="link-col"><a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">TypeScript製の軽量WebフレームワークHonoを使ってバックエンドAPIを構築する際の実践的なベストプラクティスをまとめた記事（スコア139）。ルーティング設計・バリデーション・エラーハンドリング・ミドルウェア構成など、実装時に判断を迷いやすいポイントを具体的に整理している。Cloudflare Workers・Bun・Denoなど複数ランタイムに対応するHonoの特性を踏まえた内容で、採用を検討している開発者にとって実用的な参考となる。</td></tr>
+<tr><td class="num">4</td><td class="title">CMU「Intro to Database Systems」は全プログラマに見てほしい</td><td class="link-col"><a href="https://zenn.dev/kaseken/articles/3913ba30af4d46" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">カーネギーメロン大学のAndy Pavlo教授による著名なデータベース講義を紹介した記事（スコア132）。SQLの基礎にとどまらず、ストレージエンジン・バッファープール・インデックス・クエリ実行・トランザクション管理まで体系的に学べるカリキュラムが動画・スライドとして無料公開されている。実務でデータベースに向き合うすべての開発者が視聴することで、「なぜそう動くのか」を深く理解できると強く推薦されている。</td></tr>
+<tr><td class="num">5</td><td class="title">`cp`コマンドはディスク上でデータをコピーしないことがある</td><td class="link-col"><a href="https://zenn.dev/satoru_takeuchi/articles/4bab372c6dae86" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linuxの`cp`コマンドが、BtrfsなどCopy-on-Write対応ファイルシステムでは実際にデータを複製せずメタデータだけを変更する場合があることを解説した記事（スコア92）。この挙動によりディスク使用量の計算が予想と異なったり、元ファイルへの変更がコピー先に意図せず反映されるケースが生じることを具体例で示している。ファイルシステムの低レベルな動作を理解する上で実用的かつ興味深い知見を提供している。</td></tr>
+<tr><td class="num">6</td><td class="title">2026年6月現在のClaude Code開発フロー</td><td class="link-col"><a href="https://zenn.dev/arm_techblog/articles/7712cde19988c8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">2026年6月時点でのClaude Codeを実際の業務開発に活用する際の具体的なフローを紹介した記事（スコア69）。CLAUDE.mdの設定・サブエージェントとの連携・並列タスク実行・Hookの活用など、Claude Codeを開発フローに組み込むための実践的なノウハウが整理されている。Claude Codeのバージョンアップに伴う機能変化を踏まえた最新の知見として、現時点での使い方を把握したいユーザーに参考となる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">ローカルLLMをいつ使うべきか？</td><td class="link-col"><a href="https://zenn.dev/sompojapan_dx/articles/74624afa03040c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コスト・プライバシー・レイテンシ・精度の観点から、クラウドAPIとローカルLLMの適切な使い分けを論じた記事（スコア64）。医療・法律・社内機密情報など外部送信できないデータを扱う場合や、高頻度推論でのコスト最適化が求められる場面でローカルLLMが有効だと論じている。ollamaなどのツールの成熟によりローカル実行の敷居が下がった現状を踏まえ、実用的な判断フレームワークを提示している。</td></tr>
+<tr><td class="num">8</td><td class="title">JavaScriptのClass離れの歴史をたどる</td><td class="link-col"><a href="https://zenn.dev/sjbworks/articles/41a5c76dce4b36" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JavaScriptコミュニティでクラス構文の利用が減少してきた経緯を時系列で振り返る記事（スコア63）。ES6でクラス構文が導入されたものの、Reactのhooks移行・関数型プログラミングパラダイムの台頭・フレームワーク設計の変化がクラスベース実装を敬遠する流れを生み出したと分析している。JavaScriptの言語設計とコミュニティの価値観の変遷を俯瞰できる、読みごたえのある内容となっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">未経験エンジニアが知っておきたい職種の広がりと成長のコツ</td><td class="link-col"><a href="https://qiita.com/masa20057/items/78b5387e7dacf4aba403" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">フロントエンド・バックエンド・インフラ・データ・AIなどエンジニア職種の多様性を概観し、未経験者が自分に合った方向性を見つける手助けをする記事（スコア66）。技術スタックの選択よりも、課題解決思考や継続的な学習習慣が長期的な成長を支えるという観点から実践的なアドバイスが述べられている。エンジニアへの転職を検討している人や、キャリアの方向性に迷っている初学者に向いた内容となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">ReactやNext.jsなど「言語みたいな顔のJavaScript周辺技術」を整理</td><td class="link-col"><a href="https://qiita.com/miruky/items/b892d9ff73495ca4b68d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">React・Next.js・TypeScript・Vue・Nuxtなど、JavaScriptエコシステムの主要技術を初学者向けにわかりやすく整理した記事（スコア36）。各技術が何をするものか・どこで使われるか・他とどう違うかを体系的にまとめており、フロントエンドを学び始めた人が「何から始めればよいか」を把握するための見取り図として役立つ。</td></tr>
+<tr><td class="num">3</td><td class="title">PHPが抱える最大の問題点とは</td><td class="link-col"><a href="https://qiita.com/rana_kualu/items/d1c08a55a373897d38d5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PHPの設計上・エコシステム上の問題点を論じた記事の日本語訳（スコア28）。一貫性のない標準関数の命名・引数順・型システムの扱いなど、長年指摘されてきた課題が整理されており、PHPを使い続けることのトレードオフを理解する上での参考となる。批判的な内容を含みつつも、PHPが依然として広く使われている理由についての考察も含まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Codeで「並列ループエージェント」を構築するハンズオンガイド</td><td class="link-col"><a href="https://qiita.com/kumai_yu/items/54ded70a5a68a5ca15d5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeのサブエージェント機能とループ実行を組み合わせて、複数タスクを並列処理する「並列ループエージェント」を構築する実践ガイド（スコア25）。コード例を交えながら、エージェントの並列実行・状態管理・ループ制御の実装手順が解説されており、Claude Codeを高度に活用したい開発者向けの具体的なハンズオン内容となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">AI機能搭載ブラウザ12種類を全部使って徹底レビュー</td><td class="link-col"><a href="https://qiita.com/issey_dotlog/items/b59c083cf053e605e8e6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Arc・Vivaldi・Brave・Opera・Perplexity AIブラウザなどAI機能を搭載した12種類のブラウザを実際に使って比較・評価した記事（スコア23）。各ブラウザのAI機能の使い勝手・速度・プライバシーポリシーなどの観点から評価しており、AI検索統合からタブ管理まで多様な機能差が把握できる。AIブラウザへの移行を検討しているユーザーにとって有用な比較情報が揃った内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">AI駆動開発のセキュリティ対策、結局どこまでやればいい？</td><td class="link-col"><a href="https://qiita.com/udowanllc/items/1713372648eb543e6980" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントを活用した開発（AI駆動開発）において必要なセキュリティ対策の範囲を論じた記事（スコア21）。コード生成・依存関係管理・プロンプトインジェクション・権限管理など、AIを組み込んだ開発フローに特有のリスクが整理されている。ISMS観点も交えながら実務で参考になる対策の優先度付けが示されており、AI駆動開発の導入を進める組織向けの内容となっている。</td></tr>
+<tr><td class="num">7</td><td class="title">AIエージェントのAgent SkillsをSkillOpsで評価・品質管理する</td><td class="link-col"><a href="https://qiita.com/licux/items/9c640601a1dde7c18d9f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに組み込んだAgent SkillsをAWS上のSkillOpsで継続的に評価・品質管理する方法を解説した記事（スコア18）。LLMOpsの考え方を拡張し、個々のスキルの動作品質をモニタリングする仕組みを構築するアプローチが紹介されている。本番環境でのエージェントスキル品質を担保したい組織にとって参考になる実践的な内容となっている。</td></tr>
+<tr><td class="num">8</td><td class="title">冪等性・安全性・純粋性の違いを初心者向けに解説</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/368fb80d85f47d3fb384" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">API設計や関数設計でよく登場する「冪等」という概念を、「安全」「純粋」との違いから丁寧に解説した記事（スコア10）。HTTPメソッドの設計やデータベース操作の文脈でこれらの性質がどう適用されるかを具体例とともに整理しており、概念の曖昧な理解を正確にしたい初学者にとって実用的な内容となっている。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-18 06:35 JST
+</footer>
+</div>
+</body>
+</html>
