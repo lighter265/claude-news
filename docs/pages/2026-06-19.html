@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-19</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-19</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIコーディングエージェント向け高速コードインテリジェンスMCPサーバー</td><td class="link-col"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">DeusData/codebase-memory-mcp は、コードベースを永続的な知識グラフへインデックス化する高性能なコードインテリジェンスエンジンです。平均的なリポジトリをミリ秒単位でフルインデックスし、Linuxカーネル（2,800万行）でも約3分で処理できます。158言語をサポートし、クエリはサブミリ秒で応答します。シングルスタティックバイナリで依存なしに動作するため、AIエージェントへの組み込みが容易です。</td></tr>
+<tr><td class="num">2</td><td class="title">公開鍵でピアへダイヤルするRust製ネットワーキングスタック「iroh」</td><td class="link-col"><a href="https://github.com/n0-computer/iroh" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">n0-computer/iroh は、IPアドレスではなく公開鍵を使ってデバイスへ接続するモジュラーなネットワーキングライブラリです。「このデバイスへ繋いで」と指定するだけで、場所を問わず最速ルートを自動で探索・維持します。ホールパンチを試み、失敗した場合はパブリックリレーサーバーへフォールバックするため、NATやファイアウォール越しでも通信できます。</td></tr>
+<tr><td class="num">3</td><td class="title">Googleが公開した時系列予測基盤モデル「TimesFM」</td><td class="link-col"><a href="https://github.com/google-research/timesfm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">google-research/timesfm は、Google Researchが開発した事前学習済みの時系列予測ファウンデーションモデルです。デコーダーのみのアーキテクチャを採用しICML 2024で発表されており、BigQuery MLをはじめとするGoogleの商用製品にも採用されています。汎用の時系列予測タスクに流用できる設計で、Hugging Faceでチェックポイントが公開されています。</td></tr>
+<tr><td class="num">4</td><td class="title">AIエージェントにインターネット閲覧能力を付与するCLIツール「Agent Reach」</td><td class="link-col"><a href="https://github.com/Panniantong/Agent-Reach" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Panniantong/Agent-Reach は、AIエージェントがTwitter・Reddit・YouTube・GitHub・Bilibili・XiaoHongShuを閲覧・検索できるようにするCLIツールです。API費用なしで利用でき、接続方式の切り替えを自動で管理するため、エージェントのインターネット対応を低コストで実現できます。英語・日本語・韓国語・中国語のドキュメントが整備されています。</td></tr>
+<tr><td class="num">5</td><td class="title">ByteDanceによるオープンソースマルチモーダルAIエージェントスタック「TARS」</td><td class="link-col"><a href="https://github.com/bytedance/UI-TARS-desktop" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">bytedance/UI-TARS-desktop は、GUI操作とビジョン能力をターミナル・コンピュータ・ブラウザへ統合するマルチモーダルAIエージェントスタックです。Agent TARSとUI-TARS-desktopの2プロジェクトを含み、CLIとWeb UIの両インターフェースで利用できます。ByteDanceがOSSとして公開しており、実際のGUI操作に近いワークフローを提供することを目指しています。</td></tr>
+<tr><td class="num">6</td><td class="title">近無限長コンテキストを再帰的に処理するLLM推論ライブラリ「RLM」</td><td class="link-col"><a href="https://github.com/alexzhang13/rlm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">alexzhang13/rlm は、Recursive Language Models（RLM）のプラグアンドプレイ推論ライブラリです。RLMはLLMが入力を再帰的に分解・自己呼び出しすることで、従来の固定コンテキスト長の制約を超えたタスクを処理できるタスク非依存の推論パラダイムです。複数のサンドボックスへ対応しており、従来の llm.completion() 呼び出しを置き換える設計になっています。</td></tr>
+<tr><td class="num">7</td><td class="title">アニメーション図解付きのオープンソースアルゴリズム入門書「Hello 算法」</td><td class="link-col"><a href="https://github.com/krahets/hello-algo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">krahets/hello-algo は、アニメーション図解と1クリック実行を備えたデータ構造・アルゴリズムの入門教材です。簡体字中国語・繁体字・英語・日本語・ロシア語に対応し、Python・Java・C++・Go・Rust・Swiftなど多数の言語でのコード実装が用意されています。清華大学の教授からも推薦されており、初学者が体系的に学ぶための教材として設計されています。</td></tr>
+<tr><td class="num">8</td><td class="title">AIコーディングアシスタントを動画制作スタジオへ変えるエージェント型システム「OpenMontage」</td><td class="link-col"><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">calesthio/OpenMontage は、自然言語の指示だけで動画制作を完結させる、世界初のオープンソース・エージェント型動画制作システムを謳っています。12パイプライン・52ツール・500以上のエージェントスキルを備え、AIコーディングアシスタントをフル動画制作スタジオとして機能させます。プロバイダーやパイプラインを柔軟に組み替えられる構成になっています。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">マクマンション建築の「悪さ」をわかりやすく解説した2016年の記事が再注目</td><td class="link-col"><a href="https://mcmansionhell.com/post/148605513816/mcmansions-101-what-makes-a-mcmansion-bad" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">McMansionHellが2016年に公開した、郊外の大型住宅「マクマンション」が建築的に問題とされる理由を視覚的に解説した記事がHNで再浮上し、スコア28・コメント31件と反響を集めています。プロポーション・スケール感・デコレーションの不整合といった要素を具体的な事例で分析しており、建築デザインの基礎的な視点を学べます。技術者にも広くシェアされるタイプの教養コンテンツです。</td></tr>
+<tr><td class="num">2</td><td class="title">Amazonが社内のAIデータセンター拡張批判エンジニアを調査</td><td class="link-col"><a href="https://www.cnbc.com/2026/06/18/amazon-engineers-ai-data-center-opposition.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Amazonが、AIデータセンター拡張計画に対して公式に異論を述べた複数のエンジニアを調査していると報じられました。大規模テクノロジー企業における内部批判者への対応として注目を集めており、AI投資加速と社内ガバナンスの緊張を示す事例として議論されています。</td></tr>
+<tr><td class="num">3</td><td class="title">LinuxファイルシステムBcachefs 1.38.6がリリース、パフォーマンス多数改善</td><td class="link-col"><a href="https://www.phoronix.com/news/Bcachefs-Tools-1.38.6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linuxの次世代ファイルシステム「Bcachefs」のツール群バージョン1.38.6がリリースされ、多数のパフォーマンス改善が含まれています。信頼性とスループットを両立することを目標に開発が続いており、各リリースで着実に改良が重ねられています。</td></tr>
+<tr><td class="num">4</td><td class="title">geohot「価格は下がれない」——インフレの構造的理由を論じるブログ</td><td class="link-col"><a href="https://geohot.github.io//blog/jekyll/update/2026/06/18/prices-cant-go-down.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">tinygrad作者のGeorge Hotz（geohot）が、現代経済において価格が構造的に下がれない理由を論じたブログ記事です。金融政策・債務・インセンティブ構造を絡めた独自の経済分析で、技術者視点からのマクロ経済論として読まれています。</td></tr>
+<tr><td class="num">5</td><td class="title">NPMパッケージへの攻撃でZapierなどのブラウザ拡張機能が標的に</td><td class="link-col"><a href="https://opensourcemalware.com/blog/mastra-npm-malware" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">mastraというNPMパッケージを通じた悪意あるコードの配布が確認され、Zapierや複数のセキュリティツールのブラウザ拡張機能が標的になったと報告されています。サプライチェーン攻撃の一形態として、オープンソースパッケージエコシステムへの脅威が改めて浮き彫りになっており、利用パッケージの審査の重要性が示されています。</td></tr>
+<tr><td class="num">6</td><td class="title">AIの台頭でアクセンチュア株が2017年以来の安値に</td><td class="link-col"><a href="https://www.ft.com/content/9f063b07-da39-4feb-92ab-ee0f91385c62" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コンサルティング大手アクセンチュアの株価がAI脅威の高まりを背景に2017年以来の安値を記録したとFinancial Timesが報じました。従来型ITコンサルティング業務がAIで代替されつつあるという市場の見方が株価に反映されており、コンサルティング業界の構造変化が数字に現れてきています。</td></tr>
+<tr><td class="num">7</td><td class="title">CursorとのAI契約が引き金——SpaceX株が急落し時価総額6,000億ドル消失か</td><td class="link-col"><a href="https://www.forbes.com/sites/tylerroush/2026/06/18/spacex-stock-plunge-wipes-out-600-billion-after-cursor-deal-spooks-investors/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SpaceXがAIコーディングツールCursorと契約を締結したことが投資家の懸念を呼び、株価急落で時価総額から約6,000億ドルが失われたと報じられています。AIツール導入が大企業の株価評価に直接影響を与えるという異例の事態として注目されていますが、情報の正確性については精査が必要です。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIエージェントの実行基盤はCloudflareに集約すべき理由</td><td class="link-col"><a href="https://zenn.dev/yusukebe/articles/ccb1f953e48ee1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloudflareが提供するWorkers・KV・Durable Objects・R2などを組み合わせることで、AIエージェントの実行基盤として優れた選択肢になるという主張の記事です（スコア396）。エッジでの低レイテンシ実行・グローバル分散・コスト効率が評価されており、他クラウドサービスとの比較も含んでいます。AIエージェントのインフラ選定において、Cloudflareが有力候補として広く注目されています。</td></tr>
+<tr><td class="num">2</td><td class="title">AIの大量出力による認知負荷を下げるClaude Skillを作った</td><td class="link-col"><a href="https://zenn.dev/hataluck/articles/0752919b305a9f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが膨大なアウトプットを生成するようになった現在、人間が内容を効率的に処理するためのClaude Skillを作成した事例を紹介した記事です（スコア244）。出力量の増大に対してどのようなインターフェースを設計するかという観点から実装を解説しており、AIとの協働で情報過多に悩む開発者にとって参考になる工夫が紹介されています。</td></tr>
+<tr><td class="num">3</td><td class="title">HonoでバックエンドAPIを作るときの個人的ベストプラクティス</td><td class="link-col"><a href="https://zenn.dev/ashunar0/articles/1ba94a110d8622" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">TypeScript製の高速WebフレームワークHonoでバックエンドAPIを構築する際の実践的なノウハウをまとめた記事です（スコア170）。ルーティング設計・ミドルウェア活用・型安全性の確保といった具体的な手法が整理されており、HonoをCloudflare WorkersやNode.jsで使う開発者の参考になります。</td></tr>
+<tr><td class="num">4</td><td class="title">全プログラマが見るべき——CMU「データベースシステム入門」講義の紹介</td><td class="link-col"><a href="https://zenn.dev/kaseken/articles/3913ba30af4d46" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">カーネギーメロン大学（CMU）の著名な講義「Intro to Database Systems」の内容と視聴すべき理由を解説した記事です（スコア153）。データベースの内部実装からトランザクション管理・インデックス設計まで体系的に学べる内容として高く評価されており、動画はYouTubeで無料公開されています。中上級者にも新たな学びがあると述べられています。</td></tr>
+<tr><td class="num">5</td><td class="title">2026年6月現在のClaude Code実践開発フロー</td><td class="link-col"><a href="https://zenn.dev/arm_techblog/articles/7712cde19988c8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">2026年6月時点でClaude Codeを使った実際の開発フローをまとめた記事です（スコア115）。CLAUDE.mdの活用・Skillの組み合わせ・エージェントとの協働手法など、現時点でのベストプラクティスを具体的に紹介しています。急速に変化するAI駆動開発の実態を把握したい開発者に役立つ内容です。</td></tr>
+<tr><td class="num">6</td><td class="title">`cp` コマンドがディスク上でデータをコピーしないことがある</td><td class="link-col"><a href="https://zenn.dev/satoru_takeuchi/articles/4bab372c6dae86" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linuxの `cp` コマンドが特定の条件下でディスク上のデータを物理的にコピーしない場合があるというファイルシステムの挙動を解説した技術記事です（スコア113）。CoW（Copy-on-Write）の仕組みにより、実際にはファイルの参照だけが複製されるケースがあることが詳しく説明されており、ストレージの挙動を正確に理解する上で重要な知識です。</td></tr>
+<tr><td class="num">7</td><td class="title">AI生成テキスト特有の文体を除去するClaude Skill「stop-ai-slop-jp」</td><td class="link-col"><a href="https://zenn.dev/genshi_ai/articles/88f62861a953c1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI生成テキストに特有の定型表現（「〜ですね」「なるほど」「大切です」など）を除去・改善するClaude Skillを実装した記事です（スコア100）。文章のAI臭を減らし、より自然な日本語に整えるためのプロンプトエンジニアリングの実践例として、AI生成コンテンツの品質改善に関心のある開発者の参考になります。</td></tr>
+<tr><td class="num">8</td><td class="title">ローカルLLMをいつ使うべきか、クラウドAPIとの使い分け</td><td class="link-col"><a href="https://zenn.dev/sompojapan_dx/articles/74624afa03040c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プライバシー・コスト・オフライン要件などを考慮し、ローカルLLMをどの場面で採用すべきかを整理した記事です（スコア93）。クラウドAPIとの使い分けの判断基準や、ローカル実行の現実的なメリット・デメリットが実体験を交えて解説されており、LLM活用の選択肢を検討している開発者の参考になります。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ReactやNext.jsはJavaScriptの別言語ではない——JS周辺技術を整理する</td><td class="link-col"><a href="https://qiita.com/miruky/items/b892d9ff73495ca4b68d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">React・Next.js・TypeScript・jQueryなどのJS周辺技術が「まるで別の言語」に見えてしまう初学者の混乱を解消するため、それぞれの位置づけと関係を整理した記事です（スコア110）。フレームワーク・ライブラリ・AltJSの違いや、なぜこれほど多くの選択肢が生まれたかを体系的に説明しており、JavaScript学習の地図として機能します。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Codeで並列ループエージェントを実装する実践ハンズオン</td><td class="link-col"><a href="https://qiita.com/kumai_yu/items/54ded70a5a68a5ca15d5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeを使って複数のエージェントが並列で動作するループ型エージェントを構築する手法を解説した記事です（スコア40）。サブエージェントの協調・ループ終了条件の設計・エラーハンドリングなど、実際に動かす上での課題と解決策が具体的に紹介されています。</td></tr>
+<tr><td class="num">3</td><td class="title">命名がかっこいいアンチパターン6選——どこが問題なのかを爆速解説</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/9fc54ce86fe6ac2e453c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ソフトウェア設計の「God Object」「Shotgun Surgery」「Lava Flow」といった命名のかっこいいアンチパターン6つを、何が問題なのかを含めて解説した記事です（スコア33）。設計の問題を共通言語で議論するための語彙を整理しており、コードレビューやリファクタリングの際に役立ちます。</td></tr>
+<tr><td class="num">4</td><td class="title">キオクシアはなぜ日本の時価総額トップになれたのか——NANDフラッシュ企業の実態</td><td class="link-col"><a href="https://qiita.com/issey_dotlog/items/1193da3bfee4f891137d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">東芝メモリから独立したキオクシア（Kioxia）が日本の時価総額上位に浮上した背景を解説した記事です（スコア22）。NANDフラッシュメモリの技術的優位性・市場シェア・半導体産業での戦略的立ち位置が解説されており、日本の半導体業界の現状を理解する参考になります。</td></tr>
+<tr><td class="num">5</td><td class="title">QAエンジニアがAIを活用しPlaywright・APIテスト・CI/CDを習得した話</td><td class="link-col"><a href="https://qiita.com/kenji-m/items/e5afce6610de40734443" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスト対象のコードがない状況からAIを活用してPlaywrightによるE2Eテスト・APIテスト・CI/CDパイプラインの構築を学んだQAエンジニアの実践記録です（スコア20）。AIを学習ツールとして活用することで、従来は時間のかかる技術習得を加速させた事例として、テスト自動化に関心のあるエンジニアの参考になります。</td></tr>
+<tr><td class="num">6</td><td class="title">「冪等性」を「安全性」「純粋関数」との違いから正しく理解する</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/368fb80d85f47d3fb384" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">API設計でよく登場する「冪等（べきとう）」という概念を、「安全」「純粋関数」との違いを対比させながら丁寧に解説した記事です（スコア14）。HTTPメソッドの冪等性やデータベース操作への適用例を示し、初心者が混同しやすい概念を明確に整理しています。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Code × Codex × Obsidian Vaultで作るAI二刀流「何でも相談」環境</td><td class="link-col"><a href="https://qiita.com/htani0817/items/5c5bffcbb53241ed5b54" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude CodeとCodexを組み合わせ、個人の知識ベースとしてObsidian Vaultを活用するAI開発環境の全設定を公開した記事です（スコア12）。各ツールの連携方法・プロンプト設計・実際のユースケースが詳細に解説されており、AI駆動開発環境の構築を検討している開発者の参考になります。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-19 06:36 JST
+</footer>
+</div>
+</body>
+</html>
