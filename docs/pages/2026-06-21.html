@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-21</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-21</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIコーディングエージェント向けコードインテリジェンスMCP「codebase-memory-mcp」</td><td class="link-col"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コードベースを永続的な知識グラフにインデックスする高性能 MCP サーバー。158 言語に対応し、Linux カーネル（2800 万行・7.5 万ファイル）でも 3 分以内にインデックスを完了、構造クエリを 1ms 未満で返す。トークン消費を最大 99% 削減できるとされており、単一のスタティックバイナリで動作するため追加の依存関係が不要。大規模コードベースを扱う AI コーディングエージェントの効率化ツールとして注目を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">Google製・時系列予測基盤モデル「TimesFM」</td><td class="link-col"><a href="https://github.com/google-research/timesfm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google Research が開発したデコーダー専用の時系列予測基盤モデル。ICML 2024 に採択された論文をもとにしており、ゼロショットで幅広い時系列データに適用可能。BigQuery ML や Vertex AI など Google 商用製品にも統合されており、Hugging Face でチェックポイントが公開されている。企業の需要予測・異常検知など多様な時系列タスクへの活用が期待されている。</td></tr>
+<tr><td class="num">3</td><td class="title">AIエージェントと一緒に動画を編集できるオープンソース macOS アプリ「Palmier Pro」</td><td class="link-col"><a href="https://github.com/palmier-io/palmier-pro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Apple Silicon 搭載の macOS 向けに Swift で一から開発されたオープンソースの動画編集アプリ。ユーザーとAIエージェントが同一タイムライン上で協働しながら動画を生成・編集できる設計で、Seedance や Kling などの最新生成AIモデルと連携する。macOS 26（Tahoe）以降が必要とされており、Premiere Pro クラスのAI統合ワークフローの実現を目標に掲げている。エージェント主導の動画制作という新しい方向性を示す試みとして話題を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">100万トークンコンテキストに対応した中国製LLM「GLM-5.2」</td><td class="link-col"><a href="https://github.com/zai-org/GLM-5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">智谱AI（Zhipu AI）が開発するGLMシリーズの最新版。GLM-5.2 はロングホライズンタスク（長期的な計画・実行が必要な複雑な課題）での能力が大幅に向上し、初めて 100 万トークンの安定したコンテキストウィンドウを実現した。「Vibe Coding から Agentic Engineering へ」という設計思想のもと開発されており、Z.ai の API プラットフォームで利用可能。技術レポートも公開されており、エージェント工学の方向性を示す中国発モデルとして注目される。</td></tr>
+<tr><td class="num">5</td><td class="title">Astroチームが開発するエージェントハーネスフレームワーク「Flue」</td><td class="link-col"><a href="https://github.com/withastro/flue" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">TypeScript でエージェントと AI ワークフローを構築するためのプログラマブルなハーネスフレームワーク。新たな SDK を目指すのではなく、制御ロジックをコードで記述することに特化しており、スキルを Markdown ファイルとして定義してエージェントにインポートする独自設計が特徴。GitHub ツール連携や複数エージェント間のルーティングもサポートしており、Astro の開発チームが手掛けていることからも信頼性が期待される。既存の SDK とは異なるアプローチでエージェント開発の複雑さを吸収しようとする試みとして評価されている。</td></tr>
+<tr><td class="num">6</td><td class="title">LLMへの入力を60〜95%圧縮するコンテキスト削減ツール「headroom」</td><td class="link-col"><a href="https://github.com/chopratejas/headroom" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ツール出力・ログ・ファイル・RAGチャンクなどをLLMに渡す前に圧縮し、トークン数を60〜95%削減しながら同等の回答品質を維持するとされるライブラリ。ライブラリ・プロキシ・MCPサーバーの3形態で提供されており、既存システムへの組み込みが容易。長大なログや大量ドキュメントを扱うユースケースでAPI費用とレイテンシを大幅に削減できる可能性がある。</td></tr>
+<tr><td class="num">7</td><td class="title">UIとエージェントが同一状態を共有するアプリフレームワーク「Agent-Native」</td><td class="link-col"><a href="https://github.com/BuilderIO/agent-native" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">BuilderIO が公開した、UIとAIエージェントが等しい市民として共存するオープンソースアプリケーションフレームワーク。UIでのクリック操作もエージェントへの指示も同一のデータベースと状態を参照・更新する設計で、どちら側からの変更も即座にリアルタイムで反映される。リッチな UI と自律エージェントの両立を目指す「Agent-Native」アーキテクチャを提唱しており、次世代インターフェース設計の方向性を示す試みとして注目されている。</td></tr>
+<tr><td class="num">8</td><td class="title">音声と映像を同時生成できる初のDiTベース基盤モデル「LTX-2」</td><td class="link-col"><a href="https://github.com/Lightricks/LTX-2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Lightricks が公開した音声・映像の同時生成に対応した基盤モデルの公式 Python パッケージ。DIT（Diffusion Transformer）ベースで音声と映像を同期して生成できる初のモデルとされており、高品質出力・複数パフォーマンスモード・LoRA によるファインチューニング機能を備える。API アクセスとオープンアクセスの両方で提供されており、現代的な動画生成に必要な主要機能をひとつのモデルに統合した点が特徴的だ。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AMD、7月のBIOSアップデートでRyzen 9000シリーズのメモリ暗号化機能を復活させると発表</td><td class="link-col"><a href="https://www.tomshardware.com/pc-components/cpus/amd-will-reinstate-memory-encryption-on-ryzen-9000-cpus-through-a-bios-update-in-july-tsme-is-coming-back-after-valuable-community-feedback" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AMD が Ryzen 9000 シリーズで一時的に無効化されていた TSME（透過的メモリ暗号化）を、7 月の BIOS アップデートで再有効化すると発表した。TSME はメインメモリ上のデータを暗号化し DMA 攻撃などから保護する機能で、コミュニティからの強い要望を受けた判断とされている。実際に利用可能になる時期はマザーボードメーカーの BIOS 対応状況によって異なる見込みで、セキュリティを重視するユーザーにとって重要なアップデートとなる。</td></tr>
+<tr><td class="num">2</td><td class="title">PostgreSQLサービスを公平に比較できる再現可能なベンチマーク「PostgresBench」をClickHouseが公開</td><td class="link-col"><a href="https://clickhouse.com/blog/postgresbench" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ClickHouse が PostgreSQL ホスティングサービス各種を公平に比較するためのオープンなベンチマークスイートを公開した。クエリ種別・データ量・同時接続数などの条件を統一して計測できる設計で、サービス選定や性能評価に役立てられることを想定している。公開主体の ClickHouse が自社に有利な条件設定をしている可能性についてコミュニティで議論があるものの、透明性の高い比較手法として評価する声もある。</td></tr>
+<tr><td class="num">3</td><td class="title">ブラウザで動くWindows XPデスクトップ — Game BoyとiPodまで実装した個人ポートフォリオ</td><td class="link-col"><a href="https://mitchivin.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発者 Mitch Ivin が制作したポートフォリオサイトで、Windows XP のデスクトップ UI をブラウザ上に再現し、動作する Game Boy エミュレータと iPod プレーヤーを組み込んでいる。ウィンドウの最小化・最大化・ドラッグ操作など細部にまでこだわって実装されており、HN コミュニティで高い評価を集めている。ポートフォリオの表現手法としてユニークなアプローチとして話題となっており、懐かしい UI と現代の Web 技術の組み合わせが楽しめる。</td></tr>
+<tr><td class="num">4</td><td class="title">英国内務省が7500万ポンドの警察向けAIプログラム「PoliceAI」を発足</td><td class="link-col"><a href="https://www.publictechnology.net/2026/06/15/public-order-justice-and-rights/home-office-launches-75m-policeai-to-capitalise-on-artificial-intelligence/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">英国内務省が 7500 万ポンド（約 150 億円）規模の「PoliceAI」プログラムを立ち上げ、警察業務への AI 活用を本格化させると発表した。犯罪予測・顔認識・証拠分析などの分野での活用が想定されており、英国内の複数の警察機関が参加する予定。市民団体からはプライバシーや偏見を生むアルゴリズムに関する懸念が示されており、EU AI 規制とは異なる英国独自の規制アプローチのあり方が問われている。</td></tr>
+<tr><td class="num">5</td><td class="title">Ask HN: 将来に対して楽観的な人はいますか？</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=48611988" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI・政治・気候変動などの問題が重なる現在、未来を楽観的に捉えている人がいるかを問うた HN のディスカッション投稿。テクノロジーの進歩や人類が過去の困難を乗り越えてきた歴史を根拠とする楽観論と、社会の分断や環境問題の深刻化を挙げる悲観論が混在し、39 件のコメントが集まっている。技術者コミュニティの現在の気分や価値観を反映した議論として読み応えがある。</td></tr>
+<tr><td class="num">6</td><td class="title">TrumpがG7後にAnthropicは国家安全保障上の脅威でないと発言、態度を軟化</td><td class="link-col"><a href="https://thenextweb.com/news/trump-anthropic-not-national-security-threat-axios-interview" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">トランプ大統領が G7 会合後のインタビューで、AI 企業 Anthropic をもはや国家安全保障上の脅威とは見ていないと述べた。以前は中国への技術流出などを懸念する文脈でAI企業への規制強化を示唆する発言もあったが、今回の発言は明確な態度軟化を示している。米国産の AI 企業であるAnthropicへの規制論議の背景には、国内 AI 産業の保護と安全保障のバランスをめぐる政治的考慮があったとみられ、今後の AI 政策方針が引き続き注目される。</td></tr>
+<tr><td class="num">7</td><td class="title">Linux 7.2で`strncpy` APIが6年・360パッチを経てカーネルから削除</td><td class="link-col"><a href="https://www.phoronix.com/news/Linux-7.2-Drops-strncpy" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Linux カーネルのバージョン 7.2 において、長年セキュリティ上の問題を抱えてきた `strncpy` 関数の API がついに削除された。6 年間にわたる移行作業と 360 個のパッチによる段階的な廃止プロセスを経て実現しており、カーネル開発における大規模な安全性改善の成果となる。`strncpy` は null 終端の扱いが直感に反する挙動を持ち、バッファオーバーリードや脆弱性の原因になりやすいとされており、より安全な `strscpy` などへの移行が進んでいる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AI生成文章の「AI臭」を消すClaude Skillsを作った（stop-ai-slop-jp）</td><td class="link-col"><a href="https://zenn.dev/genshi_ai/articles/88f62861a953c1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI が生成するテキストに特有の「AI 臭」（過度な丁寧さ・冗長な箇条書き・定型フレーズ）を取り除くための Claude Code Skill を実装した事例。スキル設計のプロンプトや動作確認方法が共有されており、AI 生成コンテンツの品質を安定して向上させる実践的なアプローチとなっている。Claude Skillsというカスタム指示機能を活用し、出力スタイルを人間らしくコントロールする工夫が解説されており、AI 生成物の品質管理に課題を感じるエンジニアや編集者に参考になる内容だ。</td></tr>
+<tr><td class="num">2</td><td class="title">会社員のためのCodex資料作成術 — Skillで統一感のあるプレゼン資料を作る実践ガイド</td><td class="link-col"><a href="https://zenn.dev/acntechjp/articles/c2bff25e230539" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI Codex を使って会社業務向けのプレゼン資料を効率よく作成するための実践ガイド。独自スキルの設計によって、スライドのデザインや文章スタイルを統一した資料を繰り返し生成できる手法を解説している。プロンプト設計のコツや出力品質を安定させるためのノウハウが具体例とともに紹介されており、AI 活用が進む職場環境で即戦力になる実務スキルとして役立つ内容だ。</td></tr>
+<tr><td class="num">3</td><td class="title">AWSに繋げなくてもローカルでテストできる新サービス「AWS Blocks」を触ってみた</td><td class="link-col"><a href="https://zenn.dev/aws_japan/articles/aws-blocks-ai-agent-intro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS が発表した新サービス「AWS Blocks」の実際の使い勝手をレポートした記事。AWS 環境への実際の接続なしにAIエージェントのフローをローカルでテスト・検証できる点が特徴とされており、開発初期の試行錯誤を効率化できる可能性がある。具体的な操作手順やスクリーンショットを交えながら Amplify・App Studio との違いも解説しており、開発サイクルの短縮とコスト削減を目指した AWS の新アプローチとして注目されている。</td></tr>
+<tr><td class="num">4</td><td class="title">自己改善エージェントはなぜ前提を覆せないのか — 局所最適とハーネスでの脱出</td><td class="link-col"><a href="https://zenn.dev/layerx/articles/b36ceffe6b5e20" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自律的に自己改善を繰り返す AI エージェントが、最初に設定された前提の枠を超えられず局所最適に陥りやすい問題を分析した技術考察。エージェントが「自分のやり方を疑う」ことの難しさと、そこから脱出するためのハーネス（制御・評価層）設計の重要性について論じている。外部からの制約注入や多様な評価指標の組み合わせによって突破を試みる手法が提案されており、エージェント設計の実践的課題に切り込んだ内容として高い評価を得ている。</td></tr>
+<tr><td class="num">5</td><td class="title">デザインシステムへのAI活用精度が上がった8つの方法</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/7a7db5c105f396" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI を活用したデザインシステム構築の精度を向上させるために実際に効果があった 8 つの手法を紹介した記事。プロンプト設計・スキルの粒度調整・コンテキストの与え方など具体的な改善ポイントが体系的にまとめられており、実際のデザインシステムへの適用事例を交えた説明で現場で使えるノウハウとして読める。デザインと AI の組み合わせに取り組むフロントエンドエンジニアやデザイナーに参考になる内容だ。</td></tr>
+<tr><td class="num">6</td><td class="title">リファクタリングにドメイン知識が要るなら、その知識はどこに置くのか</td><td class="link-col"><a href="https://zenn.dev/417/articles/ai-era-domain-knowledge-placement" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントにコードのリファクタリングを任せる際、業務ルールや背景知識が必要になる場面での知識管理の問題を論じた記事。コードコメント・ドキュメント・テスト・CLAUDE.md など候補となる置き場所それぞれのメリット・デメリットを比較検討している。AI 時代においてドメイン知識の「置き場所」はコードの読みやすさだけでなくエージェントへのアクセスしやすさも考慮が必要と指摘しており、チームでの AI 活用を進めるエンジニアに重要な論点を提示している。</td></tr>
+<tr><td class="num">7</td><td class="title">AI時代に改めて押さえておきたいソフトウェア工学のベストプラクティス</td><td class="link-col"><a href="https://zenn.dev/zapabob/articles/software-engineering-best-practices-agent-era" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントが開発作業に参加するようになった現代において、重要性を増しているソフトウェア工学の基本原則をまとめた記事。疎結合・高凝集・単一責任原則といった設計原則が、人間だけでなく AI エージェントにも理解しやすいコードを書くうえで有効であることを示している。「今だから」という視点で設計原則を再評価することを促す内容で、エージェント主導の開発に移行する際のコードベース整備の参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ベテランさんが教えてくれない「クリーンアーキテクチャー」を小学生でもわかるように解説</td><td class="link-col"><a href="https://qiita.com/Hashimoto-Noriaki/items/f451a4ecb49a9476f09b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クリーンアーキテクチャの概念を平易な言葉で解説した入門記事。依存性の逆転やレイヤー分離といった抽象的な概念を具体的な例で説明しており、初学者がつまずきやすいポイントを丁寧に解消している。Rails などの Web フレームワークとの関係性や実際のコードへの適用方法にも触れており、AI 駆動開発が普及する中で設計の重要性が増している背景とともに読み直す価値がある内容だ。</td></tr>
+<tr><td class="num">2</td><td class="title">AIに「図を描いて」と頼んでも使えない図しか出てこない問題を、draw.io生成スキルで解決した</td><td class="link-col"><a href="https://qiita.com/enomoso_pm/items/68d1a29728e5ee339779" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI に依頼した際に生成される図が「それらしく見えるが実際には使えない」という問題に対し、draw.io を使った図生成専用の AI スキルを構築することで解決した事例を紹介。XML ベースの draw.io 形式を直接生成させることで品質と再現性を確保するアプローチで、プロンプト設計の工夫や生成精度向上のテクニックが具体的に示されている。プロジェクト管理・要件定義の現場で図の作成を頻繁に行うエンジニアや PM に参考になる実践的な内容だ。</td></tr>
+<tr><td class="num">3</td><td class="title">プログラミングでよく使う記号24個の読み方まとめ —</td><td class="link-col"><a href="https://qiita.com/tomoki-miso/items/690bf3299706d40d4532" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">! ~ ` ^ * \ など</td></tr>
+<tr><td class="num">4</td><td class="title">Copilot Coworkが一般公開されたが従量課金制でコスト増になってしまった話</td><td class="link-col"><a href="https://qiita.com/Oyu3m/items/473ff0aacea13ad2fdd3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Microsoft が Copilot Cowork を一般公開したが、価格モデルが従量課金制となっており、使い方によっては以前よりもコストが高くなるケースがあることを実体験をもとに紹介した記事。実際の利用シナリオに沿って費用を試算しており、どのような使い方をすれば費用対効果が出るかについて具体的な考察が含まれている。Microsoft 365 を既に導入している組織にとって追加コストの判断材料になる内容で、導入検討前に読んでおくと良い比較資料だ。</td></tr>
+<tr><td class="num">5</td><td class="title">AWS Summit New York 2026 での新発表まとめメモ — BedrockAgentCoreを中心に</td><td class="link-col"><a href="https://qiita.com/hayao_k/items/44b25e2a51d12482a308" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS Summit New York 2026 で発表された内容を速報的にまとめたメモ記事。Amazon Bedrock の AgentCore 機能を中心に AI エージェント関連の新サービス・機能が多数発表されており、クラウドと AI エージェントの統合が AWS の主要テーマとなっていることが分かる。AWS 環境でのエージェント開発を検討しているエンジニアにとって、今後のサービス展開の方向性を把握するうえで有益な情報が含まれている。</td></tr>
+<tr><td class="num">6</td><td class="title">グランメゾン東京に例えてMicrosoftの社長が語るAI戦略を完全理解した件</td><td class="link-col"><a href="https://qiita.com/kaichan_dot/items/12851eddd7dd3de02bf7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ドラマ「グランメゾン東京」のレストラン経営に例えながら、Microsoft の AI 戦略とビジョンを解説したユニークな記事。技術用語を料理や厨房の概念に置き換えることで、非技術者にも伝わる言葉で Microsoft の AI・クラウド戦略の核心を説明している。エンジニアのキャリアや技術選択に示唆を与える視点も含まれており、堅い技術論を楽しく読み解くエントリーとして好評を得ている。</td></tr>
+<tr><td class="num">7</td><td class="title">「テスト対象がない」をAIで解決した — QAエンジニアがPlaywright・APIテスト・CI/CDを学ぶまで</td><td class="link-col"><a href="https://qiita.com/kenji-m/items/e5afce6610de40734443" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスト対象アプリが手元にない状況からスタートし、AI を活用して Playwright による UI テスト・API テスト・CI/CD パイプラインの整備を独学で達成した QA エンジニアの実践記録。AI がコード生成だけでなく学習環境の構築や課題設定にも活用できることを実証しており、実際のコードや設定ファイルも共有されているため再現しやすい。テスト自動化に取り組み始めたいエンジニアの出発点として役立つ内容だ。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-21 06:36 JST
+</footer>
+</div>
+</body>
+</html>
