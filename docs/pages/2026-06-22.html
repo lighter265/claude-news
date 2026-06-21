@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-22</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-22</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AI エージェントと協働できるオープンソース動画エディター「Palmier Pro」</td><td class="link-col"><a href="https://github.com/palmier-io/palmier-pro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">macOS 26 (Tahoe) + Apple Silicon 専用で開発された Swift ネイティブの動画エディター。AIエージェントがタイムライン上で動画の生成・編集を行える設計で、Seedance や Kling などの最新生成AIモデルを内蔵している。最終目標は Premiere Pro に相当するプロ仕様の機能を持ちながら、AI との協働ワークフローを自然に統合することとしている。</td></tr>
+<tr><td class="num">2</td><td class="title">12パイプライン・500以上のスキルを持つエージェント型動画制作システム「OpenMontage」</td><td class="link-col"><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングアシスタントを本格的な動画制作スタジオへ変換することを目指す、世界初のオープンソースエージェント動画制作システム。12 のパイプライン、52 のツール、500 以上のエージェントスキルを備え、自然言語で指示するだけでエージェントが動画制作を完結させる。既存の AI コーディング環境にそのまま導入できる点が特徴。</td></tr>
+<tr><td class="num">3</td><td class="title">Rust 製・SQLite 互換のインプロセス SQL データベース「Turso」</td><td class="link-col"><a href="https://github.com/tursodatabase/turso" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SQLite の SQL 方言・ファイルフォーマット・C API と互換性を持ちながら Rust で書き直したインプロセスデータベース。BEGIN CONCURRENT によるマルチライタートランザクションなど SQLite にない機能の追加を計画している。現在はベータ段階のため本番データの扱いには注意が必要。</td></tr>
+<tr><td class="num">4</td><td class="title">コードベースを知識グラフ化する高速 MCP サーバー「codebase-memory-mcp」</td><td class="link-col"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェント向けのコードインテリジェンス MCP サーバーで、リポジトリ全体を永続的な知識グラフにインデックス化する。平均的なリポジトリをミリ秒でインデックス化し、Linux カーネル（2800万行・7万5千ファイル）でも約3分で完了する。158言語に対応し、クエリ応答はサブミリ秒、LLM に送るトークンを最大99%削減できる。単一の静的バイナリで依存関係なしに動作する点も特徴。</td></tr>
+<tr><td class="num">5</td><td class="title">Google Research による時系列予測基盤モデル「TimesFM」</td><td class="link-col"><a href="https://github.com/google-research/timesfm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ICML 2024 で発表された、デコーダーのみを使う時系列予測向け事前学習済み基盤モデル。BigQuery ML や Vertex AI Forecast など複数の Google 製品に組み込まれており、汎用的な時系列予測が可能。Hugging Face にチェックポイントが公開されており、研究・商用利用に幅広く活用できる。</td></tr>
+<tr><td class="num">6</td><td class="title">ツール出力を60〜95%圧縮してトークンを節約する「headroom」</td><td class="link-col"><a href="https://github.com/chopratejas/headroom" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ログ・ファイル・RAGチャンクなどをLLMに渡す前に自動圧縮し、トークン消費量を60〜95%削減しながら回答精度を維持するツール。ライブラリ・プロキシ・MCPサーバーの3形態で提供されており、既存のLLMワークフローに組み込みやすい。コンテキストウィンドウのコスト削減と速度向上が主なメリット。</td></tr>
+<tr><td class="num">7</td><td class="title">ウェブページをワンコマンドでデスクトップアプリ化する「Pake」</td><td class="link-col"><a href="https://github.com/tw93/Pake" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rust + Tauri を使い、任意のウェブページを macOS・Windows・Linux のネイティブアプリへ変換するツール。Electron パッケージの約20分の1のサイズ（約5MB）と低いメモリ使用量が特徴で、CLI または Web ビルドでワンコマンドでパッケージ化できる。ショートカットキーや没入モードなど豊富な機能も備える。</td></tr>
+<tr><td class="num">8</td><td class="title">Salesforce に代わる AI 設計のオープンソース CRM「Twenty」</td><td class="link-col"><a href="https://github.com/twentyhq/twenty" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">技術チームが独自 CRM を構築するためのビルディングブロックとして設計されたオープンソース CRM プラットフォーム。コードベースと同様にビルド・シップ・バージョン管理できる設計思想が特徴で、複雑なビジネス要件に柔軟に対応できる。クラウドでの即時利用とセルフホスティングの両方をサポートしている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">個人サイト向け JSON-LD の使い方をわかりやすく解説</td><td class="link-col"><a href="https://hawksley.dev/blog/json-ld-explained-for-personal-websites/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">構造化データマークアップとして使われる JSON-LD を個人ウェブサイトの文脈で丁寧に説明した記事。検索エンジンがページ内容をより正確に理解できるようになるメリットや、具体的な記述方法を解説している。スコア100・コメント24件と技術者コミュニティで高い注目を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">「Yes をもらいに行くな、No をもらいに行け」—承認より却下を求める意思決定術</td><td class="link-col"><a href="https://www.mooreds.com/wordpress/archives/3518" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">物事の可否を確認する際、「これをしていいですか？」と Yes を求める代わりに「これをしてはダメですか？」と No を求めることで、合意形成がスムーズになるという2022年の考察。デフォルトを「実行」に置くことで意思決定のフリクションを下げる発想で、組織内の承認フローの見直しにもつながる視点を提供している。</td></tr>
+<tr><td class="num">3</td><td class="title">高収入でも「足りない」と感じる理由——お金と幸福の心理</td><td class="link-col"><a href="https://yourbrainonmoney.substack.com/p/i-make-good-money-why-do-i-still" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">収入が増えても満足感が得られない「もっと欲しい」という感情の正体を行動経済学・心理学の観点から掘り下げた記事。生活水準が収入に合わせて上昇する「ライフスタイルインフレーション」や比較による相対的欠乏感など、経済的充足と主観的幸福度がずれるメカニズムを解説している。</td></tr>
+<tr><td class="num">4</td><td class="title">Nix がリロケータブルバイナリをサポートすべき理由</td><td class="link-col"><a href="https://fzakaria.com/2026/06/21/nix-needs-relocatable-binaries" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Nix の最大の課題のひとつとして、パスがハードコードされたバイナリの移植性の低さを指摘した技術考察。リロケータブルバイナリが普及すれば Nix ストアの外へのデプロイや配布が大幅に容易になると論じており、実現に向けた技術的アプローチも紹介している。</td></tr>
+<tr><td class="num">5</td><td class="title">お気に入りの OSS プロジェクトにトークンを送れるプラットフォーム「CleverCrow」</td><td class="link-col"><a href="https://clevercrow.io" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発者が使っているオープンソースプロジェクトへトークン（資金）を直接贈れる仕組みを提供するサービス。個人開発者や小規模プロジェクトへの支援手段を簡略化し、OSS エコシステムへの経済的還元をより手軽にすることを目指している。スコア19・コメント20件と活発な議論を呼んだ。</td></tr>
+<tr><td class="num">6</td><td class="title">NSA 長官：「Mythos は数時間でほぼ全機密システムに侵入した」</td><td class="link-col"><a href="https://bankwatch.ca/2026/06/21/nsa-chief-says-mythos-breached-almost-all-classified-systems-in-hours/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NSA 長官が、「Mythos」と呼ばれる攻撃者がわずか数時間でほぼすべての機密システムへの侵入に成功したと証言したとする報告。AIを活用したサイバー攻撃の高速化・高度化を示唆する事例として注目されており、国家レベルの重要インフラのセキュリティに対する問題提起として受け取られている。</td></tr>
+<tr><td class="num">7</td><td class="title">AI が病院を席巻しつつある——医療現場のウーバー的変革</td><td class="link-col"><a href="https://www.theatlantic.com/health/2026/06/ai-healthcare-uber-moment/687567/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">診断支援から業務効率化まで AI の医療現場への導入が急速に進んでいる状況を、Uber が交通業界を変えたように医療業界を変えようとしているという視点で分析した The Atlantic の記事。AI ツールの精度向上と普及が患者ケアの質や医師の役割にどう影響するかを論じている。</td></tr>
+<tr><td class="num">8</td><td class="title">現在の AI ブームは「高額補助金で成り立つ特殊な時代」という指摘</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=48622280" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">現在の AI サービスの多くは実際のコストを大幅に下回る価格で提供されており、巨大な補助金によって支えられているという視点からの考察。この状況が永続しないとすれば、いずれ価格が現実に近づき、ユーザーや企業は大きな変化に直面するという警告を含んでいる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AWSに接続せずにテストできる新サービス「AWS Blocks」を試してみた</td><td class="link-col"><a href="https://zenn.dev/aws_japan/articles/aws-blocks-ai-agent-intro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSリソースへの実接続なしにAIエージェントのテストができる新サービス「AWS Blocks」を紹介した記事。AIエージェント開発の試行錯誤フェーズにおけるコスト削減と安全性向上を目的として設計されており、Amplify・App Studioとの違いや用途の棲み分けも整理されている。ローカルあるいはモック環境に近い形でAWSサービスを扱えるアプローチとして注目されている。</td></tr>
+<tr><td class="num">2</td><td class="title">AI時代の受託システム開発はどう変わるか——2026年6月時点の考察</td><td class="link-col"><a href="https://zenn.dev/terurou/articles/eb9e7a4ca7b364" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールが普及した現在、受託開発の現場で起きている変化と今後の方向性を論じた記事。工数見積もり・品質基準・顧客との合意形成など、従来型の受託開発モデルがAI活用によってどう再定義されるかを丁寧に検討している。2026年6月時点のリアルな実態に基づいた実践的な考察として多くの反響を集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">リファクタリングに必要なドメイン知識はどこに置くべきか</td><td class="link-col"><a href="https://zenn.dev/417/articles/ai-era-domain-knowledge-placement" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIがコードのリファクタリングを行う際、ドメイン固有の知識が不可欠であるにもかかわらず、その知識がどこにも明示されていないという問題を取り上げた記事。ドキュメント・コメント・テスト・型定義など複数の候補を検討しながら、AIと人間が協働しやすい形で知識を管理する方法を論じている。</td></tr>
+<tr><td class="num">4</td><td class="title">AIエージェント時代に活きるデザインシステムのスキル精度を高める8つの方法</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/7a7db5c105f396" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが関与するデザインワークフローにおいて、デザインシステムのスキル（コンポーネント・トークン・ガイドライン）の精度を高めるための実践的な8つのアプローチを解説した記事。AIへの指示精度を上げるためにデザインシステムをどう整備すべきかという観点から、具体的な改善手法が紹介されている。</td></tr>
+<tr><td class="num">5</td><td class="title">AIエージェント時代に改めて押さえたいソフトウェア工学のベストプラクティス</td><td class="link-col"><a href="https://zenn.dev/zapabob/articles/software-engineering-best-practices-agent-era" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェントが普及した現在においても変わらず重要なソフトウェア工学の原則——設計・テスト・モジュール化・命名など——を整理した記事。エージェントに任せるほど、人間側の設計力や仕様の明確さがアウトプット品質に直結するという観点から、基礎知識の重要性を再確認させてくれる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">Apple container で docker compose を動かす方法</td><td class="link-col"><a href="https://zenn.dev/7kaji/articles/370a8dd7f678d1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Apple が提供する軽量コンテナ環境上で docker compose を動作させる手順を解説した技術記事。従来の Docker Desktop との違いや、Apple container の特性（systemd 非搭載・起動速度など）を踏まえた上でのセットアップ方法が丁寧にまとめられており、Apple Silicon 環境でのコンテナ開発移行の参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">LLM はマークダウンファイル全体を読んでいる——その必要はない</td><td class="link-col"><a href="https://zenn.dev/oubakiou/articles/b9db61885cd7be" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">LLMがMarkdownファイルを処理する際、ファイル全体を読み込む必要がない場合でも全体を渡してしまっているケースが多いという問題を指摘した記事。必要な部分だけを抽出してLLMに渡すアプローチを紹介しており、トークン効率の改善とレスポンス精度の向上につながる実践的な知見。</td></tr>
+<tr><td class="num">8</td><td class="title">プログラミング経験者が初めてWebアプリを作る前に知っておきたい基礎知識</td><td class="link-col"><a href="https://zenn.dev/kojikojiprg/articles/a89ecbe73be743" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">スクリプト言語やCLIには慣れているがWebアプリ開発は初めて、という層を対象にした入門解説。HTTPリクエスト・レスポンス・セッション・認証・フロント/バックの分離など、Webアプリ特有の概念を体系的に整理しており、既存知識との接続を意識した丁寧な説明が特徴。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">小学生でもわかる「クリーンアーキテクチャー」——ベテランが教えてくれない設計の本質</td><td class="link-col"><a href="https://qiita.com/Hashimoto-Noriaki/items/f451a4ecb49a9476f09b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クリーンアーキテクチャーの概念を、難解な抽象論を排してわかりやすい言葉で解説した記事。依存関係のルールやレイヤー分離の意図を具体例とともに説明しており、AI駆動開発の文脈でも設計原則の重要性を改めて問い直す内容となっている。スコア101と高い支持を得た人気記事。</td></tr>
+<tr><td class="num">2</td><td class="title">入門から実践——「ループエンジニアリング」でAIエージェントを自動で回す設計へ</td><td class="link-col"><a href="https://qiita.com/Syoitu/items/97ed37e7ba9c38dc75d8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">1回ずつプロンプトを書く作業から脱却し、AIエージェントが自動で繰り返し実行するループを設計・構築するアプローチを紹介した記事。Claude Code や Mastra・AgentCore などのツールを活用した実践的な実装例が含まれており、エージェントワークフローの自動化を目指す開発者に参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">Copilot Cowork が一般公開——従量課金で「こわーく」なった話</td><td class="link-col"><a href="https://qiita.com/Oyu3m/items/473ff0aacea13ad2fdd3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Copilot の新機能「Copilot Cowork」が一般公開されたものの、従量課金制の料金体系が明らかになり、ユーザーの間で不安や驚きが広がったことをまとめた記事。使えば使うほどコストが増加する仕組みを実際の利用シーンに当てはめて検証しており、企業導入時の費用試算の参考になる。スコア40と大きな注目を集めた。</td></tr>
+<tr><td class="num">4</td><td class="title">テスト対象がない環境でAIを活用してPlaywright・APIテスト・CI/CDを学んだ話</td><td class="link-col"><a href="https://qiita.com/kenji-m/items/e5afce6610de40734443" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスト対象のアプリすら存在しない状況から、AIを使ってPlaywrightによるE2Eテスト・APIテスト・CI/CD環境を構築した QAエンジニアの実践記録。ゼロからテスト基盤を立ち上げた具体的なプロセスが詳述されており、AI活用による学習加速の事例として参考になる。</td></tr>
+<tr><td class="num">5</td><td class="title">AIエージェント「Codex」で商業書籍の執筆・出版を爆速化するノウハウ</td><td class="link-col"><a href="https://qiita.com/minorun365/items/9059f26629e0976bc0e2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI の Codex を使って商業書籍の執筆・編集プロセスを大幅に短縮するための具体的な手法をまとめた記事。アウトライン生成から文章の推敲・校正まで、実際の出版ワークフローにAIエージェントを組み込む方法が紹介されており、Claude Code との組み合わせ活用例も含まれている。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Code でチーム開発ルールを「覚えるもの」から「自動で守るもの」へ</td><td class="link-col"><a href="https://qiita.com/rairaii/items/a1b622ff1faf4ca34231" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CLAUDE.md や hooks の仕組みを活用して、チーム開発のルール・規約をAIエージェントが自動的に遵守する仕組みの構築方法を解説した記事。コードレビュー基準やコミットルールなどを設定として定義しておくことで、メンバー個人の習熟度に依存せずルールを一貫して適用できるアプローチが紹介されている。</td></tr>
+<tr><td class="num">7</td><td class="title">Mermaid の雑な図を draw.io の綺麗な図解に変換する方法【アップデート版】</td><td class="link-col"><a href="https://qiita.com/ktdatascience/items/735ebfa8504fc658c812" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エンジニアが素早く書いた Mermaid 記法の図を、AIを使って draw.io の見栄えのよいダイアグラムへ変換する手法を紹介したアップデート版記事。以前のバージョンからの改善点や新たな変換精度の向上ポイントも解説されており、ドキュメント整備の効率化に役立つ実践的な内容。</td></tr>
+<tr><td class="num">8</td><td class="title">Ollamaで月額0円のローカルLLM環境を構築する</td><td class="link-col"><a href="https://qiita.com/Hinata-H/items/ff98d92ca5eafee31226" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">macOS 上で Ollama を使い、クラウドAPIへの依存なしに LLM をローカル実行する環境の構築手順をまとめた記事。モデルのダウンロードから実際の動作確認まで、初心者でも再現できるようにステップを丁寧に説明している。コスト削減・プライバシー確保の観点から個人利用・検証用途に適した選択肢を紹介している。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-22 06:34 JST
+</footer>
+</div>
+</body>
+</html>
