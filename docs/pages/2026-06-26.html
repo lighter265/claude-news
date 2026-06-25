@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-26</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-26</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AppleがSwift製のMac向けLinuxコンテナツールを公式公開</td><td class="link-col"><a href="https://github.com/apple/container" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Appleが公開したMac向けLinuxコンテナ実行ツール。Lightweight VMを活用してOCI互換のコンテナイメージをそのまま動かせる設計で、完全なVMより軽量・高速に起動できる。Apple Siliconに最適化されており、標準レジストリからのpull/runに対応しているため、既存のコンテナワークフローをMacに持ち込みやすい。Mac上でのLinux開発環境を公式ツールで構築したい開発者にとって注目の一手となる。</td></tr>
+<tr><td class="num">2</td><td class="title">AIエージェントにデザインシステムを伝えるフォーマット「DESIGN.md」をGoogle Labsが提案</td><td class="link-col"><a href="https://github.com/google-labs-code/design.md" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">YAMLフロントマターで機械可読なデザイントークン（色・フォント・スペーシング等）を定義し、Markdownの本文でデザイン意図を記述するフォーマット仕様。AIコーディングエージェントがビジュアルアイデンティティを一貫した形で理解したままコンポーネントを実装できるようにすることを目的としている。CLAUDE.mdと同様の「エージェントへの指示ファイル」として機能する発想で、フロントエンド開発におけるAIエージェント活用の課題に対する一つのアプローチとして注目されている。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Code向けエージェントチームを自動設計するメタスキル「Harness」</td><td class="link-col"><a href="https://github.com/revfactory/harness" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「build a harness for this project」などと自然言語で指示するだけで、プロジェクトのドメインに合わせた専門エージェントチームとそのスキルを自動生成するClaude Codeプラグイン。6種類の事前定義済みチームアーキテクチャパターンから最適なものを選び、各エージェントの役割とスキルを組み立てる「チームアーキテクチャファクトリー」として機能する。英語・日本語・韓国語に対応しており、複雑なマルチエージェント構成を手軽に立ち上げたい開発者向けのツールとして関心を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">複数のAIコーディングエージェントを並列管理するオーケストレーター「Orca」</td><td class="link-col"><a href="https://github.com/stablyai/orca" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Codex・Claude Code・OpenCode・Piなどの異なるAIコーディングエージェントを同時並列実行し、一か所で進捗を管理できるデスクトップ・モバイルアプリ。各エージェントは独立したworktreeで動作し、スマートフォンから進捗確認やフォローアップ指示を出すことも可能。複数の並行タスクを抱えるエンジニアの開発スループットを引き上げる「100xビルダー」向けツールとして設計されている。</td></tr>
+<tr><td class="num">5</td><td class="title">使うほど賢くなる自己改善型AIエージェント「Hermes Agent」</td><td class="link-col"><a href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Nous Researchが開発した、使用を重ねるごとにスキルを習得・改善し続ける自律エージェント。経験からスキルを生成し、過去の会話を検索し、ユーザーへの理解を深め続ける「学習ループ」を内蔵している点が最大の特徴。$5/月のVPSからGPUクラスター・アイドル時コストほぼゼロのサーバーレス環境まで幅広いインフラで動作し、特定のLLMサービスに依存しない設計となっている。長期的な個人アシスタントとして育てるコンセプトのエージェントとして注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">AI検証パイプラインを通過した後だけpushを許可するgitプロキシ「no-mistakes」</td><td class="link-col"><a href="https://github.com/kunchenguid/no-mistakes" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">`git push no-mistakes`コマンドで、実際のリモートへpushする前に使い捨てworktreeでAI駆動の検証パイプラインを実行し、全チェック通過後のみ自動でPRを作成・転送するツール。非ブロッキングで動作するため手元の作業を中断することなく検証が進み、Claude・Codex・Geminiなど任意のAIエージェントと組み合わせて使用できるエージェント非依存設計。AI生成コードを安全にリリースするための仕組みとして興味深いアプローチをとっている。</td></tr>
+<tr><td class="num">7</td><td class="title">履歴書PDFをGitHubシグナルで補完し公平に評価するAI採用エージェント</td><td class="link-col"><a href="https://github.com/interviewstreet/hiring-agent" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">応募者の履歴書PDFをMarkdownに変換し、LLMで構造化データを抽出後、GitHubのリポジトリ・コントリビューション情報で補完したうえで説明可能なスコアを出力するOSSの採用エージェント。ローカルLLM（Ollama）からクラウドAPIまで幅広いモデルに対応し、設定次第でさまざまな評価基準を適用できる。採用プロセスへのAI活用において透明性と公平性を重視した設計となっており、採用業務の効率化と客観性向上の両立を目指す取り組みとして注目される。</td></tr>
+<tr><td class="num">8</td><td class="title">1コマンドで任意のサイトをNext.jsとして複製するAIテンプレート</td><td class="link-col"><a href="https://github.com/JCodesMore/ai-website-cloner-template" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">URLを指定して`/clone-website`を実行するだけで、AIエージェントが対象サイトのデザイントークン・アセットを解析し、コンポーネント仕様を記述して並列ビルダーで全セクションを再構築するNext.jsプロジェクトを生成するテンプレート。Claude Code（Opus 4.7推奨）をはじめとする各種AIコーディングエージェントに対応しており、既存サイトのリデザイン・競合調査・UIプロトタイプ作成などに活用できる。大規模なAI並列コード生成タスクのアーキテクチャ参考事例としても興味深い構成をとっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">テクノロジーメディアの先駆的ライター・Om Malikの訃報</td><td class="link-col"><a href="https://om.co/2026/06/24/1966-2026/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GigaOmの創設者として2000年代のスタートアップ・ブロードバンド時代を取材し続け、テック業界に大きな影響を残したOm Malikの死去を伝える追悼記事。個人ブログ時代からテクノロジージャーナリズムの形を切り拓いた人物として知られており、Hacker News上で最高スコアを獲得しコミュニティから多くの追悼コメントが寄せられた。</td></tr>
+<tr><td class="num">2</td><td class="title">米政府の要請でOpenAIがGPT-5.6の段階的リリースを計画</td><td class="link-col"><a href="https://velo.xyz/news/1908" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">米政府の要請を受けてOpenAIがGPT-5.6の段階的（staggered）リリースを検討しているという報道。AIモデルの急速な能力向上に対する政府の慎重姿勢が具体的な形で現れた事例として注目されており、AIガバナンスをめぐる官民交渉が製品リリースタイミングにまで影響を与え始めていることを示している。技術的詳細よりもAI政策の文脈での議論を呼んでいる。</td></tr>
+<tr><td class="num">3</td><td class="title">米当局がPolestarの2027年モデル以降の米国販売を不認可</td><td class="link-col"><a href="https://arstechnica.com/cars/2026/06/feds-deny-polestar-authorization-to-sell-cars-in-us-from-model-year-2027/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">米連邦当局がスウェーデンの電気自動車メーカーPolestarに対し、2027年モデル年以降の米国販売認可を拒否したとArs Technicaが報じた。PolestarはGeely傘下の企業であり、安全保障上の懸念や貿易政策との関連が背景にあると指摘されている。EVメーカーに対する米国の輸入規制強化の具体例として自動車・テック業界で注目されている。</td></tr>
+<tr><td class="num">4</td><td class="title">結合振動子を使った拡散モデルとは異なる新しい画像生成アプローチ「Un-0」</td><td class="link-col"><a href="https://unconv.ai/blog/introducing-un-0-generating-images-with-coupled-oscillators/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">拡散モデルとは異なる物理的アプローチとして、結合振動子（Coupled Oscillators）の数理的性質を活用した画像生成手法を紹介するブログ記事。波動方程式的な振る舞いを持つ連立微分方程式系として画像生成を定式化し、独自のアーキテクチャを構築している。主流技術とは異なる基礎原理からのアプローチとして研究的な関心を集めており、生成AI基盤技術の多様化を示す動向の一つとなっている。</td></tr>
+<tr><td class="num">5</td><td class="title">Slack・Stripe・AirbnbをほぼつぶしかけたYC初期顧客の逸話</td><td class="link-col"><a href="https://siliconopera.com/the-customer-who-almost-killed-slack-stripe-and-airbnb/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Y Combinatorのアーリースタートアップを大きく揺さぶった顧客トラブルの逸話を掘り下げた記事。初期のSaaS・プラットフォーム企業が単一の大口顧客に過度に依存することで生じるリスクと、それを乗り越えてきた企業の実例を取り上げている。スタートアップ初期段階における顧客多様化の重要性と、特定顧客への過度な依存が持つ脆弱性を改めて考えさせる内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">OpenAIがIPOを来年以降に延期する方向で検討</td><td class="link-col"><a href="https://www.nytimes.com/2026/06/25/technology/openai-ipo-artificial-intelligence.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAIが当初予定していたIPOを2027年以降に延期する方向で検討しているとNYTが報道。企業評価額の設定・組織構造の変革・規制環境の整備など複数の要因が背景にあるとされており、AI業界のリーダー企業が資本市場への参入を急がない姿勢を見せることは市場の期待値調整にも影響を与えそうだ。AI企業のIPOタイミングをめぐる判断として投資家・業界関係者から注目されている。</td></tr>
+<tr><td class="num">7</td><td class="title">子役の声をAI利用に無断提供させるHasbroのTV出演契約が問題視される</td><td class="link-col"><a href="https://www.hollywoodreporter.com/business/business-news/studio-minor-performers-surrender-voices-ai-1236630694/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Hasbroのテレビ制作契約が、子役の声優に対してAI学習・生成目的での音声利用権を事実上強制放棄させる条項を含んでいることをHollywood Reporterが報じた。保護者も内容を十分に理解しないまま署名するケースがあるとされ、エンタメ業界のAI権利問題が未成年にも及んでいる実態を浮き彫りにしている。音楽・映像業界全体でのAI利用契約の透明性をめぐる議論が改めて問われる事例となっている。</td></tr>
+<tr><td class="num">8</td><td class="title">AIが人間には発想しにくいラジオ周波数チップを設計しはじめている</td><td class="link-col"><a href="https://spectrum.ieee.org/ai-radio-chip-design" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが従来の電子回路設計の常識を超えた、人間エンジニアには思いつきにくいアーキテクチャのラジオ周波数チップを生成しているという研究をIEEE Spectrumが紹介。広大な設計探索空間を活用することで、効率・性能・サイズのトレードオフを最適化した非直感的な回路構造が生まれるとされる。AIによるハードウェア設計が実用段階に入りつつあることを示す事例として、チップ設計の将来像に関する議論を呼んでいる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Codeに「7人の意地悪なQA」を仕込んでテスト観点の漏れをなくす</td><td class="link-col"><a href="https://zenn.dev/nexta_/articles/be13a2395a5d2a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeのサブエージェントとして、それぞれ異なる視点を持つ7名の厳格なQAエンジニアを役割として定義し、テストケースを多角的にレビューさせる取り組みの事例紹介。単一のAIに任せると見落としがちなエッジケースや境界条件を「意地悪な」複数の視点から洗い出すことでカバレッジを高めるアプローチをとっている。プロンプトエンジニアリングとマルチエージェント設計を組み合わせたQA強化の実践例として、Zenn内で最高スコアを獲得している。</td></tr>
+<tr><td class="num">2</td><td class="title">標準CSSが進化し、Tailwindが不要になりつつあるという主張</td><td class="link-col"><a href="https://zenn.dev/higakijin/articles/06276828c81546" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CSSネスト・カスケードレイヤー・コンテナクエリ・`color-mix()`などモダンな標準CSS機能が整備されたことで、Tailwind CSSなしでも読みやすく保守しやすいスタイルが書けるようになったと論じた記事。特定のユーティリティフレームワークへの依存を減らせる可能性を示す内容で、フロントエンドコミュニティで賛否を含む活発な議論を呼んでいる。ブラウザサポートが現実的な水準に達した今、スタイリング手法を再考する機会として示唆に富む内容となっている。</td></tr>
+<tr><td class="num">3</td><td class="title">個人プロンプト術からチーム全体のAI駆動開発ループへ転換した実体験</td><td class="link-col"><a href="https://zenn.dev/explaza/articles/d0aeb08fcd1888" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個人がプロンプトを磨くことに注力するのをやめ、チームとして再現性のあるAI駆動開発ループを設計・運用することに切り替えた実体験の記事。属人化したプロンプト資産をチームの共有資産として管理し、誰でも同じ品質でAIを活用できる仕組みを構築するアプローチが紹介されている。AIツールをチーム開発に組み込む際の組織設計・ガバナンスの観点から実践的な示唆を与える内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">Raspberry Pi + Cloudflare Tunnelで低コスト・安全な自宅Webサーバーを構築</td><td class="link-col"><a href="https://zenn.dev/xin9le/articles/1340941f739745" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Raspberry Piを自宅サーバーとして活用し、Cloudflare Tunnelを経由して外部からアクセスできるWebサーバーを安全に公開する方法の解説記事。ポート開放やDynamic DNSが不要でファイアウォール設定も最小限に抑えられるため、個人開発者や趣味のプロジェクトに最適な構成として紹介されている。Cloudflare TunnelによるゼロトラストアクセスとRaspberry Piの低消費電力を組み合わせたコスト効率の高いサーバー運用の実例として参考になる。</td></tr>
+<tr><td class="num">5</td><td class="title">「技術力が高い人」ではなく「技術を翻訳する人」というキャリアの選択</td><td class="link-col"><a href="https://zenn.dev/penginpenguin/articles/e735cf0424a186" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">深い技術的専門性を持つ「技術力が高い人」になれなかったと感じていたエンジニアが、技術と非技術者の橋渡し役という「技術翻訳者」の役割に価値を見出したキャリア体験談。コードを書く力だけがエンジニアの価値ではなく、技術的な内容をステークホルダーに伝える能力も重要なスキルであることを実例を交えて語っており、多くの読者の共感を呼んでいる。技術的な強みの多様性について考えさせてくれる記事となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Design ↔ Claude Codeを往復するデザイン・開発一体型ワークフローの実践</td><td class="link-col"><a href="https://zenn.dev/unsoluble_sugar/articles/fd73c7b67d80ce" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Designでデザインを生成しながらClaude Codeで実装を進めるという、デザインと開発を行き来するワークフローで資産ポートフォリオダッシュボードを作成した体験記。一人の開発者がデザインから実装まで高速に進める新たな開発スタイルの可能性を示す内容となっており、AIツール連携による個人開発の効率化に関心を持つエンジニアへの参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">AI時代のナレッジ管理：GoogleのOKFフレームワーク解説</td><td class="link-col"><a href="https://zenn.dev/knowledgesense/articles/14a874a9f423bb" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI時代における個人・チームのナレッジ管理手法として、Googleが実践する「OKF（Objectives, Key Facts）」フレームワークを解説した記事。情報爆発の中で何を知識として蓄積しチーム内で共有するかを構造化する考え方を紹介しており、AIツールと組み合わせた知識マネジメントの実践に役立つ視点を提供している。日々大量の情報に触れるエンジニアが「何を覚えるか」を設計する際の指針として参考になる内容となっている。</td></tr>
+<tr><td class="num">8</td><td class="title">AI時代だからこそ「コードを読む力」が重要という逆張り論</td><td class="link-col"><a href="https://zenn.dev/layerx/articles/6f510abfc3fa72" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIがコードを書く時代だからこそ、人間はコードを読む力を磨くべきだという論考。AIが生成したコードを理解・評価・修正するためには読解力が従来以上に重要になるという主張で、「AIに任せれば読まなくていい」という安易な発想に警鐘を鳴らしている。AI支援開発が普及する中での人間のコアスキルのあり方を問い直す視点として共感を集めている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Railsのコードで学ぶ計算量（Big-O）入門</td><td class="link-col"><a href="https://qiita.com/akachiryo/items/90db7bf21b6546fce911" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rubyオンレールズのコードを具体例に計算量（Big-O記法）の概念を段階的に解説した入門記事。「なんとなく速い・遅い」という感覚的な理解を言語化する手助けになることを目的としており、データ量が増えたときにどの処理がボトルネックになるかを論理的に把握するための基礎を提供している。初中級のRails開発者がアルゴリズム的な視点を持ち始めるための入り口として高いスコアを獲得した記事となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">勉強が続かないのは意志ではなく環境と仕組みの問題</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/7a69883e9e70fc5ad853" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エンジニアの学習継続が難しいのは意志の問題ではなく、環境設計や学習の仕組みの問題であるという視点から、継続のための実践的なアドバイスを提供する記事。具体的な学習習慣の設計方法や挫折しやすいポイントとその回避策が紹介されており、新人・未経験エンジニアを中心に共感を集めている。技術的な内容ではないが、エンジニアの成長に関わる普遍的なテーマとして高スコアを獲得した。</td></tr>
+<tr><td class="num">3</td><td class="title">Copilot Coworkがブラウザ操作に対応しGitHub開発フローの自動化が現実に</td><td class="link-col"><a href="https://qiita.com/Oyu3m/items/b2d530aa21b6c998370b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Copilot Appのモードとして提供される「Copilot Cowork」がブラウザ操作をサポートし、IssueからPR作成・マージまでをエージェントに任せられる機能がGAとなったことを紹介する記事。コードレビュー・ドキュメント更新・テスト実行などをブラウザ操作を含めて自律実行できるようになったことで、AI開発自動化の実用レベルが一段階引き上げられたと評価されている。Microsoft 365環境と連携したCopilotエコシステムの拡張として注目される動き。</td></tr>
+<tr><td class="num">4</td><td class="title">並列思考の分割でAIコードレビューの精度とトークン効率を同時に向上</td><td class="link-col"><a href="https://qiita.com/fwatanab/items/345691e0d2260d5f34a5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">単一のAIセッションにレビュー全体を依頼する代わりに、「バグ検出」「設計評価」「スタイル確認」などの観点ごとにAIを並列実行することで、レビュー品質とトークン効率の両方が向上したという実験報告。各専門エージェントが集中して担当観点をレビューすることで見落としが減り、コンテキストウィンドウの無駄遣いも抑えられるという結果が示されている。マルチエージェントを活用したコードレビュープロセスの設計手法として実践的な参考になる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude Code セキュリティガードレール 実装テンプレ集 — コピペで使えるsettings.jsonとhookスクリプト</td><td class="link-col"><a href="https://qiita.com/nogataka/items/bab35c7b58a664d3b8f1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeに対して許可するアクションの範囲を絞り込む`settings.json`設定例と、危険なコマンド実行をブロックするhookスクリプトのテンプレートをコピー可能な形でまとめた実用記事。AIエージェントが意図せず破壊的な操作（ファイル削除・本番環境への直接デプロイ等）を行うリスクを低減するための具体的なセキュリティ設計として、Claude Codeを業務利用するチームにとって役立つ内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">バズっている「STORMプロンプト」に欠落している重要な要素とは</td><td class="link-col"><a href="https://qiita.com/jqit_suwa/items/8168cd532e692ebcd4b0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Stanford発のSTORM論文に基づくプロンプト技法が広く紹介されているが、その多くが論文の最も重要な要素を省略しているという指摘記事。原論文に立ち返り、表面的な「STORMプロンプト」との差異と、本来の手法が何を重視しているかを解説している。プロンプトエンジニアリングにおける「孫引き劣化」の問題を具体例で示した内容として、LLM活用を正確に理解したい読者に役立つ。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Code の「待ち」時間をworktree並列開発でなくす手法</td><td class="link-col"><a href="https://qiita.com/yasuto_88/items/15f57336baed3ef64a10" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeが処理中の待機時間を有効活用するため、Gitのworktree機能を使って複数ブランチを同時に作業状態にし、並列でAI開発を進める方法を解説した記事。一つのAIエージェントが動いている間に別の機能開発を別worktreeで並行させることで開発スループットを大幅に向上できるとしており、Claude Codeの非同期的な動作特性を最大限に活かすワークフロー設計の実践例として参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">AWSの「俯瞰」構成図をClaude Codeで自動生成し見やすさを機械チェックした事例</td><td class="link-col"><a href="https://qiita.com/ntaka329/items/d457f309e33c4602a693" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS構成図のSVGをClaude Codeで自動生成し、レイアウトの見やすさを機械的に検証しながら量産する手法を紹介した記事。手動で構成図を描く手間を大幅に削減しつつ、一定品質のドキュメントを継続的に維持する仕組みを構築した実例となっている。インフラドキュメント整備にAIエージェントを活用する具体的なユースケースとして参考になる内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-26 06:36 JST
+</footer>
+</div>
+</body>
+</html>
