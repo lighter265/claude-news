@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-27</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-27</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">DESIGN.md — AIコーディングエージェントにデザインシステムを渡す仕様フォーマット</td><td class="link-col"><a href="https://github.com/google-labs-code/design.md" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google Labsが提案する、ビジュアルアイデンティティをAIコーディングエージェントに伝えるためのファイル形式。YAMLフロントマターに色・フォント・スペーシングなどの機械可読なデザイントークンを定義し、Markdownの本文でデザインの意図や根拠を補足する構成をとる。エージェントはトークンから正確な数値を参照しつつ、散文から設計の「なぜ」を把握できる。CLAUDE.mdがコーディング規約をエージェントに渡すように、DESIGN.mdはデザイン規約を永続的に伝える手段として機能することを意図している。</td></tr>
+<tr><td class="num">2</td><td class="title">OpenMontage — 自然言語で動かすオープンソース型AIビデオ制作システム</td><td class="link-col"><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングアシスタントをフル動画プロダクションスタジオに変える、オープンソースのエージェント型ビデオ制作システム。12のパイプライン、52ツール、500以上のエージェントスキルを備え、自然言語で指示を与えるだけで企画から編集まで一連の工程をエージェントが自律処理する設計となっている。Claude CodeやCursorなど主要なAIコーディングエージェントから利用でき、URLを貼り付けて希望する動画の内容を書くだけで処理が始まる。</td></tr>
+<tr><td class="num">3</td><td class="title">apple/container — Mac上でLinuxコンテナを軽量VMとして動かすApple公式CLIツール</td><td class="link-col"><a href="https://github.com/apple/container" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AppleがSwiftで開発した、Apple Silicon搭載MacでLinuxコンテナを軽量仮想マシンとして実行するCLIツール。OCI互換のコンテナイメージをそのまま扱えるため、標準的なコンテナレジストリからのpull/pushが可能で、既存のコンテナワークフローをMacに持ち込みやすい。フルVMより軽量・高速に起動できる設計で、Mac上でのLinux開発環境にApple公式の選択肢が加わった。</td></tr>
+<tr><td class="num">4</td><td class="title">aws/agent-toolkit-for-aws — AWSが公式提供するAIエージェント向けMCPサーバー＆ツールキット</td><td class="link-col"><a href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code、Codex、Cursor、KiroなどのAIコーディングエージェントがAWSサービスを安全に操作・デプロイできるよう、AWSが公式サポートするMCPサーバー、スキル、プラグインのコレクション。エージェントに必要な知識とガードレールをツールキット側に組み込む設計で、認証情報の扱いや権限スコープの管理にも対応している。公式Anthropicマーケットプレイスからも入手でき、AWS上でのAIエージェント活用を標準化する取り組みとして位置づけられている。</td></tr>
+<tr><td class="num">5</td><td class="title">alibaba/page-agent — ブラウザ拡張・ヘッドレス不要のJavaScript製インページGUIエージェント</td><td class="link-col"><a href="https://github.com/alibaba/page-agent" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Alibabaが公開した、Webページに直接組み込むJavaScript製GUIエージェントライブラリ。ブラウザ拡張機能、Python、ヘッドレスブラウザを一切必要とせず、ページ内のJavaScriptだけでWebインターフェースを自然言語で制御できる点が特徴。テキストベースのDOM操作を採用しており軽量で統合しやすく、既存のWebアプリにエージェント機能を後付けする際の選択肢となりうる。</td></tr>
+<tr><td class="num">6</td><td class="title">gstack — Garry TanのClaude Codeセットアップ：6役割23ツールを公開</td><td class="link-col"><a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Y Combinatorを率いるGarry Tanが実際に使用するClaude Codeのセットアップ「gstack」をオープンソースとして公開。CEO・デザイナー・エンジニアマネージャー・リリースマネージャー・ドキュメントエンジニア・QAの6役割に対応した計23のツールで構成されている。「2025年12月以降ほぼコードを書いていない」と述べたAndrej Karpathyの発言をきっかけに、1人の開発者がチーム20人分の速度で出荷する方法論を具体的に示すプロジェクトとして公開された。</td></tr>
+<tr><td class="num">7</td><td class="title">MinerU — PDF・Officeドキュメントを高精度でMarkdown/JSONに変換するLLM向けパースエンジン</td><td class="link-col"><a href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PDF、DOCX、PPTX、XLSX、画像、Webページなど多様な形式をLLM・RAG・Agentワークフロー向けの構造化Markdown/JSONに変換するオープンソースの文書解析エンジン。インストール不要のWebバージョン、フル機能のデスクトップクライアント、即時利用できるAPIの3形態で提供されており、環境に応じて使い分けられる設計となっている。Agentic workflowへのドキュメント取り込み前処理ツールとして主に活用されることを想定している。</td></tr>
+<tr><td class="num">8</td><td class="title">Anthropic-Cybersecurity-Skills — AIエージェント向け817件のサイバーセキュリティスキルライブラリ</td><td class="link-col"><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code、GitHub Copilot、Codex CLI、Cursor、Gemini CLIなど20以上のプラットフォームで動作する、817件のプロダクショングレードサイバーセキュリティスキルをまとめたOSSライブラリ。MITRE ATT&amp;CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF、MITRE F3という6フレームワークにマッピングされ、29のセキュリティドメインをカバーする。Apache 2.0ライセンスで公開されており、agentskills.io標準に準拠している。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">PlayStation、購入済みデジタル映画551本をユーザーアカウントから削除へ</td><td class="link-col"><a href="https://kotaku.com/playstation-store-movies-digital-studio-canal-terminator-2000711013" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ソニーのPlayStation Storeが、Studio Canalとのライセンス契約終了に伴い、ユーザーが過去に購入した映画551本をアカウントから削除することを発表した。対象作品には「ターミネーター2」などの人気タイトルも含まれる。「購入」したはずのデジタルコンテンツが実際にはライセンスの取得に過ぎず、配信元との契約次第でアクセスを失いうることを改めて示す事例として注目を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">スマートフォンは10年以内に時代遅れになる——テックリーダーたちが予測</td><td class="link-col"><a href="https://ktla.com/news/technology/your-smartphone-could-become-obsolete-within-a-decade-tech-leaders-say/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のテクノロジー業界リーダーが、スマートフォンが今後10年以内に時代遅れになりうると発言しているとKTLAが報じた。AI搭載スマートグラスや空間コンピューティングなどの技術が成熟することで、画面を見つめるスタイルのデバイスから次の形態へ移行する可能性が指摘されている。Apple・Meta・Googleなどが関連分野への投資を加速させており、パラダイムシフトが現実味を帯びてきた状況が背景にある。</td></tr>
+<tr><td class="num">3</td><td class="title">DuckDuckGo、AI機能でトランプ元大統領の「狂犬病死亡」という誤情報を検索結果に表示</td><td class="link-col"><a href="https://gizmodo.com/duckduckgo-unable-to-resist-the-pull-of-ai-mistakenly-claims-trump-died-of-rabies-2000777863" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プライバシー重視の検索エンジンDuckDuckGoが、AI要約機能を通じてトランプ元大統領が「狂犬病で死亡した」という明らかな誤情報を表示した事例が報告された。同社はこれまでAI統合に慎重な姿勢を取ってきたが、競合各社に追随してAI機能を追加した結果、ハルシネーションによる重大な誤情報問題が発生した形となった。AIによる検索結果の信頼性に改めて疑問を投げかける事例として広く拡散している。</td></tr>
+<tr><td class="num">4</td><td class="title">Netflix、各プロフィールに固有のメールアドレス紐付けを義務化</td><td class="link-col"><a href="https://arstechnica.com/gadgets/2026/06/netflix-now-requires-every-user-profile-to-be-tied-to-unique-email-address/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Netflixが全ユーザープロフィールに対して固有のメールアドレスの登録を必須化する方針を発表した。パスワード共有対策の延長線上にある措置とみられ、1アカウントを複数人で利用するパターンをさらに制限する内容となっている。ユーザーからは利便性の低下を懸念する声が上がっており、サブスクリプション管理の複雑化につながる可能性がある。</td></tr>
+<tr><td class="num">5</td><td class="title">米自動車規制当局、ロボタクシーのブレーキペダル廃止を認める規制見直しへ</td><td class="link-col"><a href="https://www.theregister.com/offbeat/2026/06/26/us-auto-regulators-want-to-kill-robotaxi-brake-pedals/5263228" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">米国の自動車規制当局が、完全自動運転のロボタクシーについてブレーキペダルやステアリングホイールなど手動操作系の廃止を認める規制見直しを検討していることが明らかになった。現行規制では人間による操作インターフェースの設置が義務付けられているが、完全自動運転技術の成熟に合わせて緩和を図る狙いがある。安全性をめぐる議論を内包しながらも、自動運転産業の実用化を後押しする動きとして注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">Amazon Q開発者ツールに脆弱性、悪意あるGitリポジトリでコード実行・クラウド認証情報漏洩の恐れ</td><td class="link-col"><a href="https://www.theregister.com/cyber-crime/2026/06/26/amazon-q-flaw-let-booby-trapped-git-repos-execute-code-swipe-cloud-creds/5263202" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングアシスタント「Amazon Q」に脆弱性が発見され、細工されたGitリポジトリをクローンするだけで任意コードが実行され、クラウドの認証情報が窃取される可能性があることが報告された。プロンプトインジェクション的な手口でエージェントの動作を操作できる攻撃経路が確認されており、AIコーディングツールがコードを処理する際のセキュリティリスクを改めて示す事例となっている。</td></tr>
+<tr><td class="num">7</td><td class="title">AppleのVision Pro＆スマートグラス担当幹部がOpenAIへ移籍</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-06-26/apple-s-vision-pro-and-smart-glasses-chief-paul-meade-is-leaving-for-openai" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AppleのVision Proおよびスマートグラスプロジェクトを率いてきたPaul MeadeがOpenAIへ移籍することが明らかになった。空間コンピューティング分野を担ってきた幹部の流出はAppleのハードウェア戦略に影響を与える可能性がある。一方OpenAIはAI搭載ハードウェア開発に向けてキーパーソンを積極的に招き入れている姿勢を示している。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">標準CSSは成熟した、もはやTailwindは不要という主張</td><td class="link-col"><a href="https://zenn.dev/higakijin/articles/06276828c81546" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CSSネスト、カスケードレイヤー、コンテナクエリ、`color-mix()`など近年の標準CSS機能の充実により、かつてTailwind CSSが解決していた課題の多くを標準機能で対処できるようになったと論じる記事。スコープCSS、論理プロパティ、`@layer`による優先度管理などを具体例とともに示しながら、ユーティリティファーストのフレームワークなしでもメンテナブルなスタイリングが可能になったと主張している。ブラウザサポートが実用的な水準に達した今、スタイリング戦略を再考するきっかけとなる内容で、フロントエンドコミュニティで活発な議論を呼んでいる。</td></tr>
+<tr><td class="num">2</td><td class="title">個人のプロンプト術をやめてチームで回るAI駆動開発ループを作った話</td><td class="link-col"><a href="https://zenn.dev/explaza/articles/d0aeb08fcd1888" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIを活用した開発において、個人が試行錯誤するプロンプト工夫を組織レベルに昇華させ、チーム全体が恩恵を受ける開発ループを構築した事例の紹介。個人スキルに閉じがちなAI活用を、レビュー・設計・テストのサイクルに組み込み「仕組み」として定着させるアプローチが解説されている。属人化を防ぎAIの恩恵をチーム全体に広げるための具体的なプロセス設計のノウハウが共有されており、エンジニアリングマネージャーや開発リードの参考になる内容となっている。</td></tr>
+<tr><td class="num">3</td><td class="title">AI時代だからこそ「コードを読む力」を磨くべきという提言</td><td class="link-col"><a href="https://zenn.dev/layerx/articles/6f510abfc3fa72" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIがコードを自動生成する時代だからこそ、人間はコードを「読む力」を磨く必要があるという論考。生成されたコードの正誤を判断し、意図を理解してレビューするには読解力が従来以上に重要になるという主張が展開されている。AI任せにしてコードを追わなくなることでバグを見落としたりシステム理解が失われたりするリスクを指摘しており、AI支援開発が普及する中での人間のコアスキルのあり方を問い直す視点として共感を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">AI時代のナレッジ管理：Googleの「OKF」フレームワークを解説</td><td class="link-col"><a href="https://zenn.dev/knowledgesense/articles/14a874a9f423bb" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールが普及するほど組織の知識をどう構造化・継承するかが競争優位につながるという観点から、Googleのナレッジ管理フレームワーク「OKF（Organizational Knowledge Framework）」の概念と実践方法を解説する記事。ドキュメント管理やナレッジの体系化、AIとの組み合わせ方を具体的に示しており、AI時代における人間とシステムの協調的な知識管理のあり方を検討する際の参考になる。プロジェクト記憶をAIに継続的に渡す設計への関心が高まっている文脈と合致した内容となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">小さいローカルLLMをファインチューニングしてUnityで活用する実践手順</td><td class="link-col"><a href="https://zenn.dev/meson_tech_blog/articles/fine-tuning-local-llm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">軽量なローカルLLMをタスク固有データでファインチューニングし、Unityゲームエンジン内で使用するまでの手順を解説した実践的な記事。クラウドAPIに頼らずオフライン環境で動作するLLMを構築できるため、プライバシーに配慮したゲームAIや組み込みシナリオへの応用が可能となる。モデル選定からファインチューニングの設定、Unityへの統合方法まで一連のワークフローを説明しており、ゲーム開発者やエンジニアにとって実用的な内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">AI時代のコードレビューは人ではなく「仕組み」に向けるべきという提言</td><td class="link-col"><a href="https://zenn.dev/manalink_dev/articles/ai-coding-era-review-to-dev-process-not-human" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが大量のコードを生成する時代において、コードレビューの観点を個人の負担から「仕組みとしてのレビュープロセス」へ転換すべきだという提言。個人のスキルや注意力に依存するレビューは持続しないとして、静的解析・CI/CD・AIレビューツールを組み合わせた自動化レイヤーの整備を推奨している。人間のレビュアーは意図・設計・トレードオフを問う高次の判断に集中し、機械的なチェックは仕組みに任せるというロールの再定義が示されている。</td></tr>
+<tr><td class="num">7</td><td class="title">GeminiをClaudeのサブエージェントに——大規模開発でのコストを実測</td><td class="link-col"><a href="https://zenn.dev/google_cloud_jp/articles/63205d90345627" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeを主エージェントとして使いつつ、コスト効率の観点からGeminiをサブエージェントとして組み込む構成の実験と実測データを紹介する記事。大規模な開発タスクではトークンコストが膨らみやすいため、高精度が求められる部分にClaudeを、コスト重視の部分にGeminiを充てる分担戦略の有効性を数値付きで示している。マルチモデル戦略を検討しているチームにとって、実際のコストと処理品質のトレードオフを把握する際の参考になる内容だ。</td></tr>
+<tr><td class="num">8</td><td class="title">Chromium(V8)のArray.prototype.flatをバルクコピーで約5倍高速化した</td><td class="link-col"><a href="https://zenn.dev/dinii/articles/e12fbacc8e761c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JavaScriptエンジンV8における`Array.prototype.flat`の実装を、バルクコピー手法で最適化し処理速度を約5倍に向上させたという技術記事。既存の実装がなぜ遅かったかを内部実装レベルで分析し、要素を個別にコピーする方式からまとめてコピーする方式への変更によるパフォーマンス改善の過程を詳述している。Chromiumへのコントリビューション経験の記録としても貴重で、JavaScriptエンジンの最適化に関心のある読者に有益な一次情報を提供している。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">勉強が続かないのは意志ではなく環境と仕組みの設計の問題</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/7a69883e9e70fc5ad853" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プログラミング学習が長続きしない原因を「意志の弱さ」ではなく学習環境や方法論の設計の問題として捉え直す記事。認知科学・行動経済学の知見を交えながら、習慣化に必要な仕組みづくりやつまずきポイントを減らす環境設計の重要性を説いている。新人エンジニアや学習中のエンジニアに向けた内容で、自己否定をやめ構造的に継続できるアプローチへの転換を促している。</td></tr>
+<tr><td class="num">2</td><td class="title">読み方を間違えがちなエンジニア用語集——会議で恥ずかしい思いをしないために</td><td class="link-col"><a href="https://qiita.com/n-isd/items/46eeee2dbc282cb16e2f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「nginx」「OAuth」「daemon」「GIF」など、エンジニアが読み方を誤りやすい技術用語を体系的にまとめたリファレンス記事。業界での慣用的な読み方と原語の発音の違い、複数の読み方が混在している用語についても丁寧に解説している。新人エンジニアのオンボーディング資料としても活用できる内容で、コミュニケーション上の認識齟齬を減らすのに役立つ。</td></tr>
+<tr><td class="num">3</td><td class="title">oracle-ai-ready-data SkillでOracleスキーマのAI活用適性を評価してみた</td><td class="link-col"><a href="https://qiita.com/shirok/items/3b9ccefff059ff1ab40d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ClaudeのSkillとして提供されている「oracle-ai-ready-data」を使い、Oracle DatabaseのスキーマがAIやRAGワークフローへの組み込みに適した状態かを評価する手順を試した記事。スキーマの構造化状態、インデックス設計、ベクトル検索への対応度などを評価軸として分析し、改善ポイントを具体的に示している。Oracle×AI統合に取り組む開発者やDBAにとって実践的な参考になる内容だ。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude CodeでAWS俯瞰構成図を自動生成、見やすさを機械チェックしながら量産した事例</td><td class="link-col"><a href="https://qiita.com/ntaka329/items/d457f309e33c4602a693" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeを活用してAWSアーキテクチャの俯瞰構成図をSVGとして自動生成し、レイアウトの見やすさをAIが自動チェックしながら量産するワークフローを構築した事例。ラベルの可読性やコンポーネント配置のバランスなどを機械的に評価する仕組みを組み込み、人手なしで一定品質を担保している。インフラドキュメント整備にAIエージェントを活用する具体的なユースケースとして参考になる。</td></tr>
+<tr><td class="num">5</td><td class="title">BigQueryの新しいグラフ分析機能をSNSフォローデータで試してみた</td><td class="link-col"><a href="https://qiita.com/ta-ito0611/items/432725de703dc4b644aa" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google BigQueryに追加されたグラフ分析機能「BigQuery Graph」を、SNSのフォロー関係データを題材に試した実践記事。GQL（Graph Query Language）を使ってノード間の関係をクエリする方法を具体的なSQLと結果とともに紹介している。リレーショナルDBでは表現しにくいグラフ構造をBigQueryのスケールで扱えるようになる点が注目ポイントで、データエンジニアやアナリストに有益な情報を提供している。</td></tr>
+<tr><td class="num">6</td><td class="title">バズっている「STORMプロンプト」に欠けている最も重要な要素</td><td class="link-col"><a href="https://qiita.com/jqit_suwa/items/8168cd532e692ebcd4b0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Stanford発のSTORM論文に基づくプロンプト手法がSNSで拡散しているが、拡散版には論文の肝である「視点の多角化フェーズ」が省かれているという指摘記事。原著論文を参照しながら、本来のSTORMアルゴリズムが何を重視しているかと、省略された場合に何が失われるかを解説している。プロンプトエンジニアリング情報の「孫引き劣化」の問題を具体例で示した内容として、LLM活用を正確に理解したい読者に役立つ。</td></tr>
+<tr><td class="num">7</td><td class="title">GeminiのAI検索＆画像グラウンディングを実際に試してわかったこと</td><td class="link-col"><a href="https://qiita.com/ta-ito0611/items/646d3d1efb535737416d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google GeminiのグラウンディングとGoogle搜索連携機能を実際に試し、AIのハルシネーション抑制効果と限界を検証した記事。検索グラウンディングによって参照元が明示されることで回答の信頼性が向上する一方、完全な誤情報の排除はできないケースも確認されている。Vertex AIを使ったPythonによる実装例も紹介されており、AIを業務活用する際の信頼性確認方法として実用的な知見を提供している。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-27 06:39 JST
+</footer>
+</div>
+</body>
+</html>
