@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-28</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-28</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ユーザー識別子ゼロのプライバシー重視メッセージング「SimpleX Chat」</td><td class="link-col"><a href="https://github.com/simplex-chat/simplex-chat" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SimpleX Chat は電話番号やメールアドレスなどのユーザー識別子を一切持たないメッセージングネットワーク。従来の Signal や WhatsApp などと異なりアカウントという概念がなく、接続は QR コードや招待リンクで行う。iOS・Android・デスクトップアプリを提供しており、プライバシー設計を根本から見直した点が特徴として評価されている。</td></tr>
+<tr><td class="num">2</td><td class="title">AI コーディングエージェントにデザインシステムを伝える「DESIGN.md」フォーマット仕様</td><td class="link-col"><a href="https://github.com/google-labs-code/design.md" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google Labs が公開した DESIGN.md は、ビジュアルアイデンティティをコーディングエージェントへ構造的に伝えるためのフォーマット仕様。YAML フロントマターにデザイントークン（色・フォント・スペーシングなど）を機械可読な形で記述し、マークダウン本文に設計の意図を自然言語で説明する。エージェントはこのファイルを読むことで、デザインシステムへの一貫した理解を維持しながらコードを生成できる。</td></tr>
+<tr><td class="num">3</td><td class="title">git push 前に AI が自動検証するプロキシ「no-mistakes」</td><td class="link-col"><a href="https://github.com/kunchenguid/no-mistakes" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">no-mistakes は git のリモートプロキシとして動作し、push 時に隔離したワークツリーで AI 駆動の検証パイプラインを実行してからのみ実際のリモートへ転送する仕組み。Claude Code など主要なエージェントに対応しており、検証が失敗した場合はプッシュをブロックする。作業中のツリーとは独立して動くため、開発の流れを止めずにコード品質を担保できる。</td></tr>
+<tr><td class="num">4</td><td class="title">PDF・Office ドキュメントを LLM 向け Markdown に変換する「MinerU」</td><td class="link-col"><a href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">MinerU は PDF・Word・PowerPoint・Excel・画像・Web ページなどを LLM や RAG ワークフロー向けの Markdown / JSON に変換するドキュメントパーサ。Web ブラウザ版・デスクトップクライアント・API の 3 種類の利用方法が用意されており、デプロイ不要で即座に使い始められる。複雑なレイアウトの文書も高精度に構造化できる点が特徴。</td></tr>
+<tr><td class="num">5</td><td class="title">自然言語の指示だけで動く完全オープンソースの動画制作システム「OpenMontage」</td><td class="link-col"><a href="https://github.com/calesthio/OpenMontage" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenMontage は 12 の制作パイプラインと 52 ツール、500 以上のエージェントスキルを持つオープンソースの動画制作システム。自然言語で制作内容を記述するだけで AI コーディングアシスタントが複数のサブタスクを並列実行して動画を生成する。既存の AI コーディングツールをそのままビデオ制作スタジオとして活用できるコンセプトが新しい。</td></tr>
+<tr><td class="num">6</td><td class="title">AWS 公式の AI エージェント向け MCP サーバーキット「Agent Toolkit for AWS」</td><td class="link-col"><a href="https://github.com/aws/agent-toolkit-for-aws" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS が公式リリースした MCP サーバー・スキル・プラグインのコレクションで、Claude Code・Codex・Cursor・Kiro など主要な AI コーディングエージェントと連携できる。エージェントが AWS サービスのビルド・デプロイ・管理を行う際に必要なツールと知識を提供するほか、ガードレール機能も備える。Anthropic のプラグインマーケットプレイスからも入手可能。</td></tr>
+<tr><td class="num">7</td><td class="title">Garry Tan の Claude Code セットアップを再現する 23 ツールキット「gstack」</td><td class="link-col"><a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Y Combinator の社長 Garry Tan が実際に使っている Claude Code の構成を再現した 23 個のツール集。CEO・デザイナー・エンジニアリングマネージャー・リリースマネージャー・ドキュメントエンジニア・QA といった役割を担うエージェントが含まれており、個人開発者がチーム規模の開発を行うための実践的な構成として注目されている。</td></tr>
+<tr><td class="num">8</td><td class="title">300 車種以上の運転支援をアップグレードするオープンソース OS「openpilot」</td><td class="link-col"><a href="https://github.com/commaai/openpilot" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">comma.ai が開発する openpilot はロボティクス向けのオープンソース OS で、現在 300 以上の対応車種のドライバーアシスタンスシステムを強化できる。comma four デバイスを車に接続することで動作し、コミュニティによる積極的な開発が続けられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">公開インターネット上のオープンウェブカメラを網羅した「IP Crawl」アトラス</td><td class="link-col"><a href="https://ipcrawl.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">IP Crawl はパブリックインターネット上で発見されたアクセス無制限のウェブカメラをリアルタイムで収集・公開しているサービス。スコア 101・コメント 52 と高い注目を集めており、プライバシーやセキュリティ設定の甘さを可視化するツールとしての側面も持つ。自分のカメラが不用意に公開されていないかを確認するきっかけにもなる。</td></tr>
+<tr><td class="num">2</td><td class="title">データセンター会議で発言時間 5 秒超えただけで逮捕された農家</td><td class="link-col"><a href="https://www.gadgetreview.com/arrest-him-the-moment-police-handcuffed-a-farmer-for-going-5-seconds-over-his-time-limit-at-data-center-meeting" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">米国でデータセンター建設に関する公聴会に出席した農家が、制限時間を 5 秒オーバーしたことを理由に警察に拘束された出来事が話題になった。地域住民が建設計画に意見を述べる機会において厳格な時間制限が設けられており、その運用の問題点が議論を呼んでいる。AI インフラ拡大と地域コミュニティとの関係を問い直す事例として注目された。</td></tr>
+<tr><td class="num">3</td><td class="title">Mac のフタを閉じてもエージェント稼働中はスリープしない「Adrafinil」</td><td class="link-col"><a href="https://github.com/kageroumado/adrafinil" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Adrafinil は Mac でクラムシェル（フタを閉じた）状態でも AI エージェントが作業を完了するまでスリープを防止する小さなツール。エージェントが実行中かどうかを検知してスリープを制御し、処理が終われば通常の動作に戻る。Claude Code など長時間稼働するエージェントユーザーに実用的な解決策を提供しており、GitHub でオープンソース公開されている。</td></tr>
+<tr><td class="num">4</td><td class="title">Python 互換の高速プログラミング言語「Mojo」がまもなくオープンソース化</td><td class="link-col"><a href="https://console.modular.com/signup" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Modular 社が開発する AI 向き高速プログラミング言語 Mojo が近くオープンソースになる予定と公式サイトが告知した。Python の使いやすさと C 並みのパフォーマンスを目指して設計されており、AI・ML 開発者を中心に注目が高まっている。正式なオープンソース化のタイミングやライセンス詳細はまだ公開されていない。</td></tr>
+<tr><td class="num">5</td><td class="title">Wikipedia 共同創設者が Wikipedia から永久追放される</td><td class="link-col"><a href="https://www.gadgetreview.com/wikipedias-cofounder-has-been-banned-from-wikipedia" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Wikipedia の共同創設者ラリー・サンガー氏が、自身のコントリビュータアカウントを Wikipedia から永久にBANされたと報告した。サンガー氏は長年にわたって Wikipedia の中立性バイアス問題を批判してきており、今回の追放との関連が憶測を呼んでいる。</td></tr>
+<tr><td class="num">6</td><td class="title">llama.cpp のプロンプト処理速度を 20% 向上させるパッチを作成、PR 化に協力求む</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=48700782" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">あるユーザーが llama.cpp にパッチを当てることでプロンプト処理スループットを約 20% 改善したと報告し、正式な PR 作成への協力を Hacker News で呼びかけた。具体的な最適化内容はスレッドで議論されており、LLM ローカル推論の高速化に関心を持つ開発者から注目されている。</td></tr>
+<tr><td class="num">7</td><td class="title">Quora を侵食する組織的な AI スパムリングの実態</td><td class="link-col"><a href="https://tacit.livejournal.com/687903.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Quora 上で大量の AI 生成コンテンツを組織的に投稿するスパムリングの実態を分析したレポートが話題になった。人工的な見た目を避けるために内容を微妙に変えながら大量投稿する手口が詳細に記述されており、Q&amp;A プラットフォームの情報品質低下への懸念が広がっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AI 時代だからこそ、エンジニアはコードを読む力を磨くべき</td><td class="link-col"><a href="https://zenn.dev/layerx/articles/6f510abfc3fa72" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI が大量のコードを生成できる時代になったからこそ、生成されたコードを正確に読み解く能力がエンジニアの核心的なスキルになるという考察記事。コードを書く量が減る一方で、品質を判断・修正するためのコードリーディング力の重要性が増している。AI に依存しすぎることで理解力が低下するリスクを指摘し、意識的にコードを読む習慣の必要性を論じている。</td></tr>
+<tr><td class="num">2</td><td class="title">Gemini を Claude のサブエージェントとして活用してコストを実測した結果</td><td class="link-col"><a href="https://zenn.dev/google_cloud_jp/articles/63205d90345627" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大規模開発で Claude Code をメインエージェントとしつつ、サブタスクに Gemini を使うマルチエージェント構成を実際に試しコストを実測したレポート。Claude の高い推論能力と Gemini の低コストを組み合わせることで、単一モデル利用よりも費用対効果が高くなる場面があることを示している。構成の詳細や使い分けの指針についても解説している。</td></tr>
+<tr><td class="num">3</td><td class="title">小さなローカル LLM をタスク特化でファインチューニングして Unity に組み込む</td><td class="link-col"><a href="https://zenn.dev/meson_tech_blog/articles/fine-tuning-local-llm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">軽量なローカル LLM を特定ユースケース向けにファインチューニングし、Unity ゲームエンジンに組み込む手順を解説した記事。汎用モデルでは対応しにくいゲーム固有のルールや対話パターンに特化させることで、クラウド API なしに高品質な AI 機能を実現できる。ファインチューニングのデータ準備から Unity への統合までを実践的に紹介している。</td></tr>
+<tr><td class="num">4</td><td class="title">AI コーディング時代のコードレビューは「人」ではなく「仕組み」に向けよ</td><td class="link-col"><a href="https://zenn.dev/manalink_dev/articles/ai-coding-era-review-to-dev-process-not-human" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI が大量のコードを生成する環境では、人間同士のコードレビューを主軸に置く従来手法が機能しにくくなるという提言記事。レビューのボトルネックを解消するために、静的解析・テスト自動化・CI ルールなどの仕組みに検証ロジックを埋め込むべきと主張している。チームの開発プロセス設計を見直すきっかけになる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">ローカルの Git 差分を GitHub 風 UI でレビューできる「difit」を試す</td><td class="link-col"><a href="https://zenn.dev/rescuenow/articles/535533464da3cf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">difit はターミナルだけでローカルの Git diff を GitHub のプルリクエスト画面に近い UI で確認できるツール。ブラウザやリモートリポジトリへのプッシュ不要でレビュー品質の高いインターフェースを手軽に使えるため、コードレビュー前の確認や個人作業のセルフレビューに役立つ。</td></tr>
+<tr><td class="num">6</td><td class="title">LLM が生成した「正しそうな言葉」に感じる微妙な違和感の正体</td><td class="link-col"><a href="https://zenn.dev/mkj/articles/40a6c187d2dbc9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">LLM の出力は文法的・意味的に正しくても、読んだ人が何か「薄い」と感じることがあるという現象を考察した記事。人間が書く文章との差がどこにあるのか具体的な例を挙げながら分析しており、AI との協調が前提になる現場で出力の質をどう評価・改善するかについて考えるヒントを与えてくれる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">勉強が続かないのは意志が弱いからではない — 習慣設計の問題</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/7a69883e9e70fc5ad853" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">勉強が継続できない原因を意志力の問題と捉えるのは誤りであり、環境設計・タスクの細分化・達成感の仕組み化によって解決できるという主張の記事。初心者・未経験エンジニア向けに書かれており、続けられる学習環境をどう作るかについて具体的なアドバイスが並ぶ。共感を集めてトップスコアを獲得している。</td></tr>
+<tr><td class="num">2</td><td class="title">Oracle Database スキーマの AI 活用準備度を評価する「oracle-ai-ready-data」Skill</td><td class="link-col"><a href="https://qiita.com/shirok/items/3b9ccefff059ff1ab40d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Oracle Database のスキーマを AI Ready Data として評価・分析できる Claude Code 用 Skill の紹介と実際の使用レポート。ベクトル検索や RAG、AI エージェントとの連携に向けてデータ構造を整備する際の指針を自動的に提案する。Oracle × AI の実装事例として参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">会議でよく出るエンジニア用語の読み間違えがちな発音まとめ</td><td class="link-col"><a href="https://qiita.com/n-isd/items/46eeee2dbc282cb16e2f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">"cache"（キャッシュ）や "queue"（キュー）など、エンジニアが会議で読み誤りやすい技術用語の正しい発音を解説した記事。AWS サービス名や一般的なプログラミング用語を含む幅広いリストで、特に新人・未経験者に役立つ内容。日常業務での恥を防ぐ実用的なリファレンスとして広く読まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">BigQuery の新「Graph」機能で SNS データのグラフ分析を試す</td><td class="link-col"><a href="https://qiita.com/ta-ito0611/items/432725de703dc4b644aa" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google BigQuery に追加されたグラフ分析機能を使い、SNS フォロー関係などの接続データをノード・エッジとして扱い GQL（Graph Query Language）でクエリする方法を解説。従来は専用グラフデータベースが必要だった分析が BigQuery 上で完結するようになり、既存の SQL ワークフローとの統合が容易になった点が注目される。</td></tr>
+<tr><td class="num">5</td><td class="title">Gemini の検索・画像グラウンディングで AI のハルシネーションを抑制する</td><td class="link-col"><a href="https://qiita.com/ta-ito0611/items/646d3d1efb535737416d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google Gemini の検索グラウンディング・画像グラウンディング機能を実際に試し、AI の誤情報生成（ハルシネーション）をどの程度抑制できるかを検証した記事。Vertex AI を使った実装コード例も紹介されており、業務システムへの組み込みを検討している Python 開発者に参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Code の正しい使い方 — よくある間違いと改善のポイント</td><td class="link-col"><a href="https://qiita.com/tehito/items/356e5f1dba112a075be1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code を使いこなせていないパターンとして「雑な指示を出して結果に文句を言う」「コンテキストを渡さずに作業させる」などを挙げ、具体的な改善方法を解説した記事。開発者自身の経験から得た知見をもとに書かれており、Claude Code をすでに使っている人がすぐに実践へ活かせる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">AI エージェントにサボらせないための Skills 設計 7 手法</td><td class="link-col"><a href="https://qiita.com/nogataka/items/2783f25816699e8318cc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code などの AI エージェントが指示を曖昧に解釈して手を抜く問題への対策として、Skill 設計における 7 つの工夫を解説した記事。出力の詳細度や実行ステップを明示的に指定することでエージェントの挙動を期待通りに制御しやすくなる。サボり度を測定する Skill も付属しており、実践的な内容となっている。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-28 06:36 JST
+</footer>
+</div>
+</body>
+</html>
