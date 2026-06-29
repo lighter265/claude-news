@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-06-30</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-06-30</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ストリーミング映像からリアルタイムに3Dシーンを再構築する基盤モデル「LingBot-Map」</td><td class="link-col"><a href="https://github.com/Robbyant/lingbot-map" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Geometric Context Transformerと呼ぶ新アーキテクチャで、座標定位・高密度幾何学的手がかり・長距離依存関係を統一的に扱い、ストリーミングデータから逐次的に3Dシーンを再構築するフィードフォワード型基盤モデル。単一フレームではなく連続データを入力として高精度な3D復元を行う点が従来手法と異なり、ロボティクスや自律移動・デジタルツイン分野への応用が期待される。デモ動画が公開されており、動的シーンへの適応能力が確認できる。</td></tr>
+<tr><td class="num">2</td><td class="title">コードベースをナレッジグラフ化するAI向けMCPサーバー「codebase-memory-mcp」</td><td class="link-col"><a href="https://github.com/DeusData/codebase-memory-mcp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">リポジトリ全体を永続的な知識グラフとしてインデックス化し、AIコーディングエージェントが高速に参照できるコードインテリジェンスエンジン。158言語に対応し、Linuxカーネル（2800万行・7.5万ファイル）でも3分以内に解析完了、クエリ応答は1ms以下。依存関係ゼロの単一静的バイナリとして配布されており、平均的なリポジトリならミリ秒単位でフルインデックス化できると謳っている。トークン消費を最大99%削減できるとしており、大規模コードベースを扱うAIワークフローの実用的な補助ツールとなりうる。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Codeで動画をチャット編集するオープンソースツール「video-use」</td><td class="link-col"><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">生映像ファイルをフォルダに置いてClaude Codeと会話するだけで最終mp4が得られる動画編集ツール。フィラーワード（「えー」「あー」、言い直し、テイク間の無音）の自動カット、シネマティック・ニュートラルパンチなどのカラーグレーディング、30msのオーディオフェード適用など、従来は手動で行う編集処理を自動化する。browser-useチームによる作品で、会話型インターフェースだけで動画制作を完結させる新しいアプローチを提示している。</td></tr>
+<tr><td class="num">4</td><td class="title">アプリの脆弱性を自律的に発見・修正するAIセキュリティエージェント「Strix」</td><td class="link-col"><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">本物のハッカーのようにコードを動的に実行して脆弱性を検出・修正するオープンソースの自律AIエージェント。GitHub ActionsおよびCI/CDパイプラインとシームレスに統合でき、プルリクエストごとに自動スキャンを実施して脆弱なコードのマージをブロックする。追加セットアップなしにすぐ利用できる手軽さを売りにしており、セキュリティを開発ループに組み込みたいチームへの実用的な選択肢となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">PDF・Office文書をLLM向けMarkdown/JSONへ変換するドキュメントパースエンジン「MinerU」</td><td class="link-col"><a href="https://github.com/opendatalab/MinerU" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PDF・DOCX・PPTX・XLSX・画像・Webページを、エージェントワークフローやRAGパイプラインで即利用可能な構造化Markdown／JSONへ変換する高精度エンジン。インストール不要のWebバージョン・フル機能のデスクトップアプリ・即時API利用の3形態が提供されており、LLM活用前の文書前処理工程を大幅に削減できる。複雑な表・数式・図表のレイアウトを保持する精度の高さが特徴。</td></tr>
+<tr><td class="num">6</td><td class="title">クラウド不要のmacOSオフライン音声入力アプリ「FluidVoice」</td><td class="link-col"><a href="https://github.com/altic-dev/FluidVoice" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">デバイス上のAIだけで動作するmacOS向けオープンソース音声認識・文字起こしアプリ。クラウドに一切依存せず完全ローカルで処理するためプライバシーを確保しつつ、macOSのオフライン音声認識アプリとして最速クラスを謳っている。GPLv3ライセンスで公開されており、`brew install --cask fluidvoice`の1コマンドでインストールできる。</td></tr>
+<tr><td class="num">7</td><td class="title">ワンコマンドで個人に包括的なトレーディング能力を付与するAIエージェント「Vibe-Trading」</td><td class="link-col"><a href="https://github.com/HKUDS/Vibe-Trading" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「1コマンドでエージェントに包括的なトレーディング能力を付与する」をコンセプトとした個人向けAIトレーディングエージェント。Shadow Accountによるシミュレーション取引機能、MCP経由のAPI連携、クロスプラットフォームセットアップをサポートしており、最新リリースではWindowsでのTypeScriptビルドとランタイムの安定性が強化された。日本語・英語・中国語・韓国語・アラビア語のドキュメントが整備されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">セルフホスティング支援を目的とした新トップレベルドメイン「.self」の提案(score: 74)</td><td class="link-col"><a href="https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個人や小規模コミュニティによるセルフホスティングを促進することを目的として設計された新TLD（トップレベルドメイン）の提案。商業的・技術的利害から独立した「人間中心のインターネット」を志向する設計思想を掲げており、プライバシーと自律性をインターネットアーキテクチャの観点から再考する動きとして注目されている。66件のコメントで実現可能性や必要性について活発に議論されている。</td></tr>
+<tr><td class="num">2</td><td class="title">オープンソースの特権アクセス管理プラットフォーム「JumpServer」(score: 28)</td><td class="link-col"><a href="https://github.com/jumpserver/jumpserver" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エンタープライズ向けPAM（特権アクセス管理）をオープンソースで実現するセルフホスト型プラットフォーム。SSHセッション管理・監査ログ・ロールベースアクセス制御など本格的な機能を持ちながら自前サーバーで運用できるため、高価な商用ソリューションの代替として注目されている。GitHubで公開されており、スター数が引き続き増加している。</td></tr>
+<tr><td class="num">3</td><td class="title">自己愛的リーダーがリモートワークに抵抗する理由—学術研究(score: 24)</td><td class="link-col"><a href="https://www.sciencedirect.com/science/article/pii/S0749597826000300?fr=RR-2&amp;ref=pdf_download&amp;rr=a102cca8b930e8a3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ScienceDirectに掲載された査読論文で、ナルシシスト傾向の強いリーダーがリモートワーク制度に反対しやすい傾向を実証的に分析している。権力の誇示・部下への監視・存在感のアピールがナルシシスト的リーダーの動機として機能しており、近年多くの企業で見られるオフィス回帰命令の心理的背景を組織心理学的に説明する研究として14件のコメントで議論されている。</td></tr>
+<tr><td class="num">4</td><td class="title">Googleの新reCAPTCHAがカメラアクセスと手の21点検出を要求(score: 8)</td><td class="link-col"><a href="https://reclaimthenet.org/googles-new-recaptcha-wants-your-camera-access-and-21-points-of-your-hand" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Googleが導入を進める次世代reCAPTCHAが、ボット検出のためにユーザーのカメラアクセス許可と手のキーポイント21点の検出を要求するとReclaimTheNetが報告。プライバシー侵害の懸念が上がっており、スパム・ボット対策のためにどこまでの生体情報収集が許容されるかという議論を呼んでいる。既存のreCAPTCHA v3と比較してより高度な行動・生体認証を採用した方向性といえる。</td></tr>
+<tr><td class="num">5</td><td class="title">カリフォルニア州がソフトウェア課税を含む3510億ドル予算に合意(score: 4)</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-06-27/california-leaders-agree-to-351-billion-budget-software-tax" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">カリフォルニア州首脳が2026-27会計年度の3510億ドル規模の予算案で合意し、その中にソフトウェアへの課税措置が含まれることをBloombergが報じた。テクノロジー産業の本拠地でもある同州が、SaaSやライセンス販売に対して課税する方向に踏み切る可能性があり、企業コストや価格設定に影響を与えうる政策動向として注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">AnthropicとカリフォルニアNewsom知事が州政府向けClaude半額提供で合意(score: 4)</td><td class="link-col"><a href="https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">カリフォルニア州とAnthropicが締結した初の州政府向けAIパートナーシップが発表された。州の行政機関がClaudeツールを半額で利用できる契約内容で、住民サービスの改善と公共セクターへのAI導入加速を目標としている。民間AI企業と州政府の直接大型契約という形態が、他州・他国への先例となる可能性がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">メールの`+`記号は「エイリアス」ではなく「サブアドレス」が正しい(score: 81)</td><td class="link-col"><a href="https://zenn.dev/mai_llj/articles/3eefb32e632563" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">`hoge+fuga@example.com`のプラス記号を使った機能を「エイリアス」と呼ぶのは技術的に誤りで、RFC 5321に定められた「サブアドレス（sub-addressing）」が正確な名称であることを解説した記事。エイリアスはMTAレベルで別アドレスへ配送する仕組みであり、サブアドレスは同一メールボックスへの配送時に使われるタグ情報という根本的な違いがある。用語の混同が実装の誤解を招きやすく、メールシステムを扱う開発者に特に読んでほしい内容。</td></tr>
+<tr><td class="num">2</td><td class="title">Claudeに「オントロジー」を持たせるとコスト半分・3倍速になる可能性(score: 54)</td><td class="link-col"><a href="https://zenn.dev/takupeso/articles/claude-ontology-knowledge-structuring" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに概念間の関係性を明示的に定義したオントロジー（知識構造モデル）を事前に与えることで、同一タスクをより少ないトークンと短い推論時間で実行できる可能性を実験・検証した記事。LLMがゼロから概念を推論する必要がなくなり、構造化された文脈を効率的に参照できることが速度・コスト両面での改善に寄与するという仮説を、実測値を交えて示している。プロンプトエンジニアリングの新しい方向性として注目される内容。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Designの実践的な活用方法まとめ(score: 42)</td><td class="link-col"><a href="https://zenn.dev/branbran/articles/5730c47e1abac9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AnthropicのClaude Designツールをプロダクト開発の現場で使い倒す具体的な方法論を紹介した記事。UIプロトタイピングからデザインシステムとの連携・反復改善のワークフローまで実例を交えて解説しており、デザインとAIを組み合わせた開発フローの実践的な最前線を示している。これからClaude Designを試したいデザイナー・フロントエンドエンジニアへの入門としても有益な構成となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">`takt exec`でループエンジニアリングを手軽に始める(score: 38)</td><td class="link-col"><a href="https://zenn.dev/nrs/articles/e4a2ae8a9fb785" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに繰り返しタスクをループ実行させる「ループエンジニアリング」を、`takt exec`コマンドで最小限の設定から始める方法を紹介した記事。複雑なオーケストレーション基盤なしに反復自動化を試せるアプローチで、AIエージェント駆動の開発スタイルへの入門として役立つ。実装例を交えて`takt exec`の使い方と応用パターンを丁寧に説明している。</td></tr>
+<tr><td class="num">5</td><td class="title">外部SaaSのFAQサイトをCloudflare + Astroに移行した実践記(score: 24)</td><td class="link-col"><a href="https://zenn.dev/tsukulink/articles/2026-06-faq-astro-migration" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">外部SaaSプラットフォームで運用していたFAQサイトをCloudflare WorkersとAstroを組み合わせたセルフホスト構成へ移行した経緯と知見をまとめた記事。コスト削減・パフォーマンス向上・カスタマイズ自由度の向上を同時に達成した経緯が詳しく記されており、SaaS依存から脱却してインフラ主権を取り戻したいチームへの参考事例として有用。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Codeは同じバグを3回出すと自動でルールを生成する(score: 21)</td><td class="link-col"><a href="https://zenn.dev/nexta_/articles/858e92ee22b4a4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeが同一のバグパターンを繰り返し引き起こした場合に、再発防止ルールを自動生成してCLAUDE.mdへ書き込むという挙動を発見・解説した記事。失敗から自律的に学習してルールを蓄積していくこの仕組みは、長期的な開発品質の向上に寄与する可能性がある。実際の動作例と生成されたルールの中身を示しながら、この機能を意図的に活用する方法を考察している。</td></tr>
+<tr><td class="num">7</td><td class="title">ECSデプロイをecspressoへ移行して自動化した話(score: 23)</td><td class="link-col"><a href="https://zenn.dev/lincwell_inc/articles/c60c337017aa49" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS ECSのデプロイ管理をecspressoに移行することで、デプロイプロセスを宣言的に管理しCI/CDでの自動化を実現した実践レポート。移行前後の比較・設定ファイルの書き方・パイプラインへの組み込み方を詳細に解説しており、ECS運用の標準化を検討しているチームにとって参考になる具体的な手順が示されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「転職はまだ早い」と思っているエンジニア志望者へ—踏み出して学んだこと(score: 50)</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/3f0d61d0ff4f082479c0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">未経験・異業種からエンジニアへの転職をためらっていた筆者が実際に行動して得た経験と気づきを率直に綴った記事。スキル不足への不安よりも行動が学びを加速させるという実体験に基づくメッセージは説得力があり、転職を検討しているエンジニア志望者の背中を押す内容となっている。具体的なきっかけや学習方法についても触れられている。</td></tr>
+<tr><td class="num">2</td><td class="title">今知っておきたいGit 3.0の変更点まとめ(score: 36)</td><td class="link-col"><a href="https://qiita.com/YuukiYoshida/items/a2d825e3ee3e3a4b6dbd" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">リリースが近づくGit 3.0で予定されている変更点・新機能・廃止事項を先取りして整理した記事。既存コマンドの挙動変化や後方互換性に関わる点を中心にまとめており、移行準備の参考資料として役立つ。Gitを日常的に使う開発者全員に影響しうる変更が含まれているため、早めに把握しておくことを推奨している。</td></tr>
+<tr><td class="num">3</td><td class="title">自宅Kubernetesを3年運用して分かったこと—失敗談と現実(score: 32)</td><td class="link-col"><a href="https://qiita.com/takumiida1/items/39907f41be86431a58e7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自宅サーバーでKubernetesクラスタを約3年運用してきた筆者による赤裸々な実体験レポート。実際に遭遇した障害・失敗談・維持コストの現実を包み隠さず公開しており、趣味レベルでのKubernetes運用に必要な覚悟と知識の全体像が把握できる。分散システムの学習としての意義と、管理負担のトレードオフを正直に評価している点が評価されている。</td></tr>
+<tr><td class="num">4</td><td class="title">StreamlitアプリをAWS Lambda MicroVMsでサーバーレスホスティング可能に（速報）(score: 24)</td><td class="link-col"><a href="https://qiita.com/moritalous/items/2f9ad10282775dcbd647" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">StreamlitアプリをAWS Lambdaのマイクロ VM環境にデプロイできるようになったことを速報として紹介した記事。サーバー管理なしでStreamlitを即時公開できるようになり、データサイエンティストや機械学習エンジニアのプロトタイプ共有が大幅に簡便化される見込み。Amazon BedrockおよびClaudeとの組み合わせでAIアプリを素早く公開する実例も紹介されている。</td></tr>
+<tr><td class="num">5</td><td class="title">JenkinsのエラーログをClaudeに自動調査させSlackへ通知するn8nワークフロー(score: 22)</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/61985c6743b89aa6924b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Jenkins CIで失敗したビルドのログをn8nワークフローで自動収集し、Claude APIで原因を解析してSlackへ通知する仕組みの構築方法を解説した記事。手動でのエラーログ確認作業を完全自動化でき、開発チームのCIエラー対応にかかる時間を大幅に削減できる。n8nとAnthropicのAPIを組み合わせた実用的なDevOps自動化の具体的な実装例として参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">Anthropic「2026 Agentic Coding Trends Report」解説—エンジニアは設計者へ(score: 3)</td><td class="link-col"><a href="https://qiita.com/nogataka/items/46fb464d05e2eb53d09c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropicが公開した2026年版AIコーディングトレンドレポートを読み解いた記事。エンジニアの役割がコードを直接書くことから、AIエージェントに仕様を伝えて設計・委任することへシフトしているという分析が中心で、生産性向上の実態やコーディング習慣の変化が整理されている。ツールの使い方よりも「どんな仕事をするか」という根本的な問い直しを促す内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-06-30 06:37 JST
+</footer>
+</div>
+</body>
+</html>
