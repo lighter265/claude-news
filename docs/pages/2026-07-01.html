@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-01</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-01</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ユーザー識別子を一切持たない設計で100%プライベートなメッセージアプリ「SimpleX Chat」</td><td class="link-col"><a href="https://github.com/simplex-chat/simplex-chat" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SimpleX Chatは、ユーザーID・電話番号・メールアドレスなど一切の識別子を必要としない設計が特徴のオープンソースメッセージングアプリ。従来のアプリはユーザー識別子を起点にメタデータが蓄積される仕組みを持つが、SimpleXはその根本から設計を変えることでプライバシーを徹底している。iOS・Android・デスクトップの各プラットフォームに対応しており、プライバシー重視の傾向が高まる中でGitHub Trendingに入賞している。</td></tr>
+<tr><td class="num">2</td><td class="title">チャットだけで動画編集が完結するClaude Code連携ツール「video-use」</td><td class="link-col"><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">生映像フォルダを指定してClaude Codeと会話するだけで最終的なmp4を出力する動画編集ツール。フィラーワード（「えー」「あー」・言い直し・テイク間の無音）の自動カット、シネマティックやニュートラルパンチなどのカラーグレーディング、30msオーディオフェードの自動適用など、通常は手動で行う編集処理を会話形式で完結させる。browser-useチームによるオープンソースプロジェクトで、AIエージェントによる映像制作の新しいアプローチを示している。</td></tr>
+<tr><td class="num">3</td><td class="title">NumPy/SciPyのコードをそのままGPUで動かせるドロップイン置換ライブラリ「CuPy」</td><td class="link-col"><a href="https://github.com/cupy/cupy" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NumPyおよびSciPyとAPIレベルの互換性を持ち、既存コードをほぼ変更なしにGPU上で実行可能にするPythonライブラリ。`import numpy as np`を`import cupy as cp`に変えるだけでGPUアクセラレーションを得られる設計で、NVIDIA CUDAとAMD ROCmの両プラットフォームに対応している。大規模な数値計算・機械学習前処理・科学技術計算の分野でCPU処理のボトルネックをGPUで解消する実用的な手段として広く利用されている。</td></tr>
+<tr><td class="num">4</td><td class="title">SaaS・AIアプリ向けのOSS認証認可基盤「Logto」</td><td class="link-col"><a href="https://github.com/logto-io/logto" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OIDCおよびOAuth 2.1に基づいたオープンソースの認証認可インフラで、マルチテナンシー・エンタープライズSSO・RBACを標準搭載する。SaaSやAIエージェントプラットフォームのスケールに対応した設計思想が特徴で、セキュリティ要件が高まる現在自前の認証基盤を持ちたいチームの現実的な選択肢となっている。クラウド版とセルフホスト版の両方が提供されており、導入形態の柔軟性が高い。</td></tr>
+<tr><td class="num">5</td><td class="title">300車種以上の運転支援システムをOSSでアップグレードするロボティクスOS「openpilot」</td><td class="link-col"><a href="https://github.com/commaai/openpilot" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">comma.aiが開発するオープンソースのロボティクスOSで、現在300種類以上の市販車の運転支援システムを強化するために実際に使われている。専用デバイス「comma four」をサポート対象車に接続することで、適応型クルーズコントロールや車線維持などのADAS機能を向上できる。コミュニティによる継続的な車種サポート拡大と機能開発が行われており、オープンソースの自動運転・ADAS研究の代表的なプロジェクトのひとつ。</td></tr>
+<tr><td class="num">6</td><td class="title">バフェット・マンガーら4大師の投資哲学をAIエージェントに実装した価値投資研究フレームワーク「AI Berkshire」</td><td class="link-col"><a href="https://github.com/xbtlin/ai-berkshire" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude CodeとCodexを活用し、ウォーレン・バフェット・チャーリー・マンガーら著名な価値投資家4人の方法論をAIエージェントで実装した投資研究フレームワーク。複数エージェントが並行して論争的な分析を行う設計で、個人+AIによる本格的な投資調査を目指している。AIコーディングエージェントをファイナンス・投資分析に応用するユニークなアプローチで、中英両語のドキュメントが整備されている。</td></tr>
+<tr><td class="num">7</td><td class="title">マークダウンナレッジベースをデスクトップで管理するアプリ「Tolaria」</td><td class="link-col"><a href="https://github.com/refactoringhq/tolaria" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">macOS・Windows・Linux対応のマークダウンナレッジベース管理デスクトップアプリ。個人の第二脳・社内ドキュメント管理・AIエージェントの手順書ストアなど多様なユースケースで活用されており、開発者自身が1万件超のノートを管理する実用ツールとして開発されている。AIコンテキストとして使えるナレッジベースの整備に関心が高まる中でTrendingに登場した。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">KubernetesをWebブラウザ上で完全動作させることに成功（score: 48）</td><td class="link-col"><a href="https://ngrok.com/blog/i-ported-kubernetes-to-the-browser" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ngrokのエンジニアがKubernetesをWebブラウザ内で完全動作させるまでの技術的な挑戦を詳述したブログ記事。WebAssemblyやブラウザのサンドボックス環境の制約を乗り越え、コンテナオーケストレーションの中核機能をブラウザ内で実現するプロセスが丁寧に解説されている。開発環境のポータビリティやクラウドへの依存を減らす方向性を示す実験として注目を集めており、12件のコメントで技術的な考察が交わされている。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Sonnet 5のベンチマーク結果—独立評価機関による分析（score: 29）</td><td class="link-col"><a href="https://artificialanalysis.ai/models/claude-sonnet-5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIモデルの独立評価機関Artificial AnalysisによるClaude Sonnet 5の詳細なベンチマーク結果が公開された。推論能力・コーディング・マルチモーダル性能など複数の評価軸でスコアが示されており、他のフロンティアモデルとの客観的な比較が可能になっている。コスト対性能のバランスを重視した分析で、モデル選定の参考資料として活用できる内容となっている。</td></tr>
+<tr><td class="num">3</td><td class="title">Grokのトラフィックの大部分はアダルトコンテンツが目的—Forbesが報道（score: 19）</td><td class="link-col"><a href="https://www.forbes.com/sites/maryroeloffs/2026/06/24/groks-traffic-is-mostly-driven-by-adult-content-report-says/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">xAIが提供するAIチャットボット「Grok」のトラフィック分析において、アクセスの大部分がアダルトコンテンツ目的であるとForbesが報じた。Grokは他のAIサービスと比べてコンテンツポリシーが緩やかなため、この種の利用が集中しているとみられている。AI企業のモデレーション方針とユーザー行動の実態について改めて議論を呼ぶ報告となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">マルチプレイヤーゲームにとって史上最良の出来事とは何か（score: 12）</td><td class="link-col"><a href="https://mas-bandwidth.com/the-best-thing-thats-ever-happened-for-multiplayer-games/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">マルチプレイヤーゲームのネットワーク技術を専門とするブログmas-bandwidthが、オンラインゲームのインフラ・プロトコル進化の中で特に重要とみなす技術的変化を考察した記事。低レイテンシ通信やUDPベースのプロトコル整備など、ゲームのリアルタイム通信品質向上に寄与してきた変化が丁寧に解説されている。ゲームバックエンドやネットワーク技術に興味があるエンジニアにとって参考になる内容で、12件のコメントで活発に議論されている。</td></tr>
+<tr><td class="num">5</td><td class="title">オブジェクトストレージをネイティブ永続層に使うLSMエンジン「SlateDB」（score: 7）</td><td class="link-col"><a href="https://slatedb.io/blog/introducing-slatedb/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">S3などのオブジェクトストレージをネイティブな永続層として活用するLSM（Log-Structured Merge-tree）ベースの組み込みデータベース「SlateDB」を紹介するブログ記事。ローカルディスク前提の従来LSMエンジンとは異なり、オブジェクトストレージのコスト効率と耐久性を活かしつつオンラインシステムで利用可能な設計が特徴。クラウドネイティブなデータ基盤構築の新しいアプローチとして注目に値する。</td></tr>
+<tr><td class="num">6</td><td class="title">GodotがAI生成コードのコントリビューションを受け入れない方針を発表（score: 4）</td><td class="link-col"><a href="https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">オープンソースゲームエンジンGodotが、AI生成コードのコントリビューションを受け付けない方針を公式に発表した。「AIを多用する開発者は自分のコードを理解して修正できないことが多く、それでは信頼できない」と開発チームがその理由を説明している。オープンソースコミュニティにおけるAI生成コードの品質・保守性・責任の所在に関する議論が再び活発化するきっかけとなっている。</td></tr>
+<tr><td class="num">7</td><td class="title">AI統合ターミナル「Warp」がシリーズBで6000万ドルを調達（score: 3）</td><td class="link-col"><a href="https://www.warp.co/b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI統合ターミナルアプリ「Warp」がシリーズBで6000万ドルの資金調達を完了した。WarpはAIによるコマンド提案・履歴検索・チーム共有機能を備えたモダンなターミナルとして開発者に人気があり、今回の調達資金でプロダクト開発と事業拡大を加速させる見込み。開発者ツール市場におけるAI統合の勢いを示す資金調達として注目されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Designを現場で使い倒す実践的な活用法まとめ（score: 72）</td><td class="link-col"><a href="https://zenn.dev/branbran/articles/5730c47e1abac9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AnthropicのClaude Designツールをプロダクト開発の現場で活用する具体的な方法論を紹介した記事。UIプロトタイプの迅速な作成からデザインシステムとの連携・反復改善のワークフローまで実例を交えて丁寧に解説している。デザインとAIを組み合わせた開発フローの最前線を示す内容で、Claude Designをこれから試したいデザイナーやフロントエンドエンジニアの入門としても有益な構成となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">ECSのデプロイをecspressoへ移行して宣言的・自動化に切り替えた実践レポート（score: 47）</td><td class="link-col"><a href="https://zenn.dev/lincwell_inc/articles/c60c337017aa49" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS ECSのデプロイ管理をecspressoに移行することで、デプロイプロセスを宣言的に管理しCI/CDで完全自動化を実現した実践レポート。移行前後の比較・設定ファイルの書き方・パイプラインへの組み込み手順が詳細に解説されており、ECS運用の標準化を検討しているチームの参考になる。手作業によるデプロイ管理から脱却するための具体的な移行ステップが示されている。</td></tr>
+<tr><td class="num">3</td><td class="title">コードそのものを仕様書にするために関数型プログラミングを採用する（score: 46）</td><td class="link-col"><a href="https://zenn.dev/satto_workspace/articles/62cdc01e1d0e97" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">関数型プログラミングのスタイルを採用することで、コード自体が実行可能な仕様書として機能するようになるという考え方を解説した記事。純粋関数・不変データ・型システムを活用することでコードの意図が明示的になり、別途ドキュメントを用意しなくても理解できる設計が可能になると主張している。具体的なコード例を交えながら、ドキュメントとコードの乖離を防ぐための設計思想が紹介されている。</td></tr>
+<tr><td class="num">4</td><td class="title">外部SaaSのFAQサイトをCloudflare + Astroへ移行した経緯と知見（score: 41）</td><td class="link-col"><a href="https://zenn.dev/tsukulink/articles/2026-06-faq-astro-migration" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">外部SaaSプラットフォームで運用していたFAQサイトをCloudflare WorkersとAstroを組み合わせたセルフホスト構成へ移行した経緯をまとめた記事。コスト削減・パフォーマンス向上・カスタマイズ自由度の向上を同時に達成した具体的なアーキテクチャと移行ステップが詳しく記されている。SaaS依存から脱却してインフラ主権を取り戻したいチームへの参考事例として有用な内容。</td></tr>
+<tr><td class="num">5</td><td class="title">仕様の曖昧さをコードで表現してチームで共有する（score: 23）</td><td class="link-col"><a href="https://zenn.dev/tan_go238/articles/c94a78a2dea391" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">チーム開発において仕様の曖昧さが引き起こす問題を解消するために、仕様をコードで表現して共有するアプローチを提案した記事。テキストや図による仕様書は解釈のブレが生じやすいが、実行可能なコードとして書くことで認識の齟齬を防げるという考え方を具体的に示している。プロダクト開発におけるコミュニケーションコストを下げるための実践的なヒントとして参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">RustでゲームボーイアドバンスAの音楽ソフトを開発する基礎（score: 20）</td><td class="link-col"><a href="https://zenn.dev/yutannihilation/articles/e513920c1d7b8e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rustを使ってゲームボーイアドバンス（GBA）向けの音楽制作・再生ソフトウェアを開発するための基礎知識を解説した記事。GBAのサウンドハードウェア仕様・Rustでの組み込み開発環境のセットアップ・音声データの生成方法など、基礎的な事項から丁寧に説明されている。レトロゲームハードウェア向けの組み込み開発とRustの組み合わせというテーマで、低レイヤー開発や音楽プログラミングに興味があるエンジニアにとって参考になる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">テスト管理ツールQaseとAIを組み合わせてテスト資産管理を自動化した試み（score: 12）</td><td class="link-col"><a href="https://zenn.dev/edash_tech_blog/articles/pulasqaaa-003" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスト管理ツール「Qase」とAIを組み合わせることで、テストケースの作成・整理・管理を自動化した試みを紹介した記事。手動でのテスト資産管理にかかる工数を削減しつつ品質維持のためのテスト戦略を維持する方法論が示されている。AIを品質保証プロセスに組み込むことのメリットと課題についても率直に言及されており、QAエンジニアにとって実践的な事例として参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">【永久0円】LLMのように振る舞うことを人間に勧める逆転発想の記事（score: 67）</td><td class="link-col"><a href="https://qiita.com/Syuparn/items/0001f93221d4d7556271" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「人間自身がLLMのように振る舞う」というユニークな逆転発想でAI時代のスキル習得を論じたユーモアあふれる記事。LLMが行うパターン認識・情報統合・文脈への適応を人間が意識的に鍛えることで、AIとの協働においても独自の価値を発揮できるという主張が展開されている。ネタ記事として楽しめながらも、AIと共存するエンジニアのあり方について考えさせる内容となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">「転職はまだ早い」と思っているエンジニア志望者へ—踏み出して学んだこと（score: 61）</td><td class="link-col"><a href="https://qiita.com/hitomin_poke/items/3f0d61d0ff4f082479c0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">異業種からエンジニアへの転職をためらっていた筆者が実際に行動することで得た経験と気づきを率直につづった記事。スキル不足への不安より行動が学びを加速させるという実体験に基づくメッセージで、転職を検討しているエンジニア志望者の背中を押す内容となっている。具体的なきっかけや学習プロセスについても触れられており、エンジニアへのキャリアチェンジの参考になる。</td></tr>
+<tr><td class="num">3</td><td class="title">StreamlitアプリをAWS Lambda MicroVMsでサーバーレスホスティングできるようになった（速報）（score: 40）</td><td class="link-col"><a href="https://qiita.com/moritalous/items/2f9ad10282775dcbd647" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">StreamlitアプリをAWSのLambda MicroVM環境にデプロイできるようになったことを速報として紹介した記事。サーバー管理不要でStreamlitを即時公開できるようになり、データサイエンティストや機械学習エンジニアのプロトタイプ共有が大幅に簡便化された。Amazon BedrockやClaudeとの組み合わせでAIアプリを手軽に公開できる実例も紹介されており、LLMアプリのデプロイに新しい選択肢が加わっている。</td></tr>
+<tr><td class="num">4</td><td class="title">テーブル設計をClaude Code Skillsでレビューする方法の提案（score: 29）</td><td class="link-col"><a href="https://qiita.com/kuma_3838/items/dd2e5075ea0d59ee3a36" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude CodeのSkills機能を活用してデータベースのテーブル設計をレビューする方法を提案した記事。設計のアンチパターンを自動検出するSkillsを定義し、コードレビューと同じ感覚でDB設計の品質チェックを行えるようにする具体的な手順が示されている。チーム開発においてDB設計の標準化・品質向上をAIで支援する実用的なアイデアとして注目されている。</td></tr>
+<tr><td class="num">5</td><td class="title">JenkinsのエラーログをClaudeに自動調査させSlackへ通知するn8nワークフロー構築（score: 22）</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/61985c6743b89aa6924b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Jenkins CIで失敗したビルドのログをn8nワークフローで自動収集し、Claude APIで原因を解析してSlackへ通知する仕組みの構築方法を解説した記事。手動でのエラーログ確認作業を完全自動化でき、開発チームのCIエラー対応時間を大幅に削減できる。n8nとAnthropic APIを組み合わせた実用的なDevOps自動化の具体的な実装例として参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">開発チームへの改善提案を効果的に行うために気をつけている5つのこと（score: 21）</td><td class="link-col"><a href="https://qiita.com/mu7kata/items/c146eb7c2885036c6b83" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発チームへの改善提案を受け入れられやすくするためのノウハウをまとめた記事。ECRS原則（排除・統合・入れ替え・簡略化）を活用した改善の考え方と、提案がチームに伝わりやすくなるコミュニケーション上のポイントが5つにまとめられている。技術力だけでなく組織での影響力の発揮を目指すエンジニアにとって実践的な内容。</td></tr>
+<tr><td class="num">7</td><td class="title">社内でTOTPの仕組みをハンズオン形式で教えてみた経験談（score: 17）</td><td class="link-col"><a href="https://qiita.com/qwertyhoge/items/6ef7a58fe38b1e9e0e31" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">TOTP（Time-based One-Time Password）の仕組みをチームメンバーに理解してもらうために社内ハンズオン授業を実施した経験を紹介した記事。TOTP生成の数学的な仕組みからハッシュ関数の役割まで、実際に手を動かしながら学べるカリキュラムの内容が共有されている。認証技術をチームに浸透させるための教育的なアプローチとして参考になる事例。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-01 06:37 JST
+</footer>
+</div>
+</body>
+</html>
