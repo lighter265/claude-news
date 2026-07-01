@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-02</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-02</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">GoogleがAIエージェント開発CLI「agents-cli」を公開、コーディングアシスタントをGoogle Cloudのエージェント専門家に</td><td class="link-col"><a href="https://github.com/google/agents-cli" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Googleが公開したagents-cliは、Claude CodeやCodexなど任意のコーディングアシスタントにスキルセットを追加し、Google CloudのGemini Enterprise Agent Platform上でAIエージェントを作成・評価・デプロイできるようにするCLIツール。既存のコーディングエージェントに専用コマンドとスキルを組み込むことで、エージェント構築の専門知識がなくてもGoogle Cloud上でのエージェント開発を可能にする狙いがある。PyPI経由でのインストールに対応し、ドキュメントやリリースノートも整備されている。AIエージェント開発の裾野を広げる大手クラウドベンダーの動きとして注目される。</td></tr>
+<tr><td class="num">2</td><td class="title">「使えるエージェントスキル」を謳う開発方法論フレームワーク「Superpowers」</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">obra氏が公開したSuperpowersは、コーディングエージェント向けの組み合わせ可能なスキル群と、それらを確実に使わせるための初期指示をセットにしたソフトウェア開発方法論フレームワーク。単なるプロンプト集ではなく、エージェントが実際にスキルを呼び出して運用することを前提に設計されている点が特徴とされる。プロジェクトはコミュニティ運営担当者を採用するなど活発に展開されており、Claude Codeなどのエージェント運用を体系化したいチームから関心を集めている。</td></tr>
+<tr><td class="num">3</td><td class="title">複数のコーディングエージェントを一つの端末で束ねる「herdr」</td><td class="link-col"><a href="https://github.com/ogulcancelik/herdr" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">herdrは、Claude CodeなどのコーディングエージェントをSSH先を含む任意の環境でまとめて実行し、それぞれの進捗（ブロック中・作業中・完了）を一目で確認できるターミナル向けエージェントマルチプレクサ。各エージェントは擬似端末ではなく本物の端末を割り当てられるため、フルスクリーンTUIも正しく描画される。ソケットAPIも備えており、複数エージェントを並行運用する開発フローの効率化を狙ったツールとなっている。</td></tr>
+<tr><td class="num">4</td><td class="title">自律型AIペネトレーションテストツール「Strix」がCI/CD統合を強化</td><td class="link-col"><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Strixは、アプリケーションの脆弱性を自律的に発見し修正まで提案するオープンソースのAIペネトレーションテストツール。GitHub ActionsやCI/CDパイプラインとシームレスに統合できるようになり、プルリクエストのたびに自動で脆弱性スキャンを行い、安全でないコードが本番環境に到達する前にブロックする運用が可能になった。セットアップなしで利用開始できる点も特徴で、AIを活用したセキュリティ診断の自動化を進める開発チームに向けたツールとなっている。</td></tr>
+<tr><td class="num">5</td><td class="title">生映像をClaude Codeとの対話だけで編集できる「video-use」</td><td class="link-col"><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">video-useは、生の動画素材が入ったフォルダを用意しClaude Codeと会話するだけで完成品のmp4を出力できるオープンソースの動画編集ツール。フィラーワードや無音区間の自動カット、シネマティックなど複数パターンのカラーグレーディングを自動適用でき、トーキングヘッド動画やチュートリアル、旅行動画など幅広いコンテンツに対応する。プリセットやメニュー操作を必要とせず、対話だけで編集が完結する設計が特徴で、browser-useチームによるクラウド版も提供されている。</td></tr>
+<tr><td class="num">6</td><td class="title">231以上のAIプロバイダーを1つのエンドポイントに集約する無料ゲートウェイ「OmniRoute」</td><td class="link-col"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OmniRouteは、Claude Code・Codex・Cursor・Cline・Copilotなど主要なコーディングツールを、231以上のAIプロバイダー（うち50以上は無料枠あり）に単一のエンドポイントで接続できるAIゲートウェイ。独自の圧縮方式によりトークン消費を15〜95%削減できるとしており、プロバイダー障害時の自動フェイルオーバーやMCP/A2A対応、マルチモーダルAPI、デスクトップ・PWA版も備える。複数AIプロバイダーの管理コストを下げたい開発者に向けたツールとして関心を集めている。</td></tr>
+<tr><td class="num">7</td><td class="title">Meta社内で8年育った巨大デザインシステム「Astryx」がオープンソース化</td><td class="link-col"><a href="https://github.com/facebook/astryx" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Astryxは、Meta社内で8年間にわたり育成され、13,000以上のアプリを支える同社最大規模のデザインシステムとして使われてきたものをオープンソース化したプロジェクト。ReactとStyleXの上に構築されており、人間だけでなくAIエージェントと共に開発することを前提とした設計になっている点が特徴とされる。フルカスタマイズ可能な設計思想で、大規模組織での実運用実績を持つデザインシステムとして注目されている。</td></tr>
+<tr><td class="num">8</td><td class="title">DevOps/インフラ開発者向け無料枠サービス一覧「free-for-dev」</td><td class="link-col"><a href="https://github.com/ripienaar/free-for-dev" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">free-for-devは、DevOpsやインフラ開発者にとって有用な無料枠を提供するSaaS・PaaS・IaaSサービスをまとめたキュレーションリスト。数多くの企業が無料ティアを提供する現在、どのサービスが自分たちの要件に合うかを探す手間を省くことを目的としている。継続的にコミュニティから更新が寄せられている定番のリファレンスリポジトリで、コスト意識の高い開発チームに広く参照されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">土木工事なしで設置できる1kW風力タービン（score: 18）</td><td class="link-col"><a href="https://www.windtowatt.com/index-en.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">windtowatt.comが紹介する小型風力タービンは、大規模な基礎工事や土木工事を必要とせずに設置できる設計を特徴とする1kW級の発電装置。従来の風力発電設備は基礎工事のコストと工期が導入のハードルになっていたが、この製品はその課題を解決することを狙っている。個人宅や小規模施設向けの分散型発電手段として、12件のコメントで実現可能性や発電効率について議論されている。</td></tr>
+<tr><td class="num">2</td><td class="title">労働者所有の協同組合2万2000以上の商品を検索できるディレクトリ（score: 12）</td><td class="link-col"><a href="https://www.workerowned.info/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">workerowned.infoは、労働者が所有・運営する協同組合(co-op)が提供する2万2000件以上の商品を検索できるディレクトリサイトとしてShow HNに投稿された。大企業の代替として労働者主体の経済活動を支援したい消費者向けに、商品カテゴリや所在地から協同組合発の商品を探せる仕組みを提供している。倫理的消費や協同組合経済への関心の高まりを背景に、4件のコメントで取り上げられた。</td></tr>
+<tr><td class="num">3</td><td class="title">「Old Reddit」がログインユーザー限定に、匿名アクセスは廃止へ（score: 12）</td><td class="link-col"><a href="https://old.reddit.com/r/modnews/comments/1ujtebf/logging_in_to_use_old_reddit/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Redditは旧デザインのold.reddit.comについて、今後はログインしたユーザーのみがアクセスできるようにする方針を公式に発表した。これまでold Redditは匿名でも閲覧できていたが、今回の変更によりログインが必須となり、非会員による閲覧やスクレイピングが制限される見込み。コミュニティ運営者向けの告知として掲載され、ユーザーの間で今後の利用体験への影響が話題となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">AnthropicのClaude Fable 5が正式復活、利用再開（score: 9）</td><td class="link-col"><a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropicの実験的モデル「Claude Fable 5」が公式ドキュメントの更新とともに利用可能になったことが伝えられた。Fableは表現力やクリエイティブな文章生成に強みを持つとされるモデルラインで、一時利用停止や制限が話題になっていた経緯がある。Anthropicの公式ページでモデル概要が説明されており、コミュニティでは復活の経緯や今後の位置づけについて関心が寄せられている。</td></tr>
+<tr><td class="num">5</td><td class="title">米国の司法判断が大西洋を越えるデータ移転の枠組みを揺るがす可能性（score: 8）</td><td class="link-col"><a href="https://www.heise.de/en/news/House-of-Cards-How-a-US-ruling-could-shatter-transatlantic-data-flow-11349678.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">heise.deの報道によると、米国内で下されたある司法判断が、EUと米国間のデータ移転を支える枠組み（データプライバシーフレームワーク）を崩しかねないと指摘されている。この判断が確定した場合、米国企業がEU市民のデータを扱う際の法的根拠が不安定になり、越境データ移転の実務に大きな混乱が生じる可能性がある。GDPR対応やクラウドサービス提供者にとって影響が大きいトピックとして注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">AI由来の電力需要急増でバージニア州の郡が学校に節電を要請（score: 4）</td><td class="link-col"><a href="https://www.tomshardware.com/tech-industry/data-centers/virginia-county-asks-all-employees-including-schools-to-save-power-due-to-ai-driven-electricity-price-hikes-states-400-plus-data-centers-steadily-increasing-demand-grid-expansion-and-pricing" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Tom's Hardwareの報道によれば、米バージニア州のある郡が学校を含む全職員に対し、AIデータセンターの急増による電気料金上昇を理由に節電を要請した。同州には400以上のデータセンターが集積しており、AI需要の拡大に伴う送電網の拡張と価格上昇が地域社会に直接的な影響を及ぼし始めている実例として報じられている。AIインフラの急拡大が地域の電力インフラや家計に及ぼす負担を象徴する事例として取り上げられた。</td></tr>
+<tr><td class="num">7</td><td class="title">「Fableに興奮できない、Karpathy氏にがっかりした」という投稿者の本音（score: 4）</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=48752417" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Hacker Newsの投稿者が、AnthropicのFableモデルおよびその文脈で言及されたAndrej Karpathy氏の姿勢に対し、期待外れだったとする率直な意見をTell HNとして投稿した。AIモデルの新リリースに対するコミュニティの熱狂と冷めた見方が併存している様子を示す内容で、著名な研究者への評価がAIコミュニティ内でも一様ではないことがうかがえる。2件のコメントで賛否を含む反応が寄せられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">仕様の曖昧さをコードで表現してチーム間の認識齟齬を防ぐ（score: 42）</td><td class="link-col"><a href="https://zenn.dev/tan_go238/articles/c94a78a2dea391" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自然言語による仕様書は解釈の幅が生まれやすく、チーム内で認識のズレを引き起こしやすいという課題に対し、仕様そのものをコードで表現し共有するアプローチを提案する記事。型システムやテストコードを仕様書代わりに使うことで、実行可能な形で意図を明示でき、ドキュメントとコードの乖離を防げると論じている。具体的なコード例を交えながら、プロダクト開発におけるコミュニケーションコストを下げるための実践的な考え方が紹介されている。</td></tr>
+<tr><td class="num">2</td><td class="title">優秀な人材が揃っていても組織が重くなる「認識負債」という概念（score: 28）</td><td class="link-col"><a href="https://zenn.dev/canly/articles/0c01a3124b8480" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個々のメンバーが優秀であっても組織全体の動きが重くなる現象を、時間とともに複利的に膨らむ「認識負債」という概念で説明する記事。AI時代にはコード生成や意思決定のスピードが上がる一方で、チーム内の共通理解を揃えるコストが相対的に増大し、これが負債として蓄積していくと指摘している。組織づくりや情報共有の設計を見直す必要性を、AI活用が進む現場の実感に基づいて論じている。</td></tr>
+<tr><td class="num">3</td><td class="title">ローカルLLM環境で軽量AIエージェント「Pi」を動かす試み（score: 24）</td><td class="link-col"><a href="https://zenn.dev/fuwamoekissaten/articles/bb5f5364838ced" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クラウドAPIに依存せず、ローカル環境で動作するLLMを使って「Pi」と呼ばれる軽量AIエージェントを構築・実行する方法を紹介した記事。モデル選定や実行環境のセットアップから、エージェントとしての振る舞いを実現するための工夫まで具体的に解説されている。プライバシーやコストの観点からローカルLLM活用に関心が高まる中、実践的な構築手順として参考になる内容。</td></tr>
+<tr><td class="num">4</td><td class="title">「遅いのはSQL」と思い込んでいたら原因はNested Loopの別箇所だった（score: 18）</td><td class="link-col"><a href="https://zenn.dev/dress_code/articles/postgres-distinct-on-nested-loop" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PostgreSQLのパフォーマンスチューニングにおいて、当初SQLクエリ自体が遅いと疑っていたところ、実際にはDISTINCT ONとネステッドループの組み合わせに起因する別の箇所がボトルネックだったという調査記録。実行計画（EXPLAIN）の読み解き方や、思い込みで原因を決めつけず地道に検証していくデバッグの過程が具体的に共有されている。パフォーマンス問題の切り分け手法として、他のエンジニアにも参考になる内容となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">5年9か月ぶりの転職で選んだ「EM×DevHR×DevRel」という複合キャリア（score: 17）</td><td class="link-col"><a href="https://zenn.dev/cscloud_blog/articles/929c31dadb2245" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">約6年ぶりに転職を決断した筆者が、エンジニアリングマネージャー（EM）・DevHR・DevRelという3つの役割を一つのポジションで担う道を選んだ理由を語る記事。組織開発と採用、コミュニティ活動を横断的に担うキャリアの魅力と難しさについて、自身の経験を踏まえて率直に述べられている。専門特化ではなく複数領域を横断するキャリアパスを検討しているエンジニアにとって参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">「claude -p」をファイル分類器として使い、中身ベースの自動整理ツールを開発（score: 14）</td><td class="link-col"><a href="https://zenn.dev/xtone/articles/copper-golem-claude-p" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeのヘッドレス実行オプション「claude -p」をファイル分類器として活用し、ファイル名ではなく中身の内容に基づいて自動でフォルダ整理を行うツールを開発した記事。LLMに個々のファイル内容を判定させ、適切なカテゴリへ振り分けるパイプラインの設計と実装が具体的に紹介されている。日常的なファイル管理業務をAIで効率化する実用的なアイデアとして参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">AI時代にこそ見直したいRailsのFat Controller/Fat Model対策18選（score: 14）</td><td class="link-col"><a href="https://zenn.dev/wwwave/articles/a9a8b38dc2cdb7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Ruby on Railsアプリケーションにありがちな「Fat Controller」「Fat Model」問題への対策として、責務分離を実現する設計パターンを18種類まとめた記事。AIによるコード生成が普及する中で、責務が明確に分離された設計になっているほどAIエージェントによる変更やレビューもしやすくなるという観点から、あらためて基本的な設計パターンの重要性を説いている。実務でよく使われるパターンが整理されており、Rails開発者の設計力向上に役立つ内容。</td></tr>
+<tr><td class="num">8</td><td class="title">プルリクエストごとに専用DBを持つプレビュー環境を構築した事例（score: 14）</td><td class="link-col"><a href="https://zenn.dev/estie/articles/59ec0ae59c3199" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プルリクエストを作成するたびに、そのPR専用のデータベースを自動プロビジョニングするプレビュー環境を構築した実践事例を紹介する記事。共有DBを使い回すことで発生していたテストデータの汚染やPR間の競合といった問題を解消し、各PRが独立した環境で安全に検証できるようになった経緯が具体的に解説されている。CI/CDパイプラインへの組み込み方法も含めて、開発体験を改善したい他チームの参考になる内容。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">人間自身がLLMのように振る舞うことを勧める逆転発想の人気記事（score: 299）</td><td class="link-col"><a href="https://qiita.com/Syuparn/items/0001f93221d4d7556271" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「人間がLLMのように振る舞う」というユニークな逆転の発想でAI時代のスキル習得を論じたユーモアあふれる記事。LLMが行うパターン認識・情報統合・文脈適応といった処理を人間が意識的に模倣・訓練することで、AIとの協働の中でも独自の価値を発揮できるという主張が展開されている。ネタ記事として楽しめる内容でありながら、AIと共存するエンジニアのあり方について考えさせられる構成となっており、大きな反響を呼んでいる。</td></tr>
+<tr><td class="num">2</td><td class="title">各分野のおすすめ技術書75冊を一挙にまとめた読書ガイド（score: 41）</td><td class="link-col"><a href="https://qiita.com/miruky/items/8b3e5908a24952c10783" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS・セキュリティ・AIなど幅広い技術分野にわたるおすすめの技術書を75冊まとめて紹介した記事。初心者向けの入門書から専門性の高い書籍まで分野別に整理されており、これから学びたい技術領域を選ぶ際の指針として活用できる構成になっている。技術書選びに迷うエンジニアにとって網羅的なリファレンスとして参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">開発チームへの改善提案を受け入れられやすくする5つの心がけ（score: 39）</td><td class="link-col"><a href="https://qiita.com/mu7kata/items/c146eb7c2885036c6b83" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発チームへの改善提案が受け入れられやすくなるための実践的なノウハウをまとめた記事。ECRS原則（排除・統合・入れ替え・簡略化）を軸にした改善の考え方と、提案内容がチームに伝わりやすくなるコミュニケーション上のポイントが5つに整理されている。技術力だけでなくチーム内での影響力発揮を目指すエンジニアにとって実践的な内容となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">エンジニアが経験の中で自然と身につける知識・常識・文化12選（score: 35）</td><td class="link-col"><a href="https://qiita.com/ko-he-8/items/7ca90575c5fff758993e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">明文化されることは少ないが、エンジニアが経験を積む中で自然と身につけていく知識・常識・暗黙のルールを12項目にまとめた記事。新人エンジニアが戸惑いやすいポイントを中心に、業界特有の慣習やコミュニケーションの作法が具体例とともに紹介されている。エンジニア文化への理解を深めたい初心者や、新人育成に関わるメンバーにとって参考になる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">AWSのAIエージェント「Kiro」をRHEL運用のアドバイザーとして活用する方法（score: 17）</td><td class="link-col"><a href="https://qiita.com/duelist2020jp/items/6f42828bc5a4043309e3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSのAIコーディングエージェント「Kiro」を、Red Hat Enterprise Linux（RHEL）環境の運用アドバイザーとして活用する方法を紹介した記事。RHEL10環境でMCPサーバーを介してKiroと連携させることで、システム設定や運用上の疑問にその場で相談できる体制を構築している。AIエージェントをインフラ運用の実務に組み込む具体的な事例として、Linux運用者にとって参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">AI時代に他職種から信頼されるエンジニアに共通する5つの特徴（score: 17）</td><td class="link-col"><a href="https://qiita.com/Kensuke_Shibata/items/028269e26b4a0e6c0242" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIによってエンジニアの役割が変化する中でも、他職種のメンバーから信頼を得られるエンジニアに共通する特徴を5つにまとめた記事。技術力そのものよりも、コミュニケーションの取り方や課題解決への向き合い方が信頼構築の鍵になると論じられている。AIとの協働が広がる組織において、エンジニアが自身の価値をどう発揮すべきかを考える上で参考になる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">動的グローバルIP環境でもセルフホストを安全に運用するCloudflare WAF自動更新の仕組み（score: 17）</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/a98eebcad49029304b4e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">固定グローバルIPを持たない環境でセルフホストサービスを運用する際、Cloudflare WAFの許可IPリストをJenkinsで自動的に追従させることでセキュリティを維持する仕組みを紹介した記事。IPアドレスが変化するたびに手動でWAF設定を更新する手間をなくし、Kubernetes環境と組み合わせたCI/CDパイプラインで許可リストの更新を自動化している。動的IP環境でも安全にセルフホストを続けたい個人開発者やチームに向けた実用的な内容。</td></tr>
+<tr><td class="num">8</td><td class="title">Oracleのグローバル分散AIデータベース「GDAI」の仕組みを整理（score: 16）</td><td class="link-col"><a href="https://qiita.com/shirok/items/ed7856c563798df39a27" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Oracleが提供するグローバル分散AIデータベース「GDAI（Global Distributed Autonomous Database for AI）」の仕組みと特徴を整理した記事。Oracle Cloud上でAIワークロード向けに自律的に分散管理されるデータベース基盤の設計思想やユースケースについて解説している。AIアプリケーションのデータ基盤としてOracleクラウドを検討している開発者にとって参考になる内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-02 06:34 JST
+</footer>
+</div>
+</body>
+</html>
