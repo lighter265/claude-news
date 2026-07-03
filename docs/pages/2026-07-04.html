@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-04</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-04</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">自律型AIペネトレーションテストツール「Strix」、CI/CDへの組み込みが進む</td><td class="link-col"><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Strixは、アプリケーションの脆弱性を自律的に発見し修正まで提案するオープンソースのAIペネトレーションテストツール。GitHub ActionsをはじめとするCI/CDパイプラインにセットアップ不要で組み込めるようになり、プルリクエストのたびに自動で脆弱性スキャンを実行して安全でないコードが本番環境に到達する前にブロックできる。AIによるセキュリティ診断の自動化を進めたい開発チームから関心を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">「原始人のように話す」ことでトークンを75%削減するClaude Codeスキル「caveman」</td><td class="link-col"><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JuliusBrussee/cavemanは、Claude Codeなどのエージェントに簡潔な原始人風の話し方をさせることで出力トークンを大幅に削減する遊び心のあるスキル/プラグイン。技術的な正確性は保ったまま、通常69トークンかかる説明を大幅に短縮できるとしており、Codex・Gemini・Cursor・Windsurf・Cline・Copilotなど30以上のツールに対応する。エージェントの応答コストを抑えたい開発者の間で話題になっている。</td></tr>
+<tr><td class="num">3</td><td class="title">AIエージェントにChrome DevTools相当の操作権限を与える「chrome-devtools-mcp」</td><td class="link-col"><a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">chrome-devtools-mcpは、AntigravityやClaude、Cursor、CopilotなどのコーディングエージェントがChrome DevToolsを介して実際に動作しているChromeブラウザを操作・検査できるようにするMCPサーバー。信頼性の高い自動化、詳細なデバッグ、パフォーマンス分析をエージェントから行えるようにし、MCPを使わないCLIも提供されている。ブラウザ操作を伴うAIエージェント開発の基盤として注目されている。</td></tr>
+<tr><td class="num">4</td><td class="title">生の動画素材をClaude Codeとの対話だけで編集できる「video-use」</td><td class="link-col"><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">video-useは、生の動画素材が入ったフォルダを用意しClaude Codeと会話するだけで完成品のmp4を出力できるオープンソースの動画編集ツール。フィラーワードやテイク間の無音区間を自動でカットし、複数パターンのシネマティックなカラーグレーディングも自動適用できる。プリセットやメニュー操作なしで対話だけで編集が完結する設計が特徴で、browser-useチームによるクラウド版も提供されている。</td></tr>
+<tr><td class="num">5</td><td class="title">OpenAIが公式提供、Claude CodeからCodexを呼び出す「codex-plugin-cc」</td><td class="link-col"><a href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">codex-plugin-ccは、Claude Codeの中からOpenAIのCodexを呼び出し、コードレビューやタスクの委譲を行えるようにする公式プラグイン。`/codex:review`による通常のレビューに加え、あえて厳しく指摘させる`/codex:adversarial-review`、作業を引き継ぐ`/codex:transfer`など複数のコマンドを備える。既存のClaude Codeワークフローを保ったままCodexの能力を併用したい開発者向けのツール。</td></tr>
+<tr><td class="num">6</td><td class="title">AIエージェントに新機能を追加する標準仕様「Agent Skills」</td><td class="link-col"><a href="https://github.com/agentskills/agentskills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">agentskills/agentskillsは、AIエージェントに専門知識やワークフローを追加するための軽量なオープン形式「Agent Skills」の仕様とドキュメントを公開するプロジェクト。SKILL.mdというメタデータ付きファイルを中心に、スキルごとにスクリプトなどを同梱できる構造になっている。特定ベンダーに依存しない共通フォーマットとしてエージェント拡張エコシステムの標準化を狙っている。</td></tr>
+<tr><td class="num">7</td><td class="title">コーディングエージェント向けの開発方法論「Superpowers」</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Superpowersは、組み合わせ可能な複数のスキルと初期指示を土台に、コーディングエージェントに一貫した開発手法を実践させるためのフレームワーク。単なるツール集ではなく「機能する開発方法論」を掲げており、コミュニティとコード整備を担うフルタイム人材の募集も進めている。エージェントに再現性のある開発プロセスを踏ませたいチームから注目されている。</td></tr>
+<tr><td class="num">8</td><td class="title">ビジュアルでAIエージェント・ワークフローを構築できる「Langflow」</td><td class="link-col"><a href="https://github.com/langflow-ai/langflow" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Langflowは、AI活用のエージェントやワークフローを視覚的に構築・デプロイできるプラットフォームで、開発者向けの可視化オーサリング体験とAPI・MCPサーバーを標準搭載する。主要なLLMやベクトルデータベースに幅広く対応し、構築したワークフローをそのまま任意のアプリケーションから呼び出せるツールとして利用できる。ノーコードに近い形でAIエージェントを組み立てたい開発者に向けたプロジェクト。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">欧州議会に対するスパイ活動、Pegasusでの盗聴が発覚（score: 50）</td><td class="link-col"><a href="https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Citizen Labの調査により、スパイウェアを調査していた欧州議会の委員会メンバーがPegasusスパイウェアによって端末を侵害されていたことが明らかになった。監視技術の乱用を調査する立場の人物自身が標的にされていたという点で、欧州における商用スパイウェアの野放図な利用実態への懸念を強めている。政治的監視とプライバシー保護のあり方を問う内容として、3件のコメントが寄せられている。</td></tr>
+<tr><td class="num">2</td><td class="title">「FreeBSDが私のRAMを食い尽くした」、メモリ使用量の誤解を解説（score: 42）</td><td class="link-col"><a href="https://crocidb.com/post/freebsd-ate-my-ram/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">FreeBSDを使い始めたユーザーがメモリ使用量の表示を見て驚いた経験を出発点に、ZFSのARCキャッシュなどFreeBSD特有のメモリ管理の仕組みを解説するブログ記事。空きメモリが少なく見えても実際には積極的にキャッシュへ活用されているだけで枯渇しているわけではない、という誤解されやすいポイントを丁寧に説明している。BSD系OSのメモリモデルに詳しくない開発者にとって参考になる内容で、9件のコメントが寄せられている。</td></tr>
+<tr><td class="num">3</td><td class="title">無料のインターネットメタ検索エンジン「SearXNG」（score: 32）</td><td class="link-col"><a href="https://github.com/searxng/searxng" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SearXNGは、複数の検索エンジンの結果を横断的に集約して表示する、プライバシー重視のオープンソースメタ検索エンジン。特定の検索エンジンへの追跡や広告表示を避けつつ、自分でホストして検索体験をカスタマイズできる点が特徴。プライバシーを重視した検索環境を自前で構築したい開発者から関心を集め、8件のコメントが寄せられている。</td></tr>
+<tr><td class="num">4</td><td class="title">AIエージェント向けバージョン管理ツール「Oak: Git for Agents」（score: 16）</td><td class="link-col"><a href="https://oak.space/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Oakは、複数のAIエージェントが並行して作業する際に生じるコード変更の衝突や履歴管理の課題を解決することを狙った、Git的な発想に基づくバージョン管理ツール。人間の開発フローを前提に設計された従来のGitとは異なり、エージェントによる自動的かつ頻繁なコミットや差分の扱いに最適化されている。AIエージェントを用いた開発が広がる中でのインフラ整備の一例として、11件のコメントで議論されている。</td></tr>
+<tr><td class="num">5</td><td class="title">テスラのロボタクシー、マイアミでサービス開始（score: 16）</td><td class="link-col"><a href="https://twitter.com/robotaxi/status/2073030246161367153" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テスラの完全自動運転タクシーサービス「Robotaxi」が新たにマイアミでの展開を開始したことが公式アカウントの投稿で発表された。既存の展開都市に加えて対象地域を拡大する動きで、自動運転サービスの商用展開ペースが引き続き注目されている。自動運転技術の実用化状況を占う事例として取り上げられている。</td></tr>
+<tr><td class="num">6</td><td class="title">「個人プロジェクトが大きくなりすぎてペットのように扱えなくなっている」という指摘（score: 15）</td><td class="link-col"><a href="https://www.nnehdi.me/p/pet-projects-are-getting-too-big" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI支援コーディングの普及により個人の趣味プロジェクトが以前よりも急速に肥大化し、もはや気軽に手を入れられる「ペット」のような規模ではなくなっているという現象を論じたブログ記事。AIによる開発速度の向上が、個人開発者の管理能力やモチベーションの持続可能性にどう影響するかを考察している。AI時代の個人開発のあり方について、11件のコメントで議論が交わされている。</td></tr>
+<tr><td class="num">7</td><td class="title">あらゆる場面で使えるClaudeの絵文字集「ClawdMojis」（score: 13）</td><td class="link-col"><a href="https://github.com/afspies/ClawdMoji" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ClawdMojisは、Claude（愛称Clawd）をモチーフにした表情豊かな絵文字・スタンプ画像を集めたGitHubリポジトリ。Slackやチャットツールなどで使えるカスタム絵文字素材として公開されており、Claudeコミュニティの遊び心あるプロジェクトの一つとして紹介されている。実用性よりもコミュニティ文化として、1件のコメントが寄せられている。</td></tr>
+<tr><td class="num">8</td><td class="title">Kagi、7月2日の更新でAIトグル機能などを追加（score: 10）</td><td class="link-col"><a href="https://kagi.com/changelog#10959" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">有料検索エンジンKagiの変更履歴（チェンジログ）で、検索結果画面にAI機能のオン・オフを切り替えられるトグルスイッチが追加されたことなどが紹介された。細かな検索結果表示の改善（見出しと末尾の扱いなど）も併せて行われており、ユーザーが検索体験をより細かくコントロールできるようになっている。Kagiの継続的な機能改善の一例として取り上げられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claudeに「オントロジー」を持たせるとコスト半分・速度3倍になるかもしれないという提案（score: 182）</td><td class="link-col"><a href="https://zenn.dev/takupeso/articles/claude-ontology-knowledge-structuring" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claudeなど大規模言語モデルに、ドメイン知識を体系化した「オントロジー」を明示的に持たせることで、トークン消費量を半分程度に抑えつつ処理速度を3倍程度まで高速化できる可能性があるという提案を紹介する記事。曖昧な自然言語による文脈提供に頼るのではなく、構造化された知識表現をコンテキストとして与えることでモデルの推論効率が改善されるという仮説に基づいている。具体的な知識構造化の設計方針が紹介されており、LLM活用のコスト最適化に関心のある開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">2</td><td class="title">10か月CLIで使ってきたClaude Codeを、Desktopメインに移行した12の理由（score: 130）</td><td class="link-col"><a href="https://zenn.dev/canly/articles/428767121d7dc2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">約10か月間CLI版のClaude Codeを使い続けてきた筆者が、Desktop版をメインの作業環境として移行した理由を12個にまとめて紹介する記事。ターミナル単体では得づらいGUI操作性や視認性、複数セッション管理のしやすさなど、Desktop版ならではの利点が具体的に語られている。長期間CLIを使い込んだ経験者ならではの視点で書かれており、Claude Codeの利用環境を見直したい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">コードを仕様書にするために関数型プログラミングをする（score: 77）</td><td class="link-col"><a href="https://zenn.dev/satto_workspace/articles/62cdc01e1d0e97" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自然言語やコメントによる仕様書は解釈にブレが生じやすいという課題に対し、関数型プログラミングのスタイルで書かれたコード自体を仕様書として機能させるアプローチを論じる記事。型シグネチャや純粋関数によって入出力の意図を明示し、実装と仕様の乖離を防ぐ考え方を具体例とともに解説している。コードと仕様の一貫性を保ちたい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">4</td><td class="title">優秀な人材が揃っていても組織が重くなる「認識負債」という概念（score: 75）</td><td class="link-col"><a href="https://zenn.dev/canly/articles/0c01a3124b8480" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個々のメンバーが優秀であっても組織全体の動きが重くなる現象を、時間とともに複利的に膨らむ「認識負債」という概念で説明する記事。AI時代にはコード生成や意思決定のスピードが上がる一方で、チーム内の共通理解を揃えるコストが相対的に増大し、これが負債として蓄積していくと指摘している。組織づくりや情報共有の設計を見直す必要性を、AI活用が進む現場の実感に基づいて論じている。</td></tr>
+<tr><td class="num">5</td><td class="title">「遅いのはSQL」と思い込んでいたら原因はNested Loopの別箇所だった（score: 64）</td><td class="link-col"><a href="https://zenn.dev/dress_code/articles/postgres-distinct-on-nested-loop" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PostgreSQLのパフォーマンスチューニングにおいて、当初SQLクエリ自体が遅いと疑っていたところ、実際にはDISTINCT ONとネステッドループの組み合わせに起因する別の箇所がボトルネックだったという調査記録。実行計画（EXPLAIN）の読み解き方や、思い込みで原因を決めつけず地道に検証していくデバッグの過程が具体的に共有されている。パフォーマンス問題の切り分け手法として、他のエンジニアにも参考になる内容となっている。</td></tr>
+<tr><td class="num">6</td><td class="title">tmuxから乗り換え、AIエージェント時代のターミナルマルチプレクサ「herdr」を使ってみた（score: 47）</td><td class="link-col"><a href="https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のAIコーディングエージェントを同時に走らせる開発スタイルに合わせて、従来のtmuxからターミナルマルチプレクサ「herdr」へ乗り換えた体験を紹介する記事。各エージェントの進捗状況（ブロック中・作業中・完了）を一目で把握できる点や、擬似端末ではなく本物の端末が割り当てられるためTUIも正しく描画される点が評価されている。複数エージェントを並行運用する開発者にとって参考になる乗り換え体験記。</td></tr>
+<tr><td class="num">7</td><td class="title">ローカルLLM環境で軽量AIエージェント「Pi」を動かす試み（score: 45）</td><td class="link-col"><a href="https://zenn.dev/fuwamoekissaten/articles/bb5f5364838ced" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クラウドAPIに依存せず、ローカル環境で動作するLLMを使って「Pi」と呼ばれる軽量AIエージェントを構築・実行する方法を紹介した記事。モデル選定や実行環境のセットアップから、エージェントとしての振る舞いを実現するための工夫まで具体的に解説されている。プライバシーやコストの観点からローカルLLM活用に関心が高まる中、実践的な構築手順として参考になる内容。</td></tr>
+<tr><td class="num">8</td><td class="title">Claude Code「Fable 5」にローカルLLM用シェル支援CLIを作らせたら、コードより仕事の進め方に驚かされた（score: 38）</td><td class="link-col"><a href="https://zenn.dev/gys/articles/fable5-local-llm-ask-cli" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">筆者がClaude Codeの「Fable 5」モデルに、ローカルLLMの操作を補助するシェル支援CLIツールを開発させた際の体験記。出来上がったコードの品質そのものよりも、タスクの分解の仕方や作業の進め方といったエージェントとしての振る舞いに驚かされたと述べている。AIにツール開発を任せる際の意思決定プロセスに関心がある開発者にとって参考になる内容。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">エンジニアがいつのまにか知っている知識・常識・文化12選（score: 145）</td><td class="link-col"><a href="https://qiita.com/ko-he-8/items/7ca90575c5fff758993e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">明文化されることは少ないが、エンジニアが経験を積む中で自然と身につけていく知識・常識・暗黙のルールを12項目にまとめた記事。新人エンジニアが戸惑いやすいポイントを中心に、業界特有の慣習やコミュニケーションの作法が具体例とともに紹介されている。エンジニア文化への理解を深めたい初心者や、新人育成に関わるメンバーにとって参考になる内容。</td></tr>
+<tr><td class="num">2</td><td class="title">AWS AgentCoreの最新機能でRAG&amp;AIエージェント構築に入門するハンズオン（score: 55）</td><td class="link-col"><a href="https://qiita.com/minorun365/items/7d06434cf830df9c54ff" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSのAgentCoreを使ってRAG（検索拡張生成）とAIエージェントの構築を体験するハンズオン記事。最新機能を用いた具体的なセットアップ手順や実装例が段階的に紹介されており、実際に手を動かしながらAgentCoreの使い方を学べる構成になっている。AWS上でAIエージェント開発を始めたいエンジニアにとって、実践的な入門コンテンツとして参考になる。</td></tr>
+<tr><td class="num">3</td><td class="title">「何の言語を学べばいいかわからない」人のためのWeb開発主要5言語整理（score: 52）</td><td class="link-col"><a href="https://qiita.com/masa20057/items/8de518e172395d48a269" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プログラミング学習を始めるにあたり「何の言語を学べばいいかわからない」と迷う人に向けて、Web開発でよく使われる主要5言語の特徴や使いどころを整理した記事。それぞれの言語の得意分野や学習難易度、キャリアパスとの関連性が分かりやすく解説されている。初めて言語選びをするプログラミング学習者にとって、意思決定の指針になる内容。</td></tr>
+<tr><td class="num">4</td><td class="title">コードを書く前に知っておきたかった、開発現場の5つのステップ（score: 43）</td><td class="link-col"><a href="https://qiita.com/masa20057/items/aa2b8f3e8112228ca46c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">実際にコードを書き始める前に、開発現場でどのようなステップを踏んで仕事が進むのかを5段階に整理した記事。要件確認から設計、実装、レビュー、リリースまでの流れを、初学者が見落としがちな観点とともに解説している。学習中にコードを書くことばかりに意識が向きがちな人にとって、実務の全体像をつかむ助けになる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">RailsとDBインデックス〜なぜindexがあると速いのか〜（score: 38）</td><td class="link-col"><a href="https://qiita.com/akachiryo/items/5299101bce85b5970776" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Ruby on Railsのアプリケーションを題材に、データベースにインデックスを張るとなぜクエリが速くなるのかを、B-treeなどの内部構造から解説する記事。インデックスの効果が発揮される条件と、逆に効果が薄いケースについても具体例を交えて説明している。DB設計やパフォーマンスチューニングの基礎を学び直したいRails開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">Railsで学ぶDFS/BFS入門、「深さ優先」と「幅優先」で木構造をたどる（score: 37）</td><td class="link-col"><a href="https://qiita.com/akachiryo/items/025683560974d762fa85" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Ruby on Railsのコードを題材に、グラフ探索アルゴリズムの基本であるDFS（深さ優先探索）とBFS（幅優先探索）の考え方を解説する記事。木構造をたどる際の計算量やそれぞれのアルゴリズムの向き不向きについて、具体的なコード例を交えながら説明されている。アルゴリズムの基礎を実務のコードと結びつけて学び直したいRails開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">M365 Copilotを使って好きなパワーポイントアイコンをつくろう（score: 21）</td><td class="link-col"><a href="https://qiita.com/shyamagu/items/3081df80ec8505b5ac72" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Microsoft 365 Copilotの画像生成機能を活用し、PowerPointで使うオリジナルアイコンを作成する方法を紹介した記事。プロンプトの与え方やスライドへの取り込み手順を具体的に解説しており、既存の素材集に頼らずに資料の見た目を差別化したい人向けの内容になっている。社内資料作成の効率化にCopilotを活用したいビジネスユーザーにも参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Slackだけでタスク管理を完結！かんばんTODOリスト（score: 20）</td><td class="link-col"><a href="https://qiita.com/zawa-kun/items/0041579ceec156b0cf7a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">別途タスク管理ツールを導入しなくても、普段使っているSlack上だけでかんばん形式のTODOリストを運用する方法を紹介した記事。タスクの追加・移動・完了といった操作をSlackのUIやワークフロー機能内で完結させる工夫が具体的に解説されている。ツールを増やさずに手軽にタスク管理を始めたいチームにとって参考になる内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-04 06:32 JST
+</footer>
+</div>
+</body>
+</html>
