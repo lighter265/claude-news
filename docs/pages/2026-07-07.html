@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-07</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-07</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">プライバシー重視のセルフホスト型AI議事録アシスタント「meetily」</td><td class="link-col"><a href="https://github.com/Zackriya-Solutions/meetily" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">meetilyは、Parakeet/Whisperによる高速な音声認識、話者分離、Ollamaによる要約生成をRust上に構築した、完全ローカル動作のAI会議アシスタント。クラウドへの音声データ送信を必要とせず、macOSとWindows向けにセルフホストできるオープンソースの議事録作成ツールとして提供されている。プライバシーを重視する企業や個人が、外部サービスに依存せず会議の文字起こしと要約を行いたい場合の選択肢として注目を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">OpenAI公式、Claude CodeからCodexを呼び出せる「codex-plugin-cc」を公開</td><td class="link-col"><a href="https://github.com/openai/codex-plugin-cc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">codex-plugin-ccは、Claude Codeの中からOpenAIのCodexを呼び出し、コードレビューやタスクの委譲を行えるようにするOpenAI公式プラグイン。読み取り専用の通常レビューを行う`/codex:review`に加え、あえて厳しく指摘させる`/codex:adversarial-review`や作業を引き継ぐ`/codex:transfer`など複数のコマンドを備える。既存のClaude Codeのワークフローを維持したままCodexの能力を組み合わせたい開発者向けのツールとして再び注目を集めている。</td></tr>
+<tr><td class="num">3</td><td class="title">Anthropic・OpenAI・Googleなど主要AIのシステムプロンプトを収集したリポジトリが再注目</td><td class="link-col"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">このリポジトリは、AnthropicのClaude Fable 5やOpus 4.8、Claude Code、OpenAIのChatGPT 5.5 Thinkingや Codex、GoogleのGemini、xAIのGrokなど、主要AIサービスのシステムプロンプトを抽出・整理して公開している。各社が実際にモデルへ与えている振る舞いのルールや制約を閲覧でき、AIの「隠れたルール」を扱った報道でも取り上げられたことがある。プロンプトエンジニアリングや各社のガードレール設計を比較・研究したい開発者から関心を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">自律型AIペネトレーションテストツール「Strix」、CI/CDへの組み込みが進む</td><td class="link-col"><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Strixは、アプリケーションの脆弱性を自律的に発見し修正案まで提示するオープンソースのAIペネトレーションテストツール。GitHub ActionsをはじめとするCI/CDパイプラインへセットアップ不要で統合できるようになり、プルリクエストごとに自動で脆弱性スキャンを実行できる。安全でないコードが本番環境に到達する前にブロックする運用を実現したい開発チームから引き続き関心を集めている。</td></tr>
+<tr><td class="num">5</td><td class="title">複数のAIコーディングエージェントを一括管理するターミナルマルチプレクサ「herdr」</td><td class="link-col"><a href="https://github.com/ogulcancelik/herdr" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">herdrは、複数のAIコーディングエージェントを1つのターミナルからまとめて実行・管理できるエージェントマルチプレクサ。各エージェントが「ブロック中」「作業中」「完了」のどの状態にあるかを一目で把握でき、擬似端末ではなく本物のターミナルが割り当てられるためフルスクリーンのTUIも正しく描画される。手元のマシンからサーバーまで、SSHでアクセスできる環境であればどこでもエージェントを実行できる設計で、複数エージェントを並行運用する開発者から注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">Alibaba製、ブラウザ拡張なしでWebページを自然言語操作する「page-agent」</td><td class="link-col"><a href="https://github.com/alibaba/page-agent" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">page-agentは、ブラウザ拡張機能やヘッドレスブラウザを使わず、ページに埋め込むJavaScriptだけでWeb UIを自然言語で操作できるAlibaba製のGUIエージェント。テキストベースのDOM操作で動作する設計により、既存のWebページに手軽に組み込める点が特徴。エンドユーザー向けのWeb操作自動化やアクセシビリティ支援など、幅広い用途への応用が期待されている。</td></tr>
+<tr><td class="num">7</td><td class="title">ターミナルで動くAnthropic公式のエージェント型コーディングツール「Claude Code」</td><td class="link-col"><a href="https://github.com/anthropics/claude-code" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeは、ターミナル上で動作し、コードベースを理解しながら自然言語での指示だけでルーティン作業の実行やコード説明、Gitワークフローの処理などを支援するAnthropic公式のエージェント型コーディングツール。開発者の日常的な作業を自動化・高速化することを目的として継続的に開発が進められている。GitHub Trendingで引き続き高い注目を集めている代表的なAIコーディングエージェントの一つ。</td></tr>
+<tr><td class="num">8</td><td class="title">「原始人のように話す」ことでトークンを65%削減するClaude Codeスキル「caveman」</td><td class="link-col"><a href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">cavemanは、Claude CodeなどのAIコーディングエージェントに簡潔な原始人風の話し方をさせることで、出力トークンを65%削減できるスキル・プラグイン。技術的な正確性は保ったまま応答を大幅に簡素化する設計で、Codex・Gemini・Cursor・Windsurf・Cline・Copilotなど30以上のエージェントツールに対応する。エージェントの応答コストを抑えたい開発者の間で話題になっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「1Mトークンあたりの価格」という指標はもはや意味をなさないという指摘（score: 90）</td><td class="link-col"><a href="https://janilowski.pl/en/blog/2026/price-per-m-tokens/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">LLM APIの料金比較で広く使われる「1Mトークンあたりの価格」という指標が、実際のコスト構造を正しく反映していないと論じるブログ記事。プロンプトキャッシュ、思考トークン、入出力トークンの価格差、モデルごとの効率(同じタスクをこなすのに必要なトークン数の違い)を考慮しなければ、見かけの単価だけでは実運用コストを比較できないと指摘している。AIサービスの導入・比較検討をする開発者や企業にとって、料金表の読み方を見直す材料として49件のコメントを集め議論となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">AI時代でも「プログラミングを学ぶ価値」はなお健在だという主張（score: 28）</td><td class="link-col"><a href="https://stevekrouse.com/learn-to-code" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">生成AIがコードを書ける時代においても、プログラミングを学ぶことには依然として大きな価値があると論じるエッセイ。AIに指示を出すだけでなく、コードの仕組みを理解していることで、AIの出力を適切に評価・修正し、より複雑な問題にも対応できるようになると主張している。AIコーディングツールの普及によって学習の動機付けが揺らぐ中、10件のコメントを集めて教育的観点からの議論を呼んでいる。</td></tr>
+<tr><td class="num">3</td><td class="title">わずか10ドルのSDRで気象衛星の137MHz信号を受信し画像化する試み（score: 10）</td><td class="link-col"><a href="https://www.jonhilty.com/satelliteimaging" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">安価なソフトウェア無線(SDR)受信機を使い、上空を通過する気象衛星が送信する137MHz帯のアナログ信号を受信・デコードして画像を復元する個人プロジェクトを紹介する記事。信号処理の基礎から、ノイズの多い受信データを実際の衛星写真に変換するまでの手順が具体的に解説されている。低コストで宇宙関連の信号処理を体験したいホビイストから関心を集め、2件のコメントがついている。</td></tr>
+<tr><td class="num">4</td><td class="title">スペインの太陽光発電価格が下落しすぎ、投資家が撤退を模索（score: 5）</td><td class="link-col"><a href="https://www.bloomberg.com/news/newsletters/2026-06-30/spain-s-solar-is-so-cheap-investors-are-looking-for-an-exit" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">スペインで太陽光発電の電力価格が想定以上に下落し、収益性の低下を懸念した投資家が保有資産の売却先を探し始めているという報道。再生可能エネルギーへの投資が急拡大した結果、供給過剰による価格低下という副作用が顕在化している実態を伝えている。エネルギー市場における再エネ投資のリスクを示す事例として、1件のコメントで取り上げられている。</td></tr>
+<tr><td class="num">5</td><td class="title">AMD「Ryzen AI Halo」、ローカルAI実行を手軽にするが価格は高め（score: 4）</td><td class="link-col"><a href="https://www.theregister.com/ai-and-ml/2026/07/06/amds-ryzen-ai-halo-makes-local-ai-look-easy-but-at-4k-easy-doesnt-come-cheap/5266711" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AMDのRyzen AI Halo搭載機が、クラウドを使わずローカル環境で大規模言語モデルを動かすハードルを下げている一方、実際には4000ドル前後と決して安くはないという実機レビュー記事。ローカルLLM実行の性能自体は好評価だが、コストパフォーマンスの観点では万人向けとは言えないと結論づけている。ローカルAI実行環境の選定を検討するユーザーにとって参考になる内容で、1件のコメントがついている。</td></tr>
+<tr><td class="num">6</td><td class="title">DeepSeek V4、エージェント用途のトークンシェアを急速に拡大（score: 4）</td><td class="link-col"><a href="https://openrouter.ai/blog/insights/deepseek-v4-adoption/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenRouterのデータをもとに、中国発のオープンモデルDeepSeek V4が、エージェント型タスクにおけるトークン利用シェアを急速に伸ばしているという分析記事。価格性能比の高さから、コーディングエージェントなど自動化ワークフローでの採用が進んでいる様子を数値で示している。オープンモデルの実運用での存在感が増している証左として、1件のコメントを集めている。</td></tr>
+<tr><td class="num">7</td><td class="title">データセンターの排熱が周辺地域の気温上昇を招いているという報告（score: 4）</td><td class="link-col"><a href="https://coloradosun.com/2026/07/03/data-centers-make-nearby-neighborhoods-hotter/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIブームに伴い急増するデータセンターが、排熱によって周辺の住宅地の気温を実際に押し上げているという調査報道。冷却設備からの排熱が地域の微気候に与える影響を、具体的な事例とともに紹介している。データセンター建設が地域住民の生活環境に及ぼす影響について、1件のコメントで議論されている。</td></tr>
+<tr><td class="num">8</td><td class="title">Microsoft、ゲームスタジオid Softwareの大半を解雇へ（score: 4）</td><td class="link-col"><a href="https://bsky.app/profile/dark1x.bsky.social/post/3mpyugwk5yc27" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">マイクロソフト傘下のゲームスタジオid Software(「DOOM」シリーズなどで知られる)の従業員の大半が解雇される見通しだと報じるSNS投稿を基にしたニュース。近年進むマイクロソフトのゲーム部門における人員削減の一環とみられており、業界内で懸念の声が上がっている。ゲーム業界のレイオフ動向を追うスレッドとして3件のコメントが寄せられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">10か月CLIで使ってきたClaude Codeを、Desktopメインに移行した12の理由（score: 188）</td><td class="link-col"><a href="https://zenn.dev/canly/articles/428767121d7dc2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">約10か月間CLI版のClaude Codeを使い続けてきた筆者が、Desktop版をメインの作業環境として移行した理由を12個にまとめて紹介する記事。ターミナル単体では得づらいGUI操作性や視認性、複数セッション管理のしやすさなど、Desktop版ならではの利点が具体的に語られている。長期間CLIを使い込んだ経験者ならではの視点で書かれており、Claude Codeの利用環境を見直したい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">2</td><td class="title">AIに8割書かせたコード、半年運用の答え合わせ。効いた3つと、腐った3つ（score: 147）</td><td class="link-col"><a href="https://zenn.dev/rapls/articles/7a1bac83df8b21" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェントにコードの8割を書かせるスタイルで開発したプロダクトを半年間実運用した結果を振り返る記事。実際に効果を発揮した工夫と、逆にうまくいかず技術的負債として腐ってしまった判断をそれぞれ3つずつ挙げて具体的に検証している。AI主導の開発スタイルを長期運用した際のリアルな知見として、同様の開発体制を検討する開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">tmuxから乗り換え、AIエージェント時代のターミナルマルチプレクサ「herdr」を使ってみた（score: 110）</td><td class="link-col"><a href="https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のAIコーディングエージェントを同時に走らせる開発スタイルに合わせて、従来のtmuxからターミナルマルチプレクサ「herdr」へ乗り換えた体験を紹介する記事。各エージェントの進捗状況（ブロック中・作業中・完了）を一目で把握できる点や、擬似端末ではなく本物の端末が割り当てられるためTUIも正しく描画される点が評価されている。複数エージェントを並行運用する開発者にとって参考になる乗り換え体験記。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Code「Fable 5」にローカルLLM用シェル支援CLIを作らせたら、コードより仕事の進め方に驚かされた（score: 102）</td><td class="link-col"><a href="https://zenn.dev/gys/articles/fable5-local-llm-ask-cli" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">筆者がClaude Codeの「Fable 5」モデルに、ローカルLLMの操作を補助するシェル支援CLIツールを開発させた際の体験記。出来上がったコードの品質そのものよりも、タスクの分解の仕方や作業の進め方といったエージェントとしての振る舞いに驚かされたと述べている。AIにツール開発を任せる際の意思決定プロセスに関心がある開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">「とある部長のObsidian」、マネジメント層のノート術と情報整理（score: 93）</td><td class="link-col"><a href="https://zenn.dev/canly/articles/173479ac3e9824" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">部長職にある筆者が、日々の業務における情報整理や意思決定の記録にObsidianをどのように活用しているかを紹介する記事。個人のメモにとどまらず、チームマネジメントや意思決定プロセスの可視化にノートツールを役立てている点が特徴的に語られている。マネジメント業務における知識管理のあり方に関心がある読者にとって参考になる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">すでに4800スター、話題の「Loop Engineering」とは何か（score: 87）</td><td class="link-col"><a href="https://zenn.dev/acntechjp/articles/0c63b5b08bbdb9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub上で4800以上のスターを集め話題となっている「Loop Engineering」という考え方を紹介する記事。AIエージェントに単発の指示を与えるのではなく、タスクの完了を検証しながら繰り返し実行させる「ループ」を設計することこそがエンジニアの新しい仕事になる、という主張を軸に解説している。AIエージェントを使った継続的な自動化ワークフローの設計に関心がある開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">Fable 5をトークン破産させずに使い倒す、オーケストレーター専任という運用術（score: 86）</td><td class="link-col"><a href="https://zenn.dev/yui/articles/740da24e9ee419" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">高性能だがトークン消費の大きいClaude「Fable 5」を、実装作業ではなく複数エージェントを指揮する「オーケストレーター」役に徹させることで、コストを抑えつつ強みを活かす運用方法を紹介する記事。実際の作業(コーディングなど)は別のモデルに任せ、Fable 5には計画立案やタスク分解、進捗管理などの上流工程だけを担当させる構成が具体的に解説されている。複数モデルを使い分けてコストとパフォーマンスを両立させたい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">8</td><td class="title">Cloudflare Workers + better-authで全リクエストが無応答になった「hanging promise」の罠（score: 59）</td><td class="link-col"><a href="https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloudflare Workers上でbetter-authを使った認証処理を実装した際に、特定条件下で全リクエストが応答を返さなくなるという障害に遭遇した調査記録。原因は、awaitされずに残った「hanging promise」がWorkersのランタイムの実行モデルと干渉し、後続のリクエスト処理をブロックしてしまうことにあったと突き止めている。Cloudflare Workersのようなエッジランタイム特有の非同期処理の落とし穴として、同様の構成を使う開発者への注意喚起となっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">バイブコーディングだけで本当にアプリはリリースできるのか、エンジニアの実体験（score: 114）</td><td class="link-col"><a href="https://qiita.com/yutaka_kozuka/items/cc3be5930b972130885d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIとの対話を中心にほぼ実装を任せる「バイブコーディング」というスタイルだけで、実際にアプリをリリースできるのかを検証した記事。AWS上でのインフラ構築を含め、AI駆動での個人開発をどこまで進められたか、実際に直面した課題や工夫が具体的に共有されている。バイブコーディングの実用性や限界に関心がある個人開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">2</td><td class="title">新しいHTTPメソッド「QUERY」をHono + Bunで実装してみた（score: 112）</td><td class="link-col"><a href="https://qiita.com/maaaashi/items/6eefccb7361f64607865" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">HTTPの標準化が議論されている新しいメソッド「QUERY」について、BunランタイムとHonoフレームワークを使って実装を試みた記事。GETメソッドの制約(URL長やキャッシュの扱い)を超えて、複雑な検索条件をリクエストボディで安全に送信できるという「QUERY」の特徴を、具体的なコード例とともに解説している。新しいWeb標準の動向を実装レベルで把握したい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">3</td><td class="title">「日本企業風GitHub」パロディに学ぶ、JTC業務システムが警告文字だらけになる理由（score: 93）</td><td class="link-col"><a href="https://qiita.com/Shiro_Shihi/items/4928640d01c78480962b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">日本の伝統的企業(JTC)の業務システムにありがちな、警告文と注意書きで画面が埋め尽くされたUIを風刺した「日本企業風GitHub」のパロディを題材に、なぜそのようなデザインが生まれるのかを考察する記事。稟議文化や責任回避、過去のトラブル対応の積み重ねといった組織的な背景がUI/UXに反映されているという視点で分析している。日本企業特有のプロダクトマネジメントやUI設計の課題に関心があるエンジニアにとって示唆に富む内容。</td></tr>
+<tr><td class="num">4</td><td class="title">量子コンピュータを基礎から体系的に学ぶためのロードマップ（score: 53）</td><td class="link-col"><a href="https://qiita.com/optimisuke/items/a2463fab85ee9778847c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">量子コンピュータの仕組みを基礎から体系的に理解したい人向けに、学習すべきトピックを段階的に整理したロードマップ記事。量子ビットや量子ゲートといった基礎理論から、Qiskitを使った実装、さらには耐量子暗号までを見据えた学習の道筋が示されている。量子コンピューティングという広範な分野にこれから取り組みたいエンジニアにとって、学習計画の指針として参考になる内容。</td></tr>
+<tr><td class="num">5</td><td class="title">「保守業務って地味…」と思っていた新人時代の自分へ贈る振り返り（score: 46）</td><td class="link-col"><a href="https://qiita.com/masa20057/items/d3c540c868c3413704b7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">新人の頃は地味で目立たない仕事だと感じていた保守・運用業務について、経験を積んだ現在の視点から改めてその重要性や面白さを振り返る記事。障害対応や既存システムの理解を通じて得られる学びが、実は新規開発以上にエンジニアとしての基礎力を鍛えると述べている。保守運用業務にやりがいを見出せずにいる若手エンジニアにとって、モチベーションを見直すきっかけになる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">このプロンプトをAIエージェントに貼り付けるだけでKaggleのベースラインが作れる（score: 26）</td><td class="link-col"><a href="https://qiita.com/Isaka-code/items/8fafc5cc522b5eb655da" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Kaggleのコンペティションに参加する際、AIエージェントにそのまま貼り付けるだけでベースラインモデルを構築できるプロンプトを紹介する記事。データの読み込みから前処理、モデル構築、提出ファイルの作成までの一連の流れを、AIエージェントに任せる形で自動化する具体的な手順が示されている。Kaggle初心者やベースライン構築の手間を省きたい参加者にとって参考になる内容。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Codeの「dataviz」スキルでデータ可視化が驚くほど楽になった（score: 23）</td><td class="link-col"><a href="https://qiita.com/leomarokun/items/74212606fbf4f01d82dd" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeに組み込める「dataviz」スキルを実際に使ってみたところ、グラフやダッシュボードの生成品質と手軽さに驚いたという体験記。配色やレイアウトの一貫性を保ちながらチャートを自動生成できる点や、指示だけで実用的な可視化が得られる点が具体的に紹介されている。データ可視化業務にAIエージェントを活用したい開発者にとって参考になる内容。</td></tr>
+<tr><td class="num">8</td><td class="title">1Passwordがマスターパスワードを一度もサーバーに送信しない仕組み（score: 22）</td><td class="link-col"><a href="https://qiita.com/kenimo49/items/d1151389d17e50ad5564" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">パスワード管理サービス1Passwordが、ユーザーのマスターパスワードを一度もサーバー側で受信・保存していない設計になっている仕組みを解説する記事。SRP(Secure Remote Password)というプロトコルを用いて、パスワードそのものを送信せずに認証を行う暗号技術の考え方が具体的に説明されている。パスワードマネージャーのセキュリティ設計に関心があるエンジニアにとって、ゼロ知識認証の実例として参考になる内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-07 06:35 JST
+</footer>
+</div>
+</body>
+</html>
