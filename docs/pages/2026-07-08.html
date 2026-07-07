@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-08</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-08</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">主要AIの「システムプロンプト」を集めたリーク集</td><td class="link-col"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropic（Claude Fable 5、Opus 4.8、Claude Code など）、OpenAI（ChatGPT 5.5、Codex）、Google（Gemini 3.5/3.1、Antigravity）、xAI の Grok、さらに Cursor や Copilot など各種ツールの内部システムプロンプトを収集・整理したリポジトリ。各AIが実際にどのような指示で動いているかを文書化する目的で、随時更新されている。The Washington Post でも取り上げられた。プロンプト設計の実例を学ぶ資料として注目を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">AIコーディングエージェント向けの実務スキル集</td><td class="link-col"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">シニアエンジニアが実際に使うワークフローや品質ゲート、ベストプラクティスを「スキル」としてパッケージ化し、AIエージェントが一貫して従えるようにするプロジェクト。DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP という開発フェーズに沿って構成されている。アイデアから仕様、コード、テスト、QA、出荷までの各段階を体系化することを狙う。プロダクション品質を意識した設計が特徴。</td></tr>
+<tr><td class="num">3</td><td class="title">ローカル完結のプライバシー重視AI議事録ツール「Meetily」</td><td class="link-col"><a href="https://github.com/Zackriya-Solutions/meetily" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クラウドを使わず100%ローカルで動作するAI会議アシスタント。Parakeet/Whisper による高速なリアルタイム文字起こし、話者分離、Ollama を使った要約機能を備え、Rust 上に構築されている。macOS と Windows に対応するセルフホスト型・オープンソースの議事録ツールとして提供される。プライバシーを重視する組織や個人向けを想定している。</td></tr>
+<tr><td class="num">4</td><td class="title">WiFi電波を使って壁越しに人を検知する「RuView」</td><td class="link-col"><a href="https://github.com/ruvnet/RuView" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">カメラを一切使わず、市販のWiFi信号を利用して空間内の人の存在・動き・呼吸・心拍などをリアルタイムに検知するオープンソースプロジェクト。壁越しや暗闇でも動作し、ウェアラブル端末も不要で、物理現象のみを利用する点を特徴として掲げる。Home Assistant をはじめとする主要スマートホーム基盤とネイティブに連携できる。見守りや生体モニタリングへの応用が想定されている。</td></tr>
+<tr><td class="num">5</td><td class="title">Web収集・スクレイピングAPI「Firecrawl」</td><td class="link-col"><a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Webの検索・スクレイピング・操作を大規模に行えるAPI。ソースを見つけて内容を抽出し、エージェントがそのまま扱えるクリーンなMarkdownや構造化データに変換する。JavaScript主体のページを含め約96%のWebをカバーし、プロキシ設定の手間なく安定して取得できる点を強みとする。オープンソースであると同時にホスティング版も提供される。</td></tr>
+<tr><td class="num">6</td><td class="title">AIタグ付け付きセルフホスト型ブックマークアプリ「Karakeep」</td><td class="link-col"><a href="https://github.com/karakeep-app/karakeep" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">リンク・メモ・画像・PDFなどを何でも保存できるセルフホスト可能なブックマークアプリ（旧称 Hoarder）。AIによる自動タグ付けや全文検索を備え、リンクのタイトル・説明・画像の自動取得にも対応する。ブックマークをリスト分けしたり、他者と同じリストを共同編集したりできる。大量の情報を蓄積したいユーザー向けに設計されている。</td></tr>
+<tr><td class="num">7</td><td class="title">軽量・高速なインプロセス型ベクトルDB「Zvec」</td><td class="link-col"><a href="https://github.com/alibaba/zvec" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">アプリケーションに直接組み込める、軽量で高速なインプロセス型のオープンソースベクトルデータベース。Alibaba Group 内で実運用されてきた実績を持ち、低レイテンシかつスケーラブルな類似度検索を最小限のセットアップで提供する。v0.5.0 では全文検索（FTS）がネイティブ対応された。外部サーバを立てずにベクトル検索を扱いたい用途に向く。</td></tr>
+<tr><td class="num">8</td><td class="title">ターミナル常駐の「エージェント多重化」ツール「herdr」</td><td class="link-col"><a href="https://github.com/ogulcancelik/herdr" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のコーディングエージェントを1つのターミナルでまとめて動かせるマルチプレクサ。どのエージェントがブロック中・作業中・完了かを一目で把握でき、各エージェントには本物のターミナルが割り当てられるため、フルスクリーンのTUIも正しく描画される。ローカル・サーバ・SSH接続先など、エージェントが既に動いている場所で実行できる。複数エージェント運用の可視化を狙う。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">EUで販売される全車両にドライバーの顔を映すカメラが義務化</td><td class="link-col"><a href="https://allaboutcookies.org/eu-mandatory-distracted-driver-system" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">EUで新たに販売される自動車すべてに、運転者の顔に向けたカメラ（脇見・眠気などの注意力低下を検知するシステム）の搭載が義務付けられたと報じられている。安全性向上を目的とする一方、車内で顔を常時監視されることへのプライバシー上の懸念も指摘されている。記事はこの仕組みの内容と論点を整理している。HNでも最も多くの注目を集めた話題の一つ。</td></tr>
+<tr><td class="num">2</td><td class="title">「AI議事録ツールを持ち込まないでほしい」への反論記事</td><td class="link-col"><a href="https://firesphere.dev/articles/yes-actually-i-do-fucking-mind" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">会議にAI文字起こし・議事録ツールを持ち込むことを歓迎しない立場の記事に対する、反論・応答のブログ投稿。会話が本人の同意なく記録・要約されることへの抵抗感や、AIノートテイカーをめぐるマナー・合意形成の是非が論点になっている。AI議事録ツールの普及に伴う対人的・倫理的な摩擦を扱った議論として関心を集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">TypeScript 7.0 がなぜGoで書き直されたのか</td><td class="link-col"><a href="https://spf13.com/p/go-the-agentic-language/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">TypeScript 7.0 のコンパイラが Go で再実装された背景を、「Goはエージェント（AI）時代の言語だ」という観点から論じた記事。パフォーマンスや並行処理、ツールチェーンとしての扱いやすさなど、Goが選ばれた理由を考察している。言語選定をめぐる設計判断と、AIコーディング時代に適した言語像について述べている。</td></tr>
+<tr><td class="num">4</td><td class="title">AIデータセンター需要で米製造業の電力コストが急騰</td><td class="link-col"><a href="https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIデータセンターの急増による電力需要の高まりが、米国の製造業者の電力コストを押し上げていると報じる記事。データセンターと一般産業・家庭が同じ電力網を奪い合う構図が生まれ、電気料金の上昇圧力につながっているという。AIインフラ拡大が実体経済のコストに波及している事例として取り上げられている。</td></tr>
+<tr><td class="num">5</td><td class="title">Windows 11 のバグが最大500GBのディスクを浪費する</td><td class="link-col"><a href="https://itsfoss.com/news/windows-11-cam-bug/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Windows 11 に、最大で約500GBものディスク領域を無駄に消費してしまう不具合が見つかったと報じる記事。特定条件下でファイルが肥大化・蓄積し、大量のストレージが失われるという。影響を受けるユーザーや回避策についても触れられている。ストレージ管理に関わる問題として注目された。</td></tr>
+<tr><td class="num">6</td><td class="title">Meta が総額1.4兆ドルの集団訴訟に直面</td><td class="link-col"><a href="https://www.engadget.com/2209332/meta-is-facing-1-4-trillion-in-state-lawsuits-over-social-media-addiction/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SNSの依存性をめぐり、Meta が米国の複数州から総額1.4兆ドル規模の訴訟に直面していると報じられている。特に若年層への安全性・依存性の問題が争点となっており、企業の存続を揺るがしかねない規模のリスクとして扱われている。プラットフォームの設計責任を問う動きの一環として注目を集めた。</td></tr>
+<tr><td class="num">7</td><td class="title">「AIが生成したコードを削除します、週1万ドルで」</td><td class="link-col"><a href="https://odra.dev/slopfix/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIが自動生成した不要・低品質なコード（いわゆる「slop」）を削除するサービスを、週1万ドルで提供するという内容の記事。AIコーディングの普及で増えた冗長・保守困難なコードを取り除くことに価値があるという主張が背景にある。AI生成コードの負債化という課題を逆手にとったユニークな取り組みとして話題になった。</td></tr>
+<tr><td class="num">8</td><td class="title">Claude Cowork がモバイルとWebに対応</td><td class="link-col"><a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropic の「Claude Cowork」がモバイルおよびWebに拡大したことを伝える記事。コーディングエージェントの競争が、開発の枠を超えてオフィス業務全般へと広がりつつある状況を論じている。AIエージェントが日常的な業務環境に組み込まれていく流れの一例として取り上げられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIに8割書かせたコードを半年運用した「答え合わせ」</td><td class="link-col"><a href="https://zenn.dev/rapls/articles/7a1bac83df8b21" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIに約8割を書かせたコードを半年間運用した経験を振り返り、うまく機能した3点と、逆に「腐って」しまった3点を具体的に整理した記事。AIコーディングのメリットと落とし穴を、実運用の実感に基づいて論じている。どのような使い方が保守性を保ち、どこで負債化するのかという教訓を共有している。多くの読者の関心を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">AIエージェント時代のマルチプレクサ「herdr」にtmuxから乗り換えた</td><td class="link-col"><a href="https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のAIコーディングエージェントを扱うために、tmux から新しいターミナルマルチプレクサ「herdr」へ移行した体験談。各エージェントの状態（作業中・完了・ブロック中）を可視化できる点や、実運用での使い勝手を紹介している。複数エージェントの並行運用が一般化するなかでのツール選択の実例として書かれている。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Code「Fable 5」にローカルLLM用シェル支援CLIを作らせた</td><td class="link-col"><a href="https://zenn.dev/gys/articles/fable5-local-llm-ask-cli" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code の「Fable 5」を使い、ローカルLLMを活用するシェル支援CLIを開発させた体験を紹介した記事。出来上がったコードそのものより、AIが仕事をどう進めていくか（段取りや意思決定の仕方）に驚かされたという点を中心に述べている。AIエージェントとの協働のあり方について示唆を与えている。</td></tr>
+<tr><td class="num">4</td><td class="title">Fable 5をトークン破産させず使い倒す運用術</td><td class="link-col"><a href="https://zenn.dev/yui/articles/740da24e9ee419" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">高性能だがトークン消費の大きい Fable 5 を、コストを抑えつつ活用するための運用方法を解説した記事。Fable 5 を実装担当ではなくオーケストレーター（指揮役）に徹させ、実作業は他のモデルに任せる分担が要点。トークン消費を管理しながら性能を引き出すための実践的な工夫が紹介されている。</td></tr>
+<tr><td class="num">5</td><td class="title">Cloudflare Workers + better-auth で全リクエストが無応答になる罠</td><td class="link-col"><a href="https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloudflare Workers と better-auth を組み合わせた際に、全リクエストが応答を返さなくなる問題の原因と対策を解説した記事。原因は解決されない（hanging）Promise にあり、非同期処理の扱いが落とし穴になっていたという。同様の構成でハマりやすいポイントとして、具体的な調査過程と回避策が共有されている。</td></tr>
+<tr><td class="num">6</td><td class="title">コードレビュー指摘300件を分類したら効いていたのは2種類だけ</td><td class="link-col"><a href="https://zenn.dev/kenimo49/articles/code-review-300-comments-2-effective-categories" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">3ヶ月分・約300件のコードレビュー指摘を分類・分析し、実際に効果があったのは2種類のカテゴリだけだったという結論を示した記事。数多くの指摘のうち、本当に品質やチームに寄与するレビューは何かを定量的に振り返っている。レビューの労力配分を見直すヒントとして書かれている。</td></tr>
+<tr><td class="num">7</td><td class="title">C# で出来ること一覧 2026年版（.NET 10）</td><td class="link-col"><a href="https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">.NET 10 時代の C# で実現できることを幅広くまとめた2026年版の一覧記事。Web、デスクトップ、モバイル、クラウド、AI、ゲームなど、C#/.NET が現在カバーする用途を体系的に整理している。これから C# を学ぶ人や、技術選定の参考にしたい人に向けた俯瞰資料となっている。</td></tr>
+<tr><td class="num">8</td><td class="title">Claude Code（Opus 4.8）が数分固まる問題、188セッション実測</td><td class="link-col"><a href="https://zenn.dev/yuki_fujisawa/articles/a155d388e61acc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code（Opus 4.8）が作業中に数分間フリーズする問題について、188セッションを実測して原因を調査した記事。結論として、原因はAPIやネットワークではなかったとし、実際のボトルネックを突き止めていく過程を記録している。同様の遅延に悩むユーザー向けの検証事例として書かれている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「日本企業風GitHub」パロディに学ぶ、なぜJTC業務システムは警告と文字で埋まるのか</td><td class="link-col"><a href="https://qiita.com/Shiro_Shihi/items/4928640d01c78480962b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「日本企業（JTC）風のGitHub」を模したパロディを題材に、日本企業の業務システムがなぜ警告文や説明文で画面を埋め尽くしがちなのかを、UX/UIやプロダクトマネジメントの観点から考察した記事。過剰な注意書きが生まれる組織的・文化的背景を掘り下げている。業務システム設計の「あるある」を通じて、使いやすさとは何かを問い直している。</td></tr>
+<tr><td class="num">2</td><td class="title">新しいHTTPメソッド「QUERY」をHono + Bunで実装してみる</td><td class="link-col"><a href="https://qiita.com/maaaashi/items/6eefccb7361f64607865" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">提案されている新しいHTTPメソッド「QUERY」を、Hono と Bun を使って実装してみた記事。QUERY はリクエストボディを持てる検索用メソッドで、GET の制約（ボディを扱いにくい）と POST の意味的な曖昧さを補うものとして議論されている。実装を通じて、その動作や使いどころを具体的に確かめている。</td></tr>
+<tr><td class="num">3</td><td class="title">1Passwordはあなたのマスターパスワードを一度も受信していない</td><td class="link-col"><a href="https://qiita.com/kenimo49/items/d1151389d17e50ad5564" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">1Password がユーザーのマスターパスワードをサーバ側で一切受け取らずに認証を成立させる仕組みを解説した記事。SRP（Secure Remote Password）などの技術により、パスワード自体を送信せずに本人確認を行う流れを説明している。パスワードマネージャの安全性を支える暗号技術を、仕組みの面からわかりやすく紹介している。</td></tr>
+<tr><td class="num">4</td><td class="title">「保守業務って地味」と思っていた新人の自分へ</td><td class="link-col"><a href="https://qiita.com/masa20057/items/d3c540c868c3413704b7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">保守・運用業務を「地味」と感じていた新人時代の自分に向けて書いた振り返り記事。実際には保守業務がシステムやチームにとって重要であり、そこで得られる学びやキャリア上の価値が大きいことを、経験を踏まえて伝えている。保守運用に対する見方を前向きに捉え直すきっかけとして書かれている。</td></tr>
+<tr><td class="num">5</td><td class="title">量子コンピュータを完全に理解したい人のためのロードマップ</td><td class="link-col"><a href="https://qiita.com/optimisuke/items/a2463fab85ee9778847c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">量子コンピュータを体系的に学びたい人に向けて、学習の道筋を示したロードマップ記事。基礎となる数学・物理から、QISKIT などのツール、量子計算やポスト量子暗号といった応用トピックまでを段階的に整理している。技術戦略の観点も交え、どこから何を学べばよいかの指針を提供している。</td></tr>
+<tr><td class="num">6</td><td class="title">このプロンプトを貼るだけでKaggleのベースラインを作る</td><td class="link-col"><a href="https://qiita.com/Isaka-code/items/8fafc5cc522b5eb655da" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに貼り付けるだけで、Kaggle コンペのベースライン（初期モデル）を自動的に作らせるためのプロンプトを紹介した記事。機械学習の初期実装をエージェントに任せることで、素早くスタート地点を用意できるという狙い。Codex や Claude Code といったエージェントとの併用を想定した実践的なテンプレートとして共有されている。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Code の dataviz スキルが凄かった</td><td class="link-col"><a href="https://qiita.com/leomarokun/items/74212606fbf4f01d82dd" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code の「dataviz」スキルを使ってダッシュボードやデータ可視化を作成した体験記。デザインの整合性やアクセシビリティに配慮した、質の高いビジュアルが自動生成される点に驚いたという内容。AIによるデータ可視化の実力を、実際の出力例を交えて紹介している。</td></tr>
+<tr><td class="num">8</td><td class="title">テスト距離という考え方で回帰テストを整理する</td><td class="link-col"><a href="https://qiita.com/daikou223/items/bb50627a899ef1dc2da8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「テスト距離」という概念を用いて、回帰テストの範囲や優先度を整理する考え方を提案した記事。変更箇所とテスト対象の「距離」に着目することで、どのテストをどこまで実行すべきかを判断しやすくする狙いがある。回帰テストの肥大化や実行コストに悩む現場向けに、設計・品質管理の観点から整理している。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-08 06:34 JST
+</footer>
+</div>
+</body>
+</html>
