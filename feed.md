@@ -1,53 +1,51 @@
-# 技術ニュース要約 — 2026-07-08
+# 技術ニュース要約 — 2026-07-09
 
 ## GitHub Trending
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 主要AIの「システムプロンプト」を集めたリーク集 | Anthropic（Claude Fable 5、Opus 4.8、Claude Code など）、OpenAI（ChatGPT 5.5、Codex）、Google（Gemini 3.5/3.1、Antigravity）、xAI の Grok、さらに Cursor や Copilot など各種ツールの内部システムプロンプトを収集・整理したリポジトリ。各AIが実際にどのような指示で動いているかを文書化する目的で、随時更新されている。The Washington Post でも取り上げられた。プロンプト設計の実例を学ぶ資料として注目を集めている。 | https://github.com/asgeirtj/system_prompts_leaks |
-| 2 | AIコーディングエージェント向けの実務スキル集 | シニアエンジニアが実際に使うワークフローや品質ゲート、ベストプラクティスを「スキル」としてパッケージ化し、AIエージェントが一貫して従えるようにするプロジェクト。DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP という開発フェーズに沿って構成されている。アイデアから仕様、コード、テスト、QA、出荷までの各段階を体系化することを狙う。プロダクション品質を意識した設計が特徴。 | https://github.com/addyosmani/agent-skills |
-| 3 | ローカル完結のプライバシー重視AI議事録ツール「Meetily」 | クラウドを使わず100%ローカルで動作するAI会議アシスタント。Parakeet/Whisper による高速なリアルタイム文字起こし、話者分離、Ollama を使った要約機能を備え、Rust 上に構築されている。macOS と Windows に対応するセルフホスト型・オープンソースの議事録ツールとして提供される。プライバシーを重視する組織や個人向けを想定している。 | https://github.com/Zackriya-Solutions/meetily |
-| 4 | WiFi電波を使って壁越しに人を検知する「RuView」 | カメラを一切使わず、市販のWiFi信号を利用して空間内の人の存在・動き・呼吸・心拍などをリアルタイムに検知するオープンソースプロジェクト。壁越しや暗闇でも動作し、ウェアラブル端末も不要で、物理現象のみを利用する点を特徴として掲げる。Home Assistant をはじめとする主要スマートホーム基盤とネイティブに連携できる。見守りや生体モニタリングへの応用が想定されている。 | https://github.com/ruvnet/RuView |
-| 5 | Web収集・スクレイピングAPI「Firecrawl」 | Webの検索・スクレイピング・操作を大規模に行えるAPI。ソースを見つけて内容を抽出し、エージェントがそのまま扱えるクリーンなMarkdownや構造化データに変換する。JavaScript主体のページを含め約96%のWebをカバーし、プロキシ設定の手間なく安定して取得できる点を強みとする。オープンソースであると同時にホスティング版も提供される。 | https://github.com/firecrawl/firecrawl |
-| 6 | AIタグ付け付きセルフホスト型ブックマークアプリ「Karakeep」 | リンク・メモ・画像・PDFなどを何でも保存できるセルフホスト可能なブックマークアプリ（旧称 Hoarder）。AIによる自動タグ付けや全文検索を備え、リンクのタイトル・説明・画像の自動取得にも対応する。ブックマークをリスト分けしたり、他者と同じリストを共同編集したりできる。大量の情報を蓄積したいユーザー向けに設計されている。 | https://github.com/karakeep-app/karakeep |
-| 7 | 軽量・高速なインプロセス型ベクトルDB「Zvec」 | アプリケーションに直接組み込める、軽量で高速なインプロセス型のオープンソースベクトルデータベース。Alibaba Group 内で実運用されてきた実績を持ち、低レイテンシかつスケーラブルな類似度検索を最小限のセットアップで提供する。v0.5.0 では全文検索（FTS）がネイティブ対応された。外部サーバを立てずにベクトル検索を扱いたい用途に向く。 | https://github.com/alibaba/zvec |
-| 8 | ターミナル常駐の「エージェント多重化」ツール「herdr」 | 複数のコーディングエージェントを1つのターミナルでまとめて動かせるマルチプレクサ。どのエージェントがブロック中・作業中・完了かを一目で把握でき、各エージェントには本物のターミナルが割り当てられるため、フルスクリーンのTUIも正しく描画される。ローカル・サーバ・SSH接続先など、エージェントが既に動いている場所で実行できる。複数エージェント運用の可視化を狙う。 | https://github.com/ogulcancelik/herdr |
+| 1 | Claude Code 上で動く AI 就職活動フレームワーク | Claude Code を基盤にした求人応募支援ツール。フォークして自分のプロフィールを記入すると、Claude が求人票を評価し、履歴書のカスタマイズ、カバーレターの作成、面接準備までを自動で行う。独立したオープンソースプロジェクトで、特定企業の公認ではないと明記されている。 | https://github.com/MadsLorentzen/ai-job-search |
+| 2 | 完全ローカルで動くプライバシー重視の AI 議事録アシスタント | Rust 製の会議アシスタント Meetily。Parakeet/Whisper による従来比 4 倍高速なリアルタイム文字起こし、話者分離、Ollama を用いた要約を備える。処理はすべてローカルで完結しクラウド不要で、macOS と Windows に対応する自己ホスト型ツールとして紹介されている。 | https://github.com/Zackriya-Solutions/meetily |
+| 3 | AI コーディングエージェント向けの実務レベル「スキル」集 | シニアエンジニアが使うワークフローや品質ゲート、ベストプラクティスをスキルとしてパッケージ化したリポジトリ。DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP という開発フェーズに沿って、AI エージェントが一貫した手順で作業できるようにすることを狙う。 | https://github.com/addyosmani/agent-skills |
+| 4 | WiFi 信号を使ってカメラなしで人や呼吸を検知する | 市販の WiFi 信号を空間認識に変えるプロジェクト RuView。壁越しや暗所でも、人の検知、呼吸・心拍の計測、動きの追跡が可能で、カメラやウェアラブルを使わない点が特徴。Home Assistant など主要スマートホーム基盤とネイティブ連携するとしている。 | https://github.com/ruvnet/RuView |
+| 5 | 各社 AI のシステムプロンプトを収集したリポジトリ | Anthropic（Claude Fable 5、Opus 4.8、Claude Code など）、OpenAI（ChatGPT 5.5、Codex）、Google（Gemini 3.5 Flash など）、xAI の Grok や各種コーディングツールから抽出したとされるシステムプロンプトを文書化。定期更新をうたい、報道でも取り上げられたと記載されている。 | https://github.com/asgeirtj/system_prompts_leaks |
+| 6 | AI エージェント向けの高速・軽量サンドボックス | RustVMM と KVM を基盤にした Tencent Cloud のサンドボックスサービス CubeSandbox。ハードウェア分離された環境を 60ms 未満で生成でき、単一ノードから複数ノードクラスタへの拡張に対応。E2B SDK と互換性があると説明されている。 | https://github.com/TencentCloud/CubeSandbox |
+| 7 | GPU 不要で CPU 上で動く軽量 TTS | Kyutai Labs による text-to-speech ツール Pocket TTS。GPU や Web API を使わず CPU で効率的に動作するよう設計され、pip install と関数呼び出しだけで音声生成ができる。Python 3.10〜3.14、PyTorch 2.5 以上に対応する。 | https://github.com/kyutai-labs/pocket-tts |
 
 ## Hacker News
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | EUで販売される全車両にドライバーの顔を映すカメラが義務化 | EUで新たに販売される自動車すべてに、運転者の顔に向けたカメラ（脇見・眠気などの注意力低下を検知するシステム）の搭載が義務付けられたと報じられている。安全性向上を目的とする一方、車内で顔を常時監視されることへのプライバシー上の懸念も指摘されている。記事はこの仕組みの内容と論点を整理している。HNでも最も多くの注目を集めた話題の一つ。 | https://allaboutcookies.org/eu-mandatory-distracted-driver-system |
-| 2 | 「AI議事録ツールを持ち込まないでほしい」への反論記事 | 会議にAI文字起こし・議事録ツールを持ち込むことを歓迎しない立場の記事に対する、反論・応答のブログ投稿。会話が本人の同意なく記録・要約されることへの抵抗感や、AIノートテイカーをめぐるマナー・合意形成の是非が論点になっている。AI議事録ツールの普及に伴う対人的・倫理的な摩擦を扱った議論として関心を集めた。 | https://firesphere.dev/articles/yes-actually-i-do-fucking-mind |
-| 3 | TypeScript 7.0 がなぜGoで書き直されたのか | TypeScript 7.0 のコンパイラが Go で再実装された背景を、「Goはエージェント（AI）時代の言語だ」という観点から論じた記事。パフォーマンスや並行処理、ツールチェーンとしての扱いやすさなど、Goが選ばれた理由を考察している。言語選定をめぐる設計判断と、AIコーディング時代に適した言語像について述べている。 | https://spf13.com/p/go-the-agentic-language/ |
-| 4 | AIデータセンター需要で米製造業の電力コストが急騰 | AIデータセンターの急増による電力需要の高まりが、米国の製造業者の電力コストを押し上げていると報じる記事。データセンターと一般産業・家庭が同じ電力網を奪い合う構図が生まれ、電気料金の上昇圧力につながっているという。AIインフラ拡大が実体経済のコストに波及している事例として取り上げられている。 | https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/ |
-| 5 | Windows 11 のバグが最大500GBのディスクを浪費する | Windows 11 に、最大で約500GBものディスク領域を無駄に消費してしまう不具合が見つかったと報じる記事。特定条件下でファイルが肥大化・蓄積し、大量のストレージが失われるという。影響を受けるユーザーや回避策についても触れられている。ストレージ管理に関わる問題として注目された。 | https://itsfoss.com/news/windows-11-cam-bug/ |
-| 6 | Meta が総額1.4兆ドルの集団訴訟に直面 | SNSの依存性をめぐり、Meta が米国の複数州から総額1.4兆ドル規模の訴訟に直面していると報じられている。特に若年層への安全性・依存性の問題が争点となっており、企業の存続を揺るがしかねない規模のリスクとして扱われている。プラットフォームの設計責任を問う動きの一環として注目を集めた。 | https://www.engadget.com/2209332/meta-is-facing-1-4-trillion-in-state-lawsuits-over-social-media-addiction/ |
-| 7 | 「AIが生成したコードを削除します、週1万ドルで」 | AIが自動生成した不要・低品質なコード（いわゆる「slop」）を削除するサービスを、週1万ドルで提供するという内容の記事。AIコーディングの普及で増えた冗長・保守困難なコードを取り除くことに価値があるという主張が背景にある。AI生成コードの負債化という課題を逆手にとったユニークな取り組みとして話題になった。 | https://odra.dev/slopfix/ |
-| 8 | Claude Cowork がモバイルとWebに対応 | Anthropic の「Claude Cowork」がモバイルおよびWebに拡大したことを伝える記事。コーディングエージェントの競争が、開発の枠を超えてオフィス業務全般へと広がりつつある状況を論じている。AIエージェントが日常的な業務環境に組み込まれていく流れの一例として取り上げられている。 | https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/ |
+| 1 | Anthropic の Fable 前段分類器が過剰との指摘 | Fable モデルの前段に置かれた安全性分類器が過度に厳格で、正当な用途まで拒否してしまうためモデルが使いにくいという批判記事。120 件のコメントが付き議論を呼んでいる。分類器による過剰なフィルタリングと利便性のトレードオフが論点になっている。 | https://combine-lab.github.io/blog/2026/07/07/fable-is-not-a-useful-model.html |
+| 2 | コーディング評価でシグナルとノイズを分離する | OpenAI がコーディング能力のベンチマークについて、実力差を示すシグナルと測定上のばらつき（ノイズ）をどう見分けるかを論じた記事。評価結果の解釈やモデル比較で誤った結論を避けるための考え方を提示している。 | https://openai.com/index/separating-signal-from-noise-coding-evaluations/ |
+| 3 | 大企業の働き方を風刺した「FAANG シミュレーター」 | 大手テック企業での働き方や出世競争を体験する形の風刺的な Web ゲーム「FAANG Simulator（Escape the Rat Race）」。ラットレースからの脱出をテーマにしており、企業文化やキャリアのあり方を皮肉を込めて描いている。 | https://www.abeyk.com/escape-the-rat-race/ |
+| 4 | 大量のドキュメントを検索可能なナレッジベースに変える | 手元にある多数の文書を、検索して活用できるナレッジベースに変換するツール DocuBrowser。散在するドキュメント群を横断的に扱えるようにすることを目的としたオープンソースプロジェクトとして公開されている。 | https://github.com/linuxrebel/DocuBrowser |
+| 5 | AI 生成コードの多くは数か月で放棄・削除される | いわゆる「slopcode」（安易に生成された低品質コード）のプロジェクトの大半が、公開から数か月以内に放棄・削除されているという記事。AI 生成コードの持続性や保守性への懸念を提起している。 | https://www.osnews.com/story/145469/most-slopcode-projects-are-abandoned-and-deleted-within-months-of-release/ |
+| 6 | AST 解析と LLM でコードベースを可視化する CLI | 初めて触れるコードベースの理解を助ける Onboard-CLI。AST（抽象構文木）解析と LLM を組み合わせて、コードの構造や関係性を可視化する。新規参加者のオンボーディングを効率化することを狙ったツールとして紹介されている。 | https://github.com/animesh-94/Onboard-CLI |
+| 7 | エージェント型コーディングの実践メモ | danluu 氏によるエージェント型コーディングの考察。エージェントを使ったテストプロセスや LLM ベンチマーク、実行ごとのばらつき（variance）など、実際に使う中で得られた知見をまとめている。 | https://danluu.com/ai-coding/#llm-variance |
+| 8 | Bun を Rust で書き直す | JavaScript ランタイム Bun を Rust で書き直す取り組みについての公式ブログ。現状の実装から Rust への移行を進める背景や狙いを説明している。 | https://bun.com/blog/bun-in-rust |
 
 ## Zenn
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | AIに8割書かせたコードを半年運用した「答え合わせ」 | AIに約8割を書かせたコードを半年間運用した経験を振り返り、うまく機能した3点と、逆に「腐って」しまった3点を具体的に整理した記事。AIコーディングのメリットと落とし穴を、実運用の実感に基づいて論じている。どのような使い方が保守性を保ち、どこで負債化するのかという教訓を共有している。多くの読者の関心を集めた。 | https://zenn.dev/rapls/articles/7a1bac83df8b21 |
-| 2 | AIエージェント時代のマルチプレクサ「herdr」にtmuxから乗り換えた | 複数のAIコーディングエージェントを扱うために、tmux から新しいターミナルマルチプレクサ「herdr」へ移行した体験談。各エージェントの状態（作業中・完了・ブロック中）を可視化できる点や、実運用での使い勝手を紹介している。複数エージェントの並行運用が一般化するなかでのツール選択の実例として書かれている。 | https://zenn.dev/studypocket/articles/herdr-ai-agent-multiplexer |
-| 3 | Claude Code「Fable 5」にローカルLLM用シェル支援CLIを作らせた | Claude Code の「Fable 5」を使い、ローカルLLMを活用するシェル支援CLIを開発させた体験を紹介した記事。出来上がったコードそのものより、AIが仕事をどう進めていくか（段取りや意思決定の仕方）に驚かされたという点を中心に述べている。AIエージェントとの協働のあり方について示唆を与えている。 | https://zenn.dev/gys/articles/fable5-local-llm-ask-cli |
-| 4 | Fable 5をトークン破産させず使い倒す運用術 | 高性能だがトークン消費の大きい Fable 5 を、コストを抑えつつ活用するための運用方法を解説した記事。Fable 5 を実装担当ではなくオーケストレーター（指揮役）に徹させ、実作業は他のモデルに任せる分担が要点。トークン消費を管理しながら性能を引き出すための実践的な工夫が紹介されている。 | https://zenn.dev/yui/articles/740da24e9ee419 |
-| 5 | Cloudflare Workers + better-auth で全リクエストが無応答になる罠 | Cloudflare Workers と better-auth を組み合わせた際に、全リクエストが応答を返さなくなる問題の原因と対策を解説した記事。原因は解決されない（hanging）Promise にあり、非同期処理の扱いが落とし穴になっていたという。同様の構成でハマりやすいポイントとして、具体的な調査過程と回避策が共有されている。 | https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise |
-| 6 | コードレビュー指摘300件を分類したら効いていたのは2種類だけ | 3ヶ月分・約300件のコードレビュー指摘を分類・分析し、実際に効果があったのは2種類のカテゴリだけだったという結論を示した記事。数多くの指摘のうち、本当に品質やチームに寄与するレビューは何かを定量的に振り返っている。レビューの労力配分を見直すヒントとして書かれている。 | https://zenn.dev/kenimo49/articles/code-review-300-comments-2-effective-categories |
-| 7 | C# で出来ること一覧 2026年版（.NET 10） | .NET 10 時代の C# で実現できることを幅広くまとめた2026年版の一覧記事。Web、デスクトップ、モバイル、クラウド、AI、ゲームなど、C#/.NET が現在カバーする用途を体系的に整理している。これから C# を学ぶ人や、技術選定の参考にしたい人に向けた俯瞰資料となっている。 | https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10 |
-| 8 | Claude Code（Opus 4.8）が数分固まる問題、188セッション実測 | Claude Code（Opus 4.8）が作業中に数分間フリーズする問題について、188セッションを実測して原因を調査した記事。結論として、原因はAPIやネットワークではなかったとし、実際のボトルネックを突き止めていく過程を記録している。同様の遅延に悩むユーザー向けの検証事例として書かれている。 | https://zenn.dev/yuki_fujisawa/articles/a155d388e61acc |
+| 1 | 東京リージョン内なのに全クエリが太平洋を横断していた話 | API も DB も東京リージョンにあるのに、全クエリが北米を経由していた原因を突き止めた事例。ネットワーク経路や設定の落とし穴により意図しない遠回りが発生していた過程を解説する。レイテンシ問題の調査手法として参考になる内容。 | https://zenn.dev/avaintelligence/articles/b7d4743a448485 |
+| 2 | Fable 5 をトークン破産させずに使い倒す運用 | 高価な Fable 5 をオーケストレーター役に徹させ、実作業は他のモデルに任せることでトークン消費を抑える運用方法を紹介。役割分担の設計により、コストを管理しながら高性能モデルの利点を活かす実践的なノウハウをまとめている。 | https://zenn.dev/yui/articles/740da24e9ee419 |
+| 3 | とある部長の Obsidian 活用法 | 管理職の立場から、Obsidian をどう業務や思考の整理に使っているかを紹介した記事。ノートの構成や運用ルールなど、実際の使い方を具体的に共有しており、知識管理の参考事例として注目を集めている。 | https://zenn.dev/canly/articles/173479ac3e9824 |
+| 4 | Loop Engineering という考え方 | すでに 4800 スターを集めているという「Loop Engineering」の紹介。エンジニアの仕事を「loop を書くこと」と捉える発想で、エージェントに反復的に作業させる開発スタイルを論じている。 | https://zenn.dev/acntechjp/articles/0c63b5b08bbdb9 |
+| 5 | C# で出来ること一覧 2026 年版（.NET 10） | .NET 10 時代に C# で実現できることを俯瞰的に整理した記事。Web、デスクトップ、モバイル、AI などの領域ごとに、現在の C#／.NET エコシステムで何ができるかを一覧的にまとめている。 | https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10 |
+| 6 | Cloudflare Workers + better-auth で全リクエストが無応答になる罠 | Cloudflare Workers と better-auth の組み合わせで、全リクエストが応答を返さなくなった不具合の調査記録。原因は解決されない Promise（hanging promise）にあり、その特定と対処の過程を解説している。 | https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise |
+| 7 | Anthropic 開発者が公開した Fable 時代の AI 活用法 | Anthropic の開発者が示したとされる、Fable 世代のモデルを活かす AI 活用の考え方を紹介・解説した記事。新しいモデルの特性を踏まえた使い方の指針を扱っている。 | https://zenn.dev/knowledgesense/articles/283244af941a2d |
+| 8 | 自動テストの肥大化とどう向き合うか | 自動テストが増えすぎることで生じる保守コストや実行時間の問題に、どう向き合うかを論じた記事。テストの規模と得られる価値のトレードオフを整理し、肥大化を抑える方針を検討している。 | https://zenn.dev/frontendflat/articles/automated-test-size-tradeoff |
 
 ## Qiita
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 「日本企業風GitHub」パロディに学ぶ、なぜJTC業務システムは警告と文字で埋まるのか | 「日本企業（JTC）風のGitHub」を模したパロディを題材に、日本企業の業務システムがなぜ警告文や説明文で画面を埋め尽くしがちなのかを、UX/UIやプロダクトマネジメントの観点から考察した記事。過剰な注意書きが生まれる組織的・文化的背景を掘り下げている。業務システム設計の「あるある」を通じて、使いやすさとは何かを問い直している。 | https://qiita.com/Shiro_Shihi/items/4928640d01c78480962b |
-| 2 | 新しいHTTPメソッド「QUERY」をHono + Bunで実装してみる | 提案されている新しいHTTPメソッド「QUERY」を、Hono と Bun を使って実装してみた記事。QUERY はリクエストボディを持てる検索用メソッドで、GET の制約（ボディを扱いにくい）と POST の意味的な曖昧さを補うものとして議論されている。実装を通じて、その動作や使いどころを具体的に確かめている。 | https://qiita.com/maaaashi/items/6eefccb7361f64607865 |
-| 3 | 1Passwordはあなたのマスターパスワードを一度も受信していない | 1Password がユーザーのマスターパスワードをサーバ側で一切受け取らずに認証を成立させる仕組みを解説した記事。SRP（Secure Remote Password）などの技術により、パスワード自体を送信せずに本人確認を行う流れを説明している。パスワードマネージャの安全性を支える暗号技術を、仕組みの面からわかりやすく紹介している。 | https://qiita.com/kenimo49/items/d1151389d17e50ad5564 |
-| 4 | 「保守業務って地味」と思っていた新人の自分へ | 保守・運用業務を「地味」と感じていた新人時代の自分に向けて書いた振り返り記事。実際には保守業務がシステムやチームにとって重要であり、そこで得られる学びやキャリア上の価値が大きいことを、経験を踏まえて伝えている。保守運用に対する見方を前向きに捉え直すきっかけとして書かれている。 | https://qiita.com/masa20057/items/d3c540c868c3413704b7 |
-| 5 | 量子コンピュータを完全に理解したい人のためのロードマップ | 量子コンピュータを体系的に学びたい人に向けて、学習の道筋を示したロードマップ記事。基礎となる数学・物理から、QISKIT などのツール、量子計算やポスト量子暗号といった応用トピックまでを段階的に整理している。技術戦略の観点も交え、どこから何を学べばよいかの指針を提供している。 | https://qiita.com/optimisuke/items/a2463fab85ee9778847c |
-| 6 | このプロンプトを貼るだけでKaggleのベースラインを作る | AIエージェントに貼り付けるだけで、Kaggle コンペのベースライン（初期モデル）を自動的に作らせるためのプロンプトを紹介した記事。機械学習の初期実装をエージェントに任せることで、素早くスタート地点を用意できるという狙い。Codex や Claude Code といったエージェントとの併用を想定した実践的なテンプレートとして共有されている。 | https://qiita.com/Isaka-code/items/8fafc5cc522b5eb655da |
-| 7 | Claude Code の dataviz スキルが凄かった | Claude Code の「dataviz」スキルを使ってダッシュボードやデータ可視化を作成した体験記。デザインの整合性やアクセシビリティに配慮した、質の高いビジュアルが自動生成される点に驚いたという内容。AIによるデータ可視化の実力を、実際の出力例を交えて紹介している。 | https://qiita.com/leomarokun/items/74212606fbf4f01d82dd |
-| 8 | テスト距離という考え方で回帰テストを整理する | 「テスト距離」という概念を用いて、回帰テストの範囲や優先度を整理する考え方を提案した記事。変更箇所とテスト対象の「距離」に着目することで、どのテストをどこまで実行すべきかを判断しやすくする狙いがある。回帰テストの肥大化や実行コストに悩む現場向けに、設計・品質管理の観点から整理している。 | https://qiita.com/daikou223/items/bb50627a899ef1dc2da8 |
+| 1 | 『めっちゃカメレオン』のサーバー代 0 円は本当か | 個人開発ゲーム『めっちゃカメレオン』のサーバー代を 0 円で運用している仕組みを解説した記事。無料枠やアーキテクチャの工夫でコストを抑える方法を具体的に紹介しており、大きな反響を集めている。 | https://qiita.com/i-icc/items/fb02ae5fa0848f4c511e |
+| 2 | 1Password はマスターパスワードを一度も受信していない | 1Password が SRP（Secure Remote Password）を使い、マスターパスワードをサーバーに送らずに認証を成立させる仕組みを解説。サーバー側にパスワードが渡らない設計を、暗号技術の観点から技術的に説明している。 | https://qiita.com/kenimo49/items/d1151389d17e50ad5564 |
+| 3 | 日本語 RAG 向け OCR を実データでガチ評価 | 日本語 RAG で使う OCR について、glm-ocr / dots.ocr / Unlimited-OCR / MinerU を社内ドライブの実データで比較した記事。精度や使い勝手を実測し、用途に応じた選び方を検討している。 | https://qiita.com/engchina/items/6dff7010af1b28e8c30a |
+| 4 | バラバラなデータを AI で横断的に使う方法 | 売上は DB、ログは S3、契約書は SharePoint といった具合に散在するデータを、AI で統合的に活用する方法を調べた記事。Databricks の Lakehouse などを軸に、異種データソースをまとめて扱う構成を検討している。 | https://qiita.com/shirok/items/0e42854634b2c5a371fa |
+| 5 | 社内 LLM Gateway でコスト暴走と情報漏洩を防ぐ | LLM 利用のコスト増大や情報漏洩リスクを抑えるための社内 Gateway 設計を解説。Azure/AWS でのガバナンスと LiteLLM を使った実装を、Phase1 から Phase2 への段階的な導入として紹介している。 | https://qiita.com/nogataka/items/6251b5727998ca29734c |
+| 6 | インデックスを貼ったのに速度が改善しない理由 | MySQL でインデックスを作成したのにクエリが速くならないケースについて、その原因を解説した記事。オプティマイザの挙動やインデックスが使われない条件を整理し、効かない場合の考え方を示している。 | https://qiita.com/yuuudaiiiiii/items/000aca3b7916271f0e9d |
+| 7 | Windows 標準 OCR のショートカット | Windows 標準機能の OCR を、Win + Shift + T のショートカットで手軽に呼び出せることを紹介した作業効率化の tips。画面上の文字をすぐテキスト化できる標準機能の活用法を解説している。 | https://qiita.com/kaga-yasumitsu/items/e9ce46596969983cdb4e |
