@@ -1,51 +1,53 @@
-# 技術ニュース要約 — 2026-07-09
+# 技術ニュース要約 — 2026-07-10
 
 ## GitHub Trending
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Claude Code 上で動く AI 就職活動フレームワーク | Claude Code を基盤にした求人応募支援ツール。フォークして自分のプロフィールを記入すると、Claude が求人票を評価し、履歴書のカスタマイズ、カバーレターの作成、面接準備までを自動で行う。独立したオープンソースプロジェクトで、特定企業の公認ではないと明記されている。 | https://github.com/MadsLorentzen/ai-job-search |
-| 2 | 完全ローカルで動くプライバシー重視の AI 議事録アシスタント | Rust 製の会議アシスタント Meetily。Parakeet/Whisper による従来比 4 倍高速なリアルタイム文字起こし、話者分離、Ollama を用いた要約を備える。処理はすべてローカルで完結しクラウド不要で、macOS と Windows に対応する自己ホスト型ツールとして紹介されている。 | https://github.com/Zackriya-Solutions/meetily |
-| 3 | AI コーディングエージェント向けの実務レベル「スキル」集 | シニアエンジニアが使うワークフローや品質ゲート、ベストプラクティスをスキルとしてパッケージ化したリポジトリ。DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP という開発フェーズに沿って、AI エージェントが一貫した手順で作業できるようにすることを狙う。 | https://github.com/addyosmani/agent-skills |
-| 4 | WiFi 信号を使ってカメラなしで人や呼吸を検知する | 市販の WiFi 信号を空間認識に変えるプロジェクト RuView。壁越しや暗所でも、人の検知、呼吸・心拍の計測、動きの追跡が可能で、カメラやウェアラブルを使わない点が特徴。Home Assistant など主要スマートホーム基盤とネイティブ連携するとしている。 | https://github.com/ruvnet/RuView |
-| 5 | 各社 AI のシステムプロンプトを収集したリポジトリ | Anthropic（Claude Fable 5、Opus 4.8、Claude Code など）、OpenAI（ChatGPT 5.5、Codex）、Google（Gemini 3.5 Flash など）、xAI の Grok や各種コーディングツールから抽出したとされるシステムプロンプトを文書化。定期更新をうたい、報道でも取り上げられたと記載されている。 | https://github.com/asgeirtj/system_prompts_leaks |
-| 6 | AI エージェント向けの高速・軽量サンドボックス | RustVMM と KVM を基盤にした Tencent Cloud のサンドボックスサービス CubeSandbox。ハードウェア分離された環境を 60ms 未満で生成でき、単一ノードから複数ノードクラスタへの拡張に対応。E2B SDK と互換性があると説明されている。 | https://github.com/TencentCloud/CubeSandbox |
-| 7 | GPU 不要で CPU 上で動く軽量 TTS | Kyutai Labs による text-to-speech ツール Pocket TTS。GPU や Web API を使わず CPU で効率的に動作するよう設計され、pip install と関数呼び出しだけで音声生成ができる。Python 3.10〜3.14、PyTorch 2.5 以上に対応する。 | https://github.com/kyutai-labs/pocket-tts |
+| 1 | AI コーディングエージェント向けの実務レベル「スキル」集 | シニアエンジニアが実際に使うワークフロー、品質ゲート、ベストプラクティスをスキルとしてパッケージ化したリポジトリ。DEFINE→PLAN→BUILD→VERIFY→REVIEW→SHIP という開発フェーズに沿って構成されており、AI エージェントが各工程で一貫した手順を踏めるようにすることを狙う。アイデアから仕様、コード、テスト、QA へと進む流れが README に図示されている。 | https://github.com/addyosmani/agent-skills |
+| 2 | エージェント向け開発方法論を丸ごと提供する Superpowers | コーディングエージェント向けのソフトウェア開発方法論を、組み合わせ可能なスキル群と初期指示のセットとして提供するフレームワーク。エージェントが用意されたスキルを確実に使うよう仕向ける仕組みを重視している。コミュニティとコードの運営を担うフルタイム人員を募集中であることも README に記載されている。 | https://github.com/obra/superpowers |
+| 3 | WiFi 信号を使ってカメラなしで人や呼吸を検知する | 市販の WiFi 信号を空間認識システムに変えるプロジェクト RuView。壁越しや暗所でも人の検知、呼吸・心拍の計測、動きの追跡ができ、カメラやウェアラブルを使わない点を特徴とする。Home Assistant をはじめ主要なスマートホーム基盤 4 種とネイティブに連携すると説明されている。 | https://github.com/ruvnet/RuView |
+| 4 | 外部 API に頼らないローカル完結型のエージェント長期記憶 | Tencent Cloud による AI エージェント向け記憶基盤 TencentDB Agent Memory。記号的な短期記憶と階層化された長期記憶を組み合わせ、4 段階のパイプラインで記憶を管理する。肥大化しがちなツール実行ログを Mermaid 記法の記号に圧縮することでトークン消費を削減し、タスク成功率の向上を狙うとしている。外部 API 依存はゼロで、すべてローカルで動作する。 | https://github.com/TencentCloud/TencentDB-Agent-Memory |
+| 5 | AI エージェントのための Office 操作 CLI | Word、Excel、PowerPoint ファイルの読み取り・編集・自動化を AI エージェントから行うためのオープンソースツール OfficeCLI。単一バイナリで動作し、Office のインストールや追加の依存関係を必要としない。エージェントに 1 行のコードで Office 文書の操作権限を与えることを目指しており、HTML レンダリング機能も内蔵する。 | https://github.com/iOfficeAI/OfficeCLI |
+| 6 | AI エージェント向けの高速・軽量サンドボックス | RustVMM と KVM を基盤に構築された Tencent Cloud のサンドボックスサービス CubeSandbox。ハードウェア分離された実行環境を 60ms 未満で生成でき、単一ノード構成から複数ノードクラスタへの拡張にも対応する。E2B SDK と互換性があると説明されている。 | https://github.com/TencentCloud/CubeSandbox |
+| 7 | アプリに組み込める軽量なインプロセス・ベクトルデータベース | Alibaba が公開する Zvec は、アプリケーションに直接埋め込んで使うインプロセス型のベクトルデータベース。Alibaba グループ内での運用実績をうたい、最小限のセットアップで低レイテンシかつスケーラブルな類似検索を提供するとしている。v0.5.0 では全文検索（FTS）がネイティブ対応した。 | https://github.com/alibaba/zvec |
+| 8 | Claude に動画を「見せる」ためのスキル | 任意の動画を Claude に理解させるためのツール /watch。動画のダウンロード、フレーム抽出、文字起こしまでを自動で行い、その結果をまとめて Claude に渡す。Claude Code へはプラグインマーケットプレイス経由で導入でき、Codex や Cursor など Agent Skills に対応する 50 以上のホストでも利用できるとしている。 | https://github.com/bradautomates/claude-video |
 
 ## Hacker News
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Anthropic の Fable 前段分類器が過剰との指摘 | Fable モデルの前段に置かれた安全性分類器が過度に厳格で、正当な用途まで拒否してしまうためモデルが使いにくいという批判記事。120 件のコメントが付き議論を呼んでいる。分類器による過剰なフィルタリングと利便性のトレードオフが論点になっている。 | https://combine-lab.github.io/blog/2026/07/07/fable-is-not-a-useful-model.html |
-| 2 | コーディング評価でシグナルとノイズを分離する | OpenAI がコーディング能力のベンチマークについて、実力差を示すシグナルと測定上のばらつき（ノイズ）をどう見分けるかを論じた記事。評価結果の解釈やモデル比較で誤った結論を避けるための考え方を提示している。 | https://openai.com/index/separating-signal-from-noise-coding-evaluations/ |
-| 3 | 大企業の働き方を風刺した「FAANG シミュレーター」 | 大手テック企業での働き方や出世競争を体験する形の風刺的な Web ゲーム「FAANG Simulator（Escape the Rat Race）」。ラットレースからの脱出をテーマにしており、企業文化やキャリアのあり方を皮肉を込めて描いている。 | https://www.abeyk.com/escape-the-rat-race/ |
-| 4 | 大量のドキュメントを検索可能なナレッジベースに変える | 手元にある多数の文書を、検索して活用できるナレッジベースに変換するツール DocuBrowser。散在するドキュメント群を横断的に扱えるようにすることを目的としたオープンソースプロジェクトとして公開されている。 | https://github.com/linuxrebel/DocuBrowser |
-| 5 | AI 生成コードの多くは数か月で放棄・削除される | いわゆる「slopcode」（安易に生成された低品質コード）のプロジェクトの大半が、公開から数か月以内に放棄・削除されているという記事。AI 生成コードの持続性や保守性への懸念を提起している。 | https://www.osnews.com/story/145469/most-slopcode-projects-are-abandoned-and-deleted-within-months-of-release/ |
-| 6 | AST 解析と LLM でコードベースを可視化する CLI | 初めて触れるコードベースの理解を助ける Onboard-CLI。AST（抽象構文木）解析と LLM を組み合わせて、コードの構造や関係性を可視化する。新規参加者のオンボーディングを効率化することを狙ったツールとして紹介されている。 | https://github.com/animesh-94/Onboard-CLI |
-| 7 | エージェント型コーディングの実践メモ | danluu 氏によるエージェント型コーディングの考察。エージェントを使ったテストプロセスや LLM ベンチマーク、実行ごとのばらつき（variance）など、実際に使う中で得られた知見をまとめている。 | https://danluu.com/ai-coding/#llm-variance |
-| 8 | Bun を Rust で書き直す | JavaScript ランタイム Bun を Rust で書き直す取り組みについての公式ブログ。現状の実装から Rust への移行を進める背景や狙いを説明している。 | https://bun.com/blog/bun-in-rust |
+| 1 | Claude の 5 時間・週次レート制限が全ユーザーでリセット | Claude の開発者向けアカウントによる告知で、5 時間ごとおよび週次のレート制限を全ユーザー対象にリセットしたと伝えている。上限に達して利用できなくなっていたユーザーが、待機せずに再び使える状態になる措置とみられる。投稿は xcancel 経由でミラーされたものが共有されている。 | https://xcancel.com/ClaudeDevs/status/2075279141352706215 |
+| 2 | Palo Alto CEO「トークンコスト高騰で AI 価格は 90% 下がる必要がある」 | Palo Alto Networks の CEO ニケシュ・アローラ氏が、AI の利用価格は現状から 90% 程度下がる必要があるとの見方を示したという CNBC の報道。背景としてトークンコストの急騰があり、現在の価格水準では企業が AI を本格活用しにくいという論点が示されている。セキュリティ業界からのコスト構造への問題提起として報じられている。 | https://www.cnbc.com/2026/07/09/palo-alto-ceo-arora-ai-pricing.html |
+| 3 | OpenAI が単体デスクトップブラウザ ChatGPT Atlas を終了 | OpenAI が独立したデスクトップブラウザとして提供していた ChatGPT Atlas の提供を終了すると報じられた。AI 機能を組み込んだブラウザ製品として注目されていたが、単体アプリとしての展開は打ち切られる。今後の機能提供の形態については記事で説明されている。 | https://9to5mac.com/2026/07/09/openai-is-discontinuing-chatgpt-atlas-its-standalone-desktop-browser/ |
+| 4 | GitHub が全リポジトリに「恒久的な所有者」を与えた仕組み | GitHub 公式ブログによる、すべてのリポジトリに永続的な所有者を紐付けるための取り組みの解説。ユーザー名の変更や削除に伴ってリポジトリの参照先が乗っ取られる、いわゆるリポジトリジャッキングのリスクに関わる話題で、アプリケーションセキュリティの観点から設計と実装が説明されている。 | https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/ |
+| 5 | OpenBSD の pledge(2)/unveil(2) は開発者にとって使いやすい | OpenBSD の権限制限 API である pledge(2) と unveil(2) が開発者にとって扱いやすいという調査結果を紹介する記事。プロセスが実行できるシステムコールやアクセスできるファイルを絞り込むこれらの機構について、実際の利用者を対象とした研究の知見が報告されている。セキュリティ機構の使いやすさが採用率に影響するという文脈で議論されている。 | https://undeadly.org/cgi?action=article;sid=20260708055608 |
+| 6 | AWS Graviton5 は Graviton4 比で幾何平均 30% 高速 | Phoronix による AWS の新世代 Arm プロセッサ Graviton5 のベンチマークレビュー。各種ワークロードを通じた測定で、前世代の Graviton4 に対して幾何平均で約 30% の性能向上が確認されたとしている。クラウド上の Arm インスタンスの性能推移を追う内容になっている。 | https://www.phoronix.com/review/aws-graviton5 |
+| 7 | Ghostty がスクロールバックを自動圧縮しメモリを最大 90% 削減 | ターミナルエミュレータ Ghostty に、スクロールバック（過去の出力履歴）を自動的に圧縮する機能が入るという解説動画。従来と比べて最大 90% 少ない RAM で同じ履歴を保持できるとしている。大量のログを流すような使い方でメモリ消費が問題になるケースへの対応となる。 | https://www.youtube.com/watch?v=ZVAnhimPh8k |
+| 8 | Google が Web 向け高速 AI 推論ライブラリ Litert.js を公開 | Google の開発者ブログで紹介された Litert.js は、ブラウザ上で AI モデルを高性能に推論実行するためのライブラリ。Web 環境でのオンデバイス推論を対象としており、サーバーに送らずクライアント側でモデルを動かす用途を想定している。同社の LiteRT 系ランタイムを Web 向けに展開したものと位置づけられる。 | https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/ |
 
 ## Zenn
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 東京リージョン内なのに全クエリが太平洋を横断していた話 | API も DB も東京リージョンにあるのに、全クエリが北米を経由していた原因を突き止めた事例。ネットワーク経路や設定の落とし穴により意図しない遠回りが発生していた過程を解説する。レイテンシ問題の調査手法として参考になる内容。 | https://zenn.dev/avaintelligence/articles/b7d4743a448485 |
-| 2 | Fable 5 をトークン破産させずに使い倒す運用 | 高価な Fable 5 をオーケストレーター役に徹させ、実作業は他のモデルに任せることでトークン消費を抑える運用方法を紹介。役割分担の設計により、コストを管理しながら高性能モデルの利点を活かす実践的なノウハウをまとめている。 | https://zenn.dev/yui/articles/740da24e9ee419 |
-| 3 | とある部長の Obsidian 活用法 | 管理職の立場から、Obsidian をどう業務や思考の整理に使っているかを紹介した記事。ノートの構成や運用ルールなど、実際の使い方を具体的に共有しており、知識管理の参考事例として注目を集めている。 | https://zenn.dev/canly/articles/173479ac3e9824 |
-| 4 | Loop Engineering という考え方 | すでに 4800 スターを集めているという「Loop Engineering」の紹介。エンジニアの仕事を「loop を書くこと」と捉える発想で、エージェントに反復的に作業させる開発スタイルを論じている。 | https://zenn.dev/acntechjp/articles/0c63b5b08bbdb9 |
-| 5 | C# で出来ること一覧 2026 年版（.NET 10） | .NET 10 時代に C# で実現できることを俯瞰的に整理した記事。Web、デスクトップ、モバイル、AI などの領域ごとに、現在の C#／.NET エコシステムで何ができるかを一覧的にまとめている。 | https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10 |
-| 6 | Cloudflare Workers + better-auth で全リクエストが無応答になる罠 | Cloudflare Workers と better-auth の組み合わせで、全リクエストが応答を返さなくなった不具合の調査記録。原因は解決されない Promise（hanging promise）にあり、その特定と対処の過程を解説している。 | https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise |
-| 7 | Anthropic 開発者が公開した Fable 時代の AI 活用法 | Anthropic の開発者が示したとされる、Fable 世代のモデルを活かす AI 活用の考え方を紹介・解説した記事。新しいモデルの特性を踏まえた使い方の指針を扱っている。 | https://zenn.dev/knowledgesense/articles/283244af941a2d |
-| 8 | 自動テストの肥大化とどう向き合うか | 自動テストが増えすぎることで生じる保守コストや実行時間の問題に、どう向き合うかを論じた記事。テストの規模と得られる価値のトレードオフを整理し、肥大化を抑える方針を検討している。 | https://zenn.dev/frontendflat/articles/automated-test-size-tradeoff |
+| 1 | API も DB も東京にあるのに、全クエリが太平洋を横断していた | インフラ構成上は API サーバーもデータベースも東京リージョンに置いていたにもかかわらず、実際には全クエリが太平洋を往復していたという障害調査の記録。想定と実測のレイテンシが合わない原因を追い、経路が海外を経由していたことを突き止めるまでの過程を扱う。構成図だけを信じず、実際の通信経路を計測することの重要性を示す事例。203 スコアと本日の Zenn で最も注目を集めている。 | https://zenn.dev/avaintelligence/articles/b7d4743a448485 |
+| 2 | Anthropic の開発者が公開した Fable 時代の AI 活用法 | Anthropic の開発者が示した、新しい世代のモデルを前提とした AI の使い方についての紹介記事。従来のプロンプト中心の付き合い方から、モデルの性能向上を踏まえた活用方法へどう移行するかが論点になっている。idea タグの記事で、実装手順というより考え方の整理に重きが置かれている。 | https://zenn.dev/knowledgesense/articles/283244af941a2d |
+| 3 | C# で出来ること一覧 2026 年版（.NET 10） | Microsoft の Zenn パブリケーションによる、.NET 10 時点で C# を使って実現できる領域を一覧化した記事。Web、デスクトップ、モバイル、クラウドなど各分野で現在どの選択肢が使えるのかを俯瞰できる構成になっている。毎年更新されている定番記事の最新版にあたる。 | https://zenn.dev/microsoft/articles/what-can-you-do-on-dotnet10 |
+| 4 | Cloudflare Workers + better-auth で全リクエストが無応答になる罠 | Cloudflare Workers 上で better-auth を使った際に、全リクエストが応答を返さなくなる障害に遭遇した調査記録。原因は解決されないまま残る Promise（hanging promise）にあり、Workers の実行モデル特有の落とし穴として解説されている。同様の構成を採る場合に踏みやすい問題として、再現条件と回避方法がまとめられている。 | https://zenn.dev/coji/articles/cloudflare-workers-better-auth-hanging-promise |
+| 5 | Agent Skills の自動最適化研究は、実質的に深層学習の訓練ループだった | LayerX による、Agent Skills を自動で最適化する研究論文の読み解き記事。手法の中身を追っていくと、構造としては深層学習の訓練ループとほぼ同じであることが見えてきたという指摘が中心になっている。スキル記述の改善をパラメータ更新に見立てる考え方を整理している。 | https://zenn.dev/layerx/articles/9f25ec86a31730 |
+| 6 | 自動テストの肥大化とどう向き合うか | 開発が進むにつれてテストコードが増え続け、実行時間や保守コストが膨らんでいく問題を扱った記事。テストの量を増やすことと維持可能性のトレードオフをどう判断するかについて考え方を整理している。どのテストを残しどれを削るかの基準づくりが論点になっている。 | https://zenn.dev/frontendflat/articles/automated-test-size-tradeoff |
+| 7 | Excel VBA の開発体験をモダン言語並みにする VS Code 拡張 | Excel VBA の開発を VS Code 上で行えるようにする拡張機能の開発記録。従来の VBE（VBA エディタ）では得られなかった補完や検索といったモダンな開発体験を、VBA でも使えるようにすることを目的としている。作者自身が実装した拡張機能の紹介として公開されている。 | https://zenn.dev/harumikun/articles/05274480f07d5f |
+| 8 | VS Code DevContainer をやめた後の LLM エージェント向け開発環境 | LLM エージェントに開発作業を任せる前提で環境を組み直した結果、VS Code の DevContainer を使わなくなったという経験談。エージェントが動く環境に求められる要件が、人間が使う開発コンテナとは異なることが背景にある。代わりにどのような構成を採ったかが具体的に説明されている。 | https://zenn.dev/kenfdev/articles/1febc0052b0d71 |
 
 ## Qiita
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 『めっちゃカメレオン』のサーバー代 0 円は本当か | 個人開発ゲーム『めっちゃカメレオン』のサーバー代を 0 円で運用している仕組みを解説した記事。無料枠やアーキテクチャの工夫でコストを抑える方法を具体的に紹介しており、大きな反響を集めている。 | https://qiita.com/i-icc/items/fb02ae5fa0848f4c511e |
-| 2 | 1Password はマスターパスワードを一度も受信していない | 1Password が SRP（Secure Remote Password）を使い、マスターパスワードをサーバーに送らずに認証を成立させる仕組みを解説。サーバー側にパスワードが渡らない設計を、暗号技術の観点から技術的に説明している。 | https://qiita.com/kenimo49/items/d1151389d17e50ad5564 |
-| 3 | 日本語 RAG 向け OCR を実データでガチ評価 | 日本語 RAG で使う OCR について、glm-ocr / dots.ocr / Unlimited-OCR / MinerU を社内ドライブの実データで比較した記事。精度や使い勝手を実測し、用途に応じた選び方を検討している。 | https://qiita.com/engchina/items/6dff7010af1b28e8c30a |
-| 4 | バラバラなデータを AI で横断的に使う方法 | 売上は DB、ログは S3、契約書は SharePoint といった具合に散在するデータを、AI で統合的に活用する方法を調べた記事。Databricks の Lakehouse などを軸に、異種データソースをまとめて扱う構成を検討している。 | https://qiita.com/shirok/items/0e42854634b2c5a371fa |
-| 5 | 社内 LLM Gateway でコスト暴走と情報漏洩を防ぐ | LLM 利用のコスト増大や情報漏洩リスクを抑えるための社内 Gateway 設計を解説。Azure/AWS でのガバナンスと LiteLLM を使った実装を、Phase1 から Phase2 への段階的な導入として紹介している。 | https://qiita.com/nogataka/items/6251b5727998ca29734c |
-| 6 | インデックスを貼ったのに速度が改善しない理由 | MySQL でインデックスを作成したのにクエリが速くならないケースについて、その原因を解説した記事。オプティマイザの挙動やインデックスが使われない条件を整理し、効かない場合の考え方を示している。 | https://qiita.com/yuuudaiiiiii/items/000aca3b7916271f0e9d |
-| 7 | Windows 標準 OCR のショートカット | Windows 標準機能の OCR を、Win + Shift + T のショートカットで手軽に呼び出せることを紹介した作業効率化の tips。画面上の文字をすぐテキスト化できる標準機能の活用法を解説している。 | https://qiita.com/kaga-yasumitsu/items/e9ce46596969983cdb4e |
+| 1 | 『めっちゃカメレオン』のサーバー代が 0 円というのは本当か | 個人開発ゲーム『めっちゃカメレオン』のインフラ構成とコストについて掘り下げた記事。サーバー代 0 円という主張がどのような構成で成立しているのかを検証する内容で、コスト削減の考え方が語られている。387 スコアと本日の Qiita で突出した注目を集めており、ポエム・インフラ・ゲーム開発のタグが付いている。 | https://qiita.com/i-icc/items/fb02ae5fa0848f4c511e |
+| 2 | 売上は DB、ログは S3、契約書は SharePoint —— 散在データを AI で使う方法 | 業務データが DB、S3、SharePoint などに分散している状況で、それらをまとめて AI から扱うためのアプローチを調査した記事。Databricks の Lakehouse を軸にした構成が検討対象になっている。Oracle など既存システムを含む現実的なデータ配置を前提としている点が特徴。 | https://qiita.com/shirok/items/0e42854634b2c5a371fa |
+| 3 | 日本語 RAG 向け OCR を実データで比較評価 | 日本語の RAG 構築で使う OCR として、glm-ocr、dots.ocr、Unlimited-OCR、MinerU の 4 つを社内ドライブの実データで比較した記事。ベンチマーク用データではなく実際の業務文書を対象にしている点が特徴。それぞれの精度や適性の違いが実測値とともに報告されている。 | https://qiita.com/engchina/items/6dff7010af1b28e8c30a |
+| 4 | Copilot Studio の自律型エージェント作成方法を整理 | Microsoft の Copilot Studio で自律型エージェント（autonomous agent）を作る手順を体系的にまとめた記事。Power Platform 上での設定項目や作成フローが整理されている。Copilot 系の機能追加が続くなかで、現時点での作り方を確認する内容になっている。 | https://qiita.com/Takashi_Masumori/items/4ed4994f8641e5a9e58e |
+| 5 | SQL のインデックス設計を AI エージェントに教えるスキル集 | SQL のインデックス設計に関するベストプラクティスを、AI エージェント用のスキルとしてまとめた記事。エージェントがインデックスの是非を判断する際の指針を与えることを目的としている。Agent Skills の形式で知識を外部化する実例のひとつ。 | https://qiita.com/TOMOSIA-HieuNT/items/6cf51ac079b9bfad2155 |
+| 6 | New Relic MCP の回答精度を上げるプロファイル | New Relic の MCP サーバーを AI エージェントから使う際に、回答精度を向上させるためのプロファイルを紹介する記事。MCP 経由で監視データを問い合わせる際、そのままでは意図した結果が得られにくいケースへの対処にあたる。設定によってエージェントの応答品質を調整するアプローチが示されている。 | https://qiita.com/seamoooooo/items/e458d2a7969e8c92d9ba |
+| 7 | インデックスを貼ったのに速度が改善されない理由 | MySQL でインデックスを作成したにもかかわらずクエリが速くならない状況について、オプティマイザの挙動から原因を説明する記事。インデックスが存在することと実際に使われることは別であるという点が中心になっている。実行計画を確認しながら原因を切り分ける手順が扱われている。 | https://qiita.com/yuuudaiiiiii/items/000aca3b7916271f0e9d |
+| 8 | プロンプトを頑張るより、リポジトリを整える | GitHub Copilot が迷わずに作業できるコードベースをどう設計するかを論じた記事。プロンプトの工夫で場当たり的に対処するのではなく、AGENTS.md や DESIGN.md といったファイルでリポジトリ側に文脈を持たせるアプローチを提案している。カスタムインストラクションの活用を含め、エージェントが参照する情報の置き場所を整理する考え方が示されている。 | https://qiita.com/ochtum/items/28fc5b3dbf78b7795c80 |
