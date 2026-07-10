@@ -96,9 +96,9 @@ main() {
     log "要約生成開始"
 
     #run timeout 1800 claude -p "$prompt"
-    run timeout 1800 claude --model sonnet --dangerously-skip-permissions -p "$prompt"
+    run timeout 1800 claude --model opus --dangerously-skip-permissions -p "$prompt"
     #run timeout 1800 opencode run "$prompt"
-    
+
     assert_file "feed.md"
 
     local feed_body
@@ -141,15 +141,15 @@ main() {
             git push origin HEAD:master
         fi
 
-        log "メール送信開始"
-        run python3 local/send_mail.py
+        #log "メール送信開始"
+        #run python3 local/send_mail.py
 
-        log "Slack通知"
-        if [[ -n "${SLACK_WEBHOOK_URL:-}" ]]; then
-            run python3 scripts/slack_notify.py
-        else
-            log "SLACK_WEBHOOK_URL未設定、Slack通知スキップ"
-        fi
+        #log "Slack通知"
+        #if [[ -n "${SLACK_WEBHOOK_URL:-}" ]]; then
+        ##    run python3 scripts/slack_notify.py
+        #else
+        #    log "SLACK_WEBHOOK_URL未設定、Slack通知スキップ"
+        #fi
     else
         log "[TRY MODE] commit/push/mail/slack をスキップ"
     fi
