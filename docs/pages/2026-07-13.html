@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-13</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-13</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Rust による Postgres 書き直し「pgrust」、回帰テスト 100% 通過を達成</td><td class="link-col"><a href="https://github.com/malisper/pgrust" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Postgres を Rust で書き直すプロジェクトで、Postgres 18.3 との互換性を目標に、46,000 以上の回帰クエリで本家と同じ出力を返すことを確認済みとしている。ディスクフォーマットも Postgres と互換で、既存の Postgres 18.3 データディレクトリからそのまま起動できる点が特徴。「Postgres を内側から変更しやすくする」ことを目的に掲げており、ブラウザ上で試せるデモも公開されている。</td></tr>
+<tr><td class="num">2</td><td class="title">GitHub Actions「checkout」v7 でフォーク PR のコード実行を既定で拒否する安全策</td><td class="link-col"><a href="https://github.com/actions/checkout" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">リポジトリのチェックアウトに使われる定番アクション actions/checkout の v7 では、pull_request_target や workflow_run トリガーで実行された場合にフォーク PR のコードのチェックアウトを既定で拒否するようになった。これらのトリガーはベースリポジトリの GITHUB_TOKEN やシークレットにアクセスできるため、フォークのコードを実行すると「pwn request」と呼ばれる脆弱性につながりやすいことが背景にある。リスクを確認した上で従来の挙動に戻したい場合は allow-unsafe-pr-checkout: true を明示的に指定する。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Code の設定・監視を行う CLI「claude-code-templates」</td><td class="link-col"><a href="https://github.com/davila7/claude-code-templates" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropic の Claude Code 向けに、すぐ使える設定集を提供する CLI ツール。AI エージェント、カスタムコマンド、設定、フック、MCP などの外部連携、プロジェクトテンプレートを幅広く収録し、開発ワークフローの強化を狙う。コンポーネントの探索やコレクション管理、インストール状況の追跡ができるダッシュボード（ベータ版）も aitmpl.com で公開されている。</td></tr>
+<tr><td class="num">4</td><td class="title">OpenAI が Codex 向けプラグイン例を集めた公式リポジトリ「plugins」を公開</td><td class="link-col"><a href="https://github.com/openai/plugins" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI による Codex プラグインのサンプル集リポジトリ。各プラグインは plugins/&lt;name&gt;/ 配下に置かれ、必須のマニフェスト .codex-plugin/plugin.json に加えて、skills/ や .mcp.json、agents/、commands/、hooks.json などの付随ファイルを組み合わせられる構成になっている。既定のマーケットプレイス定義も同梱されており、Codex のプラグインエコシステムの公式リファレンスとして参照できる。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude にターミナル操作とファイル編集能力を与える「Desktop Commander MCP」</td><td class="link-col"><a href="https://github.com/wonderwhy-er/DesktopCommanderMCP" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude にターミナル制御・ファイルシステム検索・差分ベースのファイル編集の機能を提供する MCP サーバー。コードやテキストの操作、プロセス実行、タスク自動化までを AI から直接行えるようにし、API のトークン課金ではなくホストクライアントのサブスクリプションの範囲で動作する点を利点として挙げている。同等機能をまとめたデスクトップアプリ（ベータ版）の提供も始まっている。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude 活用レシピ集「Claude Cookbooks」</td><td class="link-col"><a href="https://github.com/anthropics/claude-cookbooks" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Anthropic 公式の、Claude を使った開発のためのコードとガイドをまとめたノートブック集。コピーしてそのまま自分のプロジェクトに組み込めるコードスニペットを提供することを目的としており、利用には Claude API キーが必要となる。サンプルは主に Python で書かれているが、考え方は他の言語にも応用できるとしている。</td></tr>
+<tr><td class="num">7</td><td class="title">自然言語で draw.io の図を作成・編集できる「next-ai-draw-io」</td><td class="link-col"><a href="https://github.com/DayuanJiang/next-ai-draw-io" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">draw.io の図の作成・編集に AI を統合した Next.js 製の Web アプリケーション。チャットで自然言語の指示を出すことで、ダイアグラムの新規作成や既存図の修正、AI 支援による可視化ができる。英語・中国語・日本語の README が用意されており、構成図やフローチャート作成の補助ツールとして注目を集めている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ブラウザで動く 8bit マシンエミュレータ集「Tiny Emulators」</td><td class="link-col"><a href="https://floooh.github.io/tiny8bit-preview/index.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Z80 や 6502 世代のレトロ 8bit コンピュータをブラウザ上で動かせる小型エミュレータ集のプレビューサイト。chips エミュレータライブラリの作者として知られる floooh 氏によるもので、インストール不要でページを開くだけで往年のマシンを試せる。スコア 62 と本日の技術系投稿では上位に入り、レトロコンピューティング愛好家の関心を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">アイルランドのデータセンター、国内電力消費の 23% に到達</td><td class="link-col"><a href="https://www.theregister.com/on-prem/2026/07/11/irish-datacenters-now-guzzle-23-of-the-countrys-electricity/5270013" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">アイルランドのデータセンターが同国の電力消費の 23% を占めるまでに拡大したと The Register が報じた。アイルランドは税制優遇などから大手クラウド事業者のデータセンターが集中しており、電力網への負荷が数年来の課題となっている。AI ブームによる計算需要の増大も背景に、電力インフラと産業誘致のバランスをめぐる議論が 35 件のコメントを集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">無料で自分のウェブサイトを作れる「Neocities」が再び話題に</td><td class="link-col"><a href="https://neocities.org/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">かつての GeoCities の精神を受け継ぎ、誰でも無料で静的サイトを公開できるホスティングサービス Neocities が Hacker News で再び注目された。SNS やプラットフォーム依存への反動から、個人が自分のホームページを手書きで持つ文化を再評価する流れの中で取り上げられている。スコア 53・コメント 10 件と、インディーウェブ回帰の話題として支持を集めた。</td></tr>
+<tr><td class="num">4</td><td class="title">Chromium 148 以降、Math.tanh の結果から OS を特定できるフィンガープリント手法</td><td class="link-col"><a href="https://scrapfly.dev/posts/browser-math-os-fingerprint/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Chromium 148 から Math.tanh の計算結果に OS ごとの差異が現れるようになり、ブラウザの実行環境（基盤 OS）をフィンガープリントできるとする Scrapfly の技術記事。数学関数の実装が依存するシステムライブラリの違いが浮動小数点の丸め結果に表れることを利用しており、ユーザーエージェント偽装を見破る手段にもなり得る。プライバシーやボット検出の両面に影響する話題として議論された。</td></tr>
+<tr><td class="num">5</td><td class="title">JAX に独自型を定義できる新機構「hijax」</td><td class="link-col"><a href="https://docs.jax.dev/en/latest/hijax_types.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JAX の公式ドキュメントに追加された、ユーザーが新しい JAX 型を定義するための仕組み「hijax」の解説。従来 JAX が組み込みで扱う配列型の枠を超えて、独自のデータ型をトレーシングや変換の仕組みに組み込めるようにするもの。JAX の拡張性を高める開発者向け機能として、機械学習エンジニアの関心を集めた。</td></tr>
+<tr><td class="num">6</td><td class="title">分岐レス実装で二分探索を 6 倍高速化する話</td><td class="link-col"><a href="https://pythonspeed.com/articles/branchless-binary-search/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">二分探索をコンパイル済みコードで最適化し、分岐予測ミスを避ける「ブランチレス」実装などハードウェアの特性に沿った書き方（mechanical sympathy)によって最大 6 倍の高速化を達成する過程を解説した記事。アルゴリズム自体は同じでも、CPU のパイプラインやキャッシュの挙動を意識した実装で大きな性能差が生まれることを実測で示している。低レイヤ最適化の実践例として参考になる内容である。</td></tr>
+<tr><td class="num">7</td><td class="title">MCP セキュリティの現状をまとめたレポート「State of MCP Security 2026」</td><td class="link-col"><a href="https://www.canopii.dev/State%20of%20MCP%20Security%202026.pdf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントとツールをつなぐプロトコル MCP（Model Context Protocol）のセキュリティ状況を分析したレポート（PDF）。MCP サーバーの普及に伴い、プロンプトインジェクションや過剰な権限付与、サプライチェーンリスクといった固有の攻撃面が問題となっており、その実態を体系的に整理した資料である。エージェント基盤を運用する組織にとってリスク評価の出発点となる文書として共有された。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">API も DB も東京なのに全クエリが太平洋を横断していた障害調査記</td><td class="link-col"><a href="https://zenn.dev/avaintelligence/articles/b7d4743a448485" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">API サーバーもデータベースも東京リージョンに置いているにもかかわらず、すべてのクエリが太平洋を横断して米国を経由していたという構成ミスの調査・解決記。レイテンシの計測から原因を突き止めていく過程を描いており、リージョン設定や接続経路の思い込みがいかに気づきにくいかを示している。スコア 268 と今回の Zenn 記事では最も大きな反響を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">Agent Skills 自動最適化の研究、中身はほぼ深層学習の訓練ループだった</td><td class="link-col"><a href="https://zenn.dev/layerx/articles/9f25ec86a31730" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">LayerX のエンジニアが、AI エージェントのスキル（Agent Skills）を自動最適化する研究を読み解いた解説記事。スキルの生成・評価・改善を繰り返す仕組みが、損失関数に基づく深層学習の訓練ループと構造的にほぼ同じであることを指摘している。エージェントのプロンプトやスキルの改善を経験則ではなく最適化問題として扱う潮流を紹介する内容で、スコア 128 を集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">純関数・参照透過性・冪等性の違いを整理する</td><td class="link-col"><a href="https://zenn.dev/kkeeth/articles/pure-function-referential-transparency-idempotency" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">混同しやすい「純関数」「参照透過性」「冪等性」という 3 つの概念を、定義と具体例を挙げながら整理し直した記事。それぞれが何を保証し、どこが重なりどこが異なるのかを、コード例を交えて説明している。関数型プログラミングや API 設計の議論で頻出する用語を正確に使い分けたい人向けの内容で、スコア 101 と高い支持を得た。</td></tr>
+<tr><td class="num">4</td><td class="title">Cloudflare だけで独自ドメインメールを Gmail から送受信できるようになっていた</td><td class="link-col"><a href="https://zenn.dev/9m/articles/d08dcc093e1bbf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Cloudflare の Email Routing 機能の進化により、追加のメールサービスを契約せずに独自ドメインのメールを Gmail から送受信できるようになったことを紹介する記事。従来は受信転送のみだった Cloudflare のメール機能で送信までまかなえるようになり、個人の独自ドメイン運用のハードルが下がった。設定手順を追いながら実際に動くことを確認しており、スコア 90 を集めた。</td></tr>
+<tr><td class="num">5</td><td class="title">テストの品質を測る「ミューテーションテスト」のススメ</td><td class="link-col"><a href="https://zenn.dev/xtm_blog/articles/9b7fa5f94eae28" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コードに意図的な変更（ミューテーション）を加えてテストが失敗するかを確かめることで、テストスイート自体の検出力を測るミューテーションテストの解説記事。カバレッジが高くても不具合を検出できないテストを見つけ出せる点が利点で、導入方法や運用上の注意点を紹介している。テストの「量」ではなく「質」を改善したいチームに向けた実践的な内容である。</td></tr>
+<tr><td class="num">6</td><td class="title">ドメイン駆動設計のよくある誤解を解く</td><td class="link-col"><a href="https://zenn.dev/shotaro_tsuji/articles/a8f2c4a846d552" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ドメイン駆動設計（DDD)について広く見られる誤解を取り上げ、本来の意図を説明し直した記事。DDD をレイヤ構成やディレクトリ構造などの実装パターン集として捉える理解に対し、ドメインの知識をモデルに反映させ続ける設計活動こそが本質であると論じている。DDD の導入・学習でつまずきがちなポイントを整理した内容で、スコア 44 を集めた。</td></tr>
+<tr><td class="num">7</td><td class="title">GitHub Actions のステップ並列化でデプロイ 8 分→3 分、CI コスト 3 割減</td><td class="link-col"><a href="https://zenn.dev/hatsu/articles/github-actions-steps-parallel" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Actions のワークフローを並列実行に再構成することで、デプロイ時間を 8 分から 3 分に短縮し、CI のコストも約 3 割削減した事例記事。ジョブやステップの依存関係を見直して並列化できる箇所を切り出す具体的な手順を紹介している。CI/CD の高速化とコスト削減を同時に達成した実践例として参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Bun は Zig 53 万行をどう 11 日で Rust に書き換えたのか — 64 並列 Claude Code の事例分析</td><td class="link-col"><a href="https://zenn.dev/assign/articles/bun-rust-rewrite-harness-engineering" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">JavaScript ランタイム Bun が、Zig で書かれた約 53 万行のコードベースを 64 並列の Claude Code を使って 11 日間で Rust に書き換えた事例を分析した記事。大規模な自動書き換えを成立させたハーネス（検証・統合の仕組み）の設計から学べる点と、一般のチームがまだ真似できない前提条件を切り分けて論じている。AI エージェントによる大規模リファクタリングの現在地を知る材料となる内容である。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Agent Skills を「評価」する 3 つのツールを比較</td><td class="link-col"><a href="https://qiita.com/Syoitu/items/78d45bee1160d059c972" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">作成した Agent Skills が実際に効果を上げているのかを測るための評価ツール 3 種を比較検証した記事。スキルは書いて終わりになりがちだが、発動条件どおりに呼ばれているか、出力品質に寄与しているかを確かめる手段が必要だという問題意識に基づく。各ツールの特徴と使いどころを整理しており、Claude Code などでスキル運用を始めたユーザーに向けた内容でスコア 45 を集めた。</td></tr>
+<tr><td class="num">2</td><td class="title">15 年前の『アジャイルサムライ』、AI 時代に古びたのは「作るコスト」の教えだけだった</td><td class="link-col"><a href="https://qiita.com/tatsuya582/items/88508215a8e22b169166" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">アジャイル開発の定番書『アジャイルサムライ』を AI 時代の視点で読み直したエッセイ。顧客との対話や価値の見極めといった教えは現在も通用する一方、「作るコストが高いから作るものを絞る」という前提だけは、AI エージェントによる実装コストの低下で状況が変わったと論じている。生成 AI が開発プロセス論に与える影響を古典を通して考える内容で、スコア 44 と支持を集めた。</td></tr>
+<tr><td class="num">3</td><td class="title">Copilot Studio の自律型エージェントの作成方法を整理</td><td class="link-col"><a href="https://qiita.com/Takashi_Masumori/items/4ed4994f8641e5a9e58e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Microsoft Copilot Studio で自律型エージェントを作成する手順を整理した解説記事。トリガーの設定からエージェントの指示文、ツール連携まで、Power Platform 上でエージェントを構築する流れを順を追って説明している。ローコード環境で業務向けエージェントを試したい企業ユーザーに向けた実践的な内容で、スコア 37 を集めた。</td></tr>
+<tr><td class="num">4</td><td class="title">5 年後、AI に頼りすぎた自分を後悔する？を考えてみた</td><td class="link-col"><a href="https://qiita.com/prum_sumomo/items/299014d7667aa57fb5d4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI に実装や調査を任せる働き方を続けた場合、5 年後に基礎力の欠如を後悔することにならないかを、若手エンジニアの視点で考察した記事。AI 活用で得られる生産性と、自力で考える経験の蓄積とのトレードオフをどう扱うかを論じている。スキル形成期のエンジニアが AI とどう付き合うべきかという普遍的な論点を扱い、スコア 33 と幅広い共感を集めた。</td></tr>
+<tr><td class="num">5</td><td class="title">AWS MCP Server が普通に使えるようになった</td><td class="link-col"><a href="https://qiita.com/moritalous/items/6102ef63dc60c7e6ee3d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS 公式の MCP サーバーが実用段階に達したことを紹介する記事。Claude などの AI エージェントから MCP 経由で AWS の操作や情報取得ができるようになり、セットアップして実際に動かすまでの手順を確認している。AWS 環境の運用に AI エージェントを組み込む入り口として注目され、スコア 30 を集めた。</td></tr>
+<tr><td class="num">6</td><td class="title">ナレッジ 83 件を 2 時間で作った。でも腐るのは、もっと速かった</td><td class="link-col"><a href="https://qiita.com/yamada-iknow/items/5e5ec4d5e96b12fbc75c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">生成 AI を使って社内ナレッジ 83 件をわずか 2 時間で作成したものの、内容が陳腐化する速度は作成速度を上回ったという運用の実体験記。AI によりドキュメント作成のコストは劇的に下がった一方、メンテナンスされない文書が大量に生まれる新しい問題が生じることを指摘している。ナレッジ管理は「作る仕組み」より「更新し続ける仕組み」が本質だという教訓を示す内容である。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Code・Codex 用に超高速で安全なサンドボックスを作る方法</td><td class="link-col"><a href="https://qiita.com/Koukyosyumei/items/3bd4696237ea64c38971" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI コーディングエージェントにコマンド実行を許可する際のリスクに備え、Claude Code や Codex 向けの軽量かつ安全なサンドボックス環境を構築する方法を解説した記事。エージェントが誤って、あるいはプロンプトインジェクションによって危険な操作を行っても被害を隔離できるよう、高速に起動する実行環境の作り方を示している。エージェントの自律実行を安心して許可するための基盤づくりとして、スコア 24 を集めた。</td></tr>
+<tr><td class="num">8</td><td class="title">Unity 6.7 の CoreCLR Player が想像以上に高速だった</td><td class="link-col"><a href="https://qiita.com/hez2010/items/4c608360c73fc6293bf1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Unity 6.7 で導入された CoreCLR ベースの Player を試したところ、従来の Mono ランタイムと比べて大幅な性能向上を確認したという検証記事。.NET の最新ランタイムである CoreCLR への移行は Unity が長年進めてきた取り組みで、その成果が実際のビルドで体感できる段階に来たことを示している。C# スクリプトの実行性能に関心のある Unity 開発者にとって注目の内容である。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-13 06:33 JST
+</footer>
+</div>
+</body>
+</html>
