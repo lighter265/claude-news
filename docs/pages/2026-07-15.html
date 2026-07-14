@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-15</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-15</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">オープンソースの動画編集ソフト「OpenCut」が全面リライト中</td><td class="link-col"><a href="https://github.com/OpenCut-app/OpenCut" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">CapCut の代替を目指す無料・オープンソースの動画エディタ。Web・デスクトップ・モバイルを 1 つのコードベースから提供する方針で、現在は Rust コアを中心にゼロから作り直しが進んでいる。編集用 API、サードパーティ製プラグイン、AI エージェント向けの MCP サーバー、自動化やバッチレンダリング用のヘッドレスモード、エディタ内スクリプトタブなどが今後の予定として挙げられている。</td></tr>
+<tr><td class="num">2</td><td class="title">実際に動かせる 100 種類超の AI エージェント／RAG アプリ集「awesome-llm-apps」</td><td class="link-col"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">クローンしてカスタマイズし、そのまま動かせる AI エージェントと RAG アプリを 100 以上集めたリポジトリ。AI エージェント、常駐エージェント、マルチエージェント構成、MCP エージェント、音声エージェント、ファインチューニングなど幅広い題材を扱う。Claude・Gemini・OpenAI・xAI・Qwen・Llama など複数モデルに対応し、ステップバイステップのチュートリアルも用意されている。</td></tr>
+<tr><td class="num">3</td><td class="title">仕様駆動開発を始めるためのツールキット「Spec Kit」</td><td class="link-col"><a href="https://github.com/github/spec-kit" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">いわゆる「vibe coding」で場当たり的に書くのではなく、製品シナリオと予測可能な成果に集中するための仕様駆動開発（Spec-Driven Development）を支援するオープンソースツールキット。Specify CLI を中心に、拡張やプリセット、役割別のバンドル設定などを備える。複数の AI コーディングエージェントとの統合に対応している。</td></tr>
+<tr><td class="num">4</td><td class="title">AI らしさを排除するデザインスキル「Hallmark」</td><td class="link-col"><a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code・Cursor・Codex 向けに、生成物が「いかにも AI 製」に見えないことを狙ったデザインスキル。ブリーフに応じてマクロ構造を選び、20 種類のテーマのいずれかを適用し、57 個の「slop テスト」ゲートと出力前の自己批評を通すことで、LLM が学習しがちな定番デザインを避けるという。Together AI が公開している。</td></tr>
+<tr><td class="num">5</td><td class="title">コードや資料をクエリ可能な知識グラフに変える「graphify」</td><td class="link-col"><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code・Codex・Cursor・Gemini CLI などのコーディングエージェント向けスキル。コード、SQL スキーマ、R やシェルスクリプト、ドキュメント、論文、画像、動画などを含むフォルダを、まとめて問い合わせできる知識グラフに変換する。アプリのコード・データベーススキーマ・インフラを 1 つのグラフ上で扱えることを特徴として掲げている。</td></tr>
+<tr><td class="num">6</td><td class="title">Windows を軽量化する PowerShell スクリプト「Win11Debloat」</td><td class="link-col"><a href="https://github.com/Raphire/Win11Debloat" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プリインストールアプリの削除やテレメトリの無効化など、Windows の整理・カスタマイズを手軽に行える軽量な PowerShell スクリプト。Windows 10 と Windows 11 の両方で動作し、インストール不要で利用できる。デフォルト状態の煩雑さを減らしたいユーザーを対象としている。</td></tr>
+<tr><td class="num">7</td><td class="title">自己ホスト型の AI コンパニオン「AIRI」</td><td class="link-col"><a href="https://github.com/moeru-ai/airi" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自分で所有・運用できるセルフホスト型の AI キャラクター（バーチャルキャラクター）コンテナ。Neuro-sama から着想を得ており、リアルタイム音声チャットに加え、Minecraft や Factorio のプレイにも対応するとしている。Web・macOS・Windows で動作する。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">StubHub の「ファンのためのマーケット」運営者が大規模転売業者だと SEC 提出書類で判明</td><td class="link-col"><a href="https://www.cbc.ca/news/world/stubhub-ceo-class-action-scalping-9.7268987" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">チケット再販プラットフォーム StubHub を「ファンのためのマーケットプレイス」と位置づける一方で、その運営に大規模なスキャルパー（転売業者）が関与していることが、SEC への提出書類から明らかになったと報じる記事。集団訴訟にも触れており、プラットフォームの建前と実態の乖離が論点となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">掲示板サイト Lobste.rs が SQLite で稼働するように</td><td class="link-col"><a href="https://lobste.rs/s/ko1ji1/lobste_rs_is_now_running_on_sqlite" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">技術系リンク共有コミュニティ Lobste.rs が、データベースを SQLite に移行して運用していることを報告する投稿。大規模な RDBMS ではなく SQLite でも十分にサービスを支えられるという実例として、コミュニティで話題になっている。</td></tr>
+<tr><td class="num">3</td><td class="title">Apple が可観測性スタートアップ SigScalr を買収</td><td class="link-col"><a href="https://9to5mac.com/2026/07/13/apple-acquires-observability-startup-sigscalr/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Apple がオブザーバビリティ（可観測性）分野のスタートアップ SigScalr を買収したと報じられている。ログやメトリクスなどの監視基盤に関わる技術・人材の取り込みを狙った動きとみられる。買収の詳細な条件は明らかにされていない。</td></tr>
+<tr><td class="num">4</td><td class="title">PostgreSQL で RE2 による高速な正規表現を使える拡張「pg_re2」</td><td class="link-col"><a href="https://clickhouse.com/blog/introducing-pg_re2-regex-in-postgres" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Google の RE2 エンジンを利用し、PostgreSQL 上で高速な正規表現マッチングを可能にする拡張機能。RE2 は最悪計算量の爆発を避ける設計で知られ、標準の正規表現よりも安定した性能が期待できる。ClickHouse のブログで紹介されている。</td></tr>
+<tr><td class="num">5</td><td class="title">OpenAI の初のデバイスは画面のない可搬型スピーカー</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI が開発中とされる最初のハードウェア製品は、持ち運び可能で画面を持たないスピーカー型の「AI コンパニオン」だと報じられている。ディスプレイに依存しない対話型のデバイスとして構想されているとされ、AI を日常的に使う新しい形として注目されている。</td></tr>
+<tr><td class="num">6</td><td class="title">IBM の AI に関する警告が業界に波紋</td><td class="link-col"><a href="https://www.msn.com/en-us/money/other/ibm-sends-shockwave-through-tech-industry-with-ai-warning/ar-AA27TcGM" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">IBM が発した AI に関する警告が、テック業界に「衝撃」を与えたと伝える記事。AI の導入や雇用・事業への影響をめぐる見解が話題となっている。見出しは強い表現だが、実際の内容は IBM 側の見通しや懸念の表明にとどまる点に留意が必要。</td></tr>
+<tr><td class="num">7</td><td class="title">DeepSeek が年内にも IPO 申請を準備との報道</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-07-14/deepseek-mulls-new-funding-weeks-after-7-billion-round-ft-says" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">中国の AI 企業 DeepSeek が、早ければ年内にも新規株式公開（IPO）の申請を準備していると報じられている。70 億ドル規模の資金調達からわずか数週間後の動きとされ、新たな資金調達も検討しているという。生成 AI 分野の資本市場での存在感が改めて注目される。</td></tr>
+<tr><td class="num">8</td><td class="title">Dependabot のバージョン更新にデフォルトの「クールダウン」期間が導入</td><td class="link-col"><a href="https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub の Dependabot に、依存パッケージの更新提案を一定期間見送る「パッケージのクールダウン」がデフォルトで導入された。新しくリリースされたバージョンをすぐには適用せず一定期間待つことで、リリース直後に見つかる不具合や悪意ある更新の影響を受けにくくする狙いがある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Cloudflare だけで独自ドメインメールを Gmail から送受信する</td><td class="link-col"><a href="https://zenn.dev/9m/articles/d08dcc093e1bbf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">独自ドメインのメールを、Cloudflare の機能だけで Gmail から送受信できるようになっていたことを紹介する記事。従来は別途メールサーバーやサービスが必要だった構成を、Cloudflare の Email Routing などを使って簡素化する手順を解説している。個人ドメインでのメール運用を手軽にしたい人向けの内容。</td></tr>
+<tr><td class="num">2</td><td class="title">GitHub Actions の並列化でデプロイ 8 分→3 分、CI コスト 3 割減</td><td class="link-col"><a href="https://zenn.dev/hatsu/articles/github-actions-steps-parallel" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Actions のステップを parallel（並列）実行することで、デプロイ時間を 8 分から 3 分に短縮し、CI のコストも約 3 割削減できたという実践記録。どの処理を並列化したか、どのようにワークフローを組み替えたかを具体的に説明している。CI/CD のボトルネック解消を検討している開発者に参考になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Cursor に「不要なブランチを整理して」と頼んだら D ドライブが消えた</td><td class="link-col"><a href="https://zenn.dev/iwaken71/articles/cursor-agent-d-drive-deleted" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI コーディングエージェント Cursor に不要な Git ブランチの整理を依頼したところ、想定外の動作で D ドライブの内容が消えてしまったという体験談。AI エージェントに破壊的な操作を任せる際のリスクや、権限・確認の重要性を実例を通して示している。エージェント運用の注意喚起として読まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">「AI 臭」は語彙よりリズムに出る — 7 モデル×406 本の実測</td><td class="link-col"><a href="https://zenn.dev/coji/articles/natural-japanese-ai-smell-lint" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI が生成した日本語の不自然さ（AI 臭）は、使われる語彙よりも文のリズムに現れるという仮説を、7 モデル・406 本のテキストを実測して検証した記事。より自然な日本語を書かせるための Agent Skill を作成し、その効果を定量的に評価している。文章の自然さを改善したい人向けの実践的な内容。</td></tr>
+<tr><td class="num">5</td><td class="title">情報漏洩に敏感な金融機関で Claude・Gemini・ChatGPT を導入した話</td><td class="link-col"><a href="https://zenn.dev/seiuchi3939/articles/b12d6746d9f187" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">情報漏洩リスクに厳しい金融機関において、Claude・Gemini・ChatGPT といった生成 AI をどのように導入していったかをまとめた記事。セキュリティやガバナンス上の制約をどうクリアしたか、利用ルールや体制づくりの観点から経験を共有している。規制の厳しい業界での AI 導入を検討する担当者に参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">Markdown を push するだけで社内資料 PDF を常に最新に</td><td class="link-col"><a href="https://zenn.dev/o2wsu9/articles/36dea065f5d73c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Markdown を Git に push するだけで、社内資料の PDF を自動生成・配信して常に最新状態に保つ仕組みを解説する記事。Workload Identity Federation（WIF）と Google Drive を組み合わせ、サービスアカウントの鍵を持たない「鍵レス」な自動配信を実現している。ドキュメント運用の自動化とセキュリティ両立の事例。</td></tr>
+<tr><td class="num">7</td><td class="title">2026 年に相次いだ Excel/VBA とモダン開発をつなぐツール群</td><td class="link-col"><a href="https://zenn.dev/minipoisson/articles/excel-vba-modern-dev" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Excel/VBA と現代的な開発環境の「あいだ」を埋めるツールとして、2026 年に登場した XLIDE・xlflow・xlsm_devkit などを紹介する記事。VBA の資産を活かしつつ、バージョン管理やモダンな開発フローを取り入れる動きを整理している。Excel 業務を抱える現場のモダナイズを考える際の見取り図となる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「15 歳と ChatGPT」より、4 万 6812 件が退会させられたシステムを考える</td><td class="link-col"><a href="https://qiita.com/ZiYuCai1984/items/636c7c15cd666e987a90" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">未成年利用をめぐる議論を入り口に、約 4 万 6812 件が退会（アカウント削除）させられたとされるシステムのあり方を考察する記事。AI サービスにおける年齢確認やアカウント運用、利用者保護の仕組みについて問題提起している。生成 AI とセキュリティ・倫理の交差点を扱った内容。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Code、とりあえずこれ読んどけば OK なまとめ（2026 年版）</td><td class="link-col"><a href="https://qiita.com/fuyunoki/items/5818688d20225aa8088a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">2026 年時点の Claude Code の使い方を、初学者向けにまとめた入門記事。基本的な導入から活用のコツまでを一通り押さえ、「まずこれを読めば概要がつかめる」ことを目指している。新卒エンジニアや AI コーディングを始めたい人に向けた総括的な内容。</td></tr>
+<tr><td class="num">3</td><td class="title">あなたの技術ブログの「AI 臭さ」を抜くスキルを公開</td><td class="link-col"><a href="https://qiita.com/minorun365/items/699e89544da8b0de300d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">技術ブログの文章から、生成 AI 特有の「AI 臭さ」を取り除くためのスキルを公開する記事。AI が書いたと分かりやすい言い回しや構成をどう見直すか、実際のスキルとして共有している。AI を使いつつも自然で読みやすい文章に仕上げたい書き手に向けた内容。</td></tr>
+<tr><td class="num">4</td><td class="title">Rails で学ぶ暗号化とハッシュ — master.key や Devise は内部で何をしているか</td><td class="link-col"><a href="https://qiita.com/akachiryo/items/5a1deaa541d70e11d85f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rails を題材に、暗号化とハッシュの基礎を解説する記事。credentials を守る master.key の役割や、認証ライブラリ Devise が内部でパスワードをどう扱っているかを掘り下げている。フレームワークの「おまかせ」で済ませがちなセキュリティの仕組みを理解したい開発者向け。</td></tr>
+<tr><td class="num">5</td><td class="title">AWS 東京・大阪を閉域で繋ぐ 3 つの方法、速さはどれくらい違うか</td><td class="link-col"><a href="https://qiita.com/sh_fukatsu/items/541051be6cbd4a90f2a6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWS の東京リージョンと大阪リージョンをインターネットを介さない閉域で接続する 3 通りの方法を取り上げ、実際に速度を比較した実験記事。VPC ピアリング、PrivateLink、Transit Gateway といった構成ごとのレイテンシや特性を計測している。マルチリージョン構成のネットワーク設計を検討する際の判断材料になる。</td></tr>
+<tr><td class="num">6</td><td class="title">AI と人間が diff 上でコメントを書き合える「hunk」</td><td class="link-col"><a href="https://qiita.com/kuma_3838/items/14df505c7023f665c585" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI と人間がコードの diff 上で相互にコメントを書き合える「hunk」という仕組みを紹介する記事。ターミナル上でコードレビューのやり取りを AI と共有でき、Claude Code などと組み合わせた開発フローを想定している。人間と AI の協働レビューを効率化するツールとして注目されている。</td></tr>
+<tr><td class="num">7</td><td class="title">【今更きけない Codex】2026 年 7 月アップデート版の使いどころ</td><td class="link-col"><a href="https://qiita.com/TMiyamoto/items/6bd89423d5b38916e48d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI の Codex について、2026 年 7 月のアップデートを踏まえ、ChatGPT デスクトップで最初に見るべき機能と使う順番を整理した記事。どの機能から触れば良いか迷いがちな初学者に向け、実用的な導入手順を示している。Codex を使い始める・使い直す際のガイドとなる内容。</td></tr>
+<tr><td class="num">8</td><td class="title">ECS と Kubernetes の違いを多方面から徹底比較</td><td class="link-col"><a href="https://qiita.com/keitah/items/b35fc1c3b0dd8f6d7052" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">コンテナオーケストレーションの選択肢として、AWS の ECS と Kubernetes を複数の観点から比較する記事。運用の手間、拡張性、エコシステム、セキュリティ（falco・CNAPP など）といった側面から両者の違いを整理している。コンテナ基盤の技術選定を検討しているエンジニア向けの内容。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-15 06:34 JST
+</footer>
+</div>
+</body>
+</html>
