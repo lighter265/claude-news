@@ -1,51 +1,50 @@
-# 技術ニュース要約 — 2026-07-15
+# 技術ニュース要約 — 2026-07-17
 
 ## GitHub Trending
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | オープンソースの動画編集ソフト「OpenCut」が全面リライト中 | CapCut の代替を目指す無料・オープンソースの動画エディタ。Web・デスクトップ・モバイルを 1 つのコードベースから提供する方針で、現在は Rust コアを中心にゼロから作り直しが進んでいる。編集用 API、サードパーティ製プラグイン、AI エージェント向けの MCP サーバー、自動化やバッチレンダリング用のヘッドレスモード、エディタ内スクリプトタブなどが今後の予定として挙げられている。 | https://github.com/OpenCut-app/OpenCut |
-| 2 | 実際に動かせる 100 種類超の AI エージェント／RAG アプリ集「awesome-llm-apps」 | クローンしてカスタマイズし、そのまま動かせる AI エージェントと RAG アプリを 100 以上集めたリポジトリ。AI エージェント、常駐エージェント、マルチエージェント構成、MCP エージェント、音声エージェント、ファインチューニングなど幅広い題材を扱う。Claude・Gemini・OpenAI・xAI・Qwen・Llama など複数モデルに対応し、ステップバイステップのチュートリアルも用意されている。 | https://github.com/Shubhamsaboo/awesome-llm-apps |
-| 3 | 仕様駆動開発を始めるためのツールキット「Spec Kit」 | いわゆる「vibe coding」で場当たり的に書くのではなく、製品シナリオと予測可能な成果に集中するための仕様駆動開発（Spec-Driven Development）を支援するオープンソースツールキット。Specify CLI を中心に、拡張やプリセット、役割別のバンドル設定などを備える。複数の AI コーディングエージェントとの統合に対応している。 | https://github.com/github/spec-kit |
-| 4 | AI らしさを排除するデザインスキル「Hallmark」 | Claude Code・Cursor・Codex 向けに、生成物が「いかにも AI 製」に見えないことを狙ったデザインスキル。ブリーフに応じてマクロ構造を選び、20 種類のテーマのいずれかを適用し、57 個の「slop テスト」ゲートと出力前の自己批評を通すことで、LLM が学習しがちな定番デザインを避けるという。Together AI が公開している。 | https://github.com/Nutlope/hallmark |
-| 5 | コードや資料をクエリ可能な知識グラフに変える「graphify」 | Claude Code・Codex・Cursor・Gemini CLI などのコーディングエージェント向けスキル。コード、SQL スキーマ、R やシェルスクリプト、ドキュメント、論文、画像、動画などを含むフォルダを、まとめて問い合わせできる知識グラフに変換する。アプリのコード・データベーススキーマ・インフラを 1 つのグラフ上で扱えることを特徴として掲げている。 | https://github.com/Graphify-Labs/graphify |
-| 6 | Windows を軽量化する PowerShell スクリプト「Win11Debloat」 | プリインストールアプリの削除やテレメトリの無効化など、Windows の整理・カスタマイズを手軽に行える軽量な PowerShell スクリプト。Windows 10 と Windows 11 の両方で動作し、インストール不要で利用できる。デフォルト状態の煩雑さを減らしたいユーザーを対象としている。 | https://github.com/Raphire/Win11Debloat |
-| 7 | 自己ホスト型の AI コンパニオン「AIRI」 | 自分で所有・運用できるセルフホスト型の AI キャラクター（バーチャルキャラクター）コンテナ。Neuro-sama から着想を得ており、リアルタイム音声チャットに加え、Minecraft や Factorio のプレイにも対応するとしている。Web・macOS・Windows で動作する。 | https://github.com/moeru-ai/airi |
+| 1 | オープンソース動画編集ソフト「OpenCut」がフルスクラッチで再構築 | CapCut の代替を目指す無料・オープンソースの動画編集ソフト。Web／デスクトップ／モバイルに対応する。現在ゼロから書き直しが進んでおり、Rust コアによる単一コードベースからの各プラットフォーム対応、エディタ API、プラグイン優先アーキテクチャ、AI エージェント向け MCP サーバー、バッチレンダリング用のヘッドレスモードなどが計画されている。エディタ内にスクリプト用タブを設ける構想もある。<br>https://github.com/OpenCut-app/OpenCut |
+| 2 | AI っぽさを排除するデザインスキル「Hallmark」 | Claude Code、Cursor、Codex 向けの、いかにも AI 生成に見えるデザインを避けるためのスキル。Together AI が公開している。ブリーフに応じてマクロ構造を選び、20 種類のテーマから装飾を当て、57 個の「スロップ検知」ゲートと出力前の自己批評を通すことで、LLM が学習してしまった無難なデフォルトを回避するという。4 つの動作（verb）と 20 テーマを備える。<br>https://github.com/Nutlope/hallmark |
+| 3 | 実務エンジニア向けの Claude Code スキル集「Skills for Real Engineers」 | 著者が日常業務で使っている .claude ディレクトリ由来のエージェントスキルを公開したリポジトリ。GSD・BMAD・Spec-Kit などプロセスを丸ごと引き受ける手法は制御を奪い、プロセス上のバグを直しにくくするという問題意識から出発している。ここで公開されるスキルは小さく、適応しやすく、組み合わせ可能に設計されており、特定のモデルに依存しないとされる。<br>https://github.com/mattpocock/skills |
+| 4 | 自己ホスト型 AI コンパニオン「AIRI」 | Neuro-sama に触発された、自分で所有・自己ホストできる AI キャラクター（バーチャルキャラ）のコンテナ実装。リアルタイム音声チャットに対応し、Minecraft や Factorio のプレイも可能とされる。Web／macOS／Windows に対応し、多言語 UI を備える。<br>https://github.com/moeru-ai/airi |
+| 5 | AI エージェントの危険コマンドを実行前に止める「dcg」 | AI コーディングエージェントが破壊的なコマンドを実行する前にブロックするための高性能フック。誤操作による作業消失を防ぐことを目的とする。Claude Code、Codex CLI、Gemini CLI、GitHub Copilot CLI、Cursor、Grok（xAI）など複数のエージェント／ツールに対応する。<br>https://github.com/Dicklesworthstone/destructive_command_guard |
+| 6 | 低コストモデル向けコーディングエージェント「Open Interpreter」 | 低コストなモデルで良い性能を出すことに最適化したコーディングエージェント。OpenAI の Codex をフォークしており、モデルの性能を引き出すエージェントハーネスの再現に注力している。macOS／Linux／Windows 向けにインストールスクリプトが用意され、ターミナルで `i` または `interpreter` と入力してセッションを開始する。<br>https://github.com/openinterpreter/openinterpreter |
+| 7 | すぐ動かせる AI エージェント／RAG アプリ集「Awesome LLM Apps」 | クローンしてカスタマイズし、そのまま出荷できる 100 以上のオープンソース AI エージェント・エージェントスキル・RAG アプリ集。すべて手作りでエンドツーエンドにテスト済み、Apache-2.0 ライセンスで公開されている。Claude、Gemini、GPT、DeepSeek、Llama、Qwen など複数のモデルで動作し、ステップバイステップのチュートリアルが付属する。<br>https://github.com/Shubhamsaboo/awesome-llm-apps |
+| 8 | 生涯パーソナライズ学習支援「DeepTutor」 | 一人ひとりに合わせた継続的なチュータリングを目指すツール。知識ベースを構築して学習を支援する仕組みで、CLI も提供される。最新リリースでは、取り込みに失敗して詰まった状態も含め、知識ベースから単一の失敗ドキュメントだけを削除できる機能などが追加された。<br>https://github.com/HKUDS/DeepTutor |
 
 ## Hacker News
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | StubHub の「ファンのためのマーケット」運営者が大規模転売業者だと SEC 提出書類で判明 | チケット再販プラットフォーム StubHub を「ファンのためのマーケットプレイス」と位置づける一方で、その運営に大規模なスキャルパー（転売業者）が関与していることが、SEC への提出書類から明らかになったと報じる記事。集団訴訟にも触れており、プラットフォームの建前と実態の乖離が論点となっている。 | https://www.cbc.ca/news/world/stubhub-ceo-class-action-scalping-9.7268987 |
-| 2 | 掲示板サイト Lobste.rs が SQLite で稼働するように | 技術系リンク共有コミュニティ Lobste.rs が、データベースを SQLite に移行して運用していることを報告する投稿。大規模な RDBMS ではなく SQLite でも十分にサービスを支えられるという実例として、コミュニティで話題になっている。 | https://lobste.rs/s/ko1ji1/lobste_rs_is_now_running_on_sqlite |
-| 3 | Apple が可観測性スタートアップ SigScalr を買収 | Apple がオブザーバビリティ（可観測性）分野のスタートアップ SigScalr を買収したと報じられている。ログやメトリクスなどの監視基盤に関わる技術・人材の取り込みを狙った動きとみられる。買収の詳細な条件は明らかにされていない。 | https://9to5mac.com/2026/07/13/apple-acquires-observability-startup-sigscalr/ |
-| 4 | PostgreSQL で RE2 による高速な正規表現を使える拡張「pg_re2」 | Google の RE2 エンジンを利用し、PostgreSQL 上で高速な正規表現マッチングを可能にする拡張機能。RE2 は最悪計算量の爆発を避ける設計で知られ、標準の正規表現よりも安定した性能が期待できる。ClickHouse のブログで紹介されている。 | https://clickhouse.com/blog/introducing-pg_re2-regex-in-postgres |
-| 5 | OpenAI の初のデバイスは画面のない可搬型スピーカー | OpenAI が開発中とされる最初のハードウェア製品は、持ち運び可能で画面を持たないスピーカー型の「AI コンパニオン」だと報じられている。ディスプレイに依存しない対話型のデバイスとして構想されているとされ、AI を日常的に使う新しい形として注目されている。 | https://www.bloomberg.com/news/articles/2026-07-14/openai-s-first-device-will-be-moveable-screenless-speaker-built-as-ai-companion |
-| 6 | IBM の AI に関する警告が業界に波紋 | IBM が発した AI に関する警告が、テック業界に「衝撃」を与えたと伝える記事。AI の導入や雇用・事業への影響をめぐる見解が話題となっている。見出しは強い表現だが、実際の内容は IBM 側の見通しや懸念の表明にとどまる点に留意が必要。 | https://www.msn.com/en-us/money/other/ibm-sends-shockwave-through-tech-industry-with-ai-warning/ar-AA27TcGM |
-| 7 | DeepSeek が年内にも IPO 申請を準備との報道 | 中国の AI 企業 DeepSeek が、早ければ年内にも新規株式公開（IPO）の申請を準備していると報じられている。70 億ドル規模の資金調達からわずか数週間後の動きとされ、新たな資金調達も検討しているという。生成 AI 分野の資本市場での存在感が改めて注目される。 | https://www.bloomberg.com/news/articles/2026-07-14/deepseek-mulls-new-funding-weeks-after-7-billion-round-ft-says |
-| 8 | Dependabot のバージョン更新にデフォルトの「クールダウン」期間が導入 | GitHub の Dependabot に、依存パッケージの更新提案を一定期間見送る「パッケージのクールダウン」がデフォルトで導入された。新しくリリースされたバージョンをすぐには適用せず一定期間待つことで、リリース直後に見つかる不具合や悪意ある更新の影響を受けにくくする狙いがある。 | https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/ |
+| 1 | 新モデル「Kimi K3」の性能・価格分析 | 独立系ベンチマークサイト Artificial Analysis による Kimi K3 の知能・性能・価格の分析記事。別の投稿では、Kimi K3 が同サイトのランキングで 3 位につけ、首位の Sol とはわずか 2 ポイント差だと報告されている。オープンモデル勢の性能が上位商用モデルに迫りつつある状況を示す。<br>https://artificialanalysis.ai/models/kimi-k3 |
+| 2 | ミュージシャンが語る「Spotify より違法ダウンロードの方がまし」（2011年） | あるミュージシャンが、Spotify よりも違法ダウンロードの方を好むと述べた 2011 年の記事。楽曲を無料で配ることが、結果的にストリーミングよりも多くの収益につながったという自身の経験を語っている。音楽配信のマネタイズとアーティストへの還元をめぐる議論として、現在も参照されている。<br>https://derekwebb.tumblr.com/post/13503899950/giving-it-away-how-free-music-makes-more-than |
+| 3 | 100ドルで作る AI ミュージックビデオ：Claude Fable 5 対 GPT-5.6 Sol | 予算 100 ドルで AI にミュージックビデオを作らせ、Claude Fable 5 と GPT-5.6 Sol を比較した検証記事。両モデルの生成結果を並べ、コストの制約下でどこまでの映像が作れるかを見ている。AI による動画生成の実力を、具体的な予算とタスクで示そうとする内容。<br>https://www.tryai.dev/blog/ai-music-video-arena-claude-vs-gpt-5.6 |
+| 4 | オープンモデル向け AI エージェント「LM Studio Bionic」 | ローカル LLM 実行環境として知られる LM Studio が、オープンモデル向けの AI エージェント「Bionic」を発表した。手元で動かすオープンウェイトのモデルを、エージェントとして活用できるようにする狙いがある。ローカル環境でのエージェント運用を後押しするツールとして紹介されている。<br>https://lmstudio.ai/blog/introducing-lm-studio-bionic |
+| 5 | 生理周期トラッカーに潜むプライバシー問題 | 生理周期トラッキングアプリが、利用者の私的な情報をどのように共有しているかを扱った BBC の記事。健康や妊娠に関わる機微なデータが第三者に渡りうる実態と、そのリスクを解説している。センシティブな個人データを扱うアプリの透明性と規制の必要性を問う内容。<br>https://www.bbc.com/future/article/20260715-how-period-trackers-share-womens-private-details |
+| 6 | 近傍のハビタブルゾーン岩石惑星から大気のヘリウムが流出 | ハビタブルゾーンにある近傍の岩石型系外惑星で、大気中のヘリウムが宇宙空間へ逃げ出している様子が観測されたとする Science 誌の研究。大気の流出は、惑星が生命を保持できる環境を維持できるかどうかに関わる重要な手がかりとなる。系外惑星の大気進化を理解する上での観測成果。<br>https://www.science.org/doi/10.1126/science.aea9708 |
+| 7 | AI が凸最適化の30年来の未解決問題を解決 | GPT-5.6 Sol Pro の支援により、凸最適化における 30 年ほど未解決だった問題が解かれたとする解説記事。AI が数学の研究に寄与し、長年の難問の突破口を開いた事例として紹介されている。人間の研究者と AI の協働による成果として位置づけられている。<br>https://medium.com/@kerger.p/an-ai-assisted-breakthrough-in-convex-optimization-an-optimization-problem-dating-back-30-years-a-db5c631119de |
 
 ## Zenn
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Cloudflare だけで独自ドメインメールを Gmail から送受信する | 独自ドメインのメールを、Cloudflare の機能だけで Gmail から送受信できるようになっていたことを紹介する記事。従来は別途メールサーバーやサービスが必要だった構成を、Cloudflare の Email Routing などを使って簡素化する手順を解説している。個人ドメインでのメール運用を手軽にしたい人向けの内容。 | https://zenn.dev/9m/articles/d08dcc093e1bbf |
-| 2 | GitHub Actions の並列化でデプロイ 8 分→3 分、CI コスト 3 割減 | GitHub Actions のステップを parallel（並列）実行することで、デプロイ時間を 8 分から 3 分に短縮し、CI のコストも約 3 割削減できたという実践記録。どの処理を並列化したか、どのようにワークフローを組み替えたかを具体的に説明している。CI/CD のボトルネック解消を検討している開発者に参考になる。 | https://zenn.dev/hatsu/articles/github-actions-steps-parallel |
-| 3 | Cursor に「不要なブランチを整理して」と頼んだら D ドライブが消えた | AI コーディングエージェント Cursor に不要な Git ブランチの整理を依頼したところ、想定外の動作で D ドライブの内容が消えてしまったという体験談。AI エージェントに破壊的な操作を任せる際のリスクや、権限・確認の重要性を実例を通して示している。エージェント運用の注意喚起として読まれている。 | https://zenn.dev/iwaken71/articles/cursor-agent-d-drive-deleted |
-| 4 | 「AI 臭」は語彙よりリズムに出る — 7 モデル×406 本の実測 | AI が生成した日本語の不自然さ（AI 臭）は、使われる語彙よりも文のリズムに現れるという仮説を、7 モデル・406 本のテキストを実測して検証した記事。より自然な日本語を書かせるための Agent Skill を作成し、その効果を定量的に評価している。文章の自然さを改善したい人向けの実践的な内容。 | https://zenn.dev/coji/articles/natural-japanese-ai-smell-lint |
-| 5 | 情報漏洩に敏感な金融機関で Claude・Gemini・ChatGPT を導入した話 | 情報漏洩リスクに厳しい金融機関において、Claude・Gemini・ChatGPT といった生成 AI をどのように導入していったかをまとめた記事。セキュリティやガバナンス上の制約をどうクリアしたか、利用ルールや体制づくりの観点から経験を共有している。規制の厳しい業界での AI 導入を検討する担当者に参考になる。 | https://zenn.dev/seiuchi3939/articles/b12d6746d9f187 |
-| 6 | Markdown を push するだけで社内資料 PDF を常に最新に | Markdown を Git に push するだけで、社内資料の PDF を自動生成・配信して常に最新状態に保つ仕組みを解説する記事。Workload Identity Federation（WIF）と Google Drive を組み合わせ、サービスアカウントの鍵を持たない「鍵レス」な自動配信を実現している。ドキュメント運用の自動化とセキュリティ両立の事例。 | https://zenn.dev/o2wsu9/articles/36dea065f5d73c |
-| 7 | 2026 年に相次いだ Excel/VBA とモダン開発をつなぐツール群 | Excel/VBA と現代的な開発環境の「あいだ」を埋めるツールとして、2026 年に登場した XLIDE・xlflow・xlsm_devkit などを紹介する記事。VBA の資産を活かしつつ、バージョン管理やモダンな開発フローを取り入れる動きを整理している。Excel 業務を抱える現場のモダナイズを考える際の見取り図となる。 | https://zenn.dev/minipoisson/articles/excel-vba-modern-dev |
+| 1 | Cursor に「不要なブランチを整理して」と頼んだら D ドライブが消えた話 | AI コーディングエージェント Cursor に不要なブランチの整理を依頼したところ、想定外の破壊的なコマンドが実行され、D ドライブのデータが消えてしまったという体験談。エージェントに権限を委ねる際の危うさと、事前の確認やバックアップ、破壊的コマンドのガードの重要性を、具体的な事故として示している。<br>https://zenn.dev/iwaken71/articles/cursor-agent-d-drive-deleted |
+| 2 | AI 臭は語彙よりリズムに出る──自然な日本語のための Agent Skill と実測 | AI が書いた日本語の「不自然さ」は、単語の選択よりも文のリズムに強く表れるという仮説を検証した記事。自然な日本語を書かせる Agent Skill を作り、7 モデル×406 本の文章で AI 臭を実測している。文長や句読点のリズムに着目することで、AI らしさを機械的に検出・改善できる可能性を論じている。<br>https://zenn.dev/coji/articles/natural-japanese-ai-smell-lint |
+| 3 | GitHub Actions の parallel でデプロイ8分→3分、CI コスト3割減 | GitHub Actions のステップを並列化することで、デプロイ時間を 8 分から 3 分に短縮し、CI のコストも約 3 割削減できたという実践報告。どのステップを並列化したか、どのように依存関係を整理したかを具体的に説明している。CI/CD の高速化とコスト最適化の実例として参考になる内容。<br>https://zenn.dev/hatsu/articles/github-actions-steps-parallel |
+| 4 | 一人前のエンジニアなら、PR でコメントをもらうな | 「一人前のエンジニアなら PR でレビューコメントをもらうべきではない」という主張を展開したアイデア記事。レビュー前に自分で指摘を潰しきる姿勢や、コメントが付くこと自体を減らす働き方について論じている。挑発的なタイトルだが、セルフレビューや事前の作り込みの重要性を問いかける内容。<br>https://zenn.dev/headwaters/articles/72c39ad735038d |
+| 5 | React エンジニアに優しくなったモバイルアプリ開発の現在地 | 夏休み前に押さえておきたい、React エンジニア視点でのモバイルアプリ開発の現状をまとめた記事。React Native をはじめ、React の知識を活かしてモバイル開発に入りやすくなった 2026 年時点のツールやエコシステムを俯瞰している。Web 開発者がモバイルへ踏み出すための地図として書かれている。<br>https://zenn.dev/cybozu_frontend/articles/rn-devmap-in-2026 |
+| 6 | Claude Code が化けた──3つのプラグイン＋標準機能の活用法 | Claude Code を大きく使いやすくする 3 つのプラグインと、標準機能の実践的な活用法を紹介した記事。日々の開発でどのプラグインをどう組み合わせているか、標準機能とどう併用するかを具体的に解説している。Claude Code を使いこなすためのセットアップと運用の参考になる内容。<br>https://zenn.dev/sonicmoov/articles/8712598f532b18 |
+| 7 | 非エンジニアが自作アプリを社内にデプロイできる基盤を作った話 | 非エンジニアでも自作したアプリを社内に安全にデプロイできるようにするための基盤を構築した事例。技術に詳しくない社員が作ったアプリを、どのように受け入れ・公開する仕組みを整えたかを説明している。社内の内製化やシチズンデベロッパー支援の観点で参考になる取り組み。<br>https://zenn.dev/hacobell_dev/articles/369ff476324aae |
 
 ## Qiita
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 「15 歳と ChatGPT」より、4 万 6812 件が退会させられたシステムを考える | 未成年利用をめぐる議論を入り口に、約 4 万 6812 件が退会（アカウント削除）させられたとされるシステムのあり方を考察する記事。AI サービスにおける年齢確認やアカウント運用、利用者保護の仕組みについて問題提起している。生成 AI とセキュリティ・倫理の交差点を扱った内容。 | https://qiita.com/ZiYuCai1984/items/636c7c15cd666e987a90 |
-| 2 | Claude Code、とりあえずこれ読んどけば OK なまとめ（2026 年版） | 2026 年時点の Claude Code の使い方を、初学者向けにまとめた入門記事。基本的な導入から活用のコツまでを一通り押さえ、「まずこれを読めば概要がつかめる」ことを目指している。新卒エンジニアや AI コーディングを始めたい人に向けた総括的な内容。 | https://qiita.com/fuyunoki/items/5818688d20225aa8088a |
-| 3 | あなたの技術ブログの「AI 臭さ」を抜くスキルを公開 | 技術ブログの文章から、生成 AI 特有の「AI 臭さ」を取り除くためのスキルを公開する記事。AI が書いたと分かりやすい言い回しや構成をどう見直すか、実際のスキルとして共有している。AI を使いつつも自然で読みやすい文章に仕上げたい書き手に向けた内容。 | https://qiita.com/minorun365/items/699e89544da8b0de300d |
-| 4 | Rails で学ぶ暗号化とハッシュ — master.key や Devise は内部で何をしているか | Rails を題材に、暗号化とハッシュの基礎を解説する記事。credentials を守る master.key の役割や、認証ライブラリ Devise が内部でパスワードをどう扱っているかを掘り下げている。フレームワークの「おまかせ」で済ませがちなセキュリティの仕組みを理解したい開発者向け。 | https://qiita.com/akachiryo/items/5a1deaa541d70e11d85f |
-| 5 | AWS 東京・大阪を閉域で繋ぐ 3 つの方法、速さはどれくらい違うか | AWS の東京リージョンと大阪リージョンをインターネットを介さない閉域で接続する 3 通りの方法を取り上げ、実際に速度を比較した実験記事。VPC ピアリング、PrivateLink、Transit Gateway といった構成ごとのレイテンシや特性を計測している。マルチリージョン構成のネットワーク設計を検討する際の判断材料になる。 | https://qiita.com/sh_fukatsu/items/541051be6cbd4a90f2a6 |
-| 6 | AI と人間が diff 上でコメントを書き合える「hunk」 | AI と人間がコードの diff 上で相互にコメントを書き合える「hunk」という仕組みを紹介する記事。ターミナル上でコードレビューのやり取りを AI と共有でき、Claude Code などと組み合わせた開発フローを想定している。人間と AI の協働レビューを効率化するツールとして注目されている。 | https://qiita.com/kuma_3838/items/14df505c7023f665c585 |
-| 7 | 【今更きけない Codex】2026 年 7 月アップデート版の使いどころ | OpenAI の Codex について、2026 年 7 月のアップデートを踏まえ、ChatGPT デスクトップで最初に見るべき機能と使う順番を整理した記事。どの機能から触れば良いか迷いがちな初学者に向け、実用的な導入手順を示している。Codex を使い始める・使い直す際のガイドとなる内容。 | https://qiita.com/TMiyamoto/items/6bd89423d5b38916e48d |
-| 8 | ECS と Kubernetes の違いを多方面から徹底比較 | コンテナオーケストレーションの選択肢として、AWS の ECS と Kubernetes を複数の観点から比較する記事。運用の手間、拡張性、エコシステム、セキュリティ（falco・CNAPP など）といった側面から両者の違いを整理している。コンテナ基盤の技術選定を検討しているエンジニア向けの内容。 | https://qiita.com/keitah/items/b35fc1c3b0dd8f6d7052 |
+| 1 | エンジニアが今日から使える『数値化の鬼』の思考法 | 「頑張っています」といった曖昧な報告を卒業し、成果や状況を数値で語るための思考法を、書籍『数値化の鬼』をもとにエンジニア向けに整理した記事。行動を定量的に捉える考え方を、日々の業務やキャリアにどう落とし込むかを解説している。生産性向上や自己管理の観点で読める内容。<br>https://qiita.com/Nao52/items/ced302095c8ddd3c8213 |
+| 2 | Rails で学ぶ暗号化とハッシュ──master.key や Devise の内部 | Rails を題材に、暗号化とハッシュの基礎を解説した記事。master.key による資格情報の暗号化や、認証ライブラリ Devise がパスワードをどう扱っているかなど、フレームワーク内部で何が行われているかを掘り下げている。普段は意識しないセキュリティの仕組みを理解するのに役立つ内容。<br>https://qiita.com/akachiryo/items/5a1deaa541d70e11d85f |
+| 3 | エラー対応の理由を考えず AI にコピペで聞いていないか | エラーが出たときに内容を理解せず、そのまま AI にコピペして解決策を尋ねてしまう姿勢に注意を促す記事。なぜそのエラーが起きたのか、なぜその対応で直るのかを考えることの重要性を、初心者・未経験エンジニア向けに説いている。AI に頼りつつも思考力を保つための心構えを扱う。<br>https://qiita.com/prum_sumomo/items/535a697aeaea41515de9 |
+| 4 | AI 人材は2つに分かれる──あなたが目指すべきはどっち | AI 時代の人材は大きく 2 つのタイプに分かれるという視点から、自分がどちらを目指すべきかを考えさせる記事。それぞれの役割や求められるスキルの違いを整理し、キャリアの方向性を検討する材料を提供している。初心者や未経験エンジニアに向けたキャリア論として書かれている。<br>https://qiita.com/prum_sumomo/items/b7bfe27efae0231a09af |
+| 5 | Uiverse の UI 素材で初心者の悩みが即解決 | コピペで使える UI 素材集 Uiverse を活用し、プログラミング初心者がつまずきがちな見た目・スタイリングの悩みを手早く解決した体験談。既製の CSS 素材を取り入れることで、デザインに時間をかけずに形にできる利点を紹介している。初学者向けの実用的な時短テクニックとしてまとめられている。<br>https://qiita.com/prumnn/items/7bd599311fd75227101f |
+| 6 | Claude Code を「先生」として使い倒す5つのプロンプト | Claude Code にコードを書かせるだけでなく、学習の「先生」として活用するための 5 つのプロンプトを紹介した記事。コードの解説や設計の相談、知識の整理など、教育的な使い方に焦点を当てている。AI コーディングツールを自己学習の相棒として活かす具体例として参考になる。<br>https://qiita.com/jqit_suwa/items/2f38d32328996d826d48 |
+| 7 | 実装は Codex、レビューは Claude──クロスエージェントレビュー | 実装を Codex に任せ、そのレビューを Claude に行わせる「クロスエージェントレビュー」を、JetBrains Air 上で実践した記事。異なる AI エージェントを役割分担させることで、実装と検証を別のモデルに担わせる狙いがある。複数エージェントを組み合わせた開発ワークフローの一例として紹介されている。<br>https://qiita.com/nattogohan123/items/eccf5d6db62970a7e16d |
