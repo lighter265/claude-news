@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-20</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-20</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ストリーミング入力から3D復元するフィードフォワード基盤モデル「LingBot-Map」</td><td class="link-col"><a href="https://github.com/Robbyant/lingbot-map" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Robbyantチームが公開した、連続的に流れ込むデータからシーンを3D復元するフィードフォワード型の3D基盤モデル。中核となる「Geometric Context Transformer」は、座標のグラウンディング、密な幾何的手がかり、長距離の依存関係を一つのアーキテクチャに統合する設計だとされる。逐次的に到着するストリーミングデータを扱えるため、事前に全体を揃えなくても復元を進められる点が特徴として挙げられている。ロボティクスや空間認識の用途を念頭に置いた基盤モデルとして提示されている。学習済みモデルとしての利用を想定しており、幾何情報の抽出を重視している。従来の逐次復元手法と比べた位置づけが強調されている。詳細な性能や制約はリポジトリのドキュメントに委ねられている。</td></tr>
+<tr><td class="num">2</td><td class="title">セマンティックメタデータ交換を標準化する「Apache Ossie」(インキュベーション中)</td><td class="link-col"><a href="https://github.com/apache/ossie" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">分析・AI・BIの各プラットフォーム間でセマンティックモデルをやり取りする方法を標準化しようとする、業界横断のオープンソース仕様策定プロジェクト。ベンダー中立で「単一の真実の源」となるセマンティックデータの共有を目指すとされている。データ分析ツールごとに定義が分断されがちなセマンティック層を、共通の形式でやり取りできるようにすることが狙い。Apacheのインキュベーターとして開発が進められている協働型の取り組みである。特定ベンダーへのロックインを避けたいユーザーを主な対象としている。分析基盤やAI、BIの相互運用性向上を掲げている。仕様の詳細や採用状況はプロジェクトのドキュメントで示される。</td></tr>
+<tr><td class="num">3</td><td class="title">プロダクト分析・AI可観測性を統合したオープンソース基盤「PostHog」</td><td class="link-col"><a href="https://github.com/PostHog/posthog" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プロダクト開発向けの機能を幅広く束ねたオープンソースプラットフォーム。AIの可観測性、プロダクト分析、セッションリプレイ、機能フラグ、実験(A/Bテスト)、エラートラッキング、ログなどを一つの基盤で提供するとしている。エージェントが問題の診断や改善機会の発見、修正の投入を行うのに必要な文脈を捉えることを重視している。Slack、Web、デスクトップ、MCP経由での操作に対応すると説明されている。「self-driving products(自律的に改善するプロダクト)」を構築するための土台という位置づけを掲げている。複数の分析ツールを別々に導入する代わりに統合環境を提供する点が訴求されている。機能の詳細やロードマップは公式サイトで公開されている。</td></tr>
+<tr><td class="num">4</td><td class="title">4GB GPU 1枚で70B規模の推論を可能にする「AirLLM」</td><td class="link-col"><a href="https://github.com/lyogavin/airllm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大規模言語モデルの推論時メモリ使用量を大幅に削減するライブラリ。量子化・蒸留・プルーニングを用いずに、70Bクラスのモデルを単一の4GB GPUで動かせるとしている。さらに405BのLlama 3.1を8GBで、671BのDeepSeek-V3を約12GBで実行できると謳っている。モデルを層ごとに扱うアプローチによって、限られたVRAMでも大型モデルを推論に回せるようにする狙い。手元の非力なGPU環境で巨大モデルを試したい利用者を主な対象としている。速度面のトレードオフは伴うため、用途に応じた見極めが必要と考えられる。設定方法や対応環境、FAQはリポジトリに整理されている。</td></tr>
+<tr><td class="num">5</td><td class="title">AIのコードレビューでトークン浪費を防ぐ「code-review-graph」</td><td class="link-col"><a href="https://github.com/tirth8205/code-review-graph" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ローカルファーストで動作するコードインテリジェンスのグラフツールで、MCPおよびCLIから利用できる。コードベースの永続的なマップを構築し、AIコーディングツールが「重要な部分だけ」を読むようにすることで、レビューや大規模リポジトリ作業での文脈量を削減すると説明している。AIツールがレビュー時にコードベースの広い範囲を再読み込みしてしまう問題への対処を掲げている。多言語のドキュメント(英語・簡体字中国語・日本語・韓国語・ヒンディー語)が用意されている。ベンチマークによる文脈削減の効果や再現手順も提示されている。GitHub Actionとの連携やトラブルシューティングも整備されている。トークン消費を抑えつつ効率的なレビューを目指す用途に向けたツールである。</td></tr>
+<tr><td class="num">6</td><td class="title">ターミナルで動くAIエージェント「Kimi CLI」——次世代の「Kimi Code CLI」へ移行</td><td class="link-col"><a href="https://github.com/MoonshotAI/kimi-cli" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">MoonshotAIが開発する、ターミナル上で動作するAIコーディングエージェント。ソフトウェア開発やターミナル操作のタスクを支援すると説明されている。現在は次世代の「Kimi Code CLI」へと発展中で、新CLIをインストールすると既存の設定やセッションが自動的に移行されるとしている。従来のKimi CLIは段階的に縮小される予定だが、ドキュメントと既存インストールは引き続き利用できると案内されている。ターミナルで完結する開発支援エージェントという位置づけである。同じチームによる後継プロジェクトへの一本化が進められている。詳細は日本語を含むドキュメントで提供されている。</td></tr>
+<tr><td class="num">7</td><td class="title">APIキー不要でローカル動作するAIエージェント向けWeb検索「wigolo」</td><td class="link-col"><a href="https://github.com/KnockOutEZ/wigolo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェント向けに、Web検索・取得・クロール・リサーチをMCP経由で提供するローカルファーストのツール。APIキーやクラウドが不要で、クエリごとの課金がゼロだと謳っている(パブリックベータ)。Claude Code、Cursor、Codex、Gemini CLI、VS Code、Windsurf、Zedなど幅広いエージェントやMCPクライアントに対応するとしている。LangChainやCrewAI、LlamaIndex、Vercel AI SDK、n8nなどのフレームワークからも利用できると説明されている。従量課金のクラウドWeb APIに頼らず、手元でWeb情報にアクセスしたい用途を想定している。REST経由での利用も可能とされている。ツール一覧やベンチマーク、導入手順はドキュメントで公開されている。</td></tr>
+<tr><td class="num">8</td><td class="title">好きな技術をゼロから再実装して学ぶ定番集「build-your-own-x」</td><td class="link-col"><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">データベースやDocker、3Dレンダラー、ブロックチェーン、フロントエンドフレームワークなど、著名な技術を一から作り直すための手順付きガイドを集めたリポジトリ。ファインマンの「作れないものは理解できない」という言葉を掲げ、実装を通じて仕組みを学ぶことを重視している。カテゴリごとにステップ・バイ・ステップの解説記事がまとめられている。学習目的で技術の内部構造を深く理解したい開発者に広く参照されている。特定の言語やフレームワークに限定せず幅広い題材を扱う。長く支持を集めている学習リソースの一つである。各ガイドへのリンクがカテゴリ別に整理されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">テレビの長時間視聴と脳構造の縮小に関連——南カリフォルニア大の研究</td><td class="link-col"><a href="https://dornsife.usc.edu/news/stories/heavy-tv-watching-associated-with-smaller-brain-structures/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">南カリフォルニア大学(USC)の研究を紹介する記事で、テレビを長時間見る習慣が脳の一部構造の小ささと関連していたと報告している。観察された関連は相関にとどまり、テレビ視聴が直接の原因だと断定するものではない点に注意が必要である。座位時間の長さや他の生活習慣といった交絡要因の影響も議論の対象になり得る。長時間の受動的な視聴と認知・脳の健康の関係に関心が集まっている。研究の設計や対象集団の詳細は元記事で示されている。同種の生活習慣研究と同様、因果の解釈には慎重さが求められる。HNでは19件のコメントが寄せられ議論が続いている。</td></tr>
+<tr><td class="num">2</td><td class="title">「GTA: San Andreas」のゲーム内テレビで「GTA III」を動かすMod</td><td class="link-col"><a href="https://videocardz.com/newz/modder-runs-gta-iii-inside-gta-san-andreas-on-an-in-game-tv" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">あるModderが、『GTA: San Andreas』の中に設置されたゲーム内テレビの画面上で『GTA III』を実際に動作させたという話題。ゲームの中で別のゲームを走らせるという入れ子の実装が注目を集めている。技術的には既存タイトルのエンジンやレンダリングを工夫して実現しているとみられる。実用性よりも技術デモや遊び心としての側面が強い取り組みである。レトロゲームのMod文化における面白い実験例として紹介されている。動作の仕組みの詳細は元記事で解説されている。HNでは8件のコメントが付いている。</td></tr>
+<tr><td class="num">3</td><td class="title">自宅ルーターとしてMikroTikを使う——ホームラボ連載 #1</td><td class="link-col"><a href="https://justsomebody.dev/blog/mikrotik-home-router" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">家庭のネットワーク環境をMikroTik機器で構築する、ホームラボ連載の第1回にあたるブログ記事。市販の一般的な家庭用ルーターの代わりに、業務寄りで柔軟な設定が可能なMikroTikを自宅のルーターとして採用する手順や考え方を紹介している。VLANやファイアウォール設定など、細かく制御できる点が魅力として挙げられる一方、設定の学習コストも伴う。自宅ネットワークを自分好みに構築したい技術者向けの内容である。連載の導入として全体像や動機が説明されている。実際の設定例やつまずきどころも取り上げられている。HNでは20件のコメントで実運用の知見が交わされている。</td></tr>
+<tr><td class="num">4</td><td class="title">Kagiが手がけるWebブラウザ「Orion」</td><td class="link-col"><a href="https://orionbrowser.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">検索エンジンKagiが開発するWebブラウザ「Orion」の紹介ページが話題に上がっている。プライバシーを重視し、拡張機能への対応や省リソースを特徴として掲げるブラウザとして知られている。大手ベンダー系ブラウザとは異なる選択肢を求める層に向けた製品である。Kagiの有料検索と親和性の高いエコシステムの一部として位置づけられている。ブラウザ選びの多様化という文脈で関心を集めている。対応プラットフォームや機能の詳細は公式サイトで案内されている。HNでは28件のコメントで使用感や評価が議論されている。</td></tr>
+<tr><td class="num">5</td><td class="title">SoundCloudがAAC変換に意図的にローパスをかける理由</td><td class="link-col"><a href="https://developers.soundcloud.com/blog/less-is-more-why-soundcloud-low-passes-its-aac-transcodings/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SoundCloudの開発者ブログが、同社のAACトランスコードで音声に意図的なローパスフィルタ(高域のカット)を適用している理由を解説した記事。「Less Is More」と題し、可聴上ほとんど影響しない高域を削ることで、ビットレートを効率的に使い音質と配信効率のバランスを取る狙いを説明している。人間の聴覚特性やコーデックの挙動を踏まえた技術的判断であるとされる。音声配信における帯域とファイルサイズの最適化という実務的な観点を扱っている。波形やスペクトルの図を用いて挙動を可視化していると見られる。オーディオエンジニアリングに関心のある読者向けの内容である。HNでは6件のコメントが付いている。</td></tr>
+<tr><td class="num">6</td><td class="title">Z80が50周年——オープンソースのドロップイン互換品がDIP40シリコン化へ</td><td class="link-col"><a href="https://www.tomshardware.com/tech-industry/zilog-z80-turns-50-as-open-source-replacement-heads-for-drop-in-dip40-silicon" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Zilog Z80がデビューから50年を迎えたことにあわせ、オープンソースのドロップイン置き換え品がDIP40パッケージのシリコン実装に近づいているという話題。往年の8ビットCPUであるZ80を、ピン互換の形で現代に再現・供給しようとする取り組みが紹介されている。既存のZ80を用いたレトロ機器やホビー用途で、供給の途絶えた部品を代替できる可能性が期待されている。オープンな設計により、製造や改良をコミュニティが担える点が意義として挙げられる。半導体の長寿命化やレトロコンピューティングの保全という文脈で注目されている。開発の進捗や仕様の詳細は元記事で報じられている。HNではコメントはまだ付いていない。</td></tr>
+<tr><td class="num">7</td><td class="title">Windowsを起動できる新しいIntel Itanium(IA-64)エミュレータ</td><td class="link-col"><a href="https://raymii.org/s/blog/Intel_Itanium_IA-64-Emulator_that_boots_Windows.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Intelの独自64ビットアーキテクチャIA-64(Itanium)をエミュレートし、実際にWindowsを起動できたという個人ブログの記事。すでに市場から退いたItaniumアーキテクチャを、ソフトウェアで再現する挑戦的な取り組みである。実機の入手やメンテナンスが難しくなった古い環境を、エミュレータ上で動かせる意義がある。IA-64特有の命令セットやアーキテクチャの複雑さに向き合った実装の記録となっている。レトロコンピューティングや歴史的アーキテクチャの保存に関心のある読者に向いている。実装の詳細やブート過程は元記事で詳しく述べられている。HNでは2件のコメントが付いている。</td></tr>
+<tr><td class="num">8</td><td class="title">AIの助言で正答率が3分の1に低下しつつ自信は2倍に——研究報告</td><td class="link-col"><a href="https://thenextweb.com/news/ai-advice-suppresses-critical-thinking-wrong-answers-study" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIの助言を受けた人が、正確さは大きく下がったのに自信はむしろ高まったとする研究を紹介する記事。報告によれば、AIのアドバイスは正答率を約3分の1に低下させる一方、回答への確信度は約2倍になったという。AIの提案が批判的思考を抑制し、誤った答えでも鵜呑みにさせてしまう可能性を示唆している。人間とAIの協働において、助言をそのまま信じることの危うさを問題提起している。過信と実際の性能のギャップという、AI活用の落とし穴が論点になっている。研究の設計や対象タスクの詳細は元記事で示されている。投稿されて間もなくコメントはまだ付いていない。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIに「レビューして」はもう古い——「敵対的検証」のすすめ</td><td class="link-col"><a href="https://zenn.dev/loglass/articles/6aa18c80496ec6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIにコードレビューを頼む際の指示の仕方を見直す記事で、単に「レビューして」と頼むのではなく「敵対的検証(adversarial verification)」の姿勢を取ることを提案している。AIに肯定的な確認をさせるのではなく、あえて欠陥や反例を探させることで、見落としを減らせるという考え方を示している。曖昧な依頼だと当たり障りのない指摘に終わりがちな問題を出発点にしている。批判的に検証させるプロンプト設計の重要性を論じている。実務でAIレビューを役立てるための具体的な工夫が語られている。Zennでtechカテゴリの記事として多くの支持を集めている。AIを使ったコード品質担保の実践知として参考にされている。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Codeが化けた——愛用の3つのプラグイン+標準機能の活用法</td><td class="link-col"><a href="https://zenn.dev/sonicmoov/articles/8712598f532b18" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeの使い勝手が大きく向上したとして、筆者が実際に使っている3つのプラグインと標準機能の活用法を紹介する記事。プラグインの組み合わせによって開発ワークフローがどう改善されたかを具体的に解説している。標準機能でカバーできる範囲と、プラグインで補う範囲の切り分けが述べられている。日々のコーディングにClaude Codeを組み込むうえでの実践的なノウハウを共有している。導入や設定のポイントも取り上げられている。Zennで高い支持を集めた人気記事となっている。Claude Codeを使いこなしたい読者向けの内容である。</td></tr>
+<tr><td class="num">3</td><td class="title">一人前のエンジニアなら、PRでコメントをもらうな</td><td class="link-col"><a href="https://zenn.dev/headwaters/articles/72c39ad735038d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PR(プルリクエスト)でレビューコメントを多くもらう状態を良しとせず、そもそも指摘が付かないPRを出せることを目指すべきだと主張する意見記事。レビュー前に自分で十分に検証し、設計や意図を明確にしておくことの重要性を説いている。挑発的なタイトルながら、レビュー負荷を減らし品質を高めるための自律的な姿勢を促す内容である。コメントをもらわないことを目的化するのではなく、その背後にある準備や配慮を重視している。チーム開発における個人の責任範囲を問い直している。ideaカテゴリの記事として賛否を含む議論を呼んでいる。エンジニアの成熟度をめぐる問いかけとして受け止められている。</td></tr>
+<tr><td class="num">4</td><td class="title">夏休み前に知りたい、Reactエンジニアに優しくなったモバイルアプリ開発の世界</td><td class="link-col"><a href="https://zenn.dev/cybozu_frontend/articles/rn-devmap-in-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Reactの経験を持つエンジニア向けに、近年のモバイルアプリ開発環境がいかに扱いやすくなったかを地図的に整理した記事。React Nativeを中心に、Reactの知識を活かしてモバイル開発へ踏み出すための道筋を示している。ツールやフレームワークの選択肢、エコシステムの現状を俯瞰的にまとめている。Webのフロントエンド開発者がモバイル領域へ入りやすくなった背景を解説している。学習の入り口としてどこから手を付ければよいかの指針を与えている。cybozuのフロントエンドブログとして技術カテゴリで支持を集めている。夏休みの学習題材として位置づけられている。</td></tr>
+<tr><td class="num">5</td><td class="title">ローカルLLMを構築した</td><td class="link-col"><a href="https://zenn.dev/neet/articles/11bafab8645995" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">手元の環境でローカルLLMを構築した過程をまとめた記事。クラウドのAPIに頼らず、自前の環境で言語モデルを動かすための構成や手順を共有している。モデルの選定や実行環境の準備、動かしてみての所感などが述べられていると見られる。プライバシーやコスト、オフライン利用といったローカル実行のメリットが背景にある。実際に構築した経験に基づく実践的な記録となっている。ローカルLLMに興味を持つ読者にとって参考になる内容である。techカテゴリで一定の支持を集めている。</td></tr>
+<tr><td class="num">6</td><td class="title">GitHub Releaseの作成をパッケージ公開のトリガーにするな</td><td class="link-col"><a href="https://zenn.dev/yumemi_inc/articles/github-release-not-a-publish-trigger" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Releaseの作成イベントをパッケージのリリース(公開)処理の起点にする運用に警鐘を鳴らす記事。Release作成をトリガーにすると、意図しないタイミングでの公開ややり直しの難しさなど、運用上の問題が生じ得ると指摘している。より安全なリリース設計の考え方を提案している。CI/CDのワークフロー設計における落とし穴を具体的に論じている。タグやワークフローの分離など、代替となる進め方に触れている。yumemiの技術ブログとして実務者向けに書かれている。リリース自動化を組む際の注意点として参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">DELETEしたはずの行がSELECTで返り続けるとき、何を疑うか</td><td class="link-col"><a href="https://zenn.dev/dress_code/articles/15659114e7f21c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">DELETE文で削除したはずのレコードが、その後のSELECTで返り続けるという現象に直面したときの原因の切り分け方を扱う記事。トランザクションの分離レベルやコミット漏れ、レプリカ参照、キャッシュなど、疑うべき候補を整理している。一見不可解なデータベースの挙動を、体系的に切り分けていく思考過程を示している。実際のトラブルシューティングに役立つチェックポイントを提供している。データベース周りのハマりどころを言語化した内容である。techカテゴリの記事として実務者の関心を集めている。同様の問題に遭遇した際の手がかりになる。</td></tr>
+<tr><td class="num">8</td><td class="title">E2Eテストをユニットテストなみの実行時間に——Playwright並列化とGitHub Actionsチューニング</td><td class="link-col"><a href="https://zenn.dev/berry_blog/articles/39392e1da7ca71" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">時間のかかりがちなE2Eテストを、ユニットテスト並みの短い実行時間に近づけるための実践をまとめた記事。Playwrightの並列化とGitHub Actions上でのチューニングを組み合わせ、テスト全体の所要時間を短縮した取り組みを紹介している。並列度の設定やジョブ分割、キャッシュ活用などの具体策に触れている。E2Eテストの遅さがCI/CDのボトルネックになる問題への実務的な解決策を示している。実測に基づく改善の記録として説得力を持たせている。techカテゴリでテスト自動化に関心のある読者に支持されている。CIの高速化を検討する際の参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">面接相手に「未来」を想像させる——未経験でも信用される伝え方</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/c1a219a3156a4214828d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">未経験からエンジニア転職を目指す人に向けて、面接での伝え方を工夫する方法を説く記事。実績が乏しくても、面接官に「この人が入社後に活躍する未来」を想像させることで信用を得られると主張している。過去の経験の少なさを補うために、成長意欲や学びの姿勢をどう言語化するかに焦点を当てている。コミュニケーションの観点から、相手の視点に立った伝え方の大切さを説いている。キャリアや面接対策のカテゴリで多くの共感を集めている。新人・未経験エンジニアの応援という文脈で書かれている。転職活動で自分をどう見せるかの参考になる。</td></tr>
+<tr><td class="num">2</td><td class="title">マルチエージェント論文40本を再実装してわかったこと</td><td class="link-col"><a href="https://qiita.com/Koukyosyumei/items/e9ee8e26cfdc40a8c2f9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">マルチエージェント(複数のAIエージェント協調)に関する論文を40本、実際に再実装してみた経験からの知見をまとめた記事。論文を読むだけでなく手を動かして再現することで見えてきた、共通のパターンや落とし穴を共有している。CodexやClaude Codeなどのツールを活用して再実装を進めた過程にも触れている。論文の主張が実装上どこまで再現できるか、という実証的な観点を重視している。マルチエージェント研究の現状を俯瞰する材料を提供している。AIエージェント開発に関心のある読者から高い支持を集めている。理論と実装のギャップを埋める実践記録となっている。</td></tr>
+<tr><td class="num">3</td><td class="title">セキュリティの勉強になるサイト138選(2026年版)</td><td class="link-col"><a href="https://qiita.com/Nakanishi_RareTECH/items/16fd0b847aa68c152e00" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">セキュリティ学習に役立つサイトを138件集めて整理した、2026年版のまとめ記事。OWASPや脆弱性、CTFなど幅広いテーマを扱うリソースを網羅的に紹介している。初学者から実務者まで、自分のレベルや関心に合った学習先を探せるようにカテゴリ分けされていると見られる。体系立った学習ルートを組みたい人に向けた資料集として機能する。最新の情報に更新された年版としてまとめられている。セキュリティ分野のブックマーク集として実用性が高い。多数のストックを集めた人気記事となっている。</td></tr>
+<tr><td class="num">4</td><td class="title">新人がすぐにできるセキュリティ対策——損害賠償になったら怖い</td><td class="link-col"><a href="https://qiita.com/prumnn/items/6d7dc1bed369c567df22" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">新人エンジニアでもすぐに実践できるセキュリティ対策を、損害賠償リスクという切実な観点から解説する記事。セキュリティの不備が最悪の場合は賠償問題にまで発展しうるという危機感を出発点にしている。日々の業務で見落としがちな基本的な対策を、初心者向けにかみ砕いて紹介している。難しい専門知識がなくても取り組める具体策に焦点を当てている。セキュリティ意識を早い段階で身につけることの重要性を訴えている。未経験・新人エンジニア向けのカテゴリで広く読まれている。現場での実践につながる注意喚起となっている。</td></tr>
+<tr><td class="num">5</td><td class="title">完璧主義を手放したら評価が変わった——新人の優先順位の付け方</td><td class="link-col"><a href="https://qiita.com/prumnn/items/b9a128b0e71382979f08" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">完璧主義を手放したことで職場での評価が上がったという、新人エンジニアの経験に基づく記事。すべてを完璧に仕上げようとするより、優先順位をつけて重要なものから着実に片付ける方が成果につながると説いている。限られた時間の中でどこに力を注ぐかを見極める考え方を共有している。仕事の抱え込みや停滞を防ぐための実践的なマインドセットを提案している。新人教育やキャリアのカテゴリで多くの共感を集めている。真面目さゆえに悩みがちな人への示唆に富む内容である。働き方の見直しに役立つ視点を提供している。</td></tr>
+<tr><td class="num">6</td><td class="title">数学が苦手な文系でも大丈夫——ITの論理的思考・条件分岐を克服する</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/abf53976ec072511a4ac" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">数学に苦手意識のある文系出身者に向けて、ITで必要となる論理的思考や条件分岐(if文的な考え方)をやさしく解説する記事。数式そのものではなく、物事を筋道立てて考える力としてプログラミングの論理を捉え直している。条件分岐を日常的な例に置き換えるなどして、つまずきやすい概念を親しみやすく説明している。文系からエンジニアを目指す初学者の不安を和らげる狙いがある。プログラミング入門での心理的ハードルを下げることを重視している。未経験・初心者向けのカテゴリで多く読まれている。学習の第一歩を後押しする内容となっている。</td></tr>
+<tr><td class="num">7</td><td class="title">「バイブコーディング(笑)」と言われないための考え方</td><td class="link-col"><a href="https://qiita.com/fallout/items/d732b94ff0f68c5cd1ab" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIに任せきりで場当たり的にコードを書く「バイブコーディング」と揶揄されないために必要な考え方を論じる記事。LLMや生成AIを使った開発が広がる中で、ただ動けばよいという姿勢の危うさを指摘している。AIの出力を鵜呑みにせず、設計や意図を理解したうえで活用することの重要性を説いている。マネジメントの視点も交えつつ、AI時代の開発者としての姿勢を問い直している。生成AIを使いこなすことと、思考を放棄することの違いを明確にしようとしている。ポエム的な語り口ながら多くの共感を集めている。AI活用の質を高めたい開発者への示唆となっている。</td></tr>
+<tr><td class="num">8</td><td class="title">AIエージェントのためのDocker Sandboxes実践入門</td><td class="link-col"><a href="https://qiita.com/minamijoyo/items/854ce04da1490b43a848" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントを安全に動かすためのDockerサンドボックスの構築を、実践的に解説する入門記事。エージェントが任意のコードやコマンドを実行しうる状況で、ホスト環境を守るための隔離手段としてサンドボックスを位置づけている。DockerやMicroVMを使った隔離の考え方と設定の要点を扱っている。エージェントの暴走や予期せぬ副作用からシステムを保護するセキュリティ観点を重視している。実務でAIエージェントを運用する際の防御策として役立つ内容である。SecurityやDockerのタグで技術者の関心を集めている。エージェント実行環境の安全設計の参考になる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-20 06:36 JST
+</footer>
+</div>
+</body>
+</html>
