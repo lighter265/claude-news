@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-21</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-21</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIのコードレビューでトークン浪費を防ぐ「code-review-graph」</td><td class="link-col"><a href="https://github.com/tirth8205/code-review-graph" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ローカルファーストで動作するコードインテリジェンスのグラフツールで、MCPおよびCLIから利用できる。コードベースの永続的なマップを構築し、AIコーディングツールが「重要な部分だけ」を読むようにすることで、レビューや大規模リポジトリ作業での文脈量を削減すると説明している。AIツールがレビュー時にコードベースの広い範囲を再読み込みしてしまう問題への対処を掲げている。多言語のドキュメント(英語・簡体字中国語・日本語・韓国語・ヒンディー語)が用意されている。ベンチマークによる文脈削減の効果や再現手順も提示されている。GitHub Actionとの連携やトラブルシューティングも整備されている。トークン消費を抑えつつ効率的なレビューを目指す用途に向けたツールである。</td></tr>
+<tr><td class="num">2</td><td class="title">CPUとGPUを併用して大規模LLMを効率推論する「KTransformers」</td><td class="link-col"><a href="https://github.com/kvcache-ai/ktransformers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大規模言語モデルの推論とファインチューニングを、CPU-GPUの異種混合(ヘテロジニアス)計算によって効率化することを狙う研究プロジェクト。限られたGPUメモリでも、CPU側のリソースを組み合わせることで大型モデルを扱えるようにする最適化を提供するとしている。kt-kernelソースツリーから、推論とSFT(教師ありファインチューニング)という2つの機能をユーザー向けに公開している。最先端の推論・微調整最適化を「体験する」ための柔軟なフレームワークという位置づけを掲げている。2026年Q2に向けたロードマップも示されている。手元のハードウェアで巨大モデルを動かしたい研究・実験用途を主な対象としている。詳細な使い方や引用情報はリポジトリで案内されている。</td></tr>
+<tr><td class="num">3</td><td class="title">実務レベルのAIエンジニアリングをゼロから学ぶ大型カリキュラム</td><td class="link-col"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールを使いこなす人材の育成を狙った、体系的な学習カリキュラムのリポジトリ。学生の84%がすでにAIツールを使う一方、専門的に使える自信があるのは18%にとどまるという問題意識から、そのギャップを埋めることを掲げている。503レッスン・20フェーズ・約320時間規模で、Python・TypeScript・Rust・Juliaを対象言語としている。各レッスンがプロンプトやスキルなど再利用可能な成果物を生み出す設計になっている。学んで作り、他者のために出荷するという実践重視の方針を打ち出している。永続メモリ「Agent Memory」の作者による教材である点も紹介されている。AIエンジニアリングを独学で身につけたい層に向けた内容である。</td></tr>
+<tr><td class="num">4</td><td class="title">ローカルで動くオープンソースAIボイススタジオ「Voicebox」</td><td class="link-col"><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">音声の生成・クローン・ディクテーションを一括で扱える、ローカルファーストのオープンソースAIボイススタジオ。任意の声をクローンし、音声を生成し、あらゆるアプリへ音声入力(ディクテーション)し、自分が所有する声でエージェントと会話できるとしている。ElevenLabsやWisprFlowの無料・オープンソースな代替を志向し、音声入出力のスタックを手元のマシン上で動かせる点を訴求している。クラウドに音声データを送らずに済むため、プライバシーやコスト面のメリットが期待される。デモ動画やドキュメント、API、ダウンロードが公式サイトで提供されている。音声UIやエージェントとの対話を自前環境で構築したい用途を想定している。導入手順やトラブルシューティングもまとめられている。</td></tr>
+<tr><td class="num">5</td><td class="title">APIキー不要でローカル動作するAIエージェント向けWeb検索「wigolo」</td><td class="link-col"><a href="https://github.com/KnockOutEZ/wigolo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIコーディングエージェント向けに、Web検索・取得・クロール・リサーチをMCP経由で提供するローカルファーストのツール。APIキーやクラウドが不要で、クエリごとの課金がゼロだと謳っている(パブリックベータ)。Claude Code、Cursor、Codex、Gemini CLI、VS Code、Windsurf、Zedなど幅広いエージェントやMCPクライアントに対応するとしている。LangChainやCrewAI、LlamaIndex、Vercel AI SDK、n8nなどのフレームワークからも利用できると説明されている。従量課金のクラウドWeb APIに頼らず、手元でWeb情報にアクセスしたい用途を想定している。REST経由での利用も可能とされている。ツール一覧やベンチマーク、導入手順はドキュメントで公開されている。</td></tr>
+<tr><td class="num">6</td><td class="title">Copilotエージェントをアプリに組み込む「GitHub Copilot SDK」</td><td class="link-col"><a href="https://github.com/github/copilot-sdk" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Copilotのエージェント機能を、自作のアプリやサービスに組み込むためのマルチプラットフォームSDK。Python・TypeScript・Go・.NET・Java・Rustに対応し、Copilot CLIの背後にある本番実績のあるエージェントランタイムをプログラムから呼び出せるとしている。プランニングやツール呼び出しといったオーケストレーションはCopilot側が担い、開発者はエージェントの振る舞いを定義するだけでよいと説明している。独自にエージェント基盤を構築する手間を省ける点が訴求されている。「あらゆるアプリにエージェントを」というコンセプトを掲げている。既存のCopilotエコシステムを自社製品に取り込みたい開発者を主な対象としている。各言語向けの導入方法はドキュメントで案内されている。</td></tr>
+<tr><td class="num">7</td><td class="title">プロダクト分析・AI可観測性を統合したオープンソース基盤「PostHog」</td><td class="link-col"><a href="https://github.com/PostHog/posthog" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プロダクト開発向けの機能を幅広く束ねたオープンソースプラットフォーム。AIの可観測性、プロダクト分析、セッションリプレイ、機能フラグ、実験(A/Bテスト)、エラートラッキング、ログなどを一つの基盤で提供するとしている。エージェントが問題の診断や改善機会の発見、修正の投入を行うのに必要な文脈を捉えることを重視している。Slack、Web、デスクトップ、MCP経由での操作に対応すると説明されている。「self-driving products(自律的に改善するプロダクト)」を構築するための土台という位置づけを掲げている。複数の分析ツールを別々に導入する代わりに統合環境を提供する点が訴求されている。機能の詳細やロードマップは公式サイトで公開されている。</td></tr>
+<tr><td class="num">8</td><td class="title">AIエージェント向けの信頼できるテキスト→SQL基盤「WrenAI」</td><td class="link-col"><a href="https://github.com/Canner/WrenAI" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自然言語の質問を、信頼できるダッシュボードやチャート、SQLに変換するオープンソースのGenBI(生成的BI)プラットフォーム。ベンダー中立でガバナンスの効いた「コンテキスト層」を通じて、AIエージェントが根拠を持ってBIを生成・デプロイ・統制できるようにするとしている。BigQuery、Snowflake、PostgreSQL、ClickHouse、Amazon Redshift、Databricksなど20以上のデータソースに対応すると説明されている。エージェントがそのまま信頼できる文脈にもとづいて集計や可視化を行える点を重視している。自然言語からの分析を、恣意的なSQL生成に頼らず統制する狙いがある。ドキュメントやビジョンはリポジトリおよび公式サイトで公開されている。データ分析をエージェントに任せたい組織向けの内容である。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">eSIMはSIMカードを置き換えるはずだったが「罠」になったという指摘</td><td class="link-col"><a href="https://www.howtogeek.com/esim-was-supposed-to-replace-sim-cards-carriers-turned-it-into-a-trap/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">eSIMがSIMカードを置き換える利便性の高い技術になると期待されていたにもかかわらず、通信キャリアがそれを利用者の囲い込みに使っているのではないか、と論じる記事。本来は物理カードの差し替え不要でキャリア変更やデュアル回線が容易になる利点があるが、実際には移行や乗り換えを煩雑にする運用が見られると指摘している。端末とキャリアの結びつきが強まり、ユーザーの自由度がむしろ下がりうるという懸念を扱っている。利便性と囲い込みの綱引きという構図を問題提起している。消費者にとってのeSIMの実像を批判的に検討している。具体的な事例や仕組みの説明は元記事で示されている。HNでは6件のコメントで賛否が交わされている。</td></tr>
+<tr><td class="num">2</td><td class="title">GoogleがGeminiをシリコンに焼き込んだチップを開発中との報道</td><td class="link-col"><a href="https://thenextweb.com/news/google-frozen-chip-gemini-silicon" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Googleが、AIモデルGeminiをチップのシリコン内部に「焼き込む(baked in)」形の半導体を開発しているという報道記事。モデルをハードウェアレベルに組み込むことで、推論の効率や応答性を高める狙いがあるとみられる。汎用的な演算に依存せず、特定モデル向けに最適化した専用シリコンという方向性が注目されている。エッジやデバイス上でのAI処理を高速化・省電力化する可能性が期待される。一方で、モデル更新の柔軟性など、専用化に伴う制約も論点になり得る。オンデバイスAIとハードウェア設計の融合という文脈で関心を集めている。詳細な仕様や投入時期は元記事の報道内容による。HNでは1件のコメントが付いている。</td></tr>
+<tr><td class="num">3</td><td class="title">NASA、SpaceXのロケット部品が月に衝突する可能性を指摘</td><td class="link-col"><a href="https://www.euronews.com/my-europe/2026/07/20/unplanned-impact-nasa-says-spacex-rocket-parts-could-hit-moon" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">NASAが、SpaceXのロケットの一部部品が意図せず月に衝突する可能性があると述べたと伝える記事。打ち上げ後に制御を離れた機体の一部が、月へ向かう軌道に乗っているとの見立てが背景にある。計画外の衝突であり、意図的な月面探査とは異なる点が強調されている。宇宙ごみ(スペースデブリ)や使用済み機体の追跡・管理という課題を改めて浮き彫りにしている。衝突が起きた場合の月面への影響や観測の機会についても関心が寄せられている。民間ロケットの活動が活発化するなかでの軌道上残骸の扱いが論点である。詳細な軌道予測や時期は元記事で報じられている。HNでは1件のコメントが付いている。</td></tr>
+<tr><td class="num">4</td><td class="title">AliExpressにEUが過去最大5.5億ユーロの制裁金——違法商品の販売を放置</td><td class="link-col"><a href="https://www.bbc.com/news/articles/cp8714286dpo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">EUが、通販サイトAliExpressに対して違法な商品の販売を許していたとして、記録的な5億5000万ユーロの制裁金を科したと伝える記事。プラットフォームが自らのマーケットプレイス上で不適切・違法な商品の流通を十分に防げていなかった点が問題視されている。EUのデジタルサービス規制(プラットフォームの責任を問う枠組み)の運用強化の一環と位置づけられる。大規模なオンラインマーケットに対し、出品監視や利用者保護の義務を厳しく求める流れを示している。巨額の制裁金は、規制当局の本気度を示すものとして注目されている。同種のプラットフォームへの波及も論点になり得る。詳細な違反内容や対応は元記事で報じられている。HNでは1件のコメントが付いている。</td></tr>
+<tr><td class="num">5</td><td class="title">「Vibecoded」アプリがApp Storeに溢れている——Appleにとって是か非か</td><td class="link-col"><a href="https://www.nytimes.com/2026/07/20/technology/apple-app-store-vibecoding.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIに任せて短時間で作られた「vibecoded(雰囲気コーディング)」なアプリがApp Storeに大量に流入している現状を、Appleにとって良いことなのかという観点から論じるニューヨーク・タイムズの記事。生成AIの普及で個人でも手軽にアプリを作れるようになった一方、品質や独自性、審査の負荷といった課題が指摘されている。アプリ数の増加はエコシステムの活況にも見えるが、質の低いアプリの乱立という懸念も伴う。プラットフォーム運営者としてのAppleが、量と質のバランスをどう取るかが論点になっている。AIによる開発の民主化とストアの健全性という緊張関係を扱っている。具体的な事例やAppleの姿勢は元記事で示されている。HNでは1件のコメントが付いている。</td></tr>
+<tr><td class="num">6</td><td class="title">xargsに嫌気がさして自作したbash製の列挙ツール「bashumerate」</td><td class="link-col"><a href="https://numerlab.org/2025/07/20/bashumerate-enumerator/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">xargsの使い勝手に不満を感じた筆者が、代わりにbashで列挙(enumerate)ツールを自作したという個人ブログの記事。コマンドラインで入力を一つずつ処理する際の、xargs特有の書きにくさや落とし穴への対処として開発した経緯を紹介している。シェルスクリプトの範囲で、より直感的に反復処理を扱えるようにすることを狙っている。実用的な小道具として、日々のターミナル作業を効率化する目的で作られている。既存ツールへの不満から自分向けの解決策を作るという、開発者らしい取り組みである。使い方や設計の考え方は元記事で解説されている。ちょっとしたコマンドラインの生産性向上に関心のある読者に向いている。HNでは1件のコメントが付いている。</td></tr>
+<tr><td class="num">7</td><td class="title">サンフランシスコのグレース大聖堂を没入的に巡るガウシアンスプラットのツアー</td><td class="link-col"><a href="https://vincentwoo.com/3d/grace_cathedral/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">サンフランシスコのグレース大聖堂を、3D復元技術「ガウシアンスプラッティング」で再現し、没入的に見て回れるようにしたデモを紹介するShow HN。写真群から高精細な3Dシーンを構築するガウシアンスプラットを用い、実在の建築空間をブラウザ上で自由に探索できるようにしている。従来のポリゴンベースとは異なる、点群的で写実的な質感の再現が特徴である。文化財や建築空間のデジタル保存・体験という用途での可能性を示している。Webで手軽に3D空間を巡れる点が体験のハードルを下げている。技術デモとしての完成度が注目を集めている。動作の仕組みや制作過程はサイトで案内されている。HNではコメントはまだ付いていない。</td></tr>
+<tr><td class="num">8</td><td class="title">マルチエージェント設計パターン 第1回——実装役とテスト役を分離する</td><td class="link-col"><a href="https://medium.com/@Koukyosyumei/understanding-multi-agent-design-patterns-part-1-agentcoder-separating-code-implementation-from-0e0d2491bec0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">複数のAIエージェントを組み合わせるマルチエージェント設計のパターンを解説する連載の第1回。「AgentCoder」を題材に、コードを実装するエージェントとテストを担うエージェントの役割を分離するアプローチを紹介している。一つのエージェントに実装と検証の両方を任せるより、役割を分けたほうが品質や信頼性を高められるという考え方を示している。エージェント同士の協調によってソフトウェア開発の各工程を分担させる設計思想を扱っている。論文的な知見を実務的なパターンとして整理している点が特徴である。AIエージェントを使った開発パイプラインの構築に関心のある読者に向いている。具体的な構成や利点は元記事で述べられている。投稿されて間もなくコメントはまだ付いていない。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIに「レビューして」はもう古い——「敵対的検証」のすすめ</td><td class="link-col"><a href="https://zenn.dev/loglass/articles/6aa18c80496ec6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIにコードレビューを頼む際の指示の仕方を見直す記事で、単に「レビューして」と頼むのではなく「敵対的検証(adversarial verification)」の姿勢を取ることを提案している。AIに肯定的な確認をさせるのではなく、あえて欠陥や反例を探させることで、見落としを減らせるという考え方を示している。曖昧な依頼だと当たり障りのない指摘に終わりがちな問題を出発点にしている。批判的に検証させるプロンプト設計の重要性を論じている。実務でAIレビューを役立てるための具体的な工夫が語られている。Zennでtechカテゴリの記事として多くの支持を集めている。AIを使ったコード品質担保の実践知として参考にされている。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Codeが化けた——愛用の3つのプラグイン+標準機能の活用法</td><td class="link-col"><a href="https://zenn.dev/sonicmoov/articles/8712598f532b18" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeの使い勝手が大きく向上したとして、筆者が実際に使っている3つのプラグインと標準機能の活用法を紹介する記事。プラグインの組み合わせによって開発ワークフローがどう改善されたかを具体的に解説している。標準機能でカバーできる範囲と、プラグインで補う範囲の切り分けが述べられている。日々のコーディングにClaude Codeを組み込むうえでの実践的なノウハウを共有している。導入や設定のポイントも取り上げられている。Zennで高い支持を集めた人気記事となっている。Claude Codeを使いこなしたい読者向けの内容である。</td></tr>
+<tr><td class="num">3</td><td class="title">一人前のエンジニアなら、PRでコメントをもらうな</td><td class="link-col"><a href="https://zenn.dev/headwaters/articles/72c39ad735038d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">PR(プルリクエスト)でレビューコメントを多くもらう状態を良しとせず、そもそも指摘が付かないPRを出せることを目指すべきだと主張する意見記事。レビュー前に自分で十分に検証し、設計や意図を明確にしておくことの重要性を説いている。挑発的なタイトルながら、レビュー負荷を減らし品質を高めるための自律的な姿勢を促す内容である。コメントをもらわないことを目的化するのではなく、その背後にある準備や配慮を重視している。チーム開発における個人の責任範囲を問い直している。ideaカテゴリの記事として賛否を含む議論を呼んでいる。エンジニアの成熟度をめぐる問いかけとして受け止められている。</td></tr>
+<tr><td class="num">4</td><td class="title">夏休み前に知りたい、Reactエンジニアに優しくなったモバイルアプリ開発の世界</td><td class="link-col"><a href="https://zenn.dev/cybozu_frontend/articles/rn-devmap-in-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Reactの経験を持つエンジニア向けに、近年のモバイルアプリ開発環境がいかに扱いやすくなったかを地図的に整理した記事。React Nativeを中心に、Reactの知識を活かしてモバイル開発へ踏み出すための道筋を示している。ツールやフレームワークの選択肢、エコシステムの現状を俯瞰的にまとめている。Webのフロントエンド開発者がモバイル領域へ入りやすくなった背景を解説している。学習の入り口としてどこから手を付ければよいかの指針を与えている。cybozuのフロントエンドブログとして技術カテゴリで支持を集めている。夏休みの学習題材として位置づけられている。</td></tr>
+<tr><td class="num">5</td><td class="title">E2Eテストをユニットテストなみの実行時間に——Playwright並列化とGitHub Actionsチューニング</td><td class="link-col"><a href="https://zenn.dev/berry_blog/articles/39392e1da7ca71" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">時間のかかりがちなE2Eテストを、ユニットテスト並みの短い実行時間に近づけるための実践をまとめた記事。Playwrightの並列化とGitHub Actions上でのチューニングを組み合わせ、テスト全体の所要時間を短縮した取り組みを紹介している。並列度の設定やジョブ分割、キャッシュ活用などの具体策に触れている。E2Eテストの遅さがCI/CDのボトルネックになる問題への実務的な解決策を示している。実測に基づく改善の記録として説得力を持たせている。techカテゴリでテスト自動化に関心のある読者に支持されている。CIの高速化を検討する際の参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">GitHub Releaseの作成をパッケージ公開のトリガーにするな</td><td class="link-col"><a href="https://zenn.dev/yumemi_inc/articles/github-release-not-a-publish-trigger" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Releaseの作成イベントをパッケージのリリース(公開)処理の起点にする運用に警鐘を鳴らす記事。Release作成をトリガーにすると、意図しないタイミングでの公開ややり直しの難しさなど、運用上の問題が生じ得ると指摘している。より安全なリリース設計の考え方を提案している。CI/CDのワークフロー設計における落とし穴を具体的に論じている。タグやワークフローの分離など、代替となる進め方に触れている。yumemiの技術ブログとして実務者向けに書かれている。リリース自動化を組む際の注意点として参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">AWSのBilling障害への対応から得た反省点</td><td class="link-col"><a href="https://zenn.dev/blue_jam/articles/08b31e29699b56" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AWSの請求(Billing)まわりで発生した障害に対応した経験を振り返り、反省点をまとめた記事。障害発生時の状況把握や対応の進め方で、どこがうまくいかなかったのかを率直に共有している。クラウド利用における課金・請求まわりのトラブルという、見落とされがちだが影響の大きい領域を扱っている。事後の振り返り(ポストモーテム)を通じて、次に活かすための教訓を言語化している。同様のインシデントに備えるための実務的な示唆を含んでいる。ideaカテゴリの記事として運用担当者の関心を集めている。クラウド運用の失敗から学ぶ姿勢が評価されている。</td></tr>
+<tr><td class="num">8</td><td class="title">ループエンジニアリングの次は本当に「グラフ」なのか考えてみた</td><td class="link-col"><a href="https://zenn.dev/jodycraft/articles/dfe38e73e1ef8a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントの制御手法として注目される「ループエンジニアリング」の次の潮流が、本当に「グラフ」なのかを検討する考察記事。エージェントに反復的に自走させるループ型のアプローチと、処理の流れをグラフとして構造化するアプローチを比較している。グラフ化がもたらす利点と、それが万能ではない可能性の両面を冷静に論じている。エージェント設計のパラダイムがどこへ向かうのかという問いを扱っている。流行の枠組みを鵜呑みにせず、自分の頭で妥当性を吟味する姿勢が示されている。techカテゴリの記事としてエージェント設計に関心のある読者に読まれている。手法選択の判断材料として参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">セキュリティの勉強になるサイト138選(2026年版)</td><td class="link-col"><a href="https://qiita.com/Nakanishi_RareTECH/items/16fd0b847aa68c152e00" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">セキュリティ学習に役立つサイトを138件集めて整理した、2026年版のまとめ記事。OWASPや脆弱性、CTFなど幅広いテーマを扱うリソースを網羅的に紹介している。初学者から実務者まで、自分のレベルや関心に合った学習先を探せるようにカテゴリ分けされていると見られる。体系立った学習ルートを組みたい人に向けた資料集として機能する。最新の情報に更新された年版としてまとめられている。セキュリティ分野のブックマーク集として実用性が高い。多数のストックを集めた人気記事となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">新人がすぐにできるセキュリティ対策——損害賠償になったら怖い</td><td class="link-col"><a href="https://qiita.com/prumnn/items/6d7dc1bed369c567df22" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">新人エンジニアでもすぐに実践できるセキュリティ対策を、損害賠償リスクという切実な観点から解説する記事。セキュリティの不備が最悪の場合は賠償問題にまで発展しうるという危機感を出発点にしている。日々の業務で見落としがちな基本的な対策を、初心者向けにかみ砕いて紹介している。難しい専門知識がなくても取り組める具体策に焦点を当てている。セキュリティ意識を早い段階で身につけることの重要性を訴えている。未経験・新人エンジニア向けのカテゴリで広く読まれている。現場での実践につながる注意喚起となっている。</td></tr>
+<tr><td class="num">3</td><td class="title">数学が苦手な文系でも大丈夫——ITの論理的思考・条件分岐を克服する</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/abf53976ec072511a4ac" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">数学に苦手意識のある文系出身者に向けて、プログラミングで必要になる論理的思考や条件分岐の考え方を、易しく克服する方法を解説する記事。数式そのものよりも、条件で処理を分ける発想や筋道立てて考える力が本質だという立場を取っている。難しく感じられがちな論理の組み立てを、身近な例に置き換えて説明している。未経験からITに入る人がつまずきやすいポイントを丁寧に扱っている。苦手意識を和らげ、学習を続けるための後押しをする内容である。未経験・初心者向けのカテゴリで多くの共感を集めている。プログラミング学習の入口でのハードルを下げる記事として読まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">文系でもわかる——機械学習に入門しよう</td><td class="link-col"><a href="https://qiita.com/miruky/items/42b892805eb1d754109c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">数学や専門知識に不安のある文系読者に向けて、機械学習の基本を徹底的にかみ砕いて解説する入門記事。難解になりがちな概念を、前提知識が少なくても理解できるように順を追って説明している。機械学習が何をしているのか、どんな場面で使えるのかといった全体像の把握を重視している。数式の詳細に踏み込む前に、直感的なイメージをつかませることを狙っている。AIやAIエージェントへの関心の高まりを背景に、学習の第一歩を後押ししている。機械学習入門・初心者向けのカテゴリで多くの支持を集めている。これから機械学習を学びたい人の導入資料として読まれている。</td></tr>
+<tr><td class="num">5</td><td class="title">AIエージェントのためのDocker Sandboxes実践入門</td><td class="link-col"><a href="https://qiita.com/minamijoyo/items/854ce04da1490b43a848" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェントに安全にコードやコマンドを実行させるための、Dockerを使ったサンドボックス(隔離環境)構築を解説する実践記事。エージェントが任意の操作を行う際に、ホスト環境を保護し被害を封じ込める仕組みの重要性を扱っている。MicroVMなども視野に入れつつ、隔離のための構成や考え方を紹介している。自律的に動くエージェントに実行権限を与えることのリスクと、その緩和策を具体的に論じている。セキュリティを確保しながらエージェント開発を進めたい人に向けた内容である。Security・Dockerのタグで一定の支持を集めている。エージェントの実行環境設計の参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">白って1600色あんねん!——JavaScriptで「白」を色距離で数えてみた</td><td class="link-col"><a href="https://qiita.com/ishi720/items/3e4597bc50695fa9bf79" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">一見ひとつに見える「白」も、実は無数のバリエーションがあるという着想から、JavaScriptで「白」と呼べる色がどれだけあるかを数えてみた遊び心のある記事。RGB空間でのユークリッド距離を使い、基準となる白からの近さで「白の仲間」を判定するアプローチを取っている。色をどこまで白とみなすかという曖昧な問いを、定量的に扱おうとする試みである。プログラミングを使って身近な疑問を検証する楽しさが伝わる内容になっている。色空間や距離計算の基礎に触れられる教材的な側面もある。ユニークなテーマで多くの反応を集めた人気記事となっている。技術を使った実験の面白さを示す一例である。</td></tr>
+<tr><td class="num">7</td><td class="title">個人開発でApp Storeリリースフローを学ぶ——UIKit+FastAPI+K8sで作るMinecraft監視アプリ「MineWatch」</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/d33908602fd060f5e1d1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個人開発を通じてApp Storeへのリリースの流れを学んだ経験を、Minecraftサーバー監視アプリ「MineWatch」の制作記としてまとめた記事。iOSアプリ側はUIKit、バックエンドはFastAPI、インフラはKubernetes(K8s)という構成で、フロントからサーバー、運用までを横断的に扱っている。実際にアプリをストアに出すまでに必要な手順や、つまずきどころを具体的に共有している。趣味の題材(Minecraftサーバーの監視)を通して、実運用に近い開発を経験している点が特徴である。複数技術を組み合わせた個人開発の学びの記録となっている。個人開発カテゴリで支持を集めている。リリースまでの全体像を掴みたい人の参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Jenkins から TestFlight へ——Mac 1台でiOSリリースを半自動化</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/1ebffa98b9ff2dca7a9b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Mac 1台という限られた環境で、iOSアプリのリリース作業をJenkinsを使って半自動化した取り組みをまとめた記事。ビルドからTestFlightへの配信までの流れを自動化し、手作業による手間やミスを減らした経緯を紹介している。XcodeやJenkins、TestFlightを組み合わせたCI/CDの構成を具体的に解説している。専用のビルドサーバーを用意せずとも、手元のMacでリリースパイプラインを組めることを示している。iOS開発におけるリリース自動化の実践的なノウハウを共有している。CI/CDやiOSのタグで実務者の関心を集めている。小規模環境でのリリース効率化を検討する際の参考になる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-21 06:36 JST
+</footer>
+</div>
+</body>
+</html>
