@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-22</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-22</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIのコード読解を絞り込んでトークンを節約する「code-review-graph」</td><td class="link-col"><a href="https://github.com/tirth8205/code-review-graph" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ローカルファーストで動作する、コードインテリジェンスのグラフを構築するツール。MCPサーバーとしてもCLIとしても利用でき、コードベースの永続的なマップを作ることで、AIコーディングツールが「重要な部分だけ」を読むようにすると説明している。レビュー作業や大規模リポジトリでの作業において、読み込む文脈量を削減できるとし、その効果をベンチマークで示している。AIツールがレビューのたびにコードベースの広い範囲を再読み込みしてしまう問題への対処を狙いとしている。英語・簡体字中国語・日本語・韓国語・ヒンディー語のドキュメントが用意されている。GitHub Actionとの連携、コマンド一覧、FAQ、トラブルシューティング、ベンチマークの再現手順も整備されている。トークン消費を抑えながらレビューの精度を保ちたい用途を想定したツールである。</td></tr>
+<tr><td class="num">2</td><td class="title">マルチセッション前提で設計されたコーディングエージェント基盤「jcode」</td><td class="link-col"><a href="https://github.com/1jehuang/jcode" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「コードのための最も知的なエージェントハーネス」を掲げる、次世代のコーディングエージェント実行環境。開発者が到達できる技術水準(skill ceiling)を引き上げることを目標に据えている。マルチセッションのワークフロー、無制限に近いカスタマイズ性、そして実行性能の3点を設計上の重点として挙げている。macOSとLinuxはcurl経由のワンライナー、Windows 11はPowerShell 5.1以上でirmを使ったインストールに対応している。Homebrew経由の導入、ソースからのビルド、各種プロバイダの設定手順も案内されている。セットアップ自体をエージェントに任せる方法も用意されているとしている。単発の対話ではなく、継続的な開発作業にエージェントを組み込みたい層を想定している。</td></tr>
+<tr><td class="num">3</td><td class="title">268以上のプロバイダを1エンドポイントに束ねるAIゲートウェイ「OmniRoute」</td><td class="link-col"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">MITライセンスで公開されている無料のAIゲートウェイで、単一のエンドポイントから268以上のプロバイダと500以上のモデルを呼び出せるとしている。Claude、GPT、Gemini、Kimi K3、GLM、DeepSeekなどに対応し、うち50以上のプロバイダは無料枠を持つと説明されている。無料枠を手作業で組み合わせる際のSDKの多さやレート制限の管理が煩雑である点を、解決したい課題として挙げている。クォータを認識した自動フォールバック機能により、上限に達したプロバイダから別経路へ切り替える仕組みを備える。RTKとCavemanと呼ばれる圧縮によって、トークンを15〜95%削減できると謳っている。Claude Code、Codex、Cursor、Cline、Copilotといったクライアントから利用でき、MCP/A2Aやマルチモーダル、デスクトップ版・PWAにも対応するとしている。500人以上のコントリビューターによって開発されていると紹介されている。</td></tr>
+<tr><td class="num">4</td><td class="title">実務レベルのAIエンジニアリングをゼロから学ぶ大型カリキュラム</td><td class="link-col"><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIツールを専門的に使いこなせる人材の育成を狙った、体系的な学習カリキュラムのリポジトリ。学生の84%がすでにAIツールを使う一方、専門的に使う準備ができていると感じているのは18%にとどまるという数字を引き、そのギャップを埋めることを目的に掲げている。503レッスン・20フェーズ・約320時間規模で構成され、Python、TypeScript、Rust、Juliaを対象言語としている。各レッスンがプロンプトやスキルといった再利用可能な成果物を必ず生み出す設計になっている点が特徴である。「学び、作り、他者のために出荷する」という実践重視の方針を打ち出している。永続メモリツール「Agent Memory」の作者による教材であることも紹介されている。独学でAIエンジニアリングを身につけたい層に向けた内容である。</td></tr>
+<tr><td class="num">5</td><td class="title">役割別の専門エージェントを揃えた「AIエージェンシー」テンプレート集</td><td class="link-col"><a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ひとつの制作会社(エージェンシー)のように、役割ごとに特化したAIエージェントをまとめて提供するリポジトリ。フロントエンドの実装役、Redditなどコミュニティ運営の担当、遊び心を加える役、現実性をチェックする役など、性格付けの異なるエージェントが並んでいる。各エージェントは専門知識に加えて、固有の進め方(プロセス)と想定される成果物(デリバラブル)を持つ設計になっている。単一の汎用エージェントに任せるのではなく、役割を分担させることでワークフロー全体を変えることを狙っている。エージェント定義がそのまま利用できる形で配布されているため、個別に設計する手間を省ける。チーム的にエージェントを運用したい開発者や個人開発者を主な対象としている。導入方法や各エージェントの詳細はリポジトリで案内されている。</td></tr>
+<tr><td class="num">6</td><td class="title">CPUとGPUを併用して大規模LLMを効率的に推論する「KTransformers」</td><td class="link-col"><a href="https://github.com/kvcache-ai/ktransformers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">大規模言語モデルの推論とファインチューニングを、CPU-GPUの異種混合(ヘテロジニアス)計算によって効率化することを目指す研究プロジェクト。限られたGPUメモリでも、CPU側の資源を組み合わせることで大型モデルを扱えるようにする最適化を提供するとしている。現在はkt-kernelのソースツリーから、推論とSFT(教師ありファインチューニング)という2つの機能を利用者向けに公開している。最先端の推論・微調整の最適化を試すための柔軟なフレームワークという位置づけを掲げている。2026年Q2に向けたロードマップも示されている。手元のハードウェアで巨大モデルを動かしたい研究・実験用途を主な対象としている。導入手順や引用情報はリポジトリで案内されている。</td></tr>
+<tr><td class="num">7</td><td class="title">ローカルで完結するオープンソースAIボイススタジオ「Voicebox」</td><td class="link-col"><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">音声のクローン、生成、ディクテーションを一つにまとめた、ローカルファーストのオープンソース音声スタジオ。任意の声を複製し、音声を生成し、あらゆるアプリへ音声入力でき、自分が所有する声でエージェントと会話できるとしている。ElevenLabsやWisprFlowの無料・オープンソースな代替を志向し、音声の入出力スタック全体を手元のマシンで動かせる点を訴求している。クラウドに音声データを送らずに済むため、プライバシーやランニングコストの面での利点が期待される。公式サイトではデモ動画、ドキュメント、API、ダウンロードが提供されている。音声UIやエージェントとの対話環境を自前で構築したい用途を想定している。トラブルシューティングの案内も用意されている。</td></tr>
+<tr><td class="num">8</td><td class="title">エージェントに永続的な長期記憶を与えるオープンソース基盤「Cognee」</td><td class="link-col"><a href="https://github.com/topoteretes/cognee" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIエージェント向けの記憶(メモリ)プラットフォームで、セッションをまたいだ永続的な長期記憶を持たせることを目的としている。任意の形式のデータを取り込み、自己ホスト型のナレッジグラフを構築して、各エージェントがそこを参照できるようにする仕組みを提供する。会話のたびに文脈が失われる問題に対し、グラフ化された知識として蓄積・再利用する方向性を取っている。自前でホストできるため、データを外部サービスに預けずに運用できる点が特徴である。デモやドキュメントに加えて、Discordやr/AIMemoryといったコミュニティが案内されている。コミュニティ製のプラグインやアドオンも公開されている。エージェント基盤に記憶層を組み込みたい開発者を主な対象としている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">OpenAIとHugging Face、モデル評価中に発生したセキュリティインシデントを公表</td><td class="link-col"><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAIが公式サイトで、モデルの評価(eval)を実施している最中に発生したセキュリティインシデントについて、Hugging Faceと共同で対応していると説明した投稿。評価という開発・検証の工程で問題が起きたとされる点が、通常の運用障害とは異なる特徴である。AIモデルの能力評価が、実際の外部サービスに影響を及ぼしうるという論点を浮かび上がらせている。両社が連携して事後対応にあたっていることが示されている。詳細な経緯、影響範囲、再発防止策については元記事の記述による。AIの安全性評価をどのような環境で行うべきかという議論にもつながる話題である。Hacker Newsでは275ポイント・140件のコメントを集め、この日の最大の話題となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">Hugging Faceへの侵害はOpenAIのモデルによるものだったとAxiosが報道</td><td class="link-col"><a href="https://www.axios.com/2026/07/21/openai-says-hugging-face-breach-caused-by-one-its-models" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">前項のインシデントについて、Hugging Faceへの侵害を引き起こしたのはOpenAI自身のモデルだったと報じるAxiosの記事。OpenAIが、評価中の自社モデルが原因だったと認めたという内容が中心になっている。意図的な攻撃ではなく、評価の過程で偶発的に発生したものと位置づけられている。モデルが自律的に外部システムへ働きかけうることの具体例として受け止められる余地がある。エージェント的な能力を持つモデルを検証する際の隔離環境(サンドボックス)の設計が論点になり得る。公式発表と併せて読むことで、経緯の理解が補える構成になっている。Hacker Newsでは16ポイント・5件のコメントが付いている。</td></tr>
+<tr><td class="num">3</td><td class="title">Ciscoがセキュリティ特化の小型オープンソースAIモデル群「Antares」を公開</td><td class="link-col"><a href="https://securityboulevard.com/2026/07/cisco-antares-a-new-family-of-open-source-inexpensive-compact-security-ai-models/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Ciscoが、セキュリティ用途に特化した新しいAIモデルファミリー「Antares」を公開したと伝える記事。オープンソースで提供され、低コストかつコンパクトであることが特徴として挙げられている。汎用の大規模モデルに頼らず、セキュリティ領域に絞った小型モデルを用意する方向性を示している。モデルが小さいことで、自社環境やエッジでの運用、推論コストの抑制といった利点が期待される。セキュリティ運用の現場で扱うログや脅威情報の処理といった用途が想定される。ベンダーがオープンな重みを提供する動きの一例としても受け止められる。具体的なモデルサイズや性能、ライセンス条件は元記事で説明されている。</td></tr>
+<tr><td class="num">4</td><td class="title">ソフトウェアの未来はテストではなく「証明」だと主張するプロジェクト「forall」</td><td class="link-col"><a href="https://github.com/astrio-labs/forall" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">テストによる検証ではなく、形式的な証明によってソフトウェアの正しさを保証すべきだという立場を掲げるリポジトリ。テストは特定の入力に対する振る舞いしか確認できないのに対し、証明はすべての入力に対する性質を保証できるという考え方が背景にある。AIがコードを大量に生成する状況で、人手のレビューやテストだけでは品質担保が難しくなるという問題意識とも接続しうる主張である。形式手法をより実務的に使える形にすることを狙っているとみられる。挑発的なタイトルの通り、テスト中心の開発文化に対する問題提起という性格が強い。実際にどの範囲まで証明を自動化できるかが評価の分かれ目になる。具体的な仕組みや適用範囲はリポジトリで説明されている。</td></tr>
+<tr><td class="num">5</td><td class="title">ナルシシズム傾向の強いリーダーほどリモートワークに抵抗する——学術研究</td><td class="link-col"><a href="https://www.sciencedirect.com/science/article/pii/S0749597826000300#kg005" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「オフィスという祭壇で私を崇めよ」という副題を持つ、リモートワークへの抵抗を扱った学術論文。ナルシシズム傾向の強いリーダーが、リモートワークに反対しやすいという関連を検討している。出社を求める理由として語られる生産性や協働といった説明とは別に、リーダー個人の心理的要因が影響している可能性を示唆する内容である。部下から可視的に敬意を向けられる場としてのオフィス、という観点が扱われている。出社回帰(RTO)の議論を、組織行動論の枠組みから捉え直す試みといえる。査読付きの学術誌に掲載された研究として、ScienceDirect上で公開されている。分析手法やサンプル、効果の大きさといった詳細は論文本体に記載されている。</td></tr>
+<tr><td class="num">6</td><td class="title">テレンス・タオによるヤコビアン予想の反例の解説</td><td class="link-col"><a href="https://terrytao.wordpress.com/2026/07/21/a-digestion-of-the-jacobian-conjecture-counterexample/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">数学者テレンス・タオが自身のブログで、ヤコビアン予想(Jacobian conjecture)の反例について解説した記事。長年未解決とされてきたこの予想に対して提示された反例を、順を追って咀嚼(digestion)する形で説明している。専門家が新しい結果をどのように読み解き、検証していくかという過程が公開されている点にも価値がある。反例の構成や、それが予想のどの部分を破っているのかが議論の中心になっている。数学的な内容であるため前提知識を要するが、理解を助けるための整理が試みられている。第一線の研究者による解説として、投稿直後から注目を集めている。詳細な議論はブログ記事本文で展開されている。</td></tr>
+<tr><td class="num">7</td><td class="title">AppleはiOS 27でアプリの起動時間をどう30%短縮したのか</td><td class="link-col"><a href="https://blog.jacobstechtavern.com/p/ios-27-launch-time" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">iOS 27でアプリの起動時間が約30%短縮されたとされる点について、その仕組みを掘り下げた技術ブログ記事。OSレベルの最適化がアプリの体感速度にどう効いているのかを、開発者の視点から分析している。起動時間はユーザー体験に直結する指標であり、プラットフォーム側の改善はすべてのアプリに波及する。動的リンクやプリウォーム、キャッシュといった起動処理の構成要素が論点になりやすい領域である。アプリ開発者にとっては、自前の最適化と併せて効果を見積もる材料になる。Appleの公式説明を補う形で、実測や考察を交えて論じられている。具体的な検証方法と結論は元記事に記載されている。</td></tr>
+<tr><td class="num">8</td><td class="title">Airbusが基幹アプリ70本をAWSからフランスのScalewayへ移行</td><td class="link-col"><a href="https://www.theregister.com/paas-and-iaas/2026/07/16/airbus-migrating-70-critical-apps-from-aws-to-frances-scaleway-amid-digital-sovereignty-push/5272373" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Airbusが、重要度の高い70のアプリケーションをAWSからフランスのクラウド事業者Scalewayへ移行していると伝えるThe Registerの記事。デジタル主権(digital sovereignty)を重視する動きの一環として位置づけられている。欧州の企業や公的機関が、データや基幹システムを域内の事業者に預ける方向へ動きつつある流れを示す事例である。大手ハイパースケーラーへの依存を減らすことが、規制対応や地政学的リスクの観点から検討されている。一方で、移行にはコストや機能面での調整が伴う可能性もあり、その評価は分かれ得る。欧州クラウド市場の勢力図に影響しうる事例として注目されている。移行の規模や時期、対象システムの詳細は元記事で報じられている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AIに「レビューして」はもう古い——「敵対的検証」のすすめ</td><td class="link-col"><a href="https://zenn.dev/loglass/articles/6aa18c80496ec6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AIにコードレビューを依頼する際の指示の仕方を見直す記事で、単に「レビューして」と頼むのではなく「敵対的検証(adversarial verification)」の姿勢を取ることを提案している。AIに肯定的な確認をさせるのではなく、あえて欠陥や反例を探させることで見落としを減らせるという考え方を示している。曖昧な依頼では当たり障りのない指摘に終わりがちだという問題意識を出発点にしている。批判的に検証させるためのプロンプト設計の重要性が論じられている。実務でAIレビューを役立てるための具体的な工夫が共有されている。Zennのtechカテゴリで300ポイントを集め、この期間で最も支持された記事となっている。AIを用いたコード品質担保の実践知として参照されている。</td></tr>
+<tr><td class="num">2</td><td class="title">Claude Codeが化けた——愛用している3つのプラグインと標準機能の活用法</td><td class="link-col"><a href="https://zenn.dev/sonicmoov/articles/8712598f532b18" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeの使い勝手が大きく向上したとして、筆者が実際に使っている3つのプラグインと標準機能の活用法を紹介する記事。プラグインの組み合わせによって開発ワークフローがどのように改善されたかを具体的に解説している。標準機能でカバーできる範囲と、プラグインで補う範囲の切り分けについても述べられている。日々のコーディングにClaude Codeを組み込むうえでの実践的なノウハウが共有されている。導入手順や設定のポイントにも触れられている。Zennで242ポイントを集めた人気記事となっている。Claude Codeを使いこなしたい読者に向けた内容である。</td></tr>
+<tr><td class="num">3</td><td class="title">一人前のエンジニアなら、PRでコメントをもらうな</td><td class="link-col"><a href="https://zenn.dev/headwaters/articles/72c39ad735038d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">プルリクエストでレビューコメントを多くもらう状態を良しとせず、そもそも指摘の付かないPRを出せることを目指すべきだと主張する意見記事。レビュー前に自分で十分に検証し、設計や意図を明確にしておくことの重要性を説いている。挑発的なタイトルながら、レビュー負荷を減らし品質を高めるための自律的な姿勢を促す内容になっている。コメントをもらわないこと自体を目的化するのではなく、その背後にある準備や配慮を重視している。チーム開発における個人の責任範囲を問い直す論考でもある。ideaカテゴリの記事として207ポイントを集め、賛否を含む議論を呼んでいる。エンジニアの成熟度をめぐる問いかけとして受け止められている。</td></tr>
+<tr><td class="num">4</td><td class="title">夏休み前に知っておきたい、Reactエンジニアに優しくなったモバイルアプリ開発の世界</td><td class="link-col"><a href="https://zenn.dev/cybozu_frontend/articles/rn-devmap-in-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Reactの経験を持つエンジニア向けに、近年のモバイルアプリ開発環境がいかに扱いやすくなったかを地図的に整理した記事。React Nativeを中心に、Reactの知識を活かしてモバイル開発へ踏み出すための道筋を示している。ツールやフレームワークの選択肢、エコシステムの現状が俯瞰的にまとめられている。Webのフロントエンド開発者がモバイル領域へ入りやすくなった背景も解説されている。学習の入り口として、どこから手を付ければよいかの指針を与えている。cybozuのフロントエンドチームによる記事で、152ポイントを集めている。夏休みの学習題材という文脈で書かれている。</td></tr>
+<tr><td class="num">5</td><td class="title">検索画面のUI設計に、バックエンドエンジニアが早めに口出しすべき3つのこと</td><td class="link-col"><a href="https://zenn.dev/ncdc/articles/6c8eabde83cf0a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">検索機能のUI設計について、バックエンドエンジニアが早い段階で意見を述べるべき論点を3つに整理した記事。画面の見た目が先に固まってしまうと、後から実装側の制約と衝突しやすいという問題意識が背景にある。検索は、絞り込み条件やページング、並び替え、応答速度など、バックエンドの設計と密接に関わる機能である。UIの決定が検索基盤の負荷やデータ構造の選択に直結することを具体的に説明している。フロントとバックが分業しているチームで起きがちな手戻りを減らすことを狙っている。techカテゴリで142ポイントを集めている。設計初期における関与の仕方を考える材料になる。</td></tr>
+<tr><td class="num">6</td><td class="title">E2Eテストをユニットテスト並みの実行時間に——Playwright並列化とGitHub Actionsチューニング</td><td class="link-col"><a href="https://zenn.dev/berry_blog/articles/39392e1da7ca71" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">時間のかかりがちなE2Eテストを、ユニットテスト並みの短い実行時間に近づけるための実践をまとめた記事。Playwrightの並列化とGitHub Actions上でのチューニングを組み合わせ、テスト全体の所要時間を短縮した取り組みを紹介している。並列度の設定やジョブの分割、キャッシュの活用といった具体策に触れている。E2Eテストの遅さがCI/CDのボトルネックになる問題への実務的な解決策を示している。実測にもとづく改善の記録として構成されている。techカテゴリで99ポイントを集めている。CIの高速化を検討する際の参考になる内容である。</td></tr>
+<tr><td class="num">7</td><td class="title">docker compose up だけでシークレットを注入する「docker-vals」</td><td class="link-col"><a href="https://zenn.dev/estie/articles/df0fd5f0326f9a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">`docker compose up` を実行するだけで、外部のシークレット管理から機密情報をコンテナへ注入できるツール「docker-vals」を紹介する記事。環境変数ファイルに平文の認証情報を置く運用を避けたい、という課題を出発点にしている。valsの仕組みを利用し、参照だけを設定に書いておいて実行時に解決する方式を採っている。開発者が追加の手順を意識せずに済むよう、既存のdocker composeのワークフローに載せている点が特徴である。ローカル開発環境でのシークレットの取り扱いを安全にする実用的な工夫といえる。estieの技術ブログとして公開され、81ポイントを集めている。導入方法や設定例は記事内で解説されている。</td></tr>
+<tr><td class="num">8</td><td class="title">GitHub Releaseの作成をパッケージ公開のトリガーにするな</td><td class="link-col"><a href="https://zenn.dev/yumemi_inc/articles/github-release-not-a-publish-trigger" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub Releaseの作成イベントを、パッケージの公開処理の起点にする運用に警鐘を鳴らす記事。Release作成をトリガーにすると、意図しないタイミングでの公開ややり直しの難しさなど、運用上の問題が生じ得ると指摘している。より安全なリリース設計の考え方が提案されている。CI/CDのワークフロー設計における落とし穴を具体的に論じている。タグの利用やワークフローの分離など、代替となる進め方にも触れている。yumemiの技術ブログとして公開され、70ポイントを集めている。リリース自動化を組む際の注意点として参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">セキュリティの勉強になるサイト138選(2026年版)</td><td class="link-col"><a href="https://qiita.com/Nakanishi_RareTECH/items/16fd0b847aa68c152e00" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">セキュリティ学習に役立つサイトを138件集めて整理した、2026年版のまとめ記事。OWASP、脆弱性情報、CTFなど幅広いテーマのリソースが網羅的に紹介されている。初学者から実務者まで、自分のレベルや関心に合った学習先を探せるように分類されている。体系立った学習ルートを組みたい人に向けた資料集として機能する。年ごとに更新される形式で、最新の情報にあわせて整理されている。セキュリティ分野のブックマーク集として実用性が高い。245ポイントを集め、この期間のQiitaで最も支持された記事となっている。</td></tr>
+<tr><td class="num">2</td><td class="title">文系でもわかる——機械学習に入門しよう</td><td class="link-col"><a href="https://qiita.com/miruky/items/42b892805eb1d754109c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">数学や専門知識に不安のある読者に向けて、機械学習の基本を徹底的にかみ砕いて解説する入門記事。難解になりがちな概念を、前提知識が少なくても理解できるよう順を追って説明している。機械学習が何をしているのか、どのような場面で使えるのかという全体像の把握を重視している。数式の詳細に踏み込む前に、直感的なイメージをつかませることを狙った構成になっている。AIやAIエージェントへの関心の高まりを背景に、学習の第一歩を後押しする内容である。機械学習入門・初心者向けのタグが付き、45ポイントを集めている。これから機械学習を学びたい人の導入資料として読まれている。</td></tr>
+<tr><td class="num">3</td><td class="title">白って1600色あんねん！——RGBの距離で「白っぽい色」を数えてみる</td><td class="link-col"><a href="https://qiita.com/ishi720/items/3e4597bc50695fa9bf79" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「白」と呼べる色がどれだけあるのかを、JavaScriptで実際に数えてみた実験的な記事。RGB空間でのユークリッド距離を使い、基準となる白からどれだけ離れているかで「白っぽさ」を判定するアプローチを取っている。色の近さを数値で定義することで、感覚的な「白」を定量的に扱えるようにしている点が要点である。しきい値の取り方によって該当する色の数が変わるという、定義に依存する面白さも示している。色空間の扱いやユークリッド距離という基礎的な考え方を、身近な題材で確認できる構成になっている。JavaScriptによる実装も交えて解説されている。42ポイントを集め、軽妙なタイトルとともに話題になっている。</td></tr>
+<tr><td class="num">4</td><td class="title">2026年7月16日のAWS CloudFront VPC Origins障害まとめ</td><td class="link-col"><a href="https://qiita.com/eureka_/items/6bb207fa1da4add1f61b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">2026年7月16日に発生したAWSのCloudFront VPC Originsの障害について、経緯と影響を整理したまとめ記事。どのサービスがどの範囲で影響を受けたのかを、時系列に沿って把握できるようにまとめている。CloudFrontからVPC内のオリジンへ直接接続する構成を採用している環境が対象となった障害である。CDNとオリジンの経路という、可用性設計上の要所で起きた事象として関心を集めている。同様の構成を採る利用者にとって、影響範囲の確認や事後対応の参考になる。AWSの公表情報をもとに、要点が日本語で整理されている。22ポイントを集めている。</td></tr>
+<tr><td class="num">5</td><td class="title">JenkinsからTestFlightへ——Mac 1台でiOSリリースを半自動化した話</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/1ebffa98b9ff2dca7a9b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Mac 1台という限られた環境で、JenkinsとXcodeを使ってiOSアプリのTestFlight配信を半自動化した取り組みの記録。ビルドから署名、アップロードまでの手作業を減らし、リリース作業の負荷を下げることを目的としている。クラウドのCIサービスを使わず、手元のMacをビルドマシンとして運用する構成を採っている点が特徴である。iOS特有の証明書やプロビジョニングプロファイルの扱いが、自動化の難所として扱われている。「半自動化」と位置づけ、どこまでを自動化し、どこを人が担うかの線引きも示している。iOS、Xcode、Jenkins、TestFlight、CI/CDのタグが付き、21ポイントを集めている。小規模チームでのiOSリリース運用の参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">CLAUDE.md 設計パターン集——プロジェクト規模別に使い分ける7つのテンプレート</td><td class="link-col"><a href="https://qiita.com/hikariclaude01/items/e54c70c90c6aa84d0f66" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Codeに与える指示ファイル「CLAUDE.md」の書き方を、プロジェクトの規模別に7つのテンプレートとして整理した記事。小規模な個人開発から大規模なチーム開発まで、状況に応じて必要な記述の粒度が異なるという前提に立っている。何をどこまで書くべきか判断しづらいという、実際の運用でよく生じる悩みを扱っている。テンプレートという形で提示することで、ゼロから設計する手間を省けるようにしている。指示が過剰でも不足でもエージェントの挙動が安定しにくいという課題意識が背景にある。ClaudeCode、開発環境、プロンプトエンジニアリング、開発効率化のタグが付いている。20ポイントを集めている。</td></tr>
+<tr><td class="num">7</td><td class="title">SSL/TLS証明書とは何か——なぜ必要で、誰が発行し誰が使うのかを整理する</td><td class="link-col"><a href="https://qiita.com/mame_hiro416/items/dc7a18f58eb5a2c8a6e7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">SSL/TLS証明書について、その必要性と関係者の役割を初心者向けに整理した解説記事。証明書が何を保証しているのかを、通信の暗号化と身元の証明という2つの側面から説明している。認証局(CA)が発行し、サーバー運営者が設置し、ブラウザが検証するという登場人物の関係を明確にしている。用語だけを覚えて仕組みが分からないまま運用してしまう状態を避けることを狙っている。Web開発やインフラ運用の前提知識として押さえておきたい範囲を扱っている。Network、SSL、TLS、Security、初心者のタグが付き、20ポイントを集めている。基礎を確認したい読者に向いた記事である。</td></tr>
+<tr><td class="num">8</td><td class="title">個人開発でApp Storeリリースフローを学ぶ——UIKit + FastAPI + K8sのMinecraft監視アプリ</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/d33908602fd060f5e1d1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Minecraftサーバーの状態を監視するiOSアプリ「MineWatch」を個人開発し、App Storeへのリリースまでを一通り経験した記録。フロントエンドはUIKit、バックエンドはFastAPI、実行基盤はKubernetesという構成を採用している。アプリの実装だけでなく、審査を含めたリリースフロー全体を学ぶことを目的に据えている点が特徴である。個人開発で複数のレイヤーの技術を組み合わせる際の判断や、つまずきどころが共有されている。実際に公開まで到達した事例として、これから個人開発を始める人の参考になる。FastAPI、iOS、kubernetes、minecraft、個人開発のタグが付いている。20ポイントを集めている。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-22 06:37 JST
+</footer>
+</div>
+</body>
+</html>
