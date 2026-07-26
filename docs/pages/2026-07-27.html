@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-27</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }
+  tbody tr:hover td { background: #f8f9fb; }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-27</h1>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">人間とAIエージェントが同じ部屋で協働するセルフホスト型ワークスペース「Buzz」</td><td class="link-col"><a href="https://github.com/block/buzz" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Buzz は、人間と AI エージェントが同じ「ルーム」を共有して働くためのセルフホスト可能なワークスペースである。自分で所有するリレー上で動作する点を強調しており、単一リレー構成ではリレー URL が 1 つのコミュニティに対応する。ユーザーは URL にアクセスすることで、そのコミュニティのワークスペースに入る仕組みになっている。人間とエージェントが「同じ部屋で一緒に構築する」というビジョンを掲げている。主権性(Sovereign)やホスト運用を軸にした設計思想が特徴とされる。ライセンスは Apache 2.0 で公開されている。エージェントと人が協働する新しいコラボレーション基盤を目指すプロジェクトである。</td></tr>
+<tr><td class="num">2</td><td class="title">Alibaba発のハイブリッド型AIコードレビューCLI「Open Code Review」</td><td class="link-col"><a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Open Code Review は、Alibaba が社内で使ってきた AI コードレビュー支援ツールをオープンソース化したものである。決定論的なパイプラインと LLM エージェントを組み合わせたハイブリッドアーキテクチャを採用している。行レベルで正確なコメントを付けられる点や、NPE・スレッド安全性・XSS・SQL インジェクションなどを検知するファインチューニング済みルールセットを内蔵している点が特徴とされる。OpenAI と Anthropic 互換の API に対応しており、モデルを選んで利用できる。Alibaba Group 規模で 2 年以上運用されてきた実績が強調されている。英語・簡体中文・日本語・韓国語・ロシア語のドキュメントが用意されている。無料で使えるオープンソースのコードレビューツールを求める開発者向けである。</td></tr>
+<tr><td class="num">3</td><td class="title">1000以上の実用的な Claude Skills を集めたキュレーションリスト</td><td class="link-col"><a href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ComposioHQ による「Awesome Claude Skills」は、Claude 向けの Skills やプラグインを網羅的にまとめたキュレーションリストである。1000 以上の本番運用可能で実用的な Skills とプラグインを収録している。対象は Claude.ai や Claude Code だけでなく、Codex、Cursor、Gemini CLI、Antigravity など他のコーディングエージェントにも及ぶ。Skills はエージェントに「どう作業するか」を教える役割を持つと説明される。加えて MCP ゲートウェイを通じて、エージェントに安全な外部アクセス(実世界での操作)を与える点にも触れている。用途横断で生産性を高めることを狙いとしている。エージェント活用のカタログとして参照しやすい構成になっている。</td></tr>
+<tr><td class="num">4</td><td class="title">Claudeの活用例を集めた公式レシピ集「Claude Cookbooks」</td><td class="link-col"><a href="https://github.com/anthropics/claude-cookbooks" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Cookbooks は、Claude を使った開発を支援するためのコードとガイドを集めた公式リポジトリである。自分のプロジェクトに組み込みやすい、コピー可能なコードスニペットを提供している。Claude を効果的かつ実用的に使う方法を、ノートブック形式のレシピとして示している。利用には Claude API キーが必要で、無料でサインアップできると案内されている。コード例は主に Python で書かれているが、概念自体は他の言語にも応用できるとしている。開発者が Claude を使ったアプリ構築を始める際の入り口として位置づけられる。実践的なサンプルを通じて、モデルの機能を学べる構成になっている。</td></tr>
+<tr><td class="num">5</td><td class="title">プライバシー重視のオフライン英文法チェッカー「Harper」</td><td class="link-col"><a href="https://github.com/Automattic/harper" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Harper は、オフラインで動作するプライバシーファーストな英文法チェッカーである。Rust 製で高速かつオープンソースであることを特徴とする。作者は Grammarly の欠点(高価・過干渉・文脈を欠いた誤った提案)への不満から開発したと述べている。特にクラウド送信によるプライバシー上の懸念を問題視している。Harper はすべてローカルで処理するため、書いた内容が外部サーバーに送られない。「ちょうど良い」文法チェッカーを目指した設計思想を掲げる。プライバシーと軽快さを重視するユーザーに向いたツールである。</td></tr>
+<tr><td class="num">6</td><td class="title">金融市場のローソク足に特化した初のオープンソース基盤モデル「Kronos」</td><td class="link-col"><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Kronos は、金融のローソク足(K-line)を対象とした初のオープンソース基盤モデルである。世界 45 以上の取引所のデータで学習されている。金融市場を「言語」として捉え、その基盤モデルを構築する試みとして位置づけられる。2025 年 8 月にはファインチューニング用スクリプトが公開され、独自タスクへの適応が可能になった。2025 年 11 月には AAAI 2026 に採択されたことが告知されている。多言語(日本語・中国語など)のドキュメントが用意されている。金融時系列予測の研究・実務向けの基盤として活用が期待されている。</td></tr>
+<tr><td class="num">7</td><td class="title">コーディングエージェント向けの開発方法論フレームワーク「Superpowers」</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Superpowers は、コーディングエージェントのための完全なソフトウェア開発方法論を提供するフレームワークである。組み合わせ可能な一連のスキル群と、それを確実に使わせるための初期指示の上に構築されている。エージェントが体系立った手順で開発を進められるようにすることを狙いとしている。小さく再利用可能なスキルを積み重ねる設計思想を採る。プロジェクトはコミュニティとコードの両面で成長を続けており、専任スタッフの採用も行っている。エージェント任せの開発に一貫した方法論を持ち込もうとする取り組みである。コーディングエージェントの品質と再現性を高めたい開発者向けである。</td></tr>
+<tr><td class="num">8</td><td class="title">AIエージェント向けに設計された高速ブラウザ「ego (lite)」</td><td class="link-col"><a href="https://github.com/citrolabs/ego-lite" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">ego (lite) は、AI エージェントが Web 自動化を実行するために設計された高速ブラウザである。ログイン済みのブラウザ状態を Codex や Claude Code などのエージェントと共有できる点を売りにする。ユーザーの作業を妨げずに、エージェントが並行して自動化タスクを実行できる。エージェントは自分専用の「Space」で複数のブラウザタスクを走らせ、ユーザーのタブはそのまま維持される。より少ないトークンで、より速くタスクを完了できるとしている。browser-use などの既存ツールとの差別化を意識している。ゼロコスト・ゼロ設定を掲げ、導入の手軽さを強調している。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">GitHubのセキュリティチームは実際に何をしているのか</td><td class="link-col"><a href="https://orchidfiles.com/github-security-team/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">GitHub のセキュリティチームが具体的に何をしているのかを論じたブログ記事である。プラットフォームとしての GitHub には、多数のリポジトリやユーザーを守るためのセキュリティ体制が求められる。記事は、外部から見えにくいセキュリティチームの役割や業務内容を掘り下げている。脆弱性対応やインフラ防御、悪用の検知といった幅広い責務が想定される。大規模なコードホスティングサービスを運営する上でのセキュリティの重要性を浮き彫りにしている。Hacker News では 13 件のコメントが付き、一定の関心を集めている。プラットフォーム運営とセキュリティの関係に関心を持つ読者向けの内容である。</td></tr>
+<tr><td class="num">2</td><td class="title">「Kimi K3 は安くない」— 新モデルのコスト面を検証</td><td class="link-col"><a href="https://www.alexinch.com/blog/kimi-k3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Kimi K3 のコストは決して安くない、という論点を扱ったブログ記事である。近年の LLM は性能向上とともに、利用コストや価格設定が改めて注目されている。記事では Kimi K3 の料金やコストパフォーマンスを取り上げ、その割高さを指摘している。「安価な代替」という一般的な期待に対して、実際のコスト構造を冷静に見直す内容とされる。モデル選定において価格が重要な判断材料になることを示している。Hacker News では 20 件のコメントが寄せられ、活発な議論が行われている。LLM のコストを重視する開発者や事業者にとって参考になる視点である。</td></tr>
+<tr><td class="num">3</td><td class="title">データセンター不要のフロンティアAIを目指すオープンソースOS「HART OS」</td><td class="link-col"><a href="https://github.com/hertz-ai/HARTOS" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">HART OS は、フロンティアクラスの AI をデータセンターなしで動かすことを目指すオープンソースの「AI OS」である。Show HN として紹介された。大規模な計算インフラに依存せずに高度な AI を実行できる環境の構築を狙いとしている。分散したハードウェアやローカル資源を活用する発想が背景にあると見られる。集中型のデータセンターに頼らない AI 実行という、野心的なビジョンを掲げている。GitHub でオープンソースとして公開されており、実装を確認できる。Hacker News では 19 件のコメントが付き、その実現性をめぐる議論を呼んでいる。AI インフラの分散化に関心を持つ層に向けたプロジェクトである。</td></tr>
+<tr><td class="num">4</td><td class="title">「OpenAIはドットコムを超えるバブル」と論じる動画</td><td class="link-col"><a href="https://www.youtube.com/watch?v=zDtvrme-L-0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">OpenAI をめぐる状況を「ドットコムバブルより大きなバブル」と論じる YouTube 動画である。近年の生成 AI ブームと巨額の投資が過熱しているという見方を示している。かつてのドットコムバブルと比較し、現在の AI 市場の評価が過大ではないかと問いかける内容とされる。企業価値や投資規模が実態から乖離しているリスクを指摘する立場である。AI 業界の持続可能性や市場の健全性に対する懐疑的な視点を提供している。Hacker News に投稿され、賛否を含む議論の材料となっている。AI 投資ブームを一歩引いて捉えたい読者向けの話題である。</td></tr>
+<tr><td class="num">5</td><td class="title">「AIではなくAPIを出荷せよ」という主張</td><td class="link-col"><a href="https://iamwillwang.com/notes/please-ship-apis-not-ai/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">「AI ではなく API を出荷せよ(Please ship APIs, not AI)」と題した、開発者向けの意見記事である。多くのプロダクトが AI 機能を前面に押し出す風潮に対し、疑問を投げかけている。ユーザーにとって本当に価値があるのは、扱いやすく組み合わせ可能な API であるという主張が中心とされる。AI を無理に組み込むよりも、堅実なインターフェースを提供することの重要性を説いている。プロダクト設計における「AI ありき」の姿勢への批判的な視点を提示している。誇張された AI 機能よりも、実用的な基盤の提供を重視する立場である。プロダクト開発の方向性を考える上で示唆に富む内容である。</td></tr>
+<tr><td class="num">6</td><td class="title">FFmpegでカセットテープ風の音質を再現する</td><td class="link-col"><a href="https://github.com/AARomanov1985/Audio-Cassette-Simulation" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">FFmpeg を使って、カセットテープ特有の音質プロファイルをシミュレートするプロジェクトが GitHub で公開された。アナログのカセットテープには、ワウフラッターやノイズ、周波数特性の劣化といった独特の音の質感がある。このプロジェクトは、そうしたテープらしい音の変化を FFmpeg の処理で再現しようとする試みである。デジタル音源にレトロな雰囲気を付加したい用途に向いている。音声処理の実例として、FFmpeg のフィルタ活用の参考にもなる。オープンソースとして提供されており、設定を確認できる。アナログ的な音作りに関心を持つ層に向けたニッチなツールである。</td></tr>
+<tr><td class="num">7</td><td class="title">zstdの一部で形式的証明による自動化を実現</td><td class="link-col"><a href="https://www.imperialviolet.org/2026/07/26/zstd-lean.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">圧縮ライブラリ zstd に関して、形式的な証明(proof automation)を導入したという報告記事である。著者は暗号やセキュリティ分野で知られる開発者で、自身のブログで技術的な成果を共有している。「proof automation now」というタイトルの通り、証明を自動化する仕組みが整った段階に達したことを伝えている。形式手法を用いることで、コードの正しさをより厳密に保証しようとする取り組みである。低レベルなライブラリの信頼性向上に、形式検証が有効に働くことを示唆している。Hacker News に投稿され、形式手法に関心を持つ層の注目を集めている。ソフトウェアの正しさを厳密に扱う分野の一例として紹介されている。</td></tr>
+<tr><td class="num">8</td><td class="title">Webブラウザの仕組みを解説</td><td class="link-col"><a href="https://arnauc.me/blog/how-browsers-work/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Web ブラウザがどのように動作するのかを解説したブログ記事である。URL の入力からページ表示までの一連の流れを、内部の仕組みに沿って説明している。HTML や CSS のパース、レンダリング、ネットワーク通信など、ブラウザが担う複雑な処理を扱っている。普段は意識しないブラウザの内部動作を、体系立てて理解できる構成とされる。フロントエンド開発者や、Web の基礎を学びたい読者に向いた内容である。仕組みを知ることで、パフォーマンスや挙動への理解が深まる。基礎知識を整理するための入門的な解説記事である。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">検索画面のUI設計でバックエンドエンジニアが早めに口出しすべき3つのこと</td><td class="link-col"><a href="https://zenn.dev/ncdc/articles/6c8eabde83cf0a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">検索画面の UI 設計において、バックエンドエンジニアが早い段階で関わるべき理由を論じた記事である。検索機能はフロントの見た目だけでなく、データ構造やクエリの都合と密接に結びついている。著者は、後工程で問題が発覚しないよう、バックエンド側が設計初期から意見を出すべき 3 点を挙げている。フィルタや並び替え、ページングなど、実装コストに直結する要素が UI から決まってしまう点を注意喚起している。フロントとバックエンドの認識のズレが、後の手戻りにつながることを指摘している。役割の垣根を越えた早期のすり合わせの重要性を説く内容である。検索機能の設計に関わるエンジニアにとって実務的な示唆がある。</td></tr>
+<tr><td class="num">2</td><td class="title">ターミナルを自作したら1日のコミット数が500を超えた話</td><td class="link-col"><a href="https://zenn.dev/singularity/articles/diy-terminal-500-commits" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">自作のターミナルを開発した結果、1 日のコミット数が 500 を超えるほど生産性が向上したという体験談である。著者は既存のターミナルに感じた不満を解消するため、自分専用のツールを作り込んだ。作業効率を高める工夫を凝らした結果、開発サイクルが大きく速くなったと述べている。ツールを自分の手に馴染ませることが、生産性に劇的な影響を与えうることを示す事例である。コミット数という指標の是非はあるものの、開発体験の改善効果が強調されている。自作ツールへの投資がもたらすリターンを実感させる内容である。開発環境のカスタマイズに関心を持つエンジニア向けの読み物である。</td></tr>
+<tr><td class="num">3</td><td class="title">Rustに書き直さずにC言語をメモリ安全にする「Fil-C」を試した</td><td class="link-col"><a href="https://zenn.dev/mattn/articles/cace8c5a00b9cc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">C 言語のコードを Rust に書き換えることなくメモリ安全にできる「Fil-C」を実際に試した記事である。Fil-C は、既存の C コードをそのまま用いながらメモリ安全性を確保しようとする処理系である。メモリ安全化のために言語ごと移行する負担を避けられる点が大きな利点とされる。著者は実際に動かして、その挙動や実用性を確認している。Rust への全面的な書き直しが難しい既存資産に対して、現実的な選択肢となりうることを示している。メモリ安全とレガシー C コードの両立という課題に対する一つのアプローチである。C 言語の安全性向上に関心を持つ開発者にとって参考になる内容である。</td></tr>
+<tr><td class="num">4</td><td class="title">エンジニアの成果は結局どう測ればいいのか</td><td class="link-col"><a href="https://zenn.dev/awesome_kou/articles/engineer-performance-metrics" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">エンジニアの成果をどのように測定すべきかという難題を論じた記事である。コミット数や行数といった単純な指標では、本質的な貢献を捉えきれないという問題意識が背景にある。著者は、成果評価にまつわる難しさや、指標が持つ限界を整理している。定量的な計測と、実際の価値のあいだにあるギャップに目を向けている。評価する側とされる側の双方にとって、公平で納得感のある指標が求められることを指摘している。安易な数値化のリスクにも触れながら、評価の考え方を掘り下げている。マネジメントや人事評価に関わる立場の読者にとって示唆に富む内容である。</td></tr>
+<tr><td class="num">5</td><td class="title">仕様とコードのズレをハッシュで決定的に検出するツールを作った</td><td class="link-col"><a href="https://zenn.dev/mrmtsntr/articles/artgraph-spec-code-drift" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">仕様駆動開発で起こりがちな「仕様とコードのズレ」を、ハッシュを用いて決定的に検出するツールを開発した記事である。仕様書とコードは時間とともに乖離しやすく、その不整合が問題の原因になる。著者は、仕様とコードの対応関係をハッシュで管理し、変更が生じたら確実に検知できる仕組みを構築した。曖昧な目視確認ではなく、決定的に差分を捉えられる点が特徴とされる。ドリフト(ズレ)を自動で検出することで、仕様とコードの同期を保ちやすくする狙いがある。仕様駆動開発を実践する上での実務的な課題に応えるツールである。仕様とコードの整合性維持に悩む開発者にとって参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">フロントエンドに広がるOpenTelemetry：Browser SDKの現在地</td><td class="link-col"><a href="https://zenn.dev/cybozu_frontend/articles/opentelemetry-browser-frontend" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">フロントエンド領域で広がりつつある OpenTelemetry の Browser SDK について、その現状を解説した記事である。OpenTelemetry は分散トレーシングや可観測性の標準として、バックエンドを中心に普及してきた。近年はブラウザ側の計測にも適用が進み、フロントエンドの可観測性を高める動きが出ている。記事は Browser SDK の到達点や、実際に使う上でのポイントを整理している。フロントエンドのパフォーマンスやユーザー体験を計測・分析する基盤としての位置づけを示している。可観測性をフロント側まで広げることの意義と課題に触れている。Web フロントエンドの監視・計測に関心を持つ開発者に向いた内容である。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Codeを2時間おきに回してVS Code拡張を育てるLoop Engineering</td><td class="link-col"><a href="https://zenn.dev/green_tea/articles/e39e3726a449c9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Claude Code を 2 時間おきに繰り返し実行し、VS Code 拡張の Markdown エディタを継続的に育てる「Loop Engineering」の実践記事である。AI エージェントに定期的に開発タスクを任せ、時間をかけてプロダクトを成長させる手法を紹介している。人手を介さず自動で改善サイクルを回すことで、開発を持続的に前進させる狙いがある。定期実行によって、少しずつ機能追加や修正を積み重ねられる点が特徴とされる。エージェントを使った自動開発ループの具体的な運用例を示している。AI に任せる開発スタイルの可能性と工夫が語られている。エージェント活用による開発自動化に関心を持つ読者向けである。</td></tr>
+<tr><td class="num">8</td><td class="title">Async React時代の宣言的UI：useActionStateで操作を妨げないUXを作る</td><td class="link-col"><a href="https://zenn.dev/uhyo/articles/async-react-action-queue" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Async React 時代の宣言的 UI をテーマに、`useActionState` を用いてユーザーの操作を妨げない UX を作る方法を解説した連載記事である。非同期処理を伴う UI では、送信中の状態管理やユーザー操作のブロックが課題になりやすい。著者は `useActionState` を活用し、操作をキューイングしながら滑らかな体験を実現する手法を示している。宣言的に非同期アクションを扱うことで、状態管理を簡潔にできる点を強調している。ユーザーが待たされたり操作を止められたりしない UX 設計の勘所を扱っている。React の新しい非同期対応機能を実践的に使いこなす内容である。モダンな React で快適な UI を作りたい開発者に向いている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「何から始めるか問題」で結局何も始められなかった話</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/516da72f0627c3728fbe" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">学習や開発を始めようとして「何から始めるか」で悩み、結局何も始められなかったという体験談である。特に未経験者や初心者が陥りがちな、選択肢の多さによる行動の停滞を扱っている。著者は自身の経験を通じて、完璧な入り口を探すあまり動けなくなる心理を振り返っている。まず何かに手を付けてみることの大切さや、始められない状態から抜け出す考え方を示している。準備や情報収集に時間をかけすぎるリスクに目を向けている。学習を続けるうえでのマインドセットに焦点を当てた内容である。これから学び始める初心者を応援する趣旨の読み物である。</td></tr>
+<tr><td class="num">2</td><td class="title">AI時代のポートフォリオ、転職で本当に見られているのは「言語化力」</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/d8c22cb512d9ba036154" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI 時代の転職において、ポートフォリオで本当に評価されるのは「言語化力」だと論じた記事である。生成 AI により成果物を作りやすくなった一方で、作ったものを自分の言葉で説明できるかが差になると指摘している。何をどう考えて作ったのか、意図や工夫を言語化できることが重要だとしている。単に動くものを見せるだけでなく、思考の過程を伝える力が採用側に見られているという。技術力に加えてコミュニケーションや説明の能力が問われる状況を示している。未経験エンジニアやキャリアを考える人に向けた助言となっている。AI 時代の自己表現とキャリア形成に関する示唆に富む内容である。</td></tr>
+<tr><td class="num">3</td><td class="title">Railsで学ぶRubyの実行モデル入門 —「1行ずつ翻訳」は誤解だった</td><td class="link-col"><a href="https://qiita.com/akachiryo/items/0dea3706713f90e7ef7d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">Rails を題材に、Ruby の実行モデルを解説した入門記事である。「Ruby は 1 行ずつ翻訳しながら実行される」という一般的なイメージが誤解であることを説明している。実際にはトークナイズや構文解析を経てコードが処理されるという、実行の内部的な流れを扱っている。インタプリタ言語の動作を、より正確なモデルとして理解し直すことを促している。表面的な理解にとどまらず、言語がコードを解釈する仕組みに踏み込んでいる。Ruby や Rails を使う開発者が、実行の仕組みを学ぶ入り口として役立つ。言語処理系の基礎に関心を持つ読者に向いた内容である。</td></tr>
+<tr><td class="num">4</td><td class="title">ひとことで言え ― スライドをAIで作り直したらわかりにくくなった話</td><td class="link-col"><a href="https://qiita.com/WdknWdkn/items/ba228da40b5d2fd1b612" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">スライドを AI で作り直したところ、かえって分かりにくくなってしまったという体験談である。生成 AI に資料作成を任せると、情報が増えて要点がぼやけることがあるという気づきを扱っている。著者は「ひとことで言え」という観点から、伝えたい核心を絞ることの大切さを強調している。AI が生成した内容をそのまま使うのではなく、人が要点を見極めて整理する必要があると論じている。プレゼンテーションにおける情報の取捨選択の重要性を示している。AI 活用が必ずしも分かりやすさに直結しないことへの注意喚起でもある。資料作成やマネジメントに関わる読者に向けた示唆がある。</td></tr>
+<tr><td class="num">5</td><td class="title">AIエージェントがあれば技術書はすぐ書けると思ったが無理だった</td><td class="link-col"><a href="https://qiita.com/watany/items/11358e8e8966d5e48a09" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">AI エージェントを使えば技術書をすぐに書けると考えたが、実際にはうまくいかなかったという体験談である。著者は Claude Code などの生成 AI を活用して執筆を試みたが、想定通りには進まなかったと述べている。技術書の執筆には、正確さや一貫性、構成の設計など AI だけでは補いきれない要素が多いことに触れている。AI に任せれば楽に書けるという期待と、現実とのギャップを率直に振り返っている。生成 AI を執筆に使う際の限界や、人が担うべき役割を浮き彫りにしている。AI 活用の過大な期待に対する冷静な検証として読める。執筆や生成 AI 活用に関心を持つ読者向けの内容である。</td></tr>
+<tr><td class="num">6</td><td class="title">開発効率が上がったCLIツール・コマンド10選</td><td class="link-col"><a href="https://qiita.com/NekoByte/items/efa81aaa8a61d3478568" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">開発効率の向上に役立った CLI ツールやコマンドを 10 個紹介した記事である。日々の作業を速く・楽にするための実用的なツール群を厳選して取り上げている。それぞれのツールについて、どのような場面で役立つのかが具体的に説明されている。ターミナル中心の開発において、定番から便利なものまで幅広く紹介している。作業の自動化や効率化に直結するコマンドを知ることで、生産性を高められる。実際に使って効果を感じたものを共有する、実践的なまとめとなっている。CLI での開発効率を上げたいエンジニアにとって参考になる内容である。</td></tr>
+<tr><td class="num">7</td><td class="title">非エンジニアが気楽に始める仕様駆動開発</td><td class="link-col"><a href="https://qiita.com/ynmc0214/items/9cf96baae4b01bbeb6d6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">非エンジニアでも取り組みやすい形で仕様駆動開発を始める方法を紹介した入門記事である。Claude Code を活用し、仕様を軸に開発を進めるアプローチを、専門知識がなくても実践できるように解説している。まず何を作りたいかを仕様として整理し、それを起点に開発を進める流れを扱っている。エンジニアでない人でも、AI の支援を受けながら個人開発に踏み出せることを示している。仕様を明確にすることで、AI とのやり取りがスムーズになる利点を強調している。難しく捉えられがちな開発を、気楽に始めるためのハードルを下げる内容である。非エンジニアや個人開発の入門者に向いた記事である。</td></tr>
+<tr><td class="num">8</td><td class="title">個人開発でApp Storeリリースフローを学ぶ（続編）— 3回のリジェクトと審査通過まで</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/91755838ea8589fde90d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">個人開発のアプリを App Store でリリースする過程を記録した続編記事である。実際に 3 回のリジェクト(審査却下)を経て、最終的に審査を通過するまでにやったことをまとめている。App Store の審査では、ガイドライン違反や不備が理由で却下されることが少なくない。著者は、どのような指摘を受け、どう対応して通過にこぎつけたのかを具体的に共有している。Firebase や iOS 開発を用いた実装の文脈も踏まえて説明されている。個人開発者がリリースで直面しやすい壁と、その乗り越え方が示されている。App Store への公開を目指す開発者にとって実践的な参考になる内容である。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-27 06:33 JST
+</footer>
+</div>
+</body>
+</html>
