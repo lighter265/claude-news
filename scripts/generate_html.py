@@ -10,10 +10,15 @@ FEED_MD = REPO / "feed.md"
 
 
 def parse_feed(md_text: str) -> dict:
-    """feed.md をパース。テーブル形式と見出し形式の両対応。"""
+    """feed.md をパース。テーブル形式と見出し形式の両対応。
+    戻り値: {"highlights": [...], "sections": {...}}
+    """
     sections = {}
+    highlights = []
     current_section = None
+    current_item = None
     in_table = False
+    in_highlights = False
     lines = md_text.split("\n")
 
     for line in lines:
@@ -23,9 +28,18 @@ def parse_feed(md_text: str) -> dict:
             current_section = m.group(1).strip()
             sections[current_section] = []
             in_table = False
+            # 📌 セクションは箇条書き収集モードへ
+            in_highlights = current_section.startswith("📌")
             continue
 
         if current_section is None:
+            continue
+
+        # 📌 セクション: 箇条書きを収集
+        if in_highlights:
+            bullet = re.match(r"^[-*]\s+(.+)", line.strip())
+            if bullet:
+                highlights.append(bullet.group(1).strip())
             continue
 
         # テーブル区切り行
@@ -68,12 +82,12 @@ def parse_feed(md_text: str) -> dict:
             continue
 
         # URL行
-        if "current_item" in locals() and current_item and re.match(r"^https?://", line.strip()):
+        if current_item and re.match(r"^https?://", line.strip()):
             current_item["url"] = line.strip()
             continue
 
         # 要約本文
-        if "current_item" in locals() and current_item and line.strip() and not line.strip().startswith("http"):
+        if current_item and line.strip() and not line.strip().startswith("http"):
             current_item["summary"].append(line.strip())
 
     # 要約テキストを連結（リスト形式の場合）
@@ -82,11 +96,16 @@ def parse_feed(md_text: str) -> dict:
             if isinstance(item.get("summary"), list):
                 item["summary"] = " ".join(s for s in item["summary"] if not s.startswith("http"))
 
-    return sections
+    return {"highlights": highlights, "sections": sections}
 
 
 def escape_html(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def render_summary(text: str) -> str:
+    """要約セル用: escape しつつ <br> は実改行として保持。"""
+    return escape_html(text).replace("&lt;br&gt;", "<br>")
 
 
 def build_breadcrumb(date_str: str) -> str:
@@ -106,7 +125,22 @@ def build_breadcrumb(date_str: str) -> str:
     )
 
 
-def build_html(sections: dict, date_str: str) -> str:
+def build_html(result: dict, date_str: str) -> str:
+    """result: {"highlights": [...], "sections": {...}}"""
+    highlights = result.get("highlights", [])
+    sections = result.get("sections", {})
+
+    # 📌 今日の3行サマリ ボックス
+    highlights_html = ""
+    if highlights:
+        items_html = "".join(f"<li>{escape_html(h)}</li>" for h in highlights)
+        highlights_html = (
+            f'<section class="highlights" aria-label="今日の3行サマリ">\n'
+            f'  <h2>📌 今日の3行サマリ</h2>\n'
+            f'  <ul>{items_html}</ul>\n'
+            f'</section>\n'
+        )
+
     tables = ""
     for sec_name, items in sections.items():
         if not items:
@@ -139,7 +173,7 @@ def build_html(sections: dict, date_str: str) -> str:
                 tables += (
                     f'<tr class="summary-row">'
                     f'<td></td>'
-                    f'<td colspan="2" class="summary">{escape_html(item["summary"])}</td>'
+                    f'<td colspan="2" class="summary">{render_summary(item["summary"])}</td>'
                     f"</tr>\n"
                 )
         tables += '</tbody>\n</table>\n'
@@ -178,8 +212,34 @@ def build_html(sections: dict, date_str: str) -> str:
   .link-col a {{ text-decoration: none; font-size: 1rem; color: #4a6fa5; }}
   .link-col a:hover {{ color: #2a4f85; }}
   .summary-row td {{ border-bottom: 1px solid #eee; }}
-  .summary {{ font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.65; }}
+  .summary {{ font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }}
+  .summary br + br {{ display: block; content: ""; margin-top: 4px; }}
   tbody tr:hover td {{ background: #f8f9fb; }}
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {{
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }}
+  .highlights h2 {{
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }}
+  .highlights ul {{ list-style: none; padding: 0; margin: 0; }}
+  .highlights li {{
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }}
+  .highlights li::before {{
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }}
   footer {{ text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }}
   footer a {{ color: #666; text-decoration: none; }}
   footer a:hover {{ text-decoration: underline; }}
@@ -196,7 +256,7 @@ def build_html(sections: dict, date_str: str) -> str:
 <div class="container">
 <h1>📰 技術ニュース要約 — {escape_html(date_str)}</h1>
 {breadcrumb}
-{tables}
+{highlights_html}{tables}
 <footer>
   Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
   · {escape_html(datetime.now().strftime("%Y-%m-%d %H:%M JST"))}
@@ -212,7 +272,7 @@ def main():
         sys.exit(1)
 
     md_text = FEED_MD.read_text(encoding="utf-8")
-    sections = parse_feed(md_text)
+    result = parse_feed(md_text)
 
     date_match = re.search(r"(\d{4}-\d{2}-\d{2})", md_text)
     date_str = date_match.group(1) if date_match else datetime.now().strftime("%Y-%m-%d")
@@ -221,7 +281,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / f"{date_str}.html"
 
-    html = build_html(sections, date_str)
+    html = build_html(result, date_str)
     out_file.write_text(html, encoding="utf-8")
     print(f"Generated {out_file} ({len(html)} bytes)")
 
