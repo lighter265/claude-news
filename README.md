@@ -2,7 +2,7 @@
 
 毎朝の技術ニュースを自動取得・AI 要約し、メールで受け取る仕組み。
 
-5 ソース(GitHub Trending / Hacker News / Reddit / Zenn / Qiita)を Linux サーバーで取得し、Claude CLI が
+8 ソース(GitHub Trending / Hacker News / Anthropic / OpenAI / InfoQ Japan / はてなブックマーク (tech) / Zenn / Qiita)を Linux サーバーで取得し、Claude CLI が
 要約付きの `feed.md` を生成する。
 
 ## アーキテクチャ

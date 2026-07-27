@@ -1,11 +1,20 @@
-"""5 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。"""
+"""8 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。"""
 import importlib
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from common import save_raw
 
-SOURCES = ["github_trending", "hackernews", "reddit", "zenn", "qiita"]
+SOURCES = [
+    "github_trending",
+    "hackernews",
+    "anthropic",
+    "openai",
+    "infoq_jp",
+    "hatena",
+    "zenn",
+    "qiita",
+]
 
 
 def fetch_source(name):
