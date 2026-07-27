@@ -28,11 +28,26 @@
   footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
   footer a { color: #666; text-decoration: none; }
   footer a:hover { text-decoration: underline; }
+
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
 </style>
 </head>
 <body>
 <div class="container">
 <h1>📰 技術ニュース要約 — 2026-06-30</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-06.html">2026年6月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-06-30</span>
+</nav>
+
 <table>
 <thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>

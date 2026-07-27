@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026年7月 — claude-news アーカイブ</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+
+  /* パンくず */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+
+  h1 { font-size: 1.5rem; padding: 0 0 6px; color: #1a1a2e; }
+  .month-count { color: #888; font-size: .88rem; margin-bottom: 20px; }
+
+  /* 前月/翌月ナビ */
+  .month-nav { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 24px; }
+  .nav-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #2a4f85;
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    transition: background .15s, box-shadow .15s;
+  }
+  .nav-btn:hover { background: #f0f4fa; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+  .nav-btn:focus-visible { outline: 2px solid #2a4f85; outline-offset: 2px; }
+  .nav-btn.disabled {
+    color: #bbb;
+    border-color: #eee;
+    background: #fafafa;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* 日次リスト */
+  .daily-list { display: flex; flex-direction: column; gap: 0; }
+  .daily-row {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 16px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+    transition: background .12s;
+  }
+  .daily-row:first-child { border-radius: 8px 8px 0 0; }
+  .daily-row:last-child { border-radius: 0 0 8px 8px; border-bottom: none; }
+  .daily-row:hover { background: #f8f9fb; }
+  .daily-row:focus-visible { outline: 2px solid #2a4f85; outline-offset: -2px; }
+  .daily-date {
+    flex-shrink: 0;
+    width: 110px;
+    font-family: "SF Mono", "Cascadia Code", "Consolas", monospace;
+    font-size: .88rem;
+    color: #999;
+  }
+  .daily-title {
+    font-weight: 500;
+    font-size: .93rem;
+    color: #2a4f85;
+  }
+  .daily-row:hover .daily-title { text-decoration: underline; }
+
+  /* レスポンシブ */
+  @media (max-width: 480px) {
+    .container { padding: 20px 12px; }
+    h1 { font-size: 1.3rem; }
+    .month-nav { flex-direction: column; gap: 8px; }
+    .nav-btn { text-align: center; }
+    .daily-row { flex-direction: column; gap: 4px; padding: 12px 14px; }
+    .daily-date { width: auto; }
+  }
+
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="container">
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026年7月</span>
+</nav>
+<h1>📰 2026年7月 のアーカイブ</h1>
+<p class="month-count">25 件のニュース要約</p>
+<div class="month-nav">
+  <a href="2026-06.html" class="nav-btn">← 2026年6月</a>
+  <span class="nav-btn disabled" aria-disabled="true">翌月なし →</span>
+</div>
+<div class="daily-list">
+<a href="pages/2026-07-27.html" class="daily-row">
+  <span class="daily-date">2026-07-27</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-27</span>
+</a>
+<a href="pages/2026-07-26.html" class="daily-row">
+  <span class="daily-date">2026-07-26</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-26</span>
+</a>
+<a href="pages/2026-07-25.html" class="daily-row">
+  <span class="daily-date">2026-07-25</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-25</span>
+</a>
+<a href="pages/2026-07-24.html" class="daily-row">
+  <span class="daily-date">2026-07-24</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-24</span>
+</a>
+<a href="pages/2026-07-23.html" class="daily-row">
+  <span class="daily-date">2026-07-23</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-23</span>
+</a>
+<a href="pages/2026-07-22.html" class="daily-row">
+  <span class="daily-date">2026-07-22</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-22</span>
+</a>
+<a href="pages/2026-07-21.html" class="daily-row">
+  <span class="daily-date">2026-07-21</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-21</span>
+</a>
+<a href="pages/2026-07-20.html" class="daily-row">
+  <span class="daily-date">2026-07-20</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-20</span>
+</a>
+<a href="pages/2026-07-19.html" class="daily-row">
+  <span class="daily-date">2026-07-19</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-19</span>
+</a>
+<a href="pages/2026-07-18.html" class="daily-row">
+  <span class="daily-date">2026-07-18</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-18</span>
+</a>
+<a href="pages/2026-07-17.html" class="daily-row">
+  <span class="daily-date">2026-07-17</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-17</span>
+</a>
+<a href="pages/2026-07-15.html" class="daily-row">
+  <span class="daily-date">2026-07-15</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-15</span>
+</a>
+<a href="pages/2026-07-14.html" class="daily-row">
+  <span class="daily-date">2026-07-14</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-14</span>
+</a>
+<a href="pages/2026-07-13.html" class="daily-row">
+  <span class="daily-date">2026-07-13</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-13</span>
+</a>
+<a href="pages/2026-07-12.html" class="daily-row">
+  <span class="daily-date">2026-07-12</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-12</span>
+</a>
+<a href="pages/2026-07-11.html" class="daily-row">
+  <span class="daily-date">2026-07-11</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-11</span>
+</a>
+<a href="pages/2026-07-10.html" class="daily-row">
+  <span class="daily-date">2026-07-10</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-10</span>
+</a>
+<a href="pages/2026-07-09.html" class="daily-row">
+  <span class="daily-date">2026-07-09</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-09</span>
+</a>
+<a href="pages/2026-07-08.html" class="daily-row">
+  <span class="daily-date">2026-07-08</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-08</span>
+</a>
+<a href="pages/2026-07-07.html" class="daily-row">
+  <span class="daily-date">2026-07-07</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-07</span>
+</a>
+<a href="pages/2026-07-05.html" class="daily-row">
+  <span class="daily-date">2026-07-05</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-05</span>
+</a>
+<a href="pages/2026-07-04.html" class="daily-row">
+  <span class="daily-date">2026-07-04</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-04</span>
+</a>
+<a href="pages/2026-07-03.html" class="daily-row">
+  <span class="daily-date">2026-07-03</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-03</span>
+</a>
+<a href="pages/2026-07-02.html" class="daily-row">
+  <span class="daily-date">2026-07-02</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-02</span>
+</a>
+<a href="pages/2026-07-01.html" class="daily-row">
+  <span class="daily-date">2026-07-01</span>
+  <span class="daily-title">技術ニュース要約 — 2026-07-01</span>
+</a>
+
+</div>
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-27 22:25 JST
+</footer>
+</div>
+</body>
+</html>

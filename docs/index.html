@@ -10,15 +10,70 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: #f5f5f5; color: #333; line-height: 1.6;
   }
-  .container { max-width: 640px; margin: 0 auto; padding: 32px 16px; }
-  h1 { font-size: 1.5rem; text-align: center; padding: 16px 0 24px; color: #1a1a2e; }
-  .count { text-align: center; color: #888; font-size: .9rem; margin-bottom: 24px; }
-  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
-  td { padding: 12px 16px; border-bottom: 1px solid #eee; }
-  tr:last-child td { border-bottom: none; }
-  .date { width: 120px; color: #999; font-size: .9rem; font-family: monospace; white-space: nowrap; }
-  .title-col a { color: #2a4f85; text-decoration: none; font-weight: 500; }
-  .title-col a:hover { text-decoration: underline; }
+  .container { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+  h1 { font-size: 1.5rem; text-align: center; padding: 16px 0 8px; color: #1a1a2e; }
+  .count { text-align: center; color: #888; font-size: .88rem; margin-bottom: 32px; }
+
+  /* 年別セクション */
+  .year-section { margin-bottom: 36px; }
+  .year-heading {
+    font-size: 1.15rem; font-weight: 700; color: #1a1a2e;
+    padding-bottom: 8px; margin-bottom: 16px;
+    border-bottom: 2px solid #1a1a2e;
+  }
+
+  /* 月カードグリッド */
+  .month-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+  .month-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-left: 4px solid #1a1a2e;
+    border-radius: 8px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    transition: box-shadow .15s, transform .15s;
+  }
+  .month-card:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,.13);
+    transform: translateY(-2px);
+  }
+  .month-card:focus-visible {
+    outline: 2px solid #2a4f85;
+    outline-offset: 2px;
+  }
+  .month-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+  }
+  .month-badge {
+    background: #1a1a2e;
+    color: #e8e8e8;
+    font-size: .75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  /* レスポンシブ */
+  @media (max-width: 480px) {
+    .container { padding: 20px 12px; }
+    h1 { font-size: 1.3rem; }
+    .month-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .month-card { padding: 12px 14px; }
+    .month-name { font-size: 1rem; }
+    .month-badge { font-size: .7rem; padding: 2px 8px; }
+  }
+
   footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
   footer a { color: #666; text-decoration: none; }
 </style>
@@ -27,55 +82,23 @@
 <div class="container">
 <h1>📰 claude-news アーカイブ</h1>
 <p class="count">43 件のニュース要約</p>
-<table>
-<tr><td class="date">2026-07-27</td><td class="title-col"><a href="pages/2026-07-27.html">技術ニュース要約 — 2026-07-27</a></td></tr>
-<tr><td class="date">2026-07-26</td><td class="title-col"><a href="pages/2026-07-26.html">技術ニュース要約 — 2026-07-26</a></td></tr>
-<tr><td class="date">2026-07-25</td><td class="title-col"><a href="pages/2026-07-25.html">技術ニュース要約 — 2026-07-25</a></td></tr>
-<tr><td class="date">2026-07-24</td><td class="title-col"><a href="pages/2026-07-24.html">技術ニュース要約 — 2026-07-24</a></td></tr>
-<tr><td class="date">2026-07-23</td><td class="title-col"><a href="pages/2026-07-23.html">技術ニュース要約 — 2026-07-23</a></td></tr>
-<tr><td class="date">2026-07-22</td><td class="title-col"><a href="pages/2026-07-22.html">技術ニュース要約 — 2026-07-22</a></td></tr>
-<tr><td class="date">2026-07-21</td><td class="title-col"><a href="pages/2026-07-21.html">技術ニュース要約 — 2026-07-21</a></td></tr>
-<tr><td class="date">2026-07-20</td><td class="title-col"><a href="pages/2026-07-20.html">技術ニュース要約 — 2026-07-20</a></td></tr>
-<tr><td class="date">2026-07-19</td><td class="title-col"><a href="pages/2026-07-19.html">技術ニュース要約 — 2026-07-19</a></td></tr>
-<tr><td class="date">2026-07-18</td><td class="title-col"><a href="pages/2026-07-18.html">技術ニュース要約 — 2026-07-18</a></td></tr>
-<tr><td class="date">2026-07-17</td><td class="title-col"><a href="pages/2026-07-17.html">技術ニュース要約 — 2026-07-17</a></td></tr>
-<tr><td class="date">2026-07-15</td><td class="title-col"><a href="pages/2026-07-15.html">技術ニュース要約 — 2026-07-15</a></td></tr>
-<tr><td class="date">2026-07-14</td><td class="title-col"><a href="pages/2026-07-14.html">技術ニュース要約 — 2026-07-14</a></td></tr>
-<tr><td class="date">2026-07-13</td><td class="title-col"><a href="pages/2026-07-13.html">技術ニュース要約 — 2026-07-13</a></td></tr>
-<tr><td class="date">2026-07-12</td><td class="title-col"><a href="pages/2026-07-12.html">技術ニュース要約 — 2026-07-12</a></td></tr>
-<tr><td class="date">2026-07-11</td><td class="title-col"><a href="pages/2026-07-11.html">技術ニュース要約 — 2026-07-11</a></td></tr>
-<tr><td class="date">2026-07-10</td><td class="title-col"><a href="pages/2026-07-10.html">技術ニュース要約 — 2026-07-10</a></td></tr>
-<tr><td class="date">2026-07-09</td><td class="title-col"><a href="pages/2026-07-09.html">技術ニュース要約 — 2026-07-09</a></td></tr>
-<tr><td class="date">2026-07-08</td><td class="title-col"><a href="pages/2026-07-08.html">技術ニュース要約 — 2026-07-08</a></td></tr>
-<tr><td class="date">2026-07-07</td><td class="title-col"><a href="pages/2026-07-07.html">技術ニュース要約 — 2026-07-07</a></td></tr>
-<tr><td class="date">2026-07-05</td><td class="title-col"><a href="pages/2026-07-05.html">技術ニュース要約 — 2026-07-05</a></td></tr>
-<tr><td class="date">2026-07-04</td><td class="title-col"><a href="pages/2026-07-04.html">技術ニュース要約 — 2026-07-04</a></td></tr>
-<tr><td class="date">2026-07-03</td><td class="title-col"><a href="pages/2026-07-03.html">技術ニュース要約 — 2026-07-03</a></td></tr>
-<tr><td class="date">2026-07-02</td><td class="title-col"><a href="pages/2026-07-02.html">技術ニュース要約 — 2026-07-02</a></td></tr>
-<tr><td class="date">2026-07-01</td><td class="title-col"><a href="pages/2026-07-01.html">技術ニュース要約 — 2026-07-01</a></td></tr>
-<tr><td class="date">2026-06-30</td><td class="title-col"><a href="pages/2026-06-30.html">技術ニュース要約 — 2026-06-30</a></td></tr>
-<tr><td class="date">2026-06-29</td><td class="title-col"><a href="pages/2026-06-29.html">技術ニュース要約 — 2026-06-29</a></td></tr>
-<tr><td class="date">2026-06-28</td><td class="title-col"><a href="pages/2026-06-28.html">技術ニュース要約 — 2026-06-28</a></td></tr>
-<tr><td class="date">2026-06-27</td><td class="title-col"><a href="pages/2026-06-27.html">技術ニュース要約 — 2026-06-27</a></td></tr>
-<tr><td class="date">2026-06-26</td><td class="title-col"><a href="pages/2026-06-26.html">技術ニュース要約 — 2026-06-26</a></td></tr>
-<tr><td class="date">2026-06-25</td><td class="title-col"><a href="pages/2026-06-25.html">技術ニュース要約 — 2026-06-25</a></td></tr>
-<tr><td class="date">2026-06-24</td><td class="title-col"><a href="pages/2026-06-24.html">技術ニュース要約 — 2026-06-24</a></td></tr>
-<tr><td class="date">2026-06-23</td><td class="title-col"><a href="pages/2026-06-23.html">技術ニュース要約 — 2026-06-23</a></td></tr>
-<tr><td class="date">2026-06-22</td><td class="title-col"><a href="pages/2026-06-22.html">技術ニュース要約 — 2026-06-22</a></td></tr>
-<tr><td class="date">2026-06-21</td><td class="title-col"><a href="pages/2026-06-21.html">技術ニュース要約 — 2026-06-21</a></td></tr>
-<tr><td class="date">2026-06-20</td><td class="title-col"><a href="pages/2026-06-20.html">技術ニュース要約 — 2026-06-20</a></td></tr>
-<tr><td class="date">2026-06-19</td><td class="title-col"><a href="pages/2026-06-19.html">技術ニュース要約 — 2026-06-19</a></td></tr>
-<tr><td class="date">2026-06-18</td><td class="title-col"><a href="pages/2026-06-18.html">技術ニュース要約 — 2026-06-18</a></td></tr>
-<tr><td class="date">2026-06-17</td><td class="title-col"><a href="pages/2026-06-17.html">技術ニュース要約 — 2026-06-17</a></td></tr>
-<tr><td class="date">2026-06-16</td><td class="title-col"><a href="pages/2026-06-16.html">技術ニュース要約 — 2026-06-16</a></td></tr>
-<tr><td class="date">2026-06-15</td><td class="title-col"><a href="pages/2026-06-15.html">技術ニュース要約 — 2026-06-15</a></td></tr>
-<tr><td class="date">2026-06-14</td><td class="title-col"><a href="pages/2026-06-14.html">技術ニュース要約 — 2026-06-14</a></td></tr>
-<tr><td class="date">2026-06-13</td><td class="title-col"><a href="pages/2026-06-13.html">技術ニュース要約 — 2026-06-13</a></td></tr>
+<section class="year-section">
+  <h2 class="year-heading">2026年</h2>
+  <div class="month-grid">
+<a href="2026-07.html" class="month-card" aria-label="2026年7月 — 25件">
+  <div class="month-name">7月</div>
+  <div class="month-badge">25件</div>
+</a>
+<a href="2026-06.html" class="month-card" aria-label="2026年6月 — 18件">
+  <div class="month-name">6月</div>
+  <div class="month-badge">18件</div>
+</a>
+  </div>
+</section>
 
-</table>
 <footer>
   Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
-  · 2026-07-27 06:33 JST
+  · 2026-07-27 22:25 JST
 </footer>
 </div>
 </body>
