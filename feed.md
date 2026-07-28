@@ -1,96 +1,94 @@
-# 技術ニュース要約 — 2026-07-28
+# 技術ニュース要約 — 2026-07-29
 
 ## 📌 今日の3行サマリ
 
-- Anthropic が「Claude Opus 5」を発表。Fable 5 に迫る知能を Opus 4.8 から価格据え置きで提供し、Max プランの既定モデルに。
-- 共有した Claude のチャットや Artifacts が Google 検索に露出していた問題が報じられ、robots.txt だけで noindex 未設定だった点が指摘されている。
-- 出張者を狙いホテル Wi-Fi 経由で Microsoft 365 認証情報を窃取、MFA もすり抜ける攻撃手口が国内で注目を集めている。
+- Anthropic が最上位モデル「Claude Opus 5」を発表し、フロンティアモデル競争が新局面へ。
+- OpenAI が「Codex Security」をオープンソース化し、Hacker News で最注目に。
+- 個人開発者が「自作ターミナルで1日500コミット」を達成した体験談が Zenn で大きな反響。
 
 ## GitHub Trending
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | bitchat — Bluetooth メッシュで動く分散型 P2P チャット | • アカウント・電話番号・中央サーバー不要の分散型メッセージングアプリ<br>• ローカル Bluetooth メッシュでオフライン通信、Nostr プロトコルで広域到達<br>• App Store 配布に加え、検証可能なソースからのビルドを推奨<br><br>ネットワークが遮断された状況でも近距離通信を維持できる設計が特徴。IRC 風の軽量な「サイドグループチャット」を志向しており、通信インフラに依存しない連絡手段として関心を集めている。 | https://github.com/permissionlesstech/bitchat |
-| 2 | ego-lite — AI エージェント向けの高速ブラウザ | • Codex や Claude Code などのエージェントに Web 自動化を実行させるブラウザ<br>• ログイン済みブラウザ状態を共有しつつ、自分の作業を妨げない<br>• 専用 Space でエージェントが並行してタスクを実行<br><br>ゼロ設定・ゼロコストを掲げ、既存の browser-use 系ツールより少ないトークンで速くタスクを完了できるとする。人間とエージェントが同じブラウザ資産を並行利用する運用を想定している。 | https://github.com/citrolabs/ego-lite |
-| 3 | T3 Code — コーディングエージェント向けの最小 Web GUI | • Codex / Claude / Cursor / OpenCode に対応する軽量 Web インターフェース<br>• 各プロバイダーの CLI をインストールし認証すれば利用可能<br>• `npx` でインストール不要の起動もサポート<br><br>複数のコーディングエージェントを単一の GUI から扱えるようにする試み。今後さらに対応プロバイダーを増やす予定とされ、CLI ベースのエージェント運用を GUI で束ねたい層に向く。 | https://github.com/pingdotgg/t3code |
-| 4 | Instatic — セルフホスト型のエージェント対応ビジュアル CMS | • Webflow / Framer / WordPress のオープンソース代替を標榜<br>• 編集・コンテンツ・公開を単一の Bun サーバーで完結<br>• ユーザー・ロール・プラグイン・DB を内包しクリーンな静的ページを出力<br><br>ビジュアルエディタと配信基盤を一体化し、view-source で読めるほど整った静的ページを生成する点を売りにする。ワンクリックデプロイに対応し、自前ホスティングでサイトを所有したいユーザーを狙う。 | https://github.com/CoreBunch/Instatic |
-| 5 | open-code-review — Alibaba 発の AI コードレビュー CLI | • 決定的パイプラインと LLM エージェントのハイブリッド構成<br>• NPE・スレッド安全性・XSS・SQL インジェクションのルールセットを内蔵<br>• 行単位で精密なレビューコメントを付与、OpenAI / Anthropic 互換<br><br>Alibaba 社内で2年間運用されてきた AI コードレビュー支援を OSS 化したもの。ルールベースの確実さと LLM の柔軟さを組み合わせ、大規模開発での実運用を想定した設計になっている。 | https://github.com/alibaba/open-code-review |
-| 6 | Kronos — 金融市場のための基盤モデル | • 世界45以上の取引所のローソク足(K-line)データで学習<br>• 金融時系列向けとして初のオープンソース基盤モデルを標榜<br>• AAAI 2026 に採択、ファインチューニング用スクリプトも公開<br><br>チャートデータを「言語」として扱い、市場の系列パターンを学習する試み。自前データへの適応手順が整備されており、定量分析や金融時系列研究の共通基盤としての活用が期待される。 | https://github.com/shiyu-coder/Kronos |
-| 7 | Pumpkin — Rust 製の Minecraft サーバー | • ゲームのコア挙動を保ちつつ性能と効率を最優先に設計<br>• マルチスレッドを活用し高速・省リソースな動作を実現<br>• Java 版・Bedrock 版の最新バージョンに対応<br><br>バニラのゲーム機構に準拠しながら Rust で全面的に書き直した実装。セキュリティと運用効率を重視しており、軽量に自前サーバーを立てたい運営者に向けた選択肢となる。 | https://github.com/Pumpkin-MC/Pumpkin |
+| 1 | bitchat — Bluetooth メッシュ型の分散チャットアプリ | • アカウント・電話番号・中央サーバー不要の P2P メッセージング<br>• ローカルは Bluetooth メッシュ、広域は Nostr プロトコルの二重構成<br>• オフライン通信と検閲耐性を両立<br><br>災害時やネット遮断下でも動く点が特徴で、App Store 配布かソースからの検証ビルドを推奨。分散型・プライバシー重視の通信手段として注目を集めている。 | https://github.com/permissionlesstech/bitchat |
+| 2 | Amnezia VPN Client — 自前サーバーを立てる OSS VPN | • IP・SSH ログイン・パスワードを入れるだけで自動構築<br>• デスクトップ／モバイル両対応<br>• サイトがブロックされた地域向けの代替リンクも提供<br><br>検閲回避を主目的に、自己ホスト型 VPN を手軽に展開できるのが強み。プライバシーと通信の自由を求める層に支持されている。 | https://github.com/amnezia-vpn/amnezia-client |
+| 3 | AIRI — 自己ホスト型の AI コンパニオン | • Neuro-sama に着想を得た AI キャラクターコンテナ<br>• リアルタイム音声チャットに対応<br>• Minecraft や Factorio のプレイも可能<br><br>Web／macOS／Windows で動作し、「自分が所有する」 AI 相棒を志向。エンタメと実験的エージェント技術の交差点として話題。 | https://github.com/moeru-ai/airi |
+| 4 | GeoLibre — クラウドネイティブな軽量 GIS 基盤 | • ブラウザ・デスクトップ・モバイル・Jupyter で動作<br>• 地理空間データの可視化・探索・分析を実現<br>• Tauri v2 ベースでデータはローカル保持<br><br>データを手元に置いたままプライバシーを守りつつ GIS を扱える点が特徴。研究・実務両面での活用が期待される。 | https://github.com/opengeos/GeoLibre |
+| 5 | superfile — モダンなターミナルファイルマネージャ | • 洗練された TUI で一般的なファイル操作に対応<br>• macOS／Linux／Windows をサポート<br>• プラグイン・テーマ・ホットキーをカスタマイズ可能<br><br>コミュニティ主導で開発が進む人気ツール。ターミナル中心のワークフローを好む開発者に支持されている。 | https://github.com/yorukot/superfile |
+| 6 | Impeccable — AI コーディング向けデザイン言語 | • AI エージェントのフロントエンド設計品質を高める指針<br>• 1 スキル・23 コマンド・60 の決定論的検出ルールを提供<br>• ブラウザでのライブ反復に対応<br><br>Anthropic の frontend-design スキルを起点に発展。AI 生成 UI の「らしさ」を抑え、洗練された成果物を得るための枠組みとして注目。 | https://github.com/pbakaus/impeccable |
+| 7 | Open Code Review — Alibaba 発の AI コードレビュー CLI | • 決定論的パイプライン＋LLM エージェントのハイブリッド構成<br>• NPE・スレッド安全性・XSS・SQL インジェクションの検出ルール内蔵<br>• OpenAI／Anthropic 互換<br><br>Alibaba 社内で 2 年運用された実績を OSS 化。行単位の精密な指摘が可能で、AI 支援レビューの実用例として関心を集める。 | https://github.com/alibaba/open-code-review |
 
 ## Hacker News
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 廃ガスを有用な化学品へ変える Rise Reforming（YC S26 ローンチ） — (原文: Launch HN: Rise Reforming (YC S26) – Turning Waste Gases into Valuable Chemicals) | • 産業排ガスを価値ある化学品へ転換する技術を掲げるスタートアップ<br>• YC 2026年夏バッチとしてローンチ<br>• 廃棄物の資源化による脱炭素・循環経済への貢献を訴求<br><br>排出される廃ガスを原料として捉え直し、化学品製造へつなげるアプローチ。気候技術への関心が続くなかで、排出削減と収益化を両立させる事業モデルとして議論を呼んでいる。 | https://www.rise-reforming.com |
-| 2 | 共有した Claude のチャットや Artifacts が Google に載っていた — (原文: Claude shared chats and Artifacts may have ended up on Google) | • 共有機能で公開したチャットや Artifacts が Google 検索に現れていた<br>• 利用者が意図しない情報露出につながる懸念<br>• 共有リンクの取り扱いとインデックス制御が論点に<br><br>「共有」の範囲がユーザーの想定より広かった可能性を示す事例。関連して、robots.txt では隠していたが noindex が未設定だった点も別途指摘されており、共有 URL の設計と検索エンジン対策の重要性が改めて問われている。 | https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/ |
-| 3 | Waymo の事故率は人間ドライバーの約1/3、IIHS 報告（ただし留意点あり） — (原文: Waymo crashes 1/3 as much as a human driver, says IIHS – with some caveats) | • IIHS の分析で Waymo の事故頻度が人間運転の約1/3<br>• 一方で比較条件などに関する留意点も併記<br>• 自動運転の安全性評価の方法論が論点に<br><br>自動運転車の安全性を第三者機関のデータで示した点が注目される。ただし走行環境や比較対象の差異といった前提条件があり、単純比較には慎重さが必要だとする声も出ている。 | https://electrek.co/2026/07/25/waymo-is-2-3-safer-than-a-human-driver-says-iihs-with-some-caveats/ |
-| 4 | Anthropic は robots.txt で共有チャットを隠したが noindex がなかった — (原文: Anthropic used robots.txt to hide shared Claude chats; the pages have no noindex) | • 共有チャットのページに noindex メタタグが設定されていなかった<br>• robots.txt だけでは検索インデックスを完全に防げない<br>• 非公開想定の会話が検索結果に露出した経緯を報道<br><br>robots.txt はクロール抑制であってインデックス除外を保証しない、という古典的な落とし穴を突いた事例。共有機能を提供する側の検索エンジン対策とプライバシー設計に警鐘を鳴らしている。 | https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/ |
-| 5 | ESP32 で複雑テキストの整形・描画を実装（使用可能 RAM 320KB） — (原文: Show HN: Full complex text shaping and rendering on ESP32 with 320KB usable RAM) | • 制約の厳しい ESP32 上で複雑な文字整形と描画を実現<br>• 使用可能 RAM 320KB という限られた環境で動作<br>• 組み込み向けのテキストレンダリング実装を公開<br><br>多言語の複雑な字形処理を、潤沢とはいえないマイコン資源で成立させた実装事例。組み込みデバイスでのリッチな表示需要に応える技術デモとして関心を集めている。 | https://github.com/waruyama/flattype-cyd-demo |
-| 6 | Sam Altman「我々はシンギュラリティにいる」 — (原文: Sam Altman says we are in the singularity: 'This is the moment') | • OpenAI の Altman 氏が現在をシンギュラリティの局面と表現<br>• AGI への到達に関する自身の見解を提示<br>• Anthropic・NVIDIA など業界動向を背景にした発言<br><br>AI の進展を「今この瞬間」と強調する発言で、期待と誇張への警戒が入り混じる反応を呼んでいる。技術的実態と経営者の発信のトーンの差を巡る議論の一例となっている。 | https://www.businessinsider.com/sam-altman-openai-the-singularity-agi-prediction-anthropic-nvidia-2026-7 |
+| 1 | OpenAI が「Codex Security」をオープンソース化 — (原文: OpenAI just open-sourced Codex Security) | • OpenAI がセキュリティ向けの Codex 派生を OSS 公開<br>• 公開直後に HN で最多スコアを獲得<br>• コード生成とセキュリティ検査の融合が焦点<br><br>AI によるセキュリティ支援ツールの実装が公開されたことで、実務への応用可能性に注目が集まっている。詳細な検証はこれからだが、コミュニティの関心は高い。 | https://github.com/openai/codex-security |
+| 2 | フロンティアの歩調 — (原文: Pacing the frontier) | • AI 開発の「進歩の速度」をテーマにした論考<br>• フロンティアモデルの進化ペースを考察<br>• 業界の期待と現実のギャップに触れる<br><br>加速する AI 開発をどう捉えるかという議論の一環。技術者コミュニティで賛否を含む議論を呼んでいる。 | https://www.pacingthefrontier.com/ |
+| 3 | DEF CON が Meta 風スマートグラスを禁止 — (原文: DEF CON bans Meta-style 'pervert glasses') | • セキュリティ会議 DEF CON がカメラ内蔵グラスを制限<br>• 盗撮・プライバシー侵害への懸念が背景<br>• ウェアラブルの社会受容をめぐる論点<br><br>常時録画可能なデバイスの普及に伴うプライバシー問題を象徴する動き。技術と倫理の緊張関係を改めて示している。 | https://www.theregister.com/security/2026/07/28/def-con-bans-meta-style-pervert-glasses/5279763 |
+| 4 | フロンティアラボへのエージェント侵入の解剖 — (原文: Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the Incident) | • AI ラボを狙った侵入インシデントの技術的時系列を解説<br>• エージェントを介した攻撃経路を分析<br>• Hugging Face のブログで公開<br><br>AI エージェントが攻撃対象・攻撃手段の双方になり得る現実を示す事例。防御側の設計に示唆を与える内容として関心を集める。 | https://huggingface.co/blog/agent-intrusion-technical-timeline |
+| 5 | 再帰はあなたに嘘をついている — (原文: Recursion is lying to you) | • 再帰的アルゴリズムに潜む誤解を論じる<br>• 直感と実際の計算量のズレを指摘<br>• 実装上の落とし穴を具体例で示す<br><br>プログラミング教育で定番の再帰を批判的に捉え直す記事。コメント欄でも活発な議論が交わされている。 | https://blog.gaborkoos.com/posts/2026-05-09-Your-Recursion-Is-Lying-to-You/ |
+| 6 | AI が見つけたバグは、期待ほど悪用しやすくない — (原文: AI-found bugs aren't proving any easier to exploit despite the hype) | • AI による脆弱性発見が急増する一方で悪用は容易でない<br>• 発見と実際のエクスプロイト化には依然ギャップ<br>• 過度な期待への冷静な視点を提示<br><br>AI がセキュリティ攻防を一変させるという言説に対し、現実は複雑だと指摘。防御・攻撃双方の実態を踏まえた議論を促す。 | https://www.theregister.com/security/2026/07/28/ai-found-bugs-arent-proving-any-easier-to-exploit-despite-the-hype/5279637 |
 
 ## Anthropic
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Claude Opus 5 を発表 — (原文: Introducing Claude Opus 5) | • Anthropic の新しいフラッグシップモデル Claude Opus 5 を公開<br>• Fable 5 に迫る知能を Opus 4.8 から価格据え置きで提供<br>• Max プランの新しい既定モデルに設定<br><br>高い知能を維持しつつ価格を抑えた点が最大の訴求。上位モデル Fable 5 との性能差を縮めながらコスト効率を高めており、既存プランの利用者にとって実質的なアップグレードとなる。 | https://www.anthropic.com/news/claude-opus-5 |
-| 2 | Claude Sonnet 5 を発表 — (原文: Introducing Claude Sonnet 5) | • Claude 5 世代のバランス型モデル Sonnet 5 を公開<br>• 標準的な用途向けに性能とコストを両立<br>• 製品カテゴリとしてラインアップに追加<br><br>Opus 5 と並ぶ Claude 5 世代の一角で、日常的なタスクを効率よくこなす中核モデルという位置づけ。用途に応じてモデルを使い分ける選択肢を広げる。 | https://www.anthropic.com/news/claude-sonnet-5 |
-| 3 | Fable 5 の再デプロイ — (原文: Redeploying Fable 5) | • 最上位モデル Fable 5 の再デプロイに関するアナウンス<br>• 運用・提供体制に関する告知<br>• Claude 5 世代のモデル群の一つとして位置づけ<br><br>Fable 5 の提供に関する運用面の更新を伝える内容。Claude 5 世代のモデルラインを整える動きの一部として受け止められている。 | https://www.anthropic.com/news/redeploying-fable-5 |
-| 4 | Cognizant と Anthropic が提携を拡大しエンタープライズに Claude を提供 — (原文: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients) | • Cognizant との提携を拡大し企業顧客へ Claude を展開<br>• エンタープライズ領域での AI 活用を後押し<br>• 導入支援やユースケース拡大を想定<br><br>大手 IT サービス企業との連携により、Claude の企業導入を加速させる狙い。業務適用の裾野を広げるパートナーシップ戦略の一環と位置づけられる。 | https://www.anthropic.com/news/cognizant-anthropic |
-| 5 | AI for Science 希少疾患研究助成の募集 — (原文: Apply for Anthropic's AI for Science rare disease research grants) | • 希少疾患研究に向けた研究助成プログラムを募集<br>• AI for Science 取り組みの一環<br>• 科学研究への AI 活用を支援<br><br>解明が難しい希少疾患の研究に AI を役立てる狙いで、研究者からの応募を受け付ける。社会的インパクトの大きい分野への技術還元を進める動き。 | https://www.anthropic.com/news/rare-disease-research-grants |
+| 1 | Claude Opus 5 を発表 — (原文: Introducing Claude Opus 5) | • Anthropic の最上位モデル Opus 5 を公開<br>• 高度な推論・エージェント用途を想定<br>• Claude 5 世代のフラッグシップ<br><br>フロンティアモデル競争が続くなか、最も高性能なモデルの投入で存在感を示す。開発者向けの応用範囲拡大が期待される。 | https://www.anthropic.com/news/claude-opus-5 |
+| 2 | オープンウェイトモデルに関する立場 — (原文: Our position on open-weights models) | • Anthropic がオープンウェイト公開への見解を表明<br>• 安全性と公開のバランスを論じる<br>• 業界動向を踏まえた方針提示<br><br>モデル公開のあり方が問われるなか、自社スタンスを明確化。オープン化を進める競合との違いを打ち出している。 | https://www.anthropic.com/news/position-open-weights-models |
+| 3 | Cognizant との提携を拡大しエンタープライズに Claude を提供 — (原文: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients) | • 大手 IT サービス企業 Cognizant との協業を強化<br>• 企業クライアントへの Claude 展開を加速<br>• エンタープライズ市場を重視<br><br>業務システムへの生成 AI 組み込みが進むなか、パートナー経由での普及を図る動き。導入支援の裾野拡大が狙い。 | https://www.anthropic.com/news/cognizant-anthropic |
+| 4 | 教師向けの Claude を発表 — (原文: Introducing Claude for Teachers) | • 教育現場の教師を対象にした Claude を提供<br>• 授業準備や教材作成の支援を想定<br>• 教育分野への展開を強化<br><br>AI の教育活用が広がるなか、教える側を支える用途に焦点。安全性と実用性を両立させた提供が期待される。 | https://www.anthropic.com/news/claude-for-teachers |
+| 5 | 難しい問いを招き入れる — (原文: Inviting hard questions) | • AI の社会的影響をめぐる困難な問いへの姿勢を表明<br>• 批判や懸念を歓迎する立場を示す<br>• 透明性ある議論を重視<br><br>AI 企業の説明責任が問われるなか、あえて厳しい問いに向き合う姿勢を打ち出す。信頼構築を意識した発信となっている。 | https://www.anthropic.com/news/hard-questions |
 
 ## OpenAI
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | AI は職場でできることをどう広げているか — (原文: How AI is expanding what people do at work) | • AI が働き方や業務範囲をどう拡張するかを論じる<br>• 実務での活用パターンや効果を提示<br>• 企業・個人双方の生産性向上を展望<br><br>AI を「人の仕事を置き換える」ではなく「できることを広げる」視点で捉える内容。導入現場での実例を交えつつ、労働の質的変化を前向きに描いている。 | https://openai.com/index/how-ai-is-expanding-what-people-do-at-work |
-| 2 | ChatGPT に Health を提供開始 — (原文: Launching Health in ChatGPT) | • ChatGPT に健康関連の機能「Health」を追加<br>• 健康情報の取得や相談を支援する用途を想定<br>• 製品カテゴリの新機能として展開<br><br>日常の健康に関する疑問に答える機能を組み込む試み。医療情報の正確性やプライバシーへの配慮が問われる領域であり、提供範囲や免責の扱いが今後の注目点となる。 | https://openai.com/index/health-in-chatgpt |
-| 3 | OpenAI Presence を発表 — (原文: Introducing OpenAI Presence) | • 新プロダクト「OpenAI Presence」を公開<br>• 存在感やリアルタイム性を軸にした機能とみられる<br>• 製品ラインアップの拡充<br><br>OpenAI が新たに投入する製品で、対話体験の在り方を広げる位置づけ。具体的な活用像は今後の展開で明らかになっていくとみられる。 | https://openai.com/index/introducing-openai-presence |
-| 4 | NTT データが Codex でインシデント分析を30分に短縮 — (原文: NTT DATA Group cuts incident analysis to 30 minutes with Codex) | • NTT データが Codex を活用しインシデント分析を効率化<br>• 分析時間を30分にまで短縮した事例<br>• 運用現場での生成 AI 適用の実例<br><br>障害対応の初動分析に AI を組み込み、大幅な時間短縮を実現したケーススタディ。国内大手の実運用事例として、開発・運用への AI 導入の具体的効果を示している。 | https://openai.com/index/ntt-data |
-| 5 | OpenAI と Hugging Face、モデル評価中のセキュリティ事案に共同対応 — (原文: OpenAI and Hugging Face partner to address security incident during model evaluation) | • モデル評価の過程で発生したセキュリティ事案に共同で対処<br>• 両社が連携し問題の解消にあたる<br>• 評価プロセスの安全性が論点に<br><br>モデル評価という開発の要所で起きたインシデントへの対応事例。エコシステム全体でのセキュリティ確保に向けた協調の姿勢を示している。 | https://openai.com/index/hugging-face-model-evaluation-security-incident |
+| 1 | エージェント AI 時代の科学計算 — (原文: Scientific computing in the age of agentic AI) | • AI エージェントが科学計算をどう変えるかを論じる<br>• 研究プロセスの自動化・加速に注目<br>• 出版物カテゴリでの発信<br><br>自律的に動く AI が科学研究の手法を変えつつある現状を整理。計算科学と AI の接点を探る内容として関心を集める。 | https://openai.com/index/scientific-computing-agentic-ai |
+| 2 | AI が仕事の幅をどう広げているか — (原文: How AI is expanding what people do at work) | • AI が職場での業務範囲を拡張する実態を紹介<br>• 人の役割の変化を事例で示す<br>• 生産性向上の観点を提示<br><br>AI 導入が単なる自動化にとどまらず、人ができる仕事の幅を広げるという視点。働き方への影響を前向きに描いている。 | https://openai.com/index/how-ai-is-expanding-what-people-do-at-work |
+| 3 | ChatGPT に健康機能を導入 — (原文: Launching Health in ChatGPT) | • ChatGPT に健康関連の機能を追加<br>• 健康情報へのアクセスや相談を想定<br>• プロダクトカテゴリでの発表<br><br>生活領域への AI 応用を広げる動き。医療・健康分野は正確性と安全性が特に重視されるため、慎重な運用が求められる。 | https://openai.com/index/health-in-chatgpt |
+| 4 | OpenAI Presence を発表 — (原文: Introducing OpenAI Presence) | • 新プロダクト「OpenAI Presence」を公開<br>• AI の存在感・対話体験に関わる機能<br>• プロダクトラインの拡充<br><br>対話型 AI の体験を深める新機軸として登場。具体的な用途や差別化点はこれから明らかになっていく。 | https://openai.com/index/introducing-openai-presence |
+| 5 | NTT データが Codex でインシデント分析を30分に短縮 — (原文: NTT DATA Group cuts incident analysis to 30 minutes with Codex) | • NTT データが Codex を活用した事例<br>• インシデント分析時間を大幅短縮<br>• 実業務での成果を提示<br><br>AI コーディング支援が運用・保守の現場でも効果を上げる実例。導入による具体的な時間削減が示された点が注目される。 | https://openai.com/index/ntt-data |
 
 ## InfoQ Japan
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Kubescape 4.0、Kubernetes に実行時セキュリティと AI エージェントスキャンを追加 | • Kubescape 4.0 が実行時(ランタイム)セキュリティ機能を搭載<br>• AI エージェントのスキャン機能を新たに追加<br>• Kubernetes 環境のセキュリティ運用を強化<br><br>静的な設定検査に留まらず、実行時の挙動や AI エージェントを対象に含めた点が特徴。クラスタ運用のセキュリティ可視化と対策の幅を広げる更新となっている。 | https://www.infoq.com/jp/news/2026/07/kubescape-40/ |
-| 2 | Amazon CloudWatch、OpenTelemetry メトリクス対応をプレビュー公開 | • CloudWatch が OpenTelemetry メトリクスの取り込みに対応<br>• プレビューとして提供開始<br>• 標準化された可観測性の取り込み経路を追加<br><br>OpenTelemetry の普及を背景に、標準フォーマットのメトリクスを CloudWatch で扱えるようにする動き。ベンダー横断の可観測性データ統合を進めやすくなる。 | https://www.infoq.com/jp/news/2026/07/cloudwatch-opentelemetry-metrics/ |
-| 3 | AI がソフトウェアライフサイクルの上流へ：コードレビューから PRD ガバナンスへ | • AI 活用の焦点がコードレビューから上流の要求定義へ移行<br>• PRD(製品要求仕様)のガバナンスに AI を適用する動き<br>• 開発ライフサイクル全体での AI 活用を展望<br><br>下流の実装・レビューだけでなく、要求段階から AI を関与させる潮流を論じる。仕様の品質と一貫性を早期に担保する取り組みとして注目される。 | https://www.infoq.com/jp/news/2026/07/ai-prd-code-review-governance/ |
-| 4 | Anthropic リード：エージェント型ループの人間関与には Markdown より HTML が有効 | • エージェントのループに人間を関与させる際の表現形式を検討<br>• Markdown よりも HTML の方が有効との知見を提示<br>• Anthropic のリードによる実践的な見解<br><br>ヒューマン・イン・ザ・ループの設計において、構造化された HTML が人間の把握や介入を助けるという指摘。エージェント UI の設計に実用的な示唆を与える。 | https://www.infoq.com/jp/news/2026/07/anthropic-html-markdown-agent/ |
-| 5 | Google の Aletheia が完全自律型 AI エージェンティック数学研究の最先端へ | • Google の Aletheia が自律的な数学研究に取り組む<br>• 完全自律型のエージェンティックなアプローチ<br>• 数学分野での AI 研究の最前線を示す<br><br>数学の研究プロセスを AI エージェントが自律的に進める試み。人手を介さない研究の可能性を探る取り組みとして、AI の科学応用の限界を押し広げている。 | https://www.infoq.com/jp/news/2026/07/deepmind-aletheia-agentic-math/ |
+| 1 | VS Code 1.123、拡張機能の更新を2時間遅らせる機能を追加 | • サプライチェーン攻撃の抑制が目的<br>• 拡張機能の自動更新を意図的に遅延<br>• 悪意ある更新の即時拡散を防ぐ<br><br>拡張機能を狙った攻撃が現実の脅威となるなか、更新に猶予を設けることで被害の連鎖を断つ設計。開発ツールのセキュリティ強化の一例。 | https://www.infoq.com/jp/news/2026/07/vscode-extension-update-delay/ |
+| 2 | AI がソフトウェアエンジニアリング性能を増幅、2025年 DORA レポート | • 最新 DORA レポートの知見を紹介<br>• AI 活用が開発パフォーマンスを底上げ<br>• 一方で運用面の課題も指摘<br><br>AI がチームの生産性に与える影響をデータで裏付ける内容。導入効果と留意点の双方を押さえた分析として参考になる。 | https://www.infoq.com/jp/news/2026/07/ai-dora-report/ |
+| 3 | Kubescape 4.0、実行時セキュリティと AI エージェントスキャン機能を追加 | • Kubernetes 向けセキュリティツールの新版<br>• ランタイムセキュリティに対応<br>• AI エージェントのスキャン機能を搭載<br><br>コンテナ環境の脅威検知を実行時まで広げた更新。AI エージェント利用の広がりに合わせた新たなスキャン観点も加わっている。 | https://www.infoq.com/jp/news/2026/07/kubescape-40/ |
+| 4 | Amazon CloudWatch、OpenTelemetry メトリクス対応をプレビュー公開 | • CloudWatch が OTel メトリクスを取り込み可能に<br>• 標準規格への対応を強化<br>• 現在はプレビュー提供<br><br>可観測性の標準として広がる OpenTelemetry への対応で、監視基盤の相互運用性が向上。マルチベンダー環境での活用が期待される。 | https://www.infoq.com/jp/news/2026/07/cloudwatch-opentelemetry-metrics/ |
+| 5 | AI がソフトウェアライフサイクルの上流へ：コードレビューから PRD ガバナンスへ | • AI 活用の焦点が上流工程へ移行<br>• コードレビューから要求定義（PRD）の統制へ<br>• 品質を前段階で担保する発想<br><br>下流のレビューだけでなく、仕様策定の段階から AI で品質を管理する潮流を整理。開発プロセス全体の再設計を促す視点。 | https://www.infoq.com/jp/news/2026/07/ai-prd-code-review-governance/ |
 
 ## はてなブックマーク (tech)
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 出張者が標的に：ホテル Wi-Fi 経由で Microsoft 365 認証情報を窃取、MFA もすり抜け | • 出張者を狙いホテルの Wi-Fi を経由した認証情報窃取攻撃<br>• Microsoft 365 の認証情報が標的<br>• MFA(多要素認証)もすり抜ける手口<br><br>公共 Wi-Fi 環境の危うさと、MFA だけでは防ぎきれない攻撃の実在を示す事例。出張・リモートワーク時のネットワーク利用やゼロトラスト的な対策の重要性が改めて問われている。 | https://www.zaikei.co.jp/article/20260726/862851.html |
-| 2 | 1日500コミットは、もう読めない ── だからコードレビューをやめた | • 1日500コミット規模ではレビューが追いつかない現実を提起<br>• 従来型のコードレビューを見直す判断<br>• AI 駆動開発下での品質担保の在り方を問う<br><br>AI により生成量が爆発的に増えた開発現場での、レビュー運用の限界を率直に論じた記事。人手レビューを前提としない品質保証の方法を模索する議論を呼んでいる。 | https://zenn.dev/singularity/articles/stopped-reviewing-my-code |
-| 3 | MIXI、新卒エンジニア向け研修資料＆動画を無料公開 | • MIXI が2026年度の新卒技術研修資料と動画を無償公開<br>• 「実践的な AI 活用術」を含む12科目を提供<br>• AI と共創する次世代エンジニア育成を掲げる<br><br>実務に即した研修コンテンツを広く公開する取り組み。AI 活用を正面から扱う構成で、独学者や他社の教育担当にとっても参考になる資料として話題になっている。 | https://www.itmedia.co.jp/aiplus/article/2607/27/2000000223/ |
-| 4 | 検索結果に「詐欺ではありません」と表示させる詐欺手口、警視庁が注意喚起 | • 検索結果や AI 要約を悪用して信頼を装う詐欺手口<br>• 「詐欺ではありません」と表示させ利用者を欺く<br>• 警視庁が注意を呼びかけ<br><br>検索エンジンや AI 要約が生成する情報を逆手に取る新手の手口。AI が生成する要約の信頼性そのものが攻撃対象になり得ることを示し、利用者側のリテラシーが問われている。 | https://www.itmedia.co.jp/news/articles/2607/27/news076.html |
-| 5 | 周囲から頼られ「優秀だ」と評されるソフトウェアエンジニアの6つのタイプ | • 優秀と評価されるエンジニアを6タイプに分類<br>• 技術力だけでない多面的な貢献の形を提示<br>• 自身の強みや育成の観点で参考になる整理<br><br>「優秀さ」を単一の尺度でなく複数の型として捉える視点を提供する記事。チーム内での役割理解やキャリアの方向づけに役立つとして、多くの共感を集めている。 | https://mtx2s.hatenablog.com/entry/2026/07/27/194549 |
-| 6 | NVIDIA・Microsoft・OpenAI らがオープンモデル規制反対を表明 | • 主要 IT・AI 企業がオープンモデルへの規制に反対を表明<br>• Anthropic 従業員は「CUDA のオープンソース化が楽しみ」と皮肉<br>• オープンモデルを巡る業界の立場の違いが表面化<br><br>オープンなモデル提供の是非を巡り、各社の思惑が交錯する構図を伝える。規制論議のなかで企業間の緊張やスタンスの差が可視化された一幕として注目された。 | https://www.itmedia.co.jp/aiplus/article/2607/27/2000000222/ |
-| 7 | PGSimCity — PostgreSQL の仕組みを3Dで学ぶ | • PostgreSQL の内部動作を3Dビジュアルで表現<br>• ゲーム感覚でデータベースの仕組みを理解<br>• 学習・教育向けのインタラクティブな可視化<br><br>抽象的になりがちな DB の内部挙動を、街づくりに見立てた3D表現で直感的に見せる試み。仕組みの学習ハードルを下げる教材として話題を呼んでいる。 | https://nikolays.github.io/PGSimCity/ |
+| 1 | PostgreSQL の内部動作をシムシティ風3Dで見せる「PGSimCity」 | • DB の内部処理を 3D で可視化するツール<br>• シムシティのような表現で直感的に理解<br>• PostgreSQL の学習・教育に有用<br><br>ブラックボックスになりがちな DB 内部の動きを楽しく学べる試み。仕組みの理解を助ける教材として話題を集めている。 | https://gigazine.net/news/20260728-pgsimcity-postgresql/ |
+| 2 | 「Xが情報収集に役立たない」熊本地震で不満続出 | • 災害時の X（旧 Twitter）の有用性に疑問の声<br>• 情報が届きにくくなったとの不満が拡散<br>• 「Twitter を返して」との声も<br><br>災害時の情報インフラとして機能してきた SNS の変質を浮き彫りにする出来事。プラットフォーム変更が社会に与える影響を示す。 | https://www.itmedia.co.jp/news/article/2607/28/2000000249/ |
+| 3 | ヤモリの足裏を科学した米軍装備、粘着剤なしで垂直壁を走る | • ヤモリの吸着原理を応用した軍用技術<br>• 粘着剤を使わず垂直壁を移動<br>• 生物模倣（バイオミメティクス）の成果<br><br>生物の構造から着想を得た工学応用の好例。基礎研究が実用技術へつながる過程を示す興味深い事例。 | https://forbesjapan.com/articles/detail/101739 |
+| 4 | Windows 11 でローカルアカウントを作成する方法【2026年7月時点】 | • 最新の Windows 11 でローカルアカウントを作る手順<br>• オンライン必須化を回避する方法<br>• 2026年7月時点の情報として整理<br><br>Microsoft アカウント必須化が進むなか、ローカル運用を望むユーザー向けの実用情報。仕様変更に追随した手順の更新が続いている。 | https://w1.zawa-lab.net/p/20260728_oobe_bypass/ |
+| 5 | DGX Spark 級の AI 性能を激安で？独自プロセッサで100B LLM を走らせるミニPC | • 中国発のミニ PC が大規模 LLM をローカル実行<br>• 独自プロセッサで 100B 級モデルに対応<br>• 低価格を訴求<br><br>ローカル LLM 実行のハードルを下げる可能性を示す製品。実性能の検証は必要だが、コスト面のインパクトが注目されている。 | https://pc.watch.impress.co.jp/docs/news/2128607.html |
+| 6 | AIずんだもんがプロンプトインジェクションで壊れる動画が話題 | • 視聴者の入力で AI が誤動作する様子を実演<br>• プロンプトインジェクションの脅威を可視化<br>• 説明より直感的に伝わると評判<br><br>AI のセキュリティリスクを娯楽的に見せることで理解を促す試み。実害と対策の重要性を分かりやすく伝えている。 | https://togetter.com/li/2725778 |
+| 7 | Microsoft がセキュリティ特化 AI「MAI-Cyber-1-Flash」を発表 | • セキュリティに特化した AI モデルを公開<br>• GPT-5.4 と組み合わせて高い能力を発揮<br>• 低コストでの提供を訴求<br><br>専用モデルと汎用モデルの組み合わせでセキュリティ性能を高める構成。コスト効率を打ち出した競争が続いている。 | https://gigazine.net/news/20260728-microsoft-mai-cyber-1-flash/ |
 
 ## Zenn
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | ターミナルを自作したら1日のコミット数が500を超えて生産性がバグった話 | • 自作ターミナル環境で開発フローを大きく効率化<br>• 1日のコミット数が500を超える生産性を実現<br>• ツール自作が開発体験に与える影響を体験談で紹介<br><br>開発環境を自分の手に馴染むよう作り込むことの効果を、極端な数値とともに語った記事。AI 支援と組み合わせた高速開発のスタイルが注目を集めている。 | https://zenn.dev/singularity/articles/diy-terminal-500-commits |
-| 2 | Rust に書き直さなくても C 言語をメモリ安全にできる Fil-C を試した | • C 言語のコードを書き換えずにメモリ安全化する Fil-C を検証<br>• Rust への全面移行なしで安全性を高める選択肢<br>• 実際に試した際の使用感や挙動を報告<br><br>既存 C 資産を活かしつつメモリ安全性を得る手段としての Fil-C を実地で評価した内容。書き直しコストの高さがネックになる現場に、現実的な代替案を提示している。 | https://zenn.dev/mattn/articles/cace8c5a00b9cc |
-| 3 | エンジニアの成果、結局どう測ればいいのか | • エンジニアの成果評価の難しさを正面から論じる<br>• 定量指標の限界と多面的な評価の必要性<br>• 現場と評価者双方の視点を整理<br><br>コミット数や行数などの単純な指標では捉えきれない貢献をどう測るかを掘り下げた記事。AI で生産量が変わる時代の評価の在り方として、多くの議論を呼んでいる。 | https://zenn.dev/awesome_kou/articles/engineer-performance-metrics |
-| 4 | Opus 5 が思考が浅いように感じる問題への対策 | • Opus 5 で思考が浅く感じられるケースへの対処法<br>• 従来のルールやプロンプトの見直しを提案<br>• モデル世代交代に伴う運用調整の知見<br><br>新モデルへの移行時に起きがちな挙動の違いに、実践的な対策を示した記事。プロンプトや設定を新モデルに合わせて調整する重要性を伝えている。 | https://zenn.dev/u1/articles/claude5-rules-collapse-and-fix |
-| 5 | Opus 5 では今までのプロンプトが逆効果に。「検証して」を消して「簡潔に」と書くべし | • Opus 5 では従来型プロンプトが逆効果になる場合がある<br>• 「検証して」を外し「簡潔に」と指示するのが有効<br>• 公式プロンプトガイドを読み解いて解説<br><br>モデルの特性変化に合わせてプロンプトの書き方を見直す必要性を、具体例で示した記事。公式ガイドに基づく実践的な指針として参考にされている。 | https://zenn.dev/little_hand_s/articles/72646a09f49d2a |
-| 6 | フロントエンドに広がる OpenTelemetry：Browser SDK の現在地 | • OpenTelemetry のフロントエンド適用が広がりつつある状況<br>• Browser SDK の現状と使いどころを整理<br>• フロントエンドの可観測性向上を展望<br><br>これまでバックエンド中心だった可観測性の取り組みが、ブラウザ側にも及んできた流れを解説。フロントエンドのパフォーマンスや挙動を計測する手段として現在地をまとめている。 | https://zenn.dev/cybozu_frontend/articles/opentelemetry-browser-frontend |
-| 7 | Go 1.27 から uuid 実装がサポートされる | • Go 1.27 で標準の uuid 実装がサポートされる見込み<br>• 導入に至る議論とその着地を整理<br>• 標準ライブラリ拡充の背景を解説<br><br>これまで外部ライブラリに頼っていた uuid 生成が標準で扱えるようになる動き。仕様決定に至る議論の経緯を追うことで、言語設計の判断過程も見えてくる記事。 | https://zenn.dev/layerx/articles/f7124d4e761c1f |
+| 1 | ターミナルを自作したら1日のコミット数が500を超えた話 | • 自作ターミナルで開発フローを最適化<br>• 1日500コミット超という生産性を実現<br>• ツール自作が効率化につながった体験談<br><br>既製ツールに頼らず環境を自ら作り込むことの効果を示す記事。極端な数値の是非も含め、開発スタイルの議論を呼んでいる。 | https://zenn.dev/singularity/articles/diy-terminal-500-commits |
+| 2 | 1日500コミットはもう読めない ── だからコードレビューをやめた | • 大量コミット時代のレビュー限界を論じる<br>• 従来型のコードレビューを見直す提案<br>• AI 前提の開発フローを模索<br><br>AI で生成量が爆発するなか、レビュー手法そのものの再設計を迫る問題提起。品質担保の新たなあり方を考えさせる。 | https://zenn.dev/singularity/articles/stopped-reviewing-my-code |
+| 3 | 設計を、技術の話から始めない | • 設計の起点を技術選定に置かない考え方<br>• 課題や目的から設計を組み立てる<br>• 手段先行の落とし穴を指摘<br><br>技術ありきになりがちな設計を戒め、本質から考える重要性を説く。実務者の共感を集める設計論として読まれている。 | https://zenn.dev/team_lab/articles/31ec1e630ab28b |
+| 4 | Opus 5 が思考が浅いように感じる問題への対策 | • Opus 5 の挙動変化への対処法を共有<br>• 従来のプロンプトが逆効果になる場合を指摘<br>• 新モデル向けの書き方を提案<br><br>モデル更新で最適なプロンプトが変わる実例。移行期の実践的なノウハウとして参考になる内容。 | https://zenn.dev/u1/articles/claude5-rules-collapse-and-fix |
+| 5 | 「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた | • 定番書籍の読書を通じた学びを整理<br>• 設計判断のパターンを増やす視点<br>• 実務への適用を意識した感想<br><br>体系的な設計知識が実務の判断力を高めることを示す記事。学習と実践を結ぶ内容として支持されている。 | https://zenn.dev/raamenwakamatu/articles/software-architecture-fundamentals-review |
+| 6 | Go 1.27 から uuid 実装がサポートされる | • 標準ライブラリに uuid が入る動きを紹介<br>• 議論の経緯と着地点を整理<br>• 個人的に気になった論点をまとめ<br><br>言語標準に機能が取り込まれる過程を追った記事。標準化の判断がどうなされるかを知る良い教材となっている。 | https://zenn.dev/layerx/articles/f7124d4e761c1f |
 
 ## Qiita
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 開発効率が上がった CLI ツール・コマンド10選 | • 日々の開発効率を高める CLI ツールとコマンドを厳選<br>• 実際に使って効果を感じたものを紹介<br>• 導入しやすい実用的なラインアップ<br><br>ターミナル中心の開発を快適にする道具立てを具体的に紹介した記事。定番から比較的新しいものまで幅広く、自分の環境改善の手掛かりとして支持を集めている。 | https://qiita.com/NekoByte/items/efa81aaa8a61d3478568 |
-| 2 | AI 時代のポートフォリオ、転職で本当に見られているのは「言語化力」 | • AI 時代の転職でポートフォリオに求められる要素を考察<br>• 成果物そのものより「言語化力」が重視される<br>• 自身の経験や意図を伝える力の重要性<br><br>生成 AI で制作物を量産できる時代に、何が差別化要因になるかを論じた記事。作ったものを説明し価値を伝える力こそが評価されるという指摘が共感を呼んでいる。 | https://qiita.com/sumomoo/items/d8c22cb512d9ba036154 |
-| 3 | AI エージェントがあれば技術書なんてすぐ書けると思ったが無理だった | • AI エージェントで技術書執筆を試みた体験談<br>• 期待に反して簡単には書けなかった現実<br>• AI 活用の限界と人間の役割を考察<br><br>AI に任せれば執筆が容易になるという期待と、実際に直面した難しさのギャップを率直に綴った記事。生成 AI の得手不得手を実体験から示す内容として注目された。 | https://qiita.com/watany/items/11358e8e8966d5e48a09 |
-| 4 | ひとことで、言え。〜スライドを AI で作り直したらわかりにくくなった話〜 | • スライドを AI で作り直した結果かえって分かりにくくなった<br>• 情報量と伝わりやすさのトレードオフを実感<br>• 「ひとことで言う」ことの大切さを再認識<br><br>AI による資料作成が必ずしも改善につながらない事例を通じ、伝達の本質を問う記事。要点を絞る人間の編集判断の価値を、失敗談から浮かび上がらせている。 | https://qiita.com/WdknWdkn/items/ba228da40b5d2fd1b612 |
-| 5 | 自治体におけるインターネット分離10年の総括 —— 技術類型・運用の現実・ゼロトラストへの道 | • 自治体のインターネット分離を10年の視点で総括<br>• 三層分離など技術類型と運用実態を整理<br>• ゼロトラストへの移行の道筋を展望<br><br>長年続いた自治体セキュリティの分離モデルを振り返り、その成果と課題を検証した記事。次世代のゼロトラスト型への移行を見据えた論考として、公共分野の関係者に参考になる内容。 | https://qiita.com/k2_naka/items/0eceb428cb3f45bb7cfb |
-| 6 | ハードコーディングは本当に悪なのか | • 一律に否定されがちなハードコーディングを再考<br>• 状況によっては合理的な選択となる場合を提示<br>• 設計判断としてのトレードオフを整理<br><br>「ハードコーディングは悪」という通念に一石を投じる記事。過度な抽象化のコストと比較しつつ、文脈に応じた判断の必要性を論じ、設計上の議論を喚起している。 | https://qiita.com/musenmai/items/b525b64882548d4aec0d |
-| 7 | 非エンジニアが気楽に始める仕様駆動開発 | • 非エンジニアでも取り組める仕様駆動開発の入門<br>• Claude Code を活用した個人開発の進め方<br>• 仕様を起点にした開発フローを平易に解説<br><br>専門知識がなくても仕様から開発を始められることを、実践的に示した記事。AI エージェントを相棒に、仕様を軸に据える開発スタイルの裾野を広げる内容となっている。 | https://qiita.com/ynmc0214/items/9cf96baae4b01bbeb6d6 |
+| 1 | ひとことで、言え。～スライドをAIで作り直したらわかりにくくなった話～ | • AI でスライドを作り直したら伝わりにくくなった経験<br>• 情報量より要点の明確化が重要<br>• 「ひとことで言う」ことの価値を再認識<br><br>AI が量を生めても、伝わる表現は別問題だという教訓。コミュニケーションの本質を突く内容として反響を得ている。 | https://qiita.com/WdknWdkn/items/ba228da40b5d2fd1b612 |
+| 2 | AIエージェントがあれば技術書なんてすぐ書けるでしょ、と思ったが無理だった | • AI で技術書執筆を試みた実体験<br>• 期待に反して簡単ではなかった<br>• 人の編集・構成力の重要性を実感<br><br>AI 活用の限界と人の役割を率直に語る記事。過度な期待への現実的な視点を提供している。 | https://qiita.com/watany/items/11358e8e8966d5e48a09 |
+| 3 | 開発効率が上がったCLIツール・コマンド10選 | • 実務で役立つ CLI ツールを厳選紹介<br>• 日々の作業を効率化するコマンド群<br>• 具体的な活用シーンを提示<br><br>手元の環境を改善する実用情報として人気。定番から新顔まで、開発者の生産性向上に直結する内容。 | https://qiita.com/NekoByte/items/efa81aaa8a61d3478568 |
+| 4 | ハードコーディングは本当に悪なのか | • ハードコーディングの是非を問い直す<br>• 常に悪とは限らないという視点<br>• 状況に応じた判断の重要性を説く<br><br>定説を鵜呑みにせず文脈で考える姿勢を促す記事。設計上のトレードオフを冷静に論じている。 | https://qiita.com/musenmai/items/b525b64882548d4aec0d |
+| 5 | 「経験がないから」を言い訳にしなくていい時代になった | • AI 活用で経験の壁が下がったと論じる<br>• 未経験でも挑戦しやすい環境を指摘<br>• 学習・実践の姿勢を後押し<br><br>AI が学びと実践のハードルを下げる現状を前向きに捉える記事。初学者・未経験者への励ましとして読まれている。 | https://qiita.com/sumomoo/items/122f9a34360e256bf042 |
+| 6 | 自治体におけるインターネット分離10年の総括 | • 自治体のネットワーク分離の歴史を振り返る<br>• 三層分離の技術類型と運用実態を整理<br>• ゼロトラストへの移行を展望<br><br>長年続いた分離モデルの成果と課題を総括し、次の方向性を示す。公共システムのセキュリティを考える上で示唆に富む。 | https://qiita.com/k2_naka/items/0eceb428cb3f45bb7cfb |
