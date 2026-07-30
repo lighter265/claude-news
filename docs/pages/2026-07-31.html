@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-07-31</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-07-31</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-07.html">2026年7月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-07-31</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>Anthropic が最上位モデル「Claude Opus 5」を発表。OpenAI も「GPT-5.6」で価格性能フロンティアを更新し、フラッグシップ競争が加速。</li><li>Rails に深刻度「緊急」の脆弱性「KindaRails2Shell」(CVE-2026-66066) が判明。RCE につながる恐れがあり早急な対応が推奨。</li><li>「Claude Code と Codex の設定ファイルを同期させる」記事がはてブ・Zenn 双方で高評価。エージェントツールの併用ワークフローに関心が集中。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ブラウザ・デスクトップ・モバイルで動く軽量GISプラットフォーム — (原文: opengeos/GeoLibre)</td><td class="link-col"><a href="https://github.com/opengeos/GeoLibre" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• クラウドネイティブでオープンソースの地理空間データ可視化・分析基盤<br>• Web/デスクトップ/モバイル/Jupyter のどこでも動作<br>• Tauri v2 ベースでデータをローカルに保持しプライバシーを確保<br><br>GISツールはこれまで専用ソフトや重いWebアプリが中心だったが、GeoLibre はマルチプラットフォーム対応と軽量性を両立する。データを手元に置いたまま扱える設計で、機密性の高い地理データを扱う現場での利用が見込まれる。</td></tr>
+<tr><td class="num">2</td><td class="title">オープンソースモデルで作るローカル音声エージェント — (原文: huggingface/speech-to-speech)</td><td class="link-col"><a href="https://github.com/huggingface/speech-to-speech" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• VAD→STT→LLM→TTS の低遅延・完全モジュラーな音声パイプライン<br>• OpenAI Realtime 互換の WebSocket API で公開<br>• 各コンポーネントが差し替え可能でローカル完結も可能<br><br>音声エージェント構築はクラウドAPI依存になりがちだが、本プロジェクトは全要素をオープンソースで置換できる。LLM 部分は vLLM や llama.cpp を指定でき、自前ハードで完全ローカルなスタックを組める柔軟性が特徴。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Cowork のオープンソース代替 — (原文: different-ai/openwork)</td><td class="link-col"><a href="https://github.com/different-ai/openwork" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AIワークフロー共有に特化した無料・OSSのデスクトップアプリ<br>• macOS/Windows/Linux 対応、opencode がベース<br>• 1つの MCP で Codex/Claude Code/Cursor 間の資産を再利用<br><br>Claude Cowork や Codex の代替として、スキルやMCP、接続サービスをツール横断で共有できる。一度作った成果物を同僚やチームで使い回せる点を訴求しており、エージェント環境の相互運用性を高める試み。</td></tr>
+<tr><td class="num">4</td><td class="title">実戦投入されたAIコードレビューCLIツール — (原文: alibaba/open-code-review)</td><td class="link-col"><a href="https://github.com/alibaba/open-code-review" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 決定的パイプライン＋LLMエージェントのハイブリッド構成<br>• NPE・スレッド安全性・XSS・SQLインジェクション等の組込みルールセット<br>• OpenAI/Anthropic 互換、行単位の正確なコメント<br><br>Alibaba 社内で2年以上運用されてきたAIコードレビュー基盤をOSS化したもの。ヒューリスティックなルールとLLMを組み合わせることで、誤検知を抑えつつ精緻な指摘を実現する狙い。大規模組織での実運用実績を訴求している。</td></tr>
+<tr><td class="num">5</td><td class="title">エージェント向けスキルフレームワーク — (原文: obra/superpowers)</td><td class="link-col"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• コーディングエージェント用の完全なソフトウェア開発方法論<br>• 合成可能なスキル群と初期指示で構成<br>• Claude Code/Codex/Cursor/Gemini CLI など幅広く対応<br><br>エージェントに「スキル」を与えて開発手法を標準化する試み。個別のツールに依存せず、複数のコーディングエージェントに同じ方法論を適用できる。エージェント運用のベストプラクティスをフレームワーク化する動きの一例。</td></tr>
+<tr><td class="num">6</td><td class="title">Apple Neural Engine上でのニューラルネット学習 — (原文: maderix/ANE)</td><td class="link-col"><a href="https://github.com/maderix/ANE" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 非公開APIをリバースエンジニアリングしANE上で学習を実行<br>• CoreML学習API・Metal・GPUを一切使わず純粋にANEで計算<br>• 週末の研究ハックが大きな注目を集めた<br><br>Apple の Neural Engine は通常推論専用と見なされるが、本プロジェクトはバックプロパゲーションによる学習を直接走らせる。私的APIの解析という実験的な性質だが、専用アクセラレータの新たな活用可能性を示す事例として話題を呼んでいる。</td></tr>
+<tr><td class="num">7</td><td class="title">技術書PDFをClaude Codeスキルに変換 — (原文: virgiliojr94/book-to-skill)</td><td class="link-col"><a href="https://github.com/virgiliojr94/book-to-skill" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 技術書・文書フォルダ・資料群を統一エージェントスキルに変換<br>• GitHub Copilot CLI/Amp/Claude Code で参照・活用可能<br>• Trendshift で Python リポジトリ上位にランクイン<br><br>手元の書籍や資料を、作業中に参照できるエージェント用スキルへ変換するツール。学習リソースをそのままAIの知識源に組み込める点が支持されている。ドキュメントをエージェントに取り込む「スキル化」の手軽な入口となる。</td></tr>
+<tr><td class="num">8</td><td class="title">IT資産・ライセンス管理のOSS「Snipe-IT」 — (原文: grokability/snipe-it)</td><td class="link-col"><a href="https://github.com/grokability/snipe-it" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• IT運用向けの無料OSS資産管理システム<br>• 端末の割当・購入時期・減価償却・ソフトウェアライセンスを一元管理<br>• Laravel 12 ベースで頻繁にリリース<br><br>「誰がどの端末を持っているか」を追跡する資産管理の定番OSS。Webベースで実行ファイル不要、ライブデモも公開されている。地味だが企業のIT運用で確実に需要のある領域を長年カバーし続けているプロジェクト。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Opus 5 のシステムプロンプトを入手したという投稿 — (原文: I obtained Claude Opus 5 system prompt)</td><td class="link-col"><a href="https://claude.ai/share/98073770-0ad9-431f-a1e7-e0243db18758" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Opus 5 のシステムプロンプトとされる内容の共有<br>• claude.ai の共有リンク経由で公開<br>• コメント欄で真偽や内容の是非が議論に<br><br>新モデル Opus 5 の内部指示を入手したとする投稿。システムプロンプトの流出はモデルの挙動やガードレールへの関心を反映するが、内容の真正性は検証が必要。新モデルへの注目度の高さを示す話題として上位に上がっている。</td></tr>
+<tr><td class="num">2</td><td class="title">ゲーム絡みのスワッティングで警察に撃たれた男性が数百万ドルを請求 — (原文: Man seeks millions after being shot by police in game-related swatting incident)</td><td class="link-col"><a href="https://www.tucsonsentinel.com/local/report/072926_melendez_swatting/man-seeks-millions-after-being-shot-by-pima-deputies-swatting-incident/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オンラインゲーム関連のスワッティング（虚偽通報）が発端<br>• 出動した保安官に撃たれた被害者が高額賠償を請求<br>• 虚偽通報がもたらす現実の危険を改めて浮き彫りに<br><br>スワッティングは相手宅に武装警官を出動させる悪質な嫌がらせで、死傷事故につながる例が後を絶たない。本件は撃たれた被害者が法的救済を求めるもので、オンラインの匿名性が生む実害と、対応する当局側の判断の両面が問われている。</td></tr>
+<tr><td class="num">3</td><td class="title">Microsoftの時価総額4500億ドル増、株式市場史上最大 — (原文: Microsoft's $450B Jump Is Biggest in Stock Market History)</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-07-30/microsoft-eyes-history-with-490-billion-pop-in-market-value" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 単日での時価総額増加額が過去最大級を記録<br>• 約4900億ドルの押し上げが視野に入る展開<br>• AI関連期待を背景とした大型テック株の躍進<br><br>好決算やAI事業への期待を受けてMicrosoftの株価が急騰した。単一企業の時価総額がこれほど動くのはAI投資マネーの規模を象徴する。大型クラウド・AI企業への資金集中が続いていることを示す指標として注目される。</td></tr>
+<tr><td class="num">4</td><td class="title">AIスクレイパーを「毒入りフォント」で欺くOSSプロジェクト — (原文: Open source project fools AI scrapers with poisoned font)</td><td class="link-col"><a href="https://www.theregister.com/ai-and-ml/2026/07/30/open-source-project-fools-ai-scrapers-with-poisoned-font/5281303" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• フォントを細工してAIクローラーの読み取りを妨害<br>• 人間には正常に見えるがスクレイパーには誤った文字列を返す<br>• コンテンツ無断収集への対抗手段として提案<br><br>生成AIの学習データ収集に対抗する防御的アプローチの一例。文字の見た目とエンコードをずらすことで、機械的な収集だけを妨げる仕組み。AI学習を巡るコンテンツ保護と収集技術のいたちごっこを象徴する話題。</td></tr>
+<tr><td class="num">5</td><td class="title">欧州のデジタル主権は本物、英国は今ひとつ — (原文: Digital sovereignty is real in Europe. The UK? Not so much)</td><td class="link-col"><a href="https://www.theregister.com/columnists/2026/07/27/digital-sovereignty-is-real-in-europe-the-uk-not-so-much/5276852" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• EUはデジタル主権政策を具体的に進めているとの評価<br>• 一方で英国の取り組みは遅れていると指摘<br>• クラウド・AI基盤の域内自立を巡る温度差<br><br>米国大手クラウドへの依存を減らす「デジタル主権」を巡り、EUと英国の姿勢の差を論じるコラム。データ管理や規制の主導権を域内で確保する動きが欧州で加速する中、英国の立ち位置に疑問が投げかけられている。</td></tr>
+<tr><td class="num">6</td><td class="title">新車の運転支援技術を避けるため極端な手段に出るドライバーたち — (原文: Drivers Are Taking Extreme Measures to Avoid New Car Technology)</td><td class="link-col"><a href="https://www.wsj.com/lifestyle/cars/driver-assistance-technology-dashboard-ead96bd2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ダッシュボードの運転支援機能を煩わしく感じる声<br>• 警告音や介入を無効化しようとするドライバーが増加<br>• 安全機能とユーザー体験のバランスが課題に<br><br>自動車メーカーが安全のために搭載する運転支援機能が、かえって運転者のストレス源になっている実態を報じる。技術の押し付けと利便性のギャップは、AIや自動化を組み込む製品設計全般に通じる示唆を含む。</td></tr>
+<tr><td class="num">7</td><td class="title">GitHub Models が提供終了 — (原文: GitHub Models is now retired)</td><td class="link-col"><a href="https://github.blog/changelog/2026-07-30-github-models-is-now-retired/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub 上でモデルを試せる「GitHub Models」が終了<br>• 変更履歴で正式にリタイアが告知<br>• 開発者はほかのモデル提供基盤への移行が必要に<br><br>GitHub が提供していたモデル試用機能の廃止が公式に発表された。プラットフォーム上で手軽にLLMを試せる導線が一つ減る形で、代替のAIサービスやAPIへの乗り換えが促される。各社のAI関連サービスの取捨選択が進んでいることを示す動き。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Opus 5 を発表 — (原文: Introducing Claude Opus 5)</td><td class="link-col"><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic の最上位モデル「Claude Opus 5」を投入<br>• Claude 5 ファミリーのフラッグシップ<br>• 高度な推論・エージェント用途を想定<br><br>Anthropic が最も高性能なモデルとして Opus 5 を発表した。同社の Claude 5 世代の頂点に位置づけられ、複雑な推論や長時間のエージェント作業での性能向上が期待される。OpenAI の GPT-5.6 発表と時期が重なり、最上位モデル競争が続いている。</td></tr>
+<tr><td class="num">2</td><td class="title">オープンウェイトモデルに関する我々の立場 — (原文: Our position on open-weights models)</td><td class="link-col"><a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オープンウェイトモデルに対する Anthropic の見解を表明<br>• 安全性と公開のバランスに関する方針を提示<br>• 業界全体の議論を意識した内容<br><br>モデルの重みを公開するオープンウェイトの是非を巡り、Anthropic が自社の立場を整理した文書。安全保障や悪用リスクと、オープン化がもたらす利益をどう天秤にかけるかという業界的な論点に踏み込んでいる。</td></tr>
+<tr><td class="num">3</td><td class="title">Cognizant との提携を拡大しエンタープライズへClaude展開 — (原文: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients)</td><td class="link-col"><a href="https://www.anthropic.com/news/cognizant-anthropic" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cognizant との提携を拡大<br>• 大手SIを通じてエンタープライズ顧客にClaudeを提供<br>• 企業導入の裾野拡大を狙う<br><br>グローバルなITサービス企業 Cognizant と組み、企業向けの Claude 導入を加速する。SI経由での展開は、自社で直接リーチしにくい大企業層へのアプローチを補完する。エンタープライズ市場でのAI採用競争を意識した動き。</td></tr>
+<tr><td class="num">4</td><td class="title">教師向け「Claude for Teachers」を発表 — (原文: Introducing Claude for Teachers)</td><td class="link-col"><a href="https://www.anthropic.com/news/claude-for-teachers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 教育現場の教師を対象としたClaude提供<br>• 授業準備や教材作成などの支援を想定<br>• 教育分野への展開を強化<br><br>教師の業務を支援する専用の提供形態を打ち出した。教材作成や採点補助など、教育現場特有のユースケースにAIを組み込む狙い。教育分野は導入効果と同時に慎重な運用も求められる領域であり、専用の設計が意味を持つ。</td></tr>
+<tr><td class="num">5</td><td class="title">Fable 5 を再デプロイ — (原文: Redeploying Fable 5)</td><td class="link-col"><a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 軽量モデル「Fable 5」を再展開<br>• Claude Sonnet 5 の発表と同時期<br>• モデルラインナップの整備が進む<br><br>Fable 5 の再デプロイに関する告知。Sonnet 5 の発表とほぼ同時期であり、Anthropic が用途別に複数のモデルを整備していることがうかがえる。高性能な Opus から軽量な Fable まで、選択肢を広げる動きの一環。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">GPT-5.6 で価格性能フロンティアを前進 — (原文: Advancing the price-performance frontier with GPT-5.6)</td><td class="link-col"><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 新モデル「GPT-5.6」を発表<br>• 価格と性能のバランスを改善<br>• フロンティア級の知能と効率を両立と主張<br><br>OpenAI が GPT-5.6 を投入し、同等性能をより低コストで提供する方向性を打ち出した。Anthropic の Claude Opus 5 発表と時期が重なり、最上位モデルの競争が続く。性能だけでなくコスト効率を前面に押し出す点が今回の訴求ポイント。</td></tr>
+<tr><td class="num">2</td><td class="title">GPT-5.6はいかにフロンティア知能と効率を融合したか — (原文: How GPT-5.6 fuses frontier intelligence with frontier efficiency)</td><td class="link-col"><a href="https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-5.6 の設計思想を解説するエンジニアリング記事<br>• 高い知能と推論効率の両立に焦点<br>• アーキテクチャや最適化の工夫を紹介<br><br>GPT-5.6 がどのように性能と効率を両立させたかを技術的に説明する内容。単なる性能向上ではなく、推論コストを抑えつつ知能を高めるアプローチが強調されている。モデル開発が「大きさ」から「効率」へ軸足を移しつつある傾向を映す。</td></tr>
+<tr><td class="num">3</td><td class="title">2つの設定でARC-AGI-3ベンチマークのスコアが3倍に — (原文: How enabling two settings tripled our scores on the ARC-AGI-3 benchmark)</td><td class="link-col"><a href="https://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 2つの設定を有効化しARC-AGI-3スコアが3倍に<br>• 推論時の設定が結果を大きく左右<br>• ベンチマーク評価の解釈に注意喚起<br><br>推論時の設定次第でベンチマーク結果が大幅に変わることを示す研究記事。モデルそのものだけでなく、実行時パラメータが性能評価に与える影響の大きさを指摘する。ベンチマーク比較を鵜呑みにしない姿勢の重要性を示唆している。</td></tr>
+<tr><td class="num">4</td><td class="title">研究者向け「ChatGPT for Academic Researchers」で科学的発見を加速 — (原文: Accelerating scientific discovery with ChatGPT for Academic Researchers)</td><td class="link-col"><a href="https://openai.com/index/chatgpt-for-academic-researchers" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 学術研究者向けのChatGPT提供を発表<br>• 文献調査や仮説検討など研究支援を想定<br>• 科学的発見の加速を狙う<br><br>研究者の作業を支援する専用の ChatGPT を打ち出した。膨大な文献の整理や仮説の検討といった研究プロセスにAIを組み込む狙い。教育・研究といった専門領域向けのAI提供が各社で活発になっている流れの一環。</td></tr>
+<tr><td class="num">5</td><td class="title">エージェント型AI時代の科学計算 — (原文: Scientific computing in the age of agentic AI)</td><td class="link-col"><a href="https://openai.com/index/scientific-computing-agentic-ai" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エージェント型AIが科学計算に与える影響を論じる<br>• 自律的に計算・検証を進めるAIの可能性<br>• 研究ワークフローの変化を展望<br><br>自律的にタスクを進めるエージェント型AIが、科学計算の進め方をどう変えるかを考察する記事。人手による試行錯誤の一部をAIが担う未来像を示す。研究分野へのAI浸透という文脈で、前述の研究者向けChatGPTとも通じる内容。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Grafana社、Kafkaを用いてLokiを再設計しエージェント向けオブザーバビリティCLIをリリース</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/07/grafana-loki-ai-agents/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ログ基盤 Loki を Kafka を用いて再設計<br>• コーディングエージェントにオブザーバビリティを提供するCLIを公開<br>• AIエージェントの動作を観測する仕組みを強化<br><br>Grafana がログ集約基盤 Loki の内部を刷新し、エージェント向けの可観測性ツールを打ち出した。AIエージェントが何をしているかを追跡・分析する需要の高まりに応えるもの。オブザーバビリティの対象が人間の運用からAIの挙動へ広がりつつあることを示す。</td></tr>
+<tr><td class="num">2</td><td class="title">VS Code 1.123、サプライチェーン攻撃対策で拡張機能の更新を2時間遅延</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/07/vscode-extension-update-delay/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 拡張機能の更新を2時間遅らせる機能を追加<br>• サプライチェーン攻撃の被害拡大を抑制する狙い<br>• 悪意ある更新が配布されても検知・対応の猶予を確保<br><br>VS Code が拡張機能の自動更新に遅延を設けることで、侵害された更新が一斉に広まるのを防ぐ仕組みを導入した。エコシステムを狙うサプライチェーン攻撃への現実的な緩和策。開発ツール側での防御機構の整備が進んでいる。</td></tr>
+<tr><td class="num">3</td><td class="title">AIがソフトウェアエンジニアリング性能を増幅、2025年DORAレポート</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/07/ai-dora-report/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 2025年のDORAレポートを紹介<br>• AI活用が開発パフォーマンスを押し上げると報告<br>• ただし前提条件や運用次第で効果に差<br><br>開発組織の生産性を測る DORA レポートの最新版が、AI導入による性能向上を示したという記事。一方で効果は組織のプラクティス次第であることも読み取れる。AIが開発現場の指標にどう表れるかを定量的に捉える試みとして参考になる。</td></tr>
+<tr><td class="num">4</td><td class="title">Kubescape 4.0、Kubernetesに実行時セキュリティとAIエージェントスキャンを追加</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/07/kubescape-40/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Kubernetes向けセキュリティツール Kubescape が 4.0 に<br>• 実行時（ランタイム）セキュリティ機能を追加<br>• AIエージェントのスキャン機能も新搭載<br><br>KubernetesのセキュリティOSS Kubescape が、静的スキャンに加えて実行時の防御とAIエージェント検査へ対応を広げた。クラスタ上で動くAIエージェントも保護対象に含める点が今日的。コンテナ環境のセキュリティ要件の拡大を反映している。</td></tr>
+<tr><td class="num">5</td><td class="title">AIがソフトウェアライフサイクルの上流へ：コードレビューからPRDガバナンスへ</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/07/ai-prd-code-review-governance/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI活用の重心がコードレビューから上流工程へ移行<br>• 要件定義書（PRD）のガバナンスにAIを適用<br>• 手戻り削減と品質確保を狙う<br><br>AIの適用対象が実装後のレビューだけでなく、要件定義など上流工程に広がっているという分析。早い段階で品質を担保することで下流の手戻りを減らす発想。AI駆動開発が「書いたコードの検査」から「作る前の設計」へと領域を拡大している潮流を示す。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">川崎重工の乗れる多脚ロボット「コルレオ」、仮想空間とフィジカルAIで開発</td><td class="link-col"><a href="https://www.watch.impress.co.jp/docs/news/2128633.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 川崎重工が人が乗れる多脚ロボット「コルレオ」を開発<br>• 仮想空間でのシミュレーションとフィジカルAIを活用<br>• 次世代モビリティの実験的な取り組み<br><br>SF的な「乗れる脚型ロボット」の開発事例。物理環境で動くAI（フィジカルAI）と仮想空間での学習を組み合わせて制御を高度化している。ロボティクスとAIの融合が、移動手段の新しい形を模索する段階に入りつつあることを示す。</td></tr>
+<tr><td class="num">2</td><td class="title">【決着】Claude CodeとCodexの設定ファイルを同期させる（みんな仲良く）</td><td class="link-col"><a href="https://zenn.dev/explaza/articles/20f7f41cff8428" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code と Codex の設定ファイルを同期する方法を解説<br>• 両ツールを併用する際の設定重複を解消<br>• 実践的な同期手順を紹介<br><br>複数のコーディングエージェントを併用する開発者向けに、設定を一元管理する手法をまとめた記事。ツールごとに設定を書き分ける手間を減らせる。Zenn でも同記事が高評価で、エージェント併用ワークフローへの関心の高さがうかがえる。</td></tr>
+<tr><td class="num">3</td><td class="title">世界を席巻する中国の人型ロボット、米国が輸入禁止 「安保リスク」</td><td class="link-col"><a href="https://www.cnn.co.jp/business/35251078.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 中国製の人型ロボットの米国輸入を禁止<br>• 「容認できない」安全保障リスクを理由に挙げる<br>• 技術覇権と安保が絡む地政学的な動き<br><br>急速に台頭する中国の人型ロボットに対し、米国が安全保障を理由に輸入規制を打ち出した。AI・ロボット分野でも米中の技術対立が鮮明になっている。サプライチェーンや調達に影響し得る動きとして、産業界も注視する話題。</td></tr>
+<tr><td class="num">4</td><td class="title">深刻度「緊急」のRails脆弱性「KindaRails2Shell」(CVE-2026-66066)の概要と対応指針</td><td class="link-col"><a href="https://blog.flatt.tech/entry/kindarails2shell_rails" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Rails に深刻度「緊急」の脆弱性 CVE-2026-66066<br>• 「KindaRails2Shell」と名付けられRCEの恐れ<br>• 概要と具体的な対応指針を解説<br><br>GMO Flatt Security による、Rails の重大脆弱性の解説記事。深刻度が最高レベルで、リモートコード実行につながる可能性が指摘されている。該当バージョンを使う環境は速やかなアップデートと影響確認が求められる、優先度の高い情報。</td></tr>
+<tr><td class="num">5</td><td class="title">デジタル庁、AI基盤「源内」を被災自治体などに緊急提供</td><td class="link-col"><a href="https://www.itmedia.co.jp/aiplus/article/2607/29/2000000268/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• デジタル庁がAI基盤「源内」を被災自治体へ緊急提供<br>• 「平時をはるかに超える業務」への対応が目的<br>• 災害対応にAIを活用する取り組み<br><br>災害時の膨大な業務を支援するため、行政がAI基盤を被災自治体へ提供した事例。緊急時の人手不足をAIで補う実践的な使い方を示す。公的機関によるAI活用が、平時の効率化だけでなく有事の対応力強化にも及び始めている。</td></tr>
+<tr><td class="num">6</td><td class="title">OpenAI、脆弱性の発見・検証・修正を行う「Codex Security CLI」をOSS公開</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/news/2128824.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 脆弱性の発見・検証・修正を担うCLIをOSS公開<br>• CI/CDへの組み込みも可能<br>• セキュリティ作業の自動化を促進<br><br>OpenAI がセキュリティ特化のCLIツールをオープンソースで公開した。脆弱性対応の一連の流れをAIで支援し、パイプラインに組み込める点が特徴。前述のInfoQ記事とも通じ、AIをセキュリティ工程に組み込む動きが加速している。</td></tr>
+<tr><td class="num">7</td><td class="title">Microsoft、JavaScriptからWinRT APIを直接呼べる仕組みをプレビュー</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/news/2128639.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• JavaScript から WinRT API を直接呼び出せる仕組み<br>• Electron/Node.js アプリからローカルAIや通知を利用可能<br>• APIを動的生成し従来の不便を解消<br><br>Windowsのネイティブ機能をJavaScriptから扱いやすくする新機構のパブリックプレビュー。デスクトップアプリからローカルAIや通知にアクセスしやすくなる。Web技術ベースのデスクトップ開発とOSネイティブ機能の橋渡しを進める動き。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">1日500コミットは、もう読めない ── だからコードレビューをやめた</td><td class="link-col"><a href="https://zenn.dev/singularity/articles/stopped-reviewing-my-code" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 1日500コミット規模ではレビューが追いつかないと主張<br>• 従来型の人手コードレビューを見直す提案<br>• AI駆動開発における品質担保の再考<br><br>AIが大量のコードを生成する時代に、従来のコミット単位レビューが機能しなくなった実感を綴った記事。人が全てを読む前提を捨て、別の品質保証手段へ移る発想を提示する。開発量の激増がレビュー文化に迫る変化を象徴し、大きな反響を呼んだ。</td></tr>
+<tr><td class="num">2</td><td class="title">Opus 5が思考が浅いように感じる問題への対策</td><td class="link-col"><a href="https://zenn.dev/u1/articles/claude5-rules-collapse-and-fix" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Opus 5 で「思考が浅い」と感じる場面への対策<br>• プロンプトや使い方の調整で改善を図る<br>• 新モデル特有の挙動への実践的知見<br><br>Claude Opus 5 を使う中で感じた推論の浅さに対し、具体的な回避策をまとめた記事。新モデルは従来と挙動が異なり、これまでのプロンプトが逆効果になる場合もある。モデル更新に合わせて使い方を調整する必要性を実例で示している。</td></tr>
+<tr><td class="num">3</td><td class="title">最近の開発の流れ</td><td class="link-col"><a href="https://zenn.dev/kimuchan/articles/bc8e98682f8594" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 直近のAI駆動開発の潮流を個人視点で整理<br>• ツールやワークフローの変化を振り返る<br>• 開発スタイルの移り変わりを考察<br><br>ここ最近の開発手法やツールの変化を俯瞰的にまとめた記事。エージェントの普及やレビュー文化の変化など、現場の肌感覚を言語化している。技術の移り変わりが速い中で、自分の立ち位置を確認する材料として多くの共感を集めた。</td></tr>
+<tr><td class="num">4</td><td class="title">【2026年版】MIXI 新卒向け技術研修を公開</td><td class="link-col"><a href="https://zenn.dev/mixi/articles/fd62f8ddc178f6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• MIXI が2026年版の新卒技術研修を公開<br>• 基礎から実務まで幅広い内容を無償公開<br>• 学習リソースとして広く参照可能<br><br>企業が新卒向けの技術研修資料を一般公開した事例。実務に即したカリキュラムが体系的にまとまっており、独学者や他社の教育担当にも有用。良質な研修コンテンツの公開は、業界全体の底上げに寄与する取り組みとして歓迎されている。</td></tr>
+<tr><td class="num">5</td><td class="title">「ソフトウェアアーキテクチャの基礎」を読んで設計判断の引き出しが増えた</td><td class="link-col"><a href="https://zenn.dev/raamenwakamatu/articles/software-architecture-fundamentals-review" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 名著「ソフトウェアアーキテクチャの基礎」の読書録<br>• 設計判断の選択肢が増えた実感を共有<br>• アーキテクチャ思考を学ぶ意義を紹介<br><br>アーキテクチャ設計の定番書を読んだ学びをまとめた記事。トレードオフを意識した設計判断の考え方が身についたという。AIがコードを書く時代でも、何をどう作るかを決める設計力の重要性は変わらないことを再認識させる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">Opus 5では今までのプロンプトが逆効果に。「検証して」を消して「簡潔に」と書くべし</td><td class="link-col"><a href="https://zenn.dev/little_hand_s/articles/72646a09f49d2a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Opus 5 では従来のプロンプトが逆効果になり得る<br>• 「最後に検証して」を消し「簡潔に」を推奨<br>• 公式プロンプトガイドを読み解いた実践知<br><br>新モデル Opus 5 に合わせたプロンプトの書き換え方を、公式ガイドをもとに解説した記事。冗長な指示がかえって性能を下げる場合があるという。モデルの世代交代に伴い、これまでの「おまじない」的プロンプトの見直しが必要になっている。</td></tr>
+<tr><td class="num">7</td><td class="title">【速報】Kimi-K3 を Day0 デプロイ。2.8Tモデルは B300 x8 の1ノードで動くのか</td><td class="link-col"><a href="https://zenn.dev/fixstars/articles/kimi-k3-benchmark" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Kimi-K3（2.8Tパラメータ）を公開初日にデプロイ検証<br>• NVIDIA B300 8基の1ノードで動作するか実験<br>• 大規模モデルの推論環境要件を検証<br><br>超大規模モデル Kimi-K3 を公開直後に自前環境で動かした検証レポート。2.8兆パラメータ級のモデルが1ノードで動作するかという実務的な関心に答える。最新モデルのハードウェア要件やコスト感を具体的に把握できる貴重な記録。</td></tr>
+<tr><td class="num">8</td><td class="title">【Claude Code】planモードはもう使っていない</td><td class="link-col"><a href="https://zenn.dev/notahotel/articles/0c28638945aa32" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の plan モードを使わなくなった経緯<br>• 現在のワークフローとその理由を紹介<br>• エージェント運用スタイルの個人的な変化<br><br>Claude Code の計画立案機能を使わなくなったという実践的な体験談。ツールの機能をどう取捨選択するかは運用の成熟とともに変わる。エージェントの使い方に唯一の正解はなく、各自の作業に合わせて最適化していく過程を示している。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「経験がないから」を言い訳にしなくていい時代になった</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/122f9a34360e256bf042" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AIの普及で未経験者でも成果を出しやすくなったと主張<br>• 経験不足を言い訳にしない姿勢を提唱<br>• 学習と実践のハードル低下を論じる<br><br>AIツールの助けで、経験の浅い開発者でも一定の成果を出せる時代になったという論考。参入障壁が下がる一方、基礎学習の重要性は残る。初学者向けの前向きなメッセージとして、多くの共感を集めた記事。</td></tr>
+<tr><td class="num">2</td><td class="title">やる気を信じず、学習習慣を仕組み化して固定せよ【三日坊主回避】</td><td class="link-col"><a href="https://qiita.com/sumomoo/items/0d6667bbcf46ad59c320" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• やる気に頼らず学習を仕組み化する方法を提案<br>• 習慣として固定することで継続を図る<br>• 三日坊主を回避する実践的な工夫<br><br>意志力に依存せず、環境や仕組みで学習を続ける手法をまとめた記事。継続の再現性を高める考え方は、技術学習に限らず応用が利く。初学者コミュニティで支持を集める、実践重視の学習論。</td></tr>
+<tr><td class="num">3</td><td class="title">ITの資格勉強で綺麗にノートまとめてるけど、その時間で過去問といた方がマシ</td><td class="link-col"><a href="https://qiita.com/prumnn/items/7d9877f2f7ba3b26b56c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 綺麗なノート作りより過去問演習を優先すべきと主張<br>• 資格勉強の時間配分を見直す提案<br>• アウトプット重視の学習法を推奨<br><br>資格試験対策で陥りがちな「ノートまとめ」への時間投資に疑問を呈する記事。手を動かして問題を解く方が定着しやすいという実感を共有する。学習効率を巡る普遍的なテーマで、初学者から幅広く反響を得ている。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Code「/config」設定の教科書 ― 全42項目を1つずつ解説＋おすすめ設定</td><td class="link-col"><a href="https://qiita.com/f_uto/items/438336db3684cf662321" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の /config 全42項目を網羅解説<br>• 各設定の意味とおすすめ値を紹介<br>• v2.1.220 対応の実践的リファレンス<br><br>Claude Code の設定項目を一つずつ丁寧に解説した保存版の記事。デフォルトのまま使いがちな設定を理解し、自分の作業に最適化する助けになる。ツールを使いこなすための実用的なリファレンスとして重宝される内容。</td></tr>
+<tr><td class="num">5</td><td class="title">CLAUDE.md は21セクションか、8行か — 公式ドキュメントで決着をつけた</td><td class="link-col"><a href="https://qiita.com/jqit_suwa/items/cea574550613de33a114" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CLAUDE.md の適切な分量を公式ドキュメントで検証<br>• 詳細な21セクション案と簡潔な8行案を比較<br>• 公式の指針をもとに結論を提示<br><br>エージェントへの指示ファイル CLAUDE.md をどこまで書くべきかを、公式ドキュメントを根拠に論じた記事。冗長な指示が必ずしも良いとは限らないという示唆を含む。前述のOpus 5プロンプト論とも通じ、「簡潔さ」の価値を再考させる。</td></tr>
+<tr><td class="num">6</td><td class="title">「最後に検証して」はもう書かなくていい — Claude Opus 5でプロンプトの常識が逆転した4つのこと</td><td class="link-col"><a href="https://qiita.com/jqit_suwa/items/74a96ce83dde5245407a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Opus 5 で従来のプロンプト常識が覆った4点を解説<br>• 「最後に検証して」等の指示が不要に<br>• 新モデルに合わせた書き方を提案<br><br>Claude Opus 5 の登場で、これまで有効とされたプロンプト手法が通用しなくなった点を整理した記事。冗長な検証指示や念押しが逆効果になる場合があるという。Zennの同系統記事と併せ、モデル更新に伴うプロンプト見直しの必要性を裏づける。</td></tr>
+<tr><td class="num">7</td><td class="title">Claudeのクレジット100ドルでFableを使いサブエージェント「小規模開発チーム」基盤を作った</td><td class="link-col"><a href="https://qiita.com/su3-hokkaido/items/89fcfd2702ecba65c74d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 付与されたクレジットを使いFableでサブエージェントを構築<br>• 複数エージェントによる「小規模開発チーム」基盤を作成<br>• マルチエージェント運用の実践例<br><br>Claude のクレジットを活用し、Fable を使って役割分担したサブエージェント群を組んだ体験記。1人でも複数のエージェントに作業を割り振る「チーム」的な開発が可能になりつつある。ハーネスエンジニアリングの具体例として参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">オンプレミスからプライベートなAPI Gatewayを呼ぶ ― CognitoトークンをAPI Gatewayでプロキシ</td><td class="link-col"><a href="https://qiita.com/ajisawa/items/43dc7431773cab0b76b8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オンプレからプライベートAPI Gatewayを呼ぶ構成を解説<br>• Cognito のトークンエンドポイントをプロキシ<br>• 認証を絡めたAWS実装パターンを紹介<br><br>ハイブリッド環境で、オンプレミスから閉域のAPI Gatewayを安全に呼び出す具体的な構成を示した記事。Cognitoの認証をプロキシ経由で扱う実装上の工夫が参考になる。エンタープライズのAWS設計で直面しがちな課題への実践的な解。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-07-31 06:38 JST
+</footer>
+</div>
+</body>
+</html>
