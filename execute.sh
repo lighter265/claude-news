@@ -92,12 +92,13 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。"
+    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。特に📌今日の3行サマリでは、Anthropic と OpenAI の記事を絶対に選ばないこと（ルール違反は厳禁）。"
     log "要約生成開始"
 
     #run timeout 1800 claude -p "$prompt"
     run timeout 1800 claude --model opus --dangerously-skip-permissions -p "$prompt"
-    #run timeout 1800 opencode run "$prompt"
+    #run timeout 1800 claude --model fable --permission-mode "bypassPermissions" -p "$prompt"
+     #run timeout 1800 opencode run "$prompt"
 
     assert_file "feed.md"
 
