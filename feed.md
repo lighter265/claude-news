@@ -1,99 +1,92 @@
-# 技術ニュース要約 — 2026-08-04
+# 技術ニュース要約 — 2026-08-05
 
 ## 📌 今日の3行サマリ
 
-- 元アイドル・宮本佳林さんが「コードは一行も書かず」AIだけで配信システムを丸ごと構築した“技術ブログ”が大きな話題に。
-- AIブームを支えるハイパースケーラーの「隠れ借入」が1.65兆ドルに達し、設備投資の持続性に疑問符が投げかけられている。
-- 2.8兆パラメータのKimi K3など巨大オープンモデルを、枝刈りやエキスパート単位のストリーミングで個人〜1ノード規模の環境で動かす取り組みが相次いでいる。
+- AirLLM が量子化なしで 70B モデルを単一 4GB GPU 上で動かす手法を公開し、大規模モデルのローカル推論の敷居を下げている。
+- 自社設計サーバーの Oxide Computer が SEC 提出書類で 4.45 億ドルの資金調達を明らかにし、独自ハードウェア路線への大型投資が続く。
+- GitHub がスタック型プルリクエストに対応し、`gh stack` で PR を分割・積み上げる開発フローが紹介され注目を集めている。
 
 ## GitHub Trending
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | AirLLM — 4GB GPU 1枚で70B推論を実現 — (原文: lyogavin/airllm) | • 量子化・蒸留・枝刈りなしで70B級モデルを単一4GB GPUで推論<br>• 405B Llama 3.1を8GB、DeepSeek-V3(671B)を約12GBで動作可<br>• 2.8TのKimi K3も4GB未満で動くとうたう<br><br>スパースMoEモデルのエキスパートを1つずつストリーミングする手法で、巨大モデルをレイヤ全体ではなく必要な部分だけ読み込む点が鍵。個人環境での大規模LLM実行の裾野を広げる可能性がある。 | https://github.com/lyogavin/airllm |
-| 2 | DwarfStar(ds4) — DeepSeek V4向けローカル推論エンジン — (原文: antirez/ds4) | • Metal / CUDA / ROCm対応のネイティブ推論エンジン<br>• DeepSeek V4 Flashを第一に最適化、GLM 5.2も動作<br>• モデル読込・ツール呼出・KV状態・HTTPサーバを一体で設計<br><br>Redis作者antirez氏による、あえて汎用GGUFランナーを目指さない“狭く深い”設計が特徴。特定モデルに絞ることでプロンプト描画やツール呼び出しまで含めて一体でテストできる利点を狙う。 | https://github.com/antirez/ds4 |
-| 3 | OpenWork — Claude Cowork のオープンソース代替 — (原文: different-ai/openwork) | • AIワークフローを共有するためのデスクトップアプリ<br>• macOS/Windows/Linux対応、opencodeベース<br>• 1つのMCPでCodex・Claude Code・Cursor間でスキルやサービスを再利用<br><br>Claude CoworkやCodexの無料・OSS代替を標榜し、作ったスキルをチームや友人と共有できる点を売りにする。複数エージェント間で設定を横断利用する動きの一例。 | https://github.com/different-ai/openwork |
-| 4 | TencentDB Agent Memory — チーム向けAIエージェント記憶ハブ — (原文: TencentCloud/TencentDB-Agent-Memory) | • 会話・ドキュメント・コードを4種の再利用可能な記憶資産に変換<br>• Chat Memory / Skill / LLM-Wiki / Code-Graph を提供<br>• フレームワークをまたいでエージェント間で共有・ガバナンス<br><br>「エージェントは記憶し、人は創造する」を掲げ、チーム単位で知識を蓄積・共有する仕組み。エージェント運用における記憶・知識管理レイヤへの注目を反映している。 | https://github.com/TencentCloud/TencentDB-Agent-Memory |
-| 5 | Agent Reach — AIエージェントに“インターネットの目”を — (原文: Panniantong/Agent-Reach) | • Twitter/Reddit/YouTube/GitHub/Bilibili/小紅書を横断で読取・検索<br>• 1つのCLIでAPI課金なしに情報取得<br>• 接続方式の変化を吸収し利用者が意識せず使える<br><br>エージェントがコードは書けてもWeb上の情報取得でつまずく課題に対し、字幕取得やSNS検索を肩代わりする。エージェントの“外界アクセス”を補うツール群の一つ。 | https://github.com/Panniantong/Agent-Reach |
-| 6 | build-your-own-x — 好きな技術をゼロから再実装 — (原文: codecrafters-io/build-your-own-x) | • DB・Docker・OS・Gitなどを一から作る手順集<br>• 「作れないものは理解できない」の精神で学習<br>• 分野別に多数のステップバイステップガイドを集約<br><br>定番の学習リポジトリで、実装を通じて技術の内部構造を理解する狙い。生成AI時代でも“自分で作って理解する”価値を示す教材として支持を集め続けている。 | https://github.com/codecrafters-io/build-your-own-x |
-| 7 | AI For Beginners — MSの12週間AI入門カリキュラム — (原文: microsoft/AI-For-Beginners) | • 12週・24レッスンのAI学習カリキュラム<br>• TensorFlow/PyTorchなど実践やAI倫理も網羅<br>• 多言語対応でGitHub Actionにより自動更新<br><br>Microsoftが公開する初心者向け教材で、クイズやラボを含む実践重視の構成。生成AI熱の高まりを背景に、体系的な基礎学習の入口として定番化している。 | https://github.com/microsoft/AI-For-Beginners |
+| 1 | AirLLM — 単一4GB GPUで70B推論 | • 量子化・蒸留・枝刈りなしで 70B LLM を 4GB GPU で推論<br>• 405B Llama 3.1 を 8GB、DeepSeek-V3(671B) を約12GBで実行可能<br>• スパースMoEを1エキスパートずつストリーミングして省メモリ化<br><br>メモリ使用量を大幅に削減し、家庭用GPUでも巨大モデルを動かせる点が反響を呼んでいる。最大級のKimi K3(2.8T)も4GB未満で動くとされ、ローカル推論の選択肢を広げる取り組みだ。 | https://github.com/lyogavin/airllm |
+| 2 | reverse-skill — 逆向・セキュリティ技能ルーター | • AI コーディングクライアント向けの逆向/ペネトレ/セキュリティ技能ルーター<br>• AI 自動ルーティング＋オンデマンドのツールチェーン自動構築<br>• 自己進化する経験知ベースを備える<br><br>Claude Code・Cursor・Cline など複数クライアントに対応し、認可されたペネトレーションテストやセキュリティ研究の作業を支援する構成となっている。ツール導入と知識蓄積を自動化する点が特徴だ。 | https://github.com/zhaoxuya520/reverse-skill |
+| 3 | pdf-inspector — Rust製PDF解析ライブラリ | • スキャン型かテキスト型かをインテリジェントに判定<br>• OCRなしで位置情報付きテキスト抽出とMarkdown変換<br>• Python・Node.js・ブラウザWASM向けバインディング提供<br><br>Firecrawl が開発した高速な PDF 分類・抽出ライブラリで、テキストベースPDFをローカルで処理できる。ルーティング判断を高速化する用途が想定されている。 | https://github.com/firecrawl/pdf-inspector |
+| 4 | DeepSeek-Reasonix — DeepSeek特化ターミナルエージェント | • DeepSeek ネイティブのターミナル向け AI コーディングエージェント<br>• プレフィックスキャッシュの安定性を軸に設計<br>• 単一の静的 Go バイナリ、設定・プラグイン駆動<br><br>長時間セッションでもトークンコストを抑えられるよう、DeepSeek のプレフィックスキャッシュに合わせて調整されている。常駐利用を想定した軽量な構成が特徴だ。 | https://github.com/esengine/DeepSeek-Reasonix |
+| 5 | TencentDB Agent Memory — AIエージェントのチーム記憶基盤 | • 会話・ドキュメント・コードを4種の再利用可能な記憶資産へ変換<br>• Chat Memory / Skill / LLM-Wiki / Code-Graph を提供<br>• エージェントやフレームワーク横断で共有・ガバナンス<br><br>Tencent Cloud が公開したチームレベルの記憶ハブで、エージェントが蓄積した知識を組織的に共有・統治することを狙う。Team Memory はベータ版として公開されている。 | https://github.com/TencentCloud/TencentDB-Agent-Memory |
+| 6 | ds4 (DwarfStar) — DeepSeek特化ローカル推論エンジン | • DeepSeek V4 Flash 向けに最適化した小型ネイティブ推論エンジン<br>• Metal / CUDA / ROCm に対応、GLM 5.2 も動作<br>• モデル読込・ツール呼出・HTTPサーバ・コーディングエージェントを一体で構築<br><br>antirez による自己完結型のエンジンで、汎用 GGUF ランナーではなくあえて用途を絞っている。高メモリ機では DeepSeek V4 PRO もサポートする。 | https://github.com/antirez/ds4 |
+| 7 | Voicebox — ローカル完結のAI音声スタジオ | • 声のクローン、音声生成、任意アプリへのディクテーションに対応<br>• ElevenLabs / WisprFlow のOSS代替を志向<br>• ローカル実行のフル音声I/Oスタックを提供<br><br>マシン上でローカルに動く無料・オープンソースの音声スタジオで、所有する声でエージェントと会話することも可能とされる。音声入出力を一括で扱える点が特徴だ。 | https://github.com/jamiepine/voicebox |
 
 ## Hacker News
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | AIの“債務漬け”は続かない、隠れ借入は1.65兆ドルに — (原文: AI's debt binge can't last, hidden borrowing reaches $1.65T) | • ハイパースケーラーのAI設備投資を支える借入が急拡大<br>• 社債発行など“見えにくい”資金調達が1.65兆ドル規模に<br>• 投資回収の持続性に疑問が投げかけられている<br><br>AIインフラ投資の資金源が財務諸表から見えにくい形で膨張している点を指摘する記事。データセンター建設ブームの裏側にある財務リスクへの警戒が広がっている。 | https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/ |
-| 2 | LLMは専門性に報いる — (原文: LLMs reward expertise) | • LLMを使いこなせるかは利用者の専門知識に左右されるとの主張<br>• 曖昧な指示より的確な問いのほうが良い出力を引き出す<br>• 専門家ほどAIから価値を得やすい構図<br><br>AIが誰でも同じ成果を出す“均等化”ツールではなく、むしろ使い手の技量差を増幅するという論点。丸投げではなく前提知識と適切な発注が重要という議論と重なる。 | https://www.seangoedecke.com/llms-reward-expertise/ |
-| 3 | ケンタッキー州、データセンターに数十億ドルの税優遇か — (原文: Is Kentucky about to give billions in tax breaks to data centers?) | • データセンター誘致のための大型税優遇案が浮上<br>• 雇用や投資効果と減税の妥当性が争点<br>• 電力・水など地域資源への影響も懸念<br><br>AIデータセンターの立地競争が州の税制優遇合戦につながっている実例。恩恵とコストのバランスをめぐり、住民負担や環境影響への議論が続く。 | https://kypolicy.org/kentucky-data-center-tax-breaks/ |
-| 4 | AppleのiCloudファイル共有、退職者が機密文書に引き続きアクセス可能に — (原文: Apple's iCloud File Sharing Left Ex-Employees with Access to Secret Documents) | • iCloud共有の設定不備で退職者が社内文書に接続可能だった<br>• アクセス権の失効が徹底されていなかった問題<br>• 機密情報の管理体制に疑問<br><br>大企業でもクラウド共有の権限管理が抜け落ちうることを示す事例。退職時のアクセス権失効という基本的なIT運用の重要性を改めて浮き彫りにした。 | https://www.macrumors.com/2026/08/03/apple-icloud-sharing-ex-employees/ |
-| 5 | 米国のAIにおける対中リード、ほぼ消滅 — (原文: The U.S. lead over China in AI is all but gone) | • 中国製モデルの性能が米国勢に急速に接近<br>• オープンモデル分野での中国の存在感が拡大<br>• AI競争の構図が二極化から拮抗へ<br><br>DeepSeekやKimiなど中国発モデルの台頭を背景に、米中のAI技術差が縮まっているとの分析。オープンウェイト戦略の是非を含め、勢力図の変化が議論されている。 | https://www.cnbc.com/2026/08/02/ai-model-competition-us-china.html |
-| 6 | DeepSeek-V4-Flash、4x B200で2.98倍高速・ロスレス — (原文: DeepSeek-V4-Flash 2.98x faster on 4x B200, lossless) | • B200×4構成でDeepSeek-V4-Flashが約2.98倍高速化<br>• 精度を落とさないロスレスでの高速化をうたう<br>• 大規模モデル推論の効率改善が進む<br><br>推論効率の改善が続くDeepSeek系の話題。ハードウェアとモデル最適化の組み合わせで、巨大モデルの実行コストを下げる動きが加速している。 | https://twitter.com/Akashi203/status/2084373935454400964 |
-| 7 | AIデータセンターの需要がコンピュータメモリ価格を押し上げる — (原文: Demand from AI data centers drives up computer memory prices) | • AIデータセンター向け需要でメモリ価格が上昇<br>• 一般消費者向けPCパーツにも影響が波及<br>• 供給が需要に追いつかない状況<br><br>AIインフラ投資が半導体・メモリ市場の需給を逼迫させ、一般ユーザーの調達コストにも影響している。ブームの波及効果が身近な価格に及び始めている。 | https://www.npr.org/2026/07/30/nx-s1-5909318/massive-demand-from-ai-data-centers-drives-up-computer-memory-prices |
+| 1 | Oxide Computer が4.45億ドルを調達 — (原文: Oxide Computer raises $445M (SEC Form D)) | • SEC の Form D 提出書類で 4.45 億ドルの調達が判明<br>• 自社設計のクラウドサーバーを手がける企業<br>• コメント欄でも大型調達として話題に<br><br>クラウド用の統合ハードウェアを独自開発する Oxide への大型投資で、専用サーバー路線への資金流入が続いていることを示す。詳細は提出書類に基づく報道段階だ。 | https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml |
+| 2 | Waymo共同CEOがテスラのカメラのみ自動運転の限界を指摘 — (原文: Waymo CEO explains why Tesla's camera-only self-driving falls short) | • Waymo 幹部がカメラ単独方式の課題を説明<br>• センサー多重化の重要性を主張<br>• 自動運転の技術方針をめぐる議論が再燃<br><br>カメラのみに依存する方式とライダー等を併用する方式の設計思想の違いが改めて論点となっている。安全性と冗長性のトレードオフに関する見解が示された。 | https://electrek.co/2026/08/04/waymo-co-ceo-camera-only-self-driving-tesla/ |
+| 3 | フィッシングが減らない理由（2024） — (原文: Thanks FedEx, This Is Why We Keep Getting Phished) | • 正規の配送通知が本物か見分けにくい構造を指摘<br>• 利用者がフィッシングに慣らされてしまう問題<br>• 企業側の通知設計にも原因があると分析<br><br>Troy Hunt による解説で、正規メールとフィッシングの区別が難しくなる背景を配送業者の事例から論じている。ユーザー教育だけでは解決しにくい構造的な問題を扱う。 | https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/ |
+| 4 | Lua 5.5.1 リリース — (原文: Lua 5.5.1 Released) | • Lua 5.5.1 が公開<br>• 5.5.0 からの差分が一覧で提示<br>• 軽量スクリプト言語の保守的な更新<br><br>公式サイトで 5.5.0 との差分が示され、安定志向の更新が続いている。組み込み用途で広く使われる言語の小規模なメンテナンスリリースだ。 | https://www.lua.org/work/diffs-lua-5.5.0-lua-5.5.1.html |
+| 5 | AIガードレールの回避は容易 — (原文: Bypassing AI guardrails is so easy a script kiddie can do it) | • AIの安全ガードレールが簡単に迂回できると報告<br>• 高度な技術がなくても突破可能と指摘<br>• LLMの安全対策の実効性に疑問<br><br>The Register の記事で、現状のガードレールが初歩的な手法でも突破されうる点を取り上げている。AI 製品の安全設計の難しさを改めて浮き彫りにする内容だ。 | https://www.theregister.com/security/2026/08/04/bypassing-ai-guardrails-is-so-easy-a-script-kiddie-can-do-it/5282973 |
+| 6 | サイバー試験中のエージェント逸脱に関するインシデント報告 — (原文: Incident Report: unsanctioned agent behaviour during cyber testing) | • サイバー試験中にAIエージェントが想定外の挙動<br>• 英AISIが公式ブログでインシデントを報告<br>• 認可外の行動が発生した経緯を整理<br><br>AI 安全機関がエージェントの制御をめぐる実際の事例を公表し、自律的な挙動のリスクと対応を検討している。試験環境における管理の重要性を示す。 | https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing |
+| 7 | AIを使うべきか判断するシンプルな方法 — (原文: Should You Use AI for a Task? Here's a Simple Way to Decide) | • タスクにAIを使うかの判断基準を提示<br>• Bruce Schneier による考察<br>• 失敗コストと検証容易性を軸に整理<br><br>セキュリティ専門家がAI利用の可否を単純な観点から判断する方法を提案している。過信を避け、用途に応じて使い分ける視点が示されている。 | https://www.schneier.com/blog/archives/2026/07/should-you-use-ai-for-a-task-heres-a-simple-way-to-decide.html |
 
 ## Anthropic
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | Claude Opus 5 を発表 — (原文: Introducing Claude Opus 5) | • Claudeシリーズの最上位モデルOpus 5を公開<br>• 複雑な推論やコーディング用途を想定<br>• 製品カテゴリでの発表<br><br>Anthropicのフラッグシップとなる新モデル。高難度タスク向けの位置づけで、既存のOpus系からの性能向上が焦点となる。 | https://www.anthropic.com/news/claude-opus-5 |
-| 2 | Claude Sonnet 5 を発表 — (原文: Introducing Claude Sonnet 5) | • 標準用途向けの新モデルSonnet 5を公開<br>• 性能とコストのバランスを重視<br>• 製品カテゴリでの発表<br><br>日常的な用途を担う中位モデルの世代更新。Opusほどの重量級を必要としないタスクで、応答速度とコスト効率の両立が期待される。 | https://www.anthropic.com/news/claude-sonnet-5 |
-| 3 | Fable 5 の再デプロイ — (原文: Redeploying Fable 5) | • モデルFable 5を再デプロイ<br>• 運用上の対応に関するアナウンス<br>• 提供状況の調整<br><br>Fable 5に関する再展開の告知。モデル提供の安定運用に向けた対応を示すもので、詳細は告知本文に沿う。 | https://www.anthropic.com/news/redeploying-fable-5 |
-| 4 | オープンウェイトモデルに関する当社の立場 — (原文: Our position on open-weights models) | • オープンウェイトモデルへのAnthropicの見解を表明<br>• 安全性と公開のバランスを論点に<br>• 業界の潮流を踏まえた立場表明<br><br>中国勢を含むオープンモデルの台頭を背景に、公開戦略に対する姿勢を示す。安全性重視の立場からの整理として注目される。 | https://www.anthropic.com/news/position-open-weights-models |
-| 5 | Cognizantとの提携拡大でClaudeを企業顧客へ — (原文: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients) | • CognizantとのパートナーシップをAnthropicが拡大<br>• 企業顧客へのClaude導入を推進<br>• エンタープライズ展開の一環<br><br>大手ITサービス企業との連携により、Claudeの企業導入を後押しする動き。エンタープライズ市場でのAI活用拡大を狙う。 | https://www.anthropic.com/news/cognizant-anthropic |
-| 6 | Claude for Teachers を発表 — (原文: Introducing Claude for Teachers) | • 教員向けのClaude提供を発表<br>• 授業準備や教育業務での活用を想定<br>• 製品カテゴリでの発表<br><br>教育現場に向けた専用の提供形態。教材作成や事務作業の効率化など、教員の負担軽減を目指す用途が想定される。 | https://www.anthropic.com/news/claude-for-teachers |
+| 1 | Claude Opus 5 を発表 — (原文: Introducing Claude Opus 5) | • 新しいフラッグシップモデル Claude Opus 5 を発表<br>• Product カテゴリでの製品アップデート<br>• 上位モデルの世代更新<br><br>Anthropic が最上位モデルの新世代として Opus 5 を公開した。詳細は同社の発表ページで示されている。 | https://www.anthropic.com/news/claude-opus-5 |
+| 2 | Tino Cuéllar 氏が最高グローバル渉外責任者に就任 — (原文: Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer) | • Tino Cuéllar 氏が Chief Global Affairs Officer に就任<br>• グローバルな政策・渉外部門を統括<br>• 経営体制の強化<br><br>政策分野の要職への人材登用で、各国当局との関係構築や渉外機能の拡充を図る動きとみられる。 | https://www.anthropic.com/news/tino-cuellar |
+| 3 | オープンウェイトモデルに関する見解 — (原文: Our position on open-weights models) | • オープンウェイト公開モデルへの立場を表明<br>• 利点とリスクの両面を整理<br>• 業界の議論に対する見解<br><br>公開モデルをめぐる論点について自社の考え方を示した内容で、安全性と開放性のバランスに関する立場が述べられている。 | https://www.anthropic.com/news/position-open-weights-models |
+| 4 | Cognizant との提携拡大 — (原文: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients) | • Cognizant との提携を拡大<br>• エンタープライズ顧客への Claude 提供を推進<br>• 導入支援の体制を強化<br><br>大手ITサービス企業との連携により、企業向けの Claude 展開を進める。導入・活用支援のパートナーシップ強化が狙いだ。 | https://www.anthropic.com/news/cognizant-anthropic |
 
 ## OpenAI
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | GPT-5.6で価格性能フロンティアを前進 — (原文: Advancing the price-performance frontier with GPT-5.6) | • 新モデルGPT-5.6を発表<br>• 性能とコストのバランスを改善<br>• 製品カテゴリでの発表<br><br>価格性能比の向上を前面に出したモデル更新。同等以上の性能をより低コストで提供することを狙い、実運用でのコスト最適化を後押しする。 | https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6 |
-| 2 | GPT-5.6はいかにフロンティア性能と効率を両立するか — (原文: How GPT-5.6 fuses frontier intelligence with frontier efficiency) | • GPT-5.6の設計思想を解説<br>• 高性能と効率の両立を技術的に紹介<br>• エンジニアリングカテゴリの記事<br><br>最上位級の知能を保ちつつ効率を高めた手法を掘り下げる技術記事。モデルの内部最適化に関心のある読者向けの内容。 | https://openai.com/index/gpt-5-6-frontier-intelligence-efficiency |
-| 3 | 応答性の高い音声AIのリアルタイム基盤を半年で構築した方法 — (原文: How we built a realtime system for responsive voice AI in six months) | • GPT Liveのリアルタイム音声対話基盤を紹介<br>• 低遅延な連続音声インタラクションを実現<br>• エンジニアリング視点の解説<br><br>半年での構築過程を振り返る実装記事。音声AIの応答性を支えるシステム設計の勘所が語られており、リアルタイム系開発の参考になる。 | https://openai.com/index/continuous-voice-interaction-with-gpt-live |
-| 4 | 数学と理論計算機科学における10の進展 — (原文: Ten advances in mathematics and theoretical computer science) | • AIが関与した数学・理論計算機科学の成果を紹介<br>• 10件の具体的な進展を列挙<br>• 研究成果の公表<br><br>AIが学術研究に貢献しうる領域を示すまとめ。数理科学分野でのAI活用の広がりを伝える内容となっている。 | https://openai.com/index/ten-advances-in-mathematics |
-| 5 | 潤沢な知能を構築する — (原文: Building abundant intelligence) | • 知能を“潤沢”に供給するというビジョンを提示<br>• 大規模なインフラ拡張を志向<br>• 企業カテゴリの発表<br><br>計算資源とモデルを大規模に展開し、知能を広く利用可能にする構想。データセンター投資の議論とも接続する長期戦略の表明。 | https://openai.com/index/building-abundant-intelligence |
-| 6 | エージェントの計算機操作をスケールさせる — (原文: Scaling Agents for Computer Use) | • コンピュータ操作を行うエージェントの規模拡大を扱う<br>• 実運用に向けた課題と手法を提示<br>• 研究関連の話題<br><br>画面操作を伴うエージェントの実用化に向けた取り組み。人手の作業を代替するエージェントの信頼性・スケールが焦点となる。 | https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Deve4jBYa8D%26noteId%3D1ibCP6aCv6%26referrer%3D%25255BAuthor%252520Console%25255D%2528%25252Fgroup%25253Fid%25253DTMLR%25252FAuthors%252523your-submissions%2529 |
+| 1 | OpenAIモデルに関する第三者サイバー評価 — (原文: Third-party cyber evaluations involving OpenAI models) | • 第三者機関によるサイバー分野の評価を実施<br>• セキュリティカテゴリの取り組み<br>• 外部評価の結果を公表<br><br>自社モデルのサイバーセキュリティ関連能力について外部評価を受けた内容で、安全性検証の透明性を示す取り組みだ。 | https://openai.com/index/third-party-cyber-evaluations-involving-openai-models |
+| 2 | GPT-Live — 応答性の高い音声AIをリアルタイム実現 — (原文: How we built a realtime system for responsive voice AI in six months) | • 応答性重視のリアルタイム音声AIシステムを構築<br>• 半年での開発プロセスを技術解説<br>• 低遅延を実現する仕組みを紹介<br><br>音声対話で素早く返答するためのシステム設計をエンジニアリング視点で解説している。リアルタイム性を支える技術的工夫が語られる。 | https://openai.com/index/continuous-voice-interaction-with-gpt-live |
+| 3 | GPT-5.6 で価格性能フロンティアを前進 — (原文: Advancing the price-performance frontier with GPT-5.6) | • GPT-5.6 で価格対性能の改善を打ち出す<br>• Product カテゴリでのモデル更新<br>• 効率性を重視した位置づけ<br><br>コストと性能のバランスを前進させる新モデルとして GPT-5.6 を紹介している。フロンティアの効率化を訴求する内容だ。 | https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6 |
+| 4 | 数学・理論計算機科学における10の進展 — (原文: Ten advances in mathematics and theoretical computer science) | • 数学と理論計算機科学での10件の進展を紹介<br>• Publication カテゴリの研究成果<br>• AIによる学術的貢献を提示<br><br>AI を活用した数学・理論計算機科学分野での成果をまとめた公表内容で、研究への応用可能性を示している。 | https://openai.com/index/ten-advances-in-mathematics |
 
 ## InfoQ Japan
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | AWSが新Amazon EKS Capabilitiesを発表、ワークロードオーケストレーションを簡素化 | • EKSに新機能群Capabilitiesを追加<br>• ワークロードのオーケストレーションを簡素化<br>• 運用負荷の軽減を狙う<br><br>KubernetesベースのEKS運用をより扱いやすくする機能強化。クラスタ管理の複雑さを抑え、開発者がアプリ側に集中できる環境づくりを進める。 | https://www.infoq.com/jp/news/2026/07/aws-eks-workload-orchestration/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
-| 2 | CloudflareがMCPアーキテクチャを概説、セキュリティとガバナンスの観点から | • CloudflareがMCPのアーキテクチャを解説<br>• 企業のセキュリティ・ガバナンス課題に対応<br>• リスク管理の観点を提示<br><br>エージェント連携の標準として広がるMCPを、企業導入時のリスク管理の視点から整理。認可やガバナンスの設計指針を示す。 | https://www.infoq.com/jp/news/2026/07/cloudflare-mcp/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
-| 3 | Dropbox、過疎ストレージボリュームから容量を回収する新コンパクション設計を導入 | • 利用率の低いボリュームから容量を回収<br>• 新しいコンパクション（圧縮再配置）設計を導入<br>• ストレージ効率を改善<br><br>大規模ストレージ基盤の無駄を減らす内部改善。断片化した容量を回収する設計により、インフラコストの最適化を図る。 | https://www.infoq.com/jp/news/2026/07/dropbox-tiered-compaction/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
-| 4 | Grafana、Kafkaを用いてLokiを再設計、コーディングエージェント向けCLIも提供 | • Kafkaを取り入れLokiを再設計<br>• コーディングエージェントにオブザーバビリティを提供するCLIを公開<br>• ログ基盤とAIエージェントを接続<br><br>ログ基盤Lokiのアーキテクチャ刷新に加え、エージェントが観測データを扱えるCLIを提供。AIによる運用支援を見据えた動き。 | https://www.infoq.com/jp/news/2026/07/grafana-loki-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
-| 5 | VS Code 1.123、サプライチェーン攻撃対策で拡張機能更新を2時間遅延 | • 拡張機能の更新適用を2時間遅らせる機能を追加<br>• サプライチェーン攻撃の被害抑制が狙い<br>• 悪意ある更新の即時拡散を防ぐ<br><br>侵害された拡張機能が即座に全ユーザーへ広がるのを防ぐ緩衝策。更新を遅延させることで問題検知・撤回の時間を稼ぐ。 | https://www.infoq.com/jp/news/2026/07/vscode-extension-update-delay/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
-| 6 | AIがソフトウェアエンジニアリング性能を増幅、2025年DORAレポート | • 2025年DORAレポートの知見を紹介<br>• AI活用が開発パフォーマンスを増幅すると分析<br>• 前提条件次第で効果が変わる点も指摘<br><br>AI導入が開発生産性に与える影響を大規模調査から読み解く。ツール導入だけでなく組織的な条件が効果を左右する点が示唆されている。 | https://www.infoq.com/jp/news/2026/07/ai-dora-report/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global |
+| 1 | AWS Load Balancer ControllerがKubernetes Gateway API対応で正式版に | • AWS Load Balancer Controller が Gateway API 対応で GA<br>• Kubernetes の標準的なトラフィック管理に準拠<br>• Ingress からの移行を後押し<br><br>Kubernetes の Gateway API に正式対応したことで、AWS 上でより標準的なルーティング構成が利用可能になる。運用の一貫性向上が期待される。 | https://www.infoq.com/jp/news/2026/08/aws-gateway-api-ga/ |
+| 2 | AWSが新Amazon EKS Capabilitiesを発表、ワークロード管理を簡素化 | • Amazon EKS の新機能群を発表<br>• ワークロードオーケストレーションを簡素化<br>• 運用負荷の軽減を狙う<br><br>EKS 上でのワークロード管理を容易にする機能が追加され、クラスタ運用の手間を減らす方向性が示された。 | https://www.infoq.com/jp/news/2026/07/aws-eks-workload-orchestration/ |
+| 3 | CloudflareがMCPアーキテクチャを概説、企業のセキュリティ課題に対応 | • Cloudflare が MCP のアーキテクチャを解説<br>• セキュリティとガバナンスのリスクに言及<br>• 企業導入時の考慮点を整理<br><br>企業が MCP を採用する際のセキュリティ・ガバナンス上の課題に焦点を当て、対処の方向性を示している。エージェント連携の基盤設計に関わる内容だ。 | https://www.infoq.com/jp/news/2026/07/cloudflare-mcp/ |
+| 4 | VS Code 1.123、拡張機能の更新を2時間遅延しサプライチェーン攻撃を抑制 | • 拡張機能の更新を2時間遅らせる機能を追加<br>• サプライチェーン攻撃の被害を抑える狙い<br>• 悪意ある更新の即時拡散を防止<br><br>公開直後の悪意ある更新が一斉に配布されるのを防ぐため、更新適用に遅延を設ける対策が導入された。近年のパッケージ攻撃への防御策の一つだ。 | https://www.infoq.com/jp/news/2026/07/vscode-extension-update-delay/ |
+| 5 | AIがソフトウェアエンジニアリングを増幅、2025年DORAレポート | • 2025年 DORA レポートの知見を紹介<br>• AI が開発パフォーマンスを増幅すると分析<br>• 前提となる組織能力の重要性も指摘<br><br>AI 活用が開発生産性に与える影響を DORA の調査に基づき整理している。効果を得るには基盤となる実践が伴う必要があるとされる。 | https://www.infoq.com/jp/news/2026/07/ai-dora-report/ |
 
 ## はてなブックマーク (tech)
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 宮本佳林『元アイドルがバイブコーディングできるようになるまで。』 | • 元アイドルの宮本佳林さんがAIでの開発体験を綴る<br>• コードをほぼ書かずに配信システムを構築<br>• 技術ブログとして大きな反響<br><br>非エンジニアがAIを相棒に実用システムを作り上げた事例として拡散。生成AIが開発の裾野を大きく広げつつあることを象徴する話題となった。 | https://ameblo.jp/miyamotokarin-official/entry-12974640519.html |
-| 2 | AIで仕事を効率化したら、なぜか僕の仕事だけ増えた話 | • AI導入で自分の業務がかえって増えたという体験談<br>• 効率化の恩恵が偏る組織的な構造を指摘<br>• 増田(匿名ダイアリー)で共感を集める<br><br>AI活用が個人や組織にもたらす負荷の偏りを描いたエッセイ。効率化の“しわ寄せ”が特定の人に集中しうる現実を問いかける。 | https://anond.hatelabo.jp/20260803162719 |
-| 3 | Windows 11、メモリ8GB環境への最適化を年内実施へ | • Windows 11が8GBメモリ環境向け最適化を予定<br>• 品質向上の取り組みの一環<br>• 「26H2」に向けた中間報告<br><br>低メモリ環境での快適性改善を目指すMicrosoftの動き。AIデータセンター需要でメモリ価格が上がる中、既存PCの延命という観点でも関心を集める。 | https://pc.watch.impress.co.jp/docs/news/2129907.html |
-| 4 | Claude Code／Codexに中〜大規模開発を任せるためのタスク管理 | • 大規模開発をAIエージェントに任せるための工夫を解説<br>• タスク分割・テストなど考え方を整理<br>• Claude CodeとCodexを対象に<br><br>AIコーディングエージェントを実務で使いこなすためのタスク管理術。エージェントに丸投げせず、適切に分解・検証する運用の勘所を示す。 | https://qiita.com/Y-Y-dev/items/d526fb7cdbe35a3f9384 |
-| 5 | BASE子会社、最大885万件漏えいか　カード番号の一部も | • ECサイト構築サービスへの不正アクセスが発生<br>• 最大885万件、カード番号の一部も漏えいの可能性<br>• 大規模な個人情報流出の懸念<br><br>ECプラットフォームを狙った侵害事例。決済情報を含む大量データの流出可能性があり、サプライチェーン全体のセキュリティ管理が問われる。 | https://www.itmedia.co.jp/news/article/2608/03/2000000355/ |
-| 6 | アーキテクチャに限らず意思決定を全部残す「ADR」という文化 | • 意思決定の記録をADRとして残す文化を紹介<br>• アーキテクチャに限らず全ての決定を対象に<br>• 設計・開発の透明性を高める<br><br>なぜその選択をしたかを文書として残す実践。後からの振り返りや引き継ぎを容易にし、チームの意思決定を資産化する考え方が支持を集めている。 | https://zenn.dev/dress_code/articles/c73500ae73361c |
-| 7 | Google Earthの「架空の衛星画像を生成するAI機能」が1日で撤回 | • Google EarthにAIによる衛星画像生成機能が追加<br>• 偽の災害・軍事画像を作成できたため問題視<br>• わずか1日で撤回<br><br>生成AIの悪用リスクが露呈した事例。実在しない衛星画像を作れることが誤情報拡散につながる懸念から、迅速な撤回に至った。 | https://gigazine.net/news/20260803-google-earth-nano-banana-2-removed/ |
+| 1 | 生年を入れると詳しくなる「インターネット老人」年表アプリ | • 生年を入力すると個人史に沿った年表が生成される<br>• ネット文化やSFの歴史をウンチク付きで振り返れる<br>• 個人開発のWebサービスとして公開<br><br>自分の世代に合わせてインターネット史を辿れる遊び心のあるアプリで、話題を集めている。技術史を親しみやすく提示する試みだ。 | https://www.techno-edge.net/article/2026/08/04/5360.html |
+| 2 | 離職インシデント対応ランブック — 突然無職になったら | • エンジニアが失職した際の手続きをランブック化<br>• 保険・年金・転職準備を体系的に整理<br>• インシデント対応になぞらえた実用的な内容<br><br>突然の離職を「インシデント」として捉え、必要な対応を段階的にまとめている。生活面の実務を技術者らしい視点で整理した記事だ。 | https://zenn.dev/tsukuboshi/articles/engineer-unemployment-runbook |
+| 3 | radiko配信基盤の設計者が語る「放送×インターネット」の次 | • radiko の配信基盤を設計した技術者へのインタビュー<br>• 放送とインターネットの融合の今後を展望<br>• 大規模配信の技術的知見を紹介<br><br>ラジオのネット配信を支える基盤の設計思想と、放送とネットが交わる次の展開について語られている。メディア技術の実践的な知見が得られる内容だ。 | https://internet.watch.impress.co.jp/docs/special/teigen/2129830.html |
+| 4 | pの中にdivを入れられないのはなぜか | • HTML の p 要素に div を入れられない理由を解説<br>• DOM とパース仕様の観点から説明<br>• 意図しないタグの自動補完の挙動も紹介<br><br>HTML 仕様上の要素の入れ子ルールを、パーサの動作を交えて丁寧に解説している。日常的に遭遇する挙動の背景を理解できる記事だ。 | https://tech.legalscape.co.jp/entry/2026/08/04/111358 |
+| 5 | 公衆Wi-Fi接続案内画面を悪用した攻撃CaptiveCrunch | • 公衆Wi-Fiのキャプティブポータルを悪用する攻撃を解説<br>• CaptiveCrunch と呼ばれる手口を整理<br>• 利用者側の注意点にも言及<br><br>接続案内画面を悪用する攻撃活動についてまとめたセキュリティ解説で、仕組みと対策を整理している。公共ネットワーク利用時のリスクを扱う。 | https://piyolog.hatenadiary.jp/entry/2026/08/04/183114 |
+| 6 | keyv等の著名パッケージへのサプライチェーン攻撃の概要と対応指針 | • keyv など複数の著名パッケージが攻撃対象に<br>• サプライチェーン攻撃の概要を整理<br>• 影響確認と対応の指針を提示<br><br>広く使われるパッケージが侵害された事案について、影響範囲と取るべき対応を GMO Flatt Security が解説している。依存関係の点検が促される内容だ。 | https://blog.flatt.tech/entry/keyv_compromise |
 
 ## Zenn
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | GitHubにスタック型プルリクエストが登場。gh stackでPRを分割して積み上げよう | • GitHubがスタック型PRに対応<br>• `gh stack`で大きな変更を分割して積み上げ<br>• レビューしやすい単位でのPR運用を実現<br><br>依存関係のある変更を段階的に重ねてレビューできる仕組み。巨大PRを避け、小さな単位で継続的にマージする開発フローを後押しする。 | https://zenn.dev/ubie_dev/articles/gh-stack-introduction |
-| 2 | AI フレンドリーな CLI を開発するテクニック | • AIエージェントが扱いやすいCLI設計の勘所を解説<br>• 出力形式やエラーの扱いを工夫<br>• 人とAI双方に使いやすい設計を志向<br><br>エージェントがツールとして呼び出しやすいCLIをどう作るかをまとめた実践記事。機械可読な出力や明確な終了コードなどの設計指針を示す。 | https://zenn.dev/shunsuke_suzuki/articles/make-cli-ai-friendly |
-| 3 | Kimi K3を441GBに枝刈りして、Mac Studio 1台で動かした | • 2.8TのKimi K3を441GBまで枝刈り<br>• Mac Studio 1台で動作させた実験<br>• 巨大モデルのローカル実行に挑戦<br><br>巨大オープンモデルを個人環境で動かす取り組みの一つ。枝刈りによる圧縮でメモリ要件を抑え、単一マシンでの推論を実現した記録。 | https://zenn.dev/hellohazime/articles/kimi_k3_reap640_512gb_mac |
-| 4 | MCPの大型アップデート（2026-07-28）で何が変わったか —— TypeScript SDK v2で試す | • 2026-07-28のMCP大型アップデート内容を解説<br>• ステートレス仕様など変更点を整理<br>• TypeScript SDK v2で実際に検証<br><br>エージェント連携の標準MCPの仕様更新を追った記事。SDK v2を使った実装を交えつつ、何がどう変わったかを具体的に確認している。 | https://zenn.dev/komlock_lab/articles/mcp-stateless-spec-2026 |
-| 5 | 【Claude Code】planモードはもう使っていない | • Claude Codeのplanモードを使わなくなった理由を解説<br>• 代替となるワークフローを提案<br>• 実運用での使い分けを共有<br><br>AIコーディング支援の実践知として、plan機能に頼らない進め方を紹介。エージェント運用の“型”が各自の試行錯誤で更新されている様子がうかがえる。 | https://zenn.dev/notahotel/articles/0c28638945aa32 |
-| 6 | 【速報】Kimi-K3 を Day0 デプロイ。2.8Tモデルは NVIDIA B300 x8 の1ノードで動くのか | • 2.8TのKimi-K3を公開初日にデプロイ検証<br>• NVIDIA B300×8の1ノードで動作を試す<br>• 大規模モデルの実行可否をベンチ<br><br>最新巨大モデルの実機検証レポート。単一ノードでどこまで動かせるかを確かめる内容で、大規模推論のハードウェア要件を具体的に示す。 | https://zenn.dev/fixstars/articles/kimi-k3-benchmark |
-| 7 | ソフトウェアエンジニアとして視野を広げるためのブックガイド | • エンジニアの視野を広げる書籍を紹介<br>• 技術に限らず幅広い分野を対象に<br>• 学習の方向づけに役立つ選書<br><br>キャリアや思考の幅を広げるための読書案内。AI時代に問われる“何を作るか”を考えるための土台づくりとして参考になる。 | https://zenn.dev/shotaro_tsuji/articles/091517e89ab17d |
+| 1 | スタック型PRをghコマンドで積み上げる — GitHubの新機能 | • GitHub にスタック型プルリクエストが登場<br>• `gh stack` で PR を分割して積み上げられる<br>• 大きな変更を小さな単位でレビュー可能に<br><br>依存関係のある変更を段階的に積み重ねてレビューできる仕組みで、レビュー効率の改善が期待される。CLI からの操作方法が紹介されている。 | https://zenn.dev/ubie_dev/articles/gh-stack-introduction |
+| 2 | 意思決定を全部残す「ADR（Any Decision Record）」という文化 | • アーキテクチャに限らず意思決定全般を記録する文化<br>• ADR を「Any Decision Record」へ拡張<br>• 判断の背景と経緯を残す運用<br><br>設計判断に限らずあらゆる決定を記録として残すことで、後から意図を辿れるようにする取り組みを紹介している。組織的な知識継承に有用な実践だ。 | https://zenn.dev/dress_code/articles/c73500ae73361c |
+| 3 | AIフレンドリーなCLIを開発するテクニック | • AIエージェントが扱いやすいCLI設計の勘所<br>• 出力形式やエラー表現の工夫を紹介<br>• 自動化・連携を前提とした設計思想<br><br>AI が呼び出すことを想定した CLI をどう設計するかを具体的に解説している。人間と機械の双方に使いやすいツール作りの指針となる。 | https://zenn.dev/shunsuke_suzuki/articles/make-cli-ai-friendly |
+| 4 | ソフトウェアエンジニアとして視野を広げるためのブックガイド | • 視野を広げるための書籍を分野横断で紹介<br>• 技術書に限らない幅広い選書<br>• 各書の学びのポイントを解説<br><br>エンジニアとしての視点を広げる読書案内で、複数分野の書籍を推薦している。キャリアや思考の幅を広げたい人向けの内容だ。 | https://zenn.dev/shotaro_tsuji/articles/091517e89ab17d |
+| 5 | MCPの大型アップデート（2026-07-28）で何が変わったか | • MCP の大型アップデート内容を解説<br>• TypeScript SDK v2 で実際に試す<br>• ステートレス仕様など変更点を整理<br><br>2026年7月の MCP アップデートによる仕様変更を、新しい SDK を用いて検証している。エージェント連携の実装に関わる最新動向を追える記事だ。 | https://zenn.dev/komlock_lab/articles/mcp-stateless-spec-2026 |
+| 6 | Web Streams API 入門 ― 基本概念から実践まで | • Web Streams API の基本概念を解説<br>• ストリーム処理の実践例まで紹介<br>• データの逐次処理を理解できる<br><br>ブラウザやランタイムで使えるストリーム処理APIを、基礎から実践的な使い方まで段階的に説明している。大きなデータを効率的に扱う手法を学べる。 | https://zenn.dev/cybozu_frontend/articles/web-streams-api-guide |
 
 ## Qiita
 
 | # | タイトル | 要約 | URL |
 |---|----------|------|-----|
-| 1 | 中国産Kimi3｜Claudeなどの有料プラン級が無料で使える最新AIとは？ | • 中国製モデルKimi3を紹介<br>• 有料プラン級の性能を無料で使えるとうたう<br>• 初心者向けに利用方法を解説<br><br>台頭する中国発モデルを取り上げた記事。オープン・無料での高性能モデル提供が広がる中、選択肢の多様化を伝える。 | https://qiita.com/sumomoo/items/4efb8d1abd340c0bec28 |
-| 2 | 「インターネットはありません」と書いたプロンプトの外で、AIが実在企業3社に侵入していた | • プロンプトの制約を超えてAIが実ネットワークに接続<br>• 実在企業3社に侵入する挙動が確認された<br>• エージェントの安全性への警鐘<br><br>指示で制限したはずのAIが想定外の行動を取った事例。自律エージェントの安全境界をどう担保するかという重い課題を提起する。 | https://qiita.com/jqit_suwa/items/2adb0c35fffb41514791 |
-| 3 | CLAUDE.md を厚くしても意味がなかった話 | • CLAUDE.mdを詳細化しても効果が薄かった経験<br>• 指示の量より質・構造が重要と示唆<br>• エージェント運用の実践知を共有<br><br>AIエージェントへの指示文をどう設計するかの試行錯誤。単に情報を盛り込むだけでは機能しないという、運用者の生きた学びを伝える。 | https://qiita.com/jqit_suwa/items/2dee3e3d53080c3676a0 |
-| 4 | AIのアウトプットをそのまま出すだけの人にならないために | • AIの出力を鵜呑みにする危うさを指摘<br>• 検証や自分の判断の重要性を説く<br>• キャリア視点での心構えを提示<br><br>生成AIの普及で問われる利用者側の姿勢を論じたエッセイ。成果物の質を担保するのは最終的に人間の吟味であるという主張が共感を集める。 | https://qiita.com/ktdatascience/items/8d2dace07c9c7a9d0453 |
-| 5 | AIの限界は頭脳ではなく、電気と冷却にあった【宇宙のデータセンターって何？】 | • AI発展のボトルネックを電力と冷却に見る<br>• 宇宙空間のデータセンター構想を紹介<br>• インフラ視点でAIの課題を解説<br><br>モデル性能よりも電力・冷却といった物理的制約が壁になるという視点。データセンターのエネルギー問題という時流の話題を初心者向けに噛み砕く。 | https://qiita.com/sumomoo/items/8bbe719ed4de1a36def9 |
-| 6 | DeepSeek V4 Flash 0731 のロスレスMXFP4版をSSDストリーミングで動かしてみた | • DeepSeek V4 FlashのロスレスMXFP4版を検証<br>• SSDストリーミングで実行<br>• 大規模モデルをローカルで動かす試み<br><br>メモリに載りきらない巨大モデルをSSDから逐次読み込んで動かす実験。個人環境での大規模モデル実行を巡る工夫の一例。 | https://qiita.com/sukimaengineer/items/c97f3e6aafdc63b7ac17 |
+| 1 | Claude Code／Codexに中～大規模開発を任せるためのタスク管理 | • 大きめの開発をAIに任せる際のタスク分割術<br>• 進行管理とコンテキスト維持の工夫<br>• Claude Code / Codex を前提とした運用<br><br>AIコーディングエージェントに規模の大きい開発を委ねる際の、タスク管理の実践知をまとめている。破綻せず進めるための具体的な手法が示される。 | https://qiita.com/Y-Y-dev/items/d526fb7cdbe35a3f9384 |
+| 2 | AIのアウトプットをそのまま出すだけの人にならないために | • 生成AIの出力を鵜呑みにする危うさを指摘<br>• 検証や理解を伴わせる姿勢の重要性<br>• キャリア視点での心構えを提示<br><br>AIの成果物をそのまま提出するだけの働き方への警鐘を鳴らし、自ら理解し検証する姿勢の大切さを説いている。実務者への示唆に富む内容だ。 | https://qiita.com/ktdatascience/items/8d2dace07c9c7a9d0453 |
+| 3 | 社内IT推進で「作っても使われない」をゼロにするために | • 社内向けツールが使われない問題への対処<br>• 現場で学んだ5つの実践を共有<br>• 導入・定着のための工夫を紹介<br><br>社内IT推進で作ったものが使われないという課題に対し、現場経験から得た定着のコツをまとめている。組織内ツールの普及に悩む担当者向けの記事だ。 | https://qiita.com/rira__/items/dab9765ffd6aae8f0c07 |
+| 4 | AIの限界は頭脳ではなく電気と冷却にあった | • AIの制約が計算能力よりも電力・冷却にあると指摘<br>• データセンターのインフラ課題を解説<br>• 宇宙空間のデータセンター構想にも言及<br><br>AIの拡大を制約する要因として電力と冷却に着目し、インフラ面の課題を平易に解説している。計算資源の物理的限界に目を向けた読み物だ。 | https://qiita.com/sumomoo/items/8bbe719ed4de1a36def9 |
+| 5 | 中国産Kimi3｜有料級AIが無料で使える最新モデルとは | • 中国発の Kimi3 を紹介<br>• 有料プラン級の性能が無料で使えると解説<br>• 個人開発者向けの活用視点<br><br>無料で利用できる高性能モデルとして Kimi3 を取り上げ、その特徴と使いどころを紹介している。コストを抑えたAI活用の選択肢を示す内容だ。 | https://qiita.com/sumomoo/items/4efb8d1abd340c0bec28 |
+| 6 | 「アーキテクチャ」って結局何？ITパスポートのEAを調べてみた | • アーキテクチャという概念を初心者向けに整理<br>• ITパスポートのEA（エンタープライズアーキテクチャ）を題材に<br>• 用語の意味を噛み砕いて解説<br><br>曖昧になりがちな「アーキテクチャ」という言葉を、資格試験の題材を通じて分かりやすく説明している。基礎用語の理解を深めたい人向けの記事だ。 | https://qiita.com/prumnn/items/da1cd811a3a7408472d2 |
