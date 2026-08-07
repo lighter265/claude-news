@@ -72,6 +72,8 @@ main() {
 
     assert_file "scripts/fetch_all.py"
     assert_file "feed-format.md"
+    assert_file "scripts/extract_local_llm.py"
+    assert_file "local-llm-format.md"
     assert_file "local/send_mail.py"
 
     log "ニュース取得開始"
@@ -125,6 +127,29 @@ main() {
         exit 1
     fi
 
+    # --- 追加機能: GitHub Trending のローカルLLM記事を全数要約 (feed.md には影響しない) ---
+    log "ローカルLLM記事抽出開始"
+    run python3 scripts/extract_local_llm.py
+
+    local llm_prompt="raw/local_llm_github.json を読み、local-llm-format.md の要約ルール・記法に従って生成し、feed-local-llm.md へ上書きしてください。"
+    log "ローカルLLM要約生成開始"
+    run timeout 1800 claude --model opus --dangerously-skip-permissions -p "$llm_prompt"
+
+    assert_file "feed-local-llm.md"
+    local llm_body
+    llm_body=$(cat feed-local-llm.md)
+    if [[ -z "${llm_body// }" ]]; then
+        log "feed-local-llm.md が空です。"
+        exit 1
+    fi
+    local expected_llm_title="# GitHub Trending — ローカルLLM記事 全数要約 — $today"
+    if [[ "$llm_body" != *"$expected_llm_title"* ]]; then
+        log "feed-local-llm.md に本日のタイトルがありません: $expected_llm_title"
+        exit 1
+    fi
+    log "ローカルLLM要約: 完了 (feed-local-llm.md)"
+    # --- ここまで追加機能 ---
+
     log "掲載URLをDBへ登録"
     run python3 scripts/register_seen.py
 
@@ -134,7 +159,7 @@ main() {
 
     if [[ "$TRY_MODE" == false ]]; then
         log "Git commit & push"
-        git add feed.md docs/
+        git add feed.md feed-local-llm.md docs/
         if git diff --cached --quiet; then
             log "差分なし、pushスキップ"
         else
