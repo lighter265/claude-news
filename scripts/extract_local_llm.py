@@ -52,15 +52,86 @@ KEYWORDS = [
     "llama-cpp",
 ]
 
+# モデル名（単独ではヒットさせない。LOCAL_HINTS との共起でローカルLLM記事と判定）
+MODEL_NAMES = [
+    "deepseek",
+    "qwen",
+    "gemma",
+    "phi",
+    "mistral",
+    "yi",
+    "glm",
+    "baichuan",
+    "internlm",
+    "minicpm",
+    "granite",
+    "olmo",
+    "nemotron",
+    "falcon",
+    "rwkv",
+    "mamba",
+    "dolphin",
+    "wizardlm",
+    "stablelm",
+    "codestral",
+    "devstral",
+    "gpt-oss",
+    "llama 3",
+    "llama3",
+    "llama 4",
+    "llama4",
+]
+
+# ローカル実行を示すヒント（モデル名との共起判定に使う）
+LOCAL_HINTS = [
+    "local",
+    "locally",
+    "ローカル",
+    "offline",
+    "オフライン",
+    "on-device",
+    "オンデバイス",
+    "self-host",
+    "selfhost",
+    "自前",
+    "手元",
+    "端末",
+    "自分のマシン",
+    "自分のpc",
+    "my machine",
+    "on your machine",
+    "run it yourself",
+    "run on your",
+    "ローカル実行",
+    "local run",
+    "runs locally",
+    "inference at home",
+    "home server",
+    "自宅",
+    "gguf",
+    "quantiz",
+]
+
 PATTERNS = [re.compile(re.escape(kw), re.IGNORECASE) for kw in KEYWORDS]
+MODEL_PATTERNS = [re.compile(r"\b" + re.escape(name) + r"\b", re.IGNORECASE) for name in MODEL_NAMES]
+LOCAL_PATTERNS = [re.compile(re.escape(hint), re.IGNORECASE) for hint in LOCAL_HINTS]
 
 
 def is_local_llm(article):
-    """タイトルと説明(extra)のどちらかにキーワードが含まれれば候補。"""
+    """タイトルと説明(extra)で判定。
+
+    1. 直接キーワード (ollama / llama.cpp / gguf 等) に一致 → ヒット
+    2. モデル名 (deepseek / qwen 等) とローカルヒント (local / ローカル 等) が
+       両方含まれる → ヒット（例: 「DeepSeek V4 284Bをローカルで動かせる！」）
+    """
     haystack = " ".join(
         filter(None, [article.get("title"), article.get("extra")])
     )
-    return any(p.search(haystack) for p in PATTERNS)
+    if any(p.search(haystack) for p in PATTERNS):
+        return True
+    has_model = any(p.search(haystack) for p in MODEL_PATTERNS)
+    has_local = any(p.search(haystack) for p in LOCAL_PATTERNS)
+    return has_model and has_local
 
 
 def main():
