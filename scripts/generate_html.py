@@ -7,6 +7,7 @@ from datetime import datetime
 
 REPO = Path(__file__).resolve().parent.parent
 FEED_MD = REPO / "feed.md"
+FEED_LLM_MD = REPO / "feed-local-llm.md"
 
 
 def parse_feed(md_text: str) -> dict:
@@ -125,30 +126,17 @@ def build_breadcrumb(date_str: str) -> str:
     )
 
 
-def build_html(result: dict, date_str: str) -> str:
-    """result: {"highlights": [...], "sections": {...}}"""
-    highlights = result.get("highlights", [])
-    sections = result.get("sections", {})
-
-    # 📌 今日の3行サマリ ボックス
-    highlights_html = ""
-    if highlights:
-        items_html = "".join(f"<li>{escape_html(h)}</li>" for h in highlights)
-        highlights_html = (
-            f'<section class="highlights" aria-label="今日の3行サマリ">\n'
-            f'  <h2>📌 今日の3行サマリ</h2>\n'
-            f'  <ul>{items_html}</ul>\n'
-            f'</section>\n'
-        )
-
+def render_tables(sections: dict, header_class: str = "", title_prefix: str = "") -> str:
+    """セクション dict をテーブル HTML に変換。header_class で見た目を変えられる。"""
     tables = ""
     for sec_name, items in sections.items():
         if not items:
             continue
+        header_attr = f' class="section-header{" " + header_class if header_class else ""}"'
         tables += '<table>\n'
         tables += (
             f'<thead>'
-            f'<tr class="section-header"><th colspan="3">{escape_html(sec_name)}</th></tr>'
+            f'<tr{header_attr}><th colspan="3">{escape_html(title_prefix + sec_name)}</th></tr>'
             f'<tr class="sub-header"><th class="num">#</th>'
             f'<th>タイトル</th>'
             f'<th class="link-col">🔗</th></tr>'
@@ -177,6 +165,31 @@ def build_html(result: dict, date_str: str) -> str:
                     f"</tr>\n"
                 )
         tables += '</tbody>\n</table>\n'
+    return tables
+
+
+def build_html(result: dict, date_str: str, llm_sections: dict | None = None) -> str:
+    """result: {"highlights": [...], "sections": {...}} に加え、
+    llm_sections (feed-local-llm.md 由来) をテーブル群の末尾に合体する。"""
+    highlights = result.get("highlights", [])
+    sections = result.get("sections", {})
+
+    # 📌 今日の3行サマリ ボックス
+    highlights_html = ""
+    if highlights:
+        items_html = "".join(f"<li>{escape_html(h)}</li>" for h in highlights)
+        highlights_html = (
+            f'<section class="highlights" aria-label="今日の3行サマリ">\n'
+            f'  <h2>📌 今日の3行サマリ</h2>\n'
+            f'  <ul>{items_html}</ul>\n'
+            f'</section>\n'
+        )
+
+    tables = render_tables(sections)
+    if llm_sections:
+        tables += render_tables(
+            llm_sections, header_class="local-llm", title_prefix="🤖 "
+        )
 
     breadcrumb = build_breadcrumb(date_str)
 
@@ -204,6 +217,7 @@ def build_html(result: dict, date_str: str) -> str:
   .section-title {{ font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }}
   table {{ width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }}
   thead .section-header th {{ background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }}
+  thead .section-header.local-llm th {{ background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }}
   thead .sub-header th {{ background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }}
   tbody td {{ padding: 10px 14px; vertical-align: top; }}
   .num {{ width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }}
@@ -274,6 +288,12 @@ def main():
     md_text = FEED_MD.read_text(encoding="utf-8")
     result = parse_feed(md_text)
 
+    # ローカルLLM要約 (feed-local-llm.md) があれば合体。無い/空の場合は何も表示しない
+    llm_sections = {}
+    if FEED_LLM_MD.exists():
+        llm_text = FEED_LLM_MD.read_text(encoding="utf-8")
+        llm_sections = parse_feed(llm_text).get("sections", {})
+
     date_match = re.search(r"(\d{4}-\d{2}-\d{2})", md_text)
     date_str = date_match.group(1) if date_match else datetime.now().strftime("%Y-%m-%d")
 
@@ -281,7 +301,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     out_file = out_dir / f"{date_str}.html"
 
-    html = build_html(result, date_str)
+    html = build_html(result, date_str, llm_sections=llm_sections)
     out_file.write_text(html, encoding="utf-8")
     print(f"Generated {out_file} ({len(html)} bytes)")
 
