@@ -1,4 +1,4 @@
-"""8 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。"""
+"""9 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。"""
 import importlib
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -14,6 +14,7 @@ SOURCES = [
     "hatena",
     "zenn",
     "qiita",
+    "reddit_local_llm",
 ]
 
 
@@ -40,6 +41,14 @@ def main():
                 failures.append(name)
                 print(f"[FAIL] {name}: {e}")
                 traceback.print_exc()
+                if name == "reddit_local_llm":
+                    # 前回のRSSが残っていると失敗時に古い投稿を要約してしまうため、
+                    # Redditだけは空結果に置き換えてGitHub分の生成を継続する。
+                    path = save_raw(name, [])
+                    print(
+                        f"[WARN] {name}: {type(e).__name__}: {e}; "
+                        f"empty result written -> {path}"
+                    )
 
     print(f"--- done. {total} items, {len(failures)} source(s) failed: {failures or 'none'} ---")
 

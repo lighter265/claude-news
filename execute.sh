@@ -73,6 +73,7 @@ main() {
     assert_file "scripts/fetch_all.py"
     assert_file "feed-format.md"
     assert_file "scripts/extract_local_llm.py"
+    assert_file "scripts/fetch_reddit_local_llm.py"
     assert_file "local-llm-format.md"
     assert_file "local/send_mail.py"
 
@@ -94,7 +95,7 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。特に📌今日の3行サマリでは、Anthropic と OpenAI の記事を絶対に選ばないこと（ルール違反は厳禁）。"
+    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。ただし raw/reddit_local_llm.json はローカルLLM専用データなので、通常の feed.md には絶対に参照・掲載しないでください。特に📌今日の3行サマリでは、Anthropic と OpenAI の記事を絶対に選ばないこと（ルール違反は厳禁）。"
     log "要約生成開始"
 
     #run timeout 1800 claude -p "$prompt"
@@ -131,7 +132,7 @@ main() {
     log "ローカルLLM記事抽出開始"
     run python3 scripts/extract_local_llm.py
 
-    local llm_prompt="raw/local_llm_github.json を読み、local-llm-format.md の要約ルール・記法に従って生成し、feed-local-llm.md へ上書きしてください。"
+    local llm_prompt="raw/local_llm_github.json と raw/reddit_local_llm.json を読み、local-llm-format.md の要約ルール・記法に従って生成し、feed-local-llm.md へ上書きしてください。GitHubとRedditは必ず別セクションにしてください。"
     log "ローカルLLM要約生成開始"
     run timeout 1800 claude --model opus --dangerously-skip-permissions -p "$llm_prompt"
 

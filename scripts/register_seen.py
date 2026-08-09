@@ -10,6 +10,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "local", "seen_urls.db")
 RAW_DIR = os.path.join(REPO, "raw")
 FEED_PATH = os.path.join(REPO, "feed.md")
+FEED_LLM_PATH = os.path.join(REPO, "feed-local-llm.md")
+FEED_PATHS = (FEED_PATH, FEED_LLM_PATH)
 
 
 def init_db(conn):
@@ -65,8 +67,9 @@ def extract_urls(feed_path):
 
 
 def main():
-    if not os.path.exists(FEED_PATH):
-        print("[register] feed.md not found, skip.")
+    existing_feed_paths = [path for path in FEED_PATHS if os.path.exists(path)]
+    if not existing_feed_paths:
+        print("[register] feed.md/feed-local-llm.md not found, skip.")
         return
 
     # CIFS filesystem では fcntl locking 非対応のため nolock=1 を使用
@@ -74,7 +77,13 @@ def main():
     init_db(conn)
 
     raw_index = load_raw_index()
-    urls = extract_urls(FEED_PATH)
+    # 通常ニュースに加え、feed-local-llm.md のReddit/GitHub記事も登録する。
+    # 同一URLが両方のフィードに出る場合は1回だけ更新する。
+    urls = list(dict.fromkeys(
+        url
+        for path in existing_feed_paths
+        for url in extract_urls(path)
+    ))
     today = date.today().isoformat()
 
     for url in urls:
