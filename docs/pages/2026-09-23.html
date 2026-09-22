@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-09-23</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-09-23</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-09.html">2026年9月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-09-23</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>日本の古書店に海外からの大量注文が相次ぎ、AI 学習目的とみられる「日本の本 50 トン」の対米輸出記録も確認されたとする報道が、はてなブックマークで 541 users とこの日の最上位を占めた。</li><li>TypeSafe の判断特化モデル「Jev」をめぐる記事は Zenn と Qiita の上位を占め続けており、入門・解説から「ハーネスをどう設計するか」「他の手段とどう使い分けるか」へと論点が移っている。</li><li>Hacker News では、活動ログを構造的に保持できないとうたう VPN「Obscura」が 62 ポイント・56 コメントを集め、仕組みの検証可能性をめぐる議論が集中した。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Agent-Native — エージェントと UI を同じ定義から作る TypeScript フレームワーク（原文: BuilderIO/agent-native）</td><td class="link-col"><a href="https://github.com/BuilderIO/agent-native" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 機能を「action」として一度定義すると、エージェントはツールとして、UI はコードから呼び出せる。<br>• 自律的な処理と専用 UI を組み合わせたアプリを想定した構成をとる。<br>• `npx @agent-native/core create` でチャットテンプレートから開始できる。<br><br>エージェント向けのツール定義と画面側の実装は、同じ機能を二重に記述する形になりやすい。定義を一本化する方式は、その重複と齟齬を減らす方向の設計といえる。UI を伴うエージェントでは処理の可視化が利用者の信頼に直結するため、この層の整備は実務上の論点になる。</td></tr>
+<tr><td class="num">2</td><td class="title">cua — コンピュータ操作エージェント向けのオープンソース基盤（原文: trycua/cua）</td><td class="link-col"><a href="https://github.com/trycua/cua" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• デスクトップ自動化、隔離されたクラウドデスクトップ、ローカルの macOS VM を組み合わせて提供する。<br>• 学習・評価・データ生成に向けたクロス OS のフリートとベンチマークを備える。<br>• 小型の意思決定モデル CUA-S1 と、Linux デスクトップを即時に用意する Cua Fleets を入口として示している。<br><br>コンピュータ操作型エージェントは、実行環境を隔離しないと副作用が読みにくいという課題がある。VM とクラウドデスクトップを標準の実行単位として扱う構成は、その隔離を前提に据える設計にあたる。評価用ベンチマークを同梱する点は、手法の比較可能性を高める材料になる。</td></tr>
+<tr><td class="num">3</td><td class="title">ai-memory — コーディングエージェント間で文脈を引き継ぐ長期記憶（原文: akitaonrails/ai-memory）</td><td class="link-col"><a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code を途中で終了し、同じディレクトリで OpenAI Codex を起動しても説明をやり直さずに続けられることを目標に掲げる。<br>• アーキテクチャ、失敗した方針、未解決の論点を作業の外側に保存する。<br>• 各エージェントが持つ個別のメモリ機能とは別に、ベンダー横断の引き継ぎを担うと位置づける。<br><br>コーディングエージェントの記憶は製品ごとに形式が異なり、乗り換えのたびに文脈の再入力が発生しやすい。共有可能な形で記憶を外に置く構成は、その再入力コストを下げる方向にある。一方で、保存内容にどこまで機微な情報を含めるかは運用側の設計事項になる。</td></tr>
+<tr><td class="num">4</td><td class="title">Coder — 開発者とエージェントのための自己ホスト型開発環境（原文: coder/coder）</td><td class="link-col"><a href="https://github.com/coder/coder" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ワークスペースを Terraform で定義し、WireGuard トンネル経由で接続する。<br>• 未使用時には自動で停止する仕組みを備える。<br>• 人間の開発者と AI コーディングエージェントの双方を、同じ隔離環境の利用者として扱う。<br><br>エージェントにコードを触らせる運用では、実行場所とアクセス範囲の管理が前提条件になる。既存の開発環境基盤をエージェントの実行先としても扱う構成は、権限管理の仕組みを共通化する方向にあたる。自己ホストである以上、基盤自体の運用負荷は利用側が引き受けることになる。</td></tr>
+<tr><td class="num">5</td><td class="title">quiche — QUIC と HTTP/3 の実装（原文: cloudflare/quiche）</td><td class="link-col"><a href="https://github.com/cloudflare/quiche" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• IETF 仕様に沿った QUIC トランスポートと HTTP/3 の実装を提供する。<br>• パケット処理と接続状態の管理を担う低レベル API という位置づけをとる。<br>• ソケット処理やイベントループはアプリケーション側の責務として切り離している。<br><br>QUIC の実装はトランスポート層の複雑さを抱えるため、自前で書き起こす負担が大きい領域にあたる。I/O を呼び出し側に委ねる設計は、組み込み先を選ばない代わりに利用側の実装量が増える構成といえる。採用の判断は、既存のネットワーク層との接続方法に左右される。</td></tr>
+<tr><td class="num">6</td><td class="title">MVT — モバイル端末の侵害痕跡を調べるフォレンジックツール（原文: mvt-project/mvt）</td><td class="link-col"><a href="https://github.com/mvt-project/mvt" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• モバイル端末のフォレンジックを行い、侵害の兆候を探す用途に向けた道具立て。<br>• 「v3」ブランチがマージされ、互換性のない変更が入ったと告知されている。<br>• 出力を他のスクリプトから利用している場合は動作しなくなる可能性があると注意している。<br><br>標的型のモバイル監視をめぐる調査では、端末側に残る痕跡の検証が中心的な手段になってきた。破壊的変更の告知が前面に置かれている点は、既存の自動化を組んでいる利用者に対する実務上の注意喚起にあたる。更新前に出力形式の差分を確認する必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">Project NOMAD — オフライン前提の知識・教育サーバー（原文: Crosstalk-Solutions/project-nomad）</td><td class="link-col"><a href="https://github.com/Crosstalk-Solutions/project-nomad" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Wikipedia、多数の書籍、講座、地図をインターネット接続なしで利用できる形にまとめる。<br>• ローカル AI を任意構成として組み込める。<br>• 手元のハードウェア上で完結して動作することを設計方針に掲げる。<br><br>通信が不安定な環境や災害時には、クラウド前提の情報基盤が使えなくなる場面がある。知識の集合を丸ごと手元に置く構成は、その前提を外す試みといえる。反面、収録内容の更新をどう維持するかは運用上の課題として残る。</td></tr>
+<tr><td class="num">8</td><td class="title">Codex-X — OpenAI Codex 向けの設定可視化ツール（原文: yynxxxxx/Codex-X）</td><td class="link-col"><a href="https://github.com/yynxxxxx/Codex-X" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• プロンプトテンプレート、API 供給元の切り替え、セッション同期を一つの画面に集約する。<br>• Skills / MCP の管理と TOML 設定の可視化に対応する。<br>• デスクトップ版と CLI をまたいだクロスプラットフォームのツールとして提供される。<br><br>エージェント CLI の設定は、プロンプト、認証情報、拡張機能が別々のファイルに分散しやすい。現在の状態を一画面で確認できる構成は、設定の追跡にかかる手間を減らす方向にある。第三者製の管理ツールに認証情報を扱わせる点は、導入時の確認事項になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">活動ログを保持できない VPN「Obscura」 — (原文: Obscura: The first VPN that can't log your activity)</td><td class="link-col"><a href="https://obscura.com/#faq-technical" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 事業者が利用者の通信内容を記録できない構造だとうたう VPN サービス。<br>• 技術的な仕組みを FAQ で説明する形をとっている。<br>• 62 ポイント・56 コメントで、この日の Hacker News の首位にあたる。<br><br>VPN の「ノーログ」表明は従来、事業者の方針宣言として提示されることが多く、外部からの検証が難しい領域だった。構造上記録できないという主張は検証の焦点を実装に移す一方で、その実装自体を確かめる手段が問われる。コメント数が点数に比して多く、評価が定まっていない様子がうかがえる。</td></tr>
+<tr><td class="num">2</td><td class="title">TypeScript と CSS で書くネイティブアプリ — (原文: Native apps written in TypeScript and CSS)</td><td class="link-col"><a href="https://github.com/geastack/examples" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Web 向けの記述でネイティブアプリを構築する手法のサンプル集。<br>• GitHub 上のサンプルリポジトリとして公開されている。<br>• 41 ポイント・9 コメントで、この日の 2 位にあたる。<br><br>Web 技術によるアプリ開発は、記述の手軽さと実行性能の間で長く議論が続いてきた領域である。実装例を示す形は、その兼ね合いを具体的に検討する材料になる。実際の性能や対応範囲は、サンプルの内容と対象プラットフォームを確認して判断する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">No Sloptober — 生成物の質を問い直すキャンペーン — (原文: No Sloptober)</td><td class="link-col"><a href="https://no-sloptober.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI が生成した粗雑な成果物、いわゆる「スロップ」を扱う告知サイト。<br>• 特定の月に取り組みを集中させる形式をとる。<br>• 35 ポイント・15 コメントを集めている。<br><br>生成 AI の普及に伴い、量は増えたが質が伴わない成果物への問題意識が各所で表明されるようになっている。期間を区切った呼びかけは、その意識を可視化する形式といえる。実際にどの程度の参加があるかは今後の反応次第となる。</td></tr>
+<tr><td class="num">4</td><td class="title">より高速な最短経路アルゴリズム — (原文: A Faster Shortest Path Algorithm)</td><td class="link-col"><a href="https://www.vals.ai/blogs/faster-shortest-path-algorithm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 最短経路探索の高速化を扱う解説記事。<br>• アルゴリズム研究の成果を実装の観点から整理している。<br>• 28 ポイント・5 コメントを集めている。<br><br>最短経路探索は経路案内やネットワーク設計で広く使われ、計算量の改善が実務に波及しやすい分野にあたる。古典的な問題であるだけに、新しい手法は前提条件の確認が重要になる。適用範囲やグラフの性質による制約は、原文での確認が要る。</td></tr>
+<tr><td class="num">5</td><td class="title">2007 年に終了した FoxPro を現代に復活させる — (原文: Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived)</td><td class="link-col"><a href="https://foxscript.org/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft が 2007 年に開発を終了した FoxPro を再実装する試み。<br>• 「foxscript」として公開されている。<br>• 23 ポイント・4 コメントを集めている。<br><br>業務システムでは開発終了後も動き続ける処理系が残り、移行先の確保が課題になりやすい。過去の言語を現代環境で再実装する動きは、その延命と再検討の双方の側面を持つ。実運用への適用は、互換性の範囲を個別に確かめる作業が前提になる。</td></tr>
+<tr><td class="num">6</td><td class="title">JavaScript の中年の危機 — (原文: The JavaScript Midlife Crisis)</td><td class="link-col"><a href="https://maroun-baydoun.com/blog/javascript-midlife-crisis/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• JavaScript エコシステムの現状を振り返る論考。<br>• ツールチェーンの入れ替わりの速さを主題として扱う。<br>• 14 ポイント・5 コメントを集めている。<br><br>フロントエンド開発では、数年単位で標準的な構成が入れ替わる状況が続いてきた。その変化の速度自体を問い直す議論は定期的に現れており、今回もその流れに位置づけられる。個別の技術選定の是非とは別に、保守期間の見積もりという実務的な論点を含む。</td></tr>
+<tr><td class="num">7</td><td class="title">人間の脳は二つの独立した器官だとする研究 — (原文: The human brain is two separate organs, study finds)</td><td class="link-col"><a href="https://news.stanford.edu/stories/2026/09/human-brain-two-separate-organs" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Stanford 大学の発表として報じられた神経科学の研究紹介。<br>• 脳を単一の器官として捉える従来の見方に対する問題提起を含む。<br>• 12 ポイント・3 コメントを集めている。<br><br>脳の構造理解は、神経科学だけでなく計算モデルの設計思想にも参照されてきた経緯がある。大きな枠組みの見直しを示す研究は注目を集めやすい一方、査読と追試を経て評価が定まる性質のものでもある。原論文の主張範囲は発表元での確認が要る。</td></tr>
+<tr><td class="num">8</td><td class="title">AI 企業の経営層が抱える法的責任のリスク — (原文: AI Leaders Are Standing on a Liability Landmine)</td><td class="link-col"><a href="https://www.wsj.com/tech/ai/ai-leaders-are-standing-on-a-liability-landmine-736a8060" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Wall Street Journal による、AI 事業の法的責任をめぐる分析記事。<br>• 経営層が負いうる責任の所在を主題とする。<br>• 8 ポイント・3 コメントを集めている。<br><br>AI による出力が損害につながった場合の責任配分は、各国で法整備の途上にある論点である。事業者側の意思決定と責任の関係を扱う記事は、導入企業にとっても契約条件を考える材料になる。購読が必要な媒体であり、詳細は原文での確認が前提になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Accenture と組み込み型評価で提携 — (原文: Partnering with Accenture on embedded evaluation)</td><td class="link-col"><a href="https://www.anthropic.com/news/accenture-embedded-evaluation" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic が Accenture と、評価を業務に組み込む「embedded evaluation」で提携すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 企業導入時にモデルの挙動を評価する体制づくりが主題とみられる。<br><br>企業が AI を導入する際、汎用のベンチマークだけでは自社業務での品質を判断しにくい。コンサルティング企業と組んで評価を現場に組み込む形は、導入後の品質管理を支える方向にあたる。具体的な評価手法や対象業界は、告知本文で確認する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">ライフサイエンス検証プログラムを開始 — (原文: Introducing the Life Sciences Verification Program)</td><td class="link-col"><a href="https://www.anthropic.com/news/life-sciences-verification-program" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ライフサイエンス分野を対象とした検証プログラムの開始が発表された。<br>• Announcements カテゴリの告知である。<br>• 科学者支援の拡充や生物分野の安全対策に続く取り組みと位置づけられる。<br><br>生命科学での AI 活用は研究を加速させる期待がある一方、生物学的リスクへの配慮が欠かせない。利用者や用途を検証する仕組みを設けることで、正当な研究利用と安全対策の両立を図る狙いとみられる。対象者の要件や審査の方法は本文での確認が要る。</td></tr>
+<tr><td class="num">3</td><td class="title">顧客とともに企業向けフロンティア保護策を整備 — (原文: Developing Enterprise Frontier Safeguards with our customers)</td><td class="link-col"><a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 企業顧客と協働してフロンティアモデル向けの保護策を整備する取り組みの告知。<br>• Announcements カテゴリで公開されている。<br>• 導入企業側の運用実態を踏まえた設計を志向しているとみられる。<br><br>安全対策を提供者側だけで設計すると、実際の業務フローに合わず形骸化しやすい。顧客との協働を明示する形は、その乖離を埋める方向にあたる。どの範囲の顧客が関与し、成果がどう公開されるかは今後の情報を待つことになる。</td></tr>
+<tr><td class="num">4</td><td class="title">アラインメントとセキュリティの取り組みを強化 — (原文: Improving our alignment and security efforts)</td><td class="link-col"><a href="https://www.anthropic.com/news/improving-alignment-security-efforts" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• アラインメントとセキュリティに関する体制の改善を扱う Announcements カテゴリの告知。<br>• モデルの挙動面と、組織のセキュリティ面を併せて扱う内容とみられる。<br>• Enterprise Frontier Safeguards の告知と近い時期に公開されている。<br><br>モデル能力の向上に伴い、意図しない挙動と外部からの攻撃の双方が運用上のリスクとして扱われるようになっている。両者を一体の取り組みとして示す構成は、対策を分けて語りにくくなった状況を反映している。具体的な施策の内容は本文で確認する必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">Model Hardware Standard のプレビュー公開 — (原文: Previewing the Model Hardware Standard)</td><td class="link-col"><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• モデルを動かすハードウェアに関する標準の研究プレビューを公開した。<br>• Announcements カテゴリの告知として扱われている。<br>• 推論基盤側の要件整理に踏み込む内容とみられる。<br><br>モデルの安全性はソフトウェア側の対策だけでなく、実行環境の構成にも左右される。ハードウェア側の標準を提示する動きは、対策の範囲を基盤層まで広げる試みといえる。研究プレビューの段階であり、業界標準として定着するかは今後の受容次第である。</td></tr>
+<tr><td class="num">6</td><td class="title">科学者への支援を拡充 — (原文: Expanding our support for scientists)</td><td class="link-col"><a href="https://www.anthropic.com/news/expanding-support-for-scientists" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 研究者に向けた支援の拡充を扱う Announcements カテゴリの告知。<br>• ライフサイエンス検証プログラムと連続する文脈に位置づけられる。<br>• 対象分野や支援の形態は本文で示されている。<br><br>科学研究での AI 活用は、文献調査からデータ解析まで適用範囲が広がりつつある。提供側が支援枠を設ける動きは、研究用途での利用を制度として整える方向にあたる。支援の条件と対象者の範囲は、応募前の確認事項になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">GPT-6 のプロンプトキャッシュを改善 — (原文: Better prompt caching for GPT-6)</td><td class="link-col"><a href="https://openai.com/index/better-prompt-caching-for-gpt-6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 におけるプロンプトキャッシュの改善を Product カテゴリで告知した。<br>• この日の OpenAI ブログで最も新しい記事にあたる。<br>• 繰り返し送信される前置き部分の扱いが主題とみられる。<br><br>長いシステムプロンプトやツール定義を毎回送る構成では、キャッシュの効き方が費用と応答時間の双方を左右する。キャッシュ機構の改善は、エージェント用途のように同じ前置きを反復する使い方で効果が出やすい。実際の削減幅は利用パターンに依存するため、本文の条件を確認する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">GPT-6 Sol と Luna を発表 — (原文: Introducing GPT-6 Sol and Luna)</td><td class="link-col"><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 系列に Sol と Luna の 2 モデルを追加したと Product カテゴリで発表した。<br>• 同日公開のプロンプトキャッシュ改善と近い時間帯の告知である。<br>• Hacker News でも、費用対効果の観点から取り上げる記事が投稿されている。<br><br>モデル系列の分岐は、用途ごとに費用と性能の組み合わせを選べるようにする動きとして定着しつつある。二つの名称を同時に示す構成からは、異なる特性を並列に提供する意図がうかがえる。位置づけの違いと価格体系は、発表本文での確認が前提になる。</td></tr>
+<tr><td class="num">3</td><td class="title">第三者評価に向けた優先事項と原則 — (原文: Priorities and principles for effective third party assessments)</td><td class="link-col"><a href="https://openai.com/index/priorities-principles-third-party-assessments" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 外部機関によるモデル評価のあり方を Safety カテゴリで整理した記事。<br>• 評価の実効性を高めるための優先順位と原則を示す構成をとる。<br>• 評価者側との関係づくりが主題に含まれるとみられる。<br><br>提供者自身による評価だけでは、安全性の主張を外部から確かめることが難しい。第三者評価の枠組みを提供者側から提案する構図は、その検証可能性をめぐる議論の一部にあたる。提案された原則が独立性をどこまで担保するかは、読み手が判断する部分になる。</td></tr>
+<tr><td class="num">4</td><td class="title">数学と人工知能に関する諮問グループ — (原文: Advisory Group on Mathematics and Artificial Intelligence)</td><td class="link-col"><a href="https://openai.com/index/advisory-group-on-mathematics-and-ai" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 数学と AI をめぐる諮問グループの設置を Company カテゴリで発表した。<br>• 外部の数学者を交えた検討体制とされている。<br>• 国内では、内部モデルが未解決問題を 100 件超解いたとする報道とあわせて取り上げられた。<br><br>数学的推論はモデルの能力評価で中心的な指標とされる一方、評価方法そのものへの議論も続いてきた。専門家による諮問の場を設ける動きは、その評価の枠組みを外部の目で整える方向にあたる。未解決問題の解決数は定義と検証方法に左右されるため、一次情報での確認が要る。</td></tr>
+<tr><td class="num">5</td><td class="title">Higgsfield AI が GPT-6 Astra で動画機能を 1 日で出荷 — (原文: Higgsfield AI ships new video features in a day with GPT-6 Astra)</td><td class="link-col"><a href="https://openai.com/index/higgsfield-from-prompt-to-production-with-astra" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 動画生成を手がける Higgsfield AI の導入事例を Startup カテゴリで紹介している。<br>• 新機能の開発期間を 1 日としている点を前面に出している。<br>• 同名のプロジェクトが GitHub Trending にも登場している。<br><br>開発速度を訴求する事例記事は、対象となった機能の規模が示されないと比較が難しい。それでも、既存機能の周辺を素早く拡張する用途で使われている様子は読み取れる。提供元による発表のため、数値は前提条件と併せて読む必要がある。</td></tr>
+<tr><td class="num">6</td><td class="title">AI の次の段階に向けた標準づくり — (原文: Building standards for the next phase of AI)</td><td class="link-col"><a href="https://openai.com/index/building-standards-next-phase-ai" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI をめぐる標準の整備について論じる Global Affairs カテゴリの記事。<br>• 規制と業界標準の関係を扱う内容とみられる。<br>• 第三者評価に関する Safety カテゴリの記事と近い時期に公開されている。<br><br>各国で規制の枠組みが個別に進む状況では、事業者側の標準化の主張も影響力を持つ。提供者自身が標準を論じる構図は、その主張の位置づけを読み手が判断する必要がある場面にあたる。同時期に Anthropic もハードウェア標準のプレビューを公開しており、標準づくりが各社の論点になりつつある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Athena コアリション、オープンソースセキュリティに協調的な防衛体制</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/athena-security-coalition/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オープンソースのセキュリティ分野で協調的な防衛体制を構築する連合体の発足を伝える。<br>• 個別プロジェクト単位ではなく、横断的な取り組みとして位置づけられる。<br>• 記事は Matt Saunders による寄稿である。<br><br>オープンソースの脆弱性対応は、保守者が少数にとどまるプロジェクトほど負荷が集中しやすい構造にある。複数の関係者が枠組みを共有する形は、その偏りを緩和する方向にあたる。実効性は参加組織の範囲と資金の継続性に左右される。</td></tr>
+<tr><td class="num">2</td><td class="title">Foundry Model Router、対応リージョンを 2 から 28 に拡大</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/foundry-model-router-regions/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft の Foundry Model Router が対応リージョンを 2 地域から 28 地域へ広げた。<br>• 振り分け対象となるモデルプールも刷新された。<br>• 記事は Steef-Jan Wiggers による寄稿である。<br><br>複数モデルを使い分ける構成では、リクエストをどのモデルに送るかの判断を基盤側に委ねる方式が広がりつつある。提供リージョンの拡大は、データの所在に制約がある用途での採用条件に直接関わる。実際の振り分け基準と費用への影響は、提供元の資料での確認が要る。</td></tr>
+<tr><td class="num">3</td><td class="title">AWS が DevOps エージェントを拡張、本番投入前のコード検証を追加</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/aws-devops-ai-agent/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS の DevOps エージェントに AI を用いたリリース管理機能が加わった。<br>• 本番環境への投入前にコードを検証する工程を担う。<br>• 記事は Craig Risi による寄稿である。<br><br>生成 AI によるコード作成量の増加は、レビューとリリース前検証を相対的な制約条件に変えつつある。検証工程をエージェント側に寄せる構成は、その滞留を減らす方向にあたる。自動検証の網羅性には限界があるため、既存のテスト体制との役割分担が論点になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">古書店に「謎の大量注文」相次ぐ、AI 学習目的か（541 users）</td><td class="link-col"><a href="https://news.ntv.co.jp/category/society/e48899c1ab1445f683929740ef2b3aa6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 日本の古書店に海外からとみられる大量注文が相次いでいると日テレ NEWS が報じた。<br>• 米国向けに「日本の本 50 トン」を輸出した記録も確認されたとしている。<br>• AI の学習用データ収集が背景にあるのではないかという見方を紹介している。<br><br>学習データの確保が難しくなるなかで、デジタル化されていない紙の資料に注目が集まる可能性は以前から指摘されてきた。購入という形をとる以上、著作権上の扱いは電子データの収集とは異なる論点を含む。現時点では注文主も目的も確認されておらず、報道は状況証拠の提示にとどまる。</td></tr>
+<tr><td class="num">2</td><td class="title">思考の外注割合を増やし、理解は外注しない（243 users）</td><td class="link-col"><a href="https://konifar-zatsu.hatenadiary.jp/entry/2026/09/22/112134" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI にどこまで任せるかを「思考」と「理解」に分けて整理した個人ブログの記事。<br>• 作業の外注割合は増やしてよいが、理解は手放さないという線引きを示す。<br>• はてなブックマークで 243 users を集め、この日の 2 位にあたる。<br><br>AI 支援の常用が進むにつれ、成果物は出るが内容を説明できないという状態への懸念が語られるようになっている。任せる対象を切り分ける枠組みは、その懸念に対する実務的な整理として受け取られたとみられる。線引きの位置は職種や状況によって変わるため、一律の基準にはなりにくい。</td></tr>
+<tr><td class="num">3</td><td class="title">tanteki — 業務文書をより端的にするツール（184 users）</td><td class="link-col"><a href="https://iwasa-kosui.github.io/tanteki/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 業務で使う文書を簡潔にすることを目的とした Web ツール。<br>• ブラウザ上で文章を読み込んで解析する構成をとる。<br>• ドキュメントや文章術の文脈でブックマークされている。<br><br>業務文書は形式的な記述が積み重なり、要点が読み取りにくくなりやすい。簡潔化を支援するツールは、その読み手側の負担に着目した道具立てといえる。業務文書を外部ツールに読み込ませる場合、取り扱う情報の範囲は利用前に確認する必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">ホームページに還ろう（118 users）</td><td class="link-col"><a href="https://kitasenjudesign.com/zine/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 個人サイトを作る文化を振り返るデザイン系の ZINE 記事。<br>• HTML を直接書く体験を主題に据えている。<br>• 技術・デザイン双方のタグでブックマークされている。<br><br>Web の表現がプラットフォーム上に集約されるなかで、個人が自分の場所を持つことの意味が改めて語られている。制作の手間を含めて肯定する論調は、効率の観点とは別の評価軸を提示するものといえる。実際に運用を続けるには、維持の手間をどう扱うかという現実的な問題が残る。</td></tr>
+<tr><td class="num">5</td><td class="title">「AI は意識を持ち得ない」SF 作家から Anthropic へのメッセージ（109 users）</td><td class="link-col"><a href="https://que.dailyshincho.jp/node/20880/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 世界的な SF 作家による、AI の意識をめぐる主張を紹介した記事。<br>• Anthropic 宛てのメッセージという形式をとって伝えられている。<br>• 哲学・人工知能・人権のタグでブックマークされている。<br><br>モデルの内面性をめぐる議論は、技術的な検証が難しい一方で、制度設計や利用者の受け止めに影響を与える論点にあたる。文学の側からの発言は、その議論の枠組み自体を問い直す位置にある。主張の当否は確かめようがなく、読み手の立場によって評価が分かれる。</td></tr>
+<tr><td class="num">6</td><td class="title">Jev で AI エージェントのハーネスはどう変わるのか（83 users）</td><td class="link-col"><a href="https://note.com/npaka/n/ne4547ea3c6f5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 判断だけを返すモデル Jev がエージェント構成に与える影響を論じた note 記事。<br>• ハーネス、すなわちモデル周辺の制御部分の設計変更を主題とする。<br>• Zenn や Qiita の Jev 関連記事と同じ論点を扱っている。<br><br>Jev をめぐる記事は当初の解説中心から、既存構成のどこを置き換えられるかという検討へ移りつつある。ハーネス側の設計に踏み込む議論は、その移行段階を示すものといえる。実際の効果は、置き換え対象の処理がどれだけ判断に特化しているかに左右される。</td></tr>
+<tr><td class="num">7</td><td class="title">大量注文が来ていた古本屋（Amazon）による当事者の投稿（57 users）</td><td class="link-col"><a href="https://anond.hatelabo.jp/20260922210618" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 大量注文を受けた側の古書店が匿名ダイアリーで経緯を書いた投稿。<br>• 報道されている「謎の大量注文」と同じ現象を扱う。<br>• 質問を受け付ける形式で書かれている。<br><br>報道だけでは注文の実態が見えにくいなかで、当事者による記述は現場の状況を補う情報になる。一方で匿名の投稿であり、内容の裏づけは取られていない。報道と突き合わせて読む範囲にとどめるのが妥当といえる。</td></tr>
+<tr><td class="num">8</td><td class="title">Claude Code の Plugins は設定したほうがいい（57 users）</td><td class="link-col"><a href="https://syu-m-5151.hatenablog.com/entry/2026/09/22/124945" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code のプラグイン機能を導入する利点を整理した個人ブログの記事。<br>• 設定を行った場合の作業への影響を具体的に扱う。<br>• 「あとで読む」タグを中心にブックマークされている。<br><br>エージェント CLI は素の状態と設定後で挙動が大きく変わるため、初期設定の情報が実務上の価値を持ちやすい。プラグイン機構の解説は、その差分を埋める記事にあたる。設定内容は利用する言語やリポジトリ構成に依存するため、そのまま流用できるとは限らない。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">TypeSafe の Jev を正しく驚く、それって LLM でできませんか？（186 likes）</td><td class="link-col"><a href="https://zenn.dev/nwn/articles/824026c76116e0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev の何が新しいのかを、LLM で代替できるかという観点から検討した記事。<br>• 話題の受け止め方を整理し、過大評価と過小評価の双方を避けようとする構成をとる。<br>• Zenn の tech カテゴリで、この日の最上位にあたる。<br><br>新しいモデル形式が登場した直後は、既存手段との差分が曖昧なまま評価が先行しやすい。代替可能性を具体的に検討する記事は、その整理を担う位置にある。結論は用途によって変わるため、自分の処理が判断に閉じているかどうかが判断材料になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Jev でハーネスエンジニアリング（169 likes）</td><td class="link-col"><a href="https://zenn.dev/watany/articles/36e11a20ce3743" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev をエージェントの制御部分、いわゆるハーネスに組み込む観点から論じた記事。<br>• 生成ではなく判断を担わせる使い方を具体化している。<br>• Zenn の tech カテゴリで 2 位にあたる。<br><br>エージェントの構成では、分岐や検証といった判断処理にも生成モデルを使う場面が多い。判断特化のモデルをその位置に据える設計は、費用と応答時間の両面に影響しうる。適用範囲は、判断の内容が構造化できるかどうかに依存する。</td></tr>
+<tr><td class="num">3</td><td class="title">WebMCP を試してみた感想（121 likes）</td><td class="link-col"><a href="https://zenn.dev/chot/articles/268804cd6694ab" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• WebMCP を実際に触った記録と、その位置づけについての所感。<br>• フロントエンド側の必須技術になりうるという見方を示す。<br>• Zenn の tech カテゴリで上位に入っている。<br><br>MCP はこれまで開発者の手元やサーバー側での利用が中心だったが、Web ページ側から扱う枠組みも整いつつある。ブラウザ上のエージェントに機能を公開する方式は、フロントエンドの設計対象を広げる可能性がある。普及の度合いは、対応ブラウザと仕様の安定度に左右される。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Mods 入門 — Claude Code を自由にカスタマイズする（67 likes）</td><td class="link-col"><a href="https://zenn.dev/nogu66/articles/claude-code-function-hooks-claude-mods" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の function hooks を使った拡張手法を解説する入門記事。<br>• 「Claude Mods」としてカスタマイズの枠組みを整理している。<br>• 具体的な設定例を伴う構成をとる。<br><br>エージェント CLI の挙動を自動で変えるには、設定ファイルではなくフック機構を使う必要がある場面が多い。その仕組みを入門形式でまとめた記事は、導入の入口として機能する。フックはツール実行に割り込むため、影響範囲を理解したうえで設定する必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">AI ネイティブなデータ分析基盤を作った話（66 likes）</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/5a1dc6470019d6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI の利用を前提に据えたデータ分析基盤の構築事例。<br>• 設計上の判断と採用した構成要素を具体的に記述している。<br>• Zenn の tech カテゴリで上位に入っている。<br><br>分析基盤に AI を後付けする構成では、データの持ち方やメタデータの整備が制約になりやすい。最初から前提に置いた設計事例は、その制約を回避した場合の形を示す材料になる。組織の規模やデータ量によって適切な構成は変わるため、そのままの移植は難しい。</td></tr>
+<tr><td class="num">6</td><td class="title">C 言語のコードを Rust の中に書けるライブラリを作った（65 likes）</td><td class="link-col"><a href="https://zenn.dev/tanakh/articles/c-code-in-rust" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Rust のソース内に C のコードを直接記述できるライブラリの開発記録。<br>• マクロを通じて両言語を混在させる仕組みを扱う。<br>• 公開当日から反応を集めている。<br><br>既存の C 資産を抱えたまま Rust へ移行する場合、境界部分の記述が作業量の大半を占めることがある。両言語を同じファイルに書ける仕組みは、その境界を段階的に動かす用途に向く。実用性は、対応できる C の機能範囲とビルド構成の複雑さに依存する。</td></tr>
+<tr><td class="num">7</td><td class="title">全社に OpenCode + LiteLLM を導入してコストを抑えつつ AI 活用を進めている話（61 likes）</td><td class="link-col"><a href="https://zenn.dev/jtcc/articles/7e74fef42580a1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OpenCode と LiteLLM を組み合わせた全社導入の事例。<br>• 費用を抑えながら利用を広げる構成を主題とする。<br>• 実際の運用上の工夫を含む内容になっている。<br><br>AI ツールの全社導入では、利用者ごとの契約を積み上げると費用が読みにくくなる問題がある。モデル呼び出しを中継層でまとめる構成は、費用と利用状況の把握を一箇所に集める方向にあたる。導入効果は既存の開発フローとの適合度に左右される。</td></tr>
+<tr><td class="num">8</td><td class="title">高速判断 AI Jev のユースケースとオープン実装を雑にまとめる（52 likes）</td><td class="link-col"><a href="https://zenn.dev/karaage0703/articles/jev-use-cases-open-implementations" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev の用途と、公開されている実装を一覧的に整理した記事。<br>• idea カテゴリでの投稿にあたる。<br>• 個別の検証記事を横断して参照できる構成をとる。<br><br>短期間に多数の記事が出た話題では、全体像を把握する入口が求められやすい。用途と実装をまとめる記事は、その役割を担う位置にある。一覧の性質上、個々の実装の成熟度は別途の確認が必要になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">5 分で Jev 入門（すぐ使う）（127 LGTM）</td><td class="link-col"><a href="https://qiita.com/Ninagawa123/items/8ec3f5fe18c20fab1b2a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev をすぐに試せるよう、最小限の手順に絞った入門記事。<br>• チュートリアル形式で書かれている。<br>• Qiita の Jev 関連記事のなかで最上位にあたる。<br><br>新しいモデルへの関心が高まる時期には、概念の解説よりも動かす手順を示す記事が読まれやすい。短時間で試せる導線は、評価の前段として機能する。入門の範囲を超えた使い方は、公式資料や検証記事との併読が前提になる。</td></tr>
+<tr><td class="num">2</td><td class="title">みのるん式 登壇資料の作成ノウハウをスキルとして公開（73 LGTM）</td><td class="link-col"><a href="https://qiita.com/minorun365/items/ed4c760f616cf3c0a958" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 登壇資料の作り方を Claude Code の Skills として公開した記事。<br>• Marp を用いたスライド生成を前提とする。<br>• 個人のノウハウを再利用可能な形に落とし込む試みにあたる。<br><br>エージェントのスキル機構は、手順を文書として書けばそのまま再利用できる点に特徴がある。属人的な作業手順を配布可能な形にする事例は、その使い方を具体的に示すものといえる。出力の質は元のノウハウの精度に依存するため、対象作業の選定が鍵になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Code が AGENTS.md を読むようになった、ただし 1 回目は読まれない（58 LGTM）</td><td class="link-col"><a href="https://qiita.com/suwa_nobu/items/c795cf89d0fd4091c9cb" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code が AGENTS.md を参照するようになった挙動の検証記事。<br>• 最初のセッションでは読み込まれないという条件を指摘している。<br>• 実際の動作確認に基づく内容にあたる。<br><br>エージェント向けの指示ファイルは、読み込みのタイミングが挙動の差として現れやすい。条件付きの読み込みを明示する検証は、設定が効かない場面の原因特定に役立つ。挙動はバージョンによって変わりうるため、自分の環境での再確認が要る。</td></tr>
+<tr><td class="num">4</td><td class="title">元ヤフーエンジニア社長が考える、AI を使いこなす人と使えない人の差（53 LGTM）</td><td class="link-col"><a href="https://qiita.com/ryoheiiwamoto/items/b5805321eaef46b75459" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI 活用の差がどこから生じるかを、経営者の立場から論じた記事。<br>• 技術的な手順ではなくマインドセットを主題とする。<br>• AI 活用のタグでブックマークを集めている。<br><br>ツールの普及が進むほど、差は機能の知識よりも使い方の設計に現れるという指摘は各所で共通している。個人の経験に基づく論考であり、根拠は定量的なものではない。読み手の状況に照らして取捨する前提の内容といえる。</td></tr>
+<tr><td class="num">5</td><td class="title">話題の Jev とは？文章を書かずに判断だけを返す AI モデルを解説（51 LGTM）</td><td class="link-col"><a href="https://qiita.com/yushibats/items/472325ce548da370ed5d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev の位置づけを、生成を行わないモデルという観点から解説する。<br>• TypeSafe AI という枠組みとあわせて整理している。<br>• 初学者向けの平易な記述をとる。<br><br>判断のみを返す構成は、出力の検証が容易になる一方で適用できる場面が限られる。その前提を説明する記事は、話題先行になりやすい段階で位置づけを整える役割を持つ。実際の性能比較は、検証記事を併せて読む必要がある。</td></tr>
+<tr><td class="num">6</td><td class="title">実はコミュニティ運営をやめようと思っていました（46 LGTM）</td><td class="link-col"><a href="https://qiita.com/sadabon444/items/6b4e0a5e4946d1a941ac" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 技術コミュニティの運営を続けるなかでの葛藤を綴った記事。<br>• 運営側の負担と継続の理由を扱う。<br>• ポエムとして分類されている。<br><br>技術コミュニティは少数の運営者に負荷が集中しやすく、継続そのものが課題になりやすい。当事者による率直な記述は、参加者側が運営の実情を知る手がかりになる。個別の経験談であり、一般化できる範囲は限られる。</td></tr>
+<tr><td class="num">7</td><td class="title">エンジニア不要論の真実、AI の進化と具体抽象から解説（33 LGTM）</td><td class="link-col"><a href="https://qiita.com/Sicut_study/items/b2ef2f7a6ee0dbbf0001" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エンジニア不要論を、具体と抽象という枠組みから検討した記事。<br>• AI の進化が仕事のどの部分に影響するかを整理する。<br>• AI タグで一定の反応を集めている。<br><br>職種の将来をめぐる議論は前提の置き方で結論が変わりやすく、枠組みの提示が論点の整理につながる。抽象度の階層で仕事を分ける見方は、その一つの切り口にあたる。予測を含む内容であるため、断定的な結論としては扱いにくい。</td></tr>
+<tr><td class="num">8</td><td class="title">なぜ SMS 認証は弱いと言われるのか（31 LGTM）</td><td class="link-col"><a href="https://qiita.com/ktdatascience/items/666a82fcdf3dc4af00d7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• SMS を用いた二段階認証の弱点を整理した解説記事。<br>• TOTP など他の方式との比較を含む。<br>• 初心者向けのタグが付いている。<br><br>SMS 認証は導入の容易さから広く使われる一方、経路上のリスクが指摘され続けてきた。方式ごとの前提を整理する記事は、移行を検討する際の判断材料になる。実際の選択は、利用者側の端末環境と運用コストの兼ね合いで決まる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-09-23 06:34 JST
+</footer>
+</div>
+</body>
+</html>
