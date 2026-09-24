@@ -1,4 +1,4 @@
-# GitHub Trending — ローカルLLM記事 全数要約 — 2026-09-24
+# GitHub Trending — ローカルLLM記事 全数要約 — 2026-09-25
 
 ## ローカルLLM関連リポジトリ
 
