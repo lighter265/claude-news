@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-09-26</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-09-26</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-09.html">2026年9月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-09-26</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>スマート冷蔵庫のファームウェア更新が失敗して冷蔵機能が止まり、中の食品が傷んだという事例が報じられた。はてなブックマークでは 209 users と、この日の首位を集めている。</li><li>Google の「Gemini」に、レストラン予約などの電話を代わりにかける新機能が加わった。AI が利用者に代わって外部とやり取りする機能として 206 users を集めている。</li><li>NVIDIA が、会議の音声から「誰が話したか」を判別する 0.1B パラメータの話者分離モデル「Nemotron 3 Diarization」を無償で公開した。AI 議事録の弱点を補うモデルとして注目されている。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AX — Google のオープンなエージェント実行基盤（原文: google/ax）</td><td class="link-col"><a href="https://github.com/google/ax" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google が公開した、エージェントのタスクをクラスタ上で大規模に実行するための宣言型オーケストレーター。<br>• ワークスペースとモデルの指定を宣言すると、AX がサンドボックス化とワークスペースの準備を行う。<br>• 開発中の段階で、安定版までに大きな破壊的変更が入る可能性があると明記している。<br><br>エージェントを本番で大量に動かすには、隔離環境の用意やスケジューリングといった実行基盤の整備が欠かせない。大手クラウド事業者がこの層をオープンソースで出したことで、自前で基盤を組む際の参考実装が増えた。仕様が固まっていない段階のため、採用は検証用途から始めるのが無難といえる。</td></tr>
+<tr><td class="num">2</td><td class="title">Hindsight — 学習するエージェントメモリ（原文: vectorize-io/hindsight）</td><td class="link-col"><a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エージェントが時間とともに学習していくことを目指したメモリシステム。<br>• 会話履歴を思い出すことより、経験から学ぶことに重点を置くと説明している。<br>• RAG やナレッジグラフの弱点を補うとうたい、ベンチマークや論文も公開している。<br><br>エージェントのメモリは、過去のやり取りをどう保存し、いつ呼び出すかが性能を左右する要素になっている。「覚える」から「学ぶ」へ重心を移す設計は、長期間動くエージェントでの利用を想定したものといえる。効果の大きさはプロジェクト側の評価であり、用途に合わせた検証が必要になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Univer — AI エージェント向けのオフィス実行基盤（原文: dream-num/univer）</td><td class="link-col"><a href="https://github.com/dream-num/univer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• スプレッドシート、文書、プレゼンテーション、データベース、ボードを 1 つのランタイムで扱うオフィス SDK。<br>• プラグイン構成、Canvas による描画、数式エンジンを備え、ブラウザと Node.js で同じ API を使える。<br>• 「AI エージェントのためのオフィスハーネス」を掲げ、PDF 対応も予定している。<br><br>業務の多くは表計算や文書ファイルの上で行われており、エージェントにそれらを直接操作させる需要は大きい。オフィス機能をアプリに組み込める SDK として出発したプロジェクトが、エージェントの作業場という位置づけを打ち出した形になる。既存のオフィス形式との互換性は、導入前に確かめる必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">Model Optimizer — NVIDIA のモデル最適化ライブラリ（原文: NVIDIA/Model-Optimizer）</td><td class="link-col"><a href="https://github.com/NVIDIA/Model-Optimizer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 量子化、蒸留、枝刈り、ニューラルアーキテクチャ探索、投機的デコーディングなどの手法をまとめたライブラリ。<br>• 圧縮したモデルを TensorRT-LLM、TensorRT、vLLM などの推論基盤に渡して高速化する。<br>• ドキュメントとロードマップを公開している。<br><br>大規模モデルの推論費用を下げる手段として、量子化や蒸留の重要性は増している。複数の手法を 1 つのライブラリで扱えると、手法ごとに別のツールを使い分ける手間が減る。NVIDIA の推論基盤との組み合わせが前提になりやすい点は、利用環境に照らして判断することになる。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude for Financial Services — 金融業務向けの参照エージェント集（原文: anthropics/financial-services）</td><td class="link-col"><a href="https://github.com/anthropics/financial-services" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 投資銀行、株式調査、プライベートエクイティ、資産運用の業務に向けた参照エージェント、スキル、データコネクタをまとめたリポジトリ。<br>• Claude Cowork のプラグインとしても、Claude Managed Agents API 経由でも使える構成をとる。<br>• 同じシステムプロンプトとスキルを、実行場所を選んで使えるとしている。<br><br>金融業務は手順や書式が定まった作業が多く、エージェントを当てはめやすい分野とみられている。参照実装を公開することで、各社が自社の業務に合わせて改変する出発点になる。リポジトリの内容が投資助言にあたらない旨は明記されており、実運用での責任の置き方は利用者側で決める必要がある。</td></tr>
+<tr><td class="num">6</td><td class="title">Treg — エージェント用ツールの「OpenRouter」（原文: superdesigndev/treg）</td><td class="link-col"><a href="https://github.com/superdesigndev/treg" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 1 つのベース URL と 1 つのトークンで、60 以上の提供元の 3,000 以上のエンドポイントを呼び出せるとするサービス。<br>• SEO、SNS の動向、企業情報、広告、スクレイピング、画像・動画生成などを、1 回あたり 1 セントからの従量課金で使える。<br>• 各提供元へ個別に登録する必要がなく、チーム独自のキーやスキルも組み込めるとする。<br><br>エージェントに外部ツールを使わせる際、提供元ごとの契約や認証の管理が負担になりやすい。モデルの切り替えを一本化した OpenRouter と同じ発想をツールに当てはめた形といえる。仲介事業者を通すぶん、データの扱いと障害時の影響範囲は確認しておく必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">MVT — モバイル端末の侵害を調べるフォレンジックツール（原文: mvt-project/mvt）</td><td class="link-col"><a href="https://github.com/mvt-project/mvt" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• モバイル端末から痕跡を集め、侵害の兆候を調べるためのツール群。<br>• 「v3」ブランチがマージされ、破壊的変更が入ったと告知している。<br>• 出力を他のスクリプトで使っている場合は動かなくなる可能性があると注意を促している。<br><br>スパイウェアによる標的型の攻撃は、報道機関や人権団体の関係者を中心に被害が続いている。MVT はそうした調査で使われてきたツールで、大きな版の更新は調査手順にも影響する。既存の調査スクリプトを使っている場合は、移行の詳細を確認したうえで更新する必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">stable-diffusion.cpp — C/C++ だけで動く画像生成モデルの推論（原文: leejet/stable-diffusion.cpp）</td><td class="link-col"><a href="https://github.com/leejet/stable-diffusion.cpp" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• SD、Flux、Wan、Qwen Image などの拡散モデルを、純粋な C/C++ で推論する実装。<br>• 2026 年 9 月 20 日に Qwen-Image-2.1 への即日対応を告知している。<br>• 開発が活発で、API やコマンドラインのオプションが頻繁に変わる可能性があるとする。<br><br>Python や大きなフレームワークに依存しない推論実装は、手元の PC や組み込み環境で画像生成を動かす際の選択肢になる。新しいモデルへの対応が早いことが、利用者を集める理由の 1 つになっている。仕様の変更が多いため、組み込んで使う場合は版を固定するのが無難といえる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">米最高裁、州が市民権確認に SAVE データベースを使うことを容認 — (原文: Supreme Court permits states to use SAVE database for citizenship checks)</td><td class="link-col"><a href="https://cyberscoop.com/supreme-court-save-database-voter-citizenship/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米最高裁が、州による有権者の市民権確認に連邦の SAVE データベースを使うことを認めたと CyberScoop が報じた。<br>• 52 ポイント・57 コメントで、この日の Hacker News の首位にあたる。<br>• 行政データベースの利用範囲をめぐる判断として議論を集めている。<br><br>本来は別の目的で作られた行政データベースを選挙の確認作業に使うことには、データの正確さや誤判定の扱いについて懸念が出ている。技術系メディアが取り上げたのは、データの統合と照合の仕組みが論点になっているためとみられる。運用の詳細と誤判定時の救済手続きが今後の焦点になる。</td></tr>
+<tr><td class="num">2</td><td class="title">不具合報告: VS Code のエディタに角丸が「感染」 — (原文: Bug: Border radius has infected VSCode editor)</td><td class="link-col"><a href="https://github.com/microsoft/vscode/issues/338035" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• VS Code のエディタ部分にまで角丸のデザインが入り込んだことを、不具合として報告した GitHub Issue。<br>• 47 ポイント・21 コメントを集めている。<br>• UI デザインの変更に対する利用者の反応として関心を呼んでいる。<br><br>開発者が長時間使うエディタでは、見た目のわずかな変更も作業感に影響するため反応が大きくなりやすい。デザインの統一と、表示領域を無駄なく使いたい利用者の要望はぶつかることがある。設定で元に戻せるかどうかが、利用者にとっての実際の論点になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Letterboxd が売却へ、A24・ソニー・ニューヨーク・タイムズが入札 — (原文: Letterboxd Is Up for Sale, and A24, Sony and the New York Times Are Bidding)</td><td class="link-col"><a href="https://www.worldofreel.com/blog/2026/9/24/letterboxd-is-up-for-sale-and-a24-sony-and-the-new-york-times-bidding" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 映画記録・レビューの SNS、Letterboxd が売りに出され、A24、ソニー、ニューヨーク・タイムズが入札していると報じられた。<br>• 41 ポイント・16 コメントを集めている。<br>• 報道元は映画情報サイトの World of Reel。<br><br>熱心な利用者が集まる専門的なコミュニティは、メディア企業にとって魅力的な資産になっている。一方で、買収後に運営方針が変わり利用者が離れる例も多く、コミュニティ側の懸念も出やすい。売却の成否と買い手は、今後の正式な発表を待つ必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">Too AI; Didn't Read — (原文: Too AI; Didn't Read)</td><td class="link-col"><a href="https://www.tai-dr.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「TL;DR」をもじった名前のサイトで、AI が生成した文章を読まされることへの問題提起とみられる。<br>• 22 ポイント・9 コメントを集めている。<br>• 同じ日には AI を使ったスパムメールへの苦情も投稿されている。<br><br>AI で生成した文章が増えるにつれ、読み手の負担や信頼の低下を指摘する声が強まっている。国内でも AI 生成のスライドを使った登壇への不満が話題になっており、似た関心が広がっている。生成物をどう扱うかは、書き手の側の作法として議論が続きそうだ。</td></tr>
+<tr><td class="num">5</td><td class="title">HN 利用者に AI を使った欺瞞的なスパムを送るのはやめて — (原文: Tell HN: Stop emailing HN users with deceptive AI spam)</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=49849134" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Hacker News の利用者に、AI で作ったとみられる欺瞞的な営業メールが送られていることへの苦情の投稿。<br>• 6 ポイント・1 コメントの段階にある。<br>• 公開プロフィールの情報を使った連絡が問題視されている。<br><br>AI によって、個人ごとに文面を変えた営業メールを大量に送ることが容易になった。コミュニティの公開情報がその材料として使われると、利用者が情報公開を控える方向に働きかねない。運営側がどのような対策をとるかが注目される。</td></tr>
+<tr><td class="num">6</td><td class="title">QuarkDown: 機能を拡張した Markdown — (原文: QuarkDown: Markdown with Superpowers)</td><td class="link-col"><a href="https://github.com/iamgio/quarkdown" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 関数や変数などの機能を加えた Markdown の拡張で、文書やスライドを作るためのツール。<br>• GitHub で公開されているオープンソースのプロジェクト。<br>• 6 ポイントを集めているが、コメントはまだ付いていない。<br><br>Markdown は書きやすさの一方で、レイアウトや再利用の面では表現力が限られる。拡張を加える試みは多いが、元の手軽さを保てるかどうかが普及の分かれ目になる。既存の Markdown ツールとの互換性は、使う前に確かめる必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">Bitget への 3 億 8,800 万ドルのハッキング、北朝鮮が関与の「可能性」 — (原文: North Korea 'Likely' Behind $388M Hack of Crypto Exchange Bitget)</td><td class="link-col"><a href="https://gizmodo.com/north-korea-very-likely-behind-388-million-hack-of-crypto-exchange-bitget-2000817421" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 暗号資産取引所 Bitget から 3 億 8,800 万ドルが流出した事件に、北朝鮮が関与している可能性が高いと Gizmodo が報じた。<br>• 4 ポイント・コメント 0 件の段階にある。<br>• 大規模な取引所を狙った攻撃が続いていることを示す事例にあたる。<br><br>北朝鮮とみられる攻撃者による暗号資産の窃取は、近年たびたび大きな被害を出している。取引所のウォレット管理や従業員を狙った手口への対策が、業界全体の課題になっている。関与の判断は調査段階のものであり、確定には追加の分析が必要になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Microsoft の 17 兆件のレコードにアクセスできたかもしれない話 — (原文: How I Could've Accessed 17 Trillion Microsoft Records)</td><td class="link-col"><a href="https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• セキュリティ研究者が、Microsoft の大量のレコードにアクセスできた可能性のある問題を報告したブログ記事。<br>• 対象は 17 兆件にのぼると表題で示している。<br>• 3 ポイント・コメント 0 件の段階にある。<br><br>大規模なクラウドサービスでは、1 つの設定や権限の誤りが膨大なデータに影響しうる。研究者による報告と公開は、同種の問題を洗い出すきっかけになる。修正の状況と実際に悪用されたかどうかは、Microsoft 側の説明で確認する必要がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude が CRISPR 様の反復配列を持つ新規酵素系を発見 — (原文: Claude discovers a novel enzyme system with CRISPR-like repeats)</td><td class="link-col"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude が、CRISPR に似た反復配列を伴う新しい酵素系を見いだしたと発表された。<br>• Science カテゴリでの公開にあたる。<br>• 配列解析を通じた発見という位置づけで示されている。<br><br>ゲノム配列には機能未知の領域が広く残り、既知パターンとの類似を手がかりに候補を絞る作業が続いてきた。大規模モデルをその探索に使う流れは各所で進んでおり、今回もその系統に属する。発見の妥当性は、実験による検証と査読を経て定まる性質のものになる。</td></tr>
+<tr><td class="num">2</td><td class="title">Accenture と組み込み型評価で提携 — (原文: Partnering with Accenture on embedded evaluation)</td><td class="link-col"><a href="https://www.anthropic.com/news/accenture-embedded-evaluation" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Accenture と、評価を業務に組み込む「embedded evaluation」で提携すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 企業導入時にモデルの挙動を評価する体制づくりが主題とみられる。<br><br>企業が AI を導入する際、汎用のベンチマークだけでは自社業務での品質を判断しにくい。コンサルティング企業と組んで評価を現場に組み込む形は、導入後の品質管理を支える方向にあたる。具体的な評価手法や対象業界は、告知本文での確認が要る。</td></tr>
+<tr><td class="num">3</td><td class="title">ライフサイエンス検証プログラムを開始 — (原文: Introducing the Life Sciences Verification Program)</td><td class="link-col"><a href="https://www.anthropic.com/news/life-sciences-verification-program" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ライフサイエンス分野向けの「検証プログラム」を始めると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 科学分野での利用を広げる一連の発表の流れに位置づけられる。<br><br>生命科学の研究では、モデルの出力が正しいかどうかを確かめる手順が特に重要になる。検証の仕組みを制度として用意することは、研究機関が導入を判断する際の材料になりうる。対象となる組織や検証の具体的な内容は、告知本文で確認する必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">顧客とともにエンタープライズ向けフロンティア安全策を開発 — (原文: Developing Enterprise Frontier Safeguards with our customers)</td><td class="link-col"><a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 企業顧客と協力して、高性能モデル向けの安全策を開発する取り組みを発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 企業での利用に合わせた安全策の設計が主題とみられる。<br><br>高性能なモデルほど、悪用を防ぐ仕組みと業務上の使いやすさの両立が難しくなる。顧客と一緒に安全策を作る形は、現場の利用実態を反映させる狙いがあると考えられる。具体的な仕組みと参加企業は、告知本文での確認が要る。</td></tr>
+<tr><td class="num">5</td><td class="title">アラインメントとセキュリティの取り組みを強化 — (原文: Improving our alignment and security efforts)</td><td class="link-col"><a href="https://www.anthropic.com/news/improving-alignment-security-efforts" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• アラインメントとセキュリティに関する取り組みを強化すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 安全性に関する一連の発表と近い時期に出されている。<br><br>モデルの能力が上がるにつれ、意図どおりに振る舞わせる研究と、モデルや関連資産を守る対策の重要性は増している。取り組みを公開することは、外部の研究者や顧客が状況を把握する手がかりになる。具体的な施策と体制は、告知本文で確認する必要がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">GPT-6 Sol と Luna を発表 — (原文: Introducing GPT-6 Sol and Luna)</td><td class="link-col"><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 系列の新しいモデルとして「Sol」と「Luna」を発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ時期には GPT-6 向けのプロンプトキャッシュ改善も告知されている。<br><br>モデルを用途や価格帯で分けて提供する形は、各社で一般的になっている。既存の GPT-6 Astra と合わせ、利用者は性能と費用の釣り合いで選ぶことになる。各モデルの性能や価格の違いは、発表本文と料金表で確認する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">GPT-6 のプロンプトキャッシュを改善 — (原文: Better prompt caching for GPT-6)</td><td class="link-col"><a href="https://openai.com/index/better-prompt-caching-for-gpt-6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 でのプロンプトキャッシュの仕組みを改善したと発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ入力を繰り返し送る用途での費用や応答時間に関わる変更とみられる。<br><br>エージェントのように長い指示や履歴を何度も送る用途では、キャッシュの効き方が費用を大きく左右する。Qiita でも他社モデルでキャッシュの当たり方によって実際の割引率が変わることを測った記事が出ており、関心が高い分野といえる。変更の詳細と対象モデルは、発表本文で確認する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">MentalHealthBench を公開 — (原文: Introducing MentalHealthBench)</td><td class="link-col"><a href="https://openai.com/index/introducing-mentalhealthbench" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• メンタルヘルスに関わる場面でのモデルの応答を評価するベンチマーク「MentalHealthBench」を発表した。<br>• Publication カテゴリでの公開にあたる。<br>• 対話 AI の安全性評価に関する取り組みの一つにあたる。<br><br>対話 AI が悩み相談に使われる場面は増えており、不適切な応答のリスクが指摘されてきた。評価の基準を公開することで、他の開発者や研究者が同じ物差しで比べられるようになる。評価の設計が実際の利用場面をどこまで反映しているかは、公開資料を見て判断することになる。</td></tr>
+<tr><td class="num">4</td><td class="title">ウクライナの民間防衛向けにサイバー関連のアクセスを拡大 — (原文: OpenAI extends cyber access to Ukraine for civilian defense)</td><td class="link-col"><a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ウクライナの民間防衛に向けて、サイバーセキュリティ関連の機能へのアクセスを広げると発表した。<br>• Global Affairs カテゴリでの公開にあたる。<br>• 防御目的での AI 活用を支援する取り組みとして示されている。<br><br>サイバー分野の AI 機能は防御にも攻撃にも使えるため、提供先を限る運用がとられてきた。特定の国や目的に絞ってアクセスを広げる形は、その管理方針の一例にあたる。対象となる組織や機能の範囲は、発表本文で確認する必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">Proaction、Codex で売上を 60% 伸ばし 75 時間以上を節約 — (原文: Proaction boosts sales 60% and saves 75+ hours with Codex)</td><td class="link-col"><a href="https://openai.com/index/proaction" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Proaction が Codex を使い、売上を 60% 伸ばし、75 時間以上の作業を減らしたとする導入事例。<br>• OpenAI のサイトで公開された顧客事例にあたる。<br>• コーディングエージェントを業務に取り入れた例として紹介されている。<br><br>コーディングエージェントの導入事例は、開発効率だけでなく事業成果と結びつけて語られることが増えている。数値は提供元が公開した事例のものであり、条件の違う組織にそのまま当てはまるとは限らない。自社で導入する際は、対象業務を絞って効果を測るのが現実的といえる。</td></tr>
+<tr><td class="num">6</td><td class="title">国連安全保障理事会でのサム・アルトマン氏の発言 — (原文: Sam Altman’s remarks at the United Nations Security Council)</td><td class="link-col"><a href="https://openai.com/index/sam-altman-un-security-council-remarks" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• サム・アルトマン氏が国連安全保障理事会で行った発言の内容を公開した。<br>• Global Affairs カテゴリでの公開にあたる。<br>• AI と国際的な安全保障の関係が主題とみられる。<br><br>AI の影響が国際的な議題として扱われる機会は増えており、企業の代表が国際機関で発言する例も出ている。同じ日にはローマ教皇も AI が支配の道具になってはならないと述べており、AI の統治をめぐる議論が広がっている。発言の具体的な内容は、公開された全文で確認する必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">ChatGPT の広告を東南アジアと台湾に拡大 — (原文: ChatGPT Ads expands to Southeast Asia and Taiwan)</td><td class="link-col"><a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ChatGPT での広告の提供地域を、東南アジアと台湾に広げると発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ時期には Grab と組んだ東南アジアでの AI 教育の取り組みも発表されている。<br><br>対話 AI の収益化の手段として、広告は有料プランと並ぶ柱になりつつある。回答と広告をどう区別して表示するかは、利用者の信頼に関わる論点になる。表示の形式や対象となる利用者は、発表本文で確認する必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">効果的な第三者評価のための優先事項と原則 — (原文: Priorities and principles for effective third party assessments)</td><td class="link-col"><a href="https://openai.com/index/priorities-principles-third-party-assessments" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 外部の組織によるモデル評価を効果的に行うための優先事項と原則をまとめた文書を公開した。<br>• Safety カテゴリでの公開にあたる。<br>• 同じ時期には AI の標準づくりに関する発表も出ている。<br><br>モデルの安全性を開発元だけで判断することへの疑問から、第三者による評価の仕組みづくりが進んでいる。評価の条件やアクセス範囲をどう定めるかは、評価の実効性を左右する。示された原則が各社や評価機関にどこまで共有されるかが今後の焦点になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Cursor、GitHub の新たな代替となる AI エージェントネイティブな開発基盤「Origin」を公開</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/cursor-origin-alternative-github/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cursor が、AI エージェントの利用を前提にした開発基盤「Origin」を公開したと InfoQ が報じた。<br>• GitHub の新たな代替という位置づけで紹介されている。<br>• 著者は Matt Saunders。<br><br>コードの多くをエージェントが書くようになると、レビューや変更管理の仕組みも見直しが求められる。エディタで存在感を得た Cursor が、リポジトリの管理まで範囲を広げる動きにあたる。既存の GitHub 中心の開発フローからどこまで移行できるかが、採用の判断材料になる。</td></tr>
+<tr><td class="num">2</td><td class="title">AWS、柔軟なデータワークフローを実現する仕様主導型コンポジションを導入</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/aws-spec-driven-data-workflow/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS が、データワークフローを仕様にもとづいて組み立てる「仕様主導型コンポジション」を導入したと報じられた。<br>• 柔軟なデータ処理の流れを作ることを狙いとしている。<br>• 著者は Leela Kumili。<br><br>データパイプラインは、処理が増えるにつれて構成の把握や変更が難しくなりやすい。仕様を起点に組み立てる方式は、構成を宣言的に管理して見通しを良くする方向にあたる。既存のワークフローサービスとの使い分けは、記事と AWS のドキュメントで確認する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">Google Cloud、データベースのライフサイクル管理を簡素化する AI エージェントを発表</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/google-database-operation-agents/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google Cloud が、データベースの運用作業を支援する AI エージェントを発表したと報じられた。<br>• ライフサイクル管理の簡素化を狙いとしている。<br>• 著者は Sergio De Simone。<br><br>データベースの運用は、バックアップや更新、性能調整など定型的でも手を抜けない作業が多い。こうした作業をエージェントに任せる動きはクラウド各社で進んでいる。本番環境で任せられる範囲と、人による確認の置き方が導入時の論点になる。</td></tr>
+<tr><td class="num">4</td><td class="title">Athena コアリション、オープンソースセキュリティに協調的な防衛体制をもたらす</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/athena-security-coalition/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オープンソースのセキュリティ分野で協調的な防衛体制を築く連合の取り組みを紹介する記事。<br>• 参加組織が個別に対応していた作業を持ち寄る形の枠組みとして扱われている。<br>• 著者は Matt Saunders。<br><br>オープンソースのサプライチェーン攻撃は増えており、個々のメンテナーだけでは対応しきれない状況が続いている。複数の組織が協力する枠組みは、脆弱性情報の共有や対応の重複を減らす方向にあたる。参加組織と具体的な活動内容は、記事本文で確認する必要がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">スマート冷蔵庫のファームウェア更新失敗で冷蔵機能が停止、食品が傷む事態に（209 users）</td><td class="link-col"><a href="https://internet.watch.impress.co.jp/docs/yajiuma/2143157.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• スマート冷蔵庫のファームウェア更新が失敗し、冷蔵機能が止まって食品が傷んだという事例を INTERNET Watch が取り上げた。<br>• 「これはひどい」「セキュリティ」などのタグが付き、この日のはてなブックマークの首位にあたる。<br>• ネットにつながる家電ならではのトラブルとして関心を集めている。<br><br>家電がネット経由で更新されるようになり、機能追加の利点と引き換えに、更新の失敗が本来の機能を止める危険も生まれた。冷蔵庫のように止まると実害が大きい機器では、更新に失敗しても基本機能を保つ設計が求められる。メーカーの対応と補償の内容が今後の焦点になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Google「Gemini」に電話代行の新機能、レストラン予約も任せられる（206 users）</td><td class="link-col"><a href="https://japan.cnet.com/article/35252958/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google の Gemini に、利用者の代わりに電話をかける新機能が加わったと CNET Japan が報じた。<br>• レストランの予約などを任せられるとしている。<br>• 206 users と、この日 2 番目に多いブックマークを集めている。<br><br>AI が利用者に代わって外部の人と音声でやり取りする機能は、以前から試みられてきたが、対応する場面が広がりつつある。電話を受ける店舗側にとっては、相手が AI だと分かるかどうかが問題になりうる。提供地域や対応言語は、今後の案内で確認する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">AI 議事録の「誰の発言か分からない」を解決、0.1B の「Nemotron 3 Diarization」が無償公開（117 users）</td><td class="link-col"><a href="https://pc.watch.impress.co.jp/docs/news/2143200.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NVIDIA が、話者を判別する 0.1B パラメータのモデル「Nemotron 3 Diarization」を無償で公開したと PC Watch が報じた。<br>• 会議の文字起こしで、発言者を区別する用途を想定している。<br>• 小さなモデルのため、手元の環境でも動かしやすいとみられる。<br><br>AI による議事録作成では、文字起こしの精度に比べて話者の区別が弱点になりやすかった。小型の専用モデルを無償で出すことで、既存の文字起こしと組み合わせて使う道が広がる。日本語の会議でどの程度の精度が出るかは、実際に試して確かめる必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">「LLM の出力コードを理解できない初心者ばかり」、PS5 非公式ハックの主導者が離脱（71 users）</td><td class="link-col"><a href="https://atmarkit.itmedia.co.jp/ait/articles/2609/25/news048.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• PS5 の非公式ハックを主導してきた開発者がプロジェクトを離れると表明したと @IT が報じた。<br>• LLM が出力したコードを理解しないまま投稿する初心者が増えたことに苦言を呈している。<br>• AI 時代の OSS 開発のあり方をめぐる話題として注目されている。<br><br>AI の支援で参加の敷居が下がった一方、レビューするメンテナーの負担は増している。理解されないまま出されるコードは、確認の手間を増やし、プロジェクトの持続性を損なうことがある。貢献のルールで AI 利用をどう扱うかは、多くの OSS で課題になっている。</td></tr>
+<tr><td class="num">5</td><td class="title">AI に要約させた議事録を見返したら、3 か月分の半分ほどが「創作」だった（61 users）</td><td class="link-col"><a href="https://togetter.com/li/2750223" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 議事録を AI に要約させてチームで共有していたところ、結論の内容が実際と違っていたという体験談の Togetter まとめ。<br>• 3 か月分の議事録の半分ほどに事実と異なる内容が含まれていたとしている。<br>• 部長に会議の結論を聞かれたことがきっかけで発覚したという。<br><br>要約は元の内容を確かめずに使われやすく、誤りが入り込んでも気づかれにくい。特に会議の結論のように判断の根拠となる部分は、元の記録との照合が欠かせない。AI の要約を業務で使う際の確認手順を考えるうえで参考になる事例といえる。</td></tr>
+<tr><td class="num">6</td><td class="title">EXPLAIN で行き詰まったときの三つ目の手札、Optimizer Trace（60 users）</td><td class="link-col"><a href="https://tech.timee.co.jp/entry/2026/09/25/162348" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• タイミーの開発チームが、MySQL の Optimizer Trace を使った性能調査の方法を紹介した記事。<br>• EXPLAIN だけでは原因が分からない場合の手段として位置づけている。<br>• オプティマイザが実行計画を選んだ理由をたどれる点を扱っている。<br><br>クエリの性能問題では、実行計画が分かっても「なぜその計画になったか」が分からず行き詰まることがある。Optimizer Trace はその判断の過程を見せる機能で、知っていると調査の幅が広がる。本番環境で使う際は、出力の量と負荷に注意する必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">RSA を素因数分解せずに破る攻撃を大規模に実証、1024 ビット RSA の署名偽造に成功（34 users）</td><td class="link-col"><a href="https://gigazine.net/news/20260925-rsa-nsnfsssfsfn/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• RSA を素因数分解によらずに破る攻撃を、大規模に実証したと GIGAZINE が報じた。<br>• 1024 ビットの RSA で署名の偽造に成功したとしている。<br>• 暗号の安全性に関わる話題として関心を集めている。<br><br>1024 ビットの RSA はすでに推奨されない鍵長だが、古い機器や仕組みでは今も使われていることがある。攻撃の前提条件によっては、実装や運用の見直しが必要になる場合もある。攻撃が成り立つ条件と影響範囲は、元の論文で確認する必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">JCOM のインターネット接続サービス障害のまとめ（31 users）</td><td class="link-col"><a href="https://piyolog.hatenadiary.jp/entry/2026/09/25/145617" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• piyolog が、JCOM のインターネット接続サービスで起きた障害の経緯をまとめた記事。<br>• 公表された情報をもとに、発生から復旧までの流れを整理している。<br>• 障害や通信に関するタグが付いている。<br><br>家庭向けの通信サービスは、止まると在宅勤務や生活に直接影響するため関心が集まりやすい。事業者の発表を時系列で整理した記事は、障害の規模や原因を把握する助けになる。原因の詳細と再発防止策は、事業者の正式な報告で確認する必要がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">C 言語のコードを Rust の中に書けるライブラリを作った（143 likes）</td><td class="link-col"><a href="https://zenn.dev/tanakh/articles/c-code-in-rust" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• C 言語のコードを Rust のソースの中に直接書けるようにするライブラリを作ったという記事。<br>• 作者は tanakh 氏。<br>• この日の Zenn で最も多いいいねを集めている。<br><br>Rust から C のコードを使う場合、通常は別ファイルに分けてバインディングを用意する手間がかかる。コードの中に直接書けると、小さな C の処理を試したり移行途中のコードを扱ったりしやすくなる。ビルドの仕組みや安全性の扱いは、記事で確かめてから使う必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">みんな Jev の話をしている、やっていないのは自分だけ（105 likes）</td><td class="link-col"><a href="https://zenn.dev/unsoluble_sugar/articles/jev-system-one-model-intro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 話題になっている AI「Jev」を、遅れて試してみた立場から紹介する入門記事。<br>• 生成ではなく判断を担う AI として紹介されている Jev の基本を扱う。<br>• Zenn と Qiita では Jev に関する記事が多数投稿されている。<br><br>Jev は、文章を生成する LLM とは別に、分類や判定を担う仕組みとして注目を集めている。国内の技術記事でも、LLM との比較や置き換えの検証が相次いでいる。どの作業で LLM より有利になるかは、用途ごとに確かめる段階にある。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Opus 5.5 によるピクセルアニメーション生成の検証（50 likes）</td><td class="link-col"><a href="https://zenn.dev/peoplex_blog/articles/1bc5c181ad19f0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Opus 5.5 を使ってピクセルアートのアニメーションを生成できるかを検証した記事。<br>• モデルにコードを書かせる形でアニメーションを作る方式を試している。<br>• 同じ時期には、同モデルで解説アニメーション動画を作る記事も出ている。<br><br>コード生成の能力を、画像やアニメーションの制作に使う試みが増えている。画素を直接描くのではなくコードで表現するため、修正や再生成がしやすい利点がある。仕上がりの品質は、指示の出し方や題材によって差が出る。</td></tr>
+<tr><td class="num">4</td><td class="title">自宅サーバーのススメ（44 likes）</td><td class="link-col"><a href="https://zenn.dev/porters_tech/articles/b2282728b35397" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 自宅にサーバーを置いて運用することを勧める記事。<br>• アイデアカテゴリに分類されている。<br>• 自分で環境を持つことの利点を扱っている。<br><br>クラウドの利用が当たり前になった一方で、費用の増加や学習機会の面から自宅サーバーを見直す声もある。手元でハードウェアから運用まで扱う経験は、インフラの理解を深める助けになる。電気代や停電、セキュリティへの備えは、始める前に考えておく必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude Code で定期的にやっておきたい MEMORY.md の大掃除（28 likes）</td><td class="link-col"><a href="https://zenn.dev/loglass/articles/f69996279763ab" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code のメモリファイル MEMORY.md を定期的に整理することを勧める記事。<br>• 株式会社ログラスの技術ブログで公開されている。<br>• 古くなった記録を見直す手順を扱っている。<br><br>エージェントに記憶を持たせると便利な反面、古い情報や誤った情報が残ると判断を誤らせる原因になる。記憶を定期的に棚卸しする運用は、長く使うほど重要になる。どの頻度でどこまで整理するかは、チームの使い方に合わせて決めることになる。</td></tr>
+<tr><td class="num">6</td><td class="title">Jev にゲームをやらせるな！LLM を蒸留してみよう（24 likes）</td><td class="link-col"><a href="https://zenn.dev/nwn/articles/e49154653ecea9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev の使い方をめぐり、LLM を蒸留するという観点から論じた記事。<br>• タイトルでは、Jev をゲームに使うことへの注意を促している。<br>• はてなブックマークでも 28 users を集めている。<br><br>新しい仕組みが話題になると、向いていない用途に使われて評価が分かれることがある。LLM の判断を小さな仕組みに移す蒸留の考え方は、費用や速度の改善につながりうる。どの作業が蒸留に向くかは、記事の検証内容を見て判断する必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">11 年生の本番データを飛ばした話（22 likes）</td><td class="link-col"><a href="https://zenn.dev/ficilcom/articles/prod_db_reset_incident" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 11 年運用されてきたサービスの本番データを消してしまった障害の体験を扱う記事。<br>• ficilcom の Zenn Publication で公開されている。<br>• 本番データベースのリセットにまつわる事故を扱っている。<br><br>本番データの消失は、どの組織でも起こりうる重大な事故で、経緯を公開すること自体に価値がある。長く運用されたシステムほど、手順や権限が複雑になり事故の入口が増えやすい。復旧の手段と再発防止の取り組みは、同様のシステムを持つ組織にとって参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">競馬の論文 100 本を Jev で仕分け、LLM と速度・コストを比べた（21 likes）</td><td class="link-col"><a href="https://zenn.dev/toshipon/articles/jev-paper-screening-vs-llm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 競馬に関する論文 100 本を Jev で分類し、LLM と速度やコストを比べた記事。<br>• 同じ作業を 2 つの方式で行って比較している。<br>• 論文のスクリーニングという実務に近い題材を扱っている。<br><br>論文の仕分けのような定型的な判定作業は、LLM では費用がかさみやすい。専用の仕組みに置き換えてどれだけ速く安くなるかを測る検証は、導入の判断材料になる。精度の差と、題材を変えた場合の結果は、個別に確かめる必要がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Code の拒否ルールを 7 つの形で測った、最新版でもまだ 4 つ残っている（62 LGTM）</td><td class="link-col"><a href="https://qiita.com/suwa_nobu/items/d21ff35b9329eecc6143" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の拒否ルールが、書き方によって効くかどうかを 7 つのパターンで測った記事。<br>• 最新版でも 4 つのパターンで問題が残っていると報告している。<br>• この日の Qiita で最も多い LGTM を集めている。<br><br>エージェントに危険な操作をさせないための拒否ルールは、意図どおりに効かないと安全策として機能しない。書き方ごとの挙動を実測して示すことで、利用者は設定を見直す手がかりを得られる。版が上がると結果が変わりうるため、使っている版での確認が必要になる。</td></tr>
+<tr><td class="num">2</td><td class="title">許可ルールを settings.json に書いても効かなかった、分かれ目はフォルダを信頼したかどうか（60 LGTM）</td><td class="link-col"><a href="https://qiita.com/suwa_nobu/items/92d4de34077b9ae02fca" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の settings.json に許可ルールを書いても効かなかった原因を調べた記事。<br>• フォルダを信頼済みにしたかどうかで挙動が分かれたと報告している。<br>• 同じ著者による権限設定の検証記事の 1 本にあたる。<br><br>エージェントの権限設定は、設定ファイルの内容だけでなく周辺の条件にも左右されることがある。挙動の分かれ目を具体的に示すことで、同じ問題に当たった利用者が原因を切り分けやすくなる。仕様は版によって変わりうるため、公式ドキュメントと合わせて確認する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Opus 5.5 の「40% 安い」は、キャッシュの当たり方で 24% にも 59% にもなった（59 LGTM）</td><td class="link-col"><a href="https://qiita.com/suwa_nobu/items/870b1d6c5502aca68f55" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Opus 5.5 の料金の値下げが、実際にはキャッシュの効き方によってどれだけ変わるかを測った記事。<br>• 条件によって削減率が 24% から 59% まで変わったと報告している。<br>• 同じ著者による検証記事が上位に並んでいる。<br><br>API の料金は、表示価格だけでなくキャッシュの効き方で実際の費用が大きく変わる。自分の使い方で測ると、公表値とは違う結果になることがある。費用の見積もりは、手元の処理で実測して確かめるのが確実といえる。</td></tr>
+<tr><td class="num">4</td><td class="title">攻撃者の視点でセキュリティを理解したいエンジニアへ、bash で学ぶ侵入技術の実践書（56 LGTM）</td><td class="link-col"><a href="https://qiita.com/yasu1109/items/1002367721b1650fcdf3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• bash を使って侵入の技術を学ぶ実践的な書籍を紹介する記事。<br>• 攻撃者の視点からセキュリティを理解したいエンジニア向けとしている。<br>• ペネトレーションテストや AI セキュリティのタグが付いている。<br><br>防御を考えるうえで、攻撃の手順を知っておくことは有効な学び方とされている。身近な bash を題材にすることで、特別な道具がなくても仕組みを理解しやすくなる。学んだ技術を試す際は、許可された環境に限ることが前提になる。</td></tr>
+<tr><td class="num">5</td><td class="title">AI 生成そのままのスライドを使った登壇が多すぎて食傷気味（51 LGTM）</td><td class="link-col"><a href="https://qiita.com/shimagaji/items/8acd9b94dfe56fefc0dc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI が生成したスライドをそのまま使った登壇が増えていることへの不満を述べた記事。<br>• はてなブックマークでも 23 users を集めている。<br>• カンファレンスでの発表の質をめぐる話題として注目されている。<br><br>AI でスライドを手早く作れるようになった一方、似た見た目や中身の薄い資料が増えたという指摘がある。発表の価値は、資料の見た目より話し手の経験や考えにあるという点が改めて問われている。AI を下書きに使い、自分の言葉で仕上げる使い方が一つの落としどころになる。</td></tr>
+<tr><td class="num">6</td><td class="title">Jenkins の PR レビューでテストとセキュリティスキャンも回す、AI の APPROVE を機械的に覆す CI（50 LGTM）</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/8675266928f574677d9e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jenkins で PR をレビューする際に、テストとセキュリティスキャンも実行する CI の構成を紹介した記事。<br>• AI が承認した PR でも、テストやスキャンの結果で機械的に差し戻せる仕組みを扱う。<br>• GitHub Copilot、Claude Code、SonarQube のタグが付いている。<br><br>AI によるコードレビューが広がるなか、その判断をそのまま信じてよいかが課題になっている。機械的な検査で AI の承認を覆せるようにする構成は、人と AI と自動検査の役割を分ける考え方といえる。検査の範囲と誤検知の扱いは、チームごとに調整が必要になる。</td></tr>
+<tr><td class="num">7</td><td class="title">個人開発で App Store のリリースフローを学ぶ、本番だけ静かに壊れた CI/CD の 2 つの事故（50 LGTM）</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/21973aaa1c605b34c174" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 個人開発のアプリで App Store へのリリースの流れを学んだ三部作の記事。<br>• 本番環境だけで気づかないうちに壊れていた CI/CD の事故 2 件を取り上げている。<br>• Docker、Kubernetes、Argo CD などのタグが付いている。<br><br>本番環境だけで起きる問題は、検証環境では再現しにくく発見が遅れやすい。個人開発の規模でも、実際の事故の経緯を記録することは同様の仕組みを作る人の参考になる。原因と対策の詳細は、記事で確かめる必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">MCP サーバーと繋いだだけで情報漏洩？危険の 4 パターンと事前に確認すべき 7 つのこと（29 LGTM）</td><td class="link-col"><a href="https://qiita.com/songchong/items/89175eaa7a30f71d0351" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• MCP サーバーをつなぐことで情報が漏れる危険を 4 つのパターンに整理した記事。<br>• 接続前に確認すべき 7 つの項目をまとめている。<br>• AI エージェントのセキュリティに関する記事にあたる。<br><br>MCP によってエージェントが外部のツールやデータに簡単にアクセスできるようになった反面、接続先の信頼性が新たなリスクになっている。危険のパターンを整理しておくことは、導入時の確認漏れを減らす助けになる。社内で使う場合は、確認項目を運用ルールに落とし込むことが求められる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header local-llm"><th colspan="3">🤖 ローカルLLM関連リポジトリ</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">NVIDIA製のモデル最適化統合ライブラリ「Model Optimizer」 — (原文: NVIDIA/Model-Optimizer)</td><td class="link-col"><a href="https://github.com/NVIDIA/Model-Optimizer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 量子化・蒸留・枝刈り・ニューラルアーキテクチャ探索・投機的デコーディングなどの最適化手法をまとめた統合ライブラリ<br>• モデルを圧縮し、TensorRT-LLM・TensorRT・vLLM などの推論フレームワーク向けに推論速度の向上を図る<br>• 略称は ModelOpt で、ドキュメント・ロードマップ・告知ブログが公開されている<br><br>LLM の推論コスト削減では量子化や投機的デコーディングの重要性が高まっており、複数の手法を一つのライブラリで扱える点が注目を集めているとみられる。主な対象は NVIDIA GPU と同社の推論スタックだが、vLLM への対応も示されており、自前環境でモデルを動かす利用者にとって最適化の選択肢の一つとなりうる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-09-26 06:33 JST
+</footer>
+</div>
+</body>
+</html>
