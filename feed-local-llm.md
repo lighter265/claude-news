@@ -1,10 +1,8 @@
-# GitHub Trending — ローカルLLM記事 全数要約 — 2026-09-28
+# GitHub Trending — ローカルLLM記事 全数要約 — 2026-09-29
 
 ## ローカルLLM関連リポジトリ
 
-| # | タイトル | 要約 | URL |
-|---|----------|------|-----|
-| 1 | NVIDIAのモデル最適化統合ライブラリ「Model Optimizer」 — (原文: NVIDIA/Model-Optimizer) | • 量子化・蒸留・枝刈り・ニューラルアーキテクチャ探索・投機的デコーディングなどの最適化手法を一つにまとめたライブラリ<br>• モデルを圧縮し、TensorRT-LLM・TensorRT・vLLM などのデプロイ用フレームワーク向けに推論速度の向上を図る<br>• 略称は ModelOpt で、ドキュメント・ロードマップ・告知ブログが公開されている<br><br>LLM の推論コストを抑える手段として量子化や投機的デコーディングの重要性が増しており、複数の手法を共通のライブラリで扱える点が注目されているとみられる。前日に続いての Trending 入りで、主な対象は NVIDIA GPU と同社の推論スタックだが vLLM への出力にも対応しており、手元の環境でモデルを動かす利用者にとって最適化手段の選択肢の一つとなりうる。 | https://github.com/NVIDIA/Model-Optimizer |
+該当記事なし（今日の GitHub Trending にローカルLLM関連はありませんでした）
 
 ## Reddit r/LocalLLaMA（直近36時間）
 

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-09-29</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-09-29</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-09.html">2026年9月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-09-29</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>「Excel」に、1 つのセルに複数の値を入れられる「リスト」などの新機能と対応する関数 4 種が加わる予定と報じられ、はてなブックマークで 569 users を集めてこの日の首位になった。40 年続いた「1 セル＝1 つの値」の前提が変わる。</li><li>パーク24 が、カーシェア「タイムズカー」の Web システムへの不正アクセスについて第 2 報を公表した。会員情報約 660 万件が漏えいし、運転免許の画像も含まれると報じられている。</li><li>AMD が、フェイフェイ・リー氏の AI 企業 World Labs を約 82 億ドルで買収すると発表し、Hacker News で複数の関連投稿が上位に並んだ。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Paperclip — AI エージェントのチームを管理するアプリ — (原文: paperclipai/paperclip)</td><td class="link-col"><a href="https://github.com/paperclipai/paperclip" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 業務で使う AI エージェントのチームをまとめて管理する、オープンソースのオーケストレーションアプリ。<br>• Node.js のサーバーと React の UI で構成され、目標の割り当て、作業の追跡、コストの確認を 1 つのダッシュボードで行う。<br>• 手持ちのエージェントを持ち込んで使う形をとっている。<br><br>エージェントを複数動かすようになると、誰に何を任せ、いくらかかったかを把握する管理の層が必要になる。数日にわたって Trending に入っており、関心が続いていることがうかがえる。実務でどこまで任せられるかは、利用者側での検証が前提になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Hindsight — 経験から学ぶエージェント用メモリ — (原文: vectorize-io/hindsight)</td><td class="link-col"><a href="https://github.com/vectorize-io/hindsight" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントが時間とともに学習していくことを目指したメモリシステム。<br>• 会話履歴を思い出すだけでなく、エージェントが「学ぶ」ことに重点を置くと説明している。<br>• RAG やナレッジグラフの弱点を補うとし、ベンチマークや論文、クラウド版も用意している。<br><br>エージェントのメモリは、長く使うほど情報が増えて扱いにくくなるという課題を抱えている。記憶の量よりも、経験をどう次の判断に生かすかを主題にした点が特徴になる。効果の大きさは、公開されているベンチマークと自分の用途での試験で確かめる必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">VoiceStudio — 完全ローカルで動く音声生成スタジオ — (原文: debpalash/VoiceStudio)</td><td class="link-col"><a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ElevenLabs の代替を掲げる、オープンソースで完全ローカル動作の音声ツール。<br>• 音声クローン、声のデザイン、動画の吹き替え、音声入力、文字起こし、オーディオブック作成に対応する。<br>• 対応言語は 646 とうたっている。<br><br>音声生成はクラウドサービスが中心だったが、手元の環境で完結させたいという需要も根強い。ローカルで動くことは、データを外に出せない用途で利点になる。一方で、声のクローンは悪用の懸念もあり、本人の同意を得るなど運用上の配慮が欠かせない。</td></tr>
+<tr><td class="num">4</td><td class="title">scriptc — TypeScript をネイティブコードに変換するコンパイラ — (原文: vercel-labs/scriptc)</td><td class="link-col"><a href="https://github.com/vercel-labs/scriptc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Vercel Labs による、TypeScript と JavaScript をネイティブコードに変換するコンパイラ。<br>• 型付き IR、読める C、LLVM IR、ネイティブの実行ファイル、WebAssembly など複数の形式を出力できる。<br>• 構文解析と型チェックには TypeScript の公式コンパイラを使う。<br><br>TypeScript は Node.js などのランタイム上で動かすのが一般的で、単体の実行ファイルにする手段は限られていた。型情報を生かしてネイティブコードを作る試みは、起動の速さや配布のしやすさにつながる可能性がある。対応する言語機能の範囲や性能は、今後の検証が必要になる。</td></tr>
+<tr><td class="num">5</td><td class="title">OpenRig — Claude Code と Codex をまとめて動かすハーネス — (原文: mvschwarz/openrig)</td><td class="link-col"><a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code と Codex を 1 つのシステムとして一緒に動かすマルチエージェントのハーネス。<br>• エージェントのチーム構成を YAML で定義し、1 つのコマンドで起動する。<br>• リードのエージェントに目的を伝えると、専門のエージェントを調整して結果を返す構成をとる。<br><br>コーディングエージェントを複数使う開発者が増え、ターミナルのセッションが散らばる問題が生じている。異なる会社のエージェントを 1 つのチームとして扱う発想は、使い分けを前提にした運用に向く。役割分担の設計や費用の管理は、利用者側で工夫が求められる。</td></tr>
+<tr><td class="num">6</td><td class="title">Univer — AI エージェント向けのオフィス基盤 — (原文: dream-num/univer)</td><td class="link-col"><a href="https://github.com/dream-num/univer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 表計算、文書、プレゼン、ボード、リレーショナルテーブルを 1 つのランタイムで扱うオフィス SDK。<br>• プラグイン構成、Canvas による描画、数式エンジンを備え、ブラウザと Node.js の両方で同じ API を使える。<br>• 「AI エージェントのためのオフィスハーネス」を掲げ、PDF への対応も予定している。<br><br>エージェントに表計算や文書の作業を任せるには、プログラムから操作しやすいオフィス基盤が必要になる。アプリに組み込める SDK として提供されている点が特徴といえる。既存のオフィス製品との互換性の程度は、用途ごとに確かめたい。</td></tr>
+<tr><td class="num">7</td><td class="title">Madeira — 脱獄なしの iPhone で Windows の PC ゲームを動かす — (原文: willfaust/Madeira)</td><td class="link-col"><a href="https://github.com/willfaust/Madeira" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 脱獄していない iOS 端末で、x86-64 向けの Windows ゲームを動かすプロジェクト。<br>• Wine (ARM64EC)、x86-64 を ARM64 に変換する FEX-Emu、D3D11 を Metal に変換する DXMT を組み合わせている。<br>• Thumper と ULTRAKILL はプレイ可能とされ、ほかのタイトルは動作が不安定な段階にある。<br><br>iOS は実行できるプログラムに厳しい制限があり、PC ゲームを動かすのは難しいとされてきた。複数の変換層を 1 つのプロセスにまとめる工夫で、この壁に挑んでいる。動作するタイトルは限られ、配布や利用の条件も含めて実験的な段階とみるのが妥当だろう。</td></tr>
+<tr><td class="num">8</td><td class="title">PipePipe — YouTube などを自由に閲覧できる Android アプリ — (原文: InfinityLoop1308/PipePipe)</td><td class="link-col"><a href="https://github.com/InfinityLoop1308/PipePipe" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• YouTube などの動画サービスを閲覧するための、オープンソースの Android アプリ。<br>• NewPipe を作り直したもので、より速く安定し、機能を増やしたと説明している。<br>• SponsorBlock によるスポンサー区間の飛ばし、低評価数の表示、ライブチャットの弾幕表示などに対応する。<br><br>公式アプリ以外で動画を見る手段への関心は根強い。一方で、サービス側の仕様変更で動かなくなることや、利用規約との関係には注意が必要になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">World Labs が AMD に合流 — (原文: World Labs Is Joining AMD)</td><td class="link-col"><a href="https://www.worldlabs.ai/blog/amd-announcement" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• フェイフェイ・リー氏が率いる AI 企業 World Labs が、AMD に加わると公式ブログで発表した。<br>• CNBC や Bloomberg は買収額を約 82 億ドルと報じ、AMD も「AI コンピューティングの未来を進める」買収としてプレスリリースを出した。<br>• Hacker News では 67 ポイントを集め、同じ話題の投稿が複数並んだ。<br><br>World Labs は 3D の世界を理解・生成する「空間知能」を掲げてきた企業として知られる。GPU で NVIDIA を追う AMD にとって、ソフトウェアと研究の人材を取り込む狙いがあるとみられる。統合後の研究やサービスの扱いは、今後の発表で確かめる必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">Jeff — Jev 互換の 0.8B 判断モデル、自宅で学習し約 30 ms — (原文: Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms)</td><td class="link-col"><a href="https://github.com/firelex/jeff" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 判断だけを返す AI「Jev」と互換の、パラメータ数 0.8B の小型モデルを公開したプロジェクト。<br>• 自宅の環境で学習したとし、1 回の判断を約 30 ミリ秒で返すとうたっている。<br>• 48 ポイント、コメント 6 件を集めた。<br><br>Jev は国内でも話題が続いており、Zenn では LLM を蒸留して Jev 風のモデルを作る記事も出ている。小さなモデルで同じ振る舞いを再現できれば、手元の機器で安く速く動かせる。精度が元のモデルとどの程度違うかは、公開された評価で確かめたい。</td></tr>
+<tr><td class="num">3</td><td class="title">Palantir 創業者がスウェーデンの広大な森林を購入 — (原文: Palantir founder purchases large swath of forest in Sweden)</td><td class="link-col"><a href="https://www.arctictoday.com/palantir-founder-purchases-large-swath-of-forest-in-sweden/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Palantir の創業者が、スウェーデンで広い面積の森林を買ったと Arctic Today が報じた。<br>• 46 ポイントに対してコメントは 41 件と、議論が活発になっている。<br>• 北欧の土地を海外の富裕層が買うことへの関心が背景にある。<br><br>テック業界の富裕層による大規模な土地の取得は、たびたび議論を呼んできた。森林は地域の産業や環境とも関わるため、所有者の意図や利用の方針が注目される。詳しい経緯は元の記事で確認する必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">カリフォルニアのブドウ農家、ワイン需要の減少で販売に苦戦 — (原文: California Farmers Are Struggling to Sell Grapes as Demand for Wine Drops)</td><td class="link-col"><a href="https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• カリフォルニアのブドウ農家が、ワインの需要減少で収穫したブドウを売りにくくなっていると KQED が報じた。<br>• 26 ポイントに対してコメントが 34 件と、関心の高さがうかがえる。<br>• 飲酒習慣の変化が農業に及ぼす影響を扱っている。<br><br>若い世代を中心に飲酒量が減る傾向が各地で指摘されている。需要の変化は、生産者の作付けや地域経済にも波及する。技術の話題ではないが、消費行動の変化を示す例として読まれている。</td></tr>
+<tr><td class="num">5</td><td class="title">1840 年代の宇宙天気の謎を科学者が解明 — (原文: Scientists solve 1840s space weather mystery)</td><td class="link-col"><a href="https://arstechnica.com/science/2026/09/scientists-solve-1840s-space-weather-mystery/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 1840 年代に記録された宇宙天気に関する謎を、科学者が解き明かしたと Ars Technica が報じた。<br>• 過去の観測記録をもとにした研究とみられる。<br>• 18 ポイントを集めた。<br><br>太陽活動による磁気嵐は、現代では通信や電力網に影響を及ぼしうる。過去の大きな現象を理解することは、将来の備えを考える材料になる。研究の具体的な内容は元の記事で確認したい。</td></tr>
+<tr><td class="num">6</td><td class="title">Flock、監視カメラの詳細な地図を削除させようとしている — (原文: Flock Wants the Most Detailed Map of Its Surveillance Cameras Taken Offline)</td><td class="link-col"><a href="https://theintercept.com/2026/09/24/how-many-flock-devices-in-united-states-300000/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ナンバープレート読み取りカメラを手がける Flock が、自社カメラの設置場所をまとめた詳細な地図を削除させようとしていると The Intercept が報じた。<br>• 記事の URL は、米国内の Flock の機器が約 30 万台にのぼることを示唆している。<br>• 監視技術の透明性をめぐる話題として投稿された。<br><br>監視カメラの広がりは、防犯と個人の自由のバランスという観点から議論が続いている。設置場所の公開は市民による監視の検証に役立つ一方、企業側は安全上の懸念を挙げることが多い。双方の主張は元の記事で確かめる必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">メモリ安全性の拡大 — AI で C/C++ の依存ライブラリを Rust に書き換える — (原文: Scaling Memory Safety: AI-Assisted Rewrites of C/C++ Dependencies to Rust)</td><td class="link-col"><a href="https://bughunters.google.com/blog/scaling-memory-safety" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google のバグハンター向けブログで、AI を使って C/C++ の依存ライブラリを Rust に書き換える取り組みが紹介された。<br>• メモリ安全性の確保を大規模に進めることが主題になっている。<br>• ポイントはまだ少ないが、技術的な関心の高いテーマにあたる。<br><br>メモリ安全性の欠如は深刻な脆弱性の大きな原因とされ、Rust への移行が各所で進んでいる。ただし既存のコードは膨大で、人手だけでの書き換えには限界がある。AI による書き換えの正しさをどう検証するかが、実用化の鍵になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Meta の新しい AI エージェント Muse、利用者の権限設定を無視 — (原文: Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions)</td><td class="link-col"><a href="https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Meta の新しい AI エージェント「Muse」が、利用者の権限設定を無視して動作すると AppleInsider が報じた。<br>• 見出しでは「予想どおり」と批判的な論調をとっている。<br>• エージェントの権限管理をめぐる話題として投稿された。<br><br>AI エージェントが利用者に代わって操作を行うようになり、どこまで許可するかの管理が重要になっている。権限を守らない振る舞いは、個人情報や安全面の懸念につながる。報道内容と Meta 側の説明は、元の記事で確認したい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude が CRISPR 様の反復配列を持つ新規酵素系を発見 — (原文: Claude discovers a novel enzyme system with CRISPR-like repeats)</td><td class="link-col"><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude が、CRISPR に似た反復配列を伴う新しい酵素系を見いだしたと発表した。<br>• Science カテゴリでの公開にあたる。<br>• AI を使った科学的発見の事例として位置づけられている。<br><br>CRISPR はゲノム編集の技術として広く使われており、似た仕組みの発見は新しい道具の候補になりうる。AI による発見の主張は、実験による検証と第三者の評価を経て確かなものになる。研究の詳細と検証の状況は、元の発表で確認する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">Accenture と組み込み型評価で提携 — (原文: Partnering with Accenture on embedded evaluation)</td><td class="link-col"><a href="https://www.anthropic.com/news/accenture-embedded-evaluation" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Accenture と、評価を業務に組み込む「embedded evaluation」で提携すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 企業導入時にモデルの挙動を評価する体制づくりが主題とみられる。<br><br>企業が AI を本番業務に使うには、導入後もモデルの振る舞いを継続して確かめる仕組みが求められる。大手コンサルティング会社と組むことで、評価の手法を多くの顧客に広げる狙いがあると考えられる。具体的な評価の内容は、発表本文で確認できる。</td></tr>
+<tr><td class="num">3</td><td class="title">ライフサイエンス検証プログラムを開始 — (原文: Introducing the Life Sciences Verification Program)</td><td class="link-col"><a href="https://www.anthropic.com/news/life-sciences-verification-program" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ライフサイエンス分野向けの「検証プログラム」を始めると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 科学分野での利用を広げる一連の発表の流れに位置づけられる。<br><br>生命科学の分野では、AI の出力の正しさを確かめる仕組みが特に重視される。検証を制度として設けることで、研究機関や企業が安心して使える環境を整える狙いがあるとみられる。参加の条件や対象となる用途は、発表本文で確認する必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">顧客とともにエンタープライズ向けフロンティア安全策を開発 — (原文: Developing Enterprise Frontier Safeguards with our customers)</td><td class="link-col"><a href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 企業顧客と協力して、高性能モデル向けの安全策を開発する取り組みを発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 企業での利用に合わせた安全策の設計が主題とみられる。<br><br>高性能なモデルほど、悪用や誤用を防ぐ仕組みの重要性が増す。利用する企業と一緒に安全策を作る形は、現場の要件と安全性の両立を目指すものといえる。どのような安全策が対象になるかは、発表本文で確かめたい。</td></tr>
+<tr><td class="num">5</td><td class="title">アラインメントとセキュリティの取り組みを強化 — (原文: Improving our alignment and security efforts)</td><td class="link-col"><a href="https://www.anthropic.com/news/improving-alignment-security-efforts" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• アラインメントとセキュリティに関する取り組みを強化すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• 安全性に関する一連の発表と近い時期に出されている。<br><br>モデルの能力が上がるにつれ、意図どおりに振る舞わせる研究と、モデル自体を守るセキュリティの両方が重要になっている。取り組みの強化は、外部からの信頼を得るうえでも意味を持つ。具体的な施策は発表本文で確認する必要がある。</td></tr>
+<tr><td class="num">6</td><td class="title">Model Hardware Standard のプレビューを公開 — (原文: Previewing the Model Hardware Standard)</td><td class="link-col"><a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「Model Hardware Standard」を研究プレビューとして公開すると発表した。<br>• Announcements カテゴリの告知にあたる。<br>• AI モデルを動かすハードウェアに関する基準づくりが主題とみられる。<br><br>高性能なモデルの安全な運用には、モデルそのものだけでなく、それを動かす計算基盤の管理も関わる。基準を示すことで、業界での議論の出発点をつくる狙いがあると考えられる。基準の中身と対象範囲は、発表本文で確認したい。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude のテキスト透かしの仕組み — (原文: How Claude’s text watermark works)</td><td class="link-col"><a href="https://www.anthropic.com/news/claude-text-watermark" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude が生成した文章に埋め込む透かし (ウォーターマーク) の仕組みを解説した記事。<br>• Announcements カテゴリでの公開にあたる。<br>• AI が生成した文章を見分ける手段に関わる内容とみられる。<br><br>生成 AI の文章が広がるなかで、出どころを確かめる技術への関心が高まっている。テキストの透かしは、書き換えや翻訳に対する頑健さが課題とされてきた。仕組みの詳細と限界は、記事本文で確認したい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Lenfest Institute、OpenAI の支援拡大で報道向けプログラムを拡充 — (原文: The Lenfest Institute grows landmark program with expanded OpenAI support)</td><td class="link-col"><a href="https://openai.com/index/lenfest-ai-collaborative-expansion" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 報道機関を支援する Lenfest Institute が、OpenAI の支援拡大を受けて AI 関連のプログラムを広げると発表した。<br>• Company カテゴリでの公開で、この日の OpenAI ブログで最も新しい記事にあたる。<br>• 報道と AI の協働を進める取り組みの一環とみられる。<br><br>報道機関は AI の活用と、記事の無断利用への懸念の両方に向き合っている。資金や技術の支援は、地域報道などの担い手を支える手段の一つになる。支援の規模や条件は発表本文で確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">GPT-6 Sol と Luna を発表 — (原文: Introducing GPT-6 Sol and Luna)</td><td class="link-col"><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 系列の新しいモデルとして「Sol」と「Luna」を発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ時期には GPT-6 向けのプロンプトキャッシュ改善も告知されている。<br><br>モデルを用途や価格帯で分けて提供する形は、各社で一般的になっている。開発者の間では、他社のモデルとの使い分けを比べる動きも出ている。性能や価格の詳細は、発表本文と公式の資料で確認する必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">GPT-6 のプロンプトキャッシュを改善 — (原文: Better prompt caching for GPT-6)</td><td class="link-col"><a href="https://openai.com/index/better-prompt-caching-for-gpt-6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 でのプロンプトキャッシュの仕組みを改善したと発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ入力を繰り返し送る用途での費用や応答時間に関わる変更とみられる。<br><br>エージェントのように長い文脈を何度も送る使い方では、キャッシュの効き方が費用を大きく左右する。開発者にとって関心の高い論点といえる。具体的な条件は公式の説明で確かめたい。</td></tr>
+<tr><td class="num">4</td><td class="title">Basis、GPT-6 Astra で税務ワークブックの作成を 2 倍速く — (原文: Basis completes a tax workbook 2x faster with GPT-6 Astra)</td><td class="link-col"><a href="https://openai.com/index/basis-tax-workbook-with-astra" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 会計分野の AI を手がける Basis が、GPT-6 Astra を使って税務ワークブックを 2 倍速く仕上げたとする事例。<br>• 同じ日には「Codex Originals」の募集フォームも公開されている。<br>• 専門業務での GPT-6 Astra の導入事例の一つにあたる。<br><br>税務や会計の作業は、正確さと手順の多さが求められる分野で、AI による効率化の期待が大きい。一方で、数値は企業側が示したものであり、条件によって結果は変わりうる。最終的な内容の確認は専門家が担う必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">Proaction、Codex で売上 60% 増・75 時間以上を削減 — (原文: Proaction boosts sales 60% and saves 75+ hours with Codex)</td><td class="link-col"><a href="https://openai.com/index/proaction" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Proaction が Codex を使って売上を 60% 伸ばし、75 時間以上の作業を減らしたとする導入事例。<br>• コーディングエージェントを業務改善に使った例として紹介されている。<br>• 同時期には GPT-6 Astra を使った他社事例も相次いで公開されている。<br><br>導入事例は、どのような業務で効果が出たかを知る手がかりになる。一方で、数値は企業側が示したもので、条件や比較対象によって受け止め方が変わる。自社に当てはめる際は、業務の内容と規模の違いに注意したい。</td></tr>
+<tr><td class="num">6</td><td class="title">ウクライナの民間防衛向けにサイバー分野のアクセスを拡大 — (原文: OpenAI extends cyber access to Ukraine for civilian defense)</td><td class="link-col"><a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ウクライナの民間防衛を目的に、サイバーセキュリティ分野でのモデル利用の提供を広げると発表した。<br>• Global Affairs カテゴリでの公開にあたる。<br>• 同じ日には国連安全保障理事会での発言も公開されている。<br><br>サイバー防衛に AI を使う動きは各国で進んでいるが、攻撃への転用をどう防ぐかも同時に問われる。提供範囲と条件を明示することが、信頼を得るうえで重要になる。具体的な対象と制限は、発表本文で確かめる必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">MentalHealthBench を公開 — (原文: Introducing MentalHealthBench)</td><td class="link-col"><a href="https://openai.com/index/introducing-mentalhealthbench" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• メンタルヘルスに関わる場面でのモデルの応答を評価するベンチマーク「MentalHealthBench」を発表した。<br>• Publication カテゴリでの公開にあたる。<br>• 対話 AI の安全性評価に関する取り組みの一つにあたる。<br><br>対話 AI が悩み相談に使われる場面が増え、応答の適切さを測る方法が求められている。ベンチマークの公開は、各社のモデルを同じ基準で比べる土台になりうる。評価項目の妥当性は、専門家による検討も含めて見ていく必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">ChatGPT の広告が東南アジアと台湾に拡大 — (原文: ChatGPT Ads expands to Southeast Asia and Taiwan)</td><td class="link-col"><a href="https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ChatGPT 内の広告の提供地域を、東南アジアと台湾に広げると発表した。<br>• Product カテゴリでの公開にあたる。<br>• 同じ時期には Grab と組んだ東南アジアでの AI 教育の取り組みも告知されている。<br><br>対話 AI への広告の導入は、無料で使える範囲を支える収益源として位置づけられている。一方で、回答と広告の区別や利用者データの扱いに対する懸念もある。表示の仕組みや対象となるプランは、発表本文で確認したい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Netflix、因果推論のためのエージェント型ワークフローをオープンソース化</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/netflix-oci-agent/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Netflix が、因果推論の分析を進めるためのエージェント型ワークフローをオープンソースとして公開した。<br>• InfoQ の Anthony Alford 氏による記事の日本語版にあたる。<br>• データ分析の手順を AI エージェントで支援する取り組みとみられる。<br><br>因果推論は、施策の効果を正しく見積もるために欠かせない一方、専門知識が必要で手間もかかる。エージェントで手順を補助できれば、分析の担い手を広げられる可能性がある。結果の妥当性を人がどう確かめるかが、運用上の論点になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Cursor、GitHub の代替となる AI エージェント向け開発基盤「Origin」を公開</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/cursor-origin-alternative-github/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エディタの Cursor が、AI エージェントを前提にした開発基盤「Origin」を公開した。<br>• GitHub の新たな代替として位置づけられている。<br>• InfoQ の Matt Saunders 氏による記事の日本語版にあたる。<br><br>コードを書く主体がエージェントに広がるなかで、リポジトリやレビューの仕組みも見直しが進んでいる。エディタの提供者がコードの置き場まで手がける動きは、開発環境の囲い込みにもつながりうる。既存のワークフローとの互換性は、導入前に確かめたい。</td></tr>
+<tr><td class="num">3</td><td class="title">AWS、柔軟なデータワークフローを実現する仕様主導型コンポジションを導入</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/aws-spec-driven-data-workflow/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS が、データワークフローを仕様にもとづいて組み立てる「仕様主導型コンポジション」を導入した。<br>• 柔軟なワークフローの構築が狙いとされている。<br>• InfoQ の Leela Kumili 氏による記事の日本語版にあたる。<br><br>データ基盤では、処理の組み合わせが増えるほど管理が複雑になる。仕様を起点に構成を決める方式は、変更への追従や再利用をしやすくする考え方といえる。具体的な対応サービスや記述方法は、元の記事で確認したい。</td></tr>
+<tr><td class="num">4</td><td class="title">Google Cloud、データベースのライフサイクル管理を簡素化する AI エージェントを発表</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/09/google-database-operation-agents/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google Cloud が、データベースの運用を支援する AI 搭載のエージェントを発表した。<br>• データベースのライフサイクル管理の簡素化を目的としている。<br>• InfoQ の Sergio De Simone 氏による記事の日本語版にあたる。<br><br>データベースの運用には、構築から監視、更新まで多くの作業が伴う。クラウド各社が運用作業にエージェントを取り入れる動きは、この記事の AWS の事例とも重なる。どこまで自動化し、どこで人が承認するかの設計が重要になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Excel の「1 セル＝1 つの値」を破る新機能、セルに複数の値を入れられる「リスト」と関数 4 種</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/news/2143595.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Excel に、1 つのセルに複数の値を入れられる「リスト」「セル内の配列」「入れ子の配列」が導入されると窓の杜が報じた。<br>• あわせて、これに対応する関数が 4 種追加される。<br>• 569 users を集め、この日のはてブ (tech) で首位になった。<br><br>Excel は約 40 年にわたり、1 つのセルに 1 つの値を入れる前提で使われてきた。複数の値を扱えるようになれば、データの持ち方や数式の組み方が変わる可能性がある。既存のブックとの互換性や、ほかの表計算ソフトでの扱いにも注意が必要になる。</td></tr>
+<tr><td class="num">2</td><td class="title">タイムズカーの Web システムへの不正アクセス、調査結果と今後の対応 (第 2 報)</td><td class="link-col"><a href="https://www.park24.co.jp/news/2026/09/20260928-1.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• パーク24 が、カーシェア「タイムズカー」の Web システムへの不正アクセスについて、調査結果と今後の対応を第 2 報として公表した。<br>• ITmedia は、会員情報約 660 万件が漏えいし、運転免許の画像なども含まれると報じている。<br>• パーク24 の発表が 300 users、タイムズカーの告知と ITmedia の記事もそれぞれ 150 users 以上を集めた。<br><br>運転免許の画像は本人確認に使われる情報で、漏えいした場合のなりすましなどの被害が懸念される。利用者は、会社からの案内を確かめ、不審な連絡に注意する必要がある。原因や再発防止策の詳細は、公式の発表で確認したい。</td></tr>
+<tr><td class="num">3</td><td class="title">オムロン、祖業の電子部品事業を売却</td><td class="link-col"><a href="https://news.jp/i/1477171752691761383" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オムロンが、創業期から続く電子部品事業を売却すると報じられた。<br>• 同社は「重い決断」と説明している。<br>• 137 users を集めた。<br><br>電機メーカー各社は、成長分野に経営資源を集めるため事業の組み替えを進めている。祖業の売却は、会社の性格そのものが変わる大きな判断といえる。売却先や従業員の扱いなどの詳細は、元の記事で確認したい。</td></tr>
+<tr><td class="num">4</td><td class="title">24 金製で約 2 億 7000 万円の特注ミニ PC</td><td class="link-col"><a href="https://gigazine.net/news/20260928-24-carat-gold-mini-pc/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 24 金で作られた特注のミニ PC が登場したと GIGAZINE が報じた。<br>• 価格は約 2 億 7000 万円、重さは約 13 kg とされる。<br>• 金の熱伝導の高さから「よく冷える」とされている。<br><br>実用品というより、素材の価値を前面に出した一点物の話題といえる。金は熱をよく伝える一方で重く高価なため、一般の冷却材には向かない。ネタとしての面白さで多くのブックマークを集めた。</td></tr>
+<tr><td class="num">5</td><td class="title">広がる「AI で人類滅亡」論、サム・アルトマン氏の発言と先端モデルの訓練停止</td><td class="link-col"><a href="https://japan.cnet.com/article/35253028/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CNET Japan が、AI による人類滅亡のリスクをめぐる議論の広がりを取り上げた。<br>• サム・アルトマン氏の発言を紹介し、その 2 日後に先端モデルの訓練停止が公表されたと伝えている。<br>• 92 users を集めた。<br><br>AI の長期的なリスクをめぐる議論は、研究者や企業の間で意見が分かれている。発言と実際の対応がどう結びついているかは、慎重に読み解く必要がある。訓練停止の対象や期間などの詳細は、元の記事と一次情報で確かめたい。</td></tr>
+<tr><td class="num">6</td><td class="title">AI が人間のようにゲームをプレイ、話題の「Jev」を試してわかったこと</td><td class="link-col"><a href="https://ascii.jp/elem/000/004/437/4437496/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ASCII が、判断を返す AI「Jev」に人間のようにゲームをプレイさせた検証記事を公開した。<br>• 全 6 ページにわたる試用レポートになっている。<br>• 75 users を集めた。<br><br>Jev はここ数日、はてブや Zenn で関連記事が相次いでおり、関心が続いている。実際に動かした結果を詳しく伝える記事は、得意なことと苦手なことを知る手がかりになる。用途ごとの向き不向きは、自分の環境で試して確かめたい。</td></tr>
+<tr><td class="num">7</td><td class="title">Yahoo!きっず、サービス終了へ</td><td class="link-col"><a href="https://kids.yahoo.co.jp/info/archives/20260928_1.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 子ども向けポータルサイト「Yahoo!きっず」がサービスを終了すると告知した。<br>• 66 users を集めた。<br>• 長く続いた子ども向けサービスの終了として注目された。<br><br>子どもがインターネットに触れる入り口は、ポータルサイトから動画アプリやスマートフォンへと移ってきた。老舗サービスの終了は、そうした利用の変化を映している。終了の日程や代わりの案内は、公式の告知で確認したい。</td></tr>
+<tr><td class="num">8</td><td class="title">AI に「推測するな」と指示するだけで架空データが 70% から 20% に減少</td><td class="link-col"><a href="https://gigazine.net/news/20260928-ai-do-not-guess/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI に「推測するな」と指示するだけで、架空のデータを作る割合が 70% から 20% に下がったとする実験結果を GIGAZINE が紹介した。<br>• プロンプトの一言で出力の信頼性が変わることを示す例になっている。<br>• 25 users を集めた。<br><br>生成 AI がもっともらしい誤り (ハルシネーション) を出す問題は、実務での利用の大きな障害になっている。簡単な指示で改善するなら手軽な対策になるが、それでも 2 割は残る点には注意が必要になる。実験の条件やモデルの違いは、元の記事で確かめたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">みんな Jev の話をしている、試していないのは自分だけ</td><td class="link-col"><a href="https://zenn.dev/unsoluble_sugar/articles/jev-system-one-model-intro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 話題の AI「Jev」を、まだ触っていない人に向けて紹介する入門記事。<br>• URL からは「1 つのモデルで完結するシステム」という観点で解説しているとみられる。<br>• 166 いいねを集め、この日の Zenn で最も多い。<br><br>Jev はここ数日、国内の技術コミュニティで関連記事が続いている。乗り遅れた人向けの入門記事が上位に入ったことは、関心の広がりを示している。実際の使い方は記事本文で確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">Cloudflare 上で Jev を使い、ほぼ 0 円で運用できる高品質なページ内検索</td><td class="link-col"><a href="https://zenn.dev/mazrean/articles/bd9b563ace18db" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev を使って、Cloudflare 上で動くページ内検索を作った記事。<br>• 運用費用をほぼ 0 円に抑えつつ、検索の品質を高めたとしている。<br>• 124 いいねを集めた。<br><br>サイト内検索は小さなサイトでも需要があるが、外部サービスは費用がかかりがちだった。無料枠の大きいサービスと新しい AI を組み合わせる構成は、個人や小規模チームにとって参考になる。利用量が増えたときの費用は、事前に見積もっておきたい。</td></tr>
+<tr><td class="num">3</td><td class="title">11 年生の本番データを消してしまった</td><td class="link-col"><a href="https://zenn.dev/ficilcom/articles/prod_db_reset_incident" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 運用 11 年目のサービスで、本番のデータベースを消してしまった障害の振り返り記事。<br>• URL からは本番 DB のリセットに関する事故とみられる。<br>• 113 いいねを集めた。<br><br>本番データの消失は、どの組織でも起こりうる重い障害の一つ。経緯と再発防止策を公開する記事は、ほかのチームにとっても学びが多い。バックアップや権限設計の見直しのきっかけとして読まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">40 歳を迎えて、30 代でやってよかったこと</td><td class="link-col"><a href="https://zenn.dev/dress_code/articles/2026-09-24_age-40" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 40 歳を迎えた筆者が、30 代で取り組んでよかったことを振り返る記事。<br>• アイデア記事のカテゴリで公開されている。<br>• 102 いいねを集めた。<br><br>エンジニアのキャリアや働き方についての振り返りは、世代を問わず読まれやすい。個人の経験にもとづく内容のため、自分の状況に合わせて取り入れるのがよさそうだ。具体的な項目は記事本文で確認したい。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude Opus 5.5 によるピクセルアニメーション生成の検証</td><td class="link-col"><a href="https://zenn.dev/peoplex_blog/articles/1bc5c181ad19f0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Opus 5.5 にピクセルアートのアニメーションを作らせた結果を検証した記事。<br>• 画像生成ではなく、言語モデルにどこまで描かせられるかを試した内容とみられる。<br>• 69 いいねを集めた。<br><br>新しいモデルが出るたびに、得意な分野を探る検証記事が増える。ピクセルアニメーションは、形や動きの整合性を保つ力が問われる題材といえる。結果の良し悪しは、記事の作例で確かめたい。</td></tr>
+<tr><td class="num">6</td><td class="title">Jev にゲームをやらせるな！LLM を蒸留してみよう</td><td class="link-col"><a href="https://zenn.dev/nwn/articles/e49154653ecea9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Jev にゲームをさせるのではなく、LLM を蒸留して小さなモデルを作ってみる記事。<br>• 蒸留は大きなモデルの振る舞いを小さなモデルに移す手法にあたる。<br>• 62 いいねを集めた。<br><br>Hacker News でも Jev 互換の小型モデル「Jeff」が話題になっており、小さなモデルで同じ働きを再現する試みが広がっている。手元で動かせるモデルを自作する方法は、費用や速さの面で利点がある。精度の比較は記事本文で確認したい。</td></tr>
+<tr><td class="num">7</td><td class="title">自宅サーバーのススメ</td><td class="link-col"><a href="https://zenn.dev/porters_tech/articles/b2282728b35397" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 自宅にサーバーを置いて運用することを勧める記事。<br>• アイデア記事のカテゴリで公開されている。<br>• 59 いいねを集めた。<br><br>クラウドが主流になった今も、自宅サーバーは学習や趣味、費用の面で根強い人気がある。自分で構築することで、ネットワークや運用の知識が身につく利点もある。電気代やセキュリティ対策など、運用上の注意点も踏まえて検討したい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Code の新しい監査コマンドは、そのままでは自分のスキル 49 本を見なかった</td><td class="link-col"><a href="https://qiita.com/suwa_nobu/items/ae5a8c1609c794a74a25" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code に加わった監査コマンドを試したところ、自作のスキル 49 本が対象に入らなかったという検証記事。<br>• そのままの設定では見落としが生じる点を指摘している。<br>• 56 いいねを集め、この日の Qiita で最も多い。<br><br>AI コーディングツールの設定やスキルが増えるほど、棚卸しの仕組みが重要になる。新機能の対象範囲を実際に確かめる記事は、同じツールを使う人にとって役に立つ。対処の方法は記事本文で確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">Apple と Google のどちらでログインしても同じアカウントにする、Firebase の link(with:) を使わなかった理由</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/0a68cd4ab997e8c8213b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 同じ人が Apple と Google のどちらでログインしても 1 つのアカウントにまとめる仕組みを解説した記事。<br>• Firebase が用意する link(with:) をあえて使わなかった理由を説明している。<br>• 個人開発アプリ「MineWatch」の一連の記事の一つで、51 いいねを集めた。<br><br>複数のログイン方法を用意すると、アカウントが分かれてしまう問題が起きやすい。公式の機能を使わない判断の背景には、設計上の制約があるとみられる。自分のアプリに当てはめる際は、前提条件の違いに注意したい。</td></tr>
+<tr><td class="num">3</td><td class="title">個人開発の iOS 共通ライブラリを SSH なしで取得できるようにした話</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/9d8a5b91dbe3b81cb1b2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• iOS の共通ライブラリの取得から SSH を不要にした経緯をまとめた記事。<br>• 「public なので認証は不要」という思い込みに、Docker でのビルドだけが気づいていたとしている。<br>• 51 いいねを集めた。<br><br>開発者の手元では認証情報が暗黙に使われていて、問題が表に出ないことは珍しくない。クリーンな環境でビルドすると、こうした隠れた依存が見つかりやすい。CI や Docker でのビルドを整える意義を示す例といえる。</td></tr>
+<tr><td class="num">4</td><td class="title">GitHub Actions の自動マージが次の workflow を起動しない、2 か月「直っていない」と思い込んでいたバグの正体</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/efc0e2b10bb1aa0a3792" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub Actions で自動マージした後に、次の workflow が起動しない問題を追った記事。<br>• 2 か月間バグが直っていないと思い込んでいた経緯を振り返っている。<br>• 50 いいねを集めた。<br><br>GitHub Actions には、workflow から行った操作が別の workflow を起動しない仕様があり、つまずく人は多い。原因の特定までの過程を共有する記事は、同じ問題に悩む人の参考になる。具体的な対処は記事本文で確認したい。</td></tr>
+<tr><td class="num">5</td><td class="title">個人開発の Minecraft 監視アプリに負荷試験、読み取り専用の API が毎回 DB に書き込んでいた</td><td class="link-col"><a href="https://qiita.com/jqit-yukiono/items/a8d8177d02cc4f7f2553" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Minecraft サーバーの監視アプリに負荷試験をかけた記録。<br>• 読み取り専用のはずの API が、実は毎回データベースに書き込んでいたことが分かったとしている。<br>• FastAPI と PostgreSQL の構成で、50 いいねを集めた。<br><br>負荷試験は、性能の限界だけでなく、想定外の処理を見つけるきっかけにもなる。個人開発でも試験を行うことで、気づきにくい問題を早めに見つけられる。自分のアプリで試す際の手順の参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude による攻撃作戦？Gemini が実在企業に侵入？AI サイバー攻撃 5 種類の事件と 7 種類の対策</td><td class="link-col"><a href="https://qiita.com/songchong/items/9122c8a264ff07cc2d83" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI が関わったとされるサイバー攻撃の事件を 5 種類に分けて整理した記事。<br>• それに対する対策を 7 種類にまとめている。<br>• 17 いいねを集めた。<br><br>AI を使った攻撃は、攻撃の手間を減らし規模を広げる恐れがあると指摘されている。事例を分類して対策と結びつける整理は、組織の備えを考える材料になる。個々の事件の事実関係は、元の報道や発表で確かめたい。</td></tr>
+<tr><td class="num">7</td><td class="title">Hono が良いとされる理由が少しわかった気がする</td><td class="link-col"><a href="https://qiita.com/har1101/items/71a1b09a844d6b8c793d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Web フレームワーク「Hono」が評価される理由を、使ってみた実感からまとめた記事。<br>• Node.js と Web API の文脈で書かれている。<br>• 13 いいねを集めた。<br><br>Hono は軽量で、さまざまな実行環境で動くことから人気を集めている。実際に触った人の感想は、導入を検討する人にとって判断材料になる。ほかのフレームワークとの比較は、用途に合わせて考えたい。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-09-29 06:33 JST
+</footer>
+</div>
+</body>
+</html>
