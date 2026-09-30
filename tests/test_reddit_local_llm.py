@@ -82,7 +82,7 @@ class RedditFetchTest(unittest.TestCase):
         })
         mocked_sleep.assert_called_once_with(3.0)
 
-    def test_retries_5xx_with_exponential_backoff_without_real_rss(self):
+    def test_retries_5xx_with_fallback_delay_without_real_rss(self):
         rss = b"<feed xmlns=\"http://www.w3.org/2005/Atom\" />"
         server_error = urllib.error.HTTPError(
             reddit.FEED_URL, 503, "Service Unavailable", {}, None
@@ -91,10 +91,57 @@ class RedditFetchTest(unittest.TestCase):
              patch.object(reddit.time, "sleep") as mocked_sleep:
             reddit.fetch(now=datetime.now(timezone.utc))
 
+        # ヘッダなしなら30秒固定フォールバック。
         self.assertEqual(
             mocked_sleep.call_args_list,
-            [unittest.mock.call(1.0), unittest.mock.call(2.0)],
+            [unittest.mock.call(30.0), unittest.mock.call(30.0)],
         )
+
+    def test_skips_retry_when_cumulative_wait_would_exceed_100s(self):
+        # Retry-Afterが100秒超 → 待たずに即スキップ（例外が伝播）。
+        huge_wait = urllib.error.HTTPError(
+            reddit.FEED_URL, 429, "Too Many Requests",
+            {"Retry-After": "120"}, None
+        )
+        with patch.object(reddit, "http_get", side_effect=huge_wait) as mocked, \
+             patch.object(reddit.time, "sleep") as mocked_sleep:
+            with self.assertRaises(urllib.error.HTTPError):
+                reddit.fetch(now=datetime.now(timezone.utc))
+
+        self.assertEqual(mocked.call_count, 1)
+        mocked_sleep.assert_not_called()
+
+    def test_retries_until_cumulative_budget_is_exhausted(self):
+        # 1回目30s（ヘッダなし）＋2回目Retry-After 60s = 累計90sまで待つ。
+        # 3回目はさらに30s必要で累計120s → 100s超なのでスキップして例外。
+        limited = urllib.error.HTTPError(
+            reddit.FEED_URL, 429, "Too Many Requests", {}, None
+        )
+        limited_again = urllib.error.HTTPError(
+            reddit.FEED_URL, 429, "Too Many Requests", {"Retry-After": "60"}, None
+        )
+        with patch.object(reddit, "http_get", side_effect=[limited, limited_again, limited]), \
+             patch.object(reddit.time, "sleep") as mocked_sleep:
+            with self.assertRaises(urllib.error.HTTPError):
+                reddit.fetch(now=datetime.now(timezone.utc))
+
+        self.assertEqual(
+            mocked_sleep.call_args_list,
+            [unittest.mock.call(30.0), unittest.mock.call(60.0)],
+        )
+
+    def test_uses_x_ratelimit_reset_as_middle_fallback(self):
+        # Retry-After が無ければ x-ratelimit-reset を使い、それも無ければ30秒。
+        rss = b"<feed xmlns=\"http://www.w3.org/2005/Atom\" />"
+        rate_limited = urllib.error.HTTPError(
+            reddit.FEED_URL, 429, "Too Many Requests",
+            {"X-RateLimit-Reset": "7"}, None
+        )
+        with patch.object(reddit, "http_get", side_effect=[rate_limited, rss]), \
+             patch.object(reddit.time, "sleep") as mocked_sleep:
+            reddit.fetch(now=datetime.now(timezone.utc))
+
+        mocked_sleep.assert_called_once_with(7.0)
 
 
 class RegisterSeenTest(unittest.TestCase):

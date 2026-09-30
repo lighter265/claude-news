@@ -21,9 +21,9 @@ REDDIT_RSS_LIMIT = 100
 RECENT_WINDOW_HOURS = 36
 DESCRIPTION_MAX_CHARS = 500
 REDDIT_USER_AGENT = "claude-news/1.0 (personal news digest; contact unavailable)"
-RETRY_COUNT = 2  # 初回を含めて最大3試行。日次処理を長時間待たせない。
-RETRY_BACKOFF_SECONDS = 1.0
-MAX_RETRY_DELAY_SECONDS = 30.0
+RETRY_COUNT = 3  # 初回を含めて最大4試行。ただし累計待機時間の上限で打ち切られる。
+FALLBACK_DELAY_SECONDS = 30.0  # 待機時間を示すヘッダがない場合の既定待機秒数。
+MAX_TOTAL_WAIT_SECONDS = 100.0  # 累計待機がこれを超える見込みならリトライせずスキップする。
 FEED_URL = f"{REDDIT_RSS_BASE_URL}?limit={REDDIT_RSS_LIMIT}"
 
 
@@ -113,9 +113,24 @@ def _entry_url(entry):
     return ""
 
 
+def _header_value(error, name):
+    """HTTPErrorからヘッダを大小無視で取り出す。"""
+    if not error.headers:
+        return None
+    try:
+        items = error.headers.items()
+    except AttributeError:
+        return None
+    lowered = name.lower()
+    for key, value in items:
+        if str(key).lower() == lowered:
+            return value
+    return None
+
+
 def _retry_after_seconds(error):
     """Retry-Afterを秒数またはHTTP日付として解釈する。"""
-    value = error.headers.get("Retry-After") if error.headers else None
+    value = _header_value(error, "Retry-After")
     if not value:
         return None
     value = value.strip()
@@ -131,10 +146,22 @@ def _retry_after_seconds(error):
         return max(0.0, (retry_at - datetime.now(timezone.utc)).total_seconds())
 
 
+def _rate_limit_reset_seconds(error):
+    """Redditの x-ratelimit-reset（残り秒数）を解釈する。"""
+    value = _header_value(error, "x-ratelimit-reset")
+    if value is None:
+        return None
+    try:
+        return max(0.0, float(str(value).strip()))
+    except ValueError:
+        return None
+
+
 def _http_get_with_retry(url, sleep=None):
     """Redditのレート制限/一時障害だけを少回数リトライして取得する。"""
     sleep = sleep or time.sleep
     headers = {"User-Agent": REDDIT_USER_AGENT}
+    waited = 0.0
     for attempt in range(RETRY_COUNT + 1):
         try:
             return http_get(url, headers=headers)
@@ -143,15 +170,26 @@ def _http_get_with_retry(url, sleep=None):
             if not retryable or attempt >= RETRY_COUNT:
                 raise
 
+            # 待機時間: Retry-After → x-ratelimit-reset → 30秒固定。
             delay = _retry_after_seconds(error)
             if delay is None:
-                delay = RETRY_BACKOFF_SECONDS * (2 ** attempt)
-            delay = min(delay, MAX_RETRY_DELAY_SECONDS)
+                delay = _rate_limit_reset_seconds(error)
+            if delay is None:
+                delay = FALLBACK_DELAY_SECONDS
+            if waited + delay > MAX_TOTAL_WAIT_SECONDS:
+                # 累計100秒を超える待機になりそうなら待たずスキップする。
+                print(
+                    f"[reddit] HTTP {error.code}; cumulative wait "
+                    f"{waited + delay:g}s would exceed {MAX_TOTAL_WAIT_SECONDS:g}s; "
+                    f"skip retry"
+                )
+                raise
             print(
                 f"[reddit] HTTP {error.code}; retry "
                 f"{attempt + 1}/{RETRY_COUNT} in {delay:g}s"
             )
             sleep(delay)
+            waited += delay
 
 
 def fetch(limit=REDDIT_RSS_LIMIT, recent_hours=RECENT_WINDOW_HOURS, now=None):
