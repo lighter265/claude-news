@@ -95,7 +95,7 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。ただし raw/reddit_local_llm.json はローカルLLM専用データなので、通常の feed.md には絶対に参照・掲載しないでください。特に📌今日の3行サマリでは、Anthropic と OpenAI の記事を絶対に選ばないこと（ルール違反は厳禁）。"
+    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。ただし raw/reddit_local_llm.json はローカルLLM専用データなので、通常の feed.md には絶対に参照・掲載しないでください。"
     log "要約生成開始"
 
     #run timeout 1800 claude -p "$prompt"

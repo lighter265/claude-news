@@ -34,6 +34,13 @@
   .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
   .summary br + br { display: block; content: ""; margin-top: 4px; }
   tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
   /* highlights (📌 今日の3行サマリ) */
   .highlights {
     background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
@@ -86,7 +93,7 @@
   <ul><li>エージェントでアプリやバイナリを解析するオープンソースツール「REA」が話題になった。GitHub Trending に連日入り、テクノエッジの紹介記事もはてなブックマーク 329 を集めた。著作権の扱いも含めて関心を呼んでいる。</li><li>ウクライナがロシアの IT 大手 Yandex のデータセンターを 4 日で 3 カ所破壊したとするまとめ記事が、はてなブックマーク 178 を集めた。Reuters も「2 カ所目の被弾」を報じており（Hacker News）、ロシア国内のネット障害への影響に注目が集まっている。</li><li>Epic Games が社員に AI を使った「AI ファースト」の開発を指示したと複数のメディアが報じた。Hacker News では Disney 関連タイトルの開発に AI を使うよう求めたという記事が当日最多の 38 ポイントを得た。</li></ul>
 </section>
 <table>
-<thead><tr class="section-header"><th colspan="3">GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">rea — アプリの挙動からネイティブバイナリまでエージェントで解析するリバースエンジニアリング用 MCP — (原文: morluto/rea)</td><td class="link-col"><a href="https://github.com/morluto/rea" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• エージェントを使ってリバースエンジニアリングを行うツール。<br>• バイナリ、アプリケーション、実行時の挙動を 1 つの MCP で扱うとしている。<br>• README は日本語を含む多数の言語で用意されている。<br><br>気になる機能の仕組みをバイナリのレベルまで調べる用途を想定している。はてなブックマークでも紹介記事が多く読まれており、解析作業へのエージェント活用と、その法的な扱いの両面で注目されている。</td></tr>
@@ -107,7 +114,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">Epic Games、Disney 関連ゲームの完成に AI を使うよう社員に指示 — (原文: Epic Games tells employees to use AI to get Disney game done)</td><td class="link-col"><a href="https://www.avclub.com/epic-games-disney-ai-delay" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• Epic Games が社員に AI を使って Disney 関連ゲームを完成させるよう指示したと AV Club が報じた。<br>• 38 ポイント・コメント 11 件で、当日の取得分で最多。<br>• 同社の「AI ファースト」開発方針を報じる記事や Tim Sweeney 氏の投稿も並んだ。<br><br>大手ゲーム会社が制作工程で AI 利用を明確に求める動きとして注目されている。品質や雇用への影響について、今後の続報が待たれる。</td></tr>
@@ -128,7 +135,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Anthropic</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">2026 年版の利用ポリシー更新 — (原文: 2026 Usage Policy update)</td><td class="link-col"><a href="https://www.anthropic.com/news/2026-usage-policy-update" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic が 2026 年版の利用ポリシーの更新を発表した。<br>• Announcements カテゴリでの公開。<br>• 同日に科学・サイバー関連の発表も並んだ。<br><br>利用ポリシーは API や製品で許される用途の範囲を定めるもので、開発者や企業利用者には実務上の影響がある。変更点は原文で確認しておきたい。</td></tr>
@@ -147,7 +154,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>OpenAI</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">GPT-6 と Intelligent UI を全ユーザーへ — (原文: GPT-6 and Intelligent UI for everyone)</td><td class="link-col"><a href="https://openai.com/index/gpt-6-for-everyone" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• GPT-6 と「Intelligent UI」を全ユーザーに提供するという発表。<br>• Product カテゴリでの公開。<br>• 取得分の中では主要な製品発表にあたる。<br><br>上位モデルの提供範囲を広げる動きで、ChatGPT の利用体験にも影響しそうだ。提供条件や Intelligent UI の中身は原文で確認したい。</td></tr>
@@ -168,7 +175,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">jQuery の 20 年：小さなライブラリが Web 開発をどう変えたか</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/jquery-20-years/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• jQuery の登場から 20 年を振り返る記事。<br>• 小さなライブラリが Web 開発のあり方を大きく変えた経緯を扱う。<br>• 筆者は Daniel Curtis 氏。<br><br>ブラウザ間の差異を吸収した jQuery の役割は、現在の Web 標準やフレームワークの設計にも影響を残している。Web 技術の歴史を整理する読み物として参考になる。</td></tr>
@@ -189,7 +196,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">電子書籍を PDF 化・OCR する方法（Kindle・Kobo・DMM など 5 サービス対応）</td><td class="link-col"><a href="https://web.archive.org/web/20261011101825/https://lyttonblog.com/programming/ebook-pdf-ocr/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• 電子書籍を PDF 化して OCR をかける方法をまとめた記事。<br>• Kindle、Kobo、DMM など 5 サービスに対応する無料アプリを紹介している。<br>• はてなブックマーク 390 で当日最多（リンクは Web Archive）。<br><br>手元の書籍をテキストとして検索・活用したい需要の高さがうかがえる。各サービスの利用規約や著作権法上の扱いには注意が必要だ。</td></tr>
@@ -210,7 +217,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">嫌われるデザインの歴史</td><td class="link-col"><a href="https://zenn.dev/blackmose/articles/de0170a13be930" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• 嫌われてきたデザインの歴史をたどる記事。<br>• 450 いいねで、取得分の中で最多。<br>• アイデアカテゴリの記事。<br><br>過去に批判されたデザインの傾向を知ることは、UI 設計で同じ失敗を避けることにつながる。エンジニアにとってもデザインの見方を広げる読み物になる。</td></tr>
@@ -229,7 +236,7 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header"><th colspan="3">Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">すでに Web デザイナーの 8 割は不要である</td><td class="link-col"><a href="https://qiita.com/kotowazaman/items/74621592ace2ff968670" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• AI の普及を背景に、Web デザイナーの多くが不要になったと主張する記事。<br>• 124 いいねで、取得分の中で最多。<br>• 刺激的なタイトルで議論を呼んでいる。<br><br>職種の将来に関する主張は前提によって結論が変わるため、根拠を確かめながら読みたい。同じ筆者は AI 時代の開発費の考え方についても書いている。</td></tr>
@@ -250,14 +257,14 @@
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header local-llm"><th colspan="3">🤖 ローカルLLM関連リポジトリ</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header local-llm"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>🤖 ローカルLLM関連リポジトリ</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">AirLLM: 4GB GPU 1枚で70Bモデル推論を可能にするライブラリ — (原文: lyogavin/airllm)</td><td class="link-col"><a href="https://github.com/lyogavin/airllm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• 量子化・蒸留・枝刈りを行わずに推論時のメモリ使用量を大幅に削減し、70BクラスのLLMを4GB GPU 1枚で動かせるとしている<br>• Kimi K3（2.8T）を4GB未満、Qwen3.8-Flash-Next（125B）を6GB、DeepSeek-V3（671B）を約12GBで実行できると説明<br>• 少ないVRAMでの巨大モデルの学習にも対応し、MacOS向けの手順やサンプルノートブックも用意されている<br><br>層ごとにウェイトを読み込む方式で極端な省メモリを実現するアプローチは、GPU資源の限られた個人環境で大規模モデルを試す手段として注目されている。一方でディスクからの読み込みに伴う速度低下が想定されるため、実用性は用途や許容できる応答時間に左右されるとみられる。</td></tr>
 </tbody>
 </table>
 <table>
-<thead><tr class="section-header local-llm"><th colspan="3">🤖 Reddit r/LocalLLaMA（直近36時間）</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<thead><tr class="section-header local-llm"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>🤖 Reddit r/LocalLLaMA（直近36時間）</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
 <tbody>
 <tr><td class="num">1</td><td class="title">DeepMindのAlphaGenomeとブラウザ内MedGemma 1.5 4BでDNA変異を探索する教育ツール — (原文: Explore DNA with DeepMind’s AlphaGenome and in-browser MedGemma 1.5 4B via WebGPU)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1x4ec7b/explore_dna_with_deepminds_alphagenome_and/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
 <tr class="summary-row"><td></td><td colspan="2" class="summary">• 一塩基のDNA変異が病気、3D解剖構造、遺伝確率、治療法にどう関わるかを学べる教育ツール「AskCyph Health Explorer」の紹介<br>• 分子生物学的な予測はAlphaGenome、解説はWebGPU上で完全ローカルに動くMedGemma 4Bが担当する2モデル構成<br>• 説明役をブラウザ内で動かすことでユーザーのプライバシー保護を図っている<br><br>医療・ゲノム分野ではデータの機微性が高く、小型モデルをブラウザで動かすWebGPU推論はプライバシーと手軽さを両立する手段として事例が増えている。教育用途での正確性の担保が今後の論点になりそうだ。</td></tr>
@@ -412,8 +419,22 @@
 
 <footer>
   Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
-  · 2026-10-13 06:35 JST
+  · 2026-10-13 23:01 JST
 </footer>
 </div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
 </body>
 </html>

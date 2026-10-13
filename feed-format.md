@@ -7,7 +7,7 @@
 
 - `raw/*.json` を読み、技術ニュース要約として `feed.md` を生成する。
 - `feed.md` は必ず全体を上書きする。
-- fetch、commit、push、メール送信は行わない。
+- fetch、commit、push は行わない。
 
 ## 出力形式
 
@@ -29,12 +29,6 @@
 ## Hacker News
 （同様のテーブル形式。英語ソースは見出しを「<日本語意訳> — (原文: <English Title>)」形式で併記。）
 
-## Anthropic
-（同様。英語ソース。）
-
-## OpenAI
-（同様。英語ソース。）
-
 ## InfoQ Japan
 （同様。日本語ソースの場合は日本語意訳のみ。）
 
@@ -50,9 +44,9 @@
 
 ## セクションルール
 
-- セクション順は GitHub Trending、Hacker News、Anthropic、OpenAI、InfoQ Japan、はてなブックマーク (tech)、Zenn、Qiita とする。
-- **📌 今日の3行サマリ**: 全ソース横断で最も注目度の高い 3 件を 1 行ずつ。メール開封時に要点が伝わるよう、平易な日本語で。**Anthropic と OpenAI の記事は、いかなる場合も 3行サマリの選定対象から除外すること**（たとえその日のニュースで最も注目度が高くても。両ブログは更新頻度が低く、サマリを占拠しがちなため）。テーブルセクション（Anthropic / OpenAI）への掲載はこれまで通り行う。
-- **英語圏ソース (Anthropic / OpenAI / InfoQ Japan / Hacker News)**: タイトル列は「<日本語意訳> — (原文: <English Title>)」形式で原題を併記する。
+- セクション順は GitHub Trending、Hacker News、InfoQ Japan、はてなブックマーク (tech)、Zenn、Qiita とする。
+- **📌 今日の3行サマリ**: 全ソース横断で最も注目度の高い 3 件を 1 行ずつ。ページを開いてすぐ要点が伝わるよう、平易な日本語で。
+- **英語圏ソース (Hacker News など)**: タイトル列は「<日本語意訳> — (原文: <English Title>)」形式で原題を併記する。
 - **日本語ソース (Zenn / Qiita / はてな / InfoQ Japan)**: タイトル列は日本語意訳のみ。原文が長すぎる場合は適宜省略。
 - 取得できなかったソース、または有用な項目がないソースは見出しごと省略してよい。
 - 各ソースから、注目度(score)の高いものを中心に 5〜8 件ずつ選ぶ。

@@ -136,7 +136,8 @@ def render_tables(sections: dict, header_class: str = "", title_prefix: str = ""
         tables += '<table>\n'
         tables += (
             f'<thead>'
-            f'<tr{header_attr}><th colspan="3">{escape_html(title_prefix + sec_name)}</th></tr>'
+            f'<tr{header_attr}><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true">'
+            f'<span class="chev" aria-hidden="true">▸</span>{escape_html(title_prefix + sec_name)}</th></tr>'
             f'<tr class="sub-header"><th class="num">#</th>'
             f'<th>タイトル</th>'
             f'<th class="link-col">🔗</th></tr>'
@@ -229,6 +230,13 @@ def build_html(result: dict, date_str: str, llm_sections: dict | None = None) ->
   .summary {{ font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }}
   .summary br + br {{ display: block; content: ""; margin-top: 4px; }}
   tbody tr:hover td {{ background: #f8f9fb; }}
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle {{ cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }}
+  th.toggle:focus-visible {{ outline: 2px solid #f0b400; outline-offset: -2px; }}
+  .chev {{ display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }}
+  table.collapsed .chev {{ transform: none; }}
+  table.collapsed tbody, table.collapsed .sub-header {{ display: none; }}
+  table.collapsed thead .section-header th {{ border-bottom: 0; }}
   /* highlights (📌 今日の3行サマリ) */
   .highlights {{
     background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
@@ -276,6 +284,20 @@ def build_html(result: dict, date_str: str, llm_sections: dict | None = None) ->
   · {escape_html(datetime.now().strftime("%Y-%m-%d %H:%M JST"))}
 </footer>
 </div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {{
+    var table = th.closest("table");
+    function set(collapsed) {{
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }}
+    set(true);
+    th.addEventListener("click", function () {{ set(!table.classList.contains("collapsed")); }});
+    th.addEventListener("keydown", function (e) {{
+      if (e.key === "Enter" || e.key === " ") {{ e.preventDefault(); th.click(); }}
+    }});
+  }});
+</script>
 </body>
 </html>"""
 
