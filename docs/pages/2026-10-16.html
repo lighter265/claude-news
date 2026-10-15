@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-10-16</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-10-16</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-10.html">2026年10月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-10-16</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>ソースネクストが自社サイトへの不正アクセスで顧客情報が流出したと発表した。報道では最大約 2,251 万件にのぼり、パスワードの再設定が呼びかけられている。はてなブックマークは 321 で当日最多だった。</li><li>バーガーキングの公式アプリでも、不正アクセスにより会員情報約 1,118 万件が漏えいしたと NHK が報じた（はてなブックマーク 274）。JPCERT/CC やラックも国内で相次ぐ Web システムからの情報漏えいについて分析を公開している。</li><li>数学者テレンス・タオ氏のブログ記事「Why are we even doing all this?（そもそもなぜこれをやっているのか）」が Hacker News で当日最多の 133 ポイント、コメント 88 件を集めた。AI と数学研究の意義をめぐる議論への関心がうかがえる。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">rea — アプリの挙動からネイティブバイナリまでエージェントで解析するリバースエンジニアリング用 MCP — (原文: morluto/rea)</td><td class="link-col"><a href="https://github.com/morluto/rea" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エージェントを使ってリバースエンジニアリングを行うツール。<br>• バイナリ、アプリケーション、実行時の挙動を 1 つの MCP で扱うとしている。<br>• 「気になる機能を見つけたら、バイナリのレベルまで仕組みを理解する」ことを掲げている。<br><br>前日に続いてトレンドの先頭に入り、Zenn では Claude Code から隔離してつなぐ手順と安全設計の記事も読まれている。解析ツールは防御にも攻撃にも使えるため、実行環境の分離など運用面の配慮が求められる。</td></tr>
+<tr><td class="num">2</td><td class="title">VoiceStudio — 完全ローカルで動く ElevenLabs 代替の音声制作ツール — (原文: debpalash/VoiceStudio)</td><td class="link-col"><a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 音声クローン、声のデザイン、動画の吹き替え、口述入力、文字起こし、オーディオブック制作をまとめたオープンソースのツール。<br>• 646 言語に対応するとしている。<br>• 処理をすべて手元の環境で行う「fully-local」を特徴とする。<br><br>商用の音声生成サービスに近い機能をローカルだけで扱える点が注目され、連日トレンドに入っている。声のクローンは悪用のおそれもあるため、本人の同意を得るなど使い方には注意が必要になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Context Mode — AI コーディングエージェントのコンテキストウィンドウを節約するツール — (原文: mksglu/context-mode)</td><td class="link-col"><a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ツールの出力をサンドボックスに隔離し、コンテキストに入る量を 98% 減らすとしている。<br>• セッションの記憶を保持し、MCP とフックで 17 のプラットフォームにまたがって処理を振り分ける。<br>• Playwright のスナップショット 1 回で 56KB を消費する、といった具体例で課題を説明している。<br><br>MCP ツールの結果がそのままコンテキストを圧迫する問題は、エージェントを長時間使うほど目立つ。削減率は README 上の主張であり、実際の効果は使い方によって変わる。</td></tr>
+<tr><td class="num">4</td><td class="title">Scientific Agent Skills — AI エージェントを「AI 科学者」にするスキル集 — (原文: K-Dense-AI/scientific-agent-skills)</td><td class="link-col"><a href="https://github.com/K-Dense-AI/scientific-agent-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 検証済みのスキル 177 個と、生物学・化学・医学・創薬などの科学データベース 100 以上を収録するとしている。<br>• Cursor、Claude Code、Codex などのほか、オープンな Agent Skills 標準に対応する。<br>• 旧名は「Claude Scientific Skills」で、対応範囲を広げて改称した。<br><br>エージェントスキルを分野別に整備する動きの代表例で、arXiv に論文も公開している。利用者数「25 万人以上」は README の記載であり、研究用途ではスキルごとの検証内容を確かめて使いたい。</td></tr>
+<tr><td class="num">5</td><td class="title">CLI-Anything — あらゆるソフトウェアをエージェントから使える CLI にする — (原文: HKUDS/CLI-Anything)</td><td class="link-col"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「今日のソフトウェアは人間向け、明日の利用者はエージェント」という考えで、既存ソフトをエージェント向けにする。<br>• コミュニティが作った CLI を一覧・導入・管理できる「CLI-Hub」を提供する。<br>• `pip install cli-anything-hub` の後、`cli-hub install &lt;name&gt;` で導入できる。<br><br>GUI 前提のソフトウェアをエージェントが扱うための橋渡しとして、MCP とは別に CLI を共通の窓口にする発想をとっている。コミュニティ製 CLI を入れる際は、配布元と権限の確認が欠かせない。</td></tr>
+<tr><td class="num">6</td><td class="title">iFixAi — AI エージェントの挙動を独立に監査するツール — (原文: ifixai-ai/iFixAi)</td><td class="link-col"><a href="https://github.com/ifixai-ai/iFixAi" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「エージェントは本来すべきことをしているか」を確かめるための監査ツール。<br>• 人が実行することも、エージェント自身に実行させることもできる。<br>• 120 秒未満で結果が得られるとし、記録済みの操作の監査にも対応する。<br><br>既存の評価（Eval）やレッドチーミングとは別の位置づけとして、エージェントの誤りや死角を事前に見つけることを狙う。エージェントを業務に組み込む企業が増えるなか、第三者的なチェックの手段として関心を集めている。</td></tr>
+<tr><td class="num">7</td><td class="title">PentAGI — 複雑なペネトレーションテストを自律的に行う AI エージェント — (原文: vxcontrol/pentagi)</td><td class="link-col"><a href="https://github.com/vxcontrol/pentagi" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ペネトレーションテスト（侵入テスト）を自律的に実行する AI エージェントのシステム。<br>• エージェントの監督機能や、複数インスタンスの同時実行に対応する。<br>• Docker を使った構成で導入できる。<br><br>セキュリティ診断の自動化に AI エージェントを使う流れの一つで、同日トレンド入りした rea や Ghidra とあわせて解析・診断系への関心の高さがうかがえる。許可を得た対象にのみ使うといった、利用範囲の管理が前提になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Ghidra — 米 NSA が開発するソフトウェアリバースエンジニアリング基盤 — (原文: NationalSecurityAgency/ghidra)</td><td class="link-col"><a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米国家安全保障局（NSA）の研究部門が開発・保守するリバースエンジニアリングのフレームワーク。<br>• 逆アセンブル、アセンブル、逆コンパイル、グラフ表示などの機能を備える。<br>• Windows、macOS、Linux のコンパイル済みコードを解析できる。<br><br>定番の解析ツールが再びトレンドに入った。エージェントからバイナリを解析する rea のようなツールが注目されるなかで、土台となる既存ツールにも目が向いているとみられる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">そもそもなぜ私たちはこれをやっているのか — (原文: Why are we even doing all this?)</td><td class="link-col"><a href="https://terrytao.wordpress.com/2026/10/15/why-are-we-even-doing-all-this/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 数学者テレンス・タオ氏が 2026 年 10 月 15 日に自身のブログで公開した記事。<br>• タイトルは、研究という営みそのものの意義を問いかける内容と読める。<br>• 133 ポイント、コメント 88 件で当日最多。<br><br>同日の Hacker News には、AI が数学者の仕事と生きがいに与える影響を扱った New York Times のポッドキャスト「When A.I. Comes for Your Purpose in Life」も投稿されている。AI の進歩を受けて研究の目的を問い直す議論として読まれているとみられ、具体的な主張は原文で確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">Withings の新規ユーザー、Apple ヘルスとの同期に年 99 ドルが必要に — (原文: New Withings Users Must Pay $99/Year for Apple Health Syncing)</td><td class="link-col"><a href="https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 健康機器メーカー Withings のコミュニティに投稿された、ユーザーの抗議スレッド。<br>• 新規アカウントでは Apple ヘルスとの同期が年 99 ドルの有料プランの対象になったとしている。<br>• 50 ポイント、コメント 29 件を集めた。<br><br>購入したハードウェアのデータ連携に後から課金がかかる形で、利用者の反発を招いている。健康データを自分で持ち出せるかどうかは、機器を選ぶ際の判断材料になる。</td></tr>
+<tr><td class="num">3</td><td class="title">私がセルフホストしているもの — (原文: What I Self-Host)</td><td class="link-col"><a href="https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 筆者が自前のサーバーで運用しているサービスを紹介するブログ記事。<br>• 31 ポイント、コメント 10 件を集めた。<br>• 具体的な構成は原文で確認が必要。<br><br>クラウドサービスの値上げや仕様変更が続くなか、自分で運用する選択肢への関心は根強い。上の Withings の件と同じく、データと機能を自分の手元に置きたいという考えが背景にあるとみられる。</td></tr>
+<tr><td class="num">4</td><td class="title">PostHog の MCP リーダーボード — (原文: PostHog MCP Leaderboard)</td><td class="link-col"><a href="https://posthog.com/mcp/leaderboard" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• プロダクト分析サービスの PostHog が公開した、MCP に関するリーダーボード。<br>• 9 ポイント、コメント 1 件。<br>• 何をどう順位付けしているかは原文で確認が必要。<br><br>MCP サーバーの数が増えるにつれて、どれを選ぶべきかの比較材料が求められている。分析基盤を持つ企業がこうしたランキングを出す動きは、今後も広がりそうだ。</td></tr>
+<tr><td class="num">5</td><td class="title">Apple と Meta が提携、AI モデル「Muse」を Mac で動かせるように — (原文: Apple and Meta team up to make Muse AI model run on Mac computers)</td><td class="link-col"><a href="https://www.cnbc.com/2026/10/15/apple-meta-partner-ai.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CNBC が、Apple と Meta が AI モデル「Muse」を Mac 上で動かすために提携したと報じた。<br>• 7 ポイント、コメント 1 件。<br>• 提携の範囲や提供時期は原文で確認が必要。<br><br>競合関係にある大手同士が、端末上で動く AI モデルで手を組む形になる。クラウドに頼らずに手元の機器で AI を動かす流れの一例といえる。</td></tr>
+<tr><td class="num">6</td><td class="title">Nvidia、Nemotron 3.5 Bolt 74B-A9B を公開 — (原文: Nvidia Nemotron 3.5 Bolt 74B-A9B)</td><td class="link-col"><a href="https://research.nvidia.com/labs/nemotron/Nemotron-3.5-Bolt-24GB/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Nvidia の研究部門が、Nemotron 3.5 Bolt のページを公開した。<br>• 名称から、総パラメータ 74B のうち 9B が推論時に働く MoE 構成とみられる。<br>• ページの URL には「24GB」とあり、24GB 級の GPU での利用を想定している可能性がある。<br><br>大規模でも推論時に動くパラメータを抑えた MoE モデルは、手元の GPU で動かしやすい点が注目されている。性能とライセンスの詳細は原文で確認したい。</td></tr>
+<tr><td class="num">7</td><td class="title">Epic のアンチチート EAC2 v2 は比較的簡単に回避できそうだ — (原文: Epic's EAC2 v2 seems fairly easily bypassable)</td><td class="link-col"><a href="https://codon.org.uk/~mjg59/blog/p/epics-eac2-v2-seems-fairly-easily-bypassable/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Linux カーネル開発者の Matthew Garrett 氏が、Epic のアンチチート EAC2 v2 について書いたブログ記事。<br>• タイトルの通り、保護が比較的簡単に回避できそうだと論じている。<br>• 同氏は同日に「Linux Lockdown とハイバネーション」に関する記事も公開している。<br><br>カーネルに深く入り込むアンチチートは、セキュリティとプライバシーの両面で議論が多い。強い権限を求める仕組みでも回避が容易であれば、その妥当性が改めて問われることになる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AI を活用したソフトウェア開発：研究成果を実践に移すためのチーム構成と能力</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/AI-research-into-action/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI を使ったソフトウェア開発の研究成果を、現場でどう生かすかを扱った記事。<br>• 焦点はチームの構成と、必要とされる能力に置かれている。<br>• 執筆は Ben Linders 氏。<br><br>AI ツールを導入するだけでは成果が出にくく、組織の側の準備が問われる段階に入っている。研究と現場の間をどう埋めるかは、多くのチームに共通する課題といえる。</td></tr>
+<tr><td class="num">2</td><td class="title">Netflix、3 万件以上のストリーミングジョブにオープンソースの Flink オートスケーラーを導入</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/netflix-flink-autoscaler/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Netflix が、3 万件を超えるストリーミング処理ジョブにオープンソースの Flink オートスケーラーを広げている。<br>• 負荷に応じてジョブの処理能力を自動で調整する仕組み。<br>• 執筆は Leela Kumili 氏。<br><br>大量のストリーミングジョブを人手で調整し続けるのは現実的ではなく、自動化が欠かせない。独自実装ではなくオープンソースを選んだ点は、他社が導入を検討するうえでも参考になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Cloudflare Worker Previews：Workers 向けのブランチ単位のプレビュー環境</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/cloudflare-worker-agent/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare が Workers 向けに、ブランチごとのプレビュー環境を提供する。<br>• 変更を本番に出す前に、ブランチ単位で動作を確認できる。<br>• URL にはエージェントに関連する語が含まれ、エージェントによる開発での利用も意識しているとみられる。<br><br>Vercel や Netlify が先行してきたプレビュー環境の仕組みが、エッジ実行基盤にも広がった。同社は Workers の受信 TCP 対応や AI Search の拡張も発表しており、開発者向け機能を続けて強化している。</td></tr>
+<tr><td class="num">4</td><td class="title">Amazon CloudWatch Omni、CloudWatch をエージェント時代へ拡張</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/aws-cloudwatchomni-observability/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS が監視サービス CloudWatch を拡張する「CloudWatch Omni」を発表した。<br>• AI エージェントが広く使われる時代に合わせた機能拡張と位置づけている。<br>• 執筆は Sergio De Simone 氏。<br><br>エージェントが自律的に動くようになると、その挙動を観測・追跡する仕組みが重要になる。主要クラウドが監視基盤をエージェント向けに作り替える流れの一つといえる。</td></tr>
+<tr><td class="num">5</td><td class="title">Cloudflare Workers が受信 TCP 接続に対応、最初の対応プロトコルは gRPC</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/workers-inbound-tcp-grpc/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare Workers が、外部からの TCP 接続を受け付けられるようになった。<br>• 最初に対応したプロトコルは gRPC。<br>• 執筆は Steef-Jan Wiggers 氏。<br><br>これまで HTTP 中心だった Workers で扱える通信の幅が広がる。gRPC を使うマイクロサービスをエッジに置く選択肢が増えることになる。</td></tr>
+<tr><td class="num">6</td><td class="title">HashiCorp Packer 1.16、マシンイメージ向けに SLSA Provenance の生成と検証に標準対応</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/hashicorp-packer-verification/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• マシンイメージ作成ツール Packer のバージョン 1.16 が公開された。<br>• ソフトウェアサプライチェーンの枠組み SLSA の来歴情報（Provenance）を、ネイティブに生成・検証できるようになった。<br>• 執筆は Claudio Masolo 氏。<br><br>コンテナイメージで進んできた来歴の記録と検証が、仮想マシンのイメージにも広がる。イメージがどこでどう作られたかを示せることは、サプライチェーン攻撃への備えとして重みを増している。</td></tr>
+<tr><td class="num">7</td><td class="title">OpenTelemetry、企業での導入を簡単にする「Blueprints」を開始</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/opentelemetry-blueprints-launch/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OpenTelemetry が、企業向けのオブザーバビリティ導入を簡素化する「Blueprints」という取り組みを始めた。<br>• 導入時の構成や手順の参考となる設計例を示すものとみられる。<br>• 執筆は Craig Risi 氏。<br><br>OpenTelemetry は事実上の標準になりつつある一方、大規模な組織での導入は設計の選択肢が多く難しい。公式の設計例が整えば、導入の初期コストを下げることにつながる。</td></tr>
+<tr><td class="num">8</td><td class="title">Amazon Linux 2027 のパブリックプレビューを開始、SELinux を標準で強制モードに</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/amazon-linux-2027-preview/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS が Amazon Linux 2027 のパブリックプレビューを始めた。<br>• SELinux をデフォルトで強制（enforcing）モードにしている。<br>• 執筆は Steef-Jan Wiggers 氏。<br><br>セキュリティを初期設定の段階から強める方針の表れといえる。一方で、既存のアプリケーションが SELinux のポリシーに引っかかる可能性があるため、移行前の検証が欠かせない。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ソースネクスト、不正アクセスで顧客情報が流出（最大約 2,251 万件）</td><td class="link-col"><a href="https://www.sourcenext.com/support/i/2026/1015_info/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ソースネクストが、自社サイトへの不正アクセスにより顧客情報が流出したとしてお詫びを公表した。<br>• Impress Watch と NHK は、流出は最大約 2,251 万件にのぼると報じている。<br>• パスワードの再設定が呼びかけられており、はてなブックマークは 321 で当日最多。<br><br>国内のソフトウェア販売会社としては大規模な漏えいとなる。同じパスワードを他のサービスで使い回している場合は、そちらの変更もあわせて検討したい。</td></tr>
+<tr><td class="num">2</td><td class="title">バーガーキングのアプリ会員情報、約 1,118 万件が漏えい</td><td class="link-col"><a href="https://news.web.nhk/newsweb/na/nd-20261015de59803" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• バーガーキングの公式アプリの会員情報が、不正アクセスにより約 1,118 万件漏えいしたと NHK が報じた。<br>• 運営会社も公式サイトでお詫びと経緯を PDF で公表している。<br>• はてなブックマークは 274 を集めた。<br><br>ソースネクストの件と同じ日に、1,000 万件を超える規模の漏えいが相次いで明らかになった。飲食チェーンのアプリでも大量の個人情報を扱っており、守るべき範囲が広がっていることを示している。</td></tr>
+<tr><td class="num">3</td><td class="title">JPCERT/CC、連続不正アクセス事案の攻撃手法を調査</td><td class="link-col"><a href="https://blogs.jpcert.or.jp/ja/2026/10/web_api_attacks.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• JPCERT/CC が、連続して起きている不正アクセス事案の攻撃手法についての調査結果を公開した。<br>• URL から、Web API を狙った攻撃が中心とみられる。<br>• はてなブックマークは 113。<br><br>ラックも同日に「国内で相次ぐ Web システムからの情報漏えい」として観測に基づく変化と対策を公開している。大規模な漏えいが続くなか、攻撃の手口を知ることは自社の対策を見直す材料になる。</td></tr>
+<tr><td class="num">4</td><td class="title">有名企業や一流開発者のノウハウを持ち込める Claude Code スキル 11 選</td><td class="link-col"><a href="https://note.com/shiba_program/n/nd2d72747f8c5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code で使える「スキル」のうち、有名企業や著名な開発者の知見をまとめたものを 11 個紹介する note 記事。<br>• 開発や設計に役立つスキルを中心に取り上げている。<br>• はてなブックマークは 238。<br><br>スキルを配布・共有する仕組みが整い、他人の作業手順をそのまま取り込める環境ができつつある。外部のスキルを導入する際は、中身を確認してから使うことが望ましい。</td></tr>
+<tr><td class="num">5</td><td class="title">ワールドガチャ：架空の町をガチャで作ってマンガの背景に</td><td class="link-col"><a href="https://tools.oyasumi-gamedev.com/worldgacha/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ガチャを回すように架空の町を自動生成する Web ツール。<br>• 生成した町を、マンガの背景として使うことを想定している。<br>• タグには 3DCG、AI、map などが付き、はてなブックマークは 238。<br><br>背景制作はマンガ制作の中でも手間のかかる工程で、それを補う道具として注目された。創作の補助として手軽に試せる点が支持を集めているとみられる。</td></tr>
+<tr><td class="num">6</td><td class="title">AI のスピードに負けないための開発フロー</td><td class="link-col"><a href="https://speakerdeck.com/kyuridenamida/ai-no-supido-ni-makenai-tame-no-kaihatsu-furo" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI によってコードを書く速度が上がった状況に合わせた、開発フローを扱うスライド資料。<br>• Speaker Deck で公開されている。<br>• はてなブックマークは 64。<br><br>コードの生成が速くなるほど、レビューやテスト、設計判断といった人が担う工程が詰まりやすくなる。工程全体をどう組み替えるかは、多くのチームが向き合っている課題といえる。</td></tr>
+<tr><td class="num">7</td><td class="title">もっと野心的になるには：モデルと働く人間のためのチュートリアル — (原文: How to be more ambitious: A tutorial for humans with models)</td><td class="link-col"><a href="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Felix Rieseberg 氏が、AI モデルを使う人がより大きな目標に取り組むための考え方をまとめた英語記事。<br>• タグには Claude、チュートリアル、ツールが付いている。<br>• はてなブックマークは 49。<br><br>AI で作業が速くなった分を、同じ仕事の効率化だけでなく、より大きな挑戦に振り向けようという提案と読める。具体的な方法は原文で確認したい。</td></tr>
+<tr><td class="num">8</td><td class="title">curl にリモートからコードを実行される脆弱性、v8.23.0 で 24 件を修正</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/news/2148495.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• データ転送ライブラリ curl に、特定の条件でリモートからコードを実行される脆弱性が見つかった。<br>• 深刻度 High を含む 24 件の脆弱性を修正した v8.23.0 が公開された。<br>• 窓の杜が報じ、はてなブックマークは 23。<br><br>curl は OS やアプリに広く組み込まれているため、影響が及ぶ範囲が大きい。直接使っていなくても、依存するソフトウェアの更新状況を確認しておきたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">SQLite 本体にベクトル検索拡張 vec1 がやってきた</td><td class="link-col"><a href="https://zenn.dev/mattn/articles/6e9996319ac099" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• SQLite の本体側に、ベクトル検索の拡張「vec1」が加わったことを紹介する記事。<br>• 執筆は mattn 氏。<br>• いいね 149 で、Zenn の中で最も多い。<br><br>埋め込みベクトルを使った検索を、別のデータベースを用意せずに SQLite だけで扱える可能性が広がる。手元のアプリやエージェントに RAG を組み込む際の選択肢になりそうだ。</td></tr>
+<tr><td class="num">2</td><td class="title">良いテストを書き、良いテストを見分ける：『単体テストの考え方/使い方』のエッセンス</td><td class="link-col"><a href="https://zenn.dev/nexta_/articles/unit-testing-principles-essence" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 書籍『単体テストの考え方/使い方』の要点をまとめた記事。<br>• 良いテストを書くことと、良いテストを見分けることの両面を扱う。<br>• いいねは 107。<br><br>AI がテストコードを大量に書けるようになった今、そのテストに価値があるかを見極める力の重要性が増している。古典的な原則を改めて確認する記事として読まれているとみられる。</td></tr>
+<tr><td class="num">3</td><td class="title">WAF でブロックする前に確かめていること</td><td class="link-col"><a href="https://zenn.dev/azunyan/articles/7a105969d7d16c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• WAF（Web アプリケーションファイアウォール）で通信を遮断する前に、筆者が確認している点をまとめた記事。<br>• 誤って正常な通信を止めないための判断が主題とみられる。<br>• いいねは 66。<br><br>WAF のルールは厳しくしすぎると正規の利用者を止め、緩すぎると攻撃を通してしまう。情報漏えいの報道が続くなか、運用の勘所を共有する記事として参考になる。</td></tr>
+<tr><td class="num">4</td><td class="title">モバイルアプリ開発でノート PC を持ち歩かなくなった話</td><td class="link-col"><a href="https://zenn.dev/yasi/articles/mobile-dev-from-phone-with-claude" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• モバイルアプリの開発を、ノート PC を持ち歩かずに進めるようになった体験談。<br>• URL から、スマートフォンと Claude を組み合わせた開発とみられる。<br>• いいねは 31。<br><br>コーディングエージェントを遠隔で動かせるようになり、開発端末の前に座っている必要が薄れつつある。どこまでの作業をスマートフォンで完結できるかは、原文で具体例を確認したい。</td></tr>
+<tr><td class="num">5</td><td class="title">『現場で役立つシステム設計の原則』を読んで学んだこと、実践したこと、これからやりたいこと</td><td class="link-col"><a href="https://zenn.dev/wwwave/articles/38b8284f96bd9e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 書籍『現場で役立つシステム設計の原則』を読んだ感想と実践をまとめた記事。<br>• 学んだこと、実際に試したこと、今後の取り組みの 3 つに分けて書いている。<br>• いいねは 27。<br><br>設計の定番書を自分の現場に当てはめた記録として、読んだだけで終わらせない工夫が参考になる。上の単体テストの記事とあわせ、基礎を見直す記事が読まれている。</td></tr>
+<tr><td class="num">6</td><td class="title">改めて考える、AI エンジニアリングの今</td><td class="link-col"><a href="https://zenn.dev/r_kaga/articles/2fd185c50cea7c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エンジニアリングの現状を改めて整理する記事。<br>• 執筆は r_kaga 氏。<br>• いいねは 26。<br><br>モデルやツールの入れ替わりが速いなかで、今何が重要なのかを立ち止まって考える内容とみられる。具体的な論点は原文で確認したい。</td></tr>
+<tr><td class="num">7</td><td class="title">Gemini 4 Argon の日本語性能を検証してみた</td><td class="link-col"><a href="https://zenn.dev/algoartis/articles/19bb1705ea4b16" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google の Gemini 4 Argon について、日本語での性能を検証した記事。<br>• 執筆は algoartis。同社は国産モデル sarashina3-mini の日本語推敲を検証した記事も公開している。<br>• いいねは 25。<br><br>海外製のモデルは英語での評価が中心になりがちで、日本語での実力は個別に確かめる必要がある。Qiita でも Gemini 4 Argon を含む最新モデルの比較記事が読まれている。</td></tr>
+<tr><td class="num">8</td><td class="title">話題の逆解析 MCP「REA」を Claude Code に隔離してつなぐ：静的解析の A/B 試験と安全設計</td><td class="link-col"><a href="https://zenn.dev/keigoly/articles/8738d8d241b5a1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub Trending で話題の逆解析 MCP「REA」を、Claude Code から隔離した環境でつないだ記事。<br>• 静的解析について A/B 試験を行っている。<br>• 安全に使うための設計についても説明している。<br><br>強力な解析ツールをエージェントに渡す際は、ホスト環境を守る工夫が欠かせない。話題のツールを試すだけでなく、安全面の設計まで示している点が実務の参考になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">サイバーセキュリティを勉強するなら今？おすすめリソース紹介</td><td class="link-col"><a href="https://qiita.com/leolui2004/items/226062f17e55202e8c47" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• サイバーセキュリティを学ぶためのおすすめのリソースを紹介する記事。<br>• タグには Security、サイバーセキュリティ、AI が付いている。<br>• いいね 152 で、Qiita の中で最も多い。<br><br>大規模な情報漏えいが相次ぎ、AI による攻撃や脆弱性発見も話題になるなかで、セキュリティを学びたい人が増えているとみられる。入門の足がかりとしてまとめて参照できる点が支持を集めている。</td></tr>
+<tr><td class="num">2</td><td class="title">AI で作ったらオリジナルじゃないらしい。んなわけあるか。</td><td class="link-col"><a href="https://qiita.com/kentawata/items/c78381bfe83e93e75893" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI を使って作ったものはオリジナルとは言えない、という意見に反論する記事。<br>• 個人開発やゲーム制作の立場から書かれている。<br>• いいねは 54。<br><br>生成 AI を使った制作物の評価は、創作の現場で議論が続いている。はてなブックマークでも声優の野沢雅子さんが声の生成 AI について語った記事が読まれており、関心の高い話題といえる。</td></tr>
+<tr><td class="num">3</td><td class="title">【2026 年 10 月最新版】AI モデル徹底比較：GPT-6.1 Sol / Claude Opus 5.5 / Claude Sonnet 5.5 / Gemini 4 Argon</td><td class="link-col"><a href="https://qiita.com/nuco_d/items/9d4f86c185dda6fd24a7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 2026 年 10 月時点の主要な AI モデルを比較した記事。<br>• GPT-6.1 Sol、Claude Opus 5.5、Claude Sonnet 5.5、Gemini 4 Argon を取り上げている。<br>• いいねは 53。<br><br>モデルの更新が続き、用途ごとにどれを選ぶかの判断が難しくなっている。比較の基準や条件によって結論は変わるため、自分の用途に近い観点を確認したい。</td></tr>
+<tr><td class="num">4</td><td class="title">JS 初心者が「非同期」を理解してみた</td><td class="link-col"><a href="https://qiita.com/koxrtx/items/184e06cd9744f94d4f3e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• JavaScript の初心者が、非同期処理の理解に取り組んだ学習記録。<br>• つまずきやすい非同期の考え方を、自分の言葉で整理している。<br>• いいねは 40。<br><br>非同期処理は JavaScript を学ぶうえで多くの人がつまずく部分で、初学者の視点での説明は同じ立場の読者に届きやすい。AI に頼れる時代でも、基礎を自分で理解しようとする姿勢が評価されている。</td></tr>
+<tr><td class="num">5</td><td class="title">私は Gemini。env の認証情報を、うっかりチャットに漏洩してしまいました：AI エージェント内側の告白</td><td class="link-col"><a href="https://qiita.com/songchong/items/f80fad42b5a134fa3c14" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントが .env ファイルの認証情報をチャットの文中に出してしまった事例を扱う記事。<br>• Gemini の視点で語る形式をとっている。<br>• いいねは 20。<br><br>エージェントに環境変数や秘密情報を読ませると、意図せず外部に出てしまうおそれがある。同じ筆者は、API キー操作を各エージェントに 51 回頼んで安全性を比べた記事も公開している。</td></tr>
+<tr><td class="num">6</td><td class="title">どのようなサイトが狙われているか？Cloudflare のセキュリティログから見る攻撃の傾向と対策</td><td class="link-col"><a href="https://qiita.com/shioccii/items/cf18356730534053de95" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare のセキュリティログをもとに、狙われやすいサイトと攻撃の傾向を分析した記事。<br>• 静的サイトや WAF の設定にも触れている。<br>• いいねは 18。<br><br>小規模なサイトでも攻撃の対象になることを、実際のログで示している点が参考になる。Zenn の WAF の記事とあわせて読むと、運用面の対策を考えやすい。</td></tr>
+<tr><td class="num">7</td><td class="title">AI エージェントに鍵を任せて大丈夫か：API キー操作 5 種類を Claude Code・Codex・Gemini に 51 回頼んで比較</td><td class="link-col"><a href="https://qiita.com/songchong/items/0d759f44eb26f332b897" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• API キーに関わる 5 種類の操作を、Claude Code、Codex、Gemini に合計 51 回頼んだ検証記事。<br>• やり方を「危険」「要注意」「安全」に分けて整理している。<br>• いいねは 14。<br><br>エージェントに秘密情報を扱わせる場面は増えているが、ツールによって振る舞いが異なる。実際に試して分類した結果は、社内ルールを決める際の材料になる。</td></tr>
+<tr><td class="num">8</td><td class="title">GitHub Actions と AgentCore Evaluations でエージェントの評価を CI/CD に組み込む</td><td class="link-col"><a href="https://qiita.com/yakumo_09/items/6f3936d9f7255a4259d9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS の AgentCore Evaluations を使い、AI エージェントの評価を CI/CD に組み込んだ記事。<br>• GitHub Actions と Strands Agents を組み合わせている。<br>• いいねは 14。<br><br>エージェントもコードと同じように、変更のたびに品質を自動で確かめる仕組みが求められている。GitHub Trending の iFixAi のような監査ツールとあわせ、エージェントの検証手段が増えている。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-10-16 06:33 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
