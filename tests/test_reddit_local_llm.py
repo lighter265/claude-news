@@ -19,9 +19,9 @@ import register_seen  # noqa: E402
 class RedditFetchTest(unittest.TestCase):
     def test_fetch_filters_by_post_time_and_keeps_safe_plaintext(self):
         now = datetime(2026, 8, 9, 12, 0, tzinfo=timezone.utc)
-        boundary = (now - timedelta(hours=36)).isoformat().replace("+00:00", "Z")
+        boundary = (now - timedelta(hours=48)).isoformat().replace("+00:00", "Z")
         recent = (now - timedelta(hours=1)).isoformat().replace("+00:00", "Z")
-        old = (now - timedelta(hours=36, seconds=1)).isoformat().replace("+00:00", "Z")
+        old = (now - timedelta(hours=48, seconds=1)).isoformat().replace("+00:00", "Z")
         future = (now + timedelta(minutes=1)).isoformat().replace("+00:00", "Z")
         long_body = "<p>safe <strong>body</strong></p><script>do_not_keep()</script> " + "x" * 600
         rss = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -59,6 +59,27 @@ class RedditFetchTest(unittest.TestCase):
         self.assertLessEqual(len(items[0]["extra"]), reddit.DESCRIPTION_MAX_CHARS + 1)
         self.assertEqual(items[0]["published_at"], recent.replace("Z", "+00:00"))
         self.assertIn("summary text", items[1]["extra"])
+
+    def test_fetch_paginates_with_after_until_cutoff(self):
+        now = datetime(2026, 8, 9, 12, 0, tzinfo=timezone.utc)
+
+        def feed(*entries):
+            body = "".join(
+                f"<entry><id>t3_{n}</id><title>{n}</title>"
+                f"<published>{(now - timedelta(hours=h)).isoformat()}</published>"
+                f"<link href=\"https://www.reddit.com/r/LocalLLaMA/comments/{n}/x/\" /></entry>"
+                for n, h in entries
+            )
+            return f'<feed xmlns="http://www.w3.org/2005/Atom">{body}</feed>'.encode()
+
+        pages = [feed(("a", 1), ("b", 30)), feed(("c", 47), ("d", 49))]
+        with patch.object(reddit, "http_get", side_effect=pages) as mocked, \
+             patch.object(reddit.time, "sleep"):
+            items = reddit.fetch(now=now)
+
+        self.assertEqual([i["title"] for i in items], ["a", "b", "c"])
+        self.assertEqual(mocked.call_count, 2)
+        self.assertTrue(mocked.call_args_list[1].args[0].endswith("&after=t3_b"))
 
     def test_fetch_uses_rss_limit_constant_in_url(self):
         with patch.object(reddit, "http_get", return_value=b"<feed />") as mocked:
@@ -142,6 +163,31 @@ class RedditFetchTest(unittest.TestCase):
             reddit.fetch(now=datetime.now(timezone.utc))
 
         mocked_sleep.assert_called_once_with(7.0)
+
+
+class FilterSeenTest(unittest.TestCase):
+    def test_reddit_items_are_annotated_not_dropped(self):
+        import filter_seen
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            raw_dir = root / "raw"
+            raw_dir.mkdir()
+            old, new = "https://r/old", "https://r/new"
+            (raw_dir / "reddit_local_llm.json").write_text(json.dumps([
+                {"source": "reddit_local_llm", "url": old},
+                {"source": "reddit_local_llm", "url": new},
+            ]), encoding="utf-8")
+            db = root / "seen.db"
+            conn = sqlite3.connect(db)
+            filter_seen.init_db(conn)
+            conn.execute("INSERT INTO seen_urls (url, first_seen) VALUES (?, date('now','-1 day'))", (old,))
+            conn.commit()
+            conn.close()
+            with patch.object(filter_seen, "DB_PATH", str(db)), \
+                 patch.object(filter_seen, "RAW_DIR", str(raw_dir)):
+                filter_seen.main()
+            items = json.loads((raw_dir / "reddit_local_llm.json").read_text(encoding="utf-8"))
+        self.assertEqual({i["url"]: i["seen_before"] for i in items}, {old: True, new: False})
 
 
 class RegisterSeenTest(unittest.TestCase):

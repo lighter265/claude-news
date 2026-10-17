@@ -38,7 +38,8 @@ Claude CLI は要約生成だけを担当し、fetch・Git 操作・HTML 生成�
 ### Reddit r/LocalLLaMA の取得範囲
 
 - 認証不要の Atom RSS `https://www.reddit.com/r/LocalLLaMA/new/.rss?limit=100` を使用する。
-- 日次実行の取りこぼしを避けるため、投稿日時が実行時刻から直近36時間以内のエントリを全件対象にする。RSSの100件上限内で取得する。
+- 投稿日時が実行時刻から直近48時間以内のエントリを全件対象にする。RSSは1ページ100件までのため、`after` で最大 `MAX_PAGES` ページ遡って取得する（2ページ目以降の失敗は取得済み分で続行）。
+- `filter_seen.py` はこのソースだけ既出URLを除去せず `seen_before`（前日までにDB登録済みか）を付与する。`feed-local-llm.md` では「新着」と「前日にも掲載」の2セクションに分けて表示する。
 - RSS取得・XML解析・日付範囲は [scripts/fetch_reddit_local_llm.py](scripts/fetch_reddit_local_llm.py) の `REDDIT_RSS_LIMIT`、`RECENT_WINDOW_HOURS`、`DESCRIPTION_MAX_CHARS` で調整できる（URLのlimitも定数から組み立てる）。
 - Reddit専用の識別User-Agentを付け、HTTP 429/5xxだけを最大2回リトライする。`Retry-After` があれば優先し、無ければ指数バックオフを使う。
 - 取得結果は `raw/reddit_local_llm.json` に保存し、`raw/local_llm_github.json` とは混ぜない。本文はHTMLをプレーンテキスト化し、要約用に500文字（`DESCRIPTION_MAX_CHARS`）まで保持する。

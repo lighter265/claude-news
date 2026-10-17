@@ -3,10 +3,14 @@ import glob
 import json
 import os
 import sqlite3
+from datetime import date
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH = os.path.join(REPO, "local", "seen_urls.db")
 RAW_DIR = os.path.join(REPO, "raw")
+
+# 既出でも除去せず、``seen_before`` を付けて新規/継続を分けて表示するソース。
+ANNOTATE_ONLY_SOURCES = {"reddit_local_llm"}
 
 SCORE_INCREASE_RATIO = 1.3   # 前回比 +30%
 COMMENT_INCREASE_DELTA = 20  # 前回比 +20件
@@ -75,6 +79,11 @@ def main():
         print(f"[filter] Deleted {deleted_count} expired seen URL(s) (older than 4 days)")
 
     seen = load_seen(conn)
+    seen_before_today = {
+        row[0] for row in conn.execute(
+            "SELECT url FROM seen_urls WHERE first_seen < ?", (date.today().isoformat(),)
+        )
+    }
     conn.close()
 
     total_before = total_after = 0
@@ -83,7 +92,14 @@ def main():
             continue
         with open(path, encoding="utf-8") as f:
             items = json.load(f)
-        filtered = [item for item in items if should_show(item, seen)]
+        if os.path.basename(path)[:-len(".json")] in ANNOTATE_ONLY_SOURCES:
+            # 48時間窓のため前日掲載分と重なる。落とさず「前日にも掲載済みか」を付与する。
+            # 当日の再実行でも結果が変わらないよう、登録日が今日より前のものだけを既出とする。
+            for item in items:
+                item["seen_before"] = item.get("url", "") in seen_before_today
+            filtered = items
+        else:
+            filtered = [item for item in items if should_show(item, seen)]
         total_before += len(items)
         total_after += len(filtered)
         with open(path, "w", encoding="utf-8") as f:

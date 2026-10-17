@@ -1,8 +1,8 @@
 """Reddit r/LocalLLaMA の Atom RSS から最近の投稿を取得する。
 
 Reddit のRSSは認証不要で利用できるため、APIキーやログイン状態には依存しない。
-取得対象は日次実行の取りこぼしを吸収できるよう、投稿日時が直近36時間以内のものを
-RSSのlimit件数内で全件とする。
+取得対象は投稿日時が直近48時間以内のもの全件。RSSは1ページ最大100件で
+48時間分には足りないため、``after`` で遡ってページングする。
 """
 import html
 import re
@@ -18,7 +18,9 @@ from common import http_get, article, save_raw
 
 REDDIT_RSS_BASE_URL = "https://www.reddit.com/r/LocalLLaMA/new/.rss"
 REDDIT_RSS_LIMIT = 100
-RECENT_WINDOW_HOURS = 36
+RECENT_WINDOW_HOURS = 48
+MAX_PAGES = 15  # 暴走防止。1ページ100件なら最大1500件まで遡る。
+PAGE_INTERVAL_SECONDS = 2.0  # ページ間の待機（レート制限対策）。
 DESCRIPTION_MAX_CHARS = 500
 REDDIT_USER_AGENT = "claude-news/1.0 (personal news digest; contact unavailable)"
 RETRY_COUNT = 3  # 初回を含めて最大4試行。ただし累計待機時間の上限で打ち切られる。
@@ -192,13 +194,17 @@ def _http_get_with_retry(url, sleep=None):
             waited += delay
 
 
-def fetch(limit=REDDIT_RSS_LIMIT, recent_hours=RECENT_WINDOW_HOURS, now=None):
+def _entries(root):
+    return [e for e in root.iter() if e.tag.rsplit("}", 1)[-1] == "entry"]
+
+
+def fetch(limit=None, recent_hours=RECENT_WINDOW_HOURS, now=None):
     """RSSから直近 ``recent_hours`` 時間の投稿を全件返す。
 
+    1ページ ``REDDIT_RSS_LIMIT`` 件のため、cutoffより古い投稿に達するまで
+    ``after`` で遡る。``limit`` は返す最大件数（None なら無制限）。
     ``now`` はテストで基準時刻を固定するための引数。通常は現在時刻を使う。
     """
-    raw = _http_get_with_retry(FEED_URL).decode("utf-8", "replace")
-    root = ET.fromstring(raw)
     now = now or datetime.now(timezone.utc)
     if now.tzinfo is None:
         now = now.replace(tzinfo=timezone.utc)
@@ -207,41 +213,69 @@ def fetch(limit=REDDIT_RSS_LIMIT, recent_hours=RECENT_WINDOW_HOURS, now=None):
 
     items = []
     seen_urls = set()
-    for entry in root.iter():
-        if entry.tag.rsplit("}", 1)[-1] != "entry":
-            continue
+    seen_ids = set()
+    after = None
+    for page in range(MAX_PAGES):
+        url = FEED_URL if after is None else f"{FEED_URL}&after={after}"
+        if page:
+            time.sleep(PAGE_INTERVAL_SECONDS)
+        try:
+            raw = _http_get_with_retry(url).decode("utf-8", "replace")
+        except urllib.error.HTTPError as error:
+            if page == 0:
+                raise
+            # 2ページ目以降の失敗は、取得済みの分だけで続行する。
+            print(f"[reddit] page {page + 1} failed (HTTP {error.code}); use {len(items)} items so far")
+            break
+        entries = _entries(ET.fromstring(raw))
+        if not entries:
+            break
 
-        published_text = _child_text(entry, "published") or _child_text(entry, "updated")
-        published = _parse_datetime(published_text)
-        if published is None or published < cutoff or published > now:
-            continue
+        reached_cutoff = False
+        last_id = None
+        for entry in entries:
+            entry_id = _child_text(entry, "id")
+            if entry_id:
+                last_id = entry_id
+            published_text = _child_text(entry, "published") or _child_text(entry, "updated")
+            published = _parse_datetime(published_text)
+            if published is not None and published < cutoff:
+                reached_cutoff = True
+            if published is None or published < cutoff or published > now:
+                continue
 
-        url = _entry_url(entry)
-        if not url or url in seen_urls:
-            continue
+            url = _entry_url(entry)
+            if not url or url in seen_urls:
+                continue
 
-        # Reddit Atom は通常 content、フィードによっては summary/description。
-        body = (_child_text(entry, "content") or _child_text(entry, "summary")
-                or _child_text(entry, "description"))
-        body = _strip_html(body)
-        if len(body) > DESCRIPTION_MAX_CHARS:
-            body = body[:DESCRIPTION_MAX_CHARS].rstrip() + "…"
+            # Reddit Atom は通常 content、フィードによっては summary/description。
+            body = (_child_text(entry, "content") or _child_text(entry, "summary")
+                    or _child_text(entry, "description"))
+            body = _strip_html(body)
+            if len(body) > DESCRIPTION_MAX_CHARS:
+                body = body[:DESCRIPTION_MAX_CHARS].rstrip() + "…"
 
-        item = article(
-            "reddit_local_llm",
-            _child_text(entry, "title"),
-            url,
-            timestamp=int(published.timestamp()),
-            extra=body,
-        )
-        # timestampは既存スキーマ互換のUNIX秒。ISO形式も保持して可読性を確保する。
-        item["published_at"] = published.isoformat()
-        items.append(item)
-        seen_urls.add(url)
+            item = article(
+                "reddit_local_llm",
+                _child_text(entry, "title"),
+                url,
+                timestamp=int(published.timestamp()),
+                extra=body,
+            )
+            # timestampは既存スキーマ互換のUNIX秒。ISO形式も保持して可読性を確保する。
+            item["published_at"] = published.isoformat()
+            items.append(item)
+            seen_urls.add(url)
+
+        # cutoffに達した/次ページの手掛かりがない/同じページが返った場合は終了。
+        if reached_cutoff or not last_id or not last_id.startswith("t3_") or last_id in seen_ids:
+            break
+        seen_ids.add(last_id)
+        after = last_id
 
     # RSSの並び順に依存せず、日付の新しい順で安定させる。
     items.sort(key=lambda item: item["timestamp"] or 0, reverse=True)
-    return items[:limit]
+    return items[:limit] if limit else items
 
 
 if __name__ == "__main__":
