@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-10-22</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-10-22</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-10.html">2026年10月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-10-22</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>PHP の深刻な脆弱性「php2shell」（CVE-2026-109618、CVE-2026-109619）の修正版が日本時間 21 日 21 時 59 分に公開された。コドモン、BASE、さくらのレンタルサーバ、ニコニコ、pixiv などが相次いで緊急メンテナンスに入り、はてなでは解説記事が 810 ブックマークを集めた。一方、Hacker News に投稿された issue によると、Amazon Linux 2023 では修正の提供に 20 日ほどかかる可能性があり、使っている環境の対応状況を確かめたい。</li><li>AI と攻撃・防御の関係にも注目が集まった。php2shell はセキュリティ企業の Calif と Wiz が AI を使って見つけたと報じられ、GitHub Trending には Cloudflare がコーディングエージェントにセキュリティ監査をさせる「security-audit-skill」を公開して上位に入った。NHK は、不正アクセスの標的が金融機関に移ってきた可能性を伝えている。</li><li>Hacker News では、米ニューメキシコ州の司法省が、プライバシーについて利用者を欺いたとして Meta に対して 250 億ドルの制裁金を勝ち取ったとする発表が 179 ポイントで最多となった。メディアサーバーの Plex がプレーヤー開発チームを解雇したという話題も、68 件のコメントを集めた。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">security-audit-skill — コーディングエージェントを、段階を踏むセキュリティ監査役にするスキル — (原文: cloudflare/security-audit-skill)</td><td class="link-col"><a href="https://github.com/cloudflare/security-audit-skill" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare が公開した、コーディングエージェントにセキュリティ監査をさせるためのスキル。<br>• 互いに切り離した複数のエージェントを使い、下調べ、網羅を意識した探索、候補の検証、構造化した出力、記録の独立した検証、報告の順に進める。<br>• 見つけた問題は、機械で読める形で、別のエージェントが確かめたうえで出力する。同社の脆弱性探しの仕組みの土台になったものだという。<br><br>AI に脆弱性を探させる取り組みが広がるなか、誤検知を減らすために「見つける役」と「確かめる役」を分ける設計をとっている。自分のコードを調べるのに役立つ一方、権限のない対象に向けて使わないよう、使う範囲は利用者が管理する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">Orca — 複数のコーディングエージェントを並べて動かし、まとめて管理する — (原文: stablyai/orca)</td><td class="link-col"><a href="https://github.com/stablyai/orca" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Codex、Claude Code、OpenCode、Pi などのエージェントを、それぞれ別の Git の worktree で同時に動かし、1 か所で追えるツール。<br>• 各エージェントは利用者自身の契約（サブスクリプション）で動かす。<br>• デスクトップ版のほか、スマートフォンから見守って指示を出せるモバイル版や、リモートの実行環境も用意している。<br><br>前日に続いて上位に入った。1 つの作業を複数のエージェントに並行して試させる使い方が広がる一方、並べるほど料金と確認の手間も増えるため、どこまで並行させるかは利用者の判断になる。</td></tr>
+<tr><td class="num">3</td><td class="title">Ponytail — 「書かないコードが最良のコード」を掲げ、エージェントに最小限の実装をさせる — (原文: DietrichGebert/ponytail)</td><td class="link-col"><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントに「部屋で一番怠け者のシニア開発者」のように考えさせ、余計なコードを書かせないためのスキル。<br>• 作り直したバージョン 5 では、コード量 53%、時間 41%、費用 26%、トークン 45% の削減をうたう。危険なロジックにテストが付く割合は 98%（使わない場合は 68%）としている。<br>• 数字は、Claude Code で Opus 5.5 を使い、FastAPI と React の実際のリポジトリを含む 39 の課題を 5 回ずつ実行して比べたものだという。<br><br>エージェントが必要以上にコードを書き足す傾向への対策として注目されている。ベンチマークは作者自身によるもので、課題の種類によって効果は変わりうるため、自分のリポジトリで試して確かめたい。</td></tr>
+<tr><td class="num">4</td><td class="title">Graphify — コードベースや資料を、問い合わせできる知識グラフに変える — (原文: Graphify-Labs/graphify)</td><td class="link-col"><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• コードベースに加えて、ドキュメント、SQL のスキーマ、設定ファイル、PDF をまとめて知識グラフにするツール。<br>• Claude Code、Cursor、Codex、Gemini CLI から `/graphify` のスキルとして使える。<br>• 手元で決定的に動く構文解析（AST）を使い、グラフのつながりごとに根拠を示す。ベクトルストアは使わない。<br><br>エージェントに大きなコードベースを理解させる方法として、埋め込みによる検索とは別の道を選んでいる。結果が毎回同じになり、手元で完結する点は扱いやすいが、どの言語や形式にどこまで対応するかは事前に確かめたい。</td></tr>
+<tr><td class="num">5</td><td class="title">The Agency — 役割ごとに性格と手順を持たせた AI エージェントの詰め合わせ — (原文: msitarzewski/agency-agents)</td><td class="link-col"><a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• フロントエンドの専門家からオンラインコミュニティの運営役まで、さまざまな役割の AI エージェントをそろえたコレクション。<br>• 各エージェントに、専門分野、性格、作業の手順、成果物の形を定めている。<br>• 「手元に AI のエージェンシー（代理店）一式」をうたう。<br><br>エージェントに役割を細かく与えて使い分ける考え方の一例。定義を読み込ませるとトークンも増えるため、必要な役割だけを選んで使うのが現実的だろう。</td></tr>
+<tr><td class="num">6</td><td class="title">Knowledge Work Plugins — Claude を職種やチームに合わせた専門家にするプラグイン集 — (原文: anthropics/knowledge-work-plugins)</td><td class="link-col"><a href="https://github.com/anthropics/knowledge-work-plugins" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic が公開している、知識労働者向けのプラグインのオープンソースのリポジトリ。<br>• Claude Cowork 向けに作られ、Claude Code でも使える。<br>• 仕事の進め方の好み、使うツールやデータ、重要な業務の扱い方、スラッシュコマンドなどを Claude に教えられる。<br><br>コーディング以外の業務にエージェントを広げる流れを示すものとして注目されている。社内のツールやデータにつなぐ場合は、プラグインに与える権限と、扱う情報の範囲を確かめてから導入したい。</td></tr>
+<tr><td class="num">7</td><td class="title">wshobson/agents — 複数のコーディングツールで使い回せるプラグインのマーケットプレイス — (原文: wshobson/agents)</td><td class="link-col"><a href="https://github.com/wshobson/agents" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code、OpenAI Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Pi で共通に使える、プラグイン、エージェント、スキル、コマンドの集まり。<br>• 部品を読み込んで動かすコーディングツールを「ハーネス」と呼び、複数のハーネスに対応する。<br>• Python と JavaScript の開発、コードレビュー、テスト、インフラなどの分野をそろえている。<br><br>ツールごとに設定を書き直す手間を減らしたいという需要に応えるもの。ツールによって対応する機能に差があるため、使うツールで期待どおり動くかは個別に確かめたい。</td></tr>
+<tr><td class="num">8</td><td class="title">Agentic Awesome Skills — 2,700 を超えるスキルを探して選べる、手元で動く管理基盤 — (原文: sickn33/agentic-awesome-skills)</td><td class="link-col"><a href="https://github.com/sickn33/agentic-awesome-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• インストールできる SKILL.md 形式の手順書を 2,724 件以上集めたライブラリ。<br>• 中核の「AAS Core」は、手元で動いてスキルの検索、選択、組み合わせの検証、計画を担う。<br>• CLI、ローカルの MCP サーバー、カタログ、プラグイン、Workbench を含む。<br><br>スキルの数が急に増えるなか、どれを入れているかを把握し、見直せるようにする道具として作られている。他人が書いたスキルはエージェントへの指示そのものなので、入れる前に中身を読んでおきたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Meta、Facebook のプライバシーで利用者を欺いたとして 250 億ドルの制裁金 — (原文: Meta hit with $25B penalty for deceiving users about privacy on Facebook)</td><td class="link-col"><a href="https://nmdoj.gov/press-release/the-new-mexico-department-of-justice-secures-another-landmark-victory-against-big-tech-with-historic-25-billion-penalty-against-facebook/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米ニューメキシコ州の司法省が出した発表で、Facebook のプライバシーをめぐり利用者を欺いたとして、Meta に 250 億ドルの制裁金を勝ち取ったとしている。<br>• 同省は「巨大テック企業に対する、新たな画期的な勝利」と位置づけている。<br>• 179 ポイント、コメント 41 件で、今回取得分の中で最多のポイント。<br><br>州レベルで巨大テック企業の個人情報の扱いを問う動きの一つとして関心を集めた。Meta 側の対応や、不服を申し立てるかどうかは、今後の報道で確かめたい。</td></tr>
+<tr><td class="num">2</td><td class="title">Plex がプレーヤー開発チームを丸ごと解雇 — (原文: Plex laid off the whole player team)</td><td class="link-col"><a href="https://forums.plex.tv/t/2026-20-0-beta-ios-and-tvos-4k-dovi-hdr10-won-t-play-infinite-spinning-circle/943966?page=5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• メディアサーバーの Plex が、プレーヤーアプリの開発チームを全員解雇したとする話題。<br>• リンク先は Plex の公式フォーラムで、iOS と tvOS のベータ版で 4K、Dolby Vision、HDR10 の動画が再生できない不具合のスレッドとみられる。<br>• 92 ポイント、コメント 68 件で、コメント数は今回取得分の中で最多。<br><br>不具合の報告の流れの中で解雇の話が出たとみられ、利用者の間で今後の修正や開発体制への不安が広がっている。解雇の事実や規模は、会社の公式な説明で確かめる必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">自動化の後は「一人での起業」が当たり前になる — (原文: After automation: Solo founding will be the default)</td><td class="link-col"><a href="https://every.to/thesis-statements/julian-weisser" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ビジネスメディア Every に掲載された、Julian Weisser 氏の主張をまとめた記事。<br>• タイトルは、自動化が進んだ後は、一人で会社を立ち上げることが標準になると論じている。<br>• 37 ポイント、コメント 42 件。<br><br>AI エージェントで少人数でも多くの仕事をこなせるようになるという見方を背景にした議論。一方で、資金の集め方や責任の負い方など、技術以外の面で一人では難しい部分も多く、どこまで当てはまるかは慎重に見たい。</td></tr>
+<tr><td class="num">4</td><td class="title">AWS が PHP の RCE を「重要」と評価、Amazon Linux 2023 の修正は 20 日かかるおそれ — (原文: AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days)</td><td class="link-col"><a href="https://github.com/amazonlinux/amazon-linux-2023/issues/1148" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Amazon Linux 2023 の GitHub リポジトリに立てられた issue。<br>• AWS が PHP のリモートコード実行（RCE）の脆弱性を「Critical（緊急）」ではなく「Important（重要）」と評価したため、修正版の提供に 20 日ほどかかる可能性を指摘している。<br>• 21 日に修正版が出た「php2shell」を指しているとみられる。<br><br>日本ではサービスが相次いで緊急メンテナンスに入るほどの扱いになっており、配布元による評価の違いが対応の速さに直結する例になった。Amazon Linux 2023 で PHP を動かしている場合は、公式の更新の状況を確かめ、必要なら別の手段での対策も検討したい。</td></tr>
+<tr><td class="num">5</td><td class="title">Claude Duet — (原文: Claude Duet)</td><td class="link-col"><a href="https://claude.com/resources/articles/claude-duet" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic の Claude のサイトに掲載された、「Claude Duet」と題する記事。<br>• raw にはタイトルしかなく、どのような機能や取り組みなのかは記事で確かめる必要がある。<br>• 21 ポイント、コメント 6 件。<br><br>「Duet（二重奏）」という名前からは、人と Claude、または複数の Claude が組んで作業する形を指す可能性があるが、現時点では推測にとどまる。正式な内容はリンク先の説明で確かめたい。</td></tr>
+<tr><td class="num">6</td><td class="title">AI によるハッキングの大混乱は昨夜始まった — (原文: The AI-Hacking Apocalypse Began Last Night)</td><td class="link-col"><a href="https://www.theatlantic.com/technology/2026/10/ai-hacking-apocalypse-began-last-night/689106/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米誌 The Atlantic のテクノロジー記事。<br>• タイトルは、AI を使ったハッキングが本格的に始まったという強い言い方をとっている。<br>• 10 ポイント、コメント 2 件。<br><br>同じ時期に、AI を使って見つかったと報じられた PHP の脆弱性「php2shell」が公表されており、それを扱っている可能性がある。見出しは刺激的なので、具体的に何が起きたのかは本文と一次情報で確かめたい。</td></tr>
+<tr><td class="num">7</td><td class="title">「隠すことで守る」は終わった、LLM が終わらせた — (原文: Security Through Obscurity Is Dead and LLMs Killed It – Brendan Dolan Gavitt [video])</td><td class="link-col"><a href="https://www.youtube.com/watch?v=8rOY3aD1yxY" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• セキュリティ研究者の Brendan Dolan-Gavitt 氏による講演の動画。<br>• タイトルは、仕組みを隠すことで安全を保つ考え方（Security through obscurity）が、LLM によって通用しなくなったと論じている。<br>• 4 ポイント。<br><br>LLM がバイナリーの解析や脆弱性探しを手伝えるようになり、仕組みが知られていないことに頼った守りは弱くなっているという見方が広がっている。設計そのものの安全性を高める必要が、これまで以上に増しそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">Automattic、取締役会の混乱と幹部の退任に続いて人員削減を開始 — (原文: Automattic begins layoffs following board upheaval and executive departures)</td><td class="link-col"><a href="https://techcrunch.com/2026/10/21/automattic-begins-layoffs-following-board-upheaval-and-executive-departures/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• WordPress.com などを運営する Automattic が、人員削減を始めたとする TechCrunch の記事。<br>• タイトルによると、取締役会の混乱と幹部の相次ぐ退任に続く動きだという。<br>• 3 ポイント。<br><br>WordPress のエコシステムの中心にある会社の体制の変化として、開発者や利用者の関心を集めそうだ。オープンソースの WordPress 本体の開発にどう影響するかは、今後の発表を待ちたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>InfoQ Japan</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">CircleCI、AI コーディングの流れに CI の検証を直接組み込む「Chunk Sidecars」を導入</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/circleci-chunk-sidecars/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CircleCI が、AI コーディングの作業の流れの中に CI の検証を直接組み込む「Chunk Sidecars」を出した。<br>• AI が書いたコードを、作業の途中で CI と同じように確かめられるようにする狙いとみられる。<br>• 記事は Craig Risi 氏。<br><br>AI エージェントがコードを書く速さに、テストやレビューが追いつかないことが課題になっている。検証を早い段階に移す取り組みとして、ほかの CI サービスの動きにも影響しそうだ。</td></tr>
+<tr><td class="num">2</td><td class="title">Google の Genkit、TypeScript と Go 向けに Agents API を公開、「Detached Turns」と人の確認を組み込む機能を搭載</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/genkit-agents-api-preview/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google の AI アプリ開発の枠組み Genkit が、TypeScript と Go 向けに Agents API を出した。<br>• エージェントの処理を呼び出し元から切り離して進める「Detached Turns」を備える。<br>• 途中で人が確認や承認をはさむ「Human-in-the-Loop」の機能も持つ。記事は Steef-Jan Wiggers 氏。<br><br>時間のかかる処理や、人の判断が要る処理をエージェントに組み込む需要に応える機能。各社のエージェント向けの枠組みが似た機能をそろえつつあり、選ぶ際は対応する言語や運用のしやすさが比べどころになる。</td></tr>
+<tr><td class="num">3</td><td class="title">Anthropic、Web 版・Claude Code・Cowork で Claude をどう封じ込めているかを詳しく説明</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/anthropic-claude-containment/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic が、Claude の動ける範囲を制限する「封じ込め」の方法を詳しく説明した。<br>• 対象は Web 版の Claude、Claude Code、Claude Cowork の 3 つ。<br>• 記事は Eran Stiller 氏。<br><br>エージェントがファイルの操作やコマンドの実行をするようになり、誤った動きや悪用の影響をどこまで抑えられるかが重要になっている。利用者にとっても、自分の環境で何が許可されているかを理解して設定するための手がかりになりそうだ。</td></tr>
+<tr><td class="num">4</td><td class="title">AWS の請求システムの不具合で顧客に兆ドル規模の見積額が表示、自社のコストアラームは作動せず</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/aws-billing-estimates-incident/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS の請求システムの不具合で、顧客に兆ドル規模という現実離れした見積額が表示された。<br>• 一方で、AWS 自身が用意しているコストのアラームは作動しなかったという。<br>• 記事は Steef-Jan Wiggers 氏。<br><br>費用の監視をクラウドの提供元の仕組みだけに頼ると、同じ不具合の影響を受けうることを示した出来事といえる。重要なアカウントでは、請求データを別の経路でも確かめる仕組みを用意しておくと安心だ。</td></tr>
+<tr><td class="num">5</td><td class="title">AI を活かしたソフトウェア開発 — 研究の成果を実践に移すためのチーム構成と能力</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/AI-research-into-action/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI を使ったソフトウェア開発について、研究で分かったことを現場でどう生かすかを扱った記事。<br>• チームの組み方と、チームに必要な能力に焦点を当てている。<br>• 記事は Ben Linders 氏。<br><br>AI の道具を入れるだけでは成果につながりにくく、チームの役割分担や進め方を見直す必要があるという議論が広がっている。導入を進める組織にとって、体制づくりの参考になりそうだ。</td></tr>
+<tr><td class="num">6</td><td class="title">Netflix、3 万件以上のストリーミング処理に、オープンソースの Flink の自動スケーラーを導入</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/netflix-flink-autoscaler/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Netflix が、3 万件を超えるストリーミングのジョブに、オープンソースの Apache Flink 向けの自動スケーラーを広げている。<br>• 処理の量に合わせて、計算資源を自動で増やしたり減らしたりする仕組み。<br>• 記事は Leela Kumili 氏。<br><br>大量のジョブの資源を人の手で調整するのは難しく、自動化は費用と安定性の両面で効果が大きい。独自の仕組みではなくオープンソースを使う選択は、ほかの Flink 利用者にとっても参考になりそうだ。</td></tr>
+<tr><td class="num">7</td><td class="title">Cloudflare Worker Previews — Workers 向けにブランチごとのプレビュー環境を用意</td><td class="link-col"><a href="https://www.infoq.com/jp/news/2026/10/cloudflare-worker-agent/?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare が、Workers のアプリをブランチごとにプレビューできる「Worker Previews」を出した。<br>• 本番に出す前に、変更を別の環境で動かして確かめられる。<br>• 記事は Claudio Masolo 氏。<br><br>ブランチごとのプレビューは、フロントエンドのホスティングでは広く使われている仕組みで、それがサーバー側の処理にも広がった形。レビューのしやすさが増す一方、プレビュー環境から本番のデータに触れないよう設定に気を配りたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">PHP の重大な脆弱性「php2shell」（CVE-2026-109618、CVE-2026-109619）の概要と対応指針</td><td class="link-col"><a href="https://blog.flatt.tech/entry/php2shell" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• セキュリティ企業 GMO Flatt Security のブログによる、PHP の重大な脆弱性「php2shell」の解説。<br>• 2 件の CVE の概要と、利用者がとるべき対応の指針をまとめている。<br>• 810 ブックマークで、今回取得分の中で最多。<br><br>PHP は多くの Web サービスの土台で使われており、影響の広さから大きな関心を集めた。自分の環境の PHP のバージョンを確かめ、修正版への更新を急ぎたい。</td></tr>
+<tr><td class="num">2</td><td class="title">修正が予告された PHP の 2 件の深刻な脆弱性についてまとめてみた（piyolog）</td><td class="link-col"><a href="https://piyolog.hatenadiary.jp/entry/2026/10/21/174516" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• セキュリティの出来事を整理するブログ piyolog が、修正が予告されていた PHP の 2 件の深刻な脆弱性をまとめた記事。<br>• 修正版の公開前の時点で分かっていた情報を整理している。<br>• 458 ブックマーク。<br><br>公開前の段階から情報がまとまっていたことで、運用者は更新の準備を進めやすくなった。修正版はすでに公開されているため、記事の内容とあわせて最新の公式情報を確かめたい。</td></tr>
+<tr><td class="num">3</td><td class="title">著名 IT サービスが相次いで緊急メンテナンスへ — コドモン、シャドバ、BASE、さくらのレンタルサーバなど、PHP の脆弱性が原因か</td><td class="link-col"><a href="https://www.itmedia.co.jp/news/article/2610/21/2000002472/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ITmedia NEWS の記事で、有名な IT サービスが相次いで緊急メンテナンスに入ったことを伝えている。<br>• 保育園向けのコドモン、ゲームのシャドウバース、ネットショップの BASE、さくらのレンタルサーバなどが挙がっている。<br>• PHP の脆弱性への対応が原因とみられる。188 ブックマーク。<br><br>GIGAZINE も、ニコニコや pixiv などがメンテナンスに入ったと伝えており、影響は広い範囲に及んだ。利用者の側では、メンテナンスの告知と、各社が後で出す説明を確かめておきたい。</td></tr>
+<tr><td class="num">4</td><td class="title">不正アクセス「金融機関が狙われる段階に変わってきた可能性」</td><td class="link-col"><a href="https://news.web.nhk/newsweb/na/nd-20261021de62921" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NHK ニュースによる、不正アクセスの標的についての報道。<br>• 攻撃の狙いが金融機関に向かう段階に変わってきた可能性があると伝えている。<br>• タグには AI も付いている。141 ブックマーク。<br><br>金融機関への攻撃は、被害が利用者のお金に直接つながるおそれがある。金融機関の側の守りに加えて、利用者もログインの通知や二段階認証の設定を見直しておきたい。</td></tr>
+<tr><td class="num">5</td><td class="title">【php2shell】パッチは 21 時 59 分に公開済み。「23 時 15 分から乗っ取り」「15 分で AI が攻撃コード」は本当か、自分の VPS のログで検証</td><td class="link-col"><a href="https://blogs.itmedia.co.jp/agile/2026/10/php2shell_cve_2026_109618_panic.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ITmedia のオルタナティブ・ブログで、秋山大志氏が php2shell をめぐる話を自分のサーバーのログで確かめた記事。<br>• PHP の修正版は日本時間 21 日 21 時 59 分に公開済みだとしている。<br>• 「23 時 15 分から乗っ取りが始まった」「AI が 15 分で攻撃コードを作った」といった話が本当かを検証している。111 ブックマーク。<br><br>大きな脆弱性が出ると、真偽の分からない情報も一緒に広がりやすい。自分のログで確かめる姿勢は参考になり、ほかの運用者も、自分のサーバーへのアクセスを点検しておきたい。</td></tr>
+<tr><td class="num">6</td><td class="title">わずか 2 週間で GitHub のスター 30 万超、AI でリバースエンジニアリングする「REA」が話題</td><td class="link-col"><a href="https://ascii.jp/elem/000/004/444/4444350/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ASCII.jp の記事で、AI を使ってリバースエンジニアリング（解析）をするツール「REA」を紹介している。<br>• 公開から 2 週間ほどで、GitHub のスターが 30 万を超えたという。<br>• 99 ブックマーク。Zenn にも REA を試した記事が投稿されている。<br><br>ソフトウェアの解析を AI に任せる動きは、セキュリティの調査を速める一方、悪用の心配もある。使う場合は、解析してよい対象かどうかを、ライセンスや法律の面から確かめたい。</td></tr>
+<tr><td class="num">7</td><td class="title">委託事業者での個人情報の漏えいについて（大阪大学）</td><td class="link-col"><a href="https://www.osaka-u.ac.jp/ja/news/topics/2026/10/21004" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 大阪大学が発表した、委託先の事業者での個人情報の漏えいについてのお知らせ。<br>• タグには NEC が付き、「これはひどい」のタグも集まっている。<br>• 93 ブックマーク。別の大学では、朝日新聞が、大阪公立大のシステム障害は NEC の再委託先へのサイバー攻撃が原因だと伝えている。<br><br>大学の業務を外部に委ねる中で、さらにその先の委託先が攻撃の入り口になる例が続いている。委託する側は、再委託先まで含めた管理の仕組みを見直す必要がありそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">Node.js、2026 年 10 月 21 日（水）のセキュリティリリース</td><td class="link-col"><a href="https://nodejs.org/en/blog/vulnerability/october-2026-security-releases" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Node.js の公式ブログによる、10 月 21 日のセキュリティリリースのお知らせ。<br>• タイトルからは、同日に脆弱性を修正する版が出るとみられる。<br>• 65 ブックマーク。<br><br>PHP の対応と同じ日に重なり、運用者にとっては更新の作業が続く一日になった。使っている Node.js の系列が対象かどうかを確かめ、修正版に更新したい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">有名 OSS が PR を閉じはじめた、何が起きていて、どう向き合うか</td><td class="link-col"><a href="https://zenn.dev/hand_dot/articles/ecb391d4322330" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 有名なオープンソースのプロジェクトが、外部からのプルリクエスト（PR）を受け付けなくなり始めた状況を整理した記事。<br>• 何が起きているのかと、利用者や貢献者がどう向き合うかを論じている。<br>• 106 いいねで、今回取得分の中で最多。前日から引き続き読まれている。<br><br>AI で作られた質の低い PR が増え、保守者の確認の負担が重くなっていることが背景にあるとみられる。OSS に貢献したい人にとっては、プロジェクトごとの方針を確かめる必要が増しそうだ。</td></tr>
+<tr><td class="num">2</td><td class="title">ポートフォリオを Void で作り直したので、Void の来歴と中身を整理する</td><td class="link-col"><a href="https://zenn.dev/nkzn/articles/my-first-void" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 自分のポートフォリオのサイトを「Void」で作り直した筆者が、Void の成り立ちと中身を整理した記事。<br>• 道具の来歴から説明し、実際の構成まで追っている。<br>• 58 いいね。<br><br>新しい道具を使うときに、その背景まで調べてから判断する姿勢がうかがえる。Void が何をするものかは記事の中で詳しく説明されているので、関心のある人は本文で確かめたい。</td></tr>
+<tr><td class="num">3</td><td class="title">Oxlint と Oxfmt で規約をコードにするモノレポの運用</td><td class="link-col"><a href="https://zenn.dev/reality_tech/articles/oxc-monorepo-20261006" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Rust で書かれた JavaScript の道具群 Oxc の、リンター Oxlint とフォーマッター Oxfmt を使ったモノレポの運用の記事。<br>• コーディングの規約を、文書ではなく設定とコードで表して守らせる方法を紹介している。<br>• 40 いいね。<br><br>ESLint や Prettier より速い道具への置き換えが進んでいる。規約を機械で確かめられる形にしておくと、AI エージェントが書いたコードにも同じ基準を当てやすくなる。</td></tr>
+<tr><td class="num">4</td><td class="title">AI ペネトレーションテストツール「Strix」を試してみた</td><td class="link-col"><a href="https://zenn.dev/turquoise123/articles/df481032f6b405" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI がペネトレーションテスト（侵入テスト）をするツール「Strix」を実際に使ってみた記事。<br>• セキュリティの診断を AI に任せたときの使い心地を確かめている。<br>• 34 いいね。<br><br>AI に脆弱性を探させる取り組みが広がるなか、手軽に試せる道具への関心が高まっている。診断は、自分が管理しているか、許可を得た対象に限って行う必要がある。</td></tr>
+<tr><td class="num">5</td><td class="title">AI 時代に、配布する Python のコードをどう守るか — 難読化の実験と判断の軸</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/0f9c11d1daea2e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 配布する Python のコードを、読み解かれにくくする「難読化」で守れるかを実験した記事。<br>• AI がコードを解析できる時代を前提に、どこまで守るべきかの判断の軸を示している。<br>• 33 いいね。<br><br>LLM の登場で、隠すことで守る方法が弱くなっているという指摘は、Hacker News の話題とも重なる。守るべき処理はサーバー側に置くなど、配布の形そのものを見直す選択肢もある。</td></tr>
+<tr><td class="num">6</td><td class="title">Chromium（V8）の Array.prototype.fill を最大約 7 倍速くした</td><td class="link-col"><a href="https://zenn.dev/dinii/articles/5b8edc7856c25b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Chromium の JavaScript エンジン V8 で、配列を同じ値で埋める `Array.prototype.fill` を最大約 7 倍速くした記事。<br>• 筆者自身がブラウザーのエンジンに手を入れた取り組みとみられる。<br>• 29 いいね。<br><br>よく使われる基本の処理の高速化は、多くの Web ページやアプリに広く効く。大きな OSS への貢献の過程を知る資料としても読める。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude Code で CI の待ち時間を 18 分から 4 分台に短縮する（GitHub Actions）</td><td class="link-col"><a href="https://zenn.dev/edash_tech_blog/articles/5b90aa33bd8d49" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub Actions の CI の待ち時間を、Claude Code を使って 18 分から 4 分台まで短くした記事。<br>• CI の設定の見直しを、AI エージェントと一緒に進めた事例とみられる。<br>• 28 いいね。<br><br>CI が遅いと、AI エージェントの作業も人の確認も待たされる。高速化は開発の速さに直結するため、同じ悩みを持つチームの参考になりそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">Cloudflare と EmDash の自分のサイトを点検したら、Server-Timing から内部の情報が見えていた話</td><td class="link-col"><a href="https://zenn.dev/masaru21/articles/2100616bb5110d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Cloudflare と EmDash で動かしている自分のサイトを点検した記事。<br>• HTTP の応答に付く `Server-Timing` ヘッダーから、内部の情報が外から見えていたことに気づいたという。<br>• 20 いいね。<br><br>性能を測るためのヘッダーが、思わぬ情報の漏れにつながる例。本番の環境で、どんなヘッダーが外に出ているかを一度確かめておきたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AWS 初心者がエンジニアを辞めた話</td><td class="link-col"><a href="https://qiita.com/tks_1128/items/e4cde327a910b5beba11" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS を学び始めたばかりのエンジニアが、エンジニアを辞めるまでの経緯をつづった記事。<br>• タグには転職、挫折、ポエムが並ぶ。<br>• 96 いいねで、今回取得分の中で最多。前日から引き続き読まれている。<br><br>技術を学ぶ途中でつまずいた経験を率直に書いた内容が、多くの読者の共感を集めたとみられる。新人の育て方や、職場の支え方を考えるきっかけにもなりそうだ。</td></tr>
+<tr><td class="num">2</td><td class="title">今日から使える AI との会話術 — Claude・Gemini・Codex に指示を守らせる 6 つの原則（2026 年版）</td><td class="link-col"><a href="https://qiita.com/songchong/items/351a939e2e1b673c2929" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude、Gemini、Codex に指示を守らせるための 6 つの原則をまとめた記事。<br>• AI エージェントへの指示の書き方を、すぐ使える形で整理している。<br>• 32 いいね。<br><br>エージェントが指示を無視したり忘れたりする悩みは多くの人に共通している。原則がモデルごとにどこまで効くかは違いうるため、自分の作業で試して確かめたい。</td></tr>
+<tr><td class="num">3</td><td class="title">AI 時代の開発の進め方とチームのあり方を考える</td><td class="link-col"><a href="https://qiita.com/kizuku_tabata/items/6d5b58ad0cb832d2a4c5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI を使う時代の開発の進め方と、チームのあり方を考えた記事。<br>• タグにはプロジェクトマネジメントやツール開発が並ぶ。<br>• 31 いいね。<br><br>InfoQ にも同じ主題の記事が出ており、AI の道具に合わせて組織や進め方を見直す議論が広がっている。現場の実感に基づく意見として参考になりそうだ。</td></tr>
+<tr><td class="num">4</td><td class="title">テーブル定義書と ER 図を自動で作り、AI にテーブルの構造を答えさせるツールを作ってみた</td><td class="link-col"><a href="https://qiita.com/ebichan_88/items/f7c44c74e437875b1399" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• データベースのテーブル定義書と ER 図を自動で作るツールを作った記事。<br>• AI がテーブルの構造についての質問に答えられるようにしており、タグには MCP が付いている。<br>• PostgreSQL と Oracle に対応するとみられる。27 いいね。<br><br>データベースの構造を AI に正しく伝えられると、SQL を書かせたり調べものを任せたりしやすくなる。本番のデータベースにつなぐ場合は、読み取り専用の権限にとどめるなどの配慮がほしい。</td></tr>
+<tr><td class="num">5</td><td class="title">怠惰の化身が、資格を取るための勉強の習慣を身につけるまで</td><td class="link-col"><a href="https://qiita.com/giganticsaki_A/items/f0ed9ec5cff12106978e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 自分を「怠惰の化身」と呼ぶ筆者が、資格を取るための勉強を習慣にするまでをつづった記事。<br>• 習慣化の工夫や試験対策の方法を紹介している。<br>• 26 いいね。<br><br>技術そのものではないが、学び続けることに悩むエンジニアの共感を集めている。続けられる仕組みを先に作るという考え方は、資格以外の学習にも生かせそうだ。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Code に .env を読ませない設定がどこまで効くのか試してみた</td><td class="link-col"><a href="https://qiita.com/yakumo_09/items/5a86ca330b449db0e6bc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code に秘密の情報が入った `.env` ファイルを読ませないための設定が、実際にどこまで効くかを試した記事。<br>• 設定の効き目がどこまで及ぶのかを、実際に試して確かめている。<br>• 22 いいね。<br><br>AI エージェントにファイルやコマンドを扱わせるほど、秘密の情報の扱いが重要になる。設定だけに頼らず、秘密の情報を作業用のディレクトリに置かないなどの対策も重ねたい。</td></tr>
+<tr><td class="num">7</td><td class="title">「ドパ資料」の作り方</td><td class="link-col"><a href="https://qiita.com/kikuziro/items/b6a0743b070d7320c36d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「ドパ資料」の作り方を紹介した記事。タグの「ドパガキ」からは、見た瞬間に強い印象を与える資料を指すとみられる。<br>• タグには AI、資料作成、ポエムが並ぶ。<br>• 21 いいね。<br><br>AI で資料を作りやすくなったことで、見た目の作り方にも関心が集まっている。目を引く表現と、内容の正確さの釣り合いをどうとるかが問われそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">重要な指示は最初か最後か — AI 大手 3 社の助言が違うので、資料・命令・指示の並び方を 8 通り試した</td><td class="link-col"><a href="https://qiita.com/songchong/items/542892c6d4c569c9c15f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• プロンプトの中で、重要な指示を最初に置くか最後に置くかについて、AI 大手 3 社の助言が違う点に注目した記事。<br>• 資料、命令、指示の並び方を 8 通り変えて、結果を比べている。<br>• 15 いいね。<br><br>公式の助言をそのまま受け取らず、自分で試して確かめる姿勢が参考になる。結果はモデルや課題によって変わりうるため、自分の用途でも試しておきたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header local-llm"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>🤖 ローカルLLM関連リポジトリ</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">ComfyUI：ノードグラフで操作する拡散モデル向けGUI・API・バックエンド — (原文: Comfy-Org/ComfyUI)</td><td class="link-col"><a href="https://github.com/Comfy-Org/ComfyUI" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ノード（部品）をグラフ状につないで処理を組み立てる、拡散モデル向けのGUI・API・バックエンド<br>• 画像に加えて動画、3Dモデル、音声などの生成にも使える、モジュール式のコンテンツ生成エンジンだとしている<br>• リポジトリの説明では「世界最速のローカル推論エンジン」を掲げ、モデル・パラメータ・出力を細かく制御したい制作者向けとしている<br><br>モデルやパラメータを個別に制御できるノードグラフ型の構成と、画像から音声まで扱える汎用性が特徴として挙げられている。「最も強力」「世界最速」といった表現はリポジトリ側の主張で、第三者による比較は示されていない。生成AIをローカル環境で動かす基盤の一つとして、引き続きトレンドに入っている。</td></tr>
+<tr><td class="num">2</td><td class="title">Kronos：金融市場の「言語」を扱う基盤モデル — (原文: shiyu-coder/Kronos)</td><td class="link-col"><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 金融市場のローソク足（K線）データを対象とした基盤モデルで、リポジトリは「初のオープンソースのローソク足向け基盤モデル」だとしている<br>• 45を超える世界の取引所のデータで学習したと説明している<br>• 2025年11月にAAAI 2026への採択を発表し、2025年8月にはファインチューン用スクリプトも公開している<br><br>言語モデルの手法を価格の時系列データに応用し、市場の動きをモデル化しようとする取り組み。公開されたスクリプトで、利用者が自分の課題向けに調整できるとしている。「初」という位置づけはリポジトリ側の主張で、予測性能や実際の取引での有効性は別途検証が必要になる。</td></tr>
+<tr><td class="num">3</td><td class="title">vLLM：高スループットでメモリ効率の高いLLM推論・サービングエンジン — (原文: vllm-project/vllm)</td><td class="link-col"><a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• LLMの推論とサービングを高スループットかつ省メモリで行うためのエンジン<br>• 「誰でも簡単・高速・低コストにLLMを提供できる」ことを掲げ、使いやすいライブラリだと説明している<br>• もともとはカリフォルニア大学バークレー校のSky Computing Labで開発されたプロジェクトで、公式サイト vllm.ai も整備されている<br><br>自前のGPUサーバーでオープンモデルを動かす際の代表的な推論エンジンの一つで、ドキュメント、ブログ、論文、ユーザーフォーラム、開発者向けSlackなどの情報源がそろっている。性能は構成やモデルによって変わるため、自身の環境での確認が前提となる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-10-22 06:37 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
