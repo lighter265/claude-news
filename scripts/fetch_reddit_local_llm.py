@@ -26,6 +26,9 @@ REDDIT_USER_AGENT = "claude-news/1.0 (personal news digest; contact unavailable)
 RETRY_COUNT = 3  # 初回を含めて最大4試行。ただし累計待機時間の上限で打ち切られる。
 FALLBACK_DELAY_SECONDS = 30.0  # 待機時間を示すヘッダがない場合の既定待機秒数。
 MAX_TOTAL_WAIT_SECONDS = 100.0  # 累計待機がこれを超える見込みならリトライせずスキップする。
+# 1ページ目が429だと短いリトライでは抜けられないことがある（2026-10-27は55s待ちの
+# 3回リトライすべて429で0件になった）。1ページ目だけは長めに待って1回やり直す。
+FIRST_PAGE_RETRY_DELAY_SECONDS = 125.0
 FEED_URL = f"{REDDIT_RSS_BASE_URL}?limit={REDDIT_RSS_LIMIT}"
 
 
@@ -198,6 +201,22 @@ def _entries(root):
     return [e for e in root.iter() if e.tag.rsplit("}", 1)[-1] == "entry"]
 
 
+def _fetch_page(url, page):
+    """1ページ分を取得する。1ページ目の429だけは長めに待って1回再試行する。"""
+    try:
+        return _http_get_with_retry(url).decode("utf-8", "replace")
+    except urllib.error.HTTPError as error:
+        if page != 0 or error.code != 429:
+            raise
+        print(
+            f"[reddit] page 1 HTTP 429; waiting "
+            f"{FIRST_PAGE_RETRY_DELAY_SECONDS:g}s then retrying once"
+        )
+        time.sleep(FIRST_PAGE_RETRY_DELAY_SECONDS)
+        print("[reddit] page 1 retry now")
+        return _http_get_with_retry(url).decode("utf-8", "replace")
+
+
 def fetch(limit=None, recent_hours=RECENT_WINDOW_HOURS, now=None):
     """RSSから直近 ``recent_hours`` 時間の投稿を全件返す。
 
@@ -220,7 +239,7 @@ def fetch(limit=None, recent_hours=RECENT_WINDOW_HOURS, now=None):
         if page:
             time.sleep(PAGE_INTERVAL_SECONDS)
         try:
-            raw = _http_get_with_retry(url).decode("utf-8", "replace")
+            raw = _fetch_page(url, page)
         except urllib.error.HTTPError as error:
             if page == 0:
                 raise
