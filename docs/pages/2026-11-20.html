@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-20</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-20</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-20</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>NGINX と PHP で深刻な脆弱性への対応が相次いだ。IPA が NGINX の複数の脆弱性について注意を呼びかけ、PHP は認証なしでリモートからコードを実行されうる問題を含む 17 件を修正した更新版を公開した。利用中のバージョンを早めに確認したい。</li><li>JPMorgan、Visa、Mastercard が、取引先の外部ベンダーがサイバー攻撃の標的になったと明らかにしたとロイターが報じた。Hacker News ではこの日最多の 17 ポイントを集めた。</li><li>名古屋大学の研究室が公開したとみられる教員向けのオープン教科書「教師のためのAI入門」が、はてなブックマークで 248 件と突出した注目を集めた。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">あらゆるソフトウェアを AI エージェント向けの CLI にする — (原文: HKUDS/CLI-Anything)</td><td class="link-col"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 既存のソフトウェアを AI エージェントから扱いやすい CLI として使えるようにすることを目指すプロジェクト。<br>• `pip install cli-anything-hub` で導入する「CLI-Hub」から、コミュニティが作った CLI を探してインストール・管理できる。<br>• 自作の CLI は PR を送るとハブに追加される仕組み。<br><br>「今のソフトウェアは人間向け、これからの利用者はエージェント」という考え方を掲げている。GUI 前提のソフトをエージェントが操作する手段として、CLI という扱いやすい窓口を用意する発想で、MCP と並ぶ選択肢になりうる。対応するソフトの範囲や品質はコミュニティの貢献に左右される点に留意したい。</td></tr>
+<tr><td class="num">2</td><td class="title">複数の Node.js バージョンを切り替える nvm — (原文: nvm-sh/nvm)</td><td class="link-col"><a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• POSIX 準拠の bash スクリプトで、複数の Node.js バージョンを管理・切り替えられるツール。<br>• Docker や CI ジョブでの導入方法、Linux・macOS でのトラブル対応も README にまとまっている。<br>• LTS 版の指定や、グローバルパッケージの移行にも対応する。<br><br>長年使われている定番ツールで、改めてトレンド入りした。近年は Rust 製などの高速な代替ツールも増えているが、シェルスクリプトだけで動く手軽さから根強く使われている。</td></tr>
+<tr><td class="num">3</td><td class="title">Rust 製の高速な Python パッケージ・プロジェクト管理ツール uv — (原文: astral-sh/uv)</td><td class="link-col"><a href="https://github.com/astral-sh/uv" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• pip、pip-tools、pipx、poetry、pyenv、twine、virtualenv などを 1 つで置き換えることを目指すツール。<br>• pip と比べて 10〜100 倍速いとうたう。<br>• 汎用のロックファイルによるプロジェクト管理や、インライン依存情報つきスクリプトの実行に対応する。<br><br>Python の環境管理は複数のツールを組み合わせるのが一般的だったが、uv はそれらを統合する存在として急速に普及している。CI の高速化や環境の再現性を重視するチームで採用が広がっている。</td></tr>
+<tr><td class="num">4</td><td class="title">jQuery — 4.0 系が主流に — (原文: jquery/jquery)</td><td class="link-col"><a href="https://github.com/jquery/jquery" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• jQuery 4.0.0 がリリースされ、main ブランチの 4.x がフルサポートとなっている。<br>• 3.x 系は今後、重大な修正のみを受け取る。<br>• 2.x と 1.x 系のサポートは終了している。<br><br>新規開発で選ばれる機会は減ったものの、既存サイトでは今も広く使われている。3.x が重大修正のみになったことで、長く運用しているサイトでは 4.x への移行計画を考える時期といえる。</td></tr>
+<tr><td class="num">5</td><td class="title">エージェントと開発者向けのオープンソースクラウド Appwrite — (原文: appwrite/appwrite)</td><td class="link-col"><a href="https://github.com/appwrite/appwrite" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 認証、データベース、ストレージ、関数、メッセージング、ホスティング、リアルタイム、WAF などをまとめて提供する。<br>• 「MCP とエージェントを第一に考えた」プラットフォームとして自らを位置づけている。<br>• オープンソースで、セルフホストも可能。<br><br>Firebase のようなバックエンド機能一式を、AI エージェントからも扱える形で提供しようとしている。エージェントがアプリの構築や運用を担う流れに合わせて、既存の BaaS も MCP 対応を前面に出す動きが目立つ。</td></tr>
+<tr><td class="num">6</td><td class="title">AI 推論の最適化・デプロイ用ツールキット OpenVINO — (原文: openvinotoolkit/openvino)</td><td class="link-col"><a href="https://github.com/openvinotoolkit/openvino" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 深層学習モデルの推論を最適化し、デプロイするためのオープンソースのツールキット。<br>• 画像認識、音声認識、自然言語処理、生成 AI など幅広い用途での性能向上をうたう。<br>• 大小の言語モデルの推論にも対応する。<br><br>Intel が中心となって開発しており、CPU や内蔵 GPU、NPU など手元のハードウェアで推論を効率よく動かす用途で使われる。クラウドに頼らない推論の需要が高まる中で、改めて関心を集めているとみられる。</td></tr>
+<tr><td class="num">7</td><td class="title">AI 機能を備えたワークフロー自動化基盤 n8n — (原文: n8n-io/n8n)</td><td class="link-col"><a href="https://github.com/n8n-io/n8n" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ビジュアルな編集画面とカスタムコードを組み合わせて、AI エージェントやワークフローを構築できる。<br>• セルフホストとクラウドの両方で動かせる。<br>• 1500 以上の外部サービスとの連携に対応するとしている。<br><br>「フェアコード」と呼ばれる独自のライセンスで公開されている。ノーコードの手軽さとコードの柔軟性を両立できる点が支持され、AI エージェントを業務に組み込む基盤としての利用が広がっている。</td></tr>
+<tr><td class="num">8</td><td class="title">細かな粒度のリアクティビティを持つ UI ライブラリ Solid — (原文: solidjs/solid)</td><td class="link-col"><a href="https://github.com/solidjs/solid" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 宣言的に UI を組み立てる JavaScript ライブラリ。<br>• 仮想 DOM を使わず、テンプレートを実際の DOM ノードにコンパイルする。<br>• 状態が変わると、その状態に依存するコードだけが再実行される。<br><br>React と似た書き味を保ちながら、細かな粒度の更新で高い性能を出す設計が特徴。Signals の考え方は他のフレームワークにも広がっており、その源流の 1 つとして注目され続けている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">JPMorgan、Visa、Mastercard が外部ベンダーへのサイバー攻撃を公表 — (原文: JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack)</td><td class="link-col"><a href="https://www.reuters.com/legal/government/jpmorgan-says-third-party-vendors-targeted-cyberattack-2026-11-19/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ロイターによると、大手金融 3 社が、取引先の外部ベンダーがサイバー攻撃の標的になったと明らかにした。<br>• HN ではこの日最多の 17 ポイントを集めた（コメント 1 件）。<br>• 被害の範囲や攻撃の手口は raw からは分からない。<br><br>大企業自体の防御が固くても、取引先を経由して攻撃されるサプライチェーン型の被害が続いている。金融の中核を担う企業が同時に名前を挙げたことで、影響の広がりに関心が集まる。詳細は今後の続報で確かめたい。</td></tr>
+<tr><td class="num">2</td><td class="title">スナック菓子の袋を AI が銃と誤検知、生徒が学校と警察を提訴 — (原文: Traumatized teens sue school, cops after Doritos bag triggers AI gun alert)</td><td class="link-col"><a href="https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 学校の AI 銃検知システムが、Doritos の袋を銃と判定して警報を出したとされる件。<br>• 精神的な苦痛を受けたとして、生徒らが学校と警察を訴えたと Ars Technica が報じた。<br>• HN では 5 ポイント。<br><br>AI による監視システムの誤検知が、実際に警察の出動など深刻な結果につながりうることを示す事例といえる。導入する側が誤検知のリスクや人による確認の手順をどう設計していたかが、訴訟の焦点になるとみられる。</td></tr>
+<tr><td class="num">3</td><td class="title">ローカルで動く音声アシスタントのパイプラインを作り直した — (原文: Rebuilding my local voice assistant pipeline)</td><td class="link-col"><a href="https://blog.platypush.tech/article/Rewriting-my-voice-assistant-pipeline" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Platypush の開発者ブログで、自宅で動かす音声アシスタントの処理の流れを作り直した記録。<br>• HN では 4 ポイント。<br>• 具体的な構成は記事本文で確認したい。<br><br>音声認識、言語モデル、音声合成をクラウドに頼らず手元で組み合わせる取り組みは、プライバシーの観点から関心が高い。個人の実践記録は、部品の選び方や遅延への対処を知る手がかりになる。</td></tr>
+<tr><td class="num">4</td><td class="title">PHP がまたも重大なセキュリティ修正版を公開 — (原文: Another critical PHP security release has dropped)</td><td class="link-col"><a href="https://www.theregister.com/patches/2026/11/18/another-critical-php-security-release-has-dropped/5310911" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• The Register が、PHP の重大なセキュリティ修正版の公開を報じた。<br>• 国内報道によると 17 件の脆弱性に対処し、認証なしでリモートからコードを実行されうる問題も含む。<br>• 対象は v8.5.13、v8.4.28、v8.3.37、v8.2.36。<br><br>見出しの「またも」が示すように、PHP では重大な修正が続いている。Web で広く使われている言語だけに影響は大きく、サポート中のブランチを使っている場合は早めの更新が勧められる。</td></tr>
+<tr><td class="num">5</td><td class="title">GPT-Live-1.1: 多言語の会話に対応する全二重の音声モデル — (原文: GPT-Live-1.1: Full-duplex voice model for multilingual conversations)</td><td class="link-col"><a href="https://developers.openai.com/api/docs/models/gpt-live-1.1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OpenAI の開発者ドキュメントに「GPT-Live-1.1」のモデルページが公開された。<br>• 話す・聞くを同時に行える全二重の音声モデルで、多言語の会話に対応するとしている。<br>• 性能や価格は raw からは分からない。<br><br>全二重の音声モデルは、相手の発話への割り込みや相づちなど、より自然な会話を可能にする技術として各社が開発を進めている。音声エージェントやコールセンター用途での活用が想定される。</td></tr>
+<tr><td class="num">6</td><td class="title">Ask HN: 5 年後のソフトウェアはどうなっているか — (原文: Ask HN: Where do you see Software in 5 years?)</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=50565484" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• HN 利用者に、5 年後のソフトウェア開発の姿を問いかけた投稿。<br>• 4 ポイント、コメント 5 件。<br>• 個々の意見はスレッドで確認できる。<br><br>AI によるコード生成が急速に広がる中で、開発者の役割や仕事の中身がどう変わるかは繰り返し議論されている。現場の開発者の実感が集まる場として参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">カリフォルニア州が AI の安全性をめぐり OpenAI を提訴 — (原文: California sues OpenAI for misleading public about AI safety)</td><td class="link-col"><a href="https://www.theregister.com/ai-and-ml/2026/11/16/california-sues-openai-for-misleading-public-about-ai-safety/5310297" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• The Register によると、カリフォルニア州が、AI の安全性について一般の人々を誤解させたとして OpenAI を訴えた。<br>• HN では 3 ポイント。<br>• 具体的な主張の内容は記事本文で確かめたい。<br><br>AI 企業の安全性に関する発信が法的な責任を問われる事例として注目される。州レベルでの AI 規制や訴訟の動きが続いており、業界全体の情報開示のあり方に影響する可能性がある。</td></tr>
+<tr><td class="num">8</td><td class="title">ClickHouse はメトリクス基盤を制したのか — (原文: Has ClickHouse Conquered Metrics?)</td><td class="link-col"><a href="https://www.oodle.ai/blog/has-clickhouse-conquered-metrics" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Oodle のブログで、メトリクスの保存・分析に ClickHouse を使う流れを考察した記事。<br>• HN では 3 ポイント。<br>• 結論や比較の詳細は記事本文で確認したい。<br><br>ClickHouse はログやトレースの基盤として採用が広がっており、メトリクスでも Prometheus 系の専用データベースと競合し始めている。オブザーバビリティ基盤を 1 つのデータベースに寄せられるかは、コストや運用面で関心が高いテーマといえる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">教師のためのAI入門（オープン教科書）</td><td class="link-col"><a href="https://yamazato.nuee.nagoya-u.ac.jp/PDF/AI-for-Teachers-an-Open-Textbook-v1.0.0.pdf" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 教員向けに AI の基礎をまとめたオープン教科書の PDF（v1.0.0）。<br>• 名古屋大学のサーバーで公開されている。<br>• はてなブックマークで 248 件と、この日最も多くのブックマークを集めた。<br><br>教育現場では生成 AI の扱い方が課題になっており、教員が体系的に学べる無料の教材への需要は高い。タグに「あとで読む」「学習」が多く付いており、教員以外にも入門資料として読まれているとみられる。</td></tr>
+<tr><td class="num">2</td><td class="title">ゲーム「NIKKE」経由でマルウェア感染、北海道の 2 自治体で委託先が認める</td><td class="link-col"><a href="https://www.itmedia.co.jp/news/article/2611/19/2000003351/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 北海道の 2 つの自治体で、業務の委託先がゲーム「NIKKE」を経由したマルウェア感染を認めたと ITmedia が報じた。<br>• はてなブックマークで 147 件を集め、「これはひどい」のタグも付いた。<br>• 感染の経路や影響の詳細は記事本文で確かめたい。<br><br>業務に使う端末で私的なソフトが使われていた可能性があり、委託先の端末管理のあり方が問われる。自治体の業務を外部に委ねる際の、セキュリティ要件の確認の重要性を示す事例といえる。</td></tr>
+<tr><td class="num">3</td><td class="title">相次ぐ OSS の脆弱性にはクラウド WAF の導入だけでも効果がある、Rootless コンテナも有効</td><td class="link-col"><a href="https://zenn.dev/kusuke/articles/98e178e6824cac" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OSS の脆弱性が相次ぐ中で、まずクラウド WAF を入れるだけでもかなり違うとする Zenn の記事。<br>• あわせて、権限を絞って動かす Rootless コンテナも勧めている。<br>• はてなブックマークで 92 件。<br><br>NGINX や PHP などで重大な脆弱性が続く中、すぐに更新できない場合の緩和策として、多層防御の考え方は実用的といえる。WAF で防げる攻撃の範囲には限りがあるため、更新の代わりではなく補助として位置づけたい。</td></tr>
+<tr><td class="num">4</td><td class="title">「ほぼ全人類が永久に失業する」Anthropic の研究者が AI の未来を予測</td><td class="link-col"><a href="https://ascii.jp/elem/000/004/452/4452982/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Anthropic の研究者による、AI が雇用に与える影響の予測を ASCII が紹介した。<br>• 見出しでは「ほぼ全人類が永久に失業する」という強い表現が使われている。<br>• はてなブックマークで 83 件。<br><br>AI 企業の内部の人物による踏み込んだ予測として関心を集めた。こうした予測には前提条件や時間軸が付くことが多いため、発言の文脈は元記事で確かめたい。</td></tr>
+<tr><td class="num">5</td><td class="title">複雑な立体や皮膚の上に直接作れるナノメッシュ皮膚センサを開発（東京大学）</td><td class="link-col"><a href="https://www.t.u-tokyo.ac.jp/press/pr2026-11-19-001" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 東京大学が、複雑な立体形状や皮膚の上に直接形成できるナノメッシュ状の皮膚センサの開発に成功したと発表した。<br>• 次世代のヘルスケアや、人と機械をつなぐインターフェースへの応用が期待されている。<br>• はてなブックマークで 77 件。<br><br>皮膚に貼っても違和感が少ないセンサは、長時間の生体計測に向くとして研究が進んでいる。作り方の自由度が上がることで、計測できる部位や用途が広がる可能性がある。</td></tr>
+<tr><td class="num">6</td><td class="title">書籍『ソフトウェアダークファクトリー』（技術評論社）</td><td class="link-col"><a href="https://gihyo.jp/book/2026/978-4-297-16073-9" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 技術評論社から刊行される書籍『ソフトウェアダークファクトリー』の紹介ページ。<br>• タグには AI、設計、ソフトウェアが付いている。<br>• はてなブックマークで 59 件。<br><br>「ダークファクトリー」は、照明が要らないほど無人化された工場を指す言葉で、AI がソフトウェア開発の大部分を担う姿を描いた内容とみられる。具体的な内容は目次で確認したい。</td></tr>
+<tr><td class="num">7</td><td class="title">IPA が NGINX の複数の脆弱性について注意喚起</td><td class="link-col"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261119.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• IPA が NGINX の複数の脆弱性（CVE-2026-123007、CVE-2026-123633 など）への対策を呼びかけた。<br>• はてなブックマークで 47 件。<br>• 同じ話題で「nginx」の読み方を取り上げた記事も話題になった。<br><br>NGINX は Web サーバーやリバースプロキシとして非常に広く使われており、影響範囲は大きい。対象のバージョンや回避策は IPA のページで確認し、早めの更新を検討したい。</td></tr>
+<tr><td class="num">8</td><td class="title">128GB メモリで 120B クラスの LLM が動く、マウスコンピューターのミニ PC「DAIV CX」</td><td class="link-col"><a href="https://www.itmedia.co.jp/pcuser/articles/2611/19/news047.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• マウスコンピューターの、手元でローカル AI を動かす用途向けのミニ PC「DAIV CX」を ITmedia が試した。<br>• 128GB のメモリにより、1200 億パラメータ級の LLM が動くとしている。<br>• はてなブックマークで 34 件。<br><br>大容量の統合メモリを持つ小型 PC で大きなモデルを動かす選択肢が、国内メーカーからも出てきた。推論の速さや価格が、クラウドの API と比べてどうかが選ぶうえでの判断材料になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">最近、コードを真面目に読まなくなった</td><td class="link-col"><a href="https://zenn.dev/hiromoo/articles/reading-less-preparing-more" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI がコードを書くようになり、コードを細かく読む時間が減ったという実感をつづった記事。<br>• URL からは「読む量を減らし、準備を増やす」という趣旨がうかがえる。<br>• Zenn で 66 件のいいねを集めた。<br><br>AI 時代の開発で、人間の時間を何に使うかは多くの開発者が向き合っているテーマ。コードを読む代わりに、事前の設計や確認の仕組みづくりに力を移すという考え方は、他の記事とも共通している。</td></tr>
+<tr><td class="num">2</td><td class="title">ローカル LLM 入門</td><td class="link-col"><a href="https://zenn.dev/port_inc/articles/ff974c7456f4db" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 手元の環境で LLM を動かすための入門記事。<br>• Zenn で 58 件のいいね。<br>• 具体的なツールやモデルは記事本文で確認したい。<br><br>小型 PC や大容量メモリの普及で、ローカル LLM を試す敷居は下がっている。データを外に出せない業務や、コストを抑えたい用途での選択肢として関心が高い。</td></tr>
+<tr><td class="num">3</td><td class="title">Claude Desktop 開発のすゝめ</td><td class="link-col"><a href="https://zenn.dev/peoplex_blog/articles/vscode-to-claude-desktop" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• VS Code から Claude Desktop 中心の開発に移ることを勧める記事。<br>• Zenn で 54 件のいいね。<br>• 実際の使い方は記事本文で確認したい。<br><br>エディタではなく AI との対話を中心に開発を進めるスタイルが広がりつつある。どのような作業が置き換えやすく、どこにエディタが残るのかを考える材料になる。</td></tr>
+<tr><td class="num">4</td><td class="title">QA の生産性を上げるための QA AI プラットフォームの構築</td><td class="link-col"><a href="https://zenn.dev/gatechnologies/articles/8bdea59269eb10" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• QA（品質保証）業務の生産性を高めるため、AI を使ったプラットフォームを社内で作った事例。<br>• Zenn で 50 件のいいね。<br>• 構成や効果の詳細は記事本文で確認したい。<br><br>開発の速度が AI で上がる一方、テストや品質確認が追いつかないという課題が各社で出ている。QA 側にも AI を入れる取り組みは、その差を埋める動きの 1 つといえる。</td></tr>
+<tr><td class="num">5</td><td class="title">tsrs の導入で oxlint の型を使った lint と型チェックが大幅に速くなった</td><td class="link-col"><a href="https://zenn.dev/dress_code/articles/6c179ae5129131" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• tsrs を導入したところ、oxlint の型情報を使った lint と型チェックが大幅に速くなったという報告。<br>• Zenn で 41 件のいいね。<br>• 同じく tsrs で Vue の型検査を速くした記事も出ている。<br><br>TypeScript の型チェックの遅さは大規模なプロジェクトで課題になりやすく、ネイティブ実装のツールによる高速化が相次いでいる。CI や開発時の待ち時間を減らす手段として注目される。</td></tr>
+<tr><td class="num">6</td><td class="title">CSS では書きにくいアニメーションを Web Animations API で書く</td><td class="link-col"><a href="https://zenn.dev/omu_tryangle/articles/b5817393592229" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CSS だけでは表現しにくいアニメーションを、Web Animations API で実装する方法を紹介した記事。<br>• Zenn で 28 件のいいね。<br>• 標準 API のため、ライブラリを追加せずに使える。<br><br>Web Animations API は JavaScript からアニメーションを細かく制御でき、主要なブラウザで使える。アニメーション用のライブラリに頼っていた処理を標準機能で置き換える選択肢になる。</td></tr>
+<tr><td class="num">7</td><td class="title">決済機能の実装は簡単だが、思ったより考えることが多かった</td><td class="link-col"><a href="https://zenn.dev/chot/articles/1297582ee96341" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 決済機能そのものの実装は容易だった一方で、検討すべき点が多かったという振り返り。<br>• Zenn で 15 件のいいね。<br>• 具体的な論点は記事本文で確認したい。<br><br>決済代行サービスの普及で組み込み自体は簡単になったが、返金、失敗時の処理、二重課金の防止など、運用まで含めると考えることは多い。これから決済を扱う開発者にとって参考になる。</td></tr>
+<tr><td class="num">8</td><td class="title">Odin に賭けたい人向けの Odin 言語入門ガイド</td><td class="link-col"><a href="https://zenn.dev/mizchi/articles/odin-introduction-guide" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• mizchi 氏による、プログラミング言語 Odin の入門ガイド。<br>• Zenn で 13 件のいいね。<br>• 内容の詳細は記事本文で確認したい。<br><br>Odin は C の代わりを目指す、シンプルさを重視したシステムプログラミング言語。Zig や Rust と並ぶ選択肢として、ゲーム開発などの分野で関心を集めている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">部下が「Claude っぽいスライド」ばかり出してくる上司に勧めたいもの</td><td class="link-col"><a href="https://qiita.com/nuco_d/items/b279477cbcdbe5921abd" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI で作った、似た見た目のスライドばかりが提出される状況への対策を紹介した記事。<br>• Qiita で 283 件と、この日のほかの記事を大きく上回る反応を集めた。<br>• 具体的な手法は記事本文で確認したい。<br><br>生成 AI で資料を作ることが一般的になり、見た目が画一的になることへの不満も出ている。AI を使いながら、どう個性や意図を出すかへの関心の高さがうかがえる。</td></tr>
+<tr><td class="num">2</td><td class="title">人間がボトルネックになった時代の AI エージェント設計</td><td class="link-col"><a href="https://qiita.com/Syoitu/items/5bb47c01a8513e52d1b5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントの処理が速くなり、人間の確認がボトルネックになったという前提で、設計の考え方を論じた記事。<br>• タグには Mastra、AWS、Claude Code が付いている。<br>• Qiita で 17 件。<br><br>エージェントが多くの作業をこなせるようになると、人の承認や判断の待ちが全体の速度を決めるようになる。どこで人を介在させるかの設計は、実運用で重要な論点になっている。</td></tr>
+<tr><td class="num">3</td><td class="title">GPT-6.2 Astra と Fable 5.2 で 3D モデル生成を比べた</td><td class="link-col"><a href="https://qiita.com/7mpy/items/6a9ce87b576063f68d71" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OpenAI と Anthropic の最新モデルに 3D モデルを生成させて比べた記事。<br>• Qiita で 11 件。<br>• 比較の結果は記事本文で確認したい。<br><br>コード生成を通じた 3D モデルの作成は、モデルの空間的な理解力を見る題材として使われることが多い。同じお題でモデルを比べる記事は、実際の使い分けを考える手がかりになる。</td></tr>
+<tr><td class="num">4</td><td class="title">APEXlang で Vibe Coding、都バスの運行を可視化</td><td class="link-col"><a href="https://qiita.com/araidon/items/a18e9556db3297b7f790" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Oracle の APEXlang を使い、Autonomous AI Database の機能を組み合わせて都バスの運行を可視化した記事。<br>• AI との対話で開発を進める「Vibe Coding」で作ったとしている。<br>• Qiita で 11 件。<br><br>公共交通のオープンデータを題材に、データベースの機能とローコード開発を組み合わせた実践例。クラウドベンダーが自社の開発基盤に AI 支援を取り込む動きの一例といえる。</td></tr>
+<tr><td class="num">5</td><td class="title">Lodash を使わずに標準 JavaScript で置き換えるチートシート</td><td class="link-col"><a href="https://qiita.com/figueiredoluiz/items/c47f5f20a9f4118054f1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Lodash の関数を、標準の JavaScript でどう書き換えられるかをまとめたチートシート。<br>• Qiita で 10 件。<br>• リファクタリングでの利用を想定している。<br><br>ECMAScript の機能が充実し、かつて Lodash が必要だった処理の多くは標準機能で書けるようになった。依存関係を減らしてバンドルを小さくしたい場合の参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">マルチテナント RAG の検索で他社の文書が混ざらないかを pytest で自動検査する</td><td class="link-col"><a href="https://qiita.com/takumi_engineer/items/461472ef70735d1196be" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 複数の企業で共有する RAG システムで、他社の文書が検索結果に混ざらないことを pytest で確かめる方法を解説した記事。<br>• PostgreSQL を使った構成を想定している。<br>• Qiita で 9 件。<br><br>マルチテナントの RAG では、テナント間でのデータ漏えいが重大な事故につながる。検索の分離を自動テストで継続的に確かめる考え方は、実運用で役立つ。</td></tr>
+<tr><td class="num">7</td><td class="title">AWS の公式エミュレータで S3 と Lambda を動かしてみた</td><td class="link-col"><a href="https://qiita.com/N-Kyo/items/a111d174a751506790e2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS の公式エミュレータを使い、S3 と Lambda を手元の WSL 環境で動かした記事。<br>• クラウドのリソースを消し忘れて課金される心配を減らせる点を挙げている。<br>• Qiita で 9 件。<br><br>手元で AWS のサービスを模擬できれば、学習や開発の試行錯誤を費用を気にせず行える。これまでは LocalStack などのサードパーティ製ツールが使われてきたが、公式の選択肢として注目される。</td></tr>
+<tr><td class="num">8</td><td class="title">RAG の「分からない」という回答と参照元を自動で検証する Python スクリプトの作り方</td><td class="link-col"><a href="https://qiita.com/takumi_engineer/items/8287c5fb775d834086a4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• RAG が「分からない」と正しく答えるか、参照元を正しく示すかを自動で評価するスクリプトの作り方を解説した記事。<br>• Python で実装している。<br>• Qiita で 9 件。<br><br>RAG の品質評価では、答えられない質問に無理に答えないことや、根拠を正しく示すことが重要になる。評価を自動化しておけば、プロンプトや検索の設定を変えたときの影響を確かめやすくなる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-20 06:32 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
