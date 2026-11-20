@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-21</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-21</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-21</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>国内で、委託先を経由した情報漏えいの発表が相次いだ。三井住友銀行は最大 1400 万件の漏えいの可能性を発表し、丸井グループも委託先への不正アクセスで顧客情報が延べ 1733 万件漏えいしたと公表した。デジタル庁も政府の基幹システムへの不正アクセスを発表している。</li><li>Thinking Machines が発表した「Inkling 2 Mini」が Hacker News で 256 ポイントと、この日最も注目を集めた。Hugging Face のブログでは、手元の環境でも高い性能を出せるモデルとして紹介されている。</li><li>AI がリーマン予想を証明したとする主張が話題になった。Scott Aaronson 氏のブログ記事が HN で 77 ポイントを集めたほか、Anthropic の研究者が「Claude が証明を見つけた」と主張したとの報道も出ている。ただし、検証はまだこれからとみられる。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">AI エージェント向けの知識基盤 Firecrawl — (原文: firecrawl/firecrawl)</td><td class="link-col"><a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Web の検索・スクレイピングと 550 以上のデータ提供元を、1 つの API で扱えるようにするサービス。<br>• Web サイトを整った Markdown に変換し、MCP サーバーとして AI エージェントに接続できる。<br>• 手元で 1 つのバイナリとして動く「Firecrawl Local」、セルフホスト用サーバー、各種 SDK のコードをこのリポジトリで公開している。<br><br>エージェントが Web 上の情報を集める際の前処理を引き受けるツールとして利用が広がっている。クラウド版だけでなくローカルやセルフホストでも動かせるため、データを外部に出したくない用途でも選びやすい。</td></tr>
+<tr><td class="num">2</td><td class="title">NGINX 公式のオープンソースリポジトリ — (原文: nginx/nginx)</td><td class="link-col"><a href="https://github.com/nginx/nginx" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Web サーバー、ロードバランサー、リバースプロキシ、API ゲートウェイ、コンテンツキャッシュとして使われる NGINX の公式リポジトリ。<br>• 2 条項 BSD に近いライセンスで公開されている。<br>• 商用版やサポートは F5 が提供している。<br><br>前日に IPA が NGINX の複数の脆弱性について注意を呼びかけたこともあり、改めて関心を集めたとみられる。利用中のバージョンが修正の対象かどうかを確認しておきたい。</td></tr>
+<tr><td class="num">3</td><td class="title">AI エージェントにブランドに合った図を描かせるスキル — (原文: cathrynlavery/diagram-design)</td><td class="link-col"><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code、Codex、GitHub Copilot、Cursor などのエージェントから使える、図を描くためのスキル。<br>• 図を 1 つの HTML + SVG ファイルとして出力し、51 種類の図に対応するとしている。<br>• 「影なし、Mermaid のような雑な図にしない」ことを掲げ、自社ブランドに合わせた見た目にもできる。<br><br>エージェントに資料や図を作らせる場面が増える中で、見た目の品質を上げるための「スキル」を配布する動きが広がっている。`npx skills add` で導入でき、複数のエージェントで使い回せる点も特徴。</td></tr>
+<tr><td class="num">4</td><td class="title">App Store・Google Play の審査落ちを防ぐガイド — (原文: mjmirza/app-store-compliance)</td><td class="link-col"><a href="https://github.com/mjmirza/app-store-compliance" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• App Store と Google Play でよくあるリジェクトを避けるための、公開されたガイドと提出前のチェック機能。<br>• 117 のリジェクト事例とその対処、プライバシーマニフェストやデータセーフティの確認項目をまとめている。<br>• EU AI 法、DSA、COPPA などの期限 95 件を追跡し、AI コーディングエージェント向けのスキルも用意している。<br><br>アプリの審査基準や各国の規制は頻繁に変わり、個人や小さなチームでは追いきれないことが多い。AI でアプリを作る人が増える中で、提出前の確認をエージェントに任せられる点が注目されたとみられる。</td></tr>
+<tr><td class="num">5</td><td class="title">CI/CD の失敗原因を調べて修正するオープンソースエージェント OpenSRE — (原文: Tracer-Cloud/opensre)</td><td class="link-col"><a href="https://github.com/Tracer-Cloud/opensre" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 失敗した CI の実行結果を読み、原因を突き止めて修正案をプッシュする CLI エージェント。<br>• セルフホストで動き、自分で選んだモデルを使える。<br>• 現在はパブリックアルファで、API や連携機能はまだ安定していないとしている。<br><br>「CI は壊れたことは教えてくれるが、なぜ壊れたかは教えてくれない」という課題に取り組むプロジェクト。修正はレビューを前提としており、人が最終判断する形になっている。アルファ版のため、本番の運用に組み込む前に十分な検証が必要になる。</td></tr>
+<tr><td class="num">6</td><td class="title">Notion と Miro の代わりを目指すナレッジベース AFFiNE — (原文: toeverything/AFFiNE)</td><td class="link-col"><a href="https://github.com/toeverything/AFFiNE" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 文書、キャンバス、表を 1 つにまとめたナレッジベース。<br>• プライバシーを重視したローカルファーストの設計で、オープンソースとして公開されている。<br>• Notion や Miro の代わりとして使えることをうたう。<br><br>文書作成とホワイトボードを行き来できる点が特徴。データを手元に置けるツールへの需要は根強く、セルフホストできるオープンソースの選択肢として注目が続いている。</td></tr>
+<tr><td class="num">7</td><td class="title">多機能ダウンローダー Ghost-Downloader-3 — (原文: XiaoYouChR/Ghost-Downloader-3)</td><td class="link-col"><a href="https://github.com/XiaoYouChR/Ghost-Downloader-3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「必要なダウンローダーはこれだけ」をうたうダウンロードツール。<br>• 中国語と英語の README を用意している。<br>• 機能の詳細は README や公式サイトで確認したい。<br><br>中国の開発者によるプロジェクトで、トレンド入りした。README の冒頭にはスポンサーの広告が載っている。導入する場合は、配布元や権限を確かめたうえで使いたい。</td></tr>
+<tr><td class="num">8</td><td class="title">長い動画を短い動画に自動で切り出す AI ツール AutoClip — (原文: zhouxiaoka/autoclip)</td><td class="link-col"><a href="https://github.com/zhouxiaoka/autoclip" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ポッドキャストやインタビュー、講義などの長い動画から、短い動画を自動で切り出すオープンソースのデスクトップツール。<br>• 字幕、サムネイル、投稿用の文章もあわせて生成する。<br>• TikTok、Reels、YouTube Shorts、抖音、小紅書などの各プラットフォームに合わせた出力に対応する。<br><br>編集とレンダリングは手元の PC で行い、ソフト自体は無料、クラウドのモデルは使った分だけ課金される仕組み。デスクトップ版、CLI、MCP が同時に更新されており、エージェントから動画編集を呼び出す使い方も想定されている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Thinking Machines が「Inkling 2 Mini」を発表 — (原文: Inkling 2 Mini)</td><td class="link-col"><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Thinking Machines が新しいモデル「Inkling 2 Mini」を発表した。<br>• HN ではこの日最多の 256 ポイント、コメント 26 件を集めた。<br>• Hugging Face のブログでも「手元の環境で最先端の性能」として紹介されている。<br><br>小型でも高い性能を出せるモデルへの関心は高く、手元の環境で動かせるかどうかが注目点になっている。性能や必要なハードウェアなどの詳細は発表ページで確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">Nvidia の会計処理を SEC が調査と報道 — (原文: Nvidia accounting under SEC investigation, sources say)</td><td class="link-col"><a href="https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 関係者の話として、米証券取引委員会（SEC）が Nvidia の会計処理を調べていると報じられた。<br>• 報道の見出しでは、Nvidia 株の下落が続いていることにも触れている。<br>• HN では 87 ポイント、コメント 22 件。<br><br>AI 向け半導体の需要を背景に急成長してきた企業だけに、市場への影響は大きい。同じ日には Anthropic の IPO 後の株価低迷を受けて AI 関連株が売られたとの報道もあり、AI 銘柄への警戒感が強まっている。調査の中身は続報を待ちたい。</td></tr>
+<tr><td class="num">3</td><td class="title">「確率的オウム」がリーマン予想を証明したらしい — (原文: The stochastic parrots have apparently proved the Riemann Hypothesis)</td><td class="link-col"><a href="https://scottaaronson.blog/?p=10344" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 計算機科学者 Scott Aaronson 氏のブログ記事。<br>• タイトルは、LLM を「確率的オウム」と呼ぶ批判を皮肉る形で、AI がリーマン予想を証明したとされる件を取り上げている。<br>• HN では 77 ポイント、コメント 38 件と議論が活発だった。<br><br>別の投稿では、Anthropic の研究者が「Claude が証明を見つけた」と主張したとの報道も共有されている。リーマン予想は数学の最重要未解決問題の 1 つであり、証明が正しいかどうかは専門家による検証を待つ必要がある。</td></tr>
+<tr><td class="num">4</td><td class="title">Show HN: Devin のオープンソース代替 OpenComputer — (原文: Show HN: OpenComputer – an open source alternative to Devin)</td><td class="link-col"><a href="https://github.com/diggerhq/opencomputer" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 自律的に開発作業を行う AI エージェント「Devin」の代わりを目指すオープンソースのプロジェクト。<br>• diggerhq が GitHub で公開している。<br>• HN では 17 ポイント、コメント 4 件。<br><br>コーディングエージェントは商用サービスが先行してきたが、オープンソースで同じような体験を作る試みが増えている。自分の環境で動かせる点や、使うモデルを選べるかどうかが判断材料になる。</td></tr>
+<tr><td class="num">5</td><td class="title">OpenAI、敵対的な蒸留への対策を説明 — (原文: Combatting Adversarial Distillation)</td><td class="link-col"><a href="https://openai.com/index/combatting-adversarial-distillation/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• OpenAI が、自社モデルの出力を使って他のモデルを無断で学習させる「蒸留」への対策について記事を公開した。<br>• HN では 15 ポイント、コメント 13 件。<br>• 具体的な対策の内容は記事本文で確認したい。<br><br>大規模モデルの出力を集めて小さなモデルを学習させる手法は、性能を安く再現する手段として広く知られている。モデル提供者にとっては知的財産と安全性の両面で課題となっており、利用規約や技術的な検知の強化が進んでいる。</td></tr>
+<tr><td class="num">6</td><td class="title">Ford、Honda、Stellantis、VW がニュージャージー州の修理法の差し止めを求め提訴 — (原文: Ford, Honda, Stellantis, VW sue New Jersey to block vehicle repair law)</td><td class="link-col"><a href="https://www.reuters.com/world/ford-honda-stellantis-vw-sue-new-jersey-block-vehicle-repair-law-2026-11-20/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ロイターによると、自動車メーカー 4 社がニュージャージー州の車両修理に関する法律の差し止めを求めて州を訴えた。<br>• HN では 10 ポイント。<br>• 法律の具体的な内容は記事本文で確かめたい。<br><br>車両の診断データを独立系の修理業者にも開放させる「修理する権利」をめぐる争いは、米国で各州に広がっている。メーカー側はセキュリティや安全性を理由に挙げることが多く、ソフトウェア化が進む車のデータを誰が扱えるかが焦点になっている。</td></tr>
+<tr><td class="num">7</td><td class="title">トランプ大統領、海外に AI データセンターを建てる米企業への制裁を示唆 — (原文: Trump threatens ban on US firms building AI data centres overseas)</td><td class="link-col"><a href="https://www.bbc.co.uk/news/articles/cmde1lw9y54ko" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• BBC によると、トランプ大統領が、米企業が海外に AI データセンターを建てることを禁じる可能性に言及した。<br>• WSJ も、米国外にデータセンターを建てる企業に罰則を科す考えを示したと報じた。<br>• HN では関連する投稿がそれぞれ 4〜5 ポイントを集めた。<br><br>大手クラウド各社は電力や土地を求めて海外にもデータセンターを広げており、実際に規制されれば投資計画への影響は大きい。同じ日にはインドでの Google のデータセンター建設を取り上げた記事も共有されている。具体的な政策になるかは今後の動きを見る必要がある。</td></tr>
+<tr><td class="num">8</td><td class="title">Anthropic の IPO 不振が AI 関連株の大幅下落に拍車 — (原文: Anthropic's IPO Bust Deepens $4T AI Wipeout on Wall Street)</td><td class="link-col"><a href="https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• WSJ によると、Anthropic の IPO 後の不振が、AI 関連株の総額 4 兆ドル規模の下落をさらに深めた。<br>• Bloomberg も、AI 取引への懸念と Anthropic の IPO の余波でハイテク株が売られたと報じた。<br>• HN ではそれぞれ 3 ポイント。<br><br>Nvidia への SEC 調査の報道とも重なり、AI 関連銘柄への市場の見方が厳しくなっている。AI への巨額投資が収益に結びつくかという疑問が、株価に表れ始めているとみられる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">「あと 10 年もたないかもしれない」まつもとゆきひろ氏が危惧する OSS 文化の消滅</td><td class="link-col"><a href="https://type.jp/et/feature/32219/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Ruby の生みの親であるまつもとゆきひろ氏が、OSS 文化の先行きへの懸念を語ったエンジニア type のインタビュー。<br>• はてなブックマークで 451 件と、この日最も多くのブックマークを集めた。<br>• タグには OSS、AI、セキュリティ、文化などが付いている。<br><br>AI によるコード生成の広がりや、OSS を狙ったセキュリティ上の脅威などが、OSS の担い手や文化に影響しているという問題意識が背景にあるとみられる。具体的な発言の内容は記事本文で確かめたい。</td></tr>
+<tr><td class="num">2</td><td class="title">三井住友銀行で情報漏えい、最大 1400 万件</td><td class="link-col"><a href="https://www.47news.jp/15262461.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 三井住友銀行で、最大 1400 万件の情報が漏えいした可能性があると 47NEWS が速報した。<br>• 同行は「業務委託先への不正アクセスによる情報漏えい」として発表している。<br>• はてなブックマークで 251 件。<br><br>同じ日には、丸井グループも委託先への不正アクセスで顧客情報が延べ 1733 万件漏えいしたと公表し、プレイドもマーケティングツール「KARTE」への不正アクセスの調査結果を公表した。委託先を経由した被害が続いており、委託元の管理責任も問われそうだ。</td></tr>
+<tr><td class="num">3</td><td class="title">はてなエンジニアの自作 RSS リーダー紹介 2026</td><td class="link-col"><a href="https://developer.hatenastaff.com/entry/2026/11/20/162322" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• はてなのエンジニアが、それぞれ自作した RSS リーダーを紹介する Hatena Developer Blog の記事。<br>• はてなブックマークで 187 件。<br>• タグには RSS、AI、開発が付いている。<br><br>AI を使えば自分専用のツールを短時間で作れるようになり、こうした「自作ツール」の紹介が増えている。情報収集の方法を自分で設計するという考え方は、アルゴリズムによるおすすめが中心の今、改めて関心を集めている。</td></tr>
+<tr><td class="num">4</td><td class="title">「httpS://」でも平文で送信、PHP に約 20 年潜んでいた脆弱性が修正</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/serial/yajiuma/2158241.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「https://」を指定しても暗号化されずに平文で送信されてしまう PHP の脆弱性が修正されたと、窓の杜が伝えた。<br>• 約 20 年にわたって潜んでいたとされ、原因はシンプルなものだったという。<br>• はてなブックマークで 185 件。<br><br>PHP では重大な脆弱性への修正版の公開が続いている。HTTPS を指定していれば安全だという前提が崩れる問題のため、影響を受ける機能を使っている場合は修正版への更新を確認したい。</td></tr>
+<tr><td class="num">5</td><td class="title">政府の基幹システムに不正アクセス、内部資料流出の可能性とデジタル庁が発表</td><td class="link-col"><a href="https://www.asahi.com/articles/ASVCN30WCVCNULFA01NM.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• デジタル庁が、政府の基幹システムへの不正アクセスを発表したと朝日新聞が報じた。<br>• 内部資料が流出した可能性がある。<br>• はてなブックマークで 178 件。<br><br>民間企業での大規模な漏えいが続く中、政府のシステムでも被害が明らかになった。流出した情報の範囲や原因は、今後の発表で確かめる必要がある。</td></tr>
+<tr><td class="num">6</td><td class="title">「Microsoft To Do」が 2027 年 6 月で廃止へ</td><td class="link-col"><a href="https://forest.watch.impress.co.jp/docs/news/2158040.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• タスク管理アプリ「Microsoft To Do」が 2027 年 6 月で廃止されると窓の杜が伝えた。<br>• 個人ユーザーは別のアプリへの乗り換えが必要になる。<br>• 法人向けには「Planner」が後継となる。<br><br>Wunderlist の買収を元にしたアプリで、根強い利用者がいる。1 年半ほどの猶予はあるものの、タスクのデータを移す先を早めに検討しておきたい。</td></tr>
+<tr><td class="num">7</td><td class="title">NAND フラッシュがついに値下がりへ、2027 年第 1 四半期に最大 5% 下落の予測</td><td class="link-col"><a href="https://pc.watch.impress.co.jp/docs/news/2158129.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NAND フラッシュメモリの価格が、2027 年第 1 四半期に最大 5% 下がるとの予測を PC Watch が伝えた。<br>• はてなブックマークで 98 件。<br>• 同じ日には、キオクシア株の下落が止まらないとの日経の記事も話題になった。<br><br>AI 需要でメモリ価格が上がり続けてきたが、流れが変わる兆しとして注目された。SSD などの価格が下がれば消費者には朗報だが、メモリメーカーにとっては業績への影響が懸念される。</td></tr>
+<tr><td class="num">8</td><td class="title">POS 端末 700 台超がマルウェアに感染、カード情報 100 万件超が流出</td><td class="link-col"><a href="https://news.mynavi.jp/techplus/article/20261120-5367457/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 700 台を超える POS 端末がマルウェアに感染し、100 万件を超えるカード情報が流出したとマイナビニュースが報じた。<br>• Windows の脆弱性が悪用されたとしている。<br>• はてなブックマークで 65 件。<br><br>POS 端末は長期間更新されないまま使われることが多く、攻撃の対象になりやすい。店舗の端末も一般の PC と同じく、更新の管理が欠かせないことを示す事例といえる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">おい、Mutation Test をやれ ― テスト品質を測るために</td><td class="link-col"><a href="https://zenn.dev/mizchi/articles/mutation-test-quality" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• mizchi 氏による、ミューテーションテストでテストの品質を測ることを勧める記事。<br>• Zenn で 436 件のいいねと、この日最も多くの反応を集めた。<br>• 具体的な手順やツールは記事本文で確認したい。<br><br>ミューテーションテストは、コードをわざと少し壊してテストがそれを見つけられるかを確かめる手法。AI がテストを大量に書くようになった今、「テストがあること」ではなく「テストが役に立つこと」を確かめる手段として関心が高まっている。</td></tr>
+<tr><td class="num">2</td><td class="title">毎月 6000 の AI エージェントを捌くためにキーボードを捨てた話</td><td class="link-col"><a href="https://zenn.dev/andoshin11/articles/ba68b39ef9a8ce" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 毎月 6000 もの AI エージェントを動かすために、キーボード中心の作業をやめたという体験記。<br>• Zenn で 177 件のいいね。<br>• 具体的な方法は記事本文で確認したい。<br><br>エージェントを並列で大量に動かすようになると、人間の役割は指示と確認に移っていく。音声入力など、入力方法そのものを見直す動きの一例といえる。</td></tr>
+<tr><td class="num">3</td><td class="title">GitHub Issue に Artifact として HTML と Markdown を添付できるようになった</td><td class="link-col"><a href="https://zenn.dev/kesin11/articles/20261114_github_issue_artifact" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub の Issue に、HTML や Markdown を「Artifact」として添付できるようになったことを紹介する記事。<br>• Zenn で 84 件のいいね。<br>• 使い方の詳細は記事本文で確認したい。<br><br>AI エージェントが作ったレポートや図を Issue に直接残せるようになれば、作業の記録や共有がしやすくなる。エージェントと人が Issue を通じて協働する流れを後押しする機能といえる。</td></tr>
+<tr><td class="num">4</td><td class="title">自分の代わりに動くエージェントへ ― Claude Code と Codex で作る自律改善ハーネス</td><td class="link-col"><a href="https://zenn.dev/nttdata_tech/articles/9562962cc181a1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NTT データの技術ブログで、Claude Code と Codex を組み合わせて自律的に改善を回す仕組みを作った記事。<br>• Zenn で 63 件のいいね。<br>• はてなブックマークでも 275 件を集めた。<br><br>エージェントに作業を任せるだけでなく、結果を評価して次の改善につなげる「ハーネス」を作る取り組みが広がっている。複数のエージェントを組み合わせて互いの出力を確認させる構成は、品質を保つ工夫として参考になる。</td></tr>
+<tr><td class="num">5</td><td class="title">CSS では書きにくいアニメーションを Web Animations API で書く</td><td class="link-col"><a href="https://zenn.dev/omu_tryangle/articles/b5817393592229" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CSS だけでは書きにくいアニメーションを、Web Animations API で実装する方法を紹介する記事。<br>• Zenn で 41 件のいいね。<br>• 具体的な例は記事本文で確認したい。<br><br>Web Animations API は JavaScript からアニメーションを細かく制御できる標準の API で、主要ブラウザで使える。ライブラリに頼らずに複雑な動きを実装したい場合の選択肢になる。</td></tr>
+<tr><td class="num">6</td><td class="title">正しい UI デザインと、意図のある UI デザイン</td><td class="link-col"><a href="https://zenn.dev/praha/articles/08568310684aa3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• UI デザインで「正しさ」と「意図」の違いを考察した記事。<br>• Zenn で 23 件のいいね。<br>• 考え方の詳細は記事本文で確認したい。<br><br>ガイドラインに沿った「正しい」デザインだけでは、使う人に何を伝えたいのかが伝わらないこともある。AI が一定水準の UI を作れるようになった今、デザインの意図をどう込めるかは改めて問われるテーマといえる。</td></tr>
+<tr><td class="num">7</td><td class="title">AI が爆速で開発する時代の、自動テストとの向き合い方</td><td class="link-col"><a href="https://zenn.dev/daiaoki/articles/webterm-ai-era-testing" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI による開発が速くなる中で、自動テストとどう付き合うかを考えた記事。<br>• Zenn で 12 件のいいね。<br>• 具体的な方針は記事本文で確認したい。<br><br>AI がコードを量産するほど、その正しさを確かめる自動テストの重要性は増している。ミューテーションテストの記事と同様に、テストの量だけでなく質に目を向ける流れが見られる。</td></tr>
+<tr><td class="num">8</td><td class="title">TypeScript 7.1 の Content Mapper で型の生成コマンドをなくす</td><td class="link-col"><a href="https://zenn.dev/toiroakr/articles/typescript-content-mapper-codegen" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• TypeScript 7.1 の「Content Mapper」を使い、型を生成するためのコマンドを不要にする方法を紹介する記事。<br>• Zenn で 12 件のいいね。<br>• 設定方法は記事本文で確認したい。<br><br>これまでは外部ファイルから型を得るために、コード生成の手順を別に用意するのが一般的だった。それを TypeScript 自体で扱えるようになれば、ビルドの手順を簡単にできる可能性がある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Microsoft 365 Copilot が OneDrive のファイルを直接編集できるように</td><td class="link-col"><a href="https://qiita.com/yuyanz/items/c3bb4801c105d96fa79d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft 365 Copilot が、OneDrive 上のファイルを直接編集できるようになっていたと紹介する記事。<br>• GitHub Copilot のような使い方ができるとしている。<br>• Qiita で 23 件のいいね。<br><br>これまでは Copilot の提案を人が反映する形が中心だったが、ファイルを直接書き換えられることで作業の流れが変わる。業務文書に AI が直接手を入れる場合は、変更履歴の確認など運用上の工夫も必要になる。</td></tr>
+<tr><td class="num">2</td><td class="title">紙派だった私が、技術書を電子で買うようになった理由</td><td class="link-col"><a href="https://qiita.com/Dingu-suke/items/7d474c38cd597869049e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 紙の本を好んでいた筆者が、AI と組み合わせるために技術書を電子版で買うようになった体験記。<br>• PDF を AI に読ませて学習に役立てる使い方を紹介している。<br>• Qiita で 23 件のいいね。<br><br>AI に質問しながら本を読めることが、電子書籍を選ぶ新しい理由になっている。ただし、書籍の内容を AI サービスに渡す際は、各サービスのデータの扱いや出版社の利用条件を確認しておきたい。</td></tr>
+<tr><td class="num">3</td><td class="title">Muse の VM は約 2 時間で入れ替わる ― 実測と対策</td><td class="link-col"><a href="https://qiita.com/mryo0826/items/c05efd7ac228fe85ab44" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Meta の「Muse」で使われる VM が、約 2 時間で入れ替わることを実測した記事。<br>• 入れ替わりへの対策もあわせて紹介している。<br>• Qiita で 18 件のいいね。<br><br>エージェントが作業する環境が短時間で作り直される場合、途中の状態をどう残すかが課題になる。Zenn でも Muse の内部構造を調べた記事が出ており、新しいサービスの挙動を利用者が検証する動きが続いている。</td></tr>
+<tr><td class="num">4</td><td class="title">AWS Direct Connect の片系を落とすと、どれくらいで切り替わるのか実験</td><td class="link-col"><a href="https://qiita.com/sh_fukatsu/items/5a069f9fce99a86efb05" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AWS Direct Connect の 2 本の回線のうち 1 本を止めたとき、切り替えにかかる時間を実験で確かめた記事。<br>• 行きと戻りの通信がどの回線を通るかも調べている。<br>• Qiita で 16 件のいいね。<br><br>冗長構成は組んでいても、実際に障害が起きたときの挙動を確かめる機会は少ない。BGP による経路の切り替えを実測した記録は、ネットワークの設計や障害対応の準備に役立つ。</td></tr>
+<tr><td class="num">5</td><td class="title">Azure AI Search が Foundry IQ に名称変更、2 種類のナレッジグラフ機能を搭載（Ignite 2026 速報）</td><td class="link-col"><a href="https://qiita.com/nohanaga/items/21f3f3a1d2ecb14262b6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft Ignite 2026 で、Azure AI Search が「Foundry IQ」に名称を変えたことを伝える速報記事。<br>• 2 種類のナレッジグラフ機能が加わったとしている。<br>• Qiita で 8 件のいいね。<br><br>検索サービスを AI エージェント向けの知識基盤として位置づけ直す動きといえる。GraphRAG のようにグラフ構造を使った検索で、回答の精度を上げることを狙っているとみられる。</td></tr>
+<tr><td class="num">6</td><td class="title">企業で AI の効果はどこに出るのか、成果と失敗のパターンを整理</td><td class="link-col"><a href="https://qiita.com/ma333/items/db15bd2e5cfd0c3fc056" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 企業で AI を導入したときに、どこで効果が出てどこで失敗しやすいかを整理した記事。<br>• Qiita で 8 件のいいね。<br>• タグには DX、情シスが付いている。<br><br>生成 AI の導入が一巡し、実際の効果を問われる段階に入った企業は多い。成果と失敗のパターンを整理することは、次の投資判断や社内展開の参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">Gemini 4 Hydrogen を Agent Studio で試す手順</td><td class="link-col"><a href="https://qiita.com/N-Kyo/items/80ac96fd59b08b1a879a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google Cloud の Agent Studio で「Gemini 4 Hydrogen」を試す手順を紹介する記事。<br>• 「とりあえず一番上のモデル」を選ぶのではなく、用途に応じて選ぶことを勧めている。<br>• Qiita で 7 件のいいね。<br><br>モデルの選択肢が増える中で、性能・速度・費用のバランスを考えて使い分けることが重要になっている。新卒の筆者による手順の記録で、入門者にも取り組みやすい内容とみられる。</td></tr>
+<tr><td class="num">8</td><td class="title">C# 15 の union 型を ILSpy で覗いてみた</td><td class="link-col"><a href="https://qiita.com/jun1s/items/758db6cb12f1a83a8bf6" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• C# 15 で導入される union 型が、内部でどのように実装されているかを ILSpy で調べた記事。<br>• Qiita で 5 件のいいね。<br>• 具体的な実装の詳細は記事本文で確認したい。<br><br>union 型は、複数の型のどれか 1 つを表す仕組みで、長く要望されてきた機能。コンパイル後のコードを確かめることで、性能や他の言語との相互運用への影響を理解しやすくなる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-21 06:33 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
