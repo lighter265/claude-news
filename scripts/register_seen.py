@@ -77,7 +77,7 @@ def main():
     init_db(conn)
 
     raw_index = load_raw_index()
-    # 通常ニュースに加え、feed-local-llm.md のReddit/GitHub記事も登録する。
+    # 通常ニュースに加え、feed-local-llm.md の GitHub 記事も登録する。
     # 同一URLが両方のフィードに出る場合は1回だけ更新する。
     urls = list(dict.fromkeys(
         url

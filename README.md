@@ -2,7 +2,7 @@
 
 毎朝の技術ニュースを自動取得・AI 要約し、静的サイト(`docs/`)として公開する仕組み。
 
-7 ソース(GitHub Trending / Hacker News / InfoQ Japan / はてなブックマーク (tech) / Zenn / Qiita / Reddit r/LocalLLaMA)を Linux サーバーで取得し、Claude CLI が
+6 ソース(GitHub Trending / Hacker News / InfoQ Japan / はてなブックマーク (tech) / Zenn / Qiita)を Linux サーバーで取得し、Claude CLI が
 要約付きの `feed.md` とローカルLLM専用の `feed-local-llm.md` を生成する。
 
 ## アーキテクチャ
@@ -11,7 +11,7 @@
 [Linux サーバー: cron]  毎朝 5:00 JST (= 20:00 UTC 前日)
   1. bash execute.sh
   2. git pull --rebase origin master
-  3. python3 scripts/fetch_all.py       → raw/*.json 生成（RedditはAtom RSS）
+  3. python3 scripts/fetch_all.py       → raw/*.json 生成
   4. claude --model opus -p <要約指示>  → feed.md / feed-local-llm.md 生成
   5. python3 scripts/generate_html.py   → docs/pages/YYYY-MM-DD.html 生成
   6. git add feed*.md docs/ && commit && push  → master に履歴保存
@@ -27,23 +27,13 @@ Claude CLI は要約生成だけを担当し、fetch・Git 操作・HTML 生成�
 | `execute.sh` | fetch → Claude 要約 → HTML 生成 → commit/push を実行 |
 | `feed-format.md` | Claude CLI に渡す `feed.md` の出力形式と要約ルール |
 | `scripts/fetch_*.py` | 各ソースの取得スクリプト(標準ライブラリのみ) |
-| `scripts/fetch_all.py` | 7 ソースを並列取得。1 ソース失敗でも継続 |
+| `scripts/fetch_all.py` | 6 ソースを並列取得。1 ソース失敗でも継続 |
 | `scripts/common.py` | 取得共通ヘルパ |
 | `scripts/generate_html.py` | feed.md / feed-local-llm.md から日別ページ `docs/pages/*.html` を生成 |
 | `raw/` | 生データ出力先(git 管理外) |
 | `feed.md` | 要約結果(`execute.sh` が commit/push) |
-| `feed-local-llm.md` | GitHub Trending抽出とReddit r/LocalLLaMAを別セクションで要約 |
+| `feed-local-llm.md` | GitHub Trending のローカルLLM関連記事を全数要約 |
 | `archive/windows/` | 旧 Windows 向けスクリプト(参照用) |
-
-### Reddit r/LocalLLaMA の取得範囲
-
-- 認証不要の Atom RSS `https://www.reddit.com/r/LocalLLaMA/new/.rss?limit=100` を使用する。
-- 投稿日時が実行時刻から直近48時間以内のエントリを全件対象にする。RSSは1ページ100件までのため、`after` で最大 `MAX_PAGES` ページ遡って取得する（2ページ目以降の失敗は取得済み分で続行）。
-- `filter_seen.py` はこのソースだけ既出URLを除去せず `seen_before`（前日までにDB登録済みか）を付与する。`feed-local-llm.md` では「新着」と「前日にも掲載」の2セクションに分けて表示する。
-- RSS取得・XML解析・日付範囲は [scripts/fetch_reddit_local_llm.py](scripts/fetch_reddit_local_llm.py) の `REDDIT_RSS_LIMIT`、`RECENT_WINDOW_HOURS`、`DESCRIPTION_MAX_CHARS` で調整できる（URLのlimitも定数から組み立てる）。
-- Reddit専用の識別User-Agentを付け、HTTP 429/5xxだけを最大2回リトライする。`Retry-After` があれば優先し、無ければ指数バックオフを使う。
-- 取得結果は `raw/reddit_local_llm.json` に保存し、`raw/local_llm_github.json` とは混ぜない。本文はHTMLをプレーンテキスト化し、要約用に500文字（`DESCRIPTION_MAX_CHARS`）まで保持する。
-- Reddit取得失敗時は空のrawを保存して前回の投稿を再利用せず、GitHub分のローカルLLM要約を継続する。
 
 ### 日別ページの表示
 
