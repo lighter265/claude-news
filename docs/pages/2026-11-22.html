@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-22</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-22</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-22</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>AI がリーマン予想を証明したとする主張について、続報と検証の話が出ている。朝日新聞や BBC は、Anthropic の数学者が AI と協力して証明したと主張していると報じた。一方で、加藤文元氏が検証の進み具合を解説したほか、HN では証明は成り立たないとする論文も共有されている。</li><li>はてなブックマークで最も注目されたのは、Gemini のサブスクリプションを他社製のエージェントツールから使えるようになるかもしれないという話題（253 users）。これまで AI に詳しい層が Gemini を避けてきた理由が、解消に向かう可能性があるとされる。</li><li>脆弱性修正を急ぐことで起きるシステム障害に関心が集まっている。日経は、AI に急かされる「パッチ地獄」が米国で銀行や空港の停止につながったと報じた。HN でも、相次ぐ障害と AI の関係を問う記事や、Microsoft のホットパッチ不具合を扱う記事が共有されている。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">バグハント向け Claude Code スキル集 Claude-BugHunter — (原文: elementalsouls/Claude-BugHunter)</td><td class="link-col"><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• バグバウンティや外部レッドチーム作業向けの Claude Code スキル集。<br>• 80 を超えるスキルと 15 のスラッシュコマンドを収録している。<br>• 公開済みの脆弱性報告から集めた 681 のパターンを 24 の脆弱性分類に整理しており、うち 433 件は出典を個別にたどれる。<br><br>過去の報告の知見をエージェントに持たせ、脆弱性調査を効率よく進めるねらいがある。攻撃手法を扱う道具なので、許可された範囲の診断で使うことが前提になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Google Stitch 用のエージェントスキル集 — (原文: google-labs-code/stitch-skills)</td><td class="link-col"><a href="https://github.com/google-labs-code/stitch-skills" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Google のデザインツール Stitch の MCP サーバーと組み合わせて使うエージェントスキル集。<br>• 各スキルは Agent Skills のオープン標準に沿って作られている。<br>• Antigravity、Gemini CLI、Claude Code、Cursor、Codex などで使える。<br><br>スキルを共通の形式で配る動きが、ツールの垣根を越えて広がっている。デザインから実装までの流れをエージェントに任せる場面で役立ちそうだ。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">パキスタンで太陽光発電が急速に広がり、送電網の整備が追いつかない — (原文: Pakistan's solar revolution is so successful the national grid is lagging behind)</td><td class="link-col"><a href="https://www.bbc.com/news/articles/ckvg2n2q3103o" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• パキスタンで太陽光発電の導入が急速に進んでいると BBC が報じた。<br>• 普及の速さに、国の送電網の整備が追いついていないという。<br>• この日の HN で最多の 10 ポイントを集めた。<br><br>分散型の電源が増えると、既存の電力網の運営や料金の仕組みを見直す必要が出てくる。ほかの新興国でも同じ課題が起きるか注目される。</td></tr>
+<tr><td class="num">2</td><td class="title">相次ぐ障害は偶然か、AI 時代の前触れか — (原文: Are all of these outages a coincidence – or a glimpse of our AI future?)</td><td class="link-col"><a href="https://tech.yahoo.com/general/article/are-all-of-these-outages-a-coincidence--or-a-glimpse-of-our-ai-future-210035788.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 最近続いている大規模なシステム障害を取り上げた記事。<br>• 障害が偶然重なっただけなのか、AI 時代の構造的な問題なのかを問いかけている。<br>• 日経が報じた「パッチ地獄」の話題とも重なる。<br><br>AI による開発や修正のスピードが上がる一方で、運用の安定性をどう保つかが課題になっている。障害の原因は個別に確かめる必要がある。</td></tr>
+<tr><td class="num">3</td><td class="title">Microsoft がホットパッチの不具合回避策としてレジストリ変更を案内 — (原文: Microsoft suggests Registry hack to work around hotpatch woes)</td><td class="link-col"><a href="https://www.theregister.com/os-platforms/2026/11/20/microsoft-suggests-registry-hack-to-work-around-hotpatch-woes/5311279" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Windows のホットパッチ（再起動なしで適用する更新）で問題が起きていると The Register が報じた。<br>• Microsoft は回避策としてレジストリの変更を案内しているという。<br>• 正式な修正が出るまでのつなぎの対応とみられる。<br><br>再起動を減らせるホットパッチは運用面の利点が大きいが、不具合が出ると手作業での対応が必要になる。管理者は公式の案内を確かめてから適用したい。</td></tr>
+<tr><td class="num">4</td><td class="title">iTerm2 に Kitty 画像プロトコル経由の脆弱性 — (原文: iTerm2 vulnerability via Kitty Image Protocol)</td><td class="link-col"><a href="https://ii4gsp.github.io/iterm2-rce/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• macOS 向けターミナル iTerm2 の脆弱性についての解説記事。<br>• Kitty の画像表示プロトコルの処理が攻撃の入口になる。<br>• URL からは、リモートでコードを実行される（RCE）種類の問題とみられる。<br><br>ターミナルに表示する内容そのものが攻撃に使われうるという点で、注意が必要だ。iTerm2 の利用者は更新が出ているか確認しておきたい。</td></tr>
+<tr><td class="num">5</td><td class="title">FBI の犯罪情報データベースがハッキングされたと CNN が報道 — (原文: FBI's criminal information database hacked, CNN reports)</td><td class="link-col"><a href="https://www.cnbc.com/2026/11/21/fbis-criminal-information-database-hacked-cnn-reports.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• FBI の犯罪情報データベースが不正アクセスを受けたと CNN が報じ、CNBC が伝えた。<br>• 被害の範囲や攻撃者の詳細は記事で確かめる必要がある。<br>• 政府機関の重要なシステムへの攻撃が続いている。<br><br>捜査に使う情報が漏れれば、影響は大きい。当局からの続報が待たれる。</td></tr>
+<tr><td class="num">6</td><td class="title">PHP 8.6 では型などのチェックが厳しくなる — (原文: PHP 8.6: Things are gonna get more strict around here)</td><td class="link-col"><a href="https://www.theregister.com/devops/2026/11/20/php-86-things-are-gonna-get-a-lot-more-strict-around-here/5311486" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 次の PHP 8.6 での変更点を The Register が紹介した。<br>• これまで許されていた曖昧な書き方が、より厳しく扱われる方向だという。<br>• 既存のコードの移行に影響が出る可能性がある。<br><br>厳しくなることで安全性は上がるが、古いコードを多く抱えるプロジェクトでは対応が必要になる。非推奨の警告を早めに確認しておくとよい。</td></tr>
+<tr><td class="num">7</td><td class="title">Postgres を 1 つの実行ファイルにまとめた — (原文: I Got Postgres into a Single Binary)</td><td class="link-col"><a href="https://progrium.xyz/articles/2026/single-binary-postgres/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• PostgreSQL を単一の実行ファイルとして動かせるようにした取り組みの記事。<br>• 著者は progrium（Jeff Lindsay 氏）。<br>• 配布や組み込みが簡単になる可能性がある。<br><br>SQLite のように手軽に Postgres を使いたいという需要は根強い。テストや小規模なアプリでの使い道が考えられる。</td></tr>
+<tr><td class="num">8</td><td class="title">エージェントの数を増やすとコード最適化がうまくなる理由 — (原文: Why agent swarms get better at optimizing code as they grow)</td><td class="link-col"><a href="https://frontier.replit.com/throwing-headcount-at-the-problem/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Replit が、多数の AI エージェントを並列に動かしてコードを最適化した結果を報告した。<br>• エージェントの数を増やすほど、最適化の成果が上がる傾向があるという。<br>• 記事の題は「人数を投入して解決する」をもじったもの。<br><br>人間のチームでは人を増やしても速くならないとよく言われるが、エージェントでは事情が違う可能性を示している。費用との釣り合いが実用の鍵になる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Gemini のサブスクを他社製ツールから使えるようになる可能性</td><td class="link-col"><a href="https://smhn.info/202611-gemini-subscription-third-party-harness-december-2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Gemini は性能が上がっても、AI に詳しい層には避けられがちだったと記事は指摘する。<br>• 理由は、サブスクリプションを他社製のエージェントツール（ハーネス）から使えなかったことにある。<br>• 12 月にこの制限が解消される可能性があると伝えている。<br><br>253 users と、この日のはてなで最も注目された。実現すれば、使い慣れたツールのまま Gemini を選べるようになり、モデル選びの幅が広がる。</td></tr>
+<tr><td class="num">2</td><td class="title">1 万円のシンセサイザーを AI で改造、楽器のファームウェア公開が始まる</td><td class="link-col"><a href="https://www.gizmodo.jp/article/0b0516f2-94f8-442e-bdae-2987f090be13/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 手頃な価格のシンセサイザーのファームウェアが公開され、改造できるようになった。<br>• AI を使ってファームウェアを書き換え、機能を加える例が紹介されている。<br>• 電子楽器メーカーがファームウェアを開放する動きが始まっている。<br><br>AI のコーディング支援で、組み込み機器の改造に手を出しやすくなっている。メーカーが開放を進めれば、利用者による機能追加の場が広がる。</td></tr>
+<tr><td class="num">3</td><td class="title">ソフトウェアファクトリーとコード設計、顧客価値</td><td class="link-col"><a href="https://kosui.me/posts/2026/11/15/code-design-after-agents" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントが開発を担う時代に、コード設計の意味を考える記事。<br>• エージェントが大量にコードを生産する「ソフトウェアファクトリー」の考え方を扱う。<br>• 設計を顧客価値とどう結びつけるかを論じている。<br><br>コードを書く手間が減るほど、何をどう作るかの判断の重みが増す。設計をどこまで人が担うかは、多くのチームが向き合う問いになっている。</td></tr>
+<tr><td class="num">4</td><td class="title">一人で回すソフトウェアファクトリー andon</td><td class="link-col"><a href="https://github.com/mitaku/andon" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI コーディングエージェントが、台帳からタスクを取ってレビュー、マージまで進める仕組み。<br>• 人間は、人にしか下せない判断のときだけ呼び出される。<br>• 名前は、工場で異常を知らせる「アンドン」に由来するとみられる。<br><br>上の記事と同じ「ソフトウェアファクトリー」の流れにある OSS だ。エージェントに任せる範囲と人が判断する場面の線引きを、具体的な形で示している。</td></tr>
+<tr><td class="num">5</td><td class="title">「パッチ地獄」が米国の IT 障害を招く、AI に急かされる脆弱性修正</td><td class="link-col"><a href="https://www.nikkei.com/article/DGXZQOGN18CYM0Y6A111C2000000/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI によって脆弱性の発見が速まり、修正パッチの適用に追われる状況を日経が報じた。<br>• 急いだパッチ適用が、米国で銀行や空港のシステム停止を引き起こしたという。<br>• 安全のための修正が、かえって障害を招くという矛盾が起きている。<br><br>修正の速さと安定性をどう両立させるかが運用側の課題になっている。段階的な適用や検証の仕組みの重要性が改めて問われそうだ。</td></tr>
+<tr><td class="num">6</td><td class="title">ヘンリーの E2E テストのリポジトリが膨らみ続けた理由</td><td class="link-col"><a href="https://dev.henry.jp/entry/e2e-repository" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ヘンリーのエンジニアブログが、E2E テストのリポジトリが整理されないまま大きくなった経緯を振り返った。<br>• AI で開発が速くなったことが、背景の一つとして挙げられている。<br>• 対策としてのガードレールの考え方も紹介している。<br><br>AI でコードやテストを量産しやすくなると、保守の負担も増えやすい。テスト資産の整理を仕組みで支える取り組みは、他のチームにも参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">「リーマン予想の証明」の検証はどこまで進んでいるか（加藤文元）</td><td class="link-col"><a href="https://note.com/katobungen/n/n9c2bb939b9c7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 数学者の加藤文元氏が、AI と組んだとされるリーマン予想の証明について、検証の状況を解説した。<br>• 同じ日には、朝日新聞や BBC が Anthropic の数学者の主張を報じている。<br>• 朝日新聞は、主張した数学者本人も「AI が私を追い越した」と驚いていると伝えた。<br><br>主張が正しいかどうかは、専門家による検証を待つ必要がある。結論が出るまでには時間がかかるとみられる。</td></tr>
+<tr><td class="num">8</td><td class="title">Claude Code の出力を付箋のホワイトボードで理解する /understand スキル</td><td class="link-col"><a href="https://github.com/fkubota/understand-mode" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude Code の出力や PR、コードを理解するための /understand スキル。<br>• 付箋を貼ったホワイトボードの形で、寄り道しながら内容を追える。<br>• エージェントが書いたものを人が読み解く手間を減らすねらいがある。<br><br>エージェントの生産量が増えるなかで、人が内容を理解する部分が手薄になりがちだ。理解を助ける道具への関心が高まっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Desktop での開発のすすめ</td><td class="link-col"><a href="https://zenn.dev/peoplex_blog/articles/vscode-to-claude-desktop" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• VS Code から Claude Desktop に開発環境を移したことを紹介する記事。<br>• この日の Zenn で最多の 76 いいねを集めた。<br>• エディタ中心ではない、新しい開発の形を提案している。<br><br>エージェントに作業を任せる場面が増え、開発の中心をエディタからエージェントのアプリへ移す人が出てきている。チームでどう使い分けるかが次の論点になりそうだ。</td></tr>
+<tr><td class="num">2</td><td class="title">AI にテストケースを書かせるのではなく、ルールを書く（TLA+）</td><td class="link-col"><a href="https://zenn.dev/karamage/articles/73027ee36796dc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI にテストケースを個別に書かせるより、仕様のルールを書くべきだと主張する記事。<br>• 形式仕様の言語 TLA+ を使ってルールを表す方法を扱う。<br>• 守るべき性質を明確にすれば、検証を機械に任せやすくなる。<br><br>AI が書いたテストは、実装と同じ思い込みを含みやすいという問題がある。形式手法を取り入れる試みは、エージェント開発の品質保証の一つの方向といえる。</td></tr>
+<tr><td class="num">3</td><td class="title">CLAUDE.md や SKILL.md のルールを Turtle で書き、lint で矛盾を検査する</td><td class="link-col"><a href="https://zenn.dev/hma2moto/articles/turtle-agent-rules-pros-cons" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エージェント向けのルールを、RDF の記法 Turtle で書いてみた記事。<br>• lint を使って、ルールの書き間違いや矛盾を見つけられるようにした。<br>• この方法の利点と欠点も整理している。<br><br>ルール文書が増えると、矛盾や重複に気づきにくくなる。自然言語のルールを構造化して検査する試みとして参考になる。</td></tr>
+<tr><td class="num">4</td><td class="title">作れるエンジニアから、価値を届けるエンジニアへ</td><td class="link-col"><a href="https://zenn.dev/kubell/articles/3c3490a3592bb1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• kubell のエンジニアによる、エンジニアの役割についての考察記事。<br>• 作る力だけでなく、価値を届ける力が大事になっていると述べる。<br>• AI で実装の負担が減っていることが背景にあるとみられる。<br><br>はてなの「ソフトウェアファクトリー」の記事と同じく、作ること自体より何を届けるかに重心が移っている。キャリアを考えるうえでの視点になる。</td></tr>
+<tr><td class="num">5</td><td class="title">日本のレシートを自宅の PC で OCR、15 の構成を実際のレシートで比較</td><td class="link-col"><a href="https://zenn.dev/chaki/articles/4545be3475fdb4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 日本のレシートを自宅の PC で文字認識（OCR）する方法を比べた記事。<br>• 15 の構成を、実際のレシート 11 枚で試した。<br>• クラウドに送らずに処理できる点が特徴。<br><br>家計簿のように個人情報を含むデータは、手元で処理したい場面が多い。小規模ながら実際のデータで比べた結果は、構成選びの参考になる。</td></tr>
+<tr><td class="num">6</td><td class="title">全社の GitHub 権限管理を Terraform に移すのはなぜ大変か</td><td class="link-col"><a href="https://zenn.dev/pksha/articles/github-org-terraform-migration" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• PKSHA が、GitHub 組織の権限管理を Terraform に移した経験をまとめた。<br>• 移行の難しさとその理由を整理している。<br>• 既存の設定をコードとして管理する際の課題が中心。<br><br>権限をコードで管理すると監査や再現がしやすくなるが、既存の状態の取り込みが壁になりやすい。同じ移行を考える組織には参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">数理最適化のシステム構築は AI エージェントで自動化できるか</td><td class="link-col"><a href="https://zenn.dev/okarinxx/articles/ai-agent-optimization-1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 数理最適化のシステムづくりを、AI エージェントでどこまで自動化できるか試す記事。<br>• シリーズの第 1 回にあたる。<br>• 問題をモデルに落とし込む作業の自動化が焦点とみられる。<br><br>最適化の問題では、業務の要件を数式に表す部分に専門知識がいる。エージェントがどこまで担えるかは、今後の回で明らかになりそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">Go の defer の 3 つの実装方式</td><td class="link-col"><a href="https://zenn.dev/wakame_atsushi/articles/f2f7512d5e0f87" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Go 言語の defer がどう実装されているかを調べた記事。<br>• 3 つの実装方式を紹介している。<br>• 方式ごとの性能の違いにも関わる内容。<br><br>defer はよく使う機能だが、内部の仕組みは意識されにくい。性能が気になるコードを書くときの理解に役立つ。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Microsoft 365 Copilot で OneDrive のファイルを直接編集できるように</td><td class="link-col"><a href="https://qiita.com/yuyanz/items/c3bb4801c105d96fa79d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft 365 Copilot が、OneDrive のファイルを直接編集できるようになっていたと報告する記事。<br>• Cowork を使わずに、GitHub Copilot のような使い方ができるという。<br>• この日の Qiita で最多の 42 いいねを集めた。<br><br>業務の文書を AI がその場で書き換えられれば、作業の流れが大きく変わる。権限の管理や変更履歴の確認と合わせて使い方を考えたい。</td></tr>
+<tr><td class="num">2</td><td class="title">AI っぽい日本語を直すスキル yomiyasu-mini を Copilot で試す</td><td class="link-col"><a href="https://qiita.com/Oyu3m/items/8efff0925c0994dda6ee" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI が書いたような不自然な日本語を直すスキル「yomiyasu-mini」を紹介。<br>• Microsoft Copilot のさまざまな場所で使ってみた結果をまとめている。<br>• 24 いいねを集めた。<br><br>生成された文章の読みやすさは、実務で使ううえで大事な点だ。スキルとして配って共有する使い方の例としても参考になる。</td></tr>
+<tr><td class="num">3</td><td class="title">紫のうさぎの 3D モデルとアニメーション</td><td class="link-col"><a href="https://qiita.com/yangon/items/82ccc38c04c3ea1e8d3b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「紫のうさぎ」というキャラクターの 3D モデルとアニメーションを作った記事。<br>• Claude Code などの AI エージェントを使って制作している。<br>• 同じ作者は、このキャラクターを使ったホラーゲームも公開している。<br><br>AI エージェントを使えば、3D 制作のような専門的な作業にも個人で取り組みやすくなっている。制作の過程は、ほかの個人開発者にも参考になる。</td></tr>
+<tr><td class="num">4</td><td class="title">RAG の「分からない」と参照元を自動で検証する Python スクリプト</td><td class="link-col"><a href="https://qiita.com/takumi_engineer/items/8287c5fb775d834086a4" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• RAG（検索拡張生成）の答えを評価する Python スクリプトの作り方を紹介。<br>• 答えられないときに「分からない」と返せるかを自動で確かめる。<br>• 示した参照元が正しいかも検証する。<br><br>RAG では、もっともらしい誤答をどう防ぐかが課題になる。評価を自動化しておけば、改善の効果を測りやすくなる。</td></tr>
+<tr><td class="num">5</td><td class="title">Microsoft Ignite 2026 現地参加レポート</td><td class="link-col"><a href="https://qiita.com/katohiro_fi/items/0f03ceb4cf0aa4ecbc03" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft Ignite 2026 に現地で参加した記録。<br>• 技術情報は少なめで、写真を中心に会場の様子を伝えている。<br>• 随時更新される形式。<br><br>Copilot 関連の発表が多いイベントで、現地の雰囲気を知る手がかりになる。技術的な詳細は公式の発表と合わせて確かめたい。</td></tr>
+<tr><td class="num">6</td><td class="title">古い画面からの上書きを MySQL の楽観ロックと遷移表で防ぐ</td><td class="link-col"><a href="https://qiita.com/takumi_engineer/items/c653a8e7b2567fb98e28" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 工程のステータスが、古い画面からの操作で上書きされる問題を扱う。<br>• MySQL での楽観ロックと、状態の遷移表を組み合わせて防ぐ。<br>• PHP と PDO を使った実装例を示している。<br><br>複数の人が同じデータを更新する業務システムでは、よくある問題だ。遷移表で許される状態の変化を決めておく方法は、実務にそのまま応用しやすい。</td></tr>
+<tr><td class="num">7</td><td class="title">OCI のベクトルストアと API キーで文書検索を試す</td><td class="link-col"><a href="https://qiita.com/N-Kyo/items/af8599f57b397418b940" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Oracle Cloud（OCI）のベクトルストアを使った文書検索を試した記事。<br>• API キーで認証する方法を扱う。<br>• 筆者は新卒で、トライアル期間が切れる前に予習したという。<br><br>主要なクラウドで RAG 向けの機能が揃ってきている。入門者が手順を残した記事は、これから触る人の参考になる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-22 06:32 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
