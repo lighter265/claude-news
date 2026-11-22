@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-23</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-23</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-23</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>Zenn で最も注目されたのは mizchi 氏の「Mutation Test をやれ」（462 いいね）。テストの質を測る方法として Mutation Test を勧める記事で、紹介されたツールを試した記事も続いている。</li><li>AI がリーマン予想を証明したとする主張の続報が出ている。朝日新聞は、発表した Anthropic の数学者本人も「AI が私を追い越した」と驚いていると報じた。正しいかどうかの検証はこれからとみられる。</li><li>システム障害の話題が続いている。HN では Delta 航空のアトランタ発着便がすべて遅れた件、あまり報じられなかった AWS の障害、Outlook の障害でメールが届かなかった件が共有された。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">直近 30 日の話題を調べる AI エージェント用スキル last30days-skill — (原文: mvanhorn/last30days-skill)</td><td class="link-col"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 指定した話題について、Reddit、X、YouTube、HN、Polymarket、Web をまとめて調べる AI エージェント用のスキル。<br>• 集めた投稿をもとに、根拠付きの要約を作る。<br>• 編集者の選定ではなく、高評価やいいね、実際に賭けられた金額で情報に順位を付けるのが特徴。<br><br>README は日本語を含む 10 以上の言語で用意されており、現在の仕組みは v4 とされる。エージェントに最新の世間の反応を調べさせる使い方が広がっていることを示す例といえる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">シリコンバレーに何が起きたのか — (原文: What Happened to Silicon Valley?)</td><td class="link-col"><a href="https://www.oreilly.com/radar/what-happened-to-silicon-valley/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• O'Reilly Radar に載った、シリコンバレーの変化を論じる記事。<br>• この日の HN で最多の 168 ポイント、コメントは 62 件。<br>• タイトルからは、技術業界の文化や方向性が変わったことへの問題提起とみられる。<br><br>AI への投資の集中や業界の価値観の変化について、議論が続いている。コメント欄では、技術者それぞれの見方が交わされているとみられる。</td></tr>
+<tr><td class="num">2</td><td class="title">カナダが報道機関への連邦政府の資金援助を改めて約束 — (原文: Canada recommits to federal funding for news)</td><td class="link-col"><a href="https://www.niemanlab.org/2026/11/a-government-that-gets-it-canada-recommits-to-federal-funding-for-news/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• カナダ政府が報道機関への資金援助を続ける方針を示したと Nieman Lab が報じた。<br>• 97 ポイントに対しコメントは 98 件と、議論が多く集まった。<br>• 記事は政府の姿勢を前向きに評価する見出しになっている。<br><br>プラットフォームへの広告の集中で報道の収益が減るなか、公的支援のあり方は各国で論点になっている。報道の独立性との兼ね合いも議論になりやすいテーマだ。</td></tr>
+<tr><td class="num">3</td><td class="title">自動システムの不具合で Delta 航空のアトランタ発着便がすべて遅延 — (原文: All Delta Flights Through Atlanta Delayed as Automated System Falters)</td><td class="link-col"><a href="https://www.nytimes.com/2026/11/22/us/delta-flight-delays-system-outage.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Delta 航空のアトランタを経由する便がすべて遅れたと New York Times が報じた。<br>• 原因は自動化されたシステムの不具合とされる。<br>• 43 ポイント、コメント 14 件。<br><br>最近は銀行や空港、クラウドなどで大きな障害が相次いでいる。拠点空港のシステムが止まると影響が広く及ぶため、原因と再発防止策の発表が待たれる。</td></tr>
+<tr><td class="num">4</td><td class="title">AWS でも障害があったが、あまり知られなかった — (原文: AWS got hit by an outage too. You didn't hear about it)</td><td class="link-col"><a href="https://www.theregister.com/columnists/2026/11/21/aws-got-hit-by-an-outage-too-heres-why-you-didnt-hear-about-it/5311511" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• The Register のコラムで、AWS で起きた障害を取り上げている。<br>• 障害があったのに、ほとんど話題にならなかった理由を考察する内容とみられる。<br>• 相次ぐ障害の報道と合わせて共有された。<br><br>同じ規模の障害でも、影響を受けたサービスや報じられ方によって注目度は大きく変わる。クラウドを使う側は、事業者の公式な障害報告も確かめておきたい。</td></tr>
+<tr><td class="num">5</td><td class="title">Outlook の世界的な障害で一部のメールが届かず、Microsoft が新たな不具合も公表 — (原文: Microsoft admits some emails bounced during Outlook outage, reveals new failures)</td><td class="link-col"><a href="https://www.neowin.net/news/microsoft-admits-some-emails-bounced-during-global-outlook-outage-reveals-new-failures/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Outlook の障害中に一部のメールが送り返されていたことを Microsoft が認めたと Neowin が報じた。<br>• あわせて、新たな不具合があったことも明らかにしたという。<br>• 障害の影響が、当初の見込みより広かった可能性がある。<br><br>送り返されたメールは再送しないと届かないため、業務への影響が出やすい。管理者は該当する期間の配信記録を確認するとよい。</td></tr>
+<tr><td class="num">6</td><td class="title">Nyx、現存する最古のインターネットプロバイダ — (原文: Nyx, the Oldest Internet Service Provider)</td><td class="link-col"><a href="https://nyx.net/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 最古のインターネットプロバイダとされる Nyx のサイトが共有された。<br>• 21 ポイント、コメント 4 件。<br>• 初期のインターネットの雰囲気を今に残すサービスとして関心を集めたとみられる。<br><br>インターネットの初期から続くサービスは数少なく、歴史的な記録としての価値もある。古い仕組みがどう運営され続けているかに興味を持つ人も多い。</td></tr>
+<tr><td class="num">7</td><td class="title">実際のバスや飛行機、船の動きを映すミニチュアのサンフランシスコ — (原文: A miniature San Francisco with live buses, planes and boats)</td><td class="link-col"><a href="https://smallsf.com/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• サンフランシスコの街をミニチュア風に表し、バスや飛行機、船の位置をリアルタイムで映すサイト。<br>• 公開されている運行データを使っているとみられる。<br>• 19 ポイント、コメント 3 件。<br><br>オープンデータを使った可視化の作品として目を引く。交通データを親しみやすく見せる一つの例といえる。</td></tr>
+<tr><td class="num">8</td><td class="title">AGENTS.md や PR コメントを実行できるチェックに変える Taskless — (原文: Show HN: Taskless, turn AGENTS.md and PR comments into runnable checks)</td><td class="link-col"><a href="https://www.taskless.io/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AGENTS.md の指示や PR のレビューコメントを、自動で実行できるチェックに変えるツール。<br>• 文章で書いたルールを、機械で確かめられる形にするのが狙い。<br>• Show HN として投稿された。<br><br>AI エージェントへの指示は文章で書かれることが多く、守られているかを確かめにくい。ルールを検査に変える考え方は、エージェント開発の品質管理で広がりつつある。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">イーロン・マスクがネットで嫌われにくいのは「ワクワクするもの」に大金を投じるからでは、という説</td><td class="link-col"><a href="https://togetter.com/li/2773122" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• イーロン・マスク氏が大富豪なのにネットで嫌われにくい理由を考える Togetter のまとめ。<br>• ロケットや電気自動車など、「男の子がワクワクするもの」に迷わず大金を出すからだという意見が中心。<br>• この日のはてな (tech) で最多の 196 users。<br><br>技術への投資の見え方が、経営者の評判に影響するという見方を示している。一方で、マスク氏への評価は分かれており、反対の意見も多く寄せられているとみられる。</td></tr>
+<tr><td class="num">2</td><td class="title">奥深いトラックボールの世界、3 つのタイプ別に 14 モデルを紹介</td><td class="link-col"><a href="https://akiba-pc.watch.impress.co.jp/docs/sale/online_shopping/2158378.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AKIBA PC Hotline! による、トラックボールの紹介記事。<br>• 操作方法で 3 つのタイプに分けて、合計 14 モデルを取り上げている。<br>• 91 users。<br><br>ボールの慣性を使ってカーソルを素早く動かせる点や、手首の負担が少ない点が支持されている。入力機器を選ぶときの比較資料として役立ちそうだ。</td></tr>
+<tr><td class="num">3</td><td class="title">みずほ銀行のシステムがハッキングされないのは、ハッカーも仕様を把握できないからという説</td><td class="link-col"><a href="https://togetter.com/li/2773158" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 複雑すぎるシステムは攻撃者にとっても理解しにくい、という冗談まじりの説を集めた Togetter。<br>• 「妙な説得力がある」「ハッキングが先か障害が先か」といった反応が並ぶ。<br>• 52 users。<br><br>複雑さで守ることは、セキュリティの対策としては勧められない。大きな古いシステムの保守の難しさを、改めて感じさせる話題といえる。</td></tr>
+<tr><td class="num">4</td><td class="title">「AI が私を追い越した」リーマン予想を「証明」した数学者も驚き</td><td class="link-col"><a href="https://www.asahi.com/articles/ASVCP2WB0VCPDIFI008M.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• リーマン予想を AI と証明したと発表した Anthropic の数学者について、朝日新聞が報じた。<br>• 数学者本人も、AI の能力に驚いていると語っている。<br>• 関連して、朝日新聞と BBC の第一報もそれぞれブックマークを集めた。<br><br>証明が正しいかどうかは、専門家による検証がこれから必要になる。結論が確かめられるまでは、慎重に受け止めたい。</td></tr>
+<tr><td class="num">5</td><td class="title">寝ている間に動く AI エージェントを誰でも作れる、pstack 実践ガイド</td><td class="link-col"><a href="https://zenn.dev/canly/articles/ca6875cd79539f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI エージェントを作る仕組み pstack の使い方を、10 分で分かるようにまとめた Zenn の記事。<br>• 人がいない間も自動で動き続けるエージェントを作ることを目指す。<br>• はてなでは 21 users、Zenn でも 31 いいね。<br><br>エージェントを長時間自動で動かす使い方が身近になりつつある。実際に使うときは、権限の範囲や実行の記録をどう管理するかが大事になる。</td></tr>
+<tr><td class="num">6</td><td class="title">CSS の columns プロパティで縦に並ぶナビゲーションを作る</td><td class="link-col"><a href="https://www.tak-dcxi.com/article/vertical-navigation-with-columns-property/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CSS の columns プロパティを使って、縦方向に並ぶナビゲーションを作る方法の解説。<br>• TAKLOG の記事で、Web 制作者向けの内容。<br>• 21 users。<br><br>grid や flexbox ほどは使われない columns の、実用的な使い方を示している。メニュー項目の数が変わってもレイアウトを保ちやすい点が利点とみられる。</td></tr>
+<tr><td class="num">7</td><td class="title">S&amp;P500 が調整局面に、AI 株高はピークを過ぎたか</td><td class="link-col"><a href="https://www.nikkei.com/article/DGXZQOFL20CUL0Q6A121C2000000/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米国の株価指数 S&amp;P500 が調整局面に入ったと日本経済新聞が報じた。<br>• いくつもの悪い条件が重なっていると分析している。<br>• AI 関連株の値上がりがピークを過ぎたのではという見方も紹介されている。<br><br>AI への投資の熱が市場でどう評価されるかは、テック企業の投資計画にも影響する。今後の決算や景気の指標が注目される。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">テストの品質を測るために Mutation Test をやろう</td><td class="link-col"><a href="https://zenn.dev/mizchi/articles/mutation-test-quality" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• mizchi 氏が、テストの質を測る方法として Mutation Test を勧める記事。<br>• コードにわざと小さな変更を入れ、テストが失敗するかでテストの強さを確かめる。<br>• この日の Zenn で最多の 462 いいね。<br><br>AI がテストを大量に書く時代には、テストの数よりも質が問われる。カバレッジだけでは分からない弱点を見つける方法として、関心が高まっている。</td></tr>
+<tr><td class="num">2</td><td class="title">毎月 6,000 の AI エージェントを動かすためにキーボードを捨てた話</td><td class="link-col"><a href="https://zenn.dev/andoshin11/articles/ba68b39ef9a8ce" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 毎月およそ 6,000 の AI エージェントを動かしている筆者が、作業の進め方を紹介する記事。<br>• キーボード中心の操作をやめたことが中心の話題になっている。<br>• 197 いいね。<br><br>大量のエージェントを動かす場合、人の役割はコードを書くことから指示と確認に移っていく。具体的な道具や手順は、本文で確認したい。</td></tr>
+<tr><td class="num">3</td><td class="title">最近、コードを真面目に読まなくなった</td><td class="link-col"><a href="https://zenn.dev/hiromoo/articles/reading-less-preparing-more" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• コードを細かく読むことが減った経験を書いた記事。<br>• URL からは、読む時間を減らした分、準備に力を入れるようになったという内容とみられる。<br>• 88 いいね。<br><br>AI がコードを書くようになり、レビューの仕方も変わりつつある。読む量が減ったときに品質をどう保つかが論点になる。</td></tr>
+<tr><td class="num">4</td><td class="title">GitHub Issue に HTML や Markdown を Artifact として添付できるように</td><td class="link-col"><a href="https://zenn.dev/kesin11/articles/20261114_github_issue_artifact" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GitHub Issue に HTML と Markdown のファイルを Artifact として付けられるようになったことを紹介する記事。<br>• 88 いいね。<br>• Issue の中でレポートなどを共有しやすくなる機能とみられる。<br><br>AI エージェントが作ったレポートを Issue に直接付ける使い方とも相性がよさそうだ。対応する範囲や制限は、GitHub の公式の案内で確認したい。</td></tr>
+<tr><td class="num">5</td><td class="title">ローカル LLM 入門</td><td class="link-col"><a href="https://zenn.dev/port_inc/articles/ff974c7456f4db" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 手元の PC で大規模言語モデルを動かす、ローカル LLM の入門記事。<br>• 82 いいね。<br>• 初めて試す人向けに、基本的な考え方や手順をまとめているとみられる。<br><br>データを外に出さずに済むことや、料金を気にせず使えることから、ローカル LLM への関心は高い。必要な PC の性能とモデルの選び方が最初の課題になる。</td></tr>
+<tr><td class="num">6</td><td class="title">mizchi/mutator を試してみた</td><td class="link-col"><a href="https://zenn.dev/polyco/articles/e05cb28c569801" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• mizchi 氏の Mutation Test ツール mutator を実際に導入した記事。<br>• 70 いいね。<br>• 1 位の記事で紹介された考え方を、実際に試した例として読める。<br><br>導入の手順や、実際に見つかったテストの弱点が書かれているとみられる。自分のプロジェクトで試す前の参考になる。</td></tr>
+<tr><td class="num">7</td><td class="title">QA の生産性を大きく上げる QA 用 AI 基盤の構築</td><td class="link-col"><a href="https://zenn.dev/gatechnologies/articles/8bdea59269eb10" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• QA（品質保証）の作業に AI を取り入れる仕組みを作った事例の記事。<br>• GA technologies の記事で、58 いいね。<br>• テストの計画から実行まで、AI で効率化することを目指しているとみられる。<br><br>開発のスピードが上がると、QA が追いつかなくなりやすい。QA の側でも AI を使う動きは今後広がりそうだ。</td></tr>
+<tr><td class="num">8</td><td class="title">AI にテストケースを書かせるのではなく、ルールを書く（TLA+）</td><td class="link-col"><a href="https://zenn.dev/karamage/articles/73027ee36796dc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI に個別のテストケースを書かせるより、守るべきルールを書くべきだと主張する記事。<br>• 形式仕様の言語 TLA+ を使ってルールを表す。<br>• 47 いいね。<br><br>Mutation Test と同じく、AI 時代のテストの質を問う流れの一つといえる。形式手法は学ぶのに手間がかかるが、AI の手を借りて取り入れやすくなっている。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">終電後の新宿駅地下を外部画像なしで再現した 3D ホラーゲームを公開</td><td class="link-col"><a href="https://qiita.com/yangon/items/0f4a8fce9954e472e70d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 新宿駅の地下 1 階と地下街（180m×116m）を再現した 3D のサバイバルホラーゲームの制作記。<br>• 外部の画像を使わず、プログラムで質感を作る手法（プロシージャル PBR）で描いている。<br>• three.js で作り、GitHub Pages で公開した。AI エージェントも使っている。<br><br>この日の Qiita で最多の 7 いいね。AI を使った個人開発で、手の込んだ 3D 作品を作れることを示す例といえる。</td></tr>
+<tr><td class="num">2</td><td class="title">AI コーディングで本格的なプロダクトを作るために知っておきたいこと</td><td class="link-col"><a href="https://qiita.com/ditchcrimson/items/0b312db230db8d0bb566" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI コーディングで本格的なプロダクトを作るときの注意点をまとめた記事。<br>• タグには Claude Code や TypeScript が付いている。<br>• 試作品で終わらせず、長く使えるソフトウェアにするための考え方が中心とみられる。<br><br>AI で動くものを作るのは簡単になったが、保守のしやすさや品質を保つには設計の工夫が要る。実際の開発で得た知見として参考になりそうだ。</td></tr>
+<tr><td class="num">3</td><td class="title">IETF 127 RATS WG 参加報告、GPU 付き VM を複数の検証者で確かめる</td><td class="link-col"><a href="https://qiita.com/satokan3/items/61f86ddf8a4ccd5f5846" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• IETF 127 の RATS（リモート認証）WG のセッションに参加した報告。<br>• GPU を追加した VM の状態を、複数の検証者で確かめる方法が議論された。<br>• そのために、EAR と AR4SI という仕様を組み合わせ直す案を扱っている。<br><br>機密コンピューティングで GPU を使う場面が増え、信頼できる状態かを確かめる仕組みが必要になっている。標準化の最新の議論を知る資料として貴重だ。</td></tr>
+<tr><td class="num">4</td><td class="title">緊縮の痛みは成長につながるか、システム設計の視点で見る行動経済学 (66)</td><td class="link-col"><a href="https://qiita.com/maskot1977/items/96098e2d0016cf85e7e3" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 緊縮財政が成長につながるという考えを、行動経済学の視点で取り上げる連載記事。<br>• 実証研究で否定された仮説が、なぜ政策に残り続けるのかを考える。<br>• ChatGPT や Claude Code などを使って書かれた連載の一つ。<br><br>人の思い込みを「認知の設計」として捉える見方は、システム設計にも通じる。同じ筆者は音声で聞ける解説シリーズも続けて投稿している。</td></tr>
+<tr><td class="num">5</td><td class="title">SharePoint リストから新しいアプリを作るテンプレート</td><td class="link-col"><a href="https://qiita.com/yamad365/items/573a361f3680522808b8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• SharePoint のリストをもとに、新しいアプリを作るためのテンプレートの紹介。<br>• Power Platform や Power Apps を使う人向けの内容。<br>• 5 いいね。<br><br>ノーコードやローコードでの業務アプリ作りは、社内の効率化で広く使われている。テンプレートを使えば、最初の作業を減らせそうだ。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-23 06:32 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
