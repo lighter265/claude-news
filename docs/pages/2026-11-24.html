@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-24</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-24</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-24</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>NVIDIA の取締役会が、11 日間不在だったジェンスン・フアン氏を CEO に復帰させた。HN では、この復帰を米議会が「人格の欠如」と強く批判したという CNBC の記事が 53 ポイントで首位になり、関連記事も多く投稿された。</li><li>はてブでは、Claude Code を安全に「自走」させる方法として Docker Sandboxes を推す note 記事が 684 users を集め、ほかの記事を大きく引き離した。</li><li>形式検証の話題がはてブと Zenn に集中した。Rust 製 OSS を Lean 4 で検証してバグが多数見つかった記事、「なぜ今形式検証なのか」、TLA+ で AI にルールを書かせる記事などが並んだ。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">米議会、NVIDIA のフアン氏の「とんでもない」復帰を痛烈批判「人格の欠如」 — (原文: Congress shreds Nvidia's 'outrageous' return of Huang: 'Failure of character')</td><td class="link-col"><a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress-trump.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CNBC の 2026-11-23 付の記事。<br>• NVIDIA の CEO にジェンスン・フアン氏が復帰したことに対し、米議会から厳しい批判が出ていると報じている。<br>• URL にはトランプ氏の名前も含まれており、政治的な文脈を伴う話題とみられる。HN では 53 ポイント、コメント 37 件で本日の首位。<br><br>世界最大級の半導体企業のトップ人事が、政治の場で議論される事態になっている。批判の具体的な中身や、議会が実際に何らかの措置を取るかどうかは、元記事と今後の続報で確認する必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">国家を生んだのは馬だった — (原文: The horse made the state)</td><td class="link-col"><a href="https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 学術系メディア Aeon のエッセイ。<br>• URL によると、国家の起源は農耕ではなく牧畜（遊牧）にあるという説を論じている。<br>• HN では 12 ポイント、コメント 12 件。<br><br>「農業の定着が国家を生んだ」という通説に対する異論を紹介する内容とみられる。技術ニュースではないが、HN で好まれる歴史・人類学の長文記事として議論を集めている。</td></tr>
+<tr><td class="num">3</td><td class="title">共和党議員がジェンスン・フアン氏をめぐってトランプ氏と距離を置き始めた — (原文: Republicans are breaking with Trump over Jensen Huang)</td><td class="link-col"><a href="https://www.nytimes.com/2026/11/23/technology/republicans-trump-jensen-huang-nvidia.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• New York Times の 2026-11-23 付の記事。<br>• フアン氏の件で、共和党の議員がトランプ氏と異なる立場を取り始めていると報じている。<br>• HN では 9 ポイント、コメント 1 件。<br><br>首位の CNBC の記事と同じ話題で、批判が党派を超えて広がっていることを示す報道。NVIDIA の経営をめぐる問題が米国の政治問題になりつつある様子がうかがえる。</td></tr>
+<tr><td class="num">4</td><td class="title">NVIDIA 取締役会、経営陣に相談せず CEO を復帰させる — (原文: Nvidia Board Reinstated CEO Without Consulting Management)</td><td class="link-col"><a href="https://www.bloomberg.com/news/articles/2026-11-23/nvidia-s-about-face-on-huang-made-without-consulting-leadership" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Bloomberg の 2026-11-23 付の記事。<br>• フアン氏の CEO 復帰は、取締役会が社内の経営陣に相談せずに決めたものだと報じている。<br>• HN では 6 ポイント。<br><br>NVIDIA は公式発表で、取締役会がフアン氏を社長・CEO・取締役に復帰させたとしている。決定の過程をめぐるこの報道は、企業統治（ガバナンス）の観点から今後も注目されそう。</td></tr>
+<tr><td class="num">5</td><td class="title">フアン氏の謝罪こそ AI の唯一の正しい使い方かもしれない — (原文: Jensen Huang's Apology May Be the Only Correct Use of AI)</td><td class="link-col"><a href="https://www.theatlantic.com/newsletters/2026/11/jensen-huang-ai-apology-nvidia/689366/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• The Atlantic のニュースレター記事。<br>• フアン氏の謝罪と AI を結びつけて論じている。<br>• HN では 9 ポイント、コメントはまだない。<br><br>タイトルからは、謝罪文に AI が使われたことを皮肉を込めて取り上げたコラムとみられる。事実関係と筆者の主張は元記事で確認したい。</td></tr>
+<tr><td class="num">6</td><td class="title">年収 32.3 万ドルの 26 歳 Google 社員、最低賃金以下の生活費で暮らす — (原文: 26-year-old Google worker earns $323,000 a year–lives on less than minimum wage)</td><td class="link-col"><a href="https://www.cnbc.com/make-it/2026/11/22/google-worker-earns-323000-a-yearbut-he-lives-on-minimum-wage.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• CNBC Make It の 2026-11-22 付の記事。<br>• 年収 32.3 万ドルの Google 社員が、最低賃金を下回る金額で生活しているという事例を紹介している。<br>• HN では 9 ポイント、コメント 7 件。<br><br>高収入のテック業界で、極端な節約と貯蓄で早期リタイアを目指す（FIRE）ような生き方への関心を反映した話題。働き方や資産形成をめぐる議論のきっかけになっている。</td></tr>
+<tr><td class="num">7</td><td class="title">2026 年のエージェント型エンジニアリングの現状 — (原文: The State of Agentic Engineering in 2026)</td><td class="link-col"><a href="https://www.superconductor.com/state-of-agentic-engineering-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Superconductor が公開したレポート。<br>• AI エージェントを使ったソフトウェア開発（エージェント型エンジニアリング）の 2026 年時点の状況をまとめている。<br>• HN では 6 ポイント、コメント 3 件。<br><br>コーディングエージェントの普及が進む中で、実際の採用状況や課題を整理した資料とみられる。同日には「ほぼすべての開発チームが AI 生成コードを出荷している」という調査記事も投稿されている。</td></tr>
+<tr><td class="num">8</td><td class="title">Aavaaz：Whisper を使った、本番運用向けのセルフホスト型文字起こし — (原文: Aavaaz: Self-hosted, production-ready transcription with Whisper)</td><td class="link-col"><a href="https://www.collabora.com/news-and-blog/news-and-events/introducing-aavaaz-self-hosted-production-ready-transcription-with-whisper.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• オープンソース企業 Collabora による発表。<br>• 音声認識モデル Whisper をベースにした、セルフホスト型の文字起こしシステム「Aavaaz」を紹介している。<br>• 「本番運用に耐える」ことを打ち出している。HN では 5 ポイント。<br><br>音声データを外部のクラウドに送らずに文字起こしをしたい組織にとって選択肢になりうる。対応言語や必要なハードウェアなどの詳細は発表記事で確認できる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Claude Code を安全に「自走」させるなら、もう Docker Sandboxes 一択でよくない？と思った話</td><td class="link-col"><a href="https://note.com/yamac_/n/n198bdc344c64" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• YamaC 氏の note 記事で、684 users と本日のはてブで突出した。<br>• Claude Code を自律的に動かすときの安全策として、Docker Sandboxes を推している。<br>• 「docker」「windows」「security」「仮想化」などのタグが付いている。同じ筆者は Qiita にも同名の記事を投稿している。<br><br>コーディングエージェントに広い権限を与えて自走させる使い方が広がり、ホスト環境をどう守るかへの関心が非常に高いことがわかる。隔離の強さと導入のしやすさの釣り合いを考える材料になる。</td></tr>
+<tr><td class="num">2</td><td class="title">優秀な人が小さくまとまる現象</td><td class="link-col"><a href="https://www.pospome.work/entry/2026/11/23/125036" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• pospome 氏のプログラミング日記で、130 users（前日の 21 users から伸びた）。<br>• 優秀な人ほど無難な成果に落ち着いてしまう「小さくまとまる」現象を論じている。<br>• 「エンジニア」「社会」などのタグが付き、キャリア論として読まれている。<br><br>前日から引き続き読まれており、多くのエンジニアが共感や関心を寄せたテーマといえる。組織の評価のしかたや挑戦のしやすさを考える材料になる。</td></tr>
+<tr><td class="num">3</td><td class="title">著名な Rust 製 OSS を Lean 4 で形式検証してみたら、たくさんバグが見つかった話</td><td class="link-col"><a href="https://zenn.dev/koukyosyumei/articles/31c8fcf4da45b7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Zenn の記事で、126 users。<br>• 有名な Rust 製のオープンソースソフトウェアを、定理証明支援系 Lean 4 で形式検証した体験を紹介している。<br>• 検証の結果、多くのバグが見つかったとしている。「AI」「セキュリティ」のタグも付いている。<br><br>Rust は安全性の高い言語として知られるが、論理的な誤りまでは防げないことを示す事例。AI の支援で形式検証の手間が下がりつつあることも、関心の高さの背景にあるとみられる。</td></tr>
+<tr><td class="num">4</td><td class="title">「野村は 100%、楽天・SBI は 50%」は過去の話…NISA 口座を乗っ取られても全額戻るとは限らない補償の新ルール</td><td class="link-col"><a href="https://news.yahoo.co.jp/articles/2d8ed6122f3eb92f18539906bac8213be0c5c358" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• プレジデントオンラインの記事（Yahoo!ニュース掲載）で、116 users。<br>• 証券口座が乗っ取られた場合の補償について、新しいルールを解説している。<br>• タイトルによると、乗っ取りの被害が全額補償されるとは限らなくなるという。<br><br>証券口座の不正アクセスが相次いだことを受けて、補償の考え方が変わりつつある。利用者側でも多要素認証の設定など、自衛の重要性が増していることを示す話題。</td></tr>
+<tr><td class="num">5</td><td class="title">なぜ今形式検証なのか</td><td class="link-col"><a href="https://zenn.dev/ncdc/articles/dcec80b0c067b0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NCDC の Zenn 記事で、113 users。<br>• 今このタイミングで形式検証が注目される理由を論じている。<br>• 「Lean」「AI」「テスト」のタグが付いている。<br><br>AI がコードを大量に書くようになり、「テストだけで正しさを確かめるのは限界がある」という問題意識が広がっている。本日のはてブ・Zenn で形式検証の記事が目立ったことと合わせて、流れを知る入口になる記事。</td></tr>
+<tr><td class="num">6</td><td class="title">Lean で手続き的なプログラムの証明が書けるようになった</td><td class="link-col"><a href="https://speakerdeck.com/inoueasei/slide-aa115490-ea99-4286-9de2-40794f4e861f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Speaker Deck で公開されたスライドで、104 users。<br>• Lean を使って、手続き的（命令型）なプログラムについての証明を書けるようになったことを紹介している。<br>• 「数学」「プログラミング」のタグが付いている。<br><br>Lean は数学の証明で使われることが多いが、実際のプログラムの検証にも使えることを示す内容とみられる。上の 2 件と合わせ、Lean への関心の高まりがうかがえる。</td></tr>
+<tr><td class="num">7</td><td class="title">AI 時代に「食いっぱぐれるエンジニア」と「生き残るエンジニア」を分けるものは何か</td><td class="link-col"><a href="https://rokujyouhitoma.hatenablog.com/entry/2026/11/23/135112" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• rokujyouhitoma 氏のブログ記事で、87 users。<br>• AI の普及でエンジニアの仕事が変わる中、何が明暗を分けるのかを論じている。<br>• 「エンジニア」「プログラミング」のタグが付いている。<br><br>AI によるコード生成が当たり前になる中、エンジニアの価値がどこに残るかは、ここ最近繰り返し議論されているテーマ。Qiita や Zenn にも同じ趣旨の記事が並んでいる。</td></tr>
+<tr><td class="num">8</td><td class="title">spec as code ではなく code as spec — 仕様書のように書かれたコードを正とする</td><td class="link-col"><a href="https://zenn.dev/ruri/articles/code-as-spec" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Zenn の記事で、72 users。<br>• 仕様書をコード化する「spec as code」ではなく、コードを仕様書のように書いてそれを正とする「code as spec」を提案している。<br>• 「仕様」「設計」「AI」のタグが付いている。<br><br>AI に実装を任せる場面が増え、仕様とコードのどちらを「正」にするかが改めて問われている。仕様書とコードの食い違いをどう防ぐかという、昔からの課題への一つの答え方。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">寝ている間に自動で動く AI エージェントを誰でも作れる：10 分でわかる pstack 実践ガイド</td><td class="link-col"><a href="https://zenn.dev/canly/articles/ca6875cd79539f" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• pstack というツールの使い方を解説する実践ガイド（67 いいね）。<br>• 寝ている間などに自動で動き続ける AI エージェントを作る方法を紹介している。<br>• 「10 分でわかる」として、初心者にも手が届く内容を打ち出している。<br><br>人が見ていない間にエージェントに作業を進めさせる使い方への関心が高まっている。無人で動かす場合は、権限や暴走への備えも合わせて考える必要がある。</td></tr>
+<tr><td class="num">2</td><td class="title">【TLA+】AI にテストケースを書かせるな。ルールを書け</td><td class="link-col"><a href="https://zenn.dev/karamage/articles/73027ee36796dc" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 形式仕様記述言語 TLA+ を題材にした記事（65 いいね）。<br>• AI にテストケースを書かせるのではなく、システムが満たすべきルール（仕様）を書くべきだと主張している。<br>• 仕様をもとに検証する考え方を紹介している。<br><br>個々のテストケースではなく、満たすべき性質を定義するアプローチ。AI が書いたコードの正しさを確かめる方法として、形式手法が見直されている流れの一つ。</td></tr>
+<tr><td class="num">3</td><td class="title">著名な Rust 製 OSS を Lean 4 で形式検証してみたら、たくさんバグが見つかった話</td><td class="link-col"><a href="https://zenn.dev/koukyosyumei/articles/31c8fcf4da45b7" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Lean 4 で Rust 製 OSS を形式検証した記事（38 いいね）。<br>• 検証の過程で多くのバグが見つかったとしている。<br>• はてブでも 126 users を集めた。<br><br>形式検証が研究だけでなく、実際の OSS の品質向上にも使えることを示す事例。具体的にどのプロジェクトのどんなバグかは記事本文で確認できる。</td></tr>
+<tr><td class="num">4</td><td class="title">なぜ今形式検証なのか</td><td class="link-col"><a href="https://zenn.dev/ncdc/articles/dcec80b0c067b0" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NCDC による記事（35 いいね）。<br>• 形式検証が今注目される理由を整理している。<br>• はてブでも 113 users を集めた。<br><br>AI 時代のソフトウェアの品質保証の手段として、形式検証を改めて紹介する内容。上の TLA+ や Lean の記事と合わせて読むと、全体の流れをつかみやすい。</td></tr>
+<tr><td class="num">5</td><td class="title">作れるエンジニアから、価値を届けるエンジニアへ</td><td class="link-col"><a href="https://zenn.dev/kubell/articles/3c3490a3592bb1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• kubell（旧 Chatwork）による記事で、アイデアカテゴリ（17 いいね）。<br>• 「作れる」ことから「価値を届ける」ことへ、エンジニアの役割の重心を移すべきだと論じている。<br>• エンジニアのキャリアや考え方についての記事。<br><br>コードを書くこと自体の希少性が下がる中で、エンジニアが何で価値を出すかを問う議論の一つ。はてブや Qiita の同じ趣旨の記事とも通じる内容。</td></tr>
+<tr><td class="num">6</td><td class="title">Google が実践する STAMP/STPA とは何か？ 私たちの SRE にも使えるのか</td><td class="link-col"><a href="https://zenn.dev/maruloop/articles/7ff108e29741b5" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 安全分析の手法 STAMP/STPA を紹介する記事（4 いいね）。<br>• Google が実践しているとされるこの手法を、SRE（サイト信頼性エンジニアリング）に生かせるかを検討している。<br>• 新しく公開された記事で、いいねはまだ少ない。<br><br>STAMP/STPA は、部品の故障ではなく構成要素どうしの関係から事故の原因を分析する手法。障害対応や信頼性の設計を見直したい SRE チームにとって参考になりそう。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">脆弱性の「CVSS 9.8」って結局なに？ CVSS の読み方をちゃんと理解する</td><td class="link-col"><a href="https://qiita.com/heki-dm/items/77ecaacd592d1c4459df" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 脆弱性の深刻度を表す CVSS スコアの読み方を解説する記事（23 いいね）。<br>• 「9.8」のような数値が何を意味するのかを説明している。<br>• 「Security」「CVE」などのタグが付いている。<br><br>脆弱性情報には必ずといっていいほど CVSS が付くが、点数だけで対応の優先度を決めると判断を誤ることもある。スコアの内訳を読めるようになるための基礎知識として役立つ。</td></tr>
+<tr><td class="num">2</td><td class="title">コードを書くコストが下がった今、ソフトウェアエンジニアリングの価値はどこにあるのか</td><td class="link-col"><a href="https://qiita.com/figueiredoluiz/items/1d6751643b84db67812e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 生成 AI でコードを書くコストが下がった時代のエンジニアリングの価値を論じた記事（20 いいね）。<br>• 「コードレビュー」「AI 駆動開発」「CodeRabbit」のタグが付いている。<br>• AI レビューツールにも触れているとみられる。<br><br>コードを書く速さより、レビューや設計、品質の確認に価値が移っているという問題意識。はてブや Zenn にも同じ趣旨の記事が並び、今日のテーマの一つになっている。</td></tr>
+<tr><td class="num">3</td><td class="title">セキュリティ情報 406 件を「脆弱性-手口-被害-対策」の 1 枚の分類図にまとめてから読めたこと</td><td class="link-col"><a href="https://qiita.com/songchong/items/4ad36f1857ba2b4ee4f1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• セキュリティ情報 406 件を 4 つの軸で 1 枚の分類図に整理した記事（15 いいね、前日の 7 から増加）。<br>• 分類図を作ってからニュースを読むと理解しやすくなった体験を紹介している。<br>• 初心者・情シス向けで、VPN などのタグが付いている。<br><br>大量のセキュリティ情報を体系的に把握する方法として、学び始めの人や社内のセキュリティ担当者に役立つ。同じ筆者は下の記事も公開している。</td></tr>
+<tr><td class="num">4</td><td class="title">なぜ 11 月に日本のサイバー事故は「爆発」したのか — 605 件を数えたら「日本が狙われている」だけではなかった</td><td class="link-col"><a href="https://qiita.com/songchong/items/073f202bb0ca65611b30" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 11 月に日本で起きたサイバー事故 605 件を数えて分析した記事（11 いいね）。<br>• 件数が急増した理由は「日本が狙われている」だけでは説明できないとしている。<br>• 初心者・情シス向けで、SaaS のタグが付いている。<br><br>件数の増加をデータで分解しようとする試み。SaaS 経由の被害など、複数の要因が重なっている可能性を示す内容とみられ、詳細な分析は記事本文で確認できる。</td></tr>
+<tr><td class="num">5</td><td class="title">日本語サイトで指定しておきたい CSS 2026 年版</td><td class="link-col"><a href="https://qiita.com/tofu_frontend/items/6a1bb7d80a58736eef0e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 日本語のサイトで設定しておきたい CSS をまとめた記事（8 いいね）。<br>• 2026 年時点のブラウザの対応状況を踏まえた内容とみられる。<br>• フロントエンド開発者向けの実践的な記事。<br><br>日本語の改行や約物（句読点・括弧）の扱いなど、日本語特有の表示の問題は CSS の新機能で改善が進んでいる。既存サイトの見直しにも使えるまとめ。</td></tr>
+<tr><td class="num">6</td><td class="title">Claude Code を安全に「自走」させるなら、もう Docker Sandboxes 一択でよくない？と思った話</td><td class="link-col"><a href="https://qiita.com/yamac_tech/items/2f1d598288990c381f2d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• はてブで 684 users を集めた note 記事と同じ筆者による Qiita 版（8 いいね）。<br>• Claude Code を自律的に動かすときの安全策として Docker Sandboxes を検討している。<br>• Windows 環境や Codex にも触れている。<br><br>はてブでの反響の大きさに比べると Qiita での反応は控えめだが、内容は同じテーマ。エージェントを隔離環境で動かす方法を具体的に知りたい人向け。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header local-llm"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>🤖 Reddit r/LocalLLaMA — 新着（直近48時間・前日未掲載）</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">9〜30Bモデルを動かそうとしている人への注意点 — (原文: Note for anyone trying to run any 9-30B model)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3syrs/note_for_anyone_trying_to_run_any_930b_model/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 9〜30Bクラスのモデルをローカルで動かす際の注意を共有する投稿<br>• スコア2ながらコメント17件と議論が集まっている<br>• 具体的な注意内容は本文の確認が必要<br><br>このサイズ帯はコンシューマGPUで動かせるかどうかの境界にあたり、量子化やコンテキスト長の設定で体感が大きく変わる。設定ノウハウを集めたスレッドとして参考になる可能性がある。</td></tr>
+<tr><td class="num">2</td><td class="title">inkling-2-miniを「System 1」役のOpenAI互換エンドポイントとして使えるか — (原文: inkling-2-mini as system-one and openai compatible endpoint possible?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3soc2/inkling2mini_as_systemone_and_openai_compatible/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• inkling-2-miniを高速応答担当（System 1）として使う構成についての質問<br>• OpenAI互換APIとして公開できるかを尋ねている<br>• スコア6・コメント5<br><br>小型モデルで即答し、難しい処理は大型モデルに回す二層構成は関心が高まっている。llama.cppやvLLMなど多くのエンジンがOpenAI互換APIを備えており、既存ツールとの接続方法が論点になる。</td></tr>
+<tr><td class="num">3</td><td class="title">1組の重みで通常版とアブリテレーション版DeepSeekを切り替える方法 — (原文: GPT Astra and I found a way to switch between regular and abliterated DeepSeek with just one set of weights)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3sam3/gpt_astra_and_i_found_a_way_to_switch_between/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 通常版と拒否挙動を除去した版のDeepSeekを、1組の重みで切り替える手法の報告<br>• 投稿者はAI（GPT Astra）と共同で見つけたとしている<br>• スコア8・コメント11<br><br>2組の重みを持たずに済めばストレージやVRAMの節約になる。アブリテレーションは重み編集で拒否方向を取り除く手法で、切り替えの仕組みや品質への影響は本文やコメントでの確認が必要。</td></tr>
+<tr><td class="num">4</td><td class="title">Qwen3.6-Grammar-Distill-GGUF の紹介 — (原文: Qwen3.6-Grammar-Distill-GGUF)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3rm7a/qwen36grammardistillgguf/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Qwen3.6ベースとみられる蒸留モデルのGGUF版の紹介<br>• 名称から文法校正向けの用途特化モデルと推測される<br>• スコア0、コメントなし<br><br>文法校正のような狭い用途は小型の蒸留モデルでも実用になりやすい。反応はまだなく、性能は今後の評価待ち。</td></tr>
+<tr><td class="num">5</td><td class="title">30B前後のエージェント型コーディング向けおすすめモデル — (原文: Recommended model for agenti coding around 30B)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3qc4z/recommended_model_for_agenti_coding_around_30b/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 30B前後でエージェント型コーディングに向くモデルを尋ねる質問<br>• スコア0ながらコメント20件と回答が多い<br>• 候補モデルの比較がスレッドで行われているとみられる<br><br>30B級はシングルGPUで動かせる上限付近で、ツール呼び出しの安定性が選定の鍵になりやすい。#14 のコーディング特化傾向をめぐる議論とも関連する話題。</td></tr>
+<tr><td class="num">6</td><td class="title">OrukFourier-2B、オープンウェイト英語音声認識で1位を主張 — (原文: OrukFourier-2B, [#1 Open-Weight English ASR])</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3qblm/orukfourier2b_1_openweight_english_asr/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 2Bパラメータの英語音声認識（ASR）モデル「OrukFourier-2B」の紹介<br>• オープンウェイトの英語ASRで1位としている<br>• スコア27・コメント8<br><br>ASRはWhisper系が長く定番だったが、新しい公開モデルが相次いでいる。「1位」の根拠となるベンチマークや評価条件はモデルカードでの確認が必要。</td></tr>
+<tr><td class="num">7</td><td class="title">Tesla V100 1枚でInkling-2-Mini 94 tok/s、Q8フル重み＋厳密な投機的デコード — (原文: Inkling-2-Mini on a single Tesla V100: 94 tok/s with exact speculative decoding, on the full Q8 weights (vs every published V100 figure I could find))</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3qawq/inkling2mini_on_a_single_tesla_v100_94_toks_with/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 旧世代のTesla V100 1枚でInkling-2-Miniを94 tok/sで動かした報告<br>• Q8の重みで、出力が変わらない厳密な投機的デコードを使用<br>• 公開されている他のV100の数値と比較しているとしている<br><br>V100は中古市場で入手しやすく、旧世代GPUの活用例として参考になる。比較条件の揃え方が評価のポイントになる。</td></tr>
+<tr><td class="num">8</td><td class="title">米中のオープンウェイト・フィードバックループ — (原文: The US-China Open-Weight Feedback Loop)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3q68f/the_uschina_openweight_feedback_loop/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 米国と中国のオープンウェイトモデル開発が互いに影響し合う構図を論じる投稿<br>• スコア323と本日2番目の高評価<br>• コメントは26件<br><br>中国勢の公開モデルが米国勢の公開判断を促し、その逆も起きているという見方がある。政策や輸出規制の動向次第で構図が変わる可能性もあり、ローカルLLMの選択肢にも影響する話題。</td></tr>
+<tr><td class="num">9</td><td class="title">Delta Inference Engine 0.95: 3090＋128GB RAMでDeepSeek V4.1 Flashが44 tok/s — (原文: Delta Inference Engine update 0.95: DeepSeek V4.1 Flash at 44 tok/s with Unsloth Q2 on a 3090/128GB RAM, 61% faster on 64GB of RAM, pictures + PDF/Office documents + local voice and much more. ready for Claude Code / Codex / OpenCode)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3q104/delta_inference_engine_update_095_deepseek_v41/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 推論エンジン「Delta Inference Engine」の0.95版リリース報告<br>• RTX 3090＋128GB RAMでUnsloth Q2のDeepSeek V4.1 Flashが44 tok/s、64GB RAM環境では61%高速化したとしている<br>• 画像・PDF/Office文書・ローカル音声に対応し、Claude Code / Codex / OpenCode からの利用も想定<br><br>大型MoEモデルをGPU1枚＋大容量RAMで動かす取り組みの一つ。Q2という強い量子化での品質がどの程度保たれるかは別途確認が必要。</td></tr>
+<tr><td class="num">10</td><td class="title">RTX 5090 1枚でQFNのプリフィル約19K・デコード約400 tok/s（合算） — (原文: ~19K Prefill / ~400 tok/s Decode speeds (aggregate) on a single 5090 QFN)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3oaj3/19k_prefill_400_toks_decode_speeds_aggregate_on_a/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• RTX 5090 1枚でのQFNの推論速度報告<br>• プリフィル約19K tok/s、デコード約400 tok/s（複数リクエストの合算値）としている<br>• スコア0ながらコメント21件<br><br>合算値は並列リクエスト時のスループットで、単一ストリームの速度とは異なる点に注意が必要。サーバー用途でのコンシューマGPUの実力を示すデータになる。</td></tr>
+<tr><td class="num">11</td><td class="title">Inkling Mini 2が8GB VRAM＋48GB RAMで40 t/s（Polystrata使用） — (原文: Inkling Mini 2 - 40 t/s at 8 Gb Vram + 48 Ram - Polystrata)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3n6ab/inkling_mini_2_40_ts_at_8_gb_vram_48_ram/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 8GB VRAMと48GB RAMの環境でInkling Mini 2を40 t/sで動かした報告<br>• 「Polystrata」というツール・手法を使用しているとみられる<br>• スコア6・コメント5<br><br>VRAMの少ない環境でもRAMへのオフロードで実用速度を出す例として参考になる。Inkling 2系の速度報告が続く流れの一つ。</td></tr>
+<tr><td class="num">12</td><td class="title">旧型A100でInkling-2-Miniが150 tok/s — (原文: [D] Inkling-2-Mini at 150 tok/s on an old A100)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3m66d/d_inkling2mini_at_150_toks_on_an_old_a100/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• A100でInkling-2-Miniを150 tok/sで動かした報告<br>• 議論（[D]）タグ付きの投稿<br>• スコア2・コメント6<br><br>データセンター向けGPUの中古品も個人の選択肢に入りつつある。#7 のV100と合わせ、世代ごとの速度比較の材料になる。</td></tr>
+<tr><td class="num">13</td><td class="title">NVLink接続の3090×2で最高のトークンレートを出すには — (原文: best token rate from 2x3090 NVLinked)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3lxm6/best_token_rate_from_2x3090_nvlinked/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NVLinkで接続したRTX 3090 2枚の構成で速度を最大化する方法を尋ねる質問<br>• スコア0・コメント13<br>• エンジン選びやテンソル並列の設定が論点とみられる<br><br>3090はNVLinkに対応する最後のコンシューマGPUで、2枚構成は48GB VRAMの定番構成。NVLinkの効果は推論エンジンや並列化方式で変わる。</td></tr>
+<tr><td class="num">14</td><td class="title">GLM 5.4はコーディングは優秀だが文章は苦手、今後のオープンモデルはコード特化ばかりになるのか — (原文: GLM 5.4 is great at coding. But absolutely garbage at writing and anything but that. Are future open weight models going to be just codemaxxed??)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3lqu3/glm_54_is_great_at_coding_but_absolutely_garbage/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GLM 5.4について、コーディングは高評価だが文章作成などは弱いと指摘<br>• 今後のオープンウェイトモデルがコーディング偏重になるのではと問題提起<br>• スコア551・コメント273と本日最も注目された投稿<br><br>エージェント型コーディング需要の高まりで、各社が学習をコード寄りにしているとの見方がある。創作や対話用途のユーザーにとってはモデル選択の幅に関わる論点。</td></tr>
+<tr><td class="num">15</td><td class="title">Ninada Reader: 端末内で動く翻訳・要約・インド諸語TTSのChrome拡張 — (原文: I built Ninada Reader, an on-device Chrome extension for local translation, summarization, and 24 kHz Indic + English neural TTS)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3lgw7/i_built_ninada_reader_an_ondevice_chrome/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 端末内で処理するChrome拡張「Ninada Reader」を開発したという投稿<br>• ローカル翻訳・要約と、24kHzのインド諸語＋英語ニューラルTTSに対応<br>• スコア5・コメント1<br><br>ブラウザ内で完結する処理はプライバシー面の利点が大きい。インド諸語のTTSは選択肢が少ない分野で、品質の評価が今後の焦点。</td></tr>
+<tr><td class="num">16</td><td class="title">inclusionAI、Ling-3.2-airをHugging Faceで公開 — (原文: inclusionAI/Ling-3.2-air · Hugging Face)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3la3q/inclusionailing32air_hugging_face/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• inclusionAI（Ant Group系）の「Ling-3.2-air」のモデルページへのリンク投稿<br>• スコア168・コメント27と関心が高い<br>• 「air」の名称から軽量版とみられる<br><br>Lingシリーズは中国発のオープンモデルの一つで、#8 の米中の公開競争の文脈にも位置づけられる。モデルサイズや性能はモデルカードでの確認が必要。</td></tr>
+<tr><td class="num">17</td><td class="title">Aleph Alpha、Kolibri 1.1 75B-A3.4Bを公開 — (原文: Aleph-Alpha's Kolibri 1.1 75B-A3.4B has been released)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3l96z/alephalphas_kolibri_11_75ba34b_has_been_released/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ドイツのAleph Alphaが「Kolibri 1.1」を公開<br>• 総パラメータ75B、アクティブ3.4BのMoEモデル<br>• スコア116・コメント24<br><br>アクティブパラメータが小さいため、RAMオフロードでも比較的高速に動かせる構成。欧州発のオープンモデルとして、多言語性能などが評価の焦点になる。</td></tr>
+<tr><td class="num">18</td><td class="title">Karpathyのmakemoreの次に、実際にモデルを実験するにはどうすればよいか — (原文: Coming from Karpathy's makemore, how to actually experiment with models in practice?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3kzgg/coming_from_karpathys_makemore_how_to_actually/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Karpathyの教材makemoreで学んだ後、実践的なモデル実験の進め方を尋ねる質問<br>• スコア5・コメント4<br>• 学習から実験への移行方法が論点<br><br>教材と実際の研究・開発の間には、データ準備や計算資源、評価方法などの壁がある。学習者向けの具体的な助言が集まるスレッド。</td></tr>
+<tr><td class="num">19</td><td class="title">Threadripperへの移行を検討中、すべきか — (原文: Thinking of moving to Threadripper. Should I?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3kwd8/thinking_of_moving_to_threadripper_should_i/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ローカルLLM用にAMD Threadripperへ移行すべきかの相談<br>• スコア0ながらコメント34件と議論が活発<br>• メモリチャネル数やPCIeレーン数の利点が論点とみられる<br><br>大型MoEモデルをCPU/RAMで動かす流れの中で、多チャネルメモリのワークステーションが注目されている。コストと得られる速度の見合いが判断材料になる。</td></tr>
+<tr><td class="num">20</td><td class="title">フロンティアモデルで補う最も安い方法は？ — (原文: Cheapest frontier supplementation?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3k7xe/cheapest_frontier_supplementation/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ローカルモデルを補完するため、フロンティアモデルを最も安く使う方法を尋ねる質問<br>• スコア5・コメント8<br>• API料金やサブスクリプションの比較が論点とみられる<br><br>ローカルで日常処理を行い、難しいタスクだけクラウドに回す併用スタイルが広がっている。#2 の二層構成の議論とも通じる話題。</td></tr>
+<tr><td class="num">21</td><td class="title">今GPUを買うべきか — (原文: Buy GPUs now?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3k60f/buy_gpus_now/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• GPU購入のタイミングについての相談<br>• スコア0ながらコメント29件<br>• 価格動向や新製品の見通しが論点とみられる<br><br>GPU価格は需給や新世代の発売時期に左右されやすく、判断が分かれやすい話題。具体的な助言は用途と予算次第になる。</td></tr>
+<tr><td class="num">22</td><td class="title">Qwen3.5-0.8Bの思考モードがtemp 0.6で上限までループ、検出・修復するOSSツールを開発 — (原文: Qwen3.5-0.8B with thinking on loops till the token cap at temp 0.6 (the setting from MIT's weight-space programming post), at 1.0 it doesn't. built an open source tool that catches same  and repairs model failures)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3jx5o/qwen3508b_with_thinking_on_loops_till_the_token/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Qwen3.5-0.8Bの思考モードが温度0.6でトークン上限までループし、1.0では起きないと報告<br>• 0.6はMITの「重み空間プログラミング」に関する投稿で使われた設定<br>• こうした失敗を検出・修復するオープンソースツールを開発したとしている<br><br>小型モデルの推論ループはサンプリング設定に敏感で、実運用での落とし穴になりやすい。ツールの汎用性は他モデルでの検証が必要。</td></tr>
+<tr><td class="num">23</td><td class="title">オープンなAI生成テキスト検出モデルはあるか — (原文: Open AI text detection models?)</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3jfw0/open_ai_text_detection_models/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• AI生成テキストを判定するオープンなモデルを探す質問<br>• スコア3・コメント4<br>• タイトルの「Open AI」はOpenAI社ではなくオープンなモデルの意とみられる<br><br>AI生成文の検出は誤判定が多く、精度に限界があることが知られている。用途によっては検出結果を補助的な参考にとどめる必要がある。</td></tr>
+<tr><td class="num">24</td><td class="title">runmyaiを試した人はいるか（SSDからQFNを高速実行と主張） — (原文: Did anyone try runmyai? (Claims to run QFN off of SSD at crazy speeds))</td><td class="link-col"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1y3j2b5/did_anyone_try_runmyai_claims_to_run_qfn_off_of/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 「runmyai」というツールの使用経験を尋ねる投稿<br>• QFNをSSDから非常に高速に実行できると主張している<br>• スコア6・コメント4<br><br>SSDからのストリーミング実行はMoEモデルで研究が進む手法だが、速度の主張には誇張も見られる。独立した検証結果が出るまでは慎重に見る必要がある。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-24 06:34 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
