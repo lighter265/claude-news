@@ -51,6 +51,8 @@ assert_file() {
 
 main() {
     cd "$REPO"
+    # 前回実行のReddit失敗マーカーが残っていたら消す（今回の結果だけを見る）
+    rm -f raw/reddit_local_llm.failed
     # .env 読み込み
     if [[ -f "$REPO/local/.env" ]]; then
         set -a
@@ -73,11 +75,19 @@ main() {
     assert_file "scripts/fetch_all.py"
     assert_file "feed-format.md"
     assert_file "scripts/extract_local_llm.py"
+    assert_file "scripts/fetch_reddit_local_llm.py"
     assert_file "local-llm-format.md"
     assert_file "local/send_mail.py"
 
     log "ニュース取得開始"
     run python3 scripts/fetch_all.py
+
+    # Reddit は donsetch を使うため並列取得から外し、ここで単独で取得する。
+    # 失敗しても他のソースは継続（マーカーは fetch_reddit_local_llm.py が置く）。
+    log "Reddit取得開始（donsetch・単独）"
+    if ! run python3 scripts/fetch_reddit_local_llm.py; then
+        log "Reddit取得に失敗（マーカーを確認）"
+    fi
 
     if [[ "$NO_FILTER_MODE" == true ]]; then
         log "既出URLフィルタスキップ (--no-filter)"
@@ -94,7 +104,7 @@ main() {
     fi
     log "raw JSON: ${raw_count} ファイル"
 
-    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。"
+    local prompt="raw/*.json を読み、feed-format.md の要約ルール・記法に従って生成し、feed.md へ上書きしてください。ただし raw/reddit_local_llm.json はローカルLLM専用データなので、通常の feed.md には絶対に参照・掲載しないでください。"
     log "要約生成開始"
 
     #run timeout 1800 claude -p "$prompt"
@@ -131,7 +141,19 @@ main() {
     log "ローカルLLM記事抽出開始"
     run python3 scripts/extract_local_llm.py
 
-    local llm_prompt="raw/local_llm_github.json を読み、local-llm-format.md の要約ルール・記法に従って生成し、feed-local-llm.md へ上書きしてください。"
+    # Reddit取得失敗時: 前回のrawを退避して本日分として使わせない（失敗は明記する）
+    local reddit_failure=""
+    if [[ -f raw/reddit_local_llm.failed ]]; then
+        reddit_failure="$(cat raw/reddit_local_llm.failed)"
+        log "Reddit取得失敗: ${reddit_failure}"
+        mkdir -p raw/.stale
+        if [[ -f raw/reddit_local_llm.json ]]; then
+            mv -f raw/reddit_local_llm.json "raw/.stale/reddit_local_llm.$(date '+%Y%m%d%H%M%S').json"
+            log "前回の raw/reddit_local_llm.json を raw/.stale/ へ退避しました"
+        fi
+    fi
+
+    local llm_prompt="raw/local_llm_github.json と raw/reddit_local_llm.json を読み、local-llm-format.md の要約ルール・記法に従って生成し、feed-local-llm.md へ上書きしてください。GitHubとRedditは必ず別セクションにしてください。"
     log "ローカルLLM要約生成開始"
     run timeout 1800 claude --model opus --dangerously-skip-permissions -p "$llm_prompt"
 
@@ -146,6 +168,13 @@ main() {
     if [[ "$llm_body" != *"$expected_llm_title"* ]]; then
         log "feed-local-llm.md に本日のタイトルがありません: $expected_llm_title"
         exit 1
+    fi
+    if [[ -n "$reddit_failure" ]]; then
+        {
+            printf '\n## ⚠ Reddit r/LocalLLaMA（取得失敗）\n\n'
+            printf '本日の取得は失敗しました（%s）。Redditの記事は掲載していません。\n' "$reddit_failure"
+        } >> feed-local-llm.md
+        log "feed-local-llm.md にReddit取得失敗を明記"
     fi
     log "ローカルLLM要約: 完了 (feed-local-llm.md)"
     # --- ここまで追加機能 ---

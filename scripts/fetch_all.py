@@ -1,4 +1,8 @@
-"""6 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。"""
+"""6 ソースを並列取得し raw/ に保存。1 ソース失敗でも残りは継続する。
+
+reddit_local_llm は donsetch を使うため並列から外し、
+execute.sh で fetch_all の後に個別に取得する（並列だと donsetch が exit 3 になる）。
+"""
 import importlib
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
