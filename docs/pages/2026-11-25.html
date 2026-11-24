@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>技術ニュース要約 — 2026-11-25</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f5f5f5; color: #333; line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 1.6rem; text-align: center; padding: 24px 0 16px; color: #1a1a2e; }
+  /* breadcrumb */
+  .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 20px; font-size: .85rem; color: #888; }
+  .breadcrumb a { color: #2a4f85; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { color: #bbb; }
+  .breadcrumb .current { color: #555; font-weight: 500; }
+  /* tables */
+  .section-title { font-size: 1.1rem; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px 4px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.08); margin-bottom: 32px; }
+  thead .section-header th { background: #1a1a2e; color: #e8e8e8; font-size: 1rem; font-weight: 700; padding: 12px 16px; border-bottom: 2px solid #16213e; }
+  thead .section-header.local-llm th { background: #1e3a2f; color: #d9f2e5; border-bottom: 2px solid #163027; }
+  thead .sub-header th { background: #2d2d44; color: #ccc; font-size: .78rem; font-weight: 500; padding: 6px 16px; border-bottom: 1px solid #3d3d54; }
+  tbody td { padding: 10px 14px; vertical-align: top; }
+  .num { width: 36px; text-align: center; color: #999; font-size: .82rem; font-weight: 500; }
+  .title { font-weight: 600; font-size: .93rem; color: #222; }
+  .link-col { width: 44px; text-align: center; }
+  .link-col a { text-decoration: none; font-size: 1rem; color: #4a6fa5; }
+  .link-col a:hover { color: #2a4f85; }
+  .summary-row td { border-bottom: 1px solid #eee; }
+  .summary { font-size: .84rem; color: #555; padding: 2px 0 10px; line-height: 1.7; }
+  .summary br + br { display: block; content: ""; margin-top: 4px; }
+  tbody tr:hover td { background: #f8f9fb; }
+  /* 折りたたみ: ソース名クリックで記事を開閉 */
+  th.toggle { cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+  th.toggle:focus-visible { outline: 2px solid #f0b400; outline-offset: -2px; }
+  .chev { display: inline-block; width: 1.2em; transition: transform .15s; transform: rotate(90deg); }
+  table.collapsed .chev { transform: none; }
+  table.collapsed tbody, table.collapsed .sub-header { display: none; }
+  table.collapsed thead .section-header th { border-bottom: 0; }
+  /* highlights (📌 今日の3行サマリ) */
+  .highlights {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border-left: 4px solid #f0b400;
+    border-radius: 8px;
+    padding: 16px 20px 16px 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .highlights h2 {
+    font-size: 1.05rem; font-weight: 700; color: #5d4708;
+    margin: 0 0 10px 0; padding: 0;
+  }
+  .highlights ul { list-style: none; padding: 0; margin: 0; }
+  .highlights li {
+    font-size: .92rem; color: #444;
+    padding: 4px 0 4px 1.2em;
+    position: relative;
+    line-height: 1.6;
+  }
+  .highlights li::before {
+    content: "▸";
+    position: absolute; left: 0; top: 4px;
+    color: #f0b400; font-weight: 700;
+  }
+  footer { text-align: center; padding: 32px 0; font-size: .78rem; color: #999; }
+  footer a { color: #666; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    .container { padding: 16px 10px; }
+    h1 { font-size: 1.3rem; padding: 16px 0 12px; }
+    tbody td { padding: 8px 10px; }
+    .title { font-size: .88rem; }
+    .summary { font-size: .8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📰 技術ニュース要約 — 2026-11-25</h1>
+<nav class="breadcrumb" aria-label="パンくずナビ">
+  <a href="../index.html">トップ</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <a href="../2026-11.html">2026年11月</a>
+  <span class="sep" aria-hidden="true">›</span>
+  <span class="current" aria-current="page">2026-11-25</span>
+</nav>
+<section class="highlights" aria-label="今日の3行サマリ">
+  <h2>📌 今日の3行サマリ</h2>
+  <ul><li>HN では、PrismML の 3 値（ternary）量子化モデル「Ternary Bonsai 2.5 27B」が 120 ポイントで首位になり、2 位（15 ポイント）を大きく引き離した。</li><li>国内ではセキュリティ事故の公表が続いた。はてブでマクドナルド公式アプリの不正アクセス（206 users）と楽天証券の情報漏えい第 2 報（173 users）が上位に入り、Qiita では「11 月に日本のサイバー事故が急増した理由」を 605 件の集計から分析する記事が読まれた。</li><li>はてブ首位は NTT の研究所と IOWN を解説するブログ記事（283 users）。ソフトバンクが「ITmedia」の運営会社の売却を検討しているという日経の報道も 169 users を集めた。</li></ul>
+</section>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>GitHub Trending</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">CLI-Anything：あらゆるソフトウェアを AI エージェント対応にするプロジェクト</td><td class="link-col"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 香港大学の HKUDS が公開しているリポジトリ。<br>• 「Making ALL Software Agent-Native」を掲げ、既存のソフトウェアを AI エージェントから CLI 経由で使えるようにすることを目指している。<br>• コミュニティが作った CLI を `pip install cli-anything-hub` → `cli-hub install &lt;name&gt;` で探して導入できる「CLI-Hub」も用意されている。<br><br>「これからのソフトウェアの利用者は人間だけでなくエージェントになる」という考え方に基づくプロジェクト。GUI 中心のアプリをエージェントにどう操作させるかは各所で模索されており、CLI を共通の窓口にするのはその一つの答えといえる。</td></tr>
+<tr><td class="num">2</td><td class="title">OpenVINO：AI 推論の最適化・デプロイ用オープンソースツールキット</td><td class="link-col"><a href="https://github.com/openvinotoolkit/openvino" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Intel 系のオープンソースプロジェクト「OpenVINO」のリポジトリ。<br>• 深層学習モデルを最適化し、実際の環境にデプロイ（配備）するためのツールキット。<br>• 画像認識、音声認識、自然言語処理に加え、大小の言語モデルを含む生成 AI の推論にも対応するとしている。<br><br>クラウドの GPU だけでなく、手元の CPU や内蔵 GPU などで推論を効率よく動かしたい需要は根強い。ローカルで生成 AI を動かす流れの中で、改めて注目を集めているとみられる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Hacker News</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">Ternary Bonsai 2.5 27B — (原文: Ternary Bonsai 2.5 27B)</td><td class="link-col"><a href="https://prismml.com/news/bonsai-2-5-27b" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• PrismML が発表した、パラメータ数 27B（270 億）の言語モデル。<br>• 名前のとおり、重みを 3 値（ternary）で表す、極端に軽量化したモデルとみられる。<br>• HN では 120 ポイント、コメント 34 件で本日の首位。2 位以下を大きく引き離した。<br><br>重みのビット数を大きく減らせば、メモリが少ない手元の機器でも大きなモデルを動かしやすくなる。精度がどこまで保たれているか、どんな環境で動くかは、発表記事とコメント欄で確認したい。</td></tr>
+<tr><td class="num">2</td><td class="title">Launch HN：Versine（YC F26）— 送金と受け取りができる MCP — (原文: Launch HN: Versine (YC F26) – MCP to send and receive money)</td><td class="link-col"><a href="https://news.ycombinator.com/item?id=50634426" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Y Combinator の F26 期に参加しているスタートアップ Versine のお披露目投稿。<br>• MCP（Model Context Protocol）を通じて、AI エージェントがお金を送ったり受け取ったりできるようにするサービス。<br>• HN では 15 ポイント、コメント 7 件。<br><br>エージェントに決済まで任せる仕組みは、便利になる一方で、権限の範囲や不正利用への備えが大きな課題になる。安全策がどう設計されているかがコメント欄の論点になりそう。</td></tr>
+<tr><td class="num">3</td><td class="title">ニューヨーク・タイムズ、写真家に Photoshop 2027 の使用を禁止 — (原文: New York Times Prohibits Photographers from Using Photoshop 2027)</td><td class="link-col"><a href="https://petapixel.com/2026/11/24/new-york-times-prohibits-photographers-from-using-photoshop-2027/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• PetaPixel の 2026-11-24 付の記事。<br>• ニューヨーク・タイムズが、所属する写真家に対して Photoshop の 2027 年版の使用を禁じたと報じている。<br>• HN では 9 ポイント、コメント 1 件。<br><br>理由は元記事で確認が必要だが、新しいバージョンに組み込まれた生成 AI 機能と、報道写真の真正性との関係が背景にあるとみられる。報道機関が AI による画像編集にどう線を引くかを示す事例になる。</td></tr>
+<tr><td class="num">4</td><td class="title">なぜ TikTok は国家安全保障上の脅威で、ジェンスン・フアン氏は問題ないのか — (原文: Why Is TikTok a National Security Threat, but Jensen Huang Is Fine?)</td><td class="link-col"><a href="https://www.techdirt.com/2026/11/24/ive-been-under-a-rock-why-is-tiktok-a-national-security-threat-but-jensen-huang-is-fine/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Techdirt の 2026-11-24 付のコラム。<br>• TikTok が安全保障上の脅威として扱われる一方、NVIDIA のフアン氏は問題視されないことの矛盾を論じている。<br>• HN では 6 ポイント、コメント 4 件。<br><br>前日から続く NVIDIA の CEO 復帰をめぐる議論の延長にある記事。同日には、フアン氏が社員に「後継者計画は不要」と語ったという CNBC の記事も投稿されている。</td></tr>
+<tr><td class="num">5</td><td class="title">ナスダックが再び下落、NVIDIA と Anthropic の株が下落 — (原文: Nasdaq Resumes Selloff as Nvidia, Anthropic Shares Slump)</td><td class="link-col"><a href="https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-24-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• WSJ の 2026-11-24 の株式市場ライブ記事。<br>• ナスダックで売りが再開し、NVIDIA と Anthropic の株価が下がったと伝えている。<br>• HN では 5 ポイント、コメントはまだない。<br><br>AI 関連銘柄の値動きは、NVIDIA の経営をめぐる混乱とも重なって注目されている。同日には「NVIDIA はエンロンではない」とした 2025 年のメモを紹介する記事も再投稿されていた。</td></tr>
+<tr><td class="num">6</td><td class="title">米 CIA と国家情報長官室がサイバー侵害を受ける — (原文: US CIA, ODNI suffer cybersecurity breach)</td><td class="link-col"><a href="https://www.reuters.com/world/us-cia-odni-suffer-cybersecurity-breach-some-unclassified-information-nyt-2026-11-24/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• ロイターの 2026-11-24 付の記事で、ニューヨーク・タイムズの報道を引いている。<br>• CIA と国家情報長官室（ODNI）がサイバー攻撃を受け、一部の非機密情報が影響を受けたと伝えている。<br>• HN では 5 ポイント。AP 通信の同じ話題の記事も別に投稿されている。<br><br>報道の範囲では、影響は非機密のシステム・情報にとどまるとされる。攻撃者や侵入経路などの詳細は、今後の続報を待つ必要がある。</td></tr>
+<tr><td class="num">7</td><td class="title">Claude のアーティファクトを Mac と Windows のデスクトップアプリとしてインストール可能に — (原文: Claude artifacts can now be installed as desktop apps on Mac and Windows)</td><td class="link-col"><a href="https://claude.com/resources/articles/install-as-app" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Claude 公式サイトのリソース記事。<br>• Claude で作ったアーティファクト（生成したアプリや画面）を、Mac と Windows にデスクトップアプリとしてインストールできるようになったと案内している。<br>• HN では 4 ポイント。<br><br>チャットの中で作った小さなツールを、普段使いのアプリとして手元に置けるようになる変更。同日には Anthropic の研究記事「Working with AI」も投稿されている。</td></tr>
+<tr><td class="num">8</td><td class="title">Todoist のアカウントに影響するセキュリティインシデント — (原文: Security incident affecting Todoist accounts)</td><td class="link-col"><a href="https://www.todoist.com/help/todoist/get-started/security-incident-in-november-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• タスク管理サービス Todoist のヘルプセンターに掲載された告知。<br>• 2026 年 11 月に発生した、利用者のアカウントに関わるセキュリティインシデントについて説明している。<br>• HN では 4 ポイントで、同じ告知への別の投稿も 4 ポイントを集めた。<br><br>影響の範囲や利用者に求められる対応（パスワードの変更など）は告知ページで確認できる。Todoist の利用者は、案内に沿って自分のアカウントを確認しておきたい。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>はてなブックマーク (tech)</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">NTT 研究所の正体 — IOWN と NTT の研究所</td><td class="link-col"><a href="https://endecl.hatenablog.com/entry/2026/05/04/223141" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 個人ブログの記事で、283 users と本日のはてブで首位。<br>• NTT の研究所がどんな組織なのかを、次世代通信基盤「IOWN」と合わせて解説している。<br>• 「NTT」「研究」「企業」などのタグが付いている。<br><br>記事自体は 2026 年 5 月の日付だが、改めて広く読まれた。大企業の研究所の実態は外から見えにくく、その内側を知りたいという関心の高さがうかがえる。</td></tr>
+<tr><td class="num">2</td><td class="title">マクドナルド公式アプリのデータベースへの不正アクセスについてのお知らせとお詫び</td><td class="link-col"><a href="https://www.mcdonalds.co.jp/company/info/261120a/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 日本マクドナルドの公式発表で、206 users。<br>• 公式アプリのデータベースが不正アクセスを受けたことを公表し、謝罪している。<br>• 「セキュリティ」「不正アクセス」などのタグが付いている。<br><br>利用者の多い飲食チェーンのアプリでの事故で、関心が高い。影響を受けた情報の種類や利用者への案内は、公式発表で確認できる。</td></tr>
+<tr><td class="num">3</td><td class="title">楽天証券、顧客情報の漏えいについてのお詫びとお知らせ（第 2 報）</td><td class="link-col"><a href="https://www.rakuten-sec.co.jp/web/info/info20261124-04.html" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 楽天証券の公式発表で、173 users。<br>• 顧客情報の漏えいについての第 2 報で、前回の発表からの続報にあたる。<br>• 「悪魔の証明」というタグも付いており、漏えいがないことを示す難しさに言及するコメントがあったとみられる。<br><br>証券口座をめぐっては不正アクセスの問題が続いており、金融サービスでの情報管理への目は厳しい。Qiita でも、11 月の国内サイバー事故の多さを分析する記事が読まれている。</td></tr>
+<tr><td class="num">4</td><td class="title">ソフトバンク、「ITmedia」運営会社の売却を検討 AI 関連事業に集中</td><td class="link-col"><a href="https://www.nikkei.com/article/DGXZQOUC1688U0W6A111C2000000/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 日本経済新聞の記事で、169 users。<br>• ソフトバンクが、IT ニュースサイト「ITmedia」を運営するアイティメディアの売却を検討していると報じている。<br>• ITmedia の続報（100 users）では、両社とも「コメントを控える」「決定した事実はない」としている。<br><br>ソフトバンクグループが AI 関連事業に経営資源を集める流れの一環と報じられている。国内の主要な IT メディアの行方として、エンジニアの関心も高い。</td></tr>
+<tr><td class="num">5</td><td class="title">Lean で始める契約プログラミング</td><td class="link-col"><a href="https://www.m3tech.blog/entry/contract-programming-in-lean" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• エムスリーのテックブログ記事で、132 users。<br>• 定理証明支援系 Lean を使った「契約プログラミング」の入門。<br>• 関数が満たすべき前提条件や結果を「契約」として書き、正しさを保証する考え方を扱っている。<br><br>前日に続き、Lean と形式検証への関心が高い。AI がコードを書く場面が増える中で、正しさを機械的に確かめる手法が見直されている流れの一つ。</td></tr>
+<tr><td class="num">6</td><td class="title">品質を積み上げられるようにする</td><td class="link-col"><a href="https://speakerdeck.com/goyoki/building-up-of-quality" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Speaker Deck で公開されたスライドで、91 users。<br>• ソフトウェアの品質を、一度きりではなく継続して積み上げていけるようにする方法を扱っている。<br>• テストや品質保証の分野で知られる筆者による資料とみられる。<br><br>開発のスピードが上がるほど、品質を後から取り戻すのは難しくなる。品質を仕組みとして積み上げる考え方は、AI を使った開発でも役立つ。</td></tr>
+<tr><td class="num">7</td><td class="title">ずんだもん、画像生成 AI 用の公式「LoRA」を公開 権利元が語る「絵師に迷惑をかけない」試み</td><td class="link-col"><a href="https://kai-you.net/article/97231" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• KAI-YOU の記事で、75 users。<br>• キャラクター「ずんだもん」の権利元が、画像生成 AI 向けの公式 LoRA（追加学習データ）を公開した。<br>• 権利元は、イラストレーター（絵師）に迷惑をかけないための試みだと説明している。<br><br>無断で学習された LoRA が出回ることへの対策として、権利元が自ら公式版を出す形といえる。キャラクターの権利と生成 AI の付き合い方の一つの例として注目される。</td></tr>
+<tr><td class="num">8</td><td class="title">Ruby で学ぶ Windows システムプログラミング</td><td class="link-col"><a href="https://www.hsbt.org/slide/20261121-SendaiRubyKaigi03/" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 仙台 Ruby 会議 03 での発表スライドで、61 users。<br>• Ruby を使って Windows のシステムプログラミングを学ぶ内容。<br>• 発表者は Ruby のコミッター（中心的な開発者）として知られる hsbt 氏。<br><br>Ruby は Linux や macOS で使われることが多く、Windows の内部に触れる資料は貴重。Ruby の Windows 対応の現状を知る手がかりにもなる。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Zenn</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">OSS の脆弱性が相次ぐ中、クラウド WAF を入れるだけでかなり違う話 + Rootless コンテナもおすすめ</td><td class="link-col"><a href="https://zenn.dev/kusuke/articles/98e178e6824cac" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 本日の Zenn で最多の 97 いいね。<br>• オープンソースソフトウェアの脆弱性が次々に見つかる状況への対策として、クラウド WAF の導入を勧めている。<br>• あわせて、root 権限なしでコンテナを動かす Rootless コンテナの利点も紹介している。<br><br>すべての脆弱性にすぐパッチを当てるのは難しく、WAF などで被害を抑える「多層防御」の考え方が現実的な対策になる。手軽に始められる方法として参考になる。</td></tr>
+<tr><td class="num">2</td><td class="title">Orca Bots が良さそう、何ができるのか</td><td class="link-col"><a href="https://zenn.dev/kg_motors_mibot/articles/orca-bot-intro" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 60 いいねを集めた紹介記事。<br>• 「Orca Bots」というツールで何ができるのかを整理している。<br>• 筆者の所属企業での利用を検討した視点から書かれているとみられる。<br><br>新しいツールの機能を短く整理した記事は、導入を考える人の入口として読まれやすい。具体的な機能や使いどころは元記事で確認したい。</td></tr>
+<tr><td class="num">3</td><td class="title">JSConf JP 2026 の公開資料・X アカウントのリンクまとめ</td><td class="link-col"><a href="https://zenn.dev/h_yoshikawa0724/articles/2026-11-23-jsconf-jp-2026" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 26 いいねのまとめ記事。<br>• JavaScript のカンファレンス「JSConf JP 2026」で公開された発表資料と、登壇者の X アカウントをまとめている。<br>• 同日には JSConf JP の参加記や初登壇の振り返り記事も投稿されている。<br><br>カンファレンスの資料を一か所で探せるため、参加できなかった人にも役立つ。JavaScript 界隈の最新の話題をまとめて追う入口になる。</td></tr>
+<tr><td class="num">4</td><td class="title">Claude Code を 5〜8 個並べても迷わないように、自分用のダッシュボードをバイブコーディングで作った</td><td class="link-col"><a href="https://zenn.dev/nexta_/articles/a3ff76a9f98f1c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 26 いいねの記事。<br>• Claude Code を同時に 5〜8 個動かしても状況を見失わないためのダッシュボードを自作した話。<br>• ダッシュボード自体も、AI に任せる「バイブコーディング」で作っている。<br><br>複数のエージェントを並行して動かす使い方が広がり、「どれが何をしているか」を把握する仕組みが必要になっている。同様の悩みを持つ人の参考になる。</td></tr>
+<tr><td class="num">5</td><td class="title">プログラミング教育の功罪</td><td class="link-col"><a href="https://zenn.dev/nobkz/articles/a8ed5591cd3e7d" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 13 いいねのアイデア記事。<br>• プログラミング教育が持つ良い面と悪い面を論じている。<br>• 教育の広がりが、学ぶ人や業界に与えた影響を考える内容とみられる。<br><br>AI がコードを書く時代に、人がプログラミングを学ぶ意味は改めて問われている。教育のあり方を考える材料になる。</td></tr>
+<tr><td class="num">6</td><td class="title">AI が作り AI が決める時代に、人は何を「判断」するのか？</td><td class="link-col"><a href="https://zenn.dev/ncdc/articles/a522c2c50022d2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• NCDC による 11 いいねのアイデア記事。<br>• AI が作るだけでなく決めることも担うようになる中で、人が担うべき「判断」とは何かを考えている。<br>• 同日には「コードを書くから迷わず判断するへ」という開発ワークフローの記事も投稿されている。<br><br>AI に任せる範囲が広がるほど、最終的な責任と判断を人がどこで持つかが重要になる。チームでの役割分担を考えるきっかけになる。</td></tr>
+<tr><td class="num">7</td><td class="title">Microsoft Foundry で AI エージェントを設計するときに決める 5 つのこと</td><td class="link-col"><a href="https://zenn.dev/microsoft/articles/daedf42c8463b8" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• Microsoft の Zenn 公式 Publication の記事で、8 いいね。<br>• Microsoft Foundry で AI エージェントを作るときに、最初に決めておくべき 5 つの項目を整理している。<br>• 設計段階での判断ポイントに絞った内容。<br><br>エージェント開発では、作り始める前の設計の決めごとが後の手戻りを左右する。Azure 上でエージェントを作る人のチェックリストとして使える。</td></tr>
+<tr><td class="num">8</td><td class="title">コードを全部は読まずに Claude Code で本番リリースするためにしたこと</td><td class="link-col"><a href="https://zenn.dev/teradox_blog/articles/8ec76cc0d9e2bb" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 6 いいねの記事。<br>• Claude Code が書いたコードをすべて読まずに、本番環境へリリースするために行った工夫を紹介している。<br>• 人がすべてのコードを確認できない前提で、どう品質を担保するかがテーマ。<br><br>AI が書くコードの量が増え、人による全行レビューは現実的でなくなりつつある。テストや検証の仕組みで安全を確保する考え方は、多くのチームに共通する課題。</td></tr>
+</tbody>
+</table>
+<table>
+<thead><tr class="section-header"><th colspan="3" class="toggle" tabindex="0" role="button" aria-expanded="true"><span class="chev" aria-hidden="true">▸</span>Qiita</th></tr><tr class="sub-header"><th class="num">#</th><th>タイトル</th><th class="link-col">🔗</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td class="title">手書きをやめたらブログが全部 AI 臭くなった人へ、マシにする方法</td><td class="link-col"><a href="https://qiita.com/minorun365/items/faa50b7662b86e1df29c" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 本日の Qiita で最多の 88 いいね。<br>• AI に書かせた技術ブログが「AI 臭く」なる問題と、その改善方法を紹介している。<br>• 「ClaudeCode」「文章術」「生成AI」のタグが付いている。<br><br>生成 AI で文章を書く人が増え、似たような言い回しの記事が目立つようになっている。読み手に伝わる文章にするための工夫として参考になる。</td></tr>
+<tr><td class="num">2</td><td class="title">脆弱性の「CVSS 9.8」とは結局何か — CVSS の読み方をきちんと理解する</td><td class="link-col"><a href="https://qiita.com/heki-dm/items/77ecaacd592d1c4459df" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 52 いいねの解説記事。<br>• 脆弱性の深刻さを表す指標 CVSS の読み方を説明している。<br>• 「9.8」といったスコアが何を意味するのかを理解することが目的。<br><br>脆弱性情報が次々に出る中で、スコアの意味を正しく読めれば、対応の優先順位を付けやすくなる。数字だけで判断せず、自分の環境に当てはめて考える助けになる。</td></tr>
+<tr><td class="num">3</td><td class="title">コードを書くコストが下がった今、ソフトウェアエンジニアリングの価値はどこにあるのか</td><td class="link-col"><a href="https://qiita.com/figueiredoluiz/items/1d6751643b84db67812e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 50 いいねの記事。<br>• AI でコードを書くコストが下がった中で、ソフトウェアエンジニアリングの価値がどこに残るかを論じている。<br>• 「コードレビュー」「AI駆動開発」「CodeRabbit」のタグが付いている。<br><br>エンジニアの価値をめぐる議論は、はてブや Zenn でも続いている。コードを書くこと以外の、設計やレビュー、判断の重要性を考える材料になる。</td></tr>
+<tr><td class="num">4</td><td class="title">なぜ 11 月に日本のサイバー事故が「爆発」したのか — 605 件を数えたら「日本が狙われている」だけではなかった</td><td class="link-col"><a href="https://qiita.com/songchong/items/073f202bb0ca65611b30" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 23 いいねの記事。<br>• 11 月に国内で起きたサイバー事故 605 件を数え、その増加の理由を分析している。<br>• 「日本が狙われている」という説明だけでは足りない要因があると指摘している。<br><br>はてブでもマクドナルドや楽天証券の事故の公表が上位に入っており、時期的に重なる分析記事。数字をもとに背景を考える姿勢は、対策を検討する上でも役立つ。</td></tr>
+<tr><td class="num">5</td><td class="title">本質から学ぶ SOLID の原則 — なんとなくの理解から完全な理解へ</td><td class="link-col"><a href="https://qiita.com/Sicut_study/items/2bbdfbacab915773dad1" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 22 いいねの解説記事。<br>• オブジェクト指向設計の基本である SOLID の 5 原則を、本質から説明している。<br>• 「設計シリーズ」の一つとして書かれている。<br><br>AI がコードを生成する時代でも、良い設計を見分ける力は重要になる。基本を復習したい人に向いた記事。</td></tr>
+<tr><td class="num">6</td><td class="title">情報漏えいを公表しないリスクの要点整理</td><td class="link-col"><a href="https://qiita.com/Maruo110/items/385b2c7ef5fbd074e6e2" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 22 いいねの記事。<br>• 情報漏えいが起きたときに、公表しないことがどんなリスクを生むかを整理している。<br>• 「ランサムウェア」「情報漏えい」のタグが付いている。<br><br>国内で事故の公表が相次ぐ中、公表のタイミングや判断は企業にとって難しい課題になっている。法的な義務や信頼への影響を考える材料になる。</td></tr>
+<tr><td class="num">7</td><td class="title">日本語サイトで指定しておきたい CSS 2026 年版</td><td class="link-col"><a href="https://qiita.com/tofu_frontend/items/6a1bb7d80a58736eef0e" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 15 いいねの記事。<br>• 日本語のウェブサイトで指定しておくとよい CSS を、2026 年時点の内容でまとめている。<br>• 日本語特有の文字組みや表示に関わる設定を扱っているとみられる。<br><br>ブラウザの対応が進み、日本語の表示を整える CSS の選択肢も増えている。サイト制作のチェックリストとして使える。</td></tr>
+<tr><td class="num">8</td><td class="title">LLM を呼ぶ、その先へ — 12 の GitHub 教材で学ぶ AI エンジニアリングのロードマップ</td><td class="link-col"><a href="https://qiita.com/ryosuke_ohori/items/5b4638fab7f9aefbd81a" target="_blank" rel="noopener" title="元記事を開く">↗</a></td></tr>
+<tr class="summary-row"><td></td><td colspan="2" class="summary">• 12 いいねの記事。<br>• LLM の API を呼ぶだけでなく、その先の AI エンジニアリングを学ぶためのロードマップを示している。<br>• GitHub で公開されている 12 の教材を紹介し、RAG やエージェント、システム設計などを扱っている。<br><br>AI を使ったアプリの開発では、モデルの呼び出し以外に、検索や評価、設計などの知識が必要になる。体系的に学びたい人の道しるべになる。</td></tr>
+</tbody>
+</table>
+
+<footer>
+  Generated by <a href="https://github.com/lighter265/claude-news">claude-news</a>
+  · 2026-11-25 06:32 JST
+</footer>
+</div>
+<script>
+  document.querySelectorAll("th.toggle").forEach(function (th) {
+    var table = th.closest("table");
+    function set(collapsed) {
+      table.classList.toggle("collapsed", collapsed);
+      th.setAttribute("aria-expanded", String(!collapsed));
+    }
+    set(true);
+    th.addEventListener("click", function () { set(!table.classList.contains("collapsed")); });
+    th.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); th.click(); }
+    });
+  });
+</script>
+</body>
+</html>
